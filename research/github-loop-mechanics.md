@@ -6,7 +6,8 @@ Research for [#4](https://github.com/neoyipeng2018/research-tape/issues/4). Audi
 **Verdict: all three work. GitHub can carry the whole feedback loop with no backend and no PAT.**
 One repo setting has to be flipped, and one design assumption has to be dropped — there is no
 timestamp on a ticked box, so the weekly job must not try to ask "what is new since last week".
-Both are handled below.
+There is also one hazard to design around: GitHub auto-ticks a checkbox whose line references an
+issue when that issue closes, which would fabricate a vote. All three are handled below.
 
 Findings marked **[live]** were executed against this repo. Findings marked **[docs]** are quoted
 from docs.github.com. Where the two disagree the live result wins and the gap is called out.
@@ -54,6 +55,30 @@ body may type any of them. And it must *require* the space after `]`, because wi
 renders no checkbox at all — a parser laxer than GitHub would count a vote on a line the human can
 never actually click.
 
+**[docs]** Note that only a subset of what works is actually *documented*. The docs specify a hyphen
+and lowercase `x` and nothing else — "To create a task list, preface list items with a hyphen and
+space followed by `[ ]`. To mark a task as complete, use `[x]`."
+([about tasklists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists))
+`*`/`+` bullets, `[X]`, and nesting all render correctly **[live]** but appear nowhere in the docs.
+So: **emit only the documented form, parse the undocumented ones defensively.** The generator writes
+`- [ ]`; the parser accepts anything GitHub would render, because the human editing by hand is not
+reading the spec.
+
+**[docs]** Also note we are using plain markdown task lists, not the ```` ```[tasklist] ```` fenced
+blocks — those are **retired**: "Tasklist blocks are retired… You can use sub-issues as the
+replacement." Plain `- [ ]` task lists are unaffected.
+
+### One hazard: checkboxes that tick themselves
+
+**[docs]** From the same page: "If a task references another issue and someone closes that issue,
+the task's checkbox will automatically be marked as complete."
+
+So a checkbox line containing a GitHub issue reference can flip to ticked with no human involved —
+which in this loop would fabricate a vote. **Never put a `#123` or a github.com issue/PR URL inside a
+vote line.** The recommended format only ever carries external arXiv/SSRN links in the *heading*, and
+the vote lines carry nothing but a label, an emoji and the key comment, so it is safe as written. It
+is a rule the generator must keep holding if the format is ever edited.
+
 ### Keying items so ticks map back unambiguously
 
 Put a trailing HTML comment on the checkbox line carrying the direction and the item's stable key.
@@ -98,8 +123,16 @@ the parser drops that item rather than guessing (see the reference parser below)
 ### The call
 
 `GET /repos/{owner}/{repo}/issues/{issue_number}` → `.body`. That is the whole of it: one request
-returns the current state of every box on that issue. No special media type is needed; the default
-JSON response carries raw markdown. **[live]** confirmed above.
+returns the current state of every box on that issue. **[docs]** no media type is needed —
+"`application/vnd.github.raw+json`: Returns the raw markdown body… **This is the default if you do
+not pass any specific media type**" ([REST issues](https://docs.github.com/en/rest/issues/issues)).
+**[live]** confirmed above.
+
+**[docs]** There is no endpoint for toggling a single task item. Changing a box means read `body` →
+rewrite the markdown → `PATCH` the whole body, and that write carries no ETag or `If-Match` — last
+writer wins. Worth knowing because it means a job that rewrites a vote issue body races the human
+ticking it. The recommended design never writes a vote issue body after creation, which sidesteps
+this entirely; do not add a job that does.
 
 Discovery is `GET /repos/{owner}/{repo}/issues?labels=tape:vote&state=all`. **[live]** verified
 against this repo — label filtering returns the issue regardless of open/closed state.
@@ -115,6 +148,13 @@ event at all**. After patching the body of issue #10:
 GET /repos/…/issues/10/timeline  → event count: 0
 GET /repos/…/issues/10/events    → event count: 0
 ```
+
+**[docs]** confirms this is by design, not a gap in the test. The complete list of 42 documented
+issue event types
+([issue event types](https://docs.github.com/en/rest/using-the-rest-api/issue-event-types))
+contains no task-list, checkbox, or body-edit event, and the GraphQL `IssueTimelineItems` union
+([GraphQL issues](https://docs.github.com/en/graphql/reference/issues)) contains none either. Title
+edits get `renamed`; body edits get nothing. There is no `EditedBodyEvent` counterpart.
 
 For contrast, after a label, a comment and a close, the same timeline returns exactly those three,
 each with a timestamp — and still nothing for the two body edits:
@@ -142,11 +182,47 @@ field being named `diff` — the **complete body at that revision**. Diffing con
 reconstructs exactly which box changed and when. It works from a workflow with the default token
 (**[live]** the probe workflow ran this query successfully with only `issues: write`).
 
-Two caveats before anyone builds on it. It is one extra GraphQL call per issue with full bodies in
-the payload, so it is not free at 30 issues a week. And it was verified for edits made **through the
-REST API**; whether GitHub's web-UI click-to-toggle records a `userContentEdits` entry the same way
-was **not** verified here, and that is the path the human will actually use. Treat tick timestamps
-as unavailable until someone confirms the UI path.
+Three caveats before anyone builds on it, and the third is the one that matters.
+
+1. It is one extra GraphQL call per issue with full bodies in the payload — not free at 30 issues a
+   week.
+2. It was verified for edits made **through the REST API**. Whether GitHub's web-UI click-to-toggle
+   records a `userContentEdits` entry the same way was **not** verified here, and that is the path
+   the human will actually use.
+3. **[docs] The behaviour observed above is undocumented and not guaranteed.** `diff` is typed as a
+   nullable `String` and its entire documented meaning is "A summary of the changes for this edit"
+   ([UserContentEdit](https://docs.github.com/en/graphql/reference/users)). Nothing promises it
+   returns the full body, or any particular format, or a non-null value. What *is* documented and
+   safe to rely on is `editedAt`, `editor` and `totalCount` — when an edit happened and who made it,
+   but not what changed.
+
+Net: treat tick timestamps as unavailable. `editedAt` can tell you *an* edit happened on an issue,
+which is a coarse "there is something new here" hint, but nothing documented tells you which box.
+
+### The documented way to get a real tick timestamp — and why it is not worth it
+
+**[docs]** There is exactly one first-class signal for a body change: the `issues` webhook `edited`
+action, described as "The title or body on an issue was edited", whose payload carries
+`changes.body.from` — "The previous version of the body."
+([webhook events and payloads](https://docs.github.com/en/webhooks/webhook-events-and-payloads#issues))
+
+This does **not** need a backend. A workflow can subscribe directly:
+
+```yaml
+on:
+  issues:
+    types: [edited]
+```
+
+The job then diffs `github.event.changes.body.from` against `github.event.issue.body`, sees exactly
+which box flipped, and has the run's own timestamp. That is a genuine, documented, backend-free way
+to know when a tick happened.
+
+It is still the wrong choice here. It fires a workflow run on every body edit including typo fixes,
+and the derived vote has to be persisted somewhere — which means a commit per tick, turning a quiet
+repo into a noisy one, for a timestamp the loop does not use. The rolling window below gets the same
+votes with zero moving parts. Keep this in the back pocket for the map's "did-it-matter-later"
+signal, which is the one open question that would actually need to know *when* an opinion formed.
 
 ### How the weekly job knows what it has already consumed
 
@@ -174,9 +250,18 @@ marker comment. A label is one API call to add and one filter to read, `labeled`
 timestamped in the timeline (**[live]** above), and applying it twice is harmless. Closing the issue
 is worse: it contradicts the "tick whenever" promise by making the issue look finished and pushing
 it out of the default issue list, and the human loses the affordance. (**[live]** ticking a box on a
-*closed* issue does still work via the API, so closing is not fatal — just misleading.) A marker
-comment is worst: it adds a notification per issue per week and needs comment parsing on top of body
-parsing.
+*closed* issue does still work via the API, so closing is not fatal — just misleading. **[docs]**
+adds a reason to avoid it anyway: "You cannot create tasklist items within closed issues or issues
+with linked pull requests.") A marker comment is worst: it adds a notification per issue per week and
+needs comment parsing on top of body parsing.
+
+On discovery, prefer `GET /issues?labels=…` over `GET /search/issues`. **[docs]** search has its own
+much tighter budget — "you can make up to 30 requests per minute for all search endpoints" — while
+the list endpoint runs on the ordinary allowance, and **[docs]** `GITHUB_TOKEN` gets "1,000 requests
+per hour per repository"
+([rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api)).
+A weekly read of ~30 issues is nowhere near either ceiling, but there is no reason to spend the
+scarcer one.
 
 ### Reference parser
 
@@ -368,7 +453,10 @@ Rules the generator must hold to:
 2. Exactly one space after `]`.
 3. Keys match `[^\s<>]+`; slugify any title-derived fallback key.
 4. Never emit two identical checkbox lines. The key comment guarantees this for free.
-5. `<!--tape:YYYY-MM-DD-->` on line 1 so the parser can assert it is looking at a vote issue and get
+5. **No GitHub issue reference (`#123`, or a github.com issue/PR URL) anywhere on a vote line** —
+   GitHub auto-ticks a task that references an issue when that issue is closed, which would
+   fabricate a vote. External arXiv/SSRN links in the heading are fine.
+6. `<!--tape:YYYY-MM-DD-->` on line 1 so the parser can assert it is looking at a vote issue and get
    the tape date without trusting the title or `created_at` (which diverge on a backfill).
 
 ---
@@ -384,10 +472,19 @@ that cost nothing here. Two things to carry into `SPEC.md`:
    place the ticket's framing should be dropped rather than answered — asking "which issues have I
    already consumed" only makes sense if you can tell when a tick happened, and you cannot.
 
-### The alternative, if the missing timestamp ever becomes a problem
+### Two alternatives, if the missing timestamp ever becomes a problem
 
-Swap checkboxes for **reactions on per-item comments**: the bot posts the day's items in the issue
-body as now, plus one comment per item; the human reacts 👍/👎 on the comment.
+Neither is needed now. Both are recorded so the next person does not have to re-derive them.
+
+**A. A workflow on `on: issues: types: [edited]`**, diffing `changes.body.from` against
+`issue.body`. This is the documented, backend-free way to catch a tick at the moment it happens
+(detail in section 2). Costs a workflow run per body edit and a commit per tick to persist the
+result.
+
+**B. Reactions on per-item comments**, described below. Costs 7 API objects a day instead of 1.
+
+On B: swap checkboxes for **reactions on per-item comments** — the bot posts the day's items in the
+issue body as now, plus one comment per item; the human reacts 👍/👎 on the comment.
 
 **[live]** verified reactions carry exactly what checkboxes lack:
 
@@ -426,3 +523,22 @@ was restored to its original value.
 | 10 | Tick a box on a **closed** issue | succeeds |
 | 11 | `POST` a reaction, read back | carries `created_at` + user |
 | 12 | Reference parser vs 17 assertions | passes; caught that a lax regex counts unclickable boxes |
+
+### Findings that came from docs rather than execution
+
+These could not be verified live here and are quoted from docs.github.com:
+
+- Checkboxes auto-tick when a referenced issue closes (the hazard in section 1).
+- `userContentEdits.diff` is a nullable `String` documented only as "a summary of the changes" — the
+  full-body content seen live is undocumented and must not be built on.
+- The `issues` `edited` webhook / workflow trigger and its `changes.body.from` payload.
+- The absence of any checkbox or body-edit event across all 42 REST issue event types and the
+  GraphQL `IssueTimelineItems` union — live testing showed zero events on this repo; the docs show
+  the type simply does not exist.
+- `raw+json` being the default media type for `body`.
+- Rate limits: 30/min for search endpoints, 1,000/hour per repository for `GITHUB_TOKEN`.
+- Tasklist *blocks* being retired in favour of sub-issues (plain `- [ ]` task lists are unaffected).
+
+One docs gap worth recording: **GitHub never documents that clicking a checkbox rewrites the issue
+body.** That behaviour is universally observed and the whole design depends on it, but it appears on
+no docs.github.com page. It is stable enough to build on; it is not contractual.
