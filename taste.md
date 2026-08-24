@@ -12,7 +12,7 @@ window: arXiv trailing 7d submittedDate; Crossref 24h from-created-date
 ## Prefer
 
 - Methods a practitioner could run this quarter: released code, a named dataset, a stated setup.
-- LLMs and agents doing real financial work, not finance used as a toy benchmark for an LLM paper.
+- LLM and agent papers that report a walk-forward or live evaluation, not a single backtest.
 - Results that update a prior: a negative result, a failed replication, a surprising direction.
 - Microstructure, execution and portfolio construction grounded in real trades or real order books.
 - Evaluation itself: how anyone knows a financial ML claim survives out of sample.
@@ -23,11 +23,11 @@ window: arXiv trailing 7d submittedDate; Crossref 24h from-created-date
 
 - Another price predictor with no baseline, no transaction costs, no out-of-sample discipline.
 - Surveys, literature reviews, roadmaps, position papers.
-- Single-country or single-sector empirics with no transferable method.
 - Papers where "AI" is framing in the abstract and the contribution is somewhere else.
 - Pure theory with no data and no visible path to implementation.
 - Sentiment scoring of retail forums as a standalone contribution.
 - Benchmark papers that only rank existing models on an existing dataset.
+- Crypto-only microstructure with no cross-asset readthrough.
 
 ## Bar
 
