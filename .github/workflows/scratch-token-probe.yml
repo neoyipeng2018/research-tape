@@ -1,0 +1,68 @@
+name: scratch token probe
+on:
+  push:
+    branches: [scratch/token-probe]
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show what the token actually is
+        run: |
+          echo "actor=$GITHUB_ACTOR"
+          echo "--- 1. CREATE ISSUE with GITHUB_TOKEN ---"
+          gh issue create --title "[scratch] probe: bot-created issue" \
+            --body $'probe body\n\n- [ ] 👍 up <!--v:up:probe:1-->\n- [ ] 👎 down <!--v:down:probe:1-->' \
+            > /tmp/issue_url.txt 2>&1 && echo "ISSUE CREATE: OK $(cat /tmp/issue_url.txt)" || { echo "ISSUE CREATE: FAILED"; cat /tmp/issue_url.txt; }
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Read an issue body back with GITHUB_TOKEN
+        run: |
+          echo "--- 2. READ ISSUE #10 BODY ---"
+          gh api /repos/$GITHUB_REPOSITORY/issues/10 --jq '.body' | head -20 && echo "ISSUE READ: OK" || echo "ISSUE READ: FAILED"
+          echo "--- 2b. GRAPHQL userContentEdits ---"
+          gh api graphql -f query='query { repository(owner:"neoyipeng2018", name:"research-tape") { issue(number:10) { userContentEdits(first:5){ totalCount nodes { editedAt } } } } }' && echo "GRAPHQL EDITS: OK" || echo "GRAPHQL EDITS: FAILED"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Label + comment + close with GITHUB_TOKEN
+        run: |
+          echo "--- 3. LABEL ---"
+          gh api -X POST /repos/$GITHUB_REPOSITORY/issues/10/labels -f 'labels[]=scratch-consumed' && echo "LABEL: OK" || echo "LABEL: FAILED"
+          echo "--- 4. COMMENT ---"
+          gh api -X POST /repos/$GITHUB_REPOSITORY/issues/10/comments -f body='probe comment from GITHUB_TOKEN' --jq '.id' && echo "COMMENT: OK" || echo "COMMENT: FAILED"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit a file on a new branch and push with GITHUB_TOKEN
+        run: |
+          echo "--- 5. BRANCH + COMMIT + PUSH ---"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b scratch/token-probe-pr-$GITHUB_RUN_ID
+          echo "probe $GITHUB_RUN_ID" > scratch-probe.txt
+          git add scratch-probe.txt
+          git commit -m "scratch: probe commit"
+          git push origin HEAD && echo "PUSH: OK" || echo "PUSH: FAILED"
+
+      - name: Try to open a PR with GITHUB_TOKEN
+        run: |
+          echo "--- 6. CREATE PR (the interesting one) ---"
+          set +e
+          gh api -X POST /repos/$GITHUB_REPOSITORY/pulls \
+            -f title='[scratch] probe PR from GITHUB_TOKEN' \
+            -f head="scratch/token-probe-pr-$GITHUB_RUN_ID" \
+            -f base='main' \
+            -f body='probe' > /tmp/pr.txt 2>&1
+          echo "exit=$?"
+          echo "--- response ---"
+          cat /tmp/pr.txt
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
