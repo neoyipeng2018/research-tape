@@ -1,0 +1,230 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Research Tape — page prototype</title>
+<!-- PROTOTYPE, throwaway. Three variants of the daily page, switchable via ?variant=A|B|C,
+     day state via ?day=full|thin|mixed. Real judged items from prototype/scored_v2.json
+     (2026-08-19 run, bar 7, cap 6). The 'mixed' day is SYNTHETIC: real arXiv candidates
+     from the same day pasted in with their pass-1 rationale, to test the source badge. -->
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); }
+  a { color: inherit; }
+  #root { padding: 0 0 7rem; }
+  /* switcher — deliberately not part of the design */
+  #bar { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%);
+         display: flex; gap: .5rem; align-items: center; background: #111; color: #fff;
+         font: 500 13px/1 ui-sans-serif, system-ui; padding: .5rem; border-radius: 999px;
+         box-shadow: 0 6px 24px rgba(0,0,0,.35); z-index: 99; }
+  #bar button { font: inherit; background: #333; color: #fff; border: 0; border-radius: 999px;
+                padding: .45rem .7rem; cursor: pointer; }
+  #bar button[aria-pressed=true] { background: #fff; color: #111; }
+  #bar .lbl { padding: 0 .5rem; min-width: 12rem; text-align: center; }
+  #bar .sep { width: 1px; height: 20px; background: #444; }
+</style>
+
+<div id="root"></div>
+<div id="bar"></div>
+
+<script>
+// ---- real data -------------------------------------------------------------
+const DAY = "2026-08-19";
+const PUBLISHED = [
+  { score: 9, source: "SSRN", link: "https://www.ssrn.com/abstract=7298998",
+    title: "When Text Becomes Tradable: Financial-domain Language Models and the Asymmetric Absorption of News in Agricultural Futures Markets",
+    why: "Agricultural futures returns respond to media news only via finance-domain LLM embeddings, not general ones." },
+  { score: 8, source: "SSRN", link: "https://www.ssrn.com/abstract=7298579",
+    title: "Accurate but Correlated: Common AI Forecast Errors and Endogenous Market Volatility",
+    why: "Equicorrelated AI forecast errors create aggregate variance floors independent of model accuracy or institution count." },
+  { score: 8, source: "SSRN", link: "https://www.ssrn.com/abstract=7298598",
+    title: "Contingent Winners: Forecast Scale and Model Rankings in Volatility Forecasting",
+    why: "Volatility forecast model rankings flip between GARCH and deep learning depending on regime, seed, and evaluation loss." },
+  { score: 8, source: "SSRN", link: "https://www.ssrn.com/abstract=7301678",
+    title: "Stranded Credentials: How A Skill-Signaling Market Absorbed Generative AI",
+    why: "Upload medals lost 82% signaling value despite fresh medals retaining power, suggesting format-specific credential decay during AI era." },
+  { score: 8, source: "SSRN", link: "https://www.ssrn.com/abstract=7303518",
+    title: "Do Banks Really Know What They Get From AI?",
+    why: "Major banks claim AI cost savings but withhold spend data, making public verification impossible." },
+  { score: 8, source: "SSRN", link: "https://www.ssrn.com/abstract=7305922",
+    title: "The Clock of Regimes: An Operator-Theoretic Early-Warning System for Financial Fragility — Evidence from the July 2026 Situational Awareness Collapse",
+    why: "Operator-theoretic tail diagnostics detected maximum portfolio stress weeks before leveraged concentration became forced liquidation." },
+];
+// SYNTHETIC: real arXiv candidates from the same day, pass-1 rationale as the sentence.
+const ARXIV = [
+  { score: 8, source: "arXiv", link: "https://arxiv.org/abs/2608.18911v1",
+    title: "Converting Expert Deliberation into Financial Signals Through A Context-Aware NLP Pipeline",
+    why: "Investment-committee transcripts yield tradable signals at 73% accuracy before any transaction-cost adjustment." },
+  { score: 7, source: "arXiv", link: "https://arxiv.org/abs/2608.19389v1",
+    title: "Concentrated Liquidity Provision: a Reinforcement Learning Perspective",
+    why: "Reinforcement learning rebalances concentrated liquidity positions without an out-of-sample backtest to support it." },
+];
+
+const DAYS = {
+  full:  { items: PUBLISHED,                     scanned: 31, note: null },
+  thin:  { items: PUBLISHED.slice(0, 2),         scanned: 31, note: "thin" },
+  mixed: { items: [PUBLISHED[0], ARXIV[0], PUBLISHED[4], ARXIV[1], PUBLISHED[5]], scanned: 31, note: null },
+};
+
+const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB",
+  { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+
+// ---- Variant A — Tape ------------------------------------------------------
+// Dense monospace ledger. Continuous, dated, numbered. Source as a text prefix.
+const A = { name: "Tape (dense ledger)", render: day => `
+<style>
+  :root { --bg:#faf9f7; --fg:#16150f; --dim:#7a776c; --rule:#e2ded4; }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#12110f; --fg:#eae7dd; --dim:#8b8779; --rule:#2a2823; } }
+  #root { font: 15px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
+          max-width: 46rem; margin: 0 auto; padding: 3rem 1.25rem 7rem; }
+  .head { display:flex; justify-content:space-between; align-items:baseline;
+          border-bottom:2px solid var(--fg); padding-bottom:.4rem; margin-bottom:.2rem; }
+  .head b { font-weight:700; letter-spacing:.14em; text-transform:uppercase; font-size:.8rem; }
+  .head span { color:var(--dim); font-size:.78rem; }
+  .meta { color:var(--dim); font-size:.78rem; padding:.5rem 0 1.5rem; }
+  .row { display:grid; grid-template-columns:2rem 1fr; gap:.9rem;
+         padding:1rem 0; border-bottom:1px solid var(--rule); }
+  .n { color:var(--dim); font-size:.78rem; padding-top:.15rem; }
+  .claim { margin:0 0 .35rem; }
+  .src { color:var(--dim); }
+  .ttl { display:block; font-size:.82rem; color:var(--dim); text-decoration:none; }
+  .ttl:hover { color:var(--fg); text-decoration:underline; }
+  .quiet { color:var(--dim); font-size:.82rem; padding:1.25rem 0 0; }
+  .foot { color:var(--dim); font-size:.78rem; padding-top:1.75rem; display:flex; gap:1rem; }
+</style>
+<div class="head"><b>Research Tape</b><span>${fmtDate(DAY)}</span></div>
+<div class="meta">${day.items.length} of ${day.scanned} scanned · arXiv + SSRN</div>
+${day.items.map((it, i) => `
+  <div class="row">
+    <div class="n">${String(i + 1).padStart(2, "0")}</div>
+    <div>
+      <p class="claim"><span class="src">${it.source} —</span> ${it.why}</p>
+      <a class="ttl" href="${it.link}">${it.title}</a>
+    </div>
+  </div>`).join("")}
+${day.note === "thin" ? `<p class="quiet">Nothing else cleared the bar today.</p>` : ""}
+<div class="foot"><a href="#">archive</a><a href="#">rss</a></div>
+`};
+
+// ---- Variant B — Claim-led ---------------------------------------------------
+// The sentence IS the item. Big serif claims, title demoted to a caption link.
+const B = { name: "Claim-led (sentence first)", render: day => `
+<style>
+  :root { --bg:#fff; --fg:#111; --dim:#6b6b6b; --rule:#ececec; --accent:#b4401f; }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#0d0d0d; --fg:#f2f0ec; --dim:#8f8f8f; --rule:#242424; --accent:#e8845f; } }
+  #root { font: 16px/1.5 ui-sans-serif, system-ui, sans-serif;
+          max-width: 40rem; margin: 0 auto; padding: 4.5rem 1.25rem 7rem; }
+  .mast { font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); }
+  .date { font: 400 2rem/1.15 Georgia, "Times New Roman", serif; margin:.35rem 0 .3rem; }
+  .sub { color:var(--dim); font-size:.85rem; margin-bottom:3rem; }
+  .item { margin-bottom:3rem; }
+  .badge { display:inline-block; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase;
+           color:var(--dim); border:1px solid var(--rule); border-radius:999px;
+           padding:.2rem .55rem; margin-bottom:.75rem; }
+  .claim { font: 400 1.4rem/1.3 Georgia, "Times New Roman", serif; margin:0 0 .7rem; }
+  .ttl { font-size:.85rem; color:var(--dim); text-decoration:none; border-bottom:1px solid var(--rule); }
+  .ttl:hover { color:var(--fg); border-color:currentColor; }
+  .quiet { color:var(--dim); font-size:.9rem; font-style:italic; padding-top:1rem;
+           border-top:1px solid var(--rule); }
+  .foot { border-top:1px solid var(--rule); padding-top:1.25rem; display:flex; gap:1.25rem;
+          font-size:.8rem; color:var(--dim); }
+</style>
+<div class="mast">Research Tape</div>
+<h1 class="date">${fmtDate(DAY)}</h1>
+<div class="sub">${day.items.length} kept from ${day.scanned} candidates across arXiv and SSRN.</div>
+${day.items.map(it => `
+  <article class="item">
+    <span class="badge">${it.source}</span>
+    <p class="claim">${it.why}</p>
+    <a class="ttl" href="${it.link}">${it.title}</a>
+  </article>`).join("")}
+${day.note === "thin" ? `<p class="quiet">A quiet day. Two papers cleared the bar; the rest did not, and nothing was added to fill the page.</p>` : ""}
+<div class="foot"><a href="#">Archive</a><a href="#">RSS</a></div>
+`};
+
+// ---- Variant C — Broadsheet --------------------------------------------------
+// Grouped by source (no per-item badge), title first, sentence as deck, two columns.
+const C = { name: "Broadsheet (grouped by source)", render: day => {
+  const groups = ["arXiv", "SSRN"].map(s => [s, day.items.filter(i => i.source === s)])
+                                  .filter(([, v]) => v.length);
+  return `
+<style>
+  :root { --bg:#fbfbf9; --fg:#1a1a1a; --dim:#767676; --rule:#d8d5cd; }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#101010; --fg:#ededea; --dim:#8d8d8a; --rule:#2c2c29; } }
+  #root { font: 15px/1.5 ui-sans-serif, system-ui, sans-serif;
+          max-width: 62rem; margin:0 auto; padding: 3rem 1.5rem 7rem; }
+  .mast { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap;
+          gap:.5rem; border-bottom:3px double var(--fg); padding-bottom:.6rem; }
+  .mast h1 { font: 700 1.6rem/1 Georgia, serif; letter-spacing:-.01em; margin:0; }
+  .mast .d { color:var(--dim); font-size:.85rem; }
+  .counts { color:var(--dim); font-size:.78rem; padding:.6rem 0 2rem;
+            border-bottom:1px solid var(--rule); margin-bottom:2rem; }
+  section { margin-bottom:2.5rem; }
+  h2 { font:600 .72rem/1 ui-sans-serif, system-ui; letter-spacing:.18em; text-transform:uppercase;
+       color:var(--dim); margin:0 0 1rem; padding-bottom:.5rem; border-bottom:1px solid var(--rule); }
+  .cols { columns: 2; column-gap: 2.5rem; }
+  @media (max-width: 46rem){ .cols { columns: 1; } }
+  .item { break-inside: avoid; margin-bottom:1.6rem; }
+  .ttl { display:block; font:600 .98rem/1.3 Georgia, serif; text-decoration:none; margin-bottom:.3rem; }
+  .ttl:hover { text-decoration:underline; }
+  .deck { margin:0; color:var(--dim); font-size:.86rem; line-height:1.45; }
+  .quiet { color:var(--dim); font-size:.82rem; border-top:1px solid var(--rule); padding-top:1rem; }
+  .foot { border-top:1px solid var(--rule); margin-top:1rem; padding-top:1rem;
+          display:flex; gap:1.25rem; font-size:.78rem; color:var(--dim); }
+</style>
+<div class="mast"><h1>Research Tape</h1><span class="d">${fmtDate(DAY)}</span></div>
+<div class="counts">${groups.map(([s, v]) => `${v.length} ${s}`).join(" · ")} — kept from ${day.scanned} candidates</div>
+${groups.map(([s, v]) => `
+  <section>
+    <h2>${s}</h2>
+    <div class="cols">
+      ${v.map(it => `
+        <div class="item">
+          <a class="ttl" href="${it.link}">${it.title}</a>
+          <p class="deck">${it.why}</p>
+        </div>`).join("")}
+    </div>
+  </section>`).join("")}
+${day.note === "thin" ? `<p class="quiet">Only ${day.items.length} papers cleared the bar today.</p>` : ""}
+<div class="foot"><a href="#">Archive</a><a href="#">RSS</a></div>
+`;}};
+
+// ---- switcher ----------------------------------------------------------------
+const VARIANTS = { A, B, C };
+const q = new URLSearchParams(location.search);
+let variant = (q.get("variant") || "A").toUpperCase();
+let dayKey = q.get("day") || "full";
+if (!VARIANTS[variant]) variant = "A";
+if (!DAYS[dayKey]) dayKey = "full";
+
+function render() {
+  const url = new URL(location.href);
+  url.searchParams.set("variant", variant);
+  url.searchParams.set("day", dayKey);
+  history.replaceState(null, "", url);
+  document.getElementById("root").innerHTML = VARIANTS[variant].render(DAYS[dayKey]);
+  document.getElementById("bar").innerHTML = `
+    <button data-cycle="-1">←</button>
+    <span class="lbl">${variant} — ${VARIANTS[variant].name}</span>
+    <button data-cycle="1">→</button>
+    <span class="sep"></span>
+    ${Object.keys(DAYS).map(k => `<button data-day="${k}" aria-pressed="${k === dayKey}">${
+      k === "mixed" ? "mixed*" : k}</button>`).join("")}`;
+}
+document.getElementById("bar").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  if (b.dataset.day) dayKey = b.dataset.day;
+  if (b.dataset.cycle) {
+    const ks = Object.keys(VARIANTS);
+    variant = ks[(ks.indexOf(variant) + +b.dataset.cycle + ks.length) % ks.length];
+  }
+  render();
+});
+addEventListener("keydown", e => {
+  if (/INPUT|TEXTAREA/.test(e.target.tagName) || e.target.isContentEditable) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const ks = Object.keys(VARIANTS);
+  variant = ks[(ks.indexOf(variant) + (e.key === "ArrowRight" ? 1 : -1) + ks.length) % ks.length];
+  render();
+});
+render();
+</script>
