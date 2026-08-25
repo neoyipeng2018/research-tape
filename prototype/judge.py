@@ -2,8 +2,10 @@
 """PROTOTYPE, throwaway. Two-pass judge over candidates.json via `claude -p --model haiku`."""
 import json, os, re, subprocess, sys, textwrap
 
+TASTE_F = sys.argv[1] if len(sys.argv) > 1 else "prototype/taste.md"
+OUT_F = sys.argv[2] if len(sys.argv) > 2 else "prototype/scored.json"
 C = json.load(open("prototype/candidates.json"))["candidates"]
-TASTE = open("prototype/taste.md").read()
+TASTE = open(TASTE_F).read()
 PREFER = TASTE.split("## Prefer")[1].split("## Reject")[0].strip()
 REJECT = TASTE.split("## Reject")[1].split("## Bar")[0].strip()
 
@@ -65,11 +67,17 @@ TH, CAP = 7, 6
 surv = sorted([c for c in C if c.get("score", 0) >= TH], key=lambda c: -c["score"])[:CAP]
 if surv:
     p2 = f"""For each paper below, write the single sentence that goes on a daily research tape
-read by a quant/ML practitioner. The sentence is the entire product: it must say why this
-matters to them, not what the paper is about.
+read by a quant/ML practitioner. The sentence IS the product.
 
-Rules: one sentence, under 30 words, plain prose, no hype words, no "researchers propose".
-Claim only what the abstract actually supports. If the finding is conditional, say so.
+It must ASSERT A CLAIM — something a reader could disagree with — not summarise the paper.
+If you cannot find a claim in the abstract, say plainly what is missing; that is also a claim.
+
+Hard rules:
+- One sentence, 25 words maximum.
+- NO SEMICOLONS. If you reach for one, you are summarising two things instead of claiming one.
+- Never open with "researchers", "this paper", "the authors", "a novel", "a framework".
+- No hype words: novel, groundbreaking, cutting-edge, revolutionary, powerful, robust.
+- Claim only what the abstract supports. Conditional finding, conditional sentence.
 
 Output one JSON object per line, no other text:
 {{"id": <int>, "sentence": "<the sentence>"}}
@@ -87,4 +95,4 @@ PAPERS
             except Exception: pass
     print(f"pass2: {len(surv)} survivors  {ms2}ms  out={usage2.get('output_tokens')}", file=sys.stderr)
 
-json.dump(C, open("prototype/scored.json", "w"), indent=1)
+json.dump(C, open(OUT_F, "w"), indent=1)
