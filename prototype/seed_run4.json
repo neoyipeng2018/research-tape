@@ -1,0 +1,312 @@
+[
+ {
+  "key": "2608.19394",
+  "source": "arXiv",
+  "title": "Deep-MKV-TS: Path-Dependent McKean--Vlasov Control for Financial Time Series Generation",
+  "abstract": "We introduce Deep-MKV-TS, a path-dependent McKean-Vlasov framework for financial scenario generation. The stochastic dynamics are chosen by matching selected path and volatility features of generated scenarios to those observed in the data. Starting from an interpretable reference model, Deep-MKV-TS preserves the reference drift and adjusts its volatility, while a regularization penalty limits unnecessary departures from the calibrated dynamics. We solve the resulting control problem using a neural, sample-based implementation of the stochastic maximum principle. We validate the method against an exactly computable oracle. On Heston and Heston-mixture models, Deep-MKV-TS substantially reduces path-dependent and volatility-related deficiencies of the reference model. In delayed-volatility experiments, the correction remains effective as the forecasting horizon increases, while direct training becomes less reliable. On held-out intraday equity-index futures, the corrected model improves conditional forecasts relative to the reference and reaches a level of performance comparable to flexible generative and historical baselines. The resulting scenarios also support greater exposure than the reference under a fixed drawdown-risk target. These results show that path-dependent McKean-Vlasov control can enrich an interpretable reference model without replacing it.",
+  "link": "https://arxiv.org/abs/2608.19394v1",
+  "id": 1,
+  "score": 4,
+  "why": "Pure theory, toy model validation, no real data application path"
+ },
+ {
+  "key": "2608.19447",
+  "source": "arXiv",
+  "title": "Quantifying Event Impacts on Time Series via Multiscale Contrastive Learning",
+  "abstract": "Shocks that spread through the web, such as cybersecurity breach disclosures, can abruptly disrupt financial time series and cause substantial abnormal losses. While these events are disclosed as discrete records through news reports, regulatory filings, or public databases, their consequences unfold through continuous market dynamics. This creates an event-conditioned impact prediction problem: given pre-event market history and limited event metadata, the goal is to estimate short-term post-disclosure abnormal loss rather than reconstruct the full post-event trajectory. However, most time-series forecasting models focus on endogenous regularities such as trend, seasonality, and autocorrelation, and thus struggle with rare and heterogeneous external events. The challenge is further amplified by sparse high-impact events and background market noise. We introduce EventTime, a multi-resolution framework that combines long-horizon market context, short-horizon pre-event dynamics, and event metadata. It incorporates an event fusion module that couples temporal representations with event attributes to identify relevant recent market patterns. To mitigate sparse supervision, EventTime further introduces a dynamic contrastive objective that constructs event- and time-series-aware positive and negative pairs during training. We also construct SECURE, a real-world dataset aligning cybersecurity incidents with stock-market time series and structured and LLM-derived semantic features. Experiments show that EventTime consistently outperforms state-of-the-art time-series and event-aware baselines in estimating post-event financial losses. Further analyses demonstrate more event-sensitive representations, greater robustness to incomplete metadata, and more interpretable estimates of short-term market impact following cybersecurity disclosures.",
+  "link": "https://arxiv.org/abs/2608.19447v1",
+  "id": 2,
+  "score": 5,
+  "why": "Real problem but lacks implementation code, real event testing"
+ },
+ {
+  "key": "2608.19389",
+  "source": "arXiv",
+  "title": "Concentrated Liquidity Provision: a Reinforcement Learning Perspective",
+  "abstract": "Automated market makers (AMMs) are a cornerstone of decentralised finance (DeFi). Constant product markets with concentrated liquidity, such as UniswapV3, are now a well-established design. In these markets, liquidity providers (LPs) face a sequential decision problem: they must decide when to rebalance their positions and which price ranges to allocate capital to as market conditions evolve. We formulate dynamic liquidity provision as a stochastic impulse control problem and use reinforcement learning (RL) to solve it, focusing on providing interpretable solutions. We show that learned policies exhibit rich state-dependent behaviour, allocating liquidity according to mispricing, rebalancing costs, uncertainty, inventory exposure, and heterogeneous risk preferences. These behaviours help compress the left tail of the Profit and Loss (PnL) distribution and avoid catastrophic outcomes under high uncertainty. Finally, we benchmark the RL agents against baseline and sophisticated agents from the AMM microstructure literature and analyse their performance.",
+  "link": "https://arxiv.org/abs/2608.19389v1",
+  "id": 3,
+  "score": 5,
+  "why": "Real DeFi problem but simulation-only, no live trading evidence"
+ },
+ {
+  "key": "2608.18534",
+  "source": "arXiv",
+  "title": "FinRCA-Bench: Benchmarking Evidence Retrieval and Reasoning for Financial AI Systems",
+  "abstract": "Large language models are increasingly used to support financial operations, but their apparent reasoning performance can depend on whether they receive the right evidence. In financial reconciliation, the evidence needed for diagnosis is distributed across invoices, purchase orders, approvals, allocations, payments, ledger entries, and bank activity, linked by transactional relationships rather than textual similarity. End-to-end accuracy can therefore conflate evidence access with reasoning quality. We introduce FinRCA-Bench, a deterministic synthetic benchmark of 2,250 accounts-payable-to-bank reconciliation cases spanning 14 operational tables, including 1,500 injected failures across 15 causal categories and 750 legitimate or hard-negative cases. Root-cause labels and record-level evidence contracts are hidden from the model, allowing retrieval to be evaluated independently of answer correctness. We compare Rules/SQL, classical machine learning, dense semantic retrieval, deterministic relational expansion, and Typed Provenance Graph Retrieval (TPGR), a typed traversal restricted to persisted transaction relationships. Rules/SQL reaches 84.97% held-out exact accuracy and classical ML reaches 95.44%. Holding the reasoning model, prompt, and generation settings fixed while changing only retrieval increases macro required-record recall from 0.83% to 77.70% and exact 16-class accuracy from 2.05% to 72.44%. Structural retrieval failures outnumber reasoning failures with sufficient retrieval by 95 to 15; 254 correct predictions occur despite incomplete retrieval, and strict returned-evidence contract accuracy is only 5.72%. On FinRCA-Bench, retrieval architecture strongly shapes observed AI-system performance, and a correct root-cause label is a weak proxy for an auditable diagnosis.",
+  "link": "https://arxiv.org/abs/2608.18534v1",
+  "id": 4,
+  "score": 8,
+  "why": "Named dataset, separates retrieval from reasoning, practitioner-ready"
+ },
+ {
+  "key": "2608.18911",
+  "source": "arXiv",
+  "title": "Converting Expert Deliberation into Financial Signals Through A Context-Aware NLP Pipeline",
+  "abstract": "We introduce the CDSP (context-conditional deliberation signal pipeline), converting an investment committee's meeting transcripts into structured predictive features. CDSP segments the meeting transcripts into topical chunks, assigns asset-class context labels using a large language model (LLM), maps financial keywords to a pre-determined taxonomy of labels, and constructs complementary features: sentiment polarity and mention frequency. This feature engineering framework is applied to a dataset spanning 48 monthly committee meetings to predict if global equities will perform better or worse than global bonds in the following month. In experiments with engineered features, raw transcript text, sentence embeddings, and combined representations, the prediction accuracy ranges from 62% to 73%, compared to always choosing stocks, which outperforms bonds 60.4% of the time. The best (73% accurate) model combines sentence embeddings with engineered CDSP features, achieving a 0.73 F1 score (although this is not statistically significant compared to always choosing stocks). Sentiment carries a stronger signal than mention frequency for several taxonomy categories. These findings suggest that experts' deliberations may contain forward-looking information that context-aware NLP can extract.",
+  "link": "https://arxiv.org/abs/2608.18911v1",
+  "id": 5,
+  "score": 6,
+  "why": "Real data, limited scope (one committee), marginal alpha gain"
+ },
+ {
+  "key": "2608.19125",
+  "source": "arXiv",
+  "title": "Tuning the Stochastic Machine: A Systems Engineer's Operating Model for Human-AI Engineering",
+  "abstract": "When an expert corrects an LLM assistant's error, the correction usually dies with the session, and the error class returns. I argue this is an operations problem, not a tooling problem: mechanisms for persisting corrections exist and are shipping, but the discipline for governing them -- versioning with provenance, recurrence monitoring, counter-metrics, retirement of stale rules -- does not. Writing as a systems engineer of thirty years, I map the LLM stack onto the machines my profession already operates (frozen silicon, firmware, loadable modules, persistent configuration, volatile memory), identify where the mapping fails (stochastic generation, configuration that binds only probabilistically, no general-purpose retirement (verification) stage by default), and derive from the failures a seven-principle operating discipline with an error loop at its core. Three cases from my own practice illustrate the mechanism, among them a control that silently became the exact harm it was built to prevent. I close with the measurement framework this view implies and the lab study required to test it.",
+  "link": "https://arxiv.org/abs/2608.19125v1",
+  "id": 6,
+  "score": 1,
+  "why": "General LLM operations systems, not finance-specific methodology"
+ },
+ {
+  "key": "2608.18931",
+  "source": "arXiv",
+  "title": "Test-Time Scaling in the Wild: Why Exploitation, Not Exploration, Is the Bottleneck",
+  "abstract": "Test-time scaling (TTS) improves language model outputs by spending additional inference compute - generating multiple candidates, searching over partial sequences, or iteratively refining drafts. These techniques yield large gains on mathematics and code, but have been developed and stress-tested almost exclusively on tasks where verification is straightforward. We conduct the first compute-normalised comparison of five TTS families across five open-ended generation benchmarks spanning medicine, law, finance, general chat, and creative writing - grounded in a unified framework that decomposes the effectiveness of each method's token budget into exploration and exploitation. The answer depends on which side of that decomposition you examine. Scaling exploration works: the best candidate in the pool improves steadily with compute across all settings. What breaks is exploitation - the step that converts a rich candidate pool into a final output. With state-of-the-art generators, reward models correlate at only $\u03c1_v \\approx 0.12$ with true quality, rendering selection near-random regardless of budget. Tree search amplifies this failure through diversity collapse. Refinement helps on one of five benchmarks; its apparent gains elsewhere are confounded. Only synthesis across candidates (Fusion) consistently improves over single-sample baselines, yet still recovers only ~40% of available quality. The candidate pool is not the bottleneck - choosing from it is.",
+  "link": "https://arxiv.org/abs/2608.18931v1",
+  "id": 7,
+  "score": 4,
+  "why": "General LLM inference, finance one of five benchmark domains"
+ },
+ {
+  "key": "2608.18783",
+  "source": "arXiv",
+  "title": "When to Sell an Asset? - A Distribution Builder Approach",
+  "abstract": "We consider the question of the optimal timing of the sale of an asset with stochastic dynamics. Our analysis is based on the method of the distribution builder introduced by Sharpe, Goldstein and Blythe [SGB00] for the purpose of optimal portfolio selection. Instead of specifying a utility function or risk aversion coefficient, this tool directly elicits the target distribution of the investor. We show how the problem of an optimal asset sale is in this setting linked to the problem of finding a Skorokhod embedding of a distribution into a diffusion process. In the case where the asset process follows a geometric Brownian motion and a specific family of distributions is targeted, one can observe a risk-return tradeoff.",
+  "link": "https://arxiv.org/abs/2608.18783v1",
+  "id": 8,
+  "score": 3,
+  "why": "Pure theory, no data, no visible implementation path"
+ },
+ {
+  "key": "10.2139/ssrn.7309958",
+  "source": "SSRN",
+  "title": "Reduced-Derivative Consistency: The Impact of Activation-Function Differentiability in Physics-Informed Neural Networks (PINNs)",
+  "abstract": "Computational modeling and scientific machine learning are increasingly transforming how we model, simulate, and analyze nonlinear and complex systems across science and engineering. In doing so, Physics-Informed Neural Networks (PINNs) have emerged as a powerful framework for solving partial differential equations (PDEs) by embedding governing physics within neural architectures. Activation Functions (AFs) play a key role in this regard, imposing nonlinearities necessary for the neural network to represent complex solution behaviors during learning. Despite this criticality, the implications of AF differentiability, and its precise relationship towards enforcement of PDE-governed physics, remain insufficiently explored. Our investigation addresses this gap through detailed empirical analyses reinforced by theoretical reasoning, organized around six PINN-based models solving first-, second-, and third-order PDEs using four AFs spanning a spectrum from non-smooth to highly-smooth. Subsequent results reveal a structured differentiability-dependent behavioral trend: When differentiability order of the AF falls below the derivative order demanded by the governing PDE, the corresponding PINN does not fail arbitrarily. Rather, it systematically converges toward exact solutions consistent with a reduced-order physical description aligned with the differentiability order of the corresponding AF. As per the case studies, this behavior yields errors as low as 0.71% against lower-order PDE benchmarks. To the best of our knowledge, this work represents the first systematic identification and characterization of this behavior, which we term \u2019reduced-derivative consistency\u2019. This finding establishes a principled basis for selecting AFs in PINNs and opens pathways for custom or hybrid AFs that balance differentiability with computational efficiency in scientific machine learning.",
+  "link": "https://www.ssrn.com/abstract=7309958",
+  "id": 9,
+  "score": 0,
+  "why": "Off-topic: physics-informed neural networks, not finance"
+ },
+ {
+  "key": "10.2139/ssrn.7288058",
+  "source": "SSRN",
+  "title": "Hope, Signals, and Silicon: A Game-Theoretic Model of the Pre-Doctoral Academic Labor Market in the Age of AI *",
+  "abstract": "Generative AI can make early research work easier to produce and harder to interpret. This paper develops a compact game-theoretic model of this productionevaluation tension in the pre-doctoral academic labor market. In the model, PIs organize RA labor, allocate AI between routine and novel tasks, and choose mentoring intensity. RAs choose effort, while admissions committees infer research potential from noisy task-level signals under fixed admissions capacity. A mechanism-preserving simulation examines whether the model's qualitative mechanisms continue to hold when RAs and PIs are heterogeneous, research outcomes partly depend on luck, admissions evaluation is noisy, and elite Ph.D. capacity is fixed. The analysis yields three implications. First, routine-task AI can increase observable routine output while reducing the diagnostic precision of routine evidence. Second, heterogeneous PI objectives and task complementarity can lead laboratories to adopt different AI strategies, with some emphasizing scalable routine production and others emphasizing mentoring and novel-task augmentation. Third, when elite Ph.D. capacity is fixed, broad improvements in visible records can raise admissions cutoffs rather than expand access proportionally. The simulation reinforces these mechanisms by showing that AI can raise routine output while weakening the link between evaluated scores and latent ability, increasing the risk that high-ability or high-realized-merit candidates are missed. The paper suggests that as routine evidence loses diagnostic content, evaluation should place greater weight on less easily automated forms of contribution, including judgment, interpretation, research design, and process-based evidence.",
+  "link": "https://www.ssrn.com/abstract=7288058",
+  "id": 10,
+  "score": 0,
+  "why": "Off-topic: academic labor market game theory"
+ },
+ {
+  "key": "10.2139/ssrn.7288138",
+  "source": "SSRN",
+  "title": "AI Adoption in Emerging Markets \u2014 Productivity Effects, Labor\u2011Market Shifts, and Barriers to Diffusion",
+  "abstract": "AI reaches emerging markets quickly because the cost of accessing frontier models has collapsed, but the ability to turn that access into real economic gains remains uneven. The report argues that this gap between arrival and absorption is now the central development question. A Kenyan firm or an Indian clinic can invoke a model that once required a frontier lab, yet the productivity payoff depends on electricity, compute, connectivity, data, skills, and institutions\u2014complements that many emerging economies hold only partially. As the report puts it, \u201cthe diffusion of the technology is now fast and nearly free; the diffusion of its benefits remains slow and conditional.\u201d Productivity effects are large but capability\u2011dependent. Trials show novice call\u2011center workers becoming 34 percent more productive and developers completing tasks 56 percent faster with AI assistance, yet a Kenyan experiment found high\u2011performing entrepreneurs gaining 15 percent while low performers lost 8 percent. This pattern reflects a broader truth: AI amplifies existing capability rather than replacing it. Gains materialize where organizations can redesign processes, where workers have basic digital skills, and where infrastructure is reliable enough to support intensive use. Without these complements, the technology can widen gaps within countries as well as between them. Labor\u2011market exposure is lower overall in emerging economies, but it is concentrated in the sectors that matter most for upward mobility\u2014business\u2011process outsourcing, IT\u2011enabled services, and routine cognitive work. These sectors powered income growth in India and the Philippines, and they are precisely where AI\u2019s automation and augmentation pressures land first. The report stresses that lower exposure does not mean insulation: the structure of employment, the informality of labor markets, and slower task reinstatement all shape how adjustment unfolds. In many cases, the risk is not mass displacement but stalled upgrading. The conclusion is that AI\u2019s development impact hinges on absorptive capacity, not access. Electricity and compute form the physical floor; connectivity and digital public infrastructure make the technology locally useful; skills determine whether people can direct it; and institutions decide whether gains are captured or dissipated. Countries that build this stack\u2014India with digital public infrastructure, Kenya with payments rails\u2014convert AI into productivity and inclusion. Those that do not risk faster divergence. Any forecast of AI\u2019s effect on an emerging economy is therefore a statement about these complements, and any strategy that ignores them is not a strategy but a guess.",
+  "link": "https://www.ssrn.com/abstract=7288138",
+  "id": 11,
+  "score": 2,
+  "why": "Off-topic: macro development report on AI diffusion"
+ },
+ {
+  "key": "10.2139/ssrn.7288938",
+  "source": "SSRN",
+  "title": "Online Appendix to 'Targeting Additionality - A Theory of Blended Finance'",
+  "abstract": "This online appendix documents the data and empirical procedures, including the AI-assisted analysis of project disclosures used to reconstruct impact potential and classify blended-finance interventions, and the construction of financial-quality measures. It also reports simulation inputs and robustness checks, complete boundary and sorting estimates, variable definitions, and reproducibility procedures.",
+  "link": "https://www.ssrn.com/abstract=7288938",
+  "id": 12,
+  "score": 1,
+  "why": "Appendix document only, not standalone contribution"
+ },
+ {
+  "key": "10.2139/ssrn.7290140",
+  "source": "SSRN",
+  "title": "Hedge and Seek: A Q-Learning Approach to Dynamic Hedging of the S&amp;P 500 and Gold with Futures",
+  "abstract": "This paper develops a reinforcement learning framework based on CARA utility to dynamically determine hedge ratios for S&amp;P 500 index exposure using E-mini S&amp;P 500 futures contracts and gold exposure using gold futures contracts. Using Q-learning combined with an XGBoost model over a comprehensive state space spanning 2007-2022, the proposed framework outperforms standard hedging benchmarks (such as the Minimum Variance) across Sharpe and Information ratios, Maximum Drawdown, and Certainty Equivalent. To provide economic interpretability, I combine SHapley Additive exPlanations (SHAP)-based feature attribution with Principal Component and Time-Series regression analysis. Results indicate that credit conditions, inflation, monetary policy, and the yield curve play important roles in hedge decisions. The RL strategy performs particularly well during structural changes, but its flexibility offers less advantage in stable and slowly evolving regimes. Additionally, its performance depends on the analyzed markets, sample period, and modeling choices, highlighting the importance of further evaluation across alternative environments and implementations.",
+  "link": "https://www.ssrn.com/abstract=7290140",
+  "id": 13,
+  "score": 7,
+  "why": "Real data 2007-2022, outperforms baseline, lacks code release"
+ },
+ {
+  "key": "10.2139/ssrn.7303518",
+  "source": "SSRN",
+  "title": "Do Banks Really Know What They Get From AI?",
+  "abstract": "Big banks talk about AI all the time now. They say AI save money. They say workers can do job faster. They also say customer service become better. But there is one big problem with these claims. Banks tell us AI is used. They mostly do not show the full math to tell if it is worth the money. This paper looks at 10 banks. They are JPMorgan Chase, Bank of America, Citigroup, Wells Fargo, Goldman Sachs, Morgan Stanley, U.S. Bancorp, PNC, Capital One, and Truist. We used 19 AI claims, 16 AI use cases, 60 yearly financial records from SEC, worker numbers for 2022 and 2025, and 32 named sources. Our question is simple. Can a person who is outside the bank check these AI claims only from public information? The answer until now is no. At least not fully. Some banks give useful numbers about users, saved hours, or more work completed. But none of the 10 banks give clear AI cost together with a matching money benefit. Without these two numbers, a person outside cannot calculate real return on investment. Evidence show that banks really use AI. It also show some good improvement in daily work. But it does not prove yet that AI gave positive financial return to any bank in this study.",
+  "link": "https://www.ssrn.com/abstract=7303518",
+  "id": 14,
+  "score": 6,
+  "why": "Real investigation exposing bank info gaps, not methodology"
+ },
+ {
+  "key": "10.2139/ssrn.7290498",
+  "source": "SSRN",
+  "title": "The Price of Greenwashing: Algorithmic Verification and Market Discipline using Conformal Machine Learning",
+  "abstract": "While corporate sustainability mandates are expanding, the systemic reliance on self-reported emissions data exposes financial markets to pervasive greenwashing. Current literature predominantly utilizes subjective commercial ESG ratings or textual sentiment analysis to detect this deception, leaving a critical econometric gap in objectively quantifying physical climate realities. To resolve this information asymmetry, we engineer a novel algorithmic verification pipeline. Fusing U.S. SEC financial fundamentals with facility-level EPA greenhouse gas registries, we train a hyperparameter-optimized Extreme Gradient Boosting (XGBoost) architecture to predict physical baseline emissions. To rigorously quantify epistemic uncertainty and account for extreme asset-class heteroskedasticity, we apply a Mondrian Conformal Prediction framework, generating mathematically guaranteed, firm-specific safety margins. The shortfall between self-reported emissions and this conformal baseline is standardized into a novel Conformal-Weighted Continuous Divergence (CWCD) metric. Utilizing a cross-sectional lead-lag econometric design with high-dimensional industry fixed effects, we evaluate the directional, leading predictive association of algorithmic divergence on subsequent market valuation (Tobin\u2019s Q) and operational profitability (ROA). The empirical estimations reveal a robust predictive association indicative of market discipline: algorithmic emissions divergence exhibits a severe, statistically significant negative relationship with subsequent forward valuation and operational profitability. Providing robust evidence against the market blindness hypothesis, this study strongly suggests that institutional capital possesses the mechanisms to actively price environmental deception as a leading indicator of fundamental corporate mismanagement. These findings provide the quantitative justification necessary for regulatory authorities and asset managers to deploy algorithmic auditing infrastructure at scale.",
+  "link": "https://www.ssrn.com/abstract=7290498",
+  "id": 15,
+  "score": 7,
+  "why": "Real data, novel conformal prediction, rigorous uncertainty bounds"
+ },
+ {
+  "key": "10.2139/ssrn.7300218",
+  "source": "SSRN",
+  "title": "AutoScientist-Quant: Self-Evolving Coding Agents for Automatic Research in Quantitative Investment",
+  "abstract": "Large language model agents can discover alphas, yet current methods have three weaknesses. The search cannot adapt during the run, automation usually ends at alpha generation while library selection and model choice stay manual, and alpha discovery can read the test window through loop feedback or code problems. We present AutoScientist-Quant, a self evolving search process that regards quantitative research as one budgeted search problem. A single controller conditions every decision on the remaining budget, choosing at each round whether to improve, combine, pivot, or stop, which node to expand, how many alphas to generate, and how to retrieve past trajectories from the shared memory. The same core then selects from the library and tunes the model, closing the loop from hypothesis to deployable strategy. We also review the evaluation pipeline reused from prior work, fix two lookahead problems, and keep the feedback window disjoint from the held out test window, so every comparison tests true generalization. On CSI universes, the framework attains the best value of nearly every metric in every setting, and these conclusions hold across several backbones and markets.",
+  "link": "https://www.ssrn.com/abstract=7300218",
+  "id": 16,
+  "score": 9,
+  "why": "LLM agents automate alpha discovery with budget control"
+ },
+ {
+  "key": "10.2139/ssrn.7305920",
+  "source": "SSRN",
+  "title": "The Economics of Climate Stabilization: Investment, Technology Diffusion, and the Transition from Emissions Growth to Global Net-Zero",
+  "abstract": "The report argues that achieving global net\u2011zero emissions is not primarily a cost burden but a macroeconomic opportunity driven by rapid, endogenous technological learning. As stated in the Executive Summary, \u201cthe cumulative macroeconomic benefits of rapid technology diffusion will outpace transition costs by a factor of 3 to 1 globally\u201d and that accelerating learning rates in solar, storage, and green industrial systems are pushing zero\u2011carbon energy below fossil baseload costs. Climate stabilization is framed as a thermodynamic constraint\u2014CO\u2082 accumulation must cease\u2014requiring absolute decoupling of GDP from emissions. The report highlights that electrified systems offer structural efficiency advantages and that decarbonization propagates through industrial and urban nodes, reducing downstream supply\u2011chain emissions. A central thesis is that technology diffusion follows S\u2011curve dynamics, with Wright\u2019s Law driving cost\u2011curve compressions across solar PV, batteries, wind, hydrogen, heat pumps, and advanced nuclear. As fossil asset terminal values decline, capital reallocates toward clean infrastructure, accelerating adoption. The report identifies a $3\u2013$4 trillion annual investment gap and emphasizes blended finance, sovereign guarantees, and standardized green taxonomies as essential mechanisms. Clean\u2011energy investment is positioned as a global economic stimulus with higher multipliers than fossil investments. Finally, the report stresses multi\u2011system resilience\u2014supergrids, storage, demand\u2011response, and AI\u2011driven grid orchestration\u2014and the necessity of robust carbon pricing, regulatory mandates, and CBAMs. Regional analyses show that emerging economies will determine global outcomes, with technology leapfrogging offering pathways for industrialization and poverty reduction. The conclusion frames climate mitigation as the foundation of the next macroeconomic supercycle, where leaders in clean\u2011technology deployment capture disproportionate economic gains.",
+  "link": "https://www.ssrn.com/abstract=7305920",
+  "id": 17,
+  "score": 1,
+  "why": "Off-topic: climate economics macro report"
+ },
+ {
+  "key": "10.2139/ssrn.7305922",
+  "source": "SSRN",
+  "title": "The Clock of Regimes: An Operator-Theoretic Early-Warning System for Financial Fragility Evidence from the July 2026 Situational Awareness Collapse",
+  "abstract": "Can operator-theoretic persistence and tail-risk diagnostics provide advance warning of leveraged portfolio fragility? We examine this question using the July 2026 collapse of Situational Awareness-an AI-focused fund-as a natural experiment in concentration, shifting dependence, leverage, and forced liquidation. Combining a reconstruction of the fund's June 30 Form 13F long book with the Clock-of-Regimes (COR) framework, we map regime occupancy, tail exposure, and operator persistence into a first-passage survival model. The disclosed portfolio was highly concentrated: SanDisk and Micron comprised 55.6% of reported 13F value, the top six positions held 81.0%, and a nine-name core (88.3% of value) exhibited realized July pairwise correlations between 0.75 and 0.92. At the key prospective observation date (July 21), despite a composite Yellow zone, COR indicated full stress occupancy (\ud835\udc43 3 = 1.000), stress volatility \ud835\udf0e 3 = 3.54% per day, tail exposure q = 0.0486, entrapment radius \ud835\udf0c(\ud835\udc41) = 95.2, and aggregate residence tr(\ud835\udc41) = 162.8. Compared to an unconditional state-mixture benchmark holding portfolio mechanics and Student-\ud835\udc61 emissions fixed, COR conditioning increases estimated eight-session first-passage failure probabilities from 0.22% to 1.77% at 2\u00d7 leverage; 4.25% to 13.00% at 2.5\u00d7; 16.09% to 30.64% at 3\u00d7; and 50.60% to 63.95% at 4\u00d7. COR does not forecast return direction; rather, it identifies when market persistence and financing constraints render previously admissible leverage untenable.",
+  "link": "https://www.ssrn.com/abstract=7305922",
+  "id": 18,
+  "score": 8,
+  "why": "Recent real event, regime framework, concentration risk exposed"
+ },
+ {
+  "key": "10.2139/ssrn.7298998",
+  "source": "SSRN",
+  "title": "When Text Becomes Tradable: Financial-domain Language Models and the Asymmetric Absorption of News in Agricultural Futures Markets",
+  "abstract": "We ask whether large-language-model (LLM) embeddings of media news predict agricultural commodity futures returns and, if so, where the predictability resides. Using daily news on fourteen CBOT and ICE contracts from 2009 to 2023, we estimate a two-stage textual regression that maps pre-trained transformer embeddings to next-day returns via ridge regression, benchmarking against other text-based methods and non-text commodity-factor predictors across thirteen vectorisation models, including parameter-matched general-purpose baselines. The strongest text-based long-short portfolio, Araci's FinBERT on full news stories, attains an annualised Sharpe ratio near 2.5, and the tradable edge is sharply localised. First, it is concentrated in financially specialised pretraining: only the finance-domain (FinBERT) encoders retain economically large, statistically significant long-short Sharpe ratios after transaction costs, and only on full stories rather than headlines. Second, its informativeness is asymmetric and state-dependent across the portfolio legs: the short-leg Sharpe ratio is significantly higher on high-volatility days (around 3, versus about 1.4 unconditionally), confirmed by a block-bootstrap test, consistent with news predicting downside risk. Third, predictability accrues at the daily horizon (sub-daily strategies underperform), consistent with staggered absorption of dispersed news. These signals are not spanned by known commodity factors: after controlling for price, momentum, and carry benchmarks, the FinBERT long-short portfolio retains an annualised alpha of about 23% (t \u2248 5.9). Predictability is also materially stronger for grains than soft commodities.",
+  "link": "https://www.ssrn.com/abstract=7298998",
+  "id": 19,
+  "score": 9,
+  "why": "Real data Sharpe 2.5, finance-domain LLM advantage proven"
+ },
+ {
+  "key": "10.2139/ssrn.7297739",
+  "source": "SSRN",
+  "title": "FinRCA-Bench: Separating Retrieval Failure from Reasoning Failure in Financial Reconciliation Root-Cause Analysis",
+  "abstract": "Automated financial operations increasingly depend on language models to diagnose why a transaction failed to reconcile, but the evidence that establishes such a diagnosis is rarely contained in a document: it is distributed across invoices, purchase orders, approvals, allocations, payments, ledger entries, and bank activity, and it is connected by transactional relationships rather than by textual similarity. Evaluations that score only the final answer therefore conflate two distinct capabilities-whether a system can find the required evidence and whether it can reason over it. We introduce FinRCA-Bench, a deterministic synthetic benchmark of 2,250 accounts-payable-to-bank reconciliation cases spanning 14 operational tables, comprising 1,500 injected failures across 15 causal categories and 750 legitimate or hard-negative cases. The benchmark separates model-visible operational data from evaluator-private root-cause labels and record-level evidence contracts, so that evidence access is scored independently of answer correctness. We evaluate deterministic Rules/SQL, classical machine learning, a frozen dense semantic retriever, deterministic relational expansion, and Typed Provenance Graph Retrieval (TPGR), a default-deny typed traversal that admits only persisted transaction relationships. Structured baselines are strong: Rules/SQL reaches 84.97% held-out exact accuracy and classical ML reaches 95.44%. Holding the reasoning model, prompt, and generation configuration fixed and changing only retrieval, macro required-record recall moves from 0.83% to 77.70% and exact 16-class accuracy from 2.05% to 72.44% (paired difference 70.39 percentage points; 95% bootstrap CI 66.06-74.72), while TPGR uses fewer records (19.56 versus 40) and fewer source tokens (approximately 2,370 versus 5,531). Decomposing the outcome shows that structural retrieval failures outnumber reasoning failures with sufficient retrieval by 95 to 15. Yet 254 correct predictions occur despite incomplete retrieval, and strict returned-evidence contract accuracy is only 5.72%. On FinRCA-Bench, retrieval architecture rather than model capability determines the dominant share of end-to-end performance-and a correct root-cause label is a weak proxy for an auditable one.",
+  "link": "https://www.ssrn.com/abstract=7297739",
+  "id": 20,
+  "score": 8,
+  "why": "Named dataset, separates retrieval from reasoning, practitioner-ready"
+ },
+ {
+  "key": "10.2139/ssrn.7298539",
+  "source": "SSRN",
+  "title": "A Hybrid LSTM-GARCH Framework for Short-Horizon Stock Price Forecasting and Volatility-Aware Uncertainty Estimation",
+  "abstract": "Hybrid architectures that combine deep learning with econometric volatility models have shown promise for financial forecasting, but most published evidence comes from developed-market indices, commodities, or cryptocurrencies, leaving large emerging-market equity panels comparatively under-examined. This study develops a two-stage LSTM-GARCH ensemble for short-horizon stock price forecasting: an LSTM network generates ten-day-ahead price forecasts from price-based and technical-indicator features, and a GARCH(1,1) model estimates the associated conditional volatility to construct risk-aware confidence bands around those forecasts. The framework is applied to 48 constituents of the NIFTY50 index using daily data from January 2015 to December 2024, with forecast accuracy assessed using Root Mean Square Error (RMSE), Normalized Root Mean Square Error (NRMSE), Mean Absolute Error (MAE), and Mean Absolute Percentage Error (MAPE). Across the panel, the ensemble achieves a mean MAPE of 3.26% and a median MAPE of 2.17%, with the lowest errors concentrated among structurally stable, liquid large-cap stocks and the largest errors concentrated among names that experienced sharp, event-driven repricing during the sample period. The results indicate that a volatility-aware LSTM-GARCH framework is a workable approach for short-term, risk-aware forecasting of large-cap Indian equities, while also surfacing its central limitation: forecast accuracy degrades once a stock's price behaviour departs from its historical volatility regime. The study contributes an emerging-market evaluation of hybrid LSTM-GARCH forecasting and identifies the baseline comparisons and robustness checks needed to establish the approach's value over simpler alternatives.",
+  "link": "https://www.ssrn.com/abstract=7298539",
+  "id": 21,
+  "score": 3,
+  "why": "Standard methods, emerging market only, baseline unclear"
+ },
+ {
+  "key": "10.2139/ssrn.7298579",
+  "source": "SSRN",
+  "title": "Accurate but Correlated:&nbsp;Common AI Forecast Errors and Endogenous Market Volatility",
+  "abstract": "Artificial intelligence can improve each institution's risk forecast while reducing the financial system's ability to diversify forecast errors. This paper separates these two objects. Individual accuracy is a marginal property of an error distribution; systemic model risk is a covariance property. With N institutions, equicorrelated log-risk forecast errors leave an aggregate variance floor of \u03c1\u03c3\u00b2 that does not vanish as N grows. We derive the exact threshold above which an AI technology with lower individual mean-squared error nevertheless creates greater aggregate forecast risk than noisier independent legacy models. Risk-sensitive position rules then map common errors into synchronized net demand. With linear price impact, forecast-error covariance enters return variance; with GARCH updating, the initial variance increment is propagated by the multiplier (1-\u03b2)/(1-\u03b1-\u03b2). Prospectively separated simulations validate the signs under smooth volatility targeting and a discrete risk limit. Holding marginal error variance fixed, raising cross-institution error correlation from zero to 0.8 increases return variance by 3.15% under the smooth rule and 6.26% under the discrete risk limit. The stronger precommitted claim that both variance and one-percent expected shortfall rise by at least 5% is rejected. Common errors robustly amplify two-sided volatility under the model's conditions, but symmetric errors do not necessarily create comparably large downside-tail losses. Model diversity should therefore be evaluated through error covariance rather than model counts, vendor counts, or average predictive accuracy.",
+  "link": "https://www.ssrn.com/abstract=7298579",
+  "id": 22,
+  "score": 6,
+  "why": "Important systemic risk insight on correlated forecasts, theory-only"
+ },
+ {
+  "key": "10.2139/ssrn.7298598",
+  "source": "SSRN",
+  "title": "Contingent Winners: Forecast Scale and Model Rankings in Volatility Forecasting",
+  "abstract": "Deep learning is widely reported to rival or beat GARCH for volatility forecasting, but such verdicts usually omit some of the conditions that produced them. Using daily data for the S&amp;P 500, Nikkei 225, Gold and EUR/USD, we show that the volatility regime of the model-selection window sets a deep model's forecast scale. Scale is the mean forecast divided by the mean realised variance, a quantity computed after the fact rather than a property of the model. Hyperparameters are chosen against that window, which is how the regime carries through. The effect holds on all four assets for three architectures, in eleven of twelve asset-seed cells each. Three further conditions decide the winner in our study. The random seed moves the selected configuration and with it which network wins. The evaluation loss reverses the ranking on identical forecasts, GARCH being the more accurate under QLIKE and the less accurate under squared and absolute error. Under a model confidence set that reversal separates on the Nikkei 225, while on the S&amp;P 500 only GARCH's side of it does. The third condition is whether the forecasts were rescaled before scoring, a step rarely reported. Giving each model one multiplicative constant, fitted out of sample, removes most of the validation-regime gap. It also removes GARCH's QLIKE advantage on the equity indices altogether. Both effects are tested by intervention and not inferred. Which model wins is contingent on conditions such as the asset, and on how the model was selected, scored and scaled.",
+  "link": "https://www.ssrn.com/abstract=7298598",
+  "id": 23,
+  "score": 7,
+  "why": "Negative result, real data, ranking instability challenges verdicts"
+ },
+ {
+  "key": "10.2139/ssrn.7308940",
+  "source": "SSRN",
+  "title": "Agentic Artificial Intelligence and Systemic Financial Risk: A Complex-Systems Framework for Emerging-Market Supervision",
+  "abstract": "Agentic artificial intelligence systems-models that plan, invoke tools, retain memory, and execute multi-step actions with limited human supervision-have moved from experimental pilots to production infrastructure inside major banks and trading firms during 2025-2026. This monograph argues that the systemic-risk consequences of this shift cannot be understood through financial regulation alone, nor through computer-science accounts of agent architecture alone: they require a complex-systems lens that treats interaction topology, cognitive opacity, and objective divergence among autonomous agents as structural properties of the financial network itself. Building on classical network models of systemic risk and recent work on agentic architectures in finance, the monograph develops a framework linking autonomy depth, infrastructure concentration, and supervisory observability to the emergence of correlated, machine-mediated instability. It then examines how existing regulatory instruments-the EU AI Act, the Digital Operational Resilience Act, Basel-style model-risk frameworks, and Financial Stability Board guidance-address (or fail to address) these dynamics, and identifies a specific gap in emergingmarket and Latin American supervisory frameworks, which remain largely technology-neutral and reactive rather than agent-aware. The monograph closes with a proposed supervisory framework adapted to the institutional and resource constraints of emerging-market regulators. This is a conceptual and analytical work; it does not report new empirical estimation and should be read as a synthesis and framework-building exercise, not as a validated predictive model.",
+  "link": "https://www.ssrn.com/abstract=7308940",
+  "id": 24,
+  "score": 6,
+  "why": "Systemic risk framework for agentic AI, no empirics"
+ },
+ {
+  "key": "10.2139/ssrn.7301678",
+  "source": "SSRN",
+  "title": "Stranded Credentials: How A Skill-Signaling Market Absorbed Generative AI",
+  "abstract": "Generative AI can now perform many tasks that credentialing institutions count on to assess skill. During the AI era, do credentials retain their signaling value for subsequent performance? Mostly, yes. We audit the 2010-2026 archive of Kaggle, the largest data science competition platform, which ran two evaluation formats concurrently: upload-competitions, which directly score entrants' predictions computed on published data, and code-competitions, which score predictions by executing entrants' code on hidden data. Across 444,698 participations, competition medals predict subsequent leaderboard performance almost entirely in the first year after being earned, in both formats. Fresh medals retained most of their signaling value through the AI transition; credential stocks are only as informative as their replenishment. Although upload-competition medal stocks lost 82% of their informativeness, institutional stranding explains half to three quarters of the loss: upload-competitions had exited for reasons predating AI, and their frozen medal stock aged out under the pre-existing decay pattern. Old upload-competition medals look more valuable only in isolation, by proxying for the rest of the holder's record (e.g., experience). The measured changes are institutional rather than personal: an AI-like working style predicts performance similarly in both formats. The platform's official credential tiers, based on lifetime medal counts, discard 13-16% of the medals' information; an index weighting recent medals more heavily, built on pre-AI-era data alone, outperforms the official tiers in predicting AI-era performance. In conclusion, credentials are informative, perishable, institution-bound, and interdependent; sustaining their value under AI is a high-stakes, socioeconomic problem of institutional design.",
+  "link": "https://www.ssrn.com/abstract=7301678",
+  "id": 25,
+  "score": 4,
+  "why": "Real data but off-domain (data science credentials)"
+ },
+ {
+  "key": "10.2139/ssrn.7298801",
+  "source": "SSRN",
+  "title": "Chips as Collateral: Vendor-Supported Chip-Backed Debt and the Financing of the AI Buildout",
+  "abstract": "The buildout of artificial intelligence infrastructure is increasingly financed with debt secured by the computing hardware itself. We document the emergence of chip-backed lending. This special purpose vehicles purchase graphics processing units (GPUs), lease them to AI developers, and issue debt collateralized by the hardware, using the 2026 Apollo-xAI transactions (\u2248 USD 7 billion). The structure exhibits three features with no precedent in secured lending. First, the collateral loses value in discrete steps governed by the product cycle of a single dominant vendor. Second, that same vendor participates as anchor equity investor in the financing vehicles and has announced commitments to invest in its own customers. This creates a circularity reminiscent of vendor financing in the 1999-2001 telecom buildout. Third, bilateral exposures are rapidly converted into distributable securities. We relate this practice with historical collateral-driven credit episodes: railroad equipment trusts, the Penn Square-Continental Illinois failures, Japan's land-collateral cycle, telecom vendor financing, and subprime securitization. Chip-backed lending reproduces their recurring structure. It also adds one element with no precedent: an obsolescence clock controlled by a party inside the financing. We develop a model of collateralized lending under vendor-controlled, step-function obsolescence. Vendor support raises debt capacity ex ante. But it also amplifies the correlation of defaults and collateral values ex post, the defining ingredient of systemic episodes. The model yields four observable signals, on loan pricing, lending terms, vendor support, and risk distribution, that would prove or disprove the fragility thesis. An institution-level risk analysis then maps these mechanisms into the credit, market, liquidity, operational, and concentration risks facing direct lenders, banks, insurers, and securitization sponsors. We close by mapping a supervisory toolkit (generation-step stress scenarios, collateral-valuation haircuts, risk retention, related-party treatment of vendor stakes, and perimeter monitoring of nonbank holders) onto a plausible 2027 stress window.",
+  "link": "https://www.ssrn.com/abstract=7298801",
+  "id": 26,
+  "score": 6,
+  "why": "Real financial innovation documented (GPU lending), not methodology"
+ },
+ {
+  "key": "10.2139/ssrn.7275218",
+  "source": "SSRN",
+  "title": "Stock Price Prediction Using ML Techniques",
+  "abstract": "Predicting market reversal is one of the hardest tasks in financial analytics, due to the extreme volatility of markets and their vulnerability. This paper suggests a new predictive model by using CSI-300 index which takes into account a hybrid deep-learning system having a bidirectional long short-term memory (BiLSTM) model and a Transformer encoder and is being trained using the AdamW optimizer. The logic behind the design is to obtain both short-term and mid-term time dependencies using the BiLSTM model which uses the attention mechanism inherent in the Transformer to concentrate the most relevant time-steps. We compare this approach with some traditional models that were reported in the literature among them LSTM, CNN-LSTM, CNN-LSTM-Attention, CNN-BiLSTM-Attention, which were all outlined in recent peer-reviewed articles. Quantitatively our hybrid model have an RMSE, MAE, R2 and accuracy. These findings show that the proposed architecture provides statistically significant increase in predictive performance in comparison with the current models of estimating stock price movements. However, the effectiveness of quality is dependent on the model of past data and accuracy can be eroded due to unexpected market shocks. In general, the results bring to attention the effectiveness of using sequential and attention-based learning processes. Simultaneously, providing a fruitful direction of future research in stock forecasting.",
+  "link": "https://www.ssrn.com/abstract=7275218",
+  "id": 27,
+  "score": 2,
+  "why": "Price predictor, no baseline, no transaction costs, classic reject"
+ },
+ {
+  "key": "10.2139/ssrn.7309820",
+  "source": "SSRN",
+  "title": "Explainable Artificial Intelligence for Dynamic Credit Risk Assessment: X-DyAR, an Additive Temporal Residual Fusion Framework for Financial Institutions",
+  "abstract": "Credit risk models used at loan origination are typically built from applicant-level attributes observed at a single decision point, while economic conditions evolve and can alter the background probability of default. Adding external time series to a strong tabular model is technically non-trivial in regulated settings: naive fusion can introduce temporal leakage, opaque crosssource interactions can make explanations difficult to audit, and an external data outage can destabilize production predictions. This paper proposes X-DyAR (Explainable Dynamic Additive Residual Fusion), a concrete hybrid deep-learning method that augments a CatBoost applicationtime backbone with a gated recurrent unit (GRU) that learns a month-level residual log-odds adjustment from lagged macroeconomic trajectories. The architecture is additive by construction: the final logit equals the static CatBoost logit plus one dynamic source contribution. TreeSHAP decomposes the static component into applicant features, while the dynamic residual is an exact source-level contribution; their sum reconstructs the prediction to floating-point precision. A source-availability gate and source-level temporal dropout provide an exact fallback to the static model when the external source is entirely unavailable. We evaluate the method on a real Lending Club granting dataset with 1,347,681 loans and a common leakage-controlled cohort of 1,335,335 loans, fused with monthly U.S. unemployment, policy-rate, inflation, 10-year Treasury-yield, and yield-slope signals. Training uses loans through 2015, validation uses 2016, and all 225,277 loans from 2017-2018 form the out-of-time test. The best six-month X-DyAR model attains AUROC 0.68329, AUPRC 0.35520, Brier 0.15586, log loss 0.48209, and 15-bin ECE 0.01109, versus 0.68194, 0.35298, 0.15790, 0.48825, and 0.04109 for the strong static CatBoost baseline. The AUROC gain is deliberately reported as small rather than overstated; a paired bootstrap using 100 resamples of 25,000 test loans yields an empirical AUROC-difference interval of [0.00053, 0.00225]. Ablations, 3/6/12-month sensitivity, source-missingness stress tests, year-wise analysis, FICO-stratified analysis, and exact explanation-completeness checks show that the main benefit is a transparent, robust dynamic calibration layer rather than a dramatic within-year ranking improvement. The results support additive temporal residual fusion as a practical design pattern when financial institutions need dynamic probability adjustment without surrendering auditability or safe fallback behavior.",
+  "link": "https://www.ssrn.com/abstract=7309820",
+  "id": 28,
+  "score": 6,
+  "why": "Real production problem, novel architecture, no results shown"
+ },
+ {
+  "key": "10.2139/ssrn.7310298",
+  "source": "SSRN",
+  "title": "Do Banks Really Know What They Get From AI?",
+  "abstract": "Big banks talk about AI all the time now. They say AI save money. They say workers can do job faster. They also say customer service become better. But there is one big problem with these claims. Banks tell us AI is used. They mostly do not show the full math to tell if it is worth the money. This paper looks at 10 banks. They are JPMorgan Chase, Bank of America, Citigroup, Wells Fargo, Goldman Sachs, Morgan Stanley, U.S. Bancorp, PNC, Capital One, and Truist. We used 19 AI claims, 16 AI use cases, 60 yearly financial records from SEC, worker numbers for 2022 and 2025, and 32 named sources. Our question is simple. Can a person who is outside the bank check these AI claims only from public information? The answer until now is no. At least not fully. Some banks give useful numbers about users, saved hours, or more work completed. But none of the 10 banks give clear AI cost together with a matching money benefit. Without these two numbers, a person outside cannot calculate real return on investment. Evidence show that banks really use AI. It also show some good improvement in daily work. But it does not prove yet that AI gave positive financial return to any bank in this study.",
+  "link": "https://www.ssrn.com/abstract=7310298",
+  "id": 29,
+  "score": 6,
+  "why": "Real investigation exposing bank info gaps, not methodology"
+ },
+ {
+  "key": "10.2139/ssrn.7304138",
+  "source": "SSRN",
+  "title": "Proposed Development and Validation of a Household Wedding Financial Burden Index in Bangladesh&nbsp; A Study Protocol using Explainable Machine Learning",
+  "abstract": "Background Weddings combine household consumption, social obligation, status signalling, and inter-household transfers. In Bangladesh, a large celebration may generate demand across food, venues, clothing, jewellery, transport, and creative services while simultaneously depleting liquid savings or creating debt. Existing evidence addresses dowry, child marriage, poverty trajectories, or household vulnerability more often than the household-level affordability of the ceremony and its financing. No locally validated, transparent measure was identified that integrates event cost, wedding-attributable debt, savings depletion, debt-service pressure, and the post- wedding emergency buffer. Objective To develop and validate an objective formative Wedding Financial Burden Index (WFBI), develop a complementary reflective Wedding Financial Strain Scale, estimate the distribution and socio-economic determinants of wedding spending and burden, and evaluate leakage-controlled prediction models for identifying households at elevated future risk. Methods This study protocol describes a multiphase sequential mixed-methods study; no primary household survey or empirical validation has yet been completed. A systematic evidence review and qualitative item-development phase will be followed by expert content review, cognitive interviews, and a pilot survey. The main study will recruit approximately 1,800\u20132,000 financially knowledgeable adults reporting on one household wedding held in Bangladesh within a prespecified five-year window, using a stratified multistage design where feasible. Objective components will be defined before analysis and evaluated through content, criterion, incremental, known-groups, predictive, and sensitivity evidence. The reflective strain scale will undergo split-sample exploratory and confirmatory factor analysis, omega-based reliability assessment, and measurement- invariance testing. Weighted descriptive estimates, survey-adjusted regression, and sensitivity analyses will address expenditure, debt, savings, and well-being. Penalized regression and tree ensembles will be tuned by nested resampling and evaluated on a locked holdout or external sample. SHAP explanations will describe model behavior, not causal effects. A 1,000-record synthetic dataset is retained solely for pipeline verification and contributes no substantive findings. Discussion The protocol separates objective burden from subjective strain, prevents circular validation, and treats synthetic data as engineering material only. If the planned fieldwork and validation are completed, the study may provide a reproducible measurement framework, a field-ready questionnaire, and evidence relevant to household financial resilience. No conclusion about the prevalence, determinants, or consequences of wedding-related financial burden in Bangladesh is made in this preprint.",
+  "link": "https://www.ssrn.com/abstract=7304138",
+  "id": 30,
+  "score": 0,
+  "why": "Off-topic: household wedding finance in Bangladesh"
+ },
+ {
+  "key": "10.2139/ssrn.7316556",
+  "source": "SSRN",
+  "title": "The Effects of Artificial Intelligence Engagement on Socially Responsible Banking",
+  "abstract": "The increasing diffusion of artificial intelligence (AI) in the financial sector, together with growing pressure for sustainable development, has raised important questions regarding the role of digital technologies in advancing environmental, social, and governance (ESG) objectives. Against this backdrop, the current study investigates whether banks\u2019 AI engagement is associated with the development of socially responsible banking (SRB). Recognizing the multidimensional nature of AI systems, we conceptualize AI engagement through two complementary dimensions \u2013 AI intensity and AI breadth \u2013 and examine their relationship with banks\u2019 ESG performance. Using an international sample of 136 banks from 40 countries over the period 2011\u20132024, we measure AI engagement through a textual analysis of annual reports. AI intensity captures the prominence of AI-related disclosure, while AI breadth captures the category-normalized coverage of heterogeneous AI technological domains. The findings indicate that both AI intensity and AI breadth are positively associated with banks\u2019 ESG performance. These results contribute to the emerging literature on AI and sustainable banking by demonstrating that ESG performance is associated not only with the intensity of banks\u2019 AI engagement, but also with the breadth of AI solutions implemented by banks.",
+  "link": "https://www.ssrn.com/abstract=7316556",
+  "id": 31,
+  "score": 3,
+  "why": "Finance-adjacent correlation study, not actionable for practitioner"
+ }
+]

@@ -65,7 +65,7 @@ for c in C:
 # --- PASS 2: why-it-matters for survivors --------------------------------------
 TH, CAP = 7, 6
 surv = sorted([c for c in C if c.get("score", 0) >= TH], key=lambda c: -c["score"])[:CAP]
-if surv:
+if surv and not os.environ.get("P1ONLY"):
     p2 = f"""For each paper below, write the single sentence that goes on a daily research tape
 read by a quant/ML practitioner. The sentence IS the product.
 
