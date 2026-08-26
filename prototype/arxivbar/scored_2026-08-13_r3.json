@@ -1,0 +1,322 @@
+[
+ {
+  "key": "2608.13096",
+  "source": "arXiv",
+  "title": "FlowLOB: Efficient and Controllable Limit Order Book Generation with Flow Matching",
+  "abstract": "Limit order book (LOB) simulators are most useful to practitioners when they combine realistic market dynamics, computationally efficient sampling, controllable scenario generation, and the ability to generalize beyond the instruments seen during training---properties that existing agent-based and deep generative simulators provide only partially. We present \\textbf{FlowLOB}, a conditional \\textbf{flow}-matching generator of \\textbf{LOB} trajectories, trained on multiple Hong Kong Exchange (HKEX) symbols at three sampling frequencies ($0.1$s, $1$s, $10$s) in tick-relative representation that transfers to unseen instruments. Because flow and diffusion models admit a common formulation, we train both with identical data, architecture, and budget, and sample both through the same fixed-step ODE solvers, yielding a controlled comparison of sampling efficiency and fidelity. Flow matching attains its best quality with only $10$ ODE-solver steps, whereas diffusion needs many more function evaluations to approach the same fidelity. At this efficient operating point, FlowLOB improves realism over baselines, two learned and two agent-based models, in most distributional metrics at the two finer sampling frequencies. We evaluate counterfactual controllability with a distributional test that asks whether changing a scenario condition moves the generated statistic toward the corresponding real tail regime; FlowLOB satisfies this criterion in most tested settings. Both realism and control effects transfer zero-shot on a held-out symbol. We additionally conduct ablation studies on the network architecture and the learning rate.",
+  "link": "https://arxiv.org/abs/2608.13096v1",
+  "id": 1,
+  "score": 7,
+  "why": "Real LOB data, concrete flow-matching method, instrument transfer capability"
+ },
+ {
+  "key": "2608.13706",
+  "source": "arXiv",
+  "title": "CLAIR-Fin: An Adversarial Multi-Agent Framework for Claim-Level Verification and Adaptive Debate in Cross-Modal Financial QA",
+  "abstract": "Existing defenses against hallucination in retrieval-augmented and multi-agent pipelines remain partial: evidence is trusted despite modality disagreement, debate verifies an aggregate report rather than individual claims, and such verification occurs only after drafting, leaving inter-agent errors undetected until the final text. To close this gap, we present CLAIR-Fin, a nine-agent framework that decomposes each question into atomic claims maintained in a typed Financial Claim Ledger. Each claim is resolved through Asymmetric Evidence Authority, which conditions evidence trust on claim type rather than treating all modalities as equally reliable; Chain-of-Custody Verification, which checks grounding at the hand-off between drafting and adversarial review rather than only at the pipeline's exit; an Adaptive Rebuttal Cycle, which routes contested claims through adversarial debate whose depth scales with what that debate finds; and a terminal entailment audit paired with a continuous Hallucination Risk Index that distinguishes claims that passed scrutiny from claims never contested. We evaluate CLAIR-Fin on BB-FinQA-X, a 500-question cross-modal financial evaluation set built from Bangladesh Bank Annual Report material, stratified by query type, format, and difficulty. Relative to a single-pass retrieval-augmented generation baseline, it raises faithfulness ($0.780 \\rightarrow 0.889$) while abstaining on 5.4% of questions when evidence is insufficient rather than forcing an unsupported response, and it exceeds stronger retrieval-strategy baselines such as HyDE and Graph-RAG on faithfulness ($\\leq 0.874$).",
+  "link": "https://arxiv.org/abs/2608.13706v2",
+  "id": 2,
+  "score": 4,
+  "why": "Interesting framework but no empirical results or validation shown"
+ },
+ {
+  "key": "2608.13079",
+  "source": "arXiv",
+  "title": "Learning Discrete Decisions for MIPs with Constraint-Aware Diffusion",
+  "abstract": "This paper proposes a novel learning-based approach to approximately solve instances of mixed-integer optimization problems. These problems are computationally challenging, as they require jointly determining discrete and continuous decisions while satisfying complex combinatorial constraints. The proposed method relies on a graph-based generative diffusion model that learns the discrete component of mixed-integer optimization problems while integrating a training-free feasibility projection operator directly into the reverse diffusion process to steer intermediate samples toward the feasible set throughout generation. Once the discrete decisions are generated, the remaining optimization reduces to a continuous problem that can be solved efficiently (relative to the original problem) using existing numerical methods. The resulting framework named Constrained Graph Diffusion (CGD), is problem-agnostic and can accommodate a broad class of mixed-integer optimization problems through suitable projection operators. We evaluate CGD on optimal transmission switching for ACOPF and discrete portfolio optimization, demonstrating substantial improvements in feasibility and solution quality over learning-based baselines while achieving speedups of up to $425\\times$ over state-of-the-art numerical solvers for MINLPs.",
+  "link": "https://arxiv.org/abs/2608.13079v2",
+  "id": 3,
+  "score": 0,
+  "why": "Mixed-integer optimization, no finance application visible"
+ },
+ {
+  "key": "2608.13024",
+  "source": "arXiv",
+  "title": "TIEM: Temporal Integration of Hypergraph Evidence and Skill Memory for Event-Driven Financial Forecasting",
+  "abstract": "Event-driven catalyst-outcome forecasting increasingly uses retrieval- and memory-augmented large language model agents for prediction. However, training-data contamination and temporal leakage can create an Evidence Chasm between reported accuracy and true predictive ability. We propose TIEM, a timestamp-gated framework with three coordinated components: an Event-Evidence Hypergraph (EEH) for timestamp-filtered multi-tier retrieval; a Case-based Skill Memory (CSM) for source-tagged temporal skills; and Heterogeneous Evidence-Experience Fusion Reasoning (HEFR) for evidence-experience fusion and prediction. We also introduce FinPURE, a recent-period A-share holdout benchmark, and use a Name-Date Probe to assess per-model name-date sensitivity rather than assuming training cutoffs. Results on five financial forecasting benchmarks show TIEM outperforms current baselines. Our project is available at https://github.com/QwenQKing/Fin_TIEM.",
+  "link": "https://arxiv.org/abs/2608.13024v2",
+  "id": 4,
+  "score": 6,
+  "why": "Event-driven forecasting, temporal leakage addressed, lacks baseline detail"
+ },
+ {
+  "key": "2608.13389",
+  "source": "arXiv",
+  "title": "TopoIntent: Compiling Security Intent into Executable, Compliance-Checked Network Topologies",
+  "abstract": "Enterprise security topology design requires translating business intent, regulatory requirements, and risk assumptions into zones, boundary devices, inter-zone paths, and access-control policies. Existing NetOps automation tools mainly operate after this design is fixed, providing limited support for generating structured security topologies from underspecified natural-language requirements. We present TopoIntent, a system that compiles security intent into executable, compliance-checked network topologies. It uses a schema contract to constrain generation, retrieves reference architectures from a curated template library via dense-vector search, and applies staged fusion for intent-template alignment and security completion. The generated topology is checked against CIS Controls v8.1.2 safeguards visible at the topology layer, while unresolved cases are marked for manual review. Structural gaps are repaired through additive schema-preserving edits. The final topology is exported to Mininet scripts with kernel-level iptables ACLs, enabling executable reachability and allow/deny tests. Because no public benchmark exists for this requirement-to-topology task, we construct an evaluation set from reference security architecture diagrams. The retrieval set contains 22 templates and 44 synthetic intents across five scenarios, while the held-out set contains 7 templates and 14 intents from finance and government scenarios excluded from retrieval. On the held-out set, additive repair improves topology-visible CIS satisfaction from 0.78 to 1.00 in fewer than 1.5 rounds on average, and one feedback round raises the post-ACL policy pass rate from 0.78 to 0.88.",
+  "link": "https://arxiv.org/abs/2608.13389v1",
+  "id": 5,
+  "score": 0,
+  "why": "Enterprise network security, not finance"
+ },
+ {
+  "key": "2608.13340",
+  "source": "arXiv",
+  "title": "Fee Implied Volatility on Uniswap v3: A DEX Native Proxy and Its Limits",
+  "abstract": "Narrow Uniswap v3 liquidity ranges resemble short dated options, and Panoptic's streaming premium echoes the short maturity concentration of Black-Scholes theta near the strike. This motivates a natural question: can implied volatility be extracted from Uniswap v3 and Panoptic using only on chain observables? A direct identification of theta with realized fee income is too strong, since fee income captures only the compensation leg of a narrow range LP position. The remaining leg, the cost of dynamically hedging the LP's negative convexity through arbitrage aligned trades, is formalized elsewhere as predictable loss or loss versus rebalancing and is not observable from fees alone. We therefore reformulate the object of interest. We derive $\u03c3_{fee} = 2 \\cdot feeRate \\cdot \\sqrt{Volume/L_{tick}}$, and interpret it as a DEX native fee implied volatility proxy: an observable, oracle free measure of fee flow relative to active liquidity. We show that recovering a structural latent volatility from pool observables alone is not identified in general, since aggregate volume mixes informed and uninformed flow while the missing hedging cost term depends on external price dynamics and arbitrage timing. What the pool data support directly is a fee implied activity index, not a Black-Scholes consistent implied volatility.",
+  "link": "https://arxiv.org/abs/2608.13340v1",
+  "id": 6,
+  "score": 6,
+  "why": "DEX microstructure insight, oracle-free formula, no empirical validation"
+ },
+ {
+  "key": "2608.13082",
+  "source": "arXiv",
+  "title": "LOB-ID: Evaluating Synthetic Market Data by Inception Distances",
+  "abstract": "Generative models of limit orderbook (LOB) data have advanced rapidly, but their evaluation often focuses on stylised facts and selected market statistics. These measures provide useful diagnostics but may not capture the joint temporal and cross-level structure of order-book trajectories. We introduce LOB-ID, an embedding-based framework that adapts the Fr\u00e9chet Inception Distance (FID) and Monge Inception Distance (MIND) to LOB data. To obtain domain-specific embeddings, we train the DeepLOB architecture on four months of Level-2 order-book data for five equities. We show that LOB-ID is stable across time, instruments, and embedding checkpoints, and rises monotonically under controlled distortions. We then construct a moment-matching attack against FID and a deep-book perturbation that evades statistic-based evaluation. MIND remains substantially more sensitive to both distortions. Finally, we score five generative LOB models, spanning stochastic baselines and deep learning approaches, and find that LOB-ID ranks them in line with the joint temporal and cross-level structure each captures by construction.",
+  "link": "https://arxiv.org/abs/2608.13082v1",
+  "id": 7,
+  "score": 5,
+  "why": "LOB evaluation metric, real problem, limited practitioner utility"
+ },
+ {
+  "key": "2608.13745",
+  "source": "arXiv",
+  "title": "Dynamic Physical Hedging amid Jump Losses, Reconstruction-Price Uncertainty, Population Interactions",
+  "abstract": "We study dynamic physical hedging for insurers exposed jointly to catastrophe losses and stochastic reconstruction costs. Surplus evolves as a controlled jump diffusion whose loss amplitude combines marked catastrophe severity, an exogenous mean-reverting cost factor, and endogenous mitigation. We establish well-posedness, moment and stability estimates, and a stopping-time dynamic programming principle, and prove that the value function is the unique viscosity solution of the resulting nonlocal Hamilton-Jacobi-Bellman (HJB) equation Strategic interaction is introduced through a mean field game (MFG) with reduced-form vulnerability costs, yielding a coupled backward-forward HJB-Kolmogorov system. We establish relaxed equilibrium existence, Markovian realization, and uniqueness under appropriate compactness and monotonicity conditions. Numerical experiments show that reconstruction costs and capitalization materially affect optimal hedging and that cross-sectional vulnerability alters equilibrium costs. Tail-family robustness calculations further assess the sensitivity of these conclusions to alternative catastrophe-severity specifications.",
+  "link": "https://arxiv.org/abs/2608.13745v1",
+  "id": 8,
+  "score": 3,
+  "why": "Insurance hedging theory, minimal empirical grounding"
+ },
+ {
+  "key": "2608.12777",
+  "source": "arXiv",
+  "title": "Physical Extinction and Long-Run Pricing under Time-Varying Beliefs",
+  "abstract": "An investor may be optimistic about aggregate endowment growth at some times and pessimistic at others. The weight placed on her forecast in bond valuation can therefore vary across maturities. We study whether this maturity dependence disappears at the long end of the yield curve. In a two-investor Arrow--Debreu economy, physical extinction follows when \\emph{total disagreement} grows without bound. We find that bond valuation depends on net disagreement. If \\emph{net disagreement} has no limit, neither the long-forward measure nor the long bond exists. Bond yields can converge along the same belief path. The long yield alone therefore cannot reveal whether valuation weights and bond returns converge across maturities. We also obtain finite-maturity error bounds for bond prices and forward densities.",
+  "link": "https://arxiv.org/abs/2608.12777v1",
+  "id": 9,
+  "score": 2,
+  "why": "Asset pricing theory, no data, no deployment path"
+ },
+ {
+  "key": "2608.13056",
+  "source": "arXiv",
+  "title": "Simulating Stress Laws under Extremal Dependence: Characterizing What Generative Models Must Preserve",
+  "abstract": "We study stress-scenario generation for systems driven by multivariate heavy-tailed risk factors. Within regions where several financial losses are simultaneously extreme, stress analysis concerns both the conditional law of the risk factors and the most plausible configurations producing those losses. We show that both are governed by the same limiting tail law. Preserving its measure recovers rare-event probabilities and scaled conditional stress laws, while misspecifying extremal dependence distorts some regular joint-stress probability. Its density governs reverse-stress optimization, whose maximizers identify the most plausible stress configurations. To exploit this common structure in finite samples, we develop SSGEN (Self-Similar Generative Estimation), which learns extremal dependence from intermediate exceedances and extrapolates to rarer levels using a Pareto radial component. Even when the target event is absent from the sample, we establish convergence rates for the generated conditional law, and data-driven reverse-stress solutions.",
+  "link": "https://arxiv.org/abs/2608.13056v1",
+  "id": 10,
+  "score": 6,
+  "why": "Stress testing under heavy tails, practical motivation, results not shown"
+ },
+ {
+  "key": "2608.13732",
+  "source": "arXiv",
+  "title": "On the First Hitting Time Problems for Diffusion Processes: Local Time-Space Approach",
+  "abstract": "Using the local time-space calculus of Peskir (2005) and the method developed in Mijatovic (2010), we derive a new integral representation for the distribution of the first-passage time (FPT) of a diffusion process through a time-dependent barrier. We present a complete three-step numerical algorithm: first, the problem is reduced to a Volterra-type integral equation; second, its kernel is approximated by a Markov chain; finally, the resulting equation is solved using a quadrature method. The method is implemented for several representative examples, and its convergence properties are established. An extension to double barrier problems is carried out.",
+  "link": "https://arxiv.org/abs/2608.13732v1",
+  "id": 11,
+  "score": 1,
+  "why": "Numerical methods for diffusions, finance application unclear"
+ },
+ {
+  "key": "10.2139/ssrn.7244198",
+  "source": "SSRN",
+  "title": "FROM SCDI TO ACDI&nbsp; Asset-Contingent Debt Instrument for High-Obsolescence AI Infrastructure Financing: Framework, Pricing, and Evidence from Sovereign Borrowers",
+  "abstract": "Sovereign debt models rely on a fragile assumption: financed assets retain their value over the loan term. This works for roads and ports, but fails catastrophically for frontier technology. As hardware costs halve every two years-its economic value plummets far faster than a fixed repayment schedule can adjust. Governments are left paying premium rates for obsolete hardware. To date, no debt instrument addresses this compounding mismatch. To bridge this structural gap, this paper introduces the Tokenized Compute Credit (TCC), the first Asset-Contingent Debt Instrument (ACDI). Guided by a novel pricing formula-the Technology Performance Rate Adjustment (TPRA)-the TCC indexes payment obligations in near-real time to hardware depreciation, verified utilization, and audited social yield, bypassing the data manipulation and verification lags of traditional GDP-linked bonds. Applied to six sovereign borrowers-Zambia, Pakistan, Ethiopia, Kenya, Nigeria, and Bangladesh-the TCC slashes interest payments by 42% to 62%. By shifting state-contingent debt research from macroeconomic to asset-specific indexation, this framework eliminates the pricing premiums that have long stalled adoption. Crucially, the TCC integrates into existing legal and settlement infrastructure without new treaties, making it immediately deployable for the massive AI infrastructure programs now sweeping emerging markets.",
+  "link": "https://www.ssrn.com/abstract=7244198",
+  "id": 12,
+  "score": 4,
+  "why": "Novel debt instrument, no deployment evidence or testing"
+ },
+ {
+  "key": "10.2139/ssrn.7245261",
+  "source": "SSRN",
+  "title": "An analysis of AI trading algorithms and Human Hedge Fund Managers and Their Impacts on Market Efficiency in the United States from 2020-2025",
+  "abstract": "This study examines the extent to which AI trading algorithms improve market efficiency compared to human hedge fund managers in the United States between 2020 and 2025. Using a qualitative comparative analysis of peer-reviewed studies, financial reports, and market evaluations, the research evaluates performance across three key measures: trade execution speed, predictive accuracy, and risk management. Findings indicate that AI-driven trading systems consistently outperform human-managed funds in execution speed, trade accuracy, and risk-adjusted returns, while also demonstrating greater adaptability during periods of market volatility. Although human judgment remains valuable in complex decision-making, the evidence suggests that AI trading algorithms significantly enhance market efficiency by reducing latency, improving predictive capabilities, and strengthening risk management practices. The study contributes to ongoing discussions regarding the role of artificial intelligence in modern financial markets and highlights the potential benefits and challenges associated with increased AI adoption in hedge fund management.",
+  "link": "https://www.ssrn.com/abstract=7245261",
+  "id": 13,
+  "score": 2,
+  "why": "Qualitative literature review, no original empirical work"
+ },
+ {
+  "key": "10.2139/ssrn.7245358",
+  "source": "SSRN",
+  "title": "Predicting Term-Deposit Subscription in Banking Campaigns: A Comparative Machine Learning Analysis",
+  "abstract": "Banking institutions operate in a highly competitive environment where attracting and retaining customers requires effective marketing strategies and data-driven decision making. Advances in machine learning have enabled banks to leverage customer information to better predict behavioral outcomes such as term-deposit subscription. Using a publicly available Portuguese banking dataset containing 45,211 customer interactions, 16 predictor features, and one binary target variable, this study conducts exploratory data analysis and evaluates the performance of several machine learning classification models, including Logistic Regression, k-Nearest Neighbors (KNN), AdaBoost, Gradient Boosting, Random Forest, Multi-Layer Perceptron (MLP), and XGBoost. The objective is to predict whether a prospective or existing customer will subscribe to a term deposit during a marketing campaign. Experimental results show that the Random Forest classifier achieves the highest performance among the models tested, with a preliminary accuracy of 91.37%; because the class-balancing step was applied prior to the train/test split, this figure should be treated as an upper-bound estimate pending re-validation with a leakage-free pipeline. The study contributes to financial services marketing by providing an empirical comparison of widely used machine learning algorithms and offering insights that can support more targeted and effective customer outreach strategies.",
+  "link": "https://www.ssrn.com/abstract=7245358",
+  "id": 14,
+  "score": 2,
+  "why": "Standard ML classification on toy dataset, no financial insight"
+ },
+ {
+  "key": "10.2139/ssrn.7247306",
+  "source": "SSRN",
+  "title": "Artificial Intelligence and the Labour Market: Expected Effects and the Role of Policy Intervention",
+  "abstract": "This paper examines how AI is changing labour markets and how policies can help shape the way its effects are distributed. Based on a qualitative review of recent empirical and policy literature, it argues that the impact of AI is not the same for all groups of workers, that the rapid adoption of AI requires timely policy intervention, and that regulation can influence its effects on labour markets. The argument draws on evidence from comparative, task-based, and field studies. Since AI-specific policy measures are still too new for their effects on labour markets to be measured clearly, the paper looks at two existing approaches to illustrate how such policies can work in practice: the multilevel regulation of automated decision-making systems in California and South Korea's national retraining strategy. Based on this analysis, the paper identifies three main policy priorities: (i) developing transition support before workers are displaced; (ii) ensuring transparency and accountability for AI systems used in hiring and recruitment; and (iii) promoting international cooperation to establish minimum standards.",
+  "link": "https://www.ssrn.com/abstract=7247306",
+  "id": 15,
+  "score": 1,
+  "why": "Labor market policy review, not relevant"
+ },
+ {
+  "key": "10.2139/ssrn.7265418",
+  "source": "SSRN",
+  "title": "AI-Driven ESG Frame Analysis Through Interactive Dashboards for Sustainable Finance",
+  "abstract": "This study develops and demonstrates an AI-driven framework for analysing the narrative construction of corporate environmental, social, and governance (ESG) disclosures. Unlike tools centred on quantitative indicators and ratings, it classifies claims using a 12-frame taxonomy spanning epistemic, agency, valence and legitimacy families. A document-to-dashboard workflow converts report text into claim-level frame assignments, semantic triples, materiality links, and evidence records, which are then aggregated across four professional perspectives. The prototype is demonstrated with reports from Shell plc, DWS Group GmbH &amp; Co. KGaA, Nestl\u00e9 S.A., Deutsche Bank AG, Soci\u00e9t\u00e9 G\u00e9n\u00e9rale and BNP Paribas SA. The cases show how the commitmentachievement ratio, positivity skew and disclosure credibility can support Sustainable Finance Disclosure Regulation (SFDR) including Principal Adverse Impact (PAI) indicators, Corporate Sustainability Reporting Directive (CSRD) and sustainability-linked finance analysis. Results suggest that frame analysis can surface promise-delivery gaps and selective narrative emphasis without verifying underlying ESG performance. The study contributes a transparent design framework and identifies validation, robustness and governance requirements for deployment.",
+  "link": "https://www.ssrn.com/abstract=7265418",
+  "id": 16,
+  "score": 4,
+  "why": "ESG NLP taxonomy, narrow scope, no financial outcome"
+ },
+ {
+  "key": "10.2139/ssrn.7251579",
+  "source": "SSRN",
+  "title": "Arti cial Intelligence and the Digital Transformation of Corporate Finance: A Comprehensive Review and Research Agenda Author",
+  "abstract": "Arti cial Intelligence (AI) is fundamentally reshaping corporate nance, transforming how rms manage nancial decision-making, risk, capital allocation, and reporting. This research provides a comprehensive synthesis of the rapidly expanding literature on AI and corporate nance, with particular attention to the Chinese context. Through a systematic review of 47 peer-reviewed articles published between 2018 and 2025, the study identi es six major thematic areas where AI is driving transformation: AI and corporate default risk, AI-driven information production, AI in mergers and acquisitions, digital inclusive nance and debt nancing, FinTech and shadow banking, and commercial paper digitisation. Key ndings indicate that AI applications signi cantly reduce corporate default risk through enhanced innovation e ciency and alleviated agency con icts, with effects stronger for digitally advanced rms. AI adoption exhibits a dual-channel effect on corporate nancialization, with pro tability enhancement dominating nancing constraint alleviation by nearly 3:1. AI-based due diligence platforms achieve prediction accuracy of 80.1% in determining merger success, compared to 62.7% for traditional approaches. Digital inclusive nance signi cantly increases corporate debt nancing scale by reducing nancing costs, while FinTech adoption carries complex implications for corporate nancial fragility. The study concludes with a multi-dimensional research agenda for future inquiry and a four-pillar policy framework for rms, regulators, and policymakers navigating the AIdriven transformation of corporate nance.",
+  "link": "https://www.ssrn.com/abstract=7251579",
+  "id": 17,
+  "score": 1,
+  "why": "Literature review of AI in corporate finance"
+ },
+ {
+  "key": "10.2139/ssrn.7265723",
+  "source": "SSRN",
+  "title": "All Sizzle, No Steak? Do Macro Predictors and Sample Choices Improve Machine Learning Portfolio Performance?",
+  "abstract": "Recent studies suggest that machine learning (ML) methods are useful to predict stock returns. Yet, it has been suggested that this usefulness relies on research design choices. Furthermore, few studies explore the specific usefulness of macro predictors in ML methods. Revisiting two representative models, the elastic net and neural network presented in recent seminal work, we compare alternative macro predictor specifications with no macro benchmarks, isolating the incremental predictive power of the macros over firm characteristics. Moreover, we show that most gains in risk-adjusted returns come from small and illiquid stocks and in older subsamples. Macro predictors only add marginally to the models. We also find weaker out-of-sample predictive signal after 2020, with generally decreasing market-relative Sharpe ratios and alphas over time. We finally observe a disconnect between predictor signal strength and forecasting importance. Moreover, once realistic restrictions are imposed, the performance gap between elastic net and neural network models shrinks considerably. Thus, sampling choices may matter more than model complexity for performance.",
+  "link": "https://www.ssrn.com/abstract=7265723",
+  "id": 18,
+  "score": 8,
+  "why": "Negative result updating prior: weak macro signal post-2020, real out-of-sample data"
+ },
+ {
+  "key": "10.2139/ssrn.7251624",
+  "source": "SSRN",
+  "title": "AI Investment Is not an Accounting Variable: Evidence from Hyperscaler Disclosures",
+  "abstract": "U.S. financial statements contain no standardized \"AI investment\" line item, although market commentary routinely compares firms' AI spending. This paper studies the resulting measurement problem using 40 earnings events for Amazon, Alphabet, Meta, Microsoft, and Oracle from September 2024 through July 2026. Cash capital expenditure is observable in all 40 events; numeric forward capitalexpenditure guidance appears in 14, comparable same-target-year revisions in nine, and lease-liability balances in 32. Attribution is substantially less stable than the underlying numbers. The author positively attributes all 14 guidance events to AI-related investment, whereas a label-blind independent languagemodel recoding identifies positive support in nine. Exact grade agreement is 6 of 14 (42.9 percent; Cohen's kappa = 0.026), and high-versus-not-high agreement is 7 of 14 (50.0 percent; kappa = 0.109). The disagreement is reported as a human-model classification-stability diagnostic, not conventional human inter-coder reliability. The paper introduces an AI Investment Observability Lattice that separates recognition, attribution, horizon, and consolidation boundaries. A formal non-additivity result shows that cash flows, liability stocks, forecasts, and contractual schedules cannot be combined into a presentationinvariant scalar without explicit transformations to a common valuation date, allocation rule, and perimeter. No standardized event-level AI-specific payoff is observed. The evidence is descriptive and intensive rather than representative or causal.",
+  "link": "https://www.ssrn.com/abstract=7251624",
+  "id": 19,
+  "score": 5,
+  "why": "Measurement noise in AI capex accounting (kappa=0.026), real due-diligence problem"
+ },
+ {
+  "key": "10.2139/ssrn.7266560",
+  "source": "SSRN",
+  "title": "The Doctrine as Fixed Point: Endogenous Penalty Enforcement, Multiplicity, and the Irreversibility of Capital Shocks in Markets for Expert Services",
+  "abstract": "In markets for expert services under improving AI, separation through an outcome-contingent liability commitment survives only if the commitment that must be posted falls below what can be posted, which yields the condition \u03be\u00af\u03ba \u2264 1 \u2212 1/(M\u03b80) with M = min{\u00af L/v, m}, where m is the multiple of actual loss that survives review under the penalty doctrine. That literature, including our own, treats m as a legal datum. It is not. Post-Cavendish the enforceable multiple is measured against the legitimate interest the clause protects; where the protected interest is the preservation of human fallback capability, that interest exists only if the commitment separates, which requires a sufficiently large m. We close the loop and study the resulting doctrine map m\u2032 = D(m). Six results follow. First, D is monotone on a complete lattice, so a fixed point exists, and it is unique unless \u00af \u03bb/(4\u03c2) &gt; 1, where \u00af \u03bb is the maximal doctrinal uplift and \u03c2 the dispersion of the case-level separation threshold; when multiplicity obtains there are generically three fixed points, of which the outer two are stable. Second, calibrating (c,\u03c2) from the primitives of the companion paper and \u00af \u03bb from primary legal sources yields a taxonomy: the United States (\u00af \u03bb = 0) and negotiated German B2B contracting (\u00af \u03bb = 24) are determinate regimes, at m\u2217 = 1.00 and m\u2217 = 25.0 respectively; England and, since BPL v Morgan Securities (2025), India are multiple regimes with m\u2217 L = 1.03, watershed mu = 1.95 and m\u2217 H = 4.00. Third, and against the framing of the companion paper, the two ceilings are not independent: with M = min{\u2113,m} the doctrine map inherits the solvency cap, and the equilibrium ceiling is discontinuous at \u2113 = mu, falling by 0.92 at that point. Fourth, the collapse is irreversible: restoring \u2113 does not restore m, because the doctrine has crossed into the lower basin. Re-running the companion paper\u2019s regime map under an endogenous doctrine reproduces its published counts exactly when m is held fixed and changes them when it is not \u2014 cells surviving \u03be = 0.2 after the January 2026 insurance exclusions fall from twelve to six \u2014 and it polarises the map: intermediate cells disappear. Fifth, perturbing the adjustment with idiosyncratic noise makes the long-run doctrine unique and delivers a closed-form tipping point: the stochastically selected doctrine maximises a doctrinal potential, selection switches at the Maxwell point c\u2217 = 1 + \u00af \u03bb/2 \u2014 the midpoint of the doctrinal range, independent of the dispersion \u03c2 and of any symmetric heterogeneity distribution \u2014 and between the Maxwell point and the fold the permissive doctrine survives on borrowed time. Irreversibility becomes metastable rather than absolute: the expected recovery time is Kramers-exponential, 1032 periods at noise \u03c3 = 0.05, and the claim is falsified on a thirty-period horizon only if \u03c3 &gt; 0.29; the welfare cost of the trap is in any case capped at the drafting cost of primary-obligation substitutes, which&nbsp;escape the doctrine entirely. Sixth, the order-theoretic core of the paper \u2014 existence, orbit bounds, watershed invariance, and irreversibility under arbitrary dominated policy paths \u2014 is machine-checked in Lean 4; the checker reports that no theorem depends on any axiom.",
+  "link": "https://www.ssrn.com/abstract=7266560",
+  "id": 20,
+  "score": 2,
+  "why": "Expert services liability theory, minimal empirical foundation"
+ },
+ {
+  "key": "10.2139/ssrn.7252098",
+  "source": "SSRN",
+  "title": "Three Ceilings: Model Monoculture, Solvency, and the Penalty Doctrine in Markets for Expert Services",
+  "abstract": "When generative AI drives the marginal cost of a persuasive expert artefact toward zero, production-cost signals of competence collapse and outcome-contingent liability commitments take their place. Such commitments look robust to better AI: a positive failure rate always leaves a residual to price. We show that this robustness rests on an unstated homogeneity assumption, and that a liability commitment faces three ceilings, not one. AI error decomposes into idiosyncratic and common components; capability growth eliminates the idiosyncratic part faster (Kim et al. 2025), so the residual becomes progressively common-and common error is precisely what a verifier drawn from the same foundation model cannot observe: judge scores correlate with judge-generator model similarity at an average r = 0.84 (Goel et al. 2025). Provability is therefore state-dependent, \u03b8 eff = \u03b8 0 (1-\u03be\u03ba). Separation requires the commitment that must be posted to fall below what can be posted, v/\u03b8 eff \u2264 min{ L, mv}, yielding the survival condition \u03be\u03ba \u2264 1-1/(M \u03b8 0) with M = min{ L/v, m} and a regime switch at the ticket size v * = L/m: small engagements are constrained by the penalty doctrine, large ones by capital. Calibrated to six engagement types across four jurisdictions, the generative-AI insurance exclusions effective January 2026 shift eight of twenty-four cells from doctrine-bound to solvency-bound and cut the cells surviving \u03be = 0.4 from twelve to four. The insurance withdrawal is a civil-law event; the common-law cells were already at the boundary.",
+  "link": "https://www.ssrn.com/abstract=7252098",
+  "id": 21,
+  "score": 8,
+  "why": "Identifies monoculture failure in LLM expert services (r=0.84 correlation), auditable separation breaks"
+ },
+ {
+  "key": "10.2139/ssrn.7255258",
+  "source": "SSRN",
+  "title": "Human AI Collaboration in Financial Auditing &nbsp;",
+  "abstract": "The rapid advancement of artificial intelligence (AI) is reshaping the financial auditing profession by transforming traditional audit procedures, enhancing analytical capabilities, and redefining the relationship between technology and professional judgement. While AI technologies provide significant opportunities for improving audit efficiency, risk assessment, and evidence analysis, their successful implementation depends on effective collaboration between intelligent systems and human expertise. This study examines the role of human\u2013AI collaboration in financial auditing by analysing how AI-supported tools complement auditor judgement, improve audit quality, and contribute to the digital transformation of assurance services. The research adopts a mixed-methods approach, combining quantitative analysis of audit performance indicators with qualitative investigation of AI implementation practices within audit environments. The quantitative component evaluates the influence of AI adoption on audit efficiency, anomaly detection capability, evidence evaluation accuracy, and decisionmaking effectiveness. The qualitative component explores key implementation factors, including auditor adaptation, professional skill development, trust in automated tools, ethical governance, and organisational readiness. The findings indicate that AI technologies provide substantial benefits by automating repetitive audit procedures, analysing large volumes of financial information, and identifying risk patterns that may not be easily detected through traditional approaches. However, the study demonstrates that AI effectiveness depends on maintaining a strong partnership between technology and human expertise. Professional judgement remains essential for interpreting AI-generated outputs, evaluating complex financial circumstances, applying ethical reasoning, and ensuring compliance with auditing standards. 2 The research contributes to the emerging literature on accounting technology by developing a human\u2013AI collaboration framework that explains how intelligent systems and auditors jointly create value within modern audit processes. The findings provide practical implications for audit firms, professional accounting bodies, and regulators by emphasising the importance of technological capability, workforce training, explainable AI, and governance mechanisms. The study concludes that the future of financial auditing is unlikely to involve complete automation. Instead, sustainable audit transformation will depend on a collaborative model where AI enhances auditor capability while human professionals continue to provide critical judgement, accountability, and trust.&nbsp;",
+  "link": "https://www.ssrn.com/abstract=7255258",
+  "id": 22,
+  "score": 3,
+  "why": "Human-AI collaboration in auditing, no concrete findings revealed"
+ },
+ {
+  "key": "10.2139/ssrn.7255379",
+  "source": "SSRN",
+  "title": "\"The Role of Predictive Analytics and Machine Learning in Financial Risk Mitigation for International Banking Frameworks.\"",
+  "abstract": "The rapid advancement of predictive analytics and machine learning has transformed financial risk management within international banking frameworks by enabling financial institutions to identify, assess, and mitigate risks with greater speed and accuracy. This paper examines the integration of artificial intelligence-driven predictive models across key banking functions, including credit risk assessment, fraud detection, anti-money laundering (AML), market risk forecasting, liquidity management, and regulatory compliance. It explores how machine learning algorithms process large volumes of structured and unstructured financial data to improve decision-making, enhance operational efficiency, and strengthen financial resilience. The paper also discusses the role of predictive analytics in supporting international regulatory frameworks such as Basel III, IFRS 9, and FATF standards. Furthermore, it evaluates the ethical, technical, and governance challenges associated with AI adoption, including algorithmic bias, cybersecurity, data privacy, and model explainability. Finally, the study highlights emerging trends, including generative AI, explainable AI, cloud computing, quantum computing, and ESG-focused analytics, that are expected to shape the future of global banking risk management.",
+  "link": "https://www.ssrn.com/abstract=7255379",
+  "id": 23,
+  "score": 1,
+  "why": "Literature review of ML in banking"
+ },
+ {
+  "key": "10.2139/ssrn.7255459",
+  "source": "SSRN",
+  "title": "The Authored Brake: Delegating the Right of Refusal to AI Agents in Consumer Finance",
+  "abstract": "Artificial intelligence in consumer finance is moving from advising to acting. When an agent can execute a transaction, the consumer's decision is no longer whether to believe a recommendation but which decision rights to transfer, and on what terms. This paper takes up one such right for which existing frameworks have no category: the veto, an agent's authority to refuse a transaction its principal has instructed. Permission taxonomies and autonomy ladders scale how much an agent does relative to its user; none of them contains the case of an agent doing less than the user asked. We define delegated financial authority as the standing set of conditions under which a consumer transfers to an automated agent one or more of three separable rights over transactions in the consumer's own resources: the right to initiate a transaction the consumer has not instructed, the right to veto one the consumer has instructed, and the right to defer one pending the consumer's confirmation. A grant may transfer any subset of the three, and each exercise is classified by who initiated and who held terminal disposition; the rights are not points on an autonomy scale. Crossing them with the provenance of the governing rule, as the consumer experiences it, yields six regimes, of which one is this paper's focus: the Authored Brake, where an agent refuses its principal on a rule the principal composed. The central claim is that in domains where consumers anticipate acting against their own interest, they are more willing to transfer the veto right than the initiation right, and that this advantage is amplified when they experience the governing rule as their own. We advance three numbered propositions: that the veto right is transferred more readily than the initiation right, that its experienced provenance moves that transfer, and that neither result survives if the agent is presented as a mechanism rather than as a judgement-exercising mind. We argue that the third should be tested first, because its failure would collapse the other two into the study of commitment products generally. We are explicit that machine enforcement, deferral, the composed-versus-inferred contrast, and provenance effects at constant enforcement are all prior art, and narrow the claim accordingly: what is untested is the veto right's joint structure with experienced provenance under an agent treated as a judgement-exercising mind, an attribution we state as a falsifiable proposition rather than assume.",
+  "link": "https://www.ssrn.com/abstract=7255459",
+  "id": 24,
+  "score": 3,
+  "why": "AI agent authority framework, legal analysis not technical"
+ },
+ {
+  "key": "10.2139/ssrn.7256238",
+  "source": "SSRN",
+  "title": "Metaphors before Features&nbsp; Diagnosing Category Meaning in the Indian Electric-SUV Market",
+  "abstract": "The first electric sport-utility vehicle (SUV) from Maruti Suzuki entered India under conditions that make a simple launch-success narrative untenable. The e-VITARA began nationwide deliveries on 17 February 2026, with an introductory battery-as-a-service (BaaS) entry price of \u20b910.99 lakh plus \u20b93.99 per kilometre for the battery (Maruti Suzuki India Limited, 2026). Domestic retail volumes were modest in the initial ramp, but that fact must be interpreted against a deliberately export-led allocation: by May 2026, more than 35,000 e-VITARAs had been exported to 46 countries, compared with 7,097 domestic sales, while domestic monthly allocation had reportedly been capped at about 2,000 units because production was prioritised for exports (Autocar Professional, 2026b; Financial Express, 2026). The managerial and scholarly question is therefore not whether the model has \u201cfailed.\u201d It is whether domestic pull is weaker than the category opportunity would suggest, and whether that pattern is a supply-side outcome, a meaning-side outcome, or both. This paper develops a two-study architecture for that question. Study 1 is an original, systematic semiotic content analysis of six Indian electric-SUV brochures, coded against the seven deep metaphors proposed by Zaltman and Zaltman (2008): Balance, Transformation, Journey, Container, Connection, Resource and Control. Competitors cluster around Control\u2014Tata Sierra.ev (11 primary-coded units), MG ZS EV (8), and Mahindra BE 6 (7)\u2014whereas e-VITARA\u2019s message is dispersed across Transformation (5), Container (4), and Connection, Resource and Control (3 each). The paper calls this sender-side diagnosis metaphoric diffuseness: a firm-controlled communication system without a clearly governing human drama . Study 2, proposed rather than reported, is a condensed but rigorously specified Zaltman Metaphor Elicitation Technique (ZMET) field protocol with first-time EV considerers in Tier-2 cities. It tests whether intended positioning is received as such, and whether a resource-and-reassurance heritage can be translated into category-appropriate confidence and progress. The paper contributes a replicable method for connecting brochure-level category signals to consumer meaning, a falsifiable field protocol, and a defensible practitioner research agenda for incumbent EV entry. It also sets narrow, evidence-based boundaries on generative AI: it can assist transparent first-pass coding but should not substitute for Indian respondents, especially where a new product category is concerned.",
+  "link": "https://www.ssrn.com/abstract=7256238",
+  "id": 25,
+  "score": 0,
+  "why": "Electric vehicle market case study, not finance or AI"
+ },
+ {
+  "key": "10.2139/ssrn.7274519",
+  "source": "SSRN",
+  "title": "Mind the (Wage) Gap: The Large Firm-SME Divide and Delayed Labor Market Entry for Young Adults in South Korea",
+  "abstract": "This study examines the relationship between South Korea\u2019s dual labor market, the divide between large firms and small and medium-sized enterprises (SMEs), and the increasingly delayed entry of young people into the labor market. As the working-age population shrinks and mismatch widens, the inefficient use of available labor has become a long-term social concern. Delayed entry into the workforce gives workers less time to accumulate skills and experience, eroding human capital and, in aggregate, the skill level of the entire workforce. Drawing on recent administrative data, the analysis shows that large firms have steadily accounted for about 12 percent of all regular wage workers (excluding temporary workers and day laborers), while the SME share now sits around 39 percent. Although on aggregate, the ratio of average SME wages to average wages at large firms has improved over the past ten years, climbing from 0.43 in 2015 to 0.49 in 2024, in nominal terms the monthly wage gap grew from KRW 2.98 million to KRW 3.65 million3), so workers are likely to perceive the gap as having widened, rather than narrowed. The labor market has also grown more rigid: workers are likely to stay in their current positions, entries and exits have declined, and moving from an SME to a large firm is almost unheard of; at most, just five to six percent of workers in their twenties (the most mobile cohort) do so. Empirical results indicate that the widening of the wage gap between large firms and SMEs is associated with delayed entry into workforce, and that the effect of the rigid, dual structure of the market on the supply of young adults\u2019 labor supply carries a lag. Given the current wage gap, four-year university graduates are estimated to defer graduation by about one month, and labor market entry by about 3.6 months. Because the structure of the labor market appears to be a quasi-permanent feature of the Korean economy, this study argues for the introduction and continuous, permanent operation of support policies that raise the real wages of young SME workers through direct support to individuals, rather than to firms. The author argues that the permanence of such programs would incentivize long-term employing planning by both young workers and firms. This paper was translated from the original Korean using the Claude Opus 5 large language model (max effort). The text was reviewed by an editor and the author prior to publication.&nbsp;",
+  "link": "https://www.ssrn.com/abstract=7274519",
+  "id": 26,
+  "score": 0,
+  "why": "South Korea labor market wage gap, off-topic"
+ },
+ {
+  "key": "10.2139/ssrn.7256418",
+  "source": "SSRN",
+  "title": "Version Migration as a Correlated Shock: Model Updates as an Unmanaged Risk Channel in LLM-Based Financial Systems&nbsp;",
+  "abstract": "Financial institutions increasingly deploy large language models (LLMs) within credit and other decision-support workflows. However, vendor-driven model updates can alter behavior even when an institution holds its prompts, inputs, and downstream processes fixed. We quantify the decision instability associated with two prespecified model-version transitions: an Ope-nAI efficient-model update and a Google Gemini Flash update. Across both transitions, the experiment covers 100 companies, 12 analysis dates, and three replicates per version, producing 14,400 model calls. Identical inputs and matched per-cell seeds hold sampling conditions fixed, and within-version replicate disagreement provides an empirical noise floor. The primary endpoint is the excess cross-version flip rate above this floor. For the OpenAI migration, the cross-version disagreement rate exceeds the within-version noise floor by 11.2 percentage points (95% CI: 7.7-15.0); for the Gemini migration this excess is 38.1 percentage points (95% CI: 30.3-45.8). A prevalence-churn decomposition shows that the OpenAI update primarily reconsiders individual companies and shifts decisions toward greater severity, while the Gemini update produces a broad distributional shift toward the SAFE category. Neither migration shows clear improvement among observations whose labels change; the Gemini successor also shows lower aggregate class-balanced performance. Vendor version migration can therefore create material, directionally unpredictable decision discontinuities within otherwise unchanged LLM pipelines. We propose a pre-migration parallel-run control that measures excess flip rate, label-distribution shift, per-company churn, and directional drift before production cutover. The findings provide controlled evidence of deployment-level migration risk; broader cross-task and cross-institution effects remain for future study.",
+  "link": "https://www.ssrn.com/abstract=7256418",
+  "id": 27,
+  "score": 9,
+  "why": "Model updates cause decision instability in LLM finance systems; 14.4k empirical samples, immediate risk"
+ },
+ {
+  "key": "10.2139/ssrn.7250260",
+  "source": "SSRN",
+  "title": "Human-AI Co-Entrepreneurship in FinTech: A Multi-Stakeholder Exploration of Agentic AI in Entrepreneurial Finance and Consumer Engagement",
+  "abstract": "&nbsp;The rapid advancement of Agentic Artificial Intelligence is reshaping entrepreneurial ecosystems by transforming financial decision-making, business innovation, and consumer engagement within the FinTech sector. This study explores how different stakeholders perceive the collaborative relationship between humans and Agentic AI in entrepreneurial finance and digital financial services. Semi-structured interviews were conducted with 18 participants, including entrepreneurs, FinTech executives, investors, and consumers actively engaged in Pakistan's digital financial ecosystem. The interview data were analyzed using thematic analysis to identify shared experiences and emerging patterns. The findings generated five overarching themes: collaborative entrepreneurial decision-making, AI-enabled financial innovation, personalized consumer engagement, trust and ethical governance, and the evolving future of AI-assisted entrepreneurship. Participants perceived Agentic AI as a strategic collaborator capable of improving financial planning, accelerating innovation, enhancing customer experiences, and supporting entrepreneurial growth. However, concerns regarding transparency, accountability, privacy, and excessive reliance on autonomous systems remain significant barriers to widespread adoption. The study develops a multi-stakeholder conceptual framework illustrating how Human-AI co-entrepreneurship can promote sustainable innovation, responsible financial services, and long-term value creation within the evolving FinTech ecosystem.",
+  "link": "https://www.ssrn.com/abstract=7250260",
+  "id": 28,
+  "score": 2,
+  "why": "Qualitative interviews on FinTech human-AI, no quantified outcomes"
+ },
+ {
+  "key": "10.2139/ssrn.7257158",
+  "source": "SSRN",
+  "title": "From Average Effects to Individualized Assignment: Causal Machine Learning for Active Labor Market Policy in Germany 2 From Average Effects to Individualized Assignment: Causal Machine Learning for Active Labor Market Policy in Germany",
+  "abstract": "Active labor market policies (ALMPs) constitute one of the largest discretionary instruments of European employment policy, yet their allocation continues to rely on averageeffect evidence and caseworker discretion rather than on systematic, individual-level targeting. This manuscript identifies and formalizes a threefold research gap at the intersection of causal machine learning and economic policy: first, the absence of an integrated framework that converts estimates of conditional average treatment effects (CATEs) into implementable assignment rules subject to explicit budget, capacity, and fairness constraints; second, the scarcity of rigorous applications of heterogeneous treatment effect (HTE) estimation to German administrative labor market data, despite the availability of high-quality linked administrative records through the Federal Employment Agency and the Institute for Employment Research (IAB); and third, the lack of validation protocols for the stability and external validity of learned assignment rules across time, regions, and policy regimes. Building on double/debiased machine learning (Chernozhukov et al., 2018), causal forests (Wager &amp; Athey, 2018), and constrained policy learning (Athey &amp; Wager, 2021), the manuscript develops an estimation-to-assignment framework for ALMP placement that embeds statistical guarantees, budget feasibility, and distributional fairness within a single optimization problem. The framework is designed for the German institutional context of job centers and the Federal Employment Agency, and its policy relevance is assessed against the funding landscape of the German Research Foundation (DFG), including CRC TR 224 (Bonn/Mannheim) and the ECONtribute Cluster of Excellence, as well as&nbsp;European Research Council (ERC) and Excellence Strategy instruments. The manuscript contributes a replicable methodological template and a concrete research agenda with direct applicability to European and German labor market governance.",
+  "link": "https://www.ssrn.com/abstract=7257158",
+  "id": 29,
+  "score": 1,
+  "why": "Labor market policy assignment, not financial"
+ },
+ {
+  "key": "10.2139/ssrn.7276625",
+  "source": "SSRN",
+  "title": "Vertical Integration and Pricing in the AI Industry:Evidence from Foundation Model Markets",
+  "abstract": "This paper analyzes vertical integration in artificial-intelligence markets in which foundation-model providers supply inference capacity to downstream application developers while also offering their own downstream applications. Extending Salinger (1988, 1991) and Luco and Marshall (2020), we show that integration creates asymmetric price effects through a portfolio mechanism: eliminating double marginalization lowers the price of the integrated application, while the induced change in relative margins can raise the prices of unintegrated substitutes. We document three recent integration cases--OpenAI&apos;s ChatGPT, Anthropic&apos;s Claude.ai, and Google&apos;s Gemini applications--where foundation-model providers increasingly compete downstream while continuing to supply rivals. The corrected framework uses logit demand, linear wholesale pricing, and multiproduct downstream pricing. In the baseline calibration, integration reduces the integrated application&apos;s price by 12.9 percent and increases the unintegrated application&apos;s price by 6.5 percent. Consumer surplus rises by 13.3 percent, producer surplus is essentially unchanged, and total welfare rises by 4.9 percent. The portfolio effect reduces the consumer-surplus gain by 22.7 percent relative to a no-portfolio counterfactual. Diversion ratios provide a practical antitrust diagnostic: unintegrated-product price increases exceed five percent when diversion from the integrated product is below about D=0.36. The framework offers an implementable screening tool for AI vertical integration when detailed cost and contract data are unavailable.",
+  "link": "https://www.ssrn.com/abstract=7276625",
+  "id": 30,
+  "score": 5,
+  "why": "Foundation model market economics, structural but not about LLM financial applications"
+ },
+ {
+  "key": "10.2139/ssrn.7254798",
+  "source": "SSRN",
+  "title": "Navigating the Algorithmic Paradox: Determinants of Consumer Trust and Distrust in AI-Powered Predictive Marketing Frameworks",
+  "abstract": "Today's Artificial Intelligence (AI) has transformed the world of predictive marketing and is empowering companies to serve personalised products and customer experiences to consumers. This study looks at key criteria for influencing consumer trust and distrust of predictive marketing systems driven by AI tools such as algorithmic transparency or explainability, ethics of data-handling practices, and privacy concerns/surveillance. This research method is interpretivist, using an inductive approach, the philosophy applied, and a qualitative literature review method, with secondary data obtained from academic journals, books, and industry reports. The findings suggest that improvements in transparency, personalisation, and trust in ethical governance are positive correlates of trust, whereas privacy and ethical surveillance concerns are negative correlates of trust. The study reveals the conflict between personalisation and privacy, as well as the need to implement AI-marketing-oriented strategies that are transparent, consumer-centric, and ethically responsible to ensure consumer acceptance of the algorithms.",
+  "link": "https://www.ssrn.com/abstract=7254798",
+  "id": 31,
+  "score": 1,
+  "why": "Literature review of AI trust determinants"
+ },
+ {
+  "key": "10.2139/ssrn.7276783",
+  "source": "SSRN",
+  "title": "The Application Of The Derivative Work Right To Literary And Artistic Productions Of Ai Machines 2026 Update",
+  "abstract": "When first drafted, this Article predicted that litigants would ask courts to broaden the derivative work right either to prevent the use of, or to claim protection for, literary and artistic productions made by Artificial Intelligence (AI) systems. The prediction has come true: plaintiffs have pleaded that generative models and their outputs are infringing derivative works, and courts have begun to cabin the right in ways this Article prescribes. The Article considers the normative valence of, and the (significant) doctrinal pitfalls associated with, such attempts. It also considers a possible legislative alternative, namely attempts to introduce a new sui generis right in AI productions. Finally, the Article explains how, whether such attempts succeed or not, the debate on rights (if any) in productions made by AI machines is distinct from the debate on text and data mining exceptions.",
+  "link": "https://www.ssrn.com/abstract=7276783",
+  "id": 32,
+  "score": 0,
+  "why": "Copyright law and AI derivative works, not relevant"
+ }
+]

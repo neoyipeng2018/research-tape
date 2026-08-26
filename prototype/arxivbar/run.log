@@ -1,0 +1,30 @@
+pass1: 35/35 scored  74028ms  in=9 out=6146
+done 2026-08-12 r1
+pass1: 35/35 scored  84942ms  in=9 out=6892
+done 2026-08-12 r2
+pass1: 35/35 scored  92149ms  in=9 out=7346
+done 2026-08-12 r3
+pass1: 32/32 scored  74423ms  in=9 out=6086
+done 2026-08-13 r1
+pass1: 32/32 scored  115928ms  in=9 out=10506
+done 2026-08-13 r2
+pass1: 32/32 scored  333110ms  in=90 out=5568
+done 2026-08-13 r3
+pass1: 23/23 scored  67958ms  in=9 out=5692
+done 2026-08-14 r1
+pass1: 23/23 scored  102183ms  in=9 out=8642
+done 2026-08-14 r2
+pass1: 23/23 scored  82816ms  in=9 out=6562
+done 2026-08-14 r3
+pass1: 30/30 scored  123660ms  in=9 out=10166
+done 2026-08-17 r1
+pass1: 30/30 scored  118058ms  in=9 out=10425
+done 2026-08-17 r2
+pass1: 30/30 scored  94301ms  in=9 out=8256
+done 2026-08-17 r3
+pass1: 37/37 scored  82722ms  in=9 out=6472
+done 2026-08-18 r1
+pass1: 37/37 scored  92960ms  in=9 out=7576
+done 2026-08-18 r2
+pass1: 37/37 scored  144194ms  in=9 out=12545
+done 2026-08-18 r3

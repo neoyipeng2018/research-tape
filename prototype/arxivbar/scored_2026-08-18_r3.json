@@ -1,0 +1,372 @@
+[
+ {
+  "key": "2608.17223",
+  "source": "arXiv",
+  "title": "Temporal Leakage in Financial News NLP: A Multi-Architecture Audit with a Regime-Specific M&A Signal",
+  "abstract": "Financial-news direction prediction has become a popular NLP benchmark, yet reported gains depend critically on whether the train-test split is chronological or random, i.e., on temporal leakage. We audit this dependence on a 49,799-article corpus across 16 feature-model combinations spanning TF-IDF, MiniLM, FinBERT, and fine-tuned RoBERTa-large / DeBERTa-v3-large, plus separate zero/few-shot and LoRA probes of Llama-3 and Qwen2.5 LLMs: random splits inflate MCC by $1.1\\times$ to $6.5\\times$, tracking model capacity and feature richness, and end-to-end FinBERT fine-tuning re-amplifies rather than closes the gap (size-matched ratio $1.75\\times$). Conditioning on event type, mergers and acquisitions (M&A) is the only audited category with a positive locked-test signal under near-temporal chronological evaluation (TF-IDF MCC $= 0.138$ train-only, $0.068$ under train$\\cup$val refit; 10,000-permutation $p < 10^{-3}$); the signal does not transfer to FNSPID's 2009-2020 U.S. corpus, localising the headline to our 2024-2025 European-tilted M&A semantics rather than a universal predictor. Three independent role labellers converge on acquirer-tagged articles as the signal locus, a power-limited qualitative convergence rather than a hypothesis-tested asymmetry. Chronological splitting plays for financial NLP the role characteristics-purging plays for asset pricing: it strips the predictable, stale component of news and leaves a residual that is small, event-localized, and lexically shallow. We advocate leakage audits as a required disclosure for financial-NLP benchmarks.",
+  "link": "https://arxiv.org/abs/2608.17223v1",
+  "id": 1,
+  "score": 7,
+  "why": "Temporal leakage inflates NLP gains 1-6x; M&A signal survives test"
+ },
+ {
+  "key": "2608.17715",
+  "source": "arXiv",
+  "title": "Communicating Credit Risk with Large Language Models: Evaluation of Explanations from Standard and Alternative Data-Based Models",
+  "abstract": "Credit decisioning is a high-stakes task in which model outputs must be accurate and explainable to support compliant decisions. Although modern credit risk models such as eXtreme Gradient Boosting (XGBoost) and Graph Neural Networks (GNNs) improve predictive performance, their explanations are often too technical for stakeholders creating communication gaps that can shape approvals, denials, and fairness judgments. We examine whether Large Language Models (LLMs) can serve as explanation layers that translate post-hoc explanation artefacts into stakeholder-appropriate risk narratives. Using Freddie Mac single-family loan-level data, we develop three pipelines: standard tabular (XGBoost + SHAP), and two with alternative data, a pure network-based (GNN + GNNExplainer), and a bimodal one (combining tabular and network data). We generate narratives with three LLM configurations: a small fine-tuned LLM (Gemma 3 4B), a large fine-tuned LLM (DeepSeek R1 70B), and a zero-shot commercial LLM (Gemini 2.5). Explanation quality is evaluated through automated checks across all pipelines and a human study of bimodal explanations comparing credit risk professionals and non-professionals on eight decision-relevant dimensions. We have three main findings. First, the pipeline accounts for higher variance in evidence-grounding scores than the language model, meaning that the binding constraint on explanation quality is the evidence representation, not the model used. Second, the explanation narratives reliably name the influential factors but are less reliable when stating the direction of influence, which may be consequential for adverse-action communication. Finally, professionals apply stricter evidentiary standards than non-professionals. We discuss implications for the governance of risk models, including deployment considerations and the value of domain-aligned LLMs in regulated credit settings.",
+  "link": "https://arxiv.org/abs/2608.17715v1",
+  "id": 2,
+  "score": 4,
+  "why": "No evidence LLM narratives improve credit decisions or fairness"
+ },
+ {
+  "key": "2608.17929",
+  "source": "arXiv",
+  "title": "Adaptive Policy Portfolios for Robust Markov Decision Processes",
+  "abstract": "Robust Markov decision processes optimize one policy against a set of plausible transition functions. This can be conservative when the unknown dynamics are fixed and become partially identifiable after deployment. We study adaptive policy portfolios: finite sets of memoryless randomized policies synthesized offline and paired with a lightweight online selector. Robust regret is a natural measure of portfolio quality: for each plausible environment, it measures the loss of the best portfolio member relative to the policy that would have been optimal had that environment been known. Related regret objectives were studied by Ghavamzadeh et al. (2016) with an emphasis on approximations and relaxations for safe policy improvement. We give a complexity-theoretic account of portfolio certification and synthesis. Certifying a given portfolio is $\\forall\\mathbb{R}$-complete already for deterministic portfolios in acyclic (s,a)-rectangular RMDPs. Synthesizing a portfolio of unary-bounded size is $\\exists\\forall\\mathbb{R}$-complete for general rational polytopes, even with fixed discount and acyclic dynamics. The single-policy case is already hard, both combinatorially and algebraically. Finally, we present an offline portfolio construction that is amenable to runtime specialization.",
+  "link": "https://arxiv.org/abs/2608.17929v1",
+  "id": 3,
+  "score": 1,
+  "why": "Pure theory without data or visible implementation path"
+ },
+ {
+  "key": "2608.17342",
+  "source": "arXiv",
+  "title": "MoFE: A Novel Mixture-of-Experts Framework with Fourier Neural Operators for Cryptocurrency Forecasting",
+  "abstract": "Forecasting cryptocurrency prices remains a formidable challenge due to inherent non-stationarity, abrupt regime shifts, and multi-scale stochastic dependencies. Conventional deep learning models often struggle to capture complex underlying dynamics, frequently resulting in persistent phase-lagged predictions. To address these limitations, we propose MoFE, a novel deep learning framework that integrates Fourier Neural Operators (FNOs) within a Mixture-of-Experts (MoE) architecture. Rooted in the theoretical framework of stochastic differential equations, MoFE conceptualizes cryptocurrency volatility as a superposition of multi-frequency components, which includes user network based fundamental growth, mining costs and halving mechanism caused seasonal volatility, and market sentiment-induced chaos. Specifically, specialized adaptive FNO (AFNO) and Convolution dual-domain experts learn continuous function-to-function mappings to encapsulate global spectral trends, cyclical adjustments and microstructures, while a dynamic gating based MoE mechanism enables adaptive strategy switching across diverse market regimes. Extensive experiments on Bitcoin datasets spanning January 2020 to December 2025 demonstrate that MoFE achieves state-of-the-art (SOTA) performance in both T+1 and T+5 forecasting horizons. Notably, the model effectively mitigates the phase-lag effect, delivering superior Directional Accuracy (DA) and Information Coefficient (IC). In high-fidelity simulated trading environments, these predictive gains transfer into significant excess returns and robust risk-adjusted performance, characterized by a high Sharpe ratio.",
+  "link": "https://arxiv.org/abs/2608.17342v1",
+  "id": 4,
+  "score": 3,
+  "why": "Price predictor with no baseline, transaction costs, rigor"
+ },
+ {
+  "key": "2608.17933",
+  "source": "arXiv",
+  "title": "EvoTS-Agent: A Self-Evolving LLM Agent for Financial Time Series Change Point Detection",
+  "abstract": "Financial time series exhibit non-stationary and heterogeneous statistical properties, making change-point detection challenging because no single unsupervised algorithm performs consistently across assets and market regimes. Conventional workflows consequently depend heavily on expert-driven model selection, feature design, and hyperparameter tuning, limiting their scalability and adaptability. We propose EvoTS-Agent, a validation-guided self-evolving LLM agent for autonomous financial time-series change-point detection. EvoTS-Agent first performs curated exploratory data analysis to characterize dataset properties and initialize candidate detection models. It then evolves executable experiment trajectories through three complementary operators: \\textit{Revision} exploits the current best solution, \\textit{Alternative Strategy} explores fundamentally different modeling directions when progress stagnates, and \\textit{Recombination} synthesizes complementary evidence from high-performing trajectories. Validation feedback guides trajectory evolution throughout the search, enabling the agent to adapt its detection pipeline to the statistical characteristics of each dataset while preserving reliable optimization. Experiments across four benchmark datasets demonstrate that EvoTS-Agent consistently outperforms existing LLM-based agents while maintaining a 100\\% execution success rate across all evaluated backbone LLMs.",
+  "link": "https://arxiv.org/abs/2608.17933v1",
+  "id": 5,
+  "score": 4,
+  "why": "LLM agent for changepoint detection; no results shown"
+ },
+ {
+  "key": "2608.17684",
+  "source": "arXiv",
+  "title": "Auditing Self-Evolution in Financial Agents: Capability Gains, Security Drift, and Execution-Interface Mismatch",
+  "abstract": "Self-evolving agents turn experience into reusable skills, workflows, or memories, but post-evolution accuracy alone does not show whether learned behavior preserves previously correct behavior or security. We audit SkillOpt, Agent Workflow Memory (AWM), and ReasoningBank in simulated e-banking using matched benign acquisition trajectories, sealed evaluation endpoints, execution-grounded checks, and independent state replay. On Qwen 3.7 Flash, SkillOpt raises benign utility from 0.741 to 0.837 while exposure to injected content rises from 0.820 to 0.943. Conditional attack success after exposure falls from 0.605 to 0.562, yet overall attack success rate (ASR) rises from 0.496 to 0.530 and unauthorized financial state changes rise to 0.685. Across three independently evolved lineages, capability, exposure, and unauthorized-state changes increase in all three, whereas ASR increases in only two. ReasoningBank raises utility to 0.859 without increasing aggregate ASR, although unauthorized state changes remain slightly above Static. AWM reveals a separate evaluation hazard: a literal WebArena text-action envelope disrupts tool execution in our native function-calling executor. In a post-hoc sensitivity test, removing only that envelope restores utility from 0.319 to 0.756, while exposure rises from 0.299 to 0.909 and ASR from 0.195 to 0.575. Auditing self-evolving financial agents therefore requires tracking regressions, attack-surface contact, unauthorized financial-state change, and artifact-executor compatibility, not accuracy alone.",
+  "link": "https://arxiv.org/abs/2608.17684v1",
+  "id": 6,
+  "score": 8,
+  "why": "Self-improving agents lose security faster than capability gains"
+ },
+ {
+  "key": "2608.18033",
+  "source": "arXiv",
+  "title": "Where A Small Language Model Helps in Invoice Categorisation, Understood Through Embedding Geometry",
+  "abstract": "Categorising invoices into the correct General Ledger (GL) code underpins financial reporting and tax compliance. This is a skilled accounting judgement rather than a routine task: the correct category depends subtly on the nature of the purchasing business, the vendor and the invoice text. Whilst AI is increasingly being adopted across industries to automate tasks, including invoice categorisation, implementations built on in-house small language models (SLMs) can simultaneously reduce cost and improve data security, confidentiality, and interpretability. We investigate this approach by first analysing the pre-trained embedding geometry of a small sentence transformer (SBERT) and classic SLM (DeBERTa). The sentence-embedding space of this financial corpus is globally anisotropic but composed of locally isotropic clusters, extending prior token-level findings to sentence embeddings in a financial setting, and these clusters are strongly correlated with the vendor identity. SBERT fine-tuned on a single GPU reaches 0.96 accuracy on invoice classification, above both a zero-shot LLM and a vendor identity baseline, increasing performance for smaller, challenging categories and new clients. For this important generalisation problem, SBERT reaches 0.9 F1 with roughly 100 client-specific invoices, showing that an in-house SLM implementation is promising. Combining these results with geometric analysis shows that pre-trained embedding geometry is associated with classification performance and reveals a counterintuitive finding that a structured input that would help a human reader does not improve the SLM performance.",
+  "link": "https://arxiv.org/abs/2608.18033v1",
+  "id": 7,
+  "score": 5,
+  "why": "Real task (GL coding), operationally focused not trading"
+ },
+ {
+  "key": "2608.18177",
+  "source": "arXiv",
+  "title": "Towards Reversible Forgetting: Managing Obsolete Knowledge in Continual Enterprise AI Agents",
+  "abstract": "Continual learning has traditionally treated forgetting as a failure, emphasizing preservation of previously acquired knowledge as environments evolve. We argue that this objective is incomplete for enterprise AI agents operating in non-stationary environments, where customers, policies, tools, workflows, regulations, and market conditions change over time. Indiscriminate retention can allow obsolete knowledge to influence decisions, creating negative transfer and operational risk. We therefore propose reversible forgetting: a conceptual framework with three operational memory states: active, dormant, and retired, and a reactivation transition that can restore dormant knowledge when its relevance returns. We instantiate the framework as a Hysteretic Reversible Memory Controller that accumulates relevance evidence, uses asymmetric thresholds to prevent state oscillation, tests reactivation in shadow mode, and gates retirement through policy. The framework reduces the influence of obsolete information without conflating temporary suppression with permanent erasure. Finance illustrates the idea: knowledge useful under one market regime may become harmful under another yet regain relevance when similar conditions recur.",
+  "link": "https://arxiv.org/abs/2608.18177v1",
+  "id": 8,
+  "score": 4,
+  "why": "Reversible forgetting framework; no evidence improves decisions"
+ },
+ {
+  "key": "2608.17220",
+  "source": "arXiv",
+  "title": "PACE: Policy-Attested Contract Execution for Safe AI Agents in Decentralized Finance",
+  "abstract": "Autonomous AI agents are emerging as interfaces for decentralized finance (DeFi) actions such as swaps, lending operations, and yield management. Because these agents rely on large language models (LLMs) to plan transactions, they inherit the LLM's susceptibility to prompt injection and lack of mechanisms to bind a verifier's approval to the exact transaction ultimately submitted on-chain. We present PACE (Policy-Attested Contract Execution), a transaction-level authorization framework that interposes between an LLM-based agent and on-chain execution. PACE introduces typed transaction intents, a deterministic policy verifier, and signed Policy Decision Records (PDRs) that cryptographically bind the approved intent, policy, and simulation report to the exact execution bytes, with replay and expiration protection. A Solidity smart account enforces PDR signatures on-chain with a measured overhead of 29,826-31,822 gas. We evaluate PACE against six baselines on 40 tasks spanning four attack categories plus benign utility (2,800 trials, 10 seeds). In our deterministic sandbox, PACE achieves a 0.00 unsafe execution rate and 0.00 false-positive rate on benign tasks, compared to 0.80 for the unguarded baseline. Ablation studies identify permissive policy settings (+57.5 pp) and the touched-contract allowlist (+12.5 pp) as the dominant safety components. To test whether the same deterministic floor holds for real model outputs, the artifact additionally provides a three-model live-LLM evaluation over the full task suite with repeated runs. A mainnet-fork harness is included for archive-RPC deployments, but fork results are reported only when the corresponding artifacts are generated. These auxiliary studies are separate from, and never substitute for, the deterministic benchmark. We frame our claims as logic-level safety within a reproducible benchmark rather than deployment-ready DeFi security.",
+  "link": "https://arxiv.org/abs/2608.17220v1",
+  "id": 9,
+  "score": 7,
+  "why": "Solves real DeFi prompt-injection via cryptographic binding"
+ },
+ {
+  "key": "2608.18022",
+  "source": "arXiv",
+  "title": "Entropic Value-at-Risk portfolio optimization for tempered stable L\u00e9vy processes",
+  "abstract": "We develop parametric Entropic Value-at-Risk (EVaR) portfolio optimization for tempered stable L\u00e9vy returns. We derive portfolio cumulant-generating functions and weight-dependent admissible moment-generating-function domains under two multivariate constructions: a multivariate normal tempered stable approach and an independent component factorization. These expressions allow portfolio EVaR to be evaluated from fitted asset- or component-level parameters without repeated portfolio-level distribution fitting. We construct minimum-EVaR portfolios and two entropic reward--risk portfolios. We test the portfolios in a rolling 2000 to 2026 out-of-sample U.S. sector ETF allocation. In this universe, several entropic portfolios have higher realized Sharpe ratios than their matched CVaR portfolios or standard allocation benchmarks.",
+  "link": "https://arxiv.org/abs/2608.18022v1",
+  "id": 10,
+  "score": 6,
+  "why": "Out-of-sample test shows EVaR beats CVaR incrementally"
+ },
+ {
+  "key": "2608.17636",
+  "source": "arXiv",
+  "title": "COS-TT-CHF: A Tensor-Train Characteristic-Function COS Method for Multi-Asset Option Pricing",
+  "abstract": "This paper considers European multi-asset option pricing under L\u00e9vy and affine characteristic-function models. The main obstruction is the curse of dimensionality: direct multidimensional COS pricing forms tensor-product coefficient arrays whose size grows exponentially with the number of assets. We study and extend COS-TT-CHF, a low-rank construction that uses TT-cross to compress sampled characteristic-function tensors into tensor-train COS coefficients for arithmetic basket and min/max option pricing. Once built, the compressed representation gives fast post-setup strike-grid and selected component Delta/Vega calculations. The numerical study compares with adaptive-quadrature Fourier benchmarks, direct COS, a tensor-Fourier min-option benchmark, and quasi-Monte Carlo (QMC) references based on randomized Sobol points. The reported timings show a low-dimensional crossover against direct COS as the benchmark moves from $d=2$ to $d=4$, favorable timings against the tensor-Fourier min-option benchmark from $d=3$ onward, and favorable timings against the QMC common-Heston reference already at $d=2$. The reported tests reach $d=30$ for GBM and $d=20$ for VG, NIG, and common-Heston benchmark families, with accuracy, rank, runtime, control-sensitivity, and component Delta/Vega diagnostics reported throughout.",
+  "link": "https://arxiv.org/abs/2608.17636v1",
+  "id": 11,
+  "score": 4,
+  "why": "Pricing method for high-dim options, off practitioner focus"
+ },
+ {
+  "key": "2608.17808",
+  "source": "arXiv",
+  "title": "Self-Consistent Adjoint Policy Iteration for Constrained Dynamic Portfolio Choice",
+  "abstract": "We develop simulation-based policy iteration for continuous-time portfolio choice with predictable returns and convex constraints. Each outer step re-evaluates a fixed-latent OL-BPTT adjoint after deployment and solves the constrained update. Shifted-adjoint cancellation controls the adjoint--HJB Hamiltonian-gradient discrepancy by the policy-improvement residual. For CRRA portfolios, exact HJB policy iteration identifies the optimal reduced value factor, while population OL-BPTT iteration converges globally under an occupation-measure relative-error condition. A theorem-matched audit yields a maximal 95% upper endpoint of 0.074 against the required 0.75 threshold. In a three-factor, fifty-asset design, current-policy re-evaluation outperforms matched pooled refinement under both evaluation laws.",
+  "link": "https://arxiv.org/abs/2608.17808v1",
+  "id": 12,
+  "score": 3,
+  "why": "Theory with weak empirical support, theorem-matched audit"
+ },
+ {
+  "key": "2608.18299",
+  "source": "arXiv",
+  "title": "The Market's Conditioning Representation: Equilibrium, Crowding, and Convention Multiplicity",
+  "abstract": "Asset-pricing models typically condition on a fixed information set. This paper endogenises the market's conditioning architecture by allowing portfolios to choose representations whose induced exposures affect prices. Capital allocated across representations determines aggregate positions and the clearing premium, while price feedback changes representation value and, through causal certification, admissible representations. A representation equilibrium is the fixed point of this configuration--price--certification loop. The framework separates position crowding through market impact from representation crowding generated by driver-space overlap and priced through a basis-invariant information-capacity cost. Under compactness, resolvent regularity and continuous certification, equilibrium exists at every switching cost; within a stable certification cell, informational congestion yields a concave population game and local uniqueness under a small-gain condition. At a settled configuration, a spectral statistic combining cross-impact, covariance and deployed capacity determines three position-path regimes: below one half the fundamental solution is unique; at the boundary only innovation-free deviations remain; above it, destabilising directions support a continuum of self-confirming conventions. Monotone impact lies inside the uniqueness region, while indefinite impact alone is not sufficient for multiplicity. Intermediary hedging can generate an indefinite response while round trips remain costly. Endogenous risk capacity bounds convention amplitudes, and least-squares learning makes the dominant convention neutral rather than attracting. The threshold is not estimated in data; instead, the empirical exercise documents an out-of-sample, driver-specific signature consistent with representation crowding and states the conditions required for direct measurement.",
+  "link": "https://arxiv.org/abs/2608.18299v1",
+  "id": 13,
+  "score": 2,
+  "why": "Pure equilibrium theory, no data, no empirical testing"
+ },
+ {
+  "key": "2608.18195",
+  "source": "arXiv",
+  "title": "Multi-Level Market Making with Reinforcement Learning",
+  "abstract": "We introduce a reinforcement learning framework for market making in a limit order book. Our algorithm aims to maximize trading revenue by dynamically submitting market and limit orders of varying sizes across multiple price levels while controlling inventory size. We use multivariate logistic-normal distributions to model order allocations and employ a deep-set encoder to aggregate features from variable-length order sets into a fixed-dimensional latent representation. Additionally, we incorporate potential-based reward shaping to accelerate learning without altering the optimal policy. We illustrate the performance of the method in three simulated market environments consisting of noise traders who submit random trades, tactical traders who respond to instantaneous volume imbalance, and strategic traders who trade in the direction of an exponentially weighted volume imbalance signal.",
+  "link": "https://arxiv.org/abs/2608.18195v1",
+  "id": 14,
+  "score": 5,
+  "why": "Market making task tested only on simulated order books"
+ },
+ {
+  "key": "2608.17481",
+  "source": "arXiv",
+  "title": "A generic nonparametric value-at-risk estimator for high dimensions",
+  "abstract": "We present in this article a non-parametric value-at-risk (VaR+CVaR) algorithm that remains accurate for an arbitrarily large number of underlying positions. The algorithm solves the two inherent problems of VaR estimation. First, past history is not directly applicable to the future, but all predictions of the future are based on the past. Second, VaR estimation is equivalent to modeling a single corner of a high-dimensional space (the corner where all bets lose simultaneously). The algorithm only uses mathematical methods that strictly do not degrade in accuracy at high-dimensions. Historical data are then directly incorporated with all high-dimensional relationships present, without manipulation. We test the algorithm with an ensemble of 500 portfolios with random positions across 49 distinct liquid futures of different expiries (VIX, equity indexes, gov. bonds, rates, energy, metals, livestock, agriculture, and softs). All VaR estimations are performed strictly blind to the future. The median portfolio rate of loss exceeding the 99% confidence daily VaR estimate is between $1.0\\pm0.1$% depending on algorithm input parameters. 68% of portfolios have a rate of loss exceeding 99% VaR between $1.0\\pm0.3$%, and 95% of portfolios between $1.0\\pm0.5$%.",
+  "link": "https://arxiv.org/abs/2608.17481v1",
+  "id": 15,
+  "score": 3,
+  "why": "Vague method claims without baseline or comparison"
+ },
+ {
+  "key": "2608.17363",
+  "source": "arXiv",
+  "title": "Conservation of Short-term Flows: Signed Optimal Transport",
+  "abstract": "This paper develops a theoretical framework for signed optimal transport. A global flatness measure induced by the continuum transport equation serves as the regularizer. We examine transport networks from a harmonic analysis perspective, prove the existence and uniqueness of the optimal coupling in the variational problem, and provide an algorithmic scheme that guarantees lossless information transport under bi-marginal constraints. To bridge theory with practice, we design an empirical analysis framework for the resulting optimal estimators, which is sufficiently general to accommodate both time-series and panel-structural analyses of the network, owing to the intrinsic invariance properties of locally compact abelian groups.",
+  "link": "https://arxiv.org/abs/2608.17363v1",
+  "id": 16,
+  "score": 1,
+  "why": "Pure mathematical theory, no empirical application visible"
+ },
+ {
+  "key": "10.2139/ssrn.7303271",
+  "source": "SSRN",
+  "title": "Pay Later, Digitize Faster? Executive Compensation Deferral and Digital Technology Application in Banks",
+  "abstract": "Leveraging a novel large language model-based text analysis approach on a manually collected dataset, we construct bank-level digital technology application measure for Chinese commercial banks over 2007\u20132023, and examine the impact of executive compensation deferral on digital technology application. Our findings reveal that the adoption of executive compensation deferral is associated with a significant increase in digital technology application among banks, relative to non-adopting banks. The main results are robust to accounting for heterogeneous treatment effects, potential sample selection bias, and endogeneity concerns. The effect is more pronounced among larger banks, banks with tighter capital constraints, higher risk exposure, and those located in regions with stronger innovation environments. Channel analyses show that executive compensation deferral facilitates bank application of digital technology primarily by mitigating managerial myopia and reducing risk-taking incentives. Furthermore, we find that deferred compensation-induced digital application subsequently improves bank income structure and operational efficiency. Our study contributes a scalable LLM-based measurement approach for bank digitalization and provides compelling evidence that compensation design can serve as a governance tool to foster technological change in banking.",
+  "link": "https://www.ssrn.com/abstract=7303271",
+  "id": 17,
+  "score": 6,
+  "why": "Causal: compensation deferral drives bank digital adoption"
+ },
+ {
+  "key": "10.2139/ssrn.7283081",
+  "source": "SSRN",
+  "title": "From Ledgers, to Options, to Latency&nbsp; A History of Trading, Mathematical Finance, and the Quant Profession",
+  "abstract": "The quantitative finance profession is often narrated as a late-twentieth-century consequence of option-pricing theory, electronic markets, and the migration of mathematicians and physicists to Wall Street. That account is correct but incomplete. The modern quant is the latest expression of a much longer co-evolution among five systems: institutions of exchange, mathematical representation, information technology, organisational specialisation, and regulation. This paper develops that thesis from the prehistory of money and markets to machine learning and large language models. It treats merchant accounting, bills of exchange, bourses, joint-stock companies, organised derivatives markets, telegraphy, the stock ticker, and the formation of specialised trading desks as genuine antecedents of quantitative work rather than as decorative prehistory. It then follows the mathematical line from Bachelier through axiomatic probability, stochastic calculus, portfolio theory, asset pricing, no-arbitrage valuation, volatility modelling, market microstructure, optimal execution, and modern computational statistics. Parallel to this intellectual history, it traces the professional line from mathematically sophisticated merchants and actuaries to portfolio \"quantifiers,\" derivatives quants, systematic hedge funds, electronic market makers, quantitative developers, risk quants, data scientists, and AI-assisted researchers.&nbsp; &nbsp; &nbsp; &nbsp; The paper also argues that the profession cannot be understood by following theory alone. Each wave of quantification depended on a matching substrate of market data, computing, communication, and institutional demand. Conversely, mathematical models reshaped the markets in which they were deployed, while crises and regulation repeatedly redirected quantitative labour toward new problems such as value-at-risk, counterparty exposure, xVA, capital, liquidity, execution quality, and model risk. The result is a history in which the quant is not a single occupation but a family of roles occupying the interface between formal models and executable decisions.",
+  "link": "https://www.ssrn.com/abstract=7283081",
+  "id": 18,
+  "score": 1,
+  "why": "Survey of quant profession history, rejected type"
+ },
+ {
+  "key": "10.2139/ssrn.7283198",
+  "source": "SSRN",
+  "title": "The AI Investment Boom and Housing Wealth: Evidence from Data Centers",
+  "abstract": "Data centers are the largest corporate-investment boom of the current era. Using a new facility-level database of U.S. data centers in a staggered difference-indifferences design, we examine who captures the financial windfall. Data center counties expand their tax bases and return part of the gain to residents: property-tax rates fall, and the cut capitalizes into homes, households' most valuable asset, whose price rises 4.5%. Capitalization is insignificant where the tax base is riskier, as for speculative crypto facilities, and the cuts are larger where local government is less transparent, consistent with officials paying the surplus as the \"price of consent.\" The estimates survive entropy balancing, a cancelled-project placebo, and a border county-pair design. In aggregate, data centers have created over $100 billion in housing wealth while delivering little to renters, bondholders, or schools. The paper is among the first to show how technology investment and its risks are transmitted into household portfolios.",
+  "link": "https://www.ssrn.com/abstract=7283198",
+  "id": 19,
+  "score": 5,
+  "why": "Causal housing wealth from data centers; macro spillover"
+ },
+ {
+  "key": "10.2139/ssrn.7295118",
+  "source": "SSRN",
+  "title": "From Fiduciary Judgment to Decision Architecture: Structuring AI for Trustworthy Investment Management",
+  "abstract": "Artificial intelligence offers material advantages for investment management, where decisions require large-scale information processing, repeated estimation under uncertainty and consistent application of analytical criteria. Behavioral decision research supplies a further rationale for structured computational support: professional judgment is exposed to cognitive bias and to noise, understood as unwanted variability in judgments that should be substantially similar. Greater predictive capability, however, does not by itself produce better fiduciary decisions. Portfolio management remains a constrained process in which expected return must be evaluated against risk tolerance, liquidity, time horizon, legal restrictions, investor-specific circumstances and portfolio interactions. This paper asks how fiduciary judgment can be translated into executable AI decision architecture without compromising investor protection. It brings together behavioral decision theory, portfolio-management principles embodied in the Investment Policy Statement (IPS), the European Union Artificial Intelligence Act, the NIST AI Risk Management Framework and the conflict problem identified by the U.S. Securities and Exchange Commission in its 2023 Predictive Data Analytics proposal. The paper develops a fiduciary-aligned architecture in which AI enters the established investment-management sequence without acquiring authority to redefine that sequence. The IPS specifies investor objectives and constraints; portfolio theory supplies the analytical logic of risk, diversification, allocation and construction; and decision architecture converts those requirements into executable controls over data use, permissible correlations, suitability, conflicts of interest, materiality, execution, monitoring, rebalancing and escalation. Independent runtime validation is reserved for decisions capable of producing material financial, regulatory or investor-protection consequences. The framework separates predictive capability from institutional authority. Its contribution is a method for translating fiduciary and investment-management practice into machine-executable decision boundaries, allowing institutions to use AI without transferring fiduciary purpose or unconstrained execution authority to the model.",
+  "link": "https://www.ssrn.com/abstract=7295118",
+  "id": 20,
+  "score": 1,
+  "why": "Position paper on fiduciary AI architecture"
+ },
+ {
+  "key": "10.2139/ssrn.7285180",
+  "source": "SSRN",
+  "title": "Governing Delegated Authority in Autonomous Finance: The MARQUE Framework for Institutional Accountability beyond Model Risk",
+  "abstract": "Autonomous financial systems increasingly research, construct, and execute live market strategies. While the governance literature focuses heavily on system-level control and model risk validation, this paper identifies a critical antecedent gap: the formal governance of the delegation boundary itself. Because AI agents lack legal personality, an authority instrument operates not as a power of attorney to software, but as an evidentiary record of an institution's self-imposed limitations. This paper introduces MARQUE, an eight-question reference architecture designed to govern operational capacity and close the \"policy\u2013evidence gap\" in autonomous deployments. To establish this gap empirically, the author maps MARQUE against the 230 control objectives of the February 2026 Financial Services AI Risk Management Framework (FS AI RMF), revealing that while 39 objectives touch authority workflows, none requires the production of a versioned, attributable delegation grant. This structural blind spot is compounded by the April 2026 joint regulatory guidance (SR 26-2), which explicitly carved out agentic AI from standard model risk oversight. This paper establishes MARQUE as a foundational theoretical architecture, providing a fully operationalized, machine-readable JSON schema, a twelve-dimension assessment instrument scored on evidence rather than intention, a worked execution-desk record, and five standard legal instruments to serve as a transactional diligence baseline for the next phase of autonomous financial regulation.",
+  "link": "https://www.ssrn.com/abstract=7285180",
+  "id": 21,
+  "score": 2,
+  "why": "Governance framework, compliance-focused not performance-focused"
+ },
+ {
+  "key": "10.2139/ssrn.7285260",
+  "source": "SSRN",
+  "title": "Governing Delegated Authority in Autonomous Finance: The MARQUE Framework for Institutional Accountability beyond Model Risk",
+  "abstract": "Autonomous financial systems increasingly research, construct, and execute live market strategies. While the governance literature focuses heavily on system-level control and model risk validation, this paper identifies a critical antecedent gap: the formal governance of the delegation boundary itself. Because AI agents lack legal personality, an authority instrument operates not as a power of attorney to software, but as an evidentiary record of an institution's self-imposed limitations. This paper introduces MARQUE, an eight-question reference architecture designed to govern operational capacity and close the \"policy\u2013evidence gap\" in autonomous deployments. To establish this gap empirically, the author maps MARQUE against the 230 control objectives of the February 2026 Financial Services AI Risk Management Framework (FS AI RMF), revealing that while 39 objectives touch authority workflows, none requires the production of a versioned, attributable delegation grant. This structural blind spot is compounded by the April 2026 joint regulatory guidance (SR 26-2), which explicitly carved out agentic AI from standard model risk oversight. This paper establishes MARQUE as a foundational theoretical architecture, providing a fully operationalized, machine-readable JSON schema, a twelve-dimension assessment instrument scored on evidence rather than intention, a worked execution-desk record, and five standard legal instruments to serve as a transactional diligence baseline for the next phase of autonomous financial regulation.",
+  "link": "https://www.ssrn.com/abstract=7285260",
+  "id": 22,
+  "score": 2,
+  "why": "Duplicate of entry 21"
+ },
+ {
+  "key": "10.2139/ssrn.7287318",
+  "source": "SSRN",
+  "title": "Chips as Collateral and the Macroeconomics of AI Financing",
+  "abstract": "I build a model of the securitization of AI computing hardware. Special-purpose vehicles buy chips, lease them to credit-constrained firms, and issue chip-backed notes, while the chip maker guarantees the collateral's residual value. This collateral is unusual because the guarantor chooses its obsolescence. Lease pricing loads on the covariance of default and recovery. A cap beyond the shortfall a downturn produces is never reached, so its headline size overstates the commitment. Insuring collateral gives a durable-goods monopolist reason to slow innovation. The guarantee is owed where the guarantor is weakest, though whether that binds depends on the lease tenor.",
+  "link": "https://www.ssrn.com/abstract=7287318",
+  "id": 23,
+  "score": 4,
+  "why": "Interesting chip-securitization model, no empirical validation"
+ },
+ {
+  "key": "10.2139/ssrn.7282498",
+  "source": "SSRN",
+  "title": "AI Adoption in Emerging Economies: How AI Diffusion Changes Productivity, Labor Markets, and Institutional Capacity",
+  "abstract": "AI is diffusing into emerging economies at unprecedented speed, but its benefits are not keeping pace. The report argues that AI is an amplifier, not a leapfrog technology: it strengthens productivity, labor markets, and state capacity only where countries possess the complements\u2014compute, data, skills, and effective institutions. Adoption is widespread, but readiness is uneven: emerging economies score 0.46 on the IMF AI Preparedness Index versus 0.68 in advanced economies, and Africa holds only 1\u20132% of global data\u2011center capacity despite hosting nearly a fifth of the world\u2019s population. Productivity gains from AI are large but capability\u2011conditional. Randomized trials show novice call\u2011center workers becoming 34% more productive and developers 56% faster, yet a Kenyan experiment found high\u2011performing entrepreneurs improving 15% while low performers declined 8%\u2014a pattern the report summarizes as \u201cAI amplifies capability; it does not replace it.\u201d Labor-market exposure is lower in emerging economies overall, but concentrated in the sectors\u2014BPO, IT services, routine cognitive work\u2014that historically powered upward mobility. AI simultaneously threatens these export ladders and offers augmentation potential where connectivity, training, and organizational absorption exist. Institutional effects are equally asymmetric. Digital public infrastructure\u2014identity, payments, data rails\u2014enables AI to expand state capacity in service delivery, tax compliance, and last\u2011mile logistics. But in weak or extractive institutions, the same systems heighten surveillance and exclusion. The report concludes that absorptive capacity\u2014not access\u2014determines whether AI narrows or widens global inequality. Countries that build the underlying stack (electricity and connectivity \u2192 digital public infrastructure \u2192 skills \u2192 procurement and regulation) will convert AI\u2019s arrival into convergence. Those that adopt the interface without the infrastructure will accelerate divergence.",
+  "link": "https://www.ssrn.com/abstract=7282498",
+  "id": 24,
+  "score": 2,
+  "why": "Survey of AI in emerging economies, rejected"
+ },
+ {
+  "key": "10.2139/ssrn.7291518",
+  "source": "SSRN",
+  "title": "AI-Driven Financial Infrastructure&nbsp; How LLMs, Deep Learning, and Autonomous Agents Reshape Payments, Credit, and Market Microstructure",
+  "abstract": "\"AI in finance\" is treated as a single diffusion. It is three occupations of three different layers, running on three clocks. Deep learning already prices credit and scores fraud. Large language models now read the unstructured remainder-filings, chat, policy, code. Agents want to initiate payments and trades. The IIF-EY survey of 61 institutions in October 2025 finds 90 percent of firms with AI in production and, among those, generative-AI production at 84 percent, up from 48 percent a year earlier. Agentic systems are in production at 23 percent. Primary investment still sits in predictive models: 60 percent of firms, against 34 percent in generative AI. That ranking is the finding, not a lag. Scoring is a probabilistic task that financial firms have been doing with neural nets since the 1990s. Settlement is not. The IMF three-layer map-intent, authorisation, settlement-is the right decomposition. Agents belong in the first layer. The second and third must remain deterministic or the rail stops being a rail. Credit is the intermediate case. FinRegLab shows that XGBoost lifts ROC-AUC by about two points over logistic regression on the same bureau file, and that a cash-flow hybrid on top of that is another few tenths. Machine learning increased simulated approvals by nearly 4 percent and cut approved defaulters by at least 9 percent. That is a better scorecard. It is not a new credit market, and it is not a fair-lending regime. Market microstructure is the layer where the three generations collide. High-frequency systems have been agentic in a narrow sense for fifteen years. What is new is an LLM that can read a headline, write an order, and share a prompt template with every other desk that bought the same model. The Financial Stability Board named the resulting vulnerabilities in 2024: third-party concentration, correlated behaviour, cyber, and model risk. The policy error is to regulate \"AI\" as a capability. Regulate the layer it is allowed to occupy.",
+  "link": "https://www.ssrn.com/abstract=7291518",
+  "id": 25,
+  "score": 2,
+  "why": "Market intelligence report, not original research"
+ },
+ {
+  "key": "10.2139/ssrn.7282860",
+  "source": "SSRN",
+  "title": "When Consumers Delegate Choice to AI: Strategic Adaptation and Information Asymmetry in Agentic Markets",
+  "abstract": "Artificial intelligence is increasingly moving beyond information provision towards delegated economic decision-making. AI agents can search for products, process information, compare alternatives and potentially select or execute transactions on behalf of consumers. While delegation can reduce traditional search costs, it may also alter the strategic incentives of sellers. This paper develops a theoretical model of an agentic market involving a consumer, an AI agent and competing sellers. The consumer chooses the degree of delegation, while sellers strategically adapt to the AI-mediated decision environment. Greater delegation increases the returns to seller adaptation because AI-mediated evaluation becomes increasingly important for access to consumer demand. Seller adaptation, however, can be either productive, by improving the accessibility and machine-readability of information, or distortive, by improving apparent attractiveness without improving underlying consumer value. The resulting welfare effect depends on the net impact of adaptation on effective AI evaluation. When adaptation is net distortive, welfare is concave in delegation and an interior optimum may arise. When adaptation is non-negative in its effect on information quality, welfare is convex or linear in delegation and the optimal choice is a corner solution. The paper therefore argues that AI delegation should not be understood solely as a technological improvement in information acquisition. Delegation changes the strategic environment in which market information is produced, presented and evaluated.",
+  "link": "https://www.ssrn.com/abstract=7282860",
+  "id": 26,
+  "score": 3,
+  "why": "Microeconomic theory only, no empirical financial testing"
+ },
+ {
+  "key": "10.2139/ssrn.7286838",
+  "source": "SSRN",
+  "title": "Faster Is Not Calmer: Agentic AI, Reaction-Time Compression, and the Term Structure of Volatility",
+  "abstract": "Artificial intelligence can make markets faster without making them uniformly calmer. This paper develops a market-microstructure theory of reaction-time compression: after a public signal, AI-assisted investors may submit a fixed amount of information-driven demand over fewer intervals, even when their portfolio rules, private signals, and final positions remain heterogeneous. The separation between trade targets and response delays is a maintained identification assumption, not an equilibrium result. In the model, order flow moves the permanent component of price, while finite market depth and gradual liquidity recovery create a temporary displacement. Four results follow. First, compressing a fixed price adjustment raises short-horizon realized variation because the squared-return contribution of the common order is governed by the concentration of its arrival weights. Second, capacity exceedance is Schur-convex: a more concentrated arrival schedule places weakly more flow beyond a fixed replenishment capacity. Third, the long-run fundamental price change is unchanged in expectation once temporary displacement decays. Fourth, a relative-clock index-the market's liquidity-recovery half-life divided by the order-arrival half-life-organizes the zero-threshold linear special case; in the nonlinear threshold model it remains informative but is not a sufficient statistic. Numerical illustrations show that moving from human-paced to agentic arrival profiles shifts both information incorporation and realized variance toward the announcement, increases temporary price dislocation, and reduces the effective number of independent arrival intervals. The theory yields eventtime predictions that distinguish temporal synchronization from conventional herding, model monoculture, and generic high-frequency trading.",
+  "link": "https://www.ssrn.com/abstract=7286838",
+  "id": 27,
+  "score": 4,
+  "why": "Market microstructure theory only, needs data validation"
+ },
+ {
+  "key": "10.2139/ssrn.7283600",
+  "source": "SSRN",
+  "title": "Cloud Sovereignty and Contestability: What Role for the EU Digital Markets Act and the Data Act?",
+  "abstract": "Cloud computing, that emerged as an early response to outsourcing by small and mid-sized firms, has over time, emerged as the foundation of the data economy. Cloud computing is no longer merely outsourcing of non-core functions by firms. It is an irreversible trajectory to path dependence and reliance on the digital ecosystem of the global hyperscalers, Amazon, Microsoft and Google. The dependence on cloud will only strengthen further, as AI and quantum computing, that rely on large cloud capabilities, become central to the big data-driven digital economy. What technical (such as complexity of the technology, learning effects and interoperability) and economic considerations (such as ecosystem effects, egress fee and lock-in) can potentially explain the enduring global dominance of the three hyperscalers? Together these economic and technical considerations, also raise non-economic concerns, such as sovereignty and innovation, in cloud computing, that well underline the urgent call by Nation States across the globe for workable competition in the cloud computing industry. This research contribution develops the foregoing considerations, and reasons that in light of the infrastructural and foundational nature of the cloud, it should be seen as part of a digital ecosystem owned and controlled by the hyperscalers, that also qualify as gatekeepers in the EU's Digital Markets Act (DMA), and other equivalent exante regulatory frameworks across the globe. This ecosystem-driven view offers a normative foundation to consider cloud sovereignty as a non-economic consideration in competition, particularly in light of the irreversible structural impact of cloud on functional autonomy and innovation capabilities of firms. This contribution elucidates how a flexible interpretation and qualitative approach may be more suited to qualify cloud under the DMA, and the relevant obligations therein. It then evaluates the portability and interoperability requirements under the Data Act. The discussion critically evaluates the landscape of cloud computing, and discusses whether together, these legal instruments can effectively promote contestability, fairness and sovereignty in cloud computing, the infrastructure layer of Industry 4.0.",
+  "link": "https://www.ssrn.com/abstract=7283600",
+  "id": 28,
+  "score": 1,
+  "why": "Cloud policy analysis, off-topic for trading"
+ },
+ {
+  "key": "10.2139/ssrn.7285538",
+  "source": "SSRN",
+  "title": "Predicting Profitability Deterioration in U.S. Commercial Banks Using Explainable Machine Learning",
+  "abstract": "This study develops an explainable machine-learning framework for predicting next-quarter profitability deterioration in U.S. commercial banks. Public regulatory records yield 277,959 bank-quarter observations from 7,344 banks. Deterioration is defined as a decline of at least one percentage point in annualized quarterly return on assets. L2 logistic regression, Random Forest, and XGBoost are evaluated through an expanding window covering 15 out-of-sample quarters from 2022Q1 to 2025Q3. XGBoost achieves mean ROC AUC of 0.8196, average precision (AP) of 0.3281, Brier score of 0.0303, and top-decile event capture of 54.09 percent. A restricted fiveknot cubic-spline logistic model using only current ROA attains mean ROC AUC of 0.7593 and AP of 0.2247; full-predictor XGBoost improves these measures by 0.0603 and 0.1035 and raises top-decile capture by 7.71 percentage points (all paired p &lt; 0.001). When the original out-ofsample scores are evaluated against persistent deterioration over two quarters, XGBoost attains mean ROC AUC of 0.9202 and AP of 0.3989. SHAP analysis consistently ranks current profitability, nonperforming loans, and bank size as the three leading predictors, followed by the compensation expense ratio and the net interest income-to-assets ratio. The framework can support early-warning prioritization but should complement, not replace, financial analysis and supervisory judgment.",
+  "link": "https://www.ssrn.com/abstract=7285538",
+  "id": 29,
+  "score": 6,
+  "why": "Solid ML predicts bank profitability decline 2022-2025 OOS"
+ },
+ {
+  "key": "10.2139/ssrn.7286578",
+  "source": "SSRN",
+  "title": "Responsible Adoption of Generative Artificial Intelligence in Customer Care Services: Evidence from Vietnamese Commercial Banks and Managerial Implications",
+  "abstract": "Generative Artificial Intelligence (GenAI) and Large Language Models (LLMs) haveemerged as transformative technologies capable of fundamentally reshapingcustomerservice operations within the financial services sector. This study investigates thestrategic adoption of GenAI in customer care services across Vietnamese commercial banks, identifying operational bottlenecks and establishing a responsible implementationframework. Employing a qualitative exploratory methodology combining desk research andmultiple-case study analysis of three digitally proactive institutions\u2014Military Commercial JointStock Bank (MBBank), Tien Phong Commercial Joint Stock Bank (TPBank), andVietnamTechnological and Commercial Joint Stock Bank (Techcombank)\u2014the paper examines&nbsp;organizational and technological foundations prerequisite to advanced AI adoption. The findings indicate that while GenAI substantially enhances conversational quality, contextual understanding, and customer journey continuity, its sustainable valueisfundamentally constrained by data governance maturity and integration architecture. Toresolve these friction points, this study proposes a five-layer ResponsibleGenAI Adoption Framework incorporating Retrieval-Augmented Generation (RAG) architectureand Human-in-the-loop (HITL) oversight mechanisms, formalized through four researchpropositions. The study provides actionable managerial implications for commercial banking executives and regulatory recommendations for policymakers in emergingfinancial markets.",
+  "link": "https://www.ssrn.com/abstract=7286578",
+  "id": 30,
+  "score": 2,
+  "why": "Qualitative case study of GenAI in bank customer service"
+ },
+ {
+  "key": "10.2139/ssrn.7307249",
+  "source": "SSRN",
+  "title": "From Pencil Sketch to Oil Painting: A Multi-Vocal Metasynthesis of Sociotechnical Transformation and Future Banking Ecosystems",
+  "abstract": "The global banking sector is undergoing a profound sociotechnical transformation, evolving from traditional intermediaries into AI-enabled, platform-driven ecosystems. Despite this epochal shift, contemporary banking research suffers from an epistemological theory-practice divide, systematically documenting academic models while missing the frontier friction of industry execution. This study addresses this gap by pioneering a Multi-Vocal Literature Review (MVLR) to decode the future of banking. By integrating 40 peer-reviewed academic articles with 39 authoritative industry and regulatory reports, and extracting 6,539 in-vivo codes through a rigorous grounded metasynthesis, we develop an operational four-layer architectural blueprint. Findings reveal that while academic literature provides a structurally sound but abstract \"pencil sketch\" of transformation (15 trends), the catalytic integration of grey literature renders a high-resolution \"oil painting\" (20 trends). This multi-vocal reality injects critical frontier domains\u2014such as Agentic AI workflows, Real-World Asset Tokenization, and Composable Architectures\u2014that are currently absent from scholarly discourse. Furthermore, refutational synthesis exposes severe execution tensions between academic idealism and industrial realities regarding open banking friction, AI scaling, and ESG pragmatism. This study advances Dynamic Capabilities Theory and Service-Dominant Logic, providing an evidence-based, strategic compass for executives and policymakers to navigate platform governance, technological adoption, and systemic resilience in future financial ecosystems.",
+  "link": "https://www.ssrn.com/abstract=7307249",
+  "id": 31,
+  "score": 0,
+  "why": "Literature review, explicitly rejected type"
+ },
+ {
+  "key": "10.2139/ssrn.7307251",
+  "source": "SSRN",
+  "title": "Debt Prices the Opportunity Too: Generative AI in China\u2019s Credit Market",
+  "abstract": "Recent evidence from the United States indicates that equity markets price firms\u2019generative artificial intelligence (AI) exposure as an opportunity while credit marketsprice it as a risk. We document that this asymmetry does not generalize. Usinga firm-level measure of workforce exposure to generative AI constructed from thetask content of pre-ChatGPT job postings, and a difference-in-differences design overa unified 2021\u20132025 event window, we find that the debt financing costs of highlyexposed Chinese listed firms decline following the release of ChatGPT. The impliedcost of debt, computed from financial statements for the full A-share universe, fallsby 11\u201313 basis points per standard deviation of exposure; primary-market bond issuance spreads fall by 7\u201310 basis points; and equity valuations rise. Exchange-tradedsecondary-market bond spreads, determined in a segment dominated by implicitlyguaranteed issuers, do not respond. The decline in financing costs occurs in theabsence of any observable increase in AI adoption and is concentrated among laborcost-intensive, financially unconstrained, non-state firms. The evidence is consistentwith creditors capitalizing an expected labor-cost-savings option for firms positionedas users, rather than targets, of the technology.",
+  "link": "https://www.ssrn.com/abstract=7307251",
+  "id": 32,
+  "score": 7,
+  "why": "Causal: Chinese debt prices GenAI opportunity unlike US"
+ },
+ {
+  "key": "10.2139/ssrn.7299301",
+  "source": "SSRN",
+  "title": "SEEA-AI: An integrated Earth-observation and machine-learning architecture for ecosystem-condition accounting and carbon-stock exposure",
+  "abstract": "This paper presents SEEA-AI, an integrated methodological architecture that links Earth observation, supervised machine learning and the System of Environmental-Economic Accounting\u2014Ecosystem Accounting (SEEA-EA). Rather than claiming comprehensive measurement of natural capital, the empirical implementation focuses on vegetation condition, aboveground carbon biomass and mapped forest disturbance. It examines whether these observations can support spatially explicit ecosystem-condition accounts and transparent carbon-stock exposure scenarios in data-constrained basins. The architecture combines three components: (i) a stock\u2013flow\u2013value framework that keeps ecosystem extent, condition, service flows and monetary asset values conceptually distinct; (ii) Earth-observation indicators and a Random Forest module for estimating aboveground carbon biomass; and (iii) structural benchmarking against the Murray\u2013Darling Basin accounts. The same analytical architecture is then recalibrated with context-specific tropical samples for the Sin\u00fa River and Alto Madre de Dios basins. These applications test operational adaptability, not out-of-domain predictive transferability or global generalisability. A satellite-derived condition index C summarises observed vegetation condition. Changes in C are interpreted as evidence of ecological improvement or deterioration only within the stated indicator scope and reference system; they are not, by themselves, equivalent to changes in total natural capital. Monetary estimates are derived separately from mapped disturbance, estimated carbon density and explicit price and release-fraction assumptions. The Sin\u00fa River application shows an aggregate increase in vegetation indicators between 2020 and 2024 (NDVI 0.563\u21920.622; condition index 0.642\u21920.714), while spatial analysis identifies 14,580 ha of mapped forest loss and additional disturbance signals. Under an illustrative scenario of 130 tCO\u2082/ha, a 100% release fraction and a carbon price of USD 25/tCO\u2082, this corresponds to gross carbon-stock exposure of approximately USD 47 million. The figure is not an exact financial inventory or a comprehensive valuation of ecosystem degradation. A conceptual macroeconomic and microeconomic extension is presented in revised Supplementary Material S1.",
+  "link": "https://www.ssrn.com/abstract=7299301",
+  "id": 33,
+  "score": 1,
+  "why": "Environmental accounting and ecosystem carbon; off-topic"
+ },
+ {
+  "key": "10.2139/ssrn.7307778",
+  "source": "SSRN",
+  "title": "Crisis identification and prediction using Machine Learning: the case of U.S. regional banks",
+  "abstract": "Financial crises have detrimental effects on the economy and society, so their identification and prediction are of interest to investors and policymakers alike. Historically, many financial crises originated in the banking sector. Using a return-based and data-driven crisis definition, we combine clustering, ridge regression, and sequential feature selection to identify and predict U.S. regional banking crises. In addition to a statistical evaluation of the forecasting ability of our approach, we analyze its impact on a trading strategy for a broad range of risk attitudes. Its predictions can be used to avoid market exposure during negative market phases, which improves the risk-adjusted returns of the trading strategy compared to the buy-and-hold benchmark.",
+  "link": "https://www.ssrn.com/abstract=7307778",
+  "id": 34,
+  "score": 5,
+  "why": "Crisis prediction backtested, limited by rare-event sample"
+ },
+ {
+  "key": "10.2139/ssrn.7307940",
+  "source": "SSRN",
+  "title": "What ChatGPT Cites From Forbes in Answers About&nbsp; Finance Brands: Section Concentration, Page Type and&nbsp; Routes to Entry",
+  "abstract": "Public relations is bought and sold at the level of the masthead, while an AI answer engine cites a single URL reached through one part of a publication. This paper takes one publisher, Forbes, and asks which part. Using every ChatGPT citation to forbes.com produced by the tracked answers of 465 finance and insurance brand domains between 1 June and 31 July 2026, we find that the average brand draws 91.2% of its Forbes citations from one desk, Forbes Advisor, and 98.7% from five sections. Inside that desk the content is more mixed than the concentration suggests: ranked lists are the largest page type at 45.5% and a majority of nothing. Conditioning on the type of finance company leaves the desk almost unchanged, since Forbes Advisor is 81% to 95% of every one of seven company types, and shifts the topic within it markedly, since a wealth platform draws 67.0% of its Forbes citations from one topic while a comparison broker needs six to reach half. Pages surfacing for a single brand are 4.2% of citations, so most of what the engine cites appears to be a shared reference page rather than a brand's own coverage; classifying all 8,072 cited pages by route puts inclusion by criteria at 66.8%, an expert quote inside an evergreen guide at 29.8%, and a traditional earned placement at 1.6%. The same concentration test run on ten finance news mastheads returns a median lead section of 58.1%, which suggests Forbes is an extreme of a wider pattern rather than a special case. The route figure is the one that bears on current industry claims: earned media is reported to account for 84% of AI citations across engines and industries (Muck Rack 2026), and our reading is that the share of citations landing on editorial domains and the share a brand could reach through earned-media work are different quantities. The study is observational and its estimates are descriptive. Three checks bound the result: the commercial skew in the prompt bank is associated with which publishers appear but not with which section of one; filtering to non-branded prompts moves little, because branded prompts are 0.4% of the tracked set; and the pattern does not appear to generalise across engines, since only one of ten Forbes sections holds its rank across ChatGPT, Google AI Overviews and Perplexity.",
+  "link": "https://www.ssrn.com/abstract=7307940",
+  "id": 35,
+  "score": 2,
+  "why": "Content analysis of ChatGPT's news citations"
+ },
+ {
+  "key": "10.2139/ssrn.7308323",
+  "source": "SSRN",
+  "title": "Measuring Wage Capacity in AI-Displaced Manufacturing: A Graph Attention Network and XGBoost Framework for Pre-emptive Financial Inclusion",
+  "abstract": "This paper contributes a novel Graph Attention Network v2 (GATv2) architecture for occupational skill-embedding (the AI contribution), applied to the engineering problem of predicting wage-earning capacity for AI-displaced manufacturing workers (the engineering application). This paper introduces the National Skill Intelligence Index (NSII), a composite occupational scoring framework that integrates Skill Velocity, Market Demand, Skill Transferability, and Displacement Risk into a single 0\u20131000 wage-capacity score. Transferability is computed using a Graph Attention Network v2 (GATv2) trained on O*NET occupational skill co-occurrence data \u2014 the first application of graph neural networks to skill transferability measurement. Applied to 31 occupations and 4,464 Annual Social and Economic Supplement (ASEC) workers across five Midwest manufacturing states from 2019 to 2024, the NSII achieves Pearson r = 0.2819 with log(annual wage income) (p",
+  "link": "https://www.ssrn.com/abstract=7308323",
+  "id": 36,
+  "score": 3,
+  "why": "Labor economics via graph neural networks"
+ },
+ {
+  "key": "10.2139/ssrn.7306325",
+  "source": "SSRN",
+  "title": "Mapping wealth and income inequalities in Bucharest\u2019s neighborhoods using cars market value: a mixed approach combining conventional methods with Artificial Intelligence",
+  "abstract": "Wealth and income inequality is a central concern across the social sciences, with well-documented links to education, health, safety, and economic outcomes. Evidence that inequality widens after large negative shocks -the COVID-19 pandemic and the wars in Ukraine and the Middle East \u2014 has renewed its salience. Yet while inequality is routinely measured at the national level, small-area evidence for cities and neighborhoods remains scarce, because income itself is sensitive, under-reported, and rarely published below the regional level. This paper addresses that gap for the neighborhoods of Bucharest.Building on evidence that vehicle value is a strong proxy for income and wealth, we measure the wealth distribution and inequality through automobile market value. We drew a multi-stage probability sample of Bucharest, collecting vehicles from roughly 560 locations using Google Street View imagery (reference period 2022\u20132024; market values expressed in 2025\u20132026 prices). Images were processed with a general-purpose multimodal LLM (OpenAI ChatGPT, GPT-4 and 5), which returned each vehicle&apos;s brand, production-year band, and estimated market value (CMV). We validate the estimates against independent sources in three steps: (i) a county-level (NUTS-3) cross-sectional regression of average monthly wage on CMV for 2024; (ii) a comparison of the sample&apos;s brand and vehicle-age distributions against the full national vehicle registry; and (iii) a comparison of estimated mean vehicle age against the registry&apos;s official figure. Using the validated values we compute, for each Bucharest neighborhood, CMV, the coefficient of variation (CV) of vehicle values, and the Gini index, each with bootstrap 95% confidence intervals.CMV correlates strongly and significantly with average monthly wage across counties (r = 0.65, p",
+  "link": "https://www.ssrn.com/abstract=7306325",
+  "id": 37,
+  "score": 1,
+  "why": "Neighborhood wealth mapping via vehicle valuations"
+ }
+]
