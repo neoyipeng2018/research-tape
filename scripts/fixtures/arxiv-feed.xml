@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry>
+    <id>http://arxiv.org/abs/2608.18911v3</id>
+    <title>Investment-committee
+  transcripts   as a signal</title>
+    <summary>  We show that transcripts
+carry tradable content
+   out of sample.  </summary>
+    <link href="http://arxiv.org/abs/2608.18911v3" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2608.18911v3" rel="related" type="application/pdf"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.00042v1</id>
+    <title>Limit order book depth under LLM agents</title>
+    <summary>A negative result on agentic execution.</summary>
+    <link href="http://arxiv.org/abs/2608.00042v1" rel="alternate" type="text/html"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.00043v1</id>
+    <title>Entry with no abstract</title>
+    <summary/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/api/errors#incorrect_id_format_for_garbage</id>
+    <title>Error</title>
+    <summary>incorrect id format for garbage</summary>
+  </entry>
+</feed>
