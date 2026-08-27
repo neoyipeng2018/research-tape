@@ -1,0 +1,40 @@
+{
+ "status": "ok",
+ "message": {
+  "total-results": 4,
+  "next-cursor": "DnF1ZXJ5VGhlbkZldGNoBQAAAA",
+  "items": [
+   {
+    "DOI": "10.2139/ssrn.5100001",
+    "title": ["Large Language Models and the S&amp;amp;P 500  Volatility Surface"],
+    "abstract": "<jats:p>We fine-tune a <jats:italic>transformer</jats:italic> on option quotes and find the surface is predictable out of sample.</jats:p>",
+    "resource": {"primary": {"URL": "https://www.ssrn.com/abstract=5100001"}},
+    "created": {"date-time": "2026-08-21T00:00:00Z"},
+    "type": "posted-content"
+   },
+   {
+    "DOI": "10.2139/ssrn.5100002",
+    "title": ["Origami Metamaterials for Deployable Structures"],
+    "abstract": "<jats:p>A deep learning approach to folding patterns.</jats:p>",
+    "resource": {"primary": {"URL": "https://www.ssrn.com/abstract=5100002"}},
+    "created": {"date-time": "2026-08-21T00:00:00Z"},
+    "type": "posted-content"
+   },
+   {
+    "DOI": "10.2139/ssrn.5100003",
+    "title": ["Credit Risk in Emerging Market Sovereign Debt"],
+    "abstract": "<jats:p>A panel regression over twenty years of spreads.</jats:p>",
+    "resource": {"primary": {"URL": "https://www.ssrn.com/abstract=5100003"}},
+    "created": {"date-time": "2026-08-21T00:00:00Z"},
+    "type": "posted-content"
+   },
+   {
+    "DOI": "10.2139/ssrn.5100004",
+    "title": ["Machine Learning for Portfolio Choice"],
+    "resource": {"primary": {"URL": "https://www.ssrn.com/abstract=5100004"}},
+    "created": {"date-time": "2026-08-21T00:00:00Z"},
+    "type": "posted-content"
+   }
+  ]
+ }
+}
