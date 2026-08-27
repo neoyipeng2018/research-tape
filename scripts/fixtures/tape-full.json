@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-19",
+  "scanned": 31,
+  "items": [
+    {"key": "10.2139/ssrn.7298998", "source": "SSRN",
+     "link": "https://www.ssrn.com/abstract=7298998",
+     "title": "When Text Becomes Tradable: Financial-domain Language Models and the Asymmetric Absorption of News in Agricultural Futures Markets",
+     "claim": "Agricultural futures returns respond to media news only via finance-domain LLM embeddings, not general ones."},
+    {"key": "10.2139/ssrn.7298579", "source": "SSRN",
+     "link": "https://www.ssrn.com/abstract=7298579",
+     "title": "Accurate but Correlated: Common AI Forecast Errors & Endogenous Market Volatility",
+     "claim": "Equicorrelated AI forecast errors create aggregate variance floors independent of model accuracy or institution count."},
+    {"key": "10.2139/ssrn.7298598", "source": "SSRN",
+     "link": "https://www.ssrn.com/abstract=7298598",
+     "title": "Contingent Winners: Forecast Scale and Model Rankings in Volatility Forecasting",
+     "claim": "Volatility forecast model rankings flip between GARCH and deep learning depending on regime, seed, and evaluation loss."},
+    {"key": "10.2139/ssrn.7301678", "source": "SSRN",
+     "link": "https://www.ssrn.com/abstract=7301678",
+     "title": "Stranded Credentials: How A Skill-Signaling Market Absorbed Generative AI",
+     "claim": "Upload medals lost 82% signaling value despite fresh medals retaining power, suggesting format-specific credential decay during the AI era."},
+    {"key": "10.2139/ssrn.7303518", "source": "SSRN",
+     "link": "https://www.ssrn.com/abstract=7303518",
+     "title": "Do Banks Really Know What They Get From AI?",
+     "claim": "Major banks claim AI cost savings but withhold spend data, making public verification impossible."},
+    {"key": "10.2139/ssrn.7305922", "source": "SSRN",
+     "link": "https://www.ssrn.com/abstract=7305922",
+     "title": "The Clock of Regimes: An Operator-Theoretic Early-Warning System for Financial Fragility",
+     "claim": "Operator-theoretic tail diagnostics detected maximum portfolio stress weeks before leveraged concentration became forced liquidation."}
+  ]
+}

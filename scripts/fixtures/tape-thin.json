@@ -1,0 +1,10 @@
+{
+  "date": "2026-08-21",
+  "scanned": 29,
+  "items": [
+    {"key": "2608.20114", "source": "arXiv",
+     "link": "https://arxiv.org/abs/2608.20114",
+     "title": "Execution Costs Under Learned Order Routing",
+     "claim": "Learned order routing beats VWAP scheduling only on days when spreads are already wide."}
+  ]
+}

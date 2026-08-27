@@ -1,0 +1,18 @@
+{
+  "date": "2026-08-20",
+  "scanned": 34,
+  "items": [
+    {"key": "2608.18911", "source": "arXiv",
+     "link": "https://arxiv.org/abs/2608.18911",
+     "title": "Converting Expert Deliberation into Financial Signals Through A Context-Aware NLP Pipeline",
+     "claim": "Investment-committee transcripts yield tradable signals at 73% accuracy before any transaction-cost adjustment."},
+    {"key": "10.2139/ssrn.7309901", "source": "SSRN",
+     "link": "https://www.ssrn.com/abstract=7309901",
+     "title": "Disclosure Gaps in Bank AI Spending",
+     "claim": "Banks reporting AI cost savings disclose no spend baseline, so the savings cannot be verified."},
+    {"key": "2608.19389", "source": "arXiv",
+     "link": "https://arxiv.org/abs/2608.19389",
+     "title": "Concentrated Liquidity Provision: a Reinforcement Learning Perspective",
+     "claim": "Reinforcement learning rebalances concentrated liquidity positions without an out-of-sample backtest to support it."}
+  ]
+}

@@ -310,6 +310,17 @@ One static `index.html`, monospace tape, ~46rem column, no framework and no JS.
 - The date line always states the date of the tape being shown. Staleness is left for the reader to
   notice — no banner, no client-side threshold.
 
+The renderer reads one tape file and writes both outputs; `scripts/render.py --tape-dir tape --out .`,
+with `scripts/fixtures/` as the shape it is checked against:
+
+```json
+{"date": "2026-08-19", "scanned": 31,
+ "items": [{"key": "...", "title": "...", "link": "...", "source": "arXiv", "claim": "..."}]}
+```
+
+`scanned` is the day's candidate count after dedup — the M in the meta line. A tape missing a field
+renders nothing and exits non-zero (§9); it never guesses.
+
 `feed.xml` is a plain RSS 2.0 file rebuilt from the last 30 `tape/*.json`, one `<item>` per published
 item: title, link, claim as description, tape date as `pubDate`, key as `guid`.
 

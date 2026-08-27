@@ -1,3 +1,5 @@
 node_modules/
 .env
 candidates/
+.DS_Store
+__pycache__/
