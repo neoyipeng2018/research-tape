@@ -1,0 +1,19 @@
+name: taste-check
+
+on:
+  pull_request:
+    paths:
+      - taste.md
+      - scripts/validate-taste.sh
+      - scripts/test-validate-taste.sh
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/validate-taste.sh taste.md
+      - run: ./scripts/test-validate-taste.sh
