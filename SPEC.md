@@ -203,8 +203,8 @@ Be a hard marker. Most papers on most days are 5-6; a 7 is a real recommendation
 spending their attention on. Judge only from title and abstract; do not credit claims you
 cannot see evidence for.
 
-Output one JSON object per line, no other text, no markdown fence:
-{"id": <int>, "score": <int 0-10>, "why": "<max 12 words, the reason for the score>"}
+Return one entry per candidate, and nothing else:
+{"scores": [{"id": <int>, "score": <int 0-10>, "why": "<max 12 words, the reason for the score>"}]}
 
 CANDIDATES
 [{id}] ({source}) {title}

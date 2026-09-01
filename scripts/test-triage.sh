@@ -82,7 +82,8 @@ check("the why comes from the run that scored the median",
 check("output is ordered score descending, then key",
       out and [c["key"] for c in out] == ["2608.00002", "2608.00001", "10.2139/ssrn.1"], out)
 check("the candidate record is passed through, not rebuilt",
-      out and all(c["title"] and c["link"] if "link" in c else c["title"] for c in out), out)
+      out and all(dict(c, score=0, why="") == dict(o, score=0, why="")
+                  for c in CANDIDATES for o in out if c["key"] == o["key"]), out)
 check("ANTHROPIC_API_KEY never reaches the judge — it would bypass the subscription", not leaked)
 
 rc2, out2, _, _, _ = run(THREE, candidates=list(reversed(CANDIDATES)))
@@ -144,13 +145,23 @@ check("an exhausted limit fails once, carrying the reset time",
       rc != 0 and len(prompts) == 1 and "LIMITS_EXHAUSTED" in err
       and "2026-09-02T14:00Z" in err, (rc, len(prompts), err))
 
+# A good run whose text quotes taste.md must not be read as a limit or an auth failure:
+# "limit order book" is in ## Prefer, and `result` carries the model's own words.
+quoting = envelope([{"id": i, "score": 8, "why": "real limit order book data, resets nothing"}
+                    for i in (1, 2, 3)],
+                   result='{"scores": [{"why": "OAuth-era limit order book, balance sheet"}]}')
+rc, out, err, prompts, _ = run([quoting] * 3)
+check("a successful envelope is never classified from its text — a quoted `why` is not a failure",
+      rc == 0 and out and all(c["score"] == 8 for c in out), (rc, err))
+
 rc, out, err, prompts, _ = run(THREE, candidates=[])
 check("no candidates means no judge call and an empty file, not a failure",
       rc == 0 and out == [] and not prompts, (rc, out, err))
 
 src = open("scripts/triage.py").read()
+body = '"""'.join(src.split('"""')[2:])   # everything after the module docstring
 check("no cost or token-count logic is built on total_cost_usd or input_tokens",
-      "total_cost_usd" not in src.split('"""')[2] and "input_tokens" not in src.split('"""')[2])
+      "total_cost_usd" not in body and "input_tokens" not in body)
 
 print("all ok" if not fails else f"{fails} failed")
 sys.exit(1 if fails else 0)

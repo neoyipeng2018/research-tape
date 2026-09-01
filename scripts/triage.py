@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 1 — triage. Every deduped candidate scored 0-10, three runs, median wins. SPEC.md §3.1-3.3.
+"""Pass 1 — triage. Every deduped candidate scored 0-10, three runs, median wins. SPEC.md §3.1-3.2.
 
 One `claude -p` call per run for all candidates, not one per candidate: 60 candidates is ~24K
 tokens and ~110s wall clock, of which ~89s is time to first token — normal, not a hang. The
@@ -19,7 +19,7 @@ retry three times. No cost or token logic — `total_cost_usd` is a client-side 
 import argparse, json, os, re, statistics, subprocess, sys
 
 RUNS = 3          # median of three
-RETRIES = 3       # per run, on CLI_HANG and MALFORMED_OUTPUT only
+ATTEMPTS = 3      # per run, on CLI_HANG and MALFORMED_OUTPUT only — the rest never retry
 TIMEOUT = 600     # seconds; ~110s is a normal call, so this is a hang, not a slow day
 ABSTRACT = 900    # chars per candidate, whitespace-collapsed
 SYSTEM = "You are a research-tape triage classifier. Return only the requested structured output."
@@ -95,6 +95,9 @@ def call(text, schema):
     env = {k: v for k, v in os.environ.items() if k != "ANTHROPIC_API_KEY"}
     try:
         return subprocess.run(
+            # --model haiku conserves subscription usage limits, not dollars; --max-turns 4
+            # because 1 silently breaks --json-schema, the structured result arriving as a tool
+            # call; --tools "" alone still leaves 53 MCP tools, --strict-mcp-config reaches zero.
             ["claude", "-p", "--model", "haiku",
              "--system-prompt", SYSTEM, "--output-format", "json", "--json-schema", schema,
              "--tools", "", "--strict-mcp-config", "--no-session-persistence", "--max-turns", "4"],
@@ -103,7 +106,7 @@ def call(text, schema):
         return subprocess.CompletedProcess([], 124, "", "")
 
 
-def scores(proc, ids):
+def parse(proc, ids):
     """The envelope, classified. Never branch on `subtype` — it reads "success" on an auth
     failure. `error_max_turns` lands here as a missing structured_output, which is malformed."""
     if proc.returncode == 124:   # ours above, or a `timeout -k` wrapper: 124, never 143
@@ -114,14 +117,17 @@ def scores(proc, ids):
             raise ValueError("not an object")
     except ValueError as e:
         raise Retry(f"MALFORMED_OUTPUT: envelope is not JSON: {e}") from None
-    result = env.get("result") if isinstance(env.get("result"), str) else ""
-    if env.get("api_error_status") == 401 or AUTH.search(result):
-        raise Fatal(f"AUTH_DEAD: regenerate CLAUDE_CODE_OAUTH_TOKEN with `claude setup-token`: "
-                    f"{result or env.get('api_error_status')}")
-    if LIMITS.search(result):
-        raise Fatal(f"LIMITS_EXHAUSTED: {result}")   # the reset time is in the text, verbatim
     got = (env.get("structured_output") or {}).get("scores")
     if not isinstance(got, list):
+        # Only now read the text, and only for the taxonomy. `result` carries the model's own
+        # words on a good run, and taste.md says "limit order book" — matching AUTH/LIMITS
+        # against a successful envelope would take a working day dark on a quoted `why`.
+        result = env.get("result") if isinstance(env.get("result"), str) else ""
+        if env.get("api_error_status") == 401 or AUTH.search(result):
+            raise Fatal("AUTH_DEAD: regenerate CLAUDE_CODE_OAUTH_TOKEN with `claude setup-token`"
+                        f": {result or env.get('api_error_status')}")
+        if LIMITS.search(result):
+            raise Fatal(f"LIMITS_EXHAUSTED: {result}")   # the reset time is in the text, verbatim
         raise Retry(f"MALFORMED_OUTPUT: no structured_output.scores: {result[:200]}")
     out = {}
     for s in got:
@@ -137,13 +143,13 @@ def scores(proc, ids):
 
 def run(text, schema, ids):
     """One run, up to three attempts. A Fatal is not caught: it means the whole day is dark."""
-    for attempt in range(1, RETRIES + 1):
+    for attempt in range(1, ATTEMPTS + 1):
         try:
-            return scores(call(text, schema), ids)
+            return parse(call(text, schema), ids)
         except Retry as e:
-            print(f"triage: attempt {attempt}/{RETRIES}: {e}", file=sys.stderr)
+            print(f"triage: attempt {attempt}/{ATTEMPTS}: {e}", file=sys.stderr)
             last = e
-    raise Fatal(f"triage failed after {RETRIES} attempts: {last}")
+    raise Fatal(f"triage failed after {ATTEMPTS} attempts: {last}")
 
 
 def triage(candidates, taste, schema):
@@ -177,8 +183,8 @@ def main():
             candidates = triage(candidates, a.taste, schema)
         except Fatal as e:
             sys.exit(f"triage: {e}")   # dark day: write nothing, commit nothing (§9)
-        top = candidates[0]["score"] if candidates else 0
-        print(f"triage: {len(candidates)} scored, top {top}", file=sys.stderr)
+    print(f"triage: {len(candidates)} scored"
+          + (f", top {candidates[0]['score']}" if candidates else ""), file=sys.stderr)
     text = json.dumps(candidates, indent=1, ensure_ascii=False) + "\n"
     if not a.out:
         sys.stdout.write(text)
