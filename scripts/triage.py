@@ -62,16 +62,23 @@ class Retry(Exception):
     """CLI_HANG or MALFORMED_OUTPUT. Three attempts, then the day goes dark."""
 
 
-def section(path, name):
-    """The `- ` bullets under one heading, verbatim — the judge reads taste.md's words, not a
-    paraphrase of them."""
+def block(path, name):
+    """The lines under one taste.md heading. Shared with pass 2's ## Bar reader; validate-taste.sh
+    has already refused a file shaped any other way."""
     out, inside = [], False
     with open(path) as f:
         for line in f:
             if line.startswith("## "):
                 inside = line.strip() == f"## {name}"
-            elif inside and line.startswith("- "):
+            elif inside:
                 out.append(line.rstrip())
+    return out
+
+
+def section(path, name):
+    """The `- ` bullets under one heading, verbatim — the judge reads taste.md's words, not a
+    paraphrase of them."""
+    out = [l for l in block(path, name) if l.startswith("- ")]
     if not out:
         sys.exit(f"{path}: ## {name} has no '- ' bullet lines")
     return "\n".join(out)
@@ -88,7 +95,7 @@ def prompt(candidates, taste):
                          candidates="\n\n".join(lines))
 
 
-def call(text, schema):
+def call(text, schema, system):
     """ANTHROPIC_API_KEY is dropped here as well as in CI: it takes precedence over the OAuth
     token and silently bypasses the subscription. The timeout is ours rather than a `timeout -k`
     wrapper, so it works off Linux too; a wrapper's exit 124 is still read as a hang below."""
@@ -99,16 +106,17 @@ def call(text, schema):
             # because 1 silently breaks --json-schema, the structured result arriving as a tool
             # call; --tools "" alone still leaves 53 MCP tools, --strict-mcp-config reaches zero.
             ["claude", "-p", "--model", "haiku",
-             "--system-prompt", SYSTEM, "--output-format", "json", "--json-schema", schema,
+             "--system-prompt", system, "--output-format", "json", "--json-schema", schema,
              "--tools", "", "--strict-mcp-config", "--no-session-persistence", "--max-turns", "4"],
             input=text, capture_output=True, text=True, env=env, timeout=TIMEOUT)
     except subprocess.TimeoutExpired:
         return subprocess.CompletedProcess([], 124, "", "")
 
 
-def parse(proc, ids):
-    """The envelope, classified. Never branch on `subtype` — it reads "success" on an auth
-    failure. `error_max_turns` lands here as a missing structured_output, which is malformed."""
+def payload(proc, key):
+    """The envelope, classified, down to `structured_output[key]`. Never branch on `subtype` — it
+    reads "success" on an auth failure. `error_max_turns` lands here as a missing
+    structured_output, which is malformed. Shared with pass 2 (claim.py)."""
     if proc.returncode == 124:   # ours above, or a `timeout -k` wrapper: 124, never 143
         raise Retry(f"CLI_HANG: no result in {TIMEOUT}s")
     try:
@@ -117,7 +125,7 @@ def parse(proc, ids):
             raise ValueError("not an object")
     except ValueError as e:
         raise Retry(f"MALFORMED_OUTPUT: envelope is not JSON: {e}") from None
-    got = (env.get("structured_output") or {}).get("scores")
+    got = (env.get("structured_output") or {}).get(key)
     if not isinstance(got, list):
         # Only now read the text, and only for the taxonomy. `result` carries the model's own
         # words on a good run, and taste.md says "limit order book" — matching AUTH/LIMITS
@@ -128,28 +136,40 @@ def parse(proc, ids):
                         f": {result or env.get('api_error_status')}")
         if LIMITS.search(result):
             raise Fatal(f"LIMITS_EXHAUSTED: {result}")   # the reset time is in the text, verbatim
-        raise Retry(f"MALFORMED_OUTPUT: no structured_output.scores: {result[:200]}")
+        raise Retry(f"MALFORMED_OUTPUT: no structured_output.{key}: {result[:200]}")
+    return got
+
+
+def parse(proc, ids):
+    """Pass 1's entries: one score per candidate id, and the whole id set."""
+    got = payload(proc, "scores")
     out = {}
     for s in got:
         if not (isinstance(s, dict) and isinstance(s.get("id"), int)
                 and isinstance(s.get("score"), int) and 0 <= s["score"] <= 10):
             raise Retry(f"MALFORMED_OUTPUT: bad entry {s!r}")
         out[s["id"]] = (s["score"], str(s.get("why", "")))
-    if set(out) != ids:   # the schema constrains shape, not completeness
-        raise Retry(f"MALFORMED_OUTPUT: id set mismatch, {len(out)} of {len(ids)} scored, "
-                    f"missing {sorted(ids - set(out))[:5]}, extra {sorted(set(out) - ids)[:5]}")
+    same_ids(out, ids, "scored")
     return out
 
 
-def run(text, schema, ids):
-    """One run, up to three attempts. A Fatal is not caught: it means the whole day is dark."""
+def same_ids(out, ids, verb):
+    """The schema constrains shape, not completeness: an entry per input id, and no others."""
+    if set(out) != ids:
+        raise Retry(f"MALFORMED_OUTPUT: id set mismatch, {len(out)} of {len(ids)} {verb}, "
+                    f"missing {sorted(ids - set(out))[:5]}, extra {sorted(set(out) - ids)[:5]}")
+
+
+def run(text, schema, read, label="triage", system=SYSTEM):
+    """One run, up to three attempts. A Fatal is not caught: it means the whole day is dark.
+    Shared with pass 2 (claim.py), which passes its own parse."""
     for attempt in range(1, ATTEMPTS + 1):
         try:
-            return parse(call(text, schema), ids)
+            return read(call(text, schema, system))
         except Retry as e:
-            print(f"triage: attempt {attempt}/{ATTEMPTS}: {e}", file=sys.stderr)
+            print(f"{label}: attempt {attempt}/{ATTEMPTS}: {e}", file=sys.stderr)
             last = e
-    raise Fatal(f"triage failed after {ATTEMPTS} attempts: {last}")
+    raise Fatal(f"{label} failed after {ATTEMPTS} attempts: {last}")
 
 
 def triage(candidates, taste, schema):
@@ -158,7 +178,7 @@ def triage(candidates, taste, schema):
     ordered = sorted(candidates, key=lambda c: c["key"])
     text = prompt(ordered, taste)
     ids = set(range(1, len(ordered) + 1))
-    runs = [run(text, schema, ids) for _ in range(RUNS)]
+    runs = [run(text, schema, lambda p: parse(p, ids)) for _ in range(RUNS)]
     out = []
     for i, c in enumerate(ordered, 1):
         three = [r[i] for r in runs]

@@ -227,13 +227,17 @@ Hard rules:
 - No hype words: novel, groundbreaking, cutting-edge, revolutionary, powerful, robust.
 - Claim only what the abstract supports. Conditional finding, conditional sentence.
 
-Output one JSON object per line, no other text:
-{"id": <int>, "sentence": "<the sentence>"}
+Return one entry per paper, and nothing else:
+{"claims": [{"id": <int>, "sentence": "<the sentence>"}]}
 
 PAPERS
 [{id}] ({source}) {title}
 {abstract}
 ```
+
+One entry per paper rather than JSONL: a bare object per line cannot come back through
+`--json-schema` (`schema/claim.json`), so pass 2 carries pass 1's envelope shape. The rules are also
+re-read on the way out — a sentence that breaks one is malformed and retried, never published.
 
 Without the hard rules, 4 of 6 sentences were semicolon-joined summaries. With them, 12 of 12 came
 back clean at 11–18 words.
