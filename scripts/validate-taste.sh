@@ -8,7 +8,7 @@ die() { echo "taste.md invalid: $*" >&2; exit 1; }
 [ -f "$F" ] || die "$F not found"
 
 n=$(grep -c '' "$F")   # not wc -l: a missing final newline would hide a line
-[ "$n" -le 40 ] || die "hard cap is 40 lines, found $n"
+[ "$n" -le 45 ] || die "hard cap is 45 lines, found $n"
 
 # Sections: all four, in fixed order, nothing else at heading level.
 found=$(grep '^## ' "$F" | tr '\n' '|')
@@ -41,6 +41,17 @@ case $? in
   3) die "arxiv query has an unclosed double quote" ;;
   4) die "arxiv query leaves a paren unclosed" ;;
 esac
+
+# The ssrn line carries the two client-side term lists (§1.2), not prose. Checked here and not
+# only in fetch-ssrn.py, so a taste PR that breaks them fails the gate instead of the daily run.
+ssrn=$(printf '%s\n' "$q" | awk '/^ssrn: /{p=1;print;next} /^[^ ]/{p=0} p' | tr -d '\n')
+case $ssrn in
+  "ssrn: ai:"*finance:*) ;;
+  *) die "ssrn line must read 'ssrn: ai: <terms> ... finance: <terms>'" ;;
+esac
+ai=${ssrn#ssrn: ai:}; ai=${ai%%finance:*}
+case ${ai// /} in "") die "ssrn 'ai:' list is empty" ;; esac
+case ${ssrn##*finance:} in *[!\ ]*) ;; *) die "ssrn 'finance:' list is empty" ;; esac
 
 # Prefer / Reject: at least one '- ' bullet each, passed to the judge verbatim.
 for s in Prefer Reject; do

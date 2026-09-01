@@ -3,9 +3,9 @@
 
 Nothing is ever fetched from ssrn.com — their terms forbid automated querying, and Crossref
 already carries the abstract and the canonical URL we publish. Trailing 7 days on
-`from-created-date`, the only usable delta key. Filtering is client-side. An unreachable or
-garbage Crossref degrades to zero candidates and exit 0 — the day publishes from arXiv
-alone (§9).
+`from-created-date`, the only usable delta key. Filtering is client-side, and its vocabulary
+lives in taste.md (## Queries, the `ssrn:` line), never here. An unreachable or garbage
+Crossref degrades to zero candidates and exit 0 — the day publishes from arXiv alone (§9).
 """
 import argparse, datetime, html, json, os, re, sys, urllib.parse, urllib.request
 
@@ -18,46 +18,46 @@ MAX_PAGES = 20   # the 10.2139 prefix runs ~7,300 records a window, so ~8 pages;
                  # here so a cursor that stops advancing ends the run rather than never
 TIMEOUT = 60
 
-# The client-side filter, §1.2: an AI term anywhere AND a finance term in the title.
-# taste.md's `ssrn:` line states that rule in prose, not the vocabulary, so the lists live
-# here. The finance list starts from taste.md's arXiv `abs:"..."` phrases and widens for
-# titles — an SSRN title says "Bank" or "Earnings" where an arXiv abstract says "financial".
-#
-# Measured on one live 7-day window (7,278 records fetched over 8 pages):
-#   taste.md's arXiv phrases alone      43  ->  6.1/day
-#   these lists                        120  -> 17.1/day
-#   + bare "risk" and "tax"            185  -> 26.4/day
-# The spec's ~25/day is only reachable through that last row, and it buys diabetes-risk and
-# ergonomic-risk papers, not finance ones. 17/day of on-domain candidates is the trade taken;
-# widen here, not in the judge, if a month of tapes reads thin.
-AI_TERMS = (
-    "ai", "artificial intelligence", "machine learning", "deep learning", "neural network",
-    "neural networks", "large language model", "large language models", "language model",
-    "language models", "foundation model", "foundation models", "llm", "llms", "transformer",
-    "transformers", "reinforcement learning", "nlp", "natural language processing",
-    "generative ai", "gpt", "embeddings", "agentic",
-)
-FINANCE_TERMS = (
-    "financial", "finance", "stock", "stocks", "market", "markets", "portfolio",
-    "asset pricing", "assets", "asset management", "credit", "credit risk", "volatility",
-    "trading", "trader", "limit order book", "market microstructure", "bank", "banks",
-    "banking", "investor", "investors", "investment", "equity", "equities", "bond", "bonds",
-    "loan", "loans", "lending", "hedge fund", "derivative", "derivatives", "option pricing",
-    "pricing", "valuation", "risk management", "systemic risk", "default risk",
-    "financial risk", "market risk", "fintech", "insurance", "accounting", "earnings",
-    "monetary policy", "securities", "cryptocurrency", "bitcoin", "esg", "fund", "funds",
-    "capital", "debt", "liquidity", "inflation", "payments", "hedging", "financing",
-    "corporate finance", "corporate governance", "mergers", "underwriting",
-)
+
+def taste_terms(path):
+    """The `ssrn:` line of ## Queries, indented continuations folded in, split into its two
+    comma-separated term lists. Read the way fetch-arxiv.py reads its own line.
+
+    Measured on one live 7-day window (7,278 records fetched over 8 pages):
+      taste.md's arXiv `abs:"..."` phrases alone   43  ->  6.1/day
+      the lists as seeded                         120  -> 17.1/day
+      + bare "risk" and "tax"                     185  -> 26.4/day
+    The spec's ~25/day is only reachable through that last row, and it buys diabetes-risk and
+    ergonomic-risk papers, not finance ones. 17/day of on-domain candidates is the trade taken;
+    widen the taste.md lists, not the judge, if a month of tapes reads thin.
+    """
+    line = []
+    section = False
+    with open(path) as f:
+        for raw in f:
+            if raw.startswith("## "):
+                section = raw.strip() == "## Queries"
+            elif section and raw.startswith("ssrn: "):
+                line = [raw[len("ssrn: "):]]
+            elif line and raw[:1].isspace():   # any indent continues, as validate-taste.sh reads it
+                line.append(raw)
+            elif line:
+                break
+    if not line:
+        sys.exit(f"{path}: ## Queries has no 'ssrn: ' line")
+    m = re.match(r"ai:(.*?)\bfinance:(.*)", " ".join(s.strip() for s in line))
+    if not m:
+        sys.exit(f"{path}: the 'ssrn: ' line needs an 'ai:' list and then a 'finance:' list")
+    lists = [tuple(t for t in (t.strip().lower() for t in g.split(",")) if t) for g in m.groups()]
+    if not all(lists):
+        sys.exit(f"{path}: the 'ssrn: ' ai and finance lists must both carry terms")
+    return lists
 
 
 def words(terms):
     """Word-boundary, never substring: `market` as a substring drags in `marketing` and
     `supermarket`, worth 11 junk records in the measured window."""
     return re.compile(r"\b(?:" + "|".join(re.escape(t) for t in terms) + r")\b")
-
-
-AI_RE, FINANCE_RE = words(AI_TERMS), words(FINANCE_TERMS)
 
 
 def clean(s):
@@ -108,7 +108,7 @@ def records(now):
             return
 
 
-def keep(item):
+def keep(item, ai_re, finance_re):
     """Candidate record, or None. Requiring finance in the title is what forces the paper to
     be about finance; letting AI come from the abstract is what keeps recall."""
     key, title = item.get("DOI", ""), clean((item.get("title") or [""])[0])
@@ -117,16 +117,17 @@ def keep(item):
     if not (key and title and abstract and link.startswith("https://www.ssrn.com/")):
         return None
     lt = title.lower()
-    if not FINANCE_RE.search(lt) or not (AI_RE.search(lt) or AI_RE.search(abstract.lower())):
+    if not finance_re.search(lt) or not (ai_re.search(lt) or ai_re.search(abstract.lower())):
         return None
     return {"key": key, "source": "SSRN", "title": title, "abstract": abstract, "link": link}
 
 
-def lane(now):
+def lane(taste, now):
     """(candidates, note). A dead or garbage lane degrades to no candidates and a note for the
     vote issue rather than taking the day dark. SPEC.md §9."""
+    ai_re, finance_re = map(words, taste_terms(taste))  # a bad taste.md is fatal, before any fetch
     try:
-        items = [c for c in map(keep, records(now)) if c]
+        items = [c for c in (keep(r, ai_re, finance_re) for r in records(now)) if c]
     except (OSError, ValueError, KeyError) as e:  # URLError, TimeoutError, bad JSON, no message
         return [], f"Crossref lane unreachable: {e.__class__.__name__}: {e}"
     if not items:
@@ -145,9 +146,10 @@ def merge(prior, items):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--taste", default="taste.md")
     p.add_argument("--out", help="merge into this day's candidates file (default stdout)")
     a = p.parse_args()
-    items, note = lane(datetime.datetime.now(datetime.timezone.utc))
+    items, note = lane(a.taste, datetime.datetime.now(datetime.timezone.utc))
     print(note or f"ssrn: {len(items)} candidates", file=sys.stderr)
     if not a.out:
         sys.stdout.write(json.dumps(items, indent=1, ensure_ascii=False) + "\n")

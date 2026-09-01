@@ -30,7 +30,7 @@ then claims are written for survivors only.
 Both live in `taste.md`.
 
 **Taste** — `taste.md`: the queries, the preferences, the rejections and the bar. The only file the
-loop is ever allowed to change about itself, capped at 40 lines so a new rule must retire an old one.
+loop is ever allowed to change about itself, capped at 45 lines so a new rule must retire an old one.
 
 **Vote** — a ticked checkbox on a day's vote issue: 👍 or 👎 against one published item. A vote carries
 no timestamp; it is read by the issue it sits on.

@@ -1,4 +1,4 @@
-# taste.md — the only tuning surface. Hard cap 40 lines.
+# taste.md — the only tuning surface. Hard cap 45 lines.
 
 ## Queries
 
@@ -6,7 +6,18 @@ arxiv: (cat:q-fin.* OR ((cat:cs.CE OR cat:cs.LG OR cat:cs.AI) AND (abs:"financia
   OR abs:"stock market" OR abs:"portfolio" OR abs:"asset pricing" OR abs:"credit risk"
   OR abs:"volatility" OR abs:"algorithmic trading" OR abs:"limit order book"
   OR abs:"market microstructure")))
-ssrn: AI term anywhere AND finance term in title
+ssrn: ai: ai, artificial intelligence, machine learning, deep learning, neural network, neural
+  networks, large language model, large language models, language model, language models, foundation
+  model, foundation models, llm, llms, transformer, transformers, reinforcement learning, nlp,
+  natural language processing, generative ai, gpt, embeddings, agentic
+  finance: financial, finance, stock, stocks, market, markets, portfolio, asset pricing, assets,
+  asset management, credit, credit risk, volatility, trading, trader, limit order book, market
+  microstructure, bank, banks, banking, investor, investors, investment, equity, equities, bond,
+  bonds, loan, loans, lending, hedge fund, derivative, derivatives, option pricing, pricing,
+  valuation, risk management, systemic risk, default risk, financial risk, market risk, fintech,
+  insurance, accounting, earnings, monetary policy, securities, cryptocurrency, bitcoin, esg, fund,
+  funds, capital, debt, liquidity, inflation, payments, hedging, financing, corporate finance,
+  corporate governance, mergers, underwriting
 
 ## Prefer
 

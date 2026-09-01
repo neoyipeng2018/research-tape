@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
-# Self-check for fetch-ssrn.py: record shape, client-side filter, escaping, paging,
-# keyed merge, degraded lane, and the never-ssrn.com rule. SPEC.md §1.2.
+# Self-check for fetch-ssrn.py: taste.md vocabulary, record shape, client-side filter,
+# escaping, paging, keyed merge, degraded lane, and the never-ssrn.com rule. SPEC.md §1.2.
 set -u
 cd "$(dirname "$0")/.."
 python3 - <<'PY'
-import datetime, importlib.util, json, sys
+import datetime, importlib.util, json, sys, tempfile
 
 spec = importlib.util.spec_from_file_location("fs", "scripts/fetch-ssrn.py")
 fs = importlib.util.module_from_spec(spec); spec.loader.exec_module(fs)
 SOURCE = open("scripts/fetch-ssrn.py").read()
+AI, FINANCE = fs.taste_terms("taste.md")
+AI_RE, FIN_RE = fs.words(AI), fs.words(FINANCE)
+keep = lambda item: fs.keep(item, AI_RE, FIN_RE)
 
 fails = 0
 def check(name, cond, why=""):
@@ -17,6 +20,20 @@ def check(name, cond, why=""):
     fails += 0 if cond else 1
 
 NOW = datetime.datetime(2026, 8, 24, 6, 0)
+
+def _taste(queries):
+    p = tempfile.NamedTemporaryFile("w", suffix=".md", delete=False)
+    p.write(f"# t\n\n## Queries\n\n{queries}\n\n## Prefer\n- a\n\n## Reject\n- b\n\n## Bar\nthreshold: 7\ncap: 6\n")
+    p.close()
+    return p.name
+
+def _exits(f):
+    try:
+        f()
+    except SystemExit:
+        return True
+    return False
+
 PAGE = json.load(open("scripts/fixtures/crossref-works.json"))
 
 calls = []
@@ -25,7 +42,7 @@ def one_page(now, cursor):
     return PAGE
 
 fs.fetch = one_page
-items, note = fs.lane(NOW)
+items, note = fs.lane("taste.md", NOW)
 check("a usable lane carries no note", note == "", note)
 check("non-finance title, and the AI-less and abstract-less records, all dropped",
       len(items) == 1, [i["key"] for i in items])
@@ -49,8 +66,17 @@ full = {"message": {"next-cursor": "same",
                     "items": (PAGE["message"]["items"] * 250)[:fs.ROWS]}}
 seen = []
 fs.fetch = lambda now, c: (seen.append(c), full)[1]
-fs.lane(NOW)
+fs.lane("taste.md", NOW)
 check("a cursor that never exhausts stops at MAX_PAGES", len(seen) == fs.MAX_PAGES, len(seen))
+
+check("both term lists are read from taste.md, and none is left in the script",
+      len(AI) >= 20 and len(FINANCE) >= 60
+      and not [t for t in AI + FINANCE if f'"{t}"' in SOURCE], (len(AI), len(FINANCE)))
+check("a taste.md whose ssrn: line has no term lists is fatal before any fetch",
+      _exits(lambda: fs.taste_terms(_taste("ssrn: AI term anywhere AND finance term in title"))))
+check("a taste.md with no ssrn: line at all is fatal",
+      _exits(lambda: fs.taste_terms(_taste("arxiv: cat:q-fin.*"))))
+check("an empty finance list is fatal", _exits(lambda: fs.taste_terms(_taste("ssrn: ai: llm\n  finance:"))))
 
 check("trailing 7-day window on from-created-date",
       fs.window(NOW) == "from-created-date:2026-08-17,until-created-date:2026-08-24",
@@ -68,15 +94,15 @@ def one(title, abstract):
             "resource": {"primary": {"URL": "https://www.ssrn.com/abstract=9"}}}
 
 check("finance match is word-boundary: 'marketing' is not 'market'",
-      fs.keep(one("Deep Learning for Digital Marketing", "<jats:p>Ads.</jats:p>")) is None)
+      keep(one("Deep Learning for Digital Marketing", "<jats:p>Ads.</jats:p>")) is None)
 check("a finance term outside the title is not enough",
-      fs.keep(one("A Deep Learning Survey", "<jats:p>We mention the stock market once.</jats:p>"))
+      keep(one("A Deep Learning Survey", "<jats:p>We mention the stock market once.</jats:p>"))
       is None)
 check("an AI term from the abstract alone is enough",
-      fs.keep(one("Earnings Announcements and Analyst Revisions",
+      keep(one("Earnings Announcements and Analyst Revisions",
                   "<jats:p>We apply a large language model.</jats:p>")) is not None)
 check("a non-ssrn.com primary URL is dropped",
-      fs.keep({"DOI": "10.2139/ssrn.9", "title": ["Machine Learning and Credit Risk"],
+      keep({"DOI": "10.2139/ssrn.9", "title": ["Machine Learning and Credit Risk"],
                "abstract": "<jats:p>x</jats:p>",
                "resource": {"primary": {"URL": "https://example.com/9"}}}) is None)
 
@@ -90,16 +116,16 @@ def down(now, cursor):
     raise OSError("connection refused")
 
 fs.fetch = down
-items, note = fs.lane(NOW)
+items, note = fs.lane("taste.md", NOW)
 check("unreachable lane degrades to no candidates, with a note", (items, bool(note)) == ([], True), note)
 
 fs.fetch = lambda now, c: {"nope": 1}
-items, note = fs.lane(NOW)
+items, note = fs.lane("taste.md", NOW)
 check("garbage response degrades to no candidates, with a note", (items, bool(note)) == ([], True), note)
 
 fs.fetch = lambda now, c: {"message": {"items": []}}
 check("an empty result set degrades with a note",
-      fs.lane(NOW) == ([], "Crossref lane returned nothing usable"))
+      fs.lane("taste.md", NOW) == ([], "Crossref lane returned nothing usable"))
 
 print("all ok" if not fails else f"{fails} failed")
 sys.exit(1 if fails else 0)

@@ -40,6 +40,19 @@ check "unclosed paren"     "$(mut parens   sed 's/^arxiv: (/arxiv: ((/')"    "un
 check "paren never opened" "$(mut parens2  sed -e 's/^arxiv: (/arxiv: )/' -e 's/")))$/"))(/')" "never opened"
 check "unclosed quote"     "$(mut quotes   sed 's/abs:"financial"/abs:"financial/')" "double quote"
 
+# The ssrn line carries the two term lists, not prose (§1.2). `ssrn <text>` swaps the whole
+# block — the key line and its continuations — for one line reading "ssrn: <text>".
+ssrn() { awk -v r="ssrn: $1" '/^ssrn: /{print r; p=1; next} /^[^ ]/{p=0} !p' taste.md > "$TMP/ssrn"; }
+
+ssrn "AI term anywhere AND finance term in title"
+check "ssrn reverted to prose"  "$TMP/ssrn" "must read"
+ssrn "finance: bank, credit"
+check "ssrn with no ai list"    "$TMP/ssrn" "must read"
+ssrn "ai:  finance: bank"
+check "ssrn empty ai list"      "$TMP/ssrn" "'ai:' list is empty"
+ssrn "ai: llm  finance:  "
+check "ssrn empty finance list" "$TMP/ssrn" "'finance:' list is empty"
+
 # Section order: all four present, wrong order.
 b=$(grep -n '^## Bar$' taste.md | cut -d: -f1)
 { tail -n +"$b" taste.md; head -n $((b-1)) taste.md; } > "$TMP/order"
@@ -47,6 +60,6 @@ check "sections out of order" "$TMP/order" "in that order"
 
 # The cap counts lines, including a last line with no newline of its own.
 { cat taste.md; seq 10 | sed 's/^/- filler /'; printf -- '- no trailing newline'; } > "$TMP/long"
-check "over 40 lines" "$TMP/long" "hard cap is 40 lines"
+check "over 45 lines" "$TMP/long" "hard cap is 45 lines"
 
 [ "$fails" -eq 0 ] && echo "all ok" || { echo "$fails failing"; exit 1; }

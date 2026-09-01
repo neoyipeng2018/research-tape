@@ -1,7 +1,7 @@
 # SPEC.md
 
 A daily AI-in-finance research tape over two sources, arXiv and SSRN. One static page, six items or
-fewer a day, judged by `claude -p` inside GitHub Actions, tuned by a monthly PR against a 40-line
+fewer a day, judged by `claude -p` inside GitHub Actions, tuned by a monthly PR against a 45-line
 `taste.md`. Vocabulary in [CONTEXT.md](CONTEXT.md).
 
 Every rule below was decided on the [wayfinder map](https://github.com/neoyipeng2018/research-tape/issues/1);
@@ -10,7 +10,7 @@ each section links the ticket that holds the evidence. Numbers here are measured
 ## 0. Shape
 
 ```
-taste.md                    queries, prefer, reject, bar     (<= 40 lines, hand- or PR-edited)
+taste.md                    queries, prefer, reject, bar     (<= 45 lines, hand- or PR-edited)
 tape/YYYY-MM-DD.json        published items                  (permanent; also the seen-index)
 candidates/YYYY-MM-DD.json  every scanned candidate + score  (pruned at 30 days)
 index.html                  today's tape, static             (+ feed.xml over the last 30 days)
@@ -88,10 +88,12 @@ GET https://api.crossref.org/prefixes/10.2139/works
 - **Never fetch anything from ssrn.com.** Their terms forbid automated querying, and Crossref already
   carries the full abstract (100/100 records) and the canonical
   `resource.primary.URL` = `https://www.ssrn.com/abstract=<id>`, which is the link we publish.
-- **Filter client-side: AI term anywhere AND finance term in title.** `subject` is absent in 100/100
-  records and `query.bibliographic` is OR-ed relevance ranking, not filtering (a garbage term leaves
-  the result set unchanged). Requiring finance in the title is what forces the paper to be about
-  finance; letting AI come from the abstract is what keeps recall.
+- **Filter client-side: AI term anywhere AND finance term in title**, both vocabularies read from
+  the `ssrn:` line of taste.md (§4), word-boundary matched — `market` as a substring drags in
+  `marketing`. `subject` is absent in 100/100 records and `query.bibliographic` is OR-ed relevance
+  ranking, not filtering (a garbage term leaves the result set unchanged). Requiring finance in the
+  title is what forces the paper to be about finance; letting AI come from the abstract is what
+  keeps recall.
 - **Unescape until stable, then strip tags,** on both title and abstract. Crossref titles are
   double-escaped (`S&amp;P 500`) and abstracts are JATS-wrapped.
 
@@ -253,14 +255,15 @@ filler to fill the page.
 
 Ticket: [What a 7 looks like](https://github.com/neoyipeng2018/research-tape/issues/5).
 
-One file, four sections, **hard cap 40 lines**. The cap is the load-bearing constraint of the whole
+One file, four sections, **hard cap 45 lines**. The cap is the load-bearing constraint of the whole
 design: a full file forces the monthly loop to retire a rule in order to add one, instead of
 appending forever.
 
 ```markdown
 ## Queries
 arxiv: <the search_query term group, read by the fetcher>
-ssrn: AI term anywhere AND finance term in title
+ssrn: ai: <AI terms, comma-separated, matched anywhere>
+  finance: <finance terms, matched in the title only>
 
 ## Prefer
 - <read verbatim into the pass-1 prompt>
@@ -275,17 +278,23 @@ cap: 6
 
 Parse rules: sections are `## ` headings, order fixed, all four required. `## Prefer` and `## Reject`
 are `- ` bullets passed through verbatim. `## Bar` is two `key: int` lines. `## Queries` is two
-`name: value` lines. Anything else is a parse failure.
+`name: value` lines — the `ssrn:` one carrying `ai:` then `finance:`, each a comma-separated term
+list that may wrap onto indented continuations. Anything else is a parse failure.
 
-`scripts/validate-taste.sh` enforces: all four sections present, ≤ 40 lines, bar parses as integers,
-the arXiv query string is syntactically balanced, at least one Prefer and one Reject line. **One
-script, two call sites** — the first step of the daily run, and a required check on any PR touching
-`taste.md`.
+`scripts/validate-taste.sh` enforces: all four sections present, ≤ 45 lines, bar parses as integers,
+the arXiv query string is syntactically balanced, the `ssrn:` line carries both term lists and
+neither is empty, at least one Prefer and one Reject line. The SSRN grammar is checked here and not
+only in `fetch-ssrn.py`, so a taste PR that breaks it fails the gate rather than the daily run.
+**One script, two call sites** — the first step of the daily run, and a required check on any PR
+touching `taste.md`.
 
-The file **ships as seeded, unchanged**, at 30 lines. A sharpened variant was tested and its effect
-fell inside the noise band, so it was not worth 4 of the 40 lines; the monthly loop can earn them
-from real votes. Likewise the crypto/CBDC near-misses in the `cs.CE` lane are deliberately not
-pre-empted — a real miss showing up in the thumbs is exactly the evidence the loop wants.
+The file **ships as seeded, unchanged**, at 41 lines — 30 of taste, plus the 11 the SSRN vocabulary
+takes. The cap went 40 → 45 to hold it: the SSRN lists are the dial most likely to be reached for
+(that lane runs at 17.1/day against ~25), and a cap with no headroom on it is a cap on the wrong
+thing. A sharpened variant was tested and its effect fell inside the noise band, so it was not worth
+4 of the 45 lines; the monthly loop can earn them from real votes. Likewise the crypto/CBDC
+near-misses in the `cs.CE` lane are deliberately not pre-empted — a real miss showing up in the
+thumbs is exactly the evidence the loop wants.
 
 **The 3-vote evidence bar lives in the workflow prompt, never in `taste.md`.** A loop that can edit
 its own evidence threshold can lower it.
