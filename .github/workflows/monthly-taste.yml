@@ -1,0 +1,75 @@
+name: Research Tape Monthly Taste
+
+# The monthly loop, first half: read the votes and say what they add up to. SPEC.md §6-§7.
+# Monthly and not weekly so that cadence and window match, and consecutive runs never re-read
+# the same votes — which is what deletes the "already proposed" suppression rules a weekly job
+# would need. Proposing the changes and raising the PR is the second half, not built yet; it is
+# what adds `contents: write` and `pull-requests: write`.
+
+on:
+  schedule: [{ cron: "0 23 1 * *" }]   # 23:00 UTC on the 1st = ~07:00 SGT on the 2nd, an hour
+  workflow_dispatch:                   # after the daily run has landed that morning's tape
+
+permissions:
+  contents: read
+  # SPEC.md §8 says `issues: read`; the no-change line is a comment on the day's vote issue,
+  # and posting it needs write. Reading the votes alone would be read.
+  issues: write
+
+concurrency: { group: research-tape-monthly, cancel-in-progress: false }
+
+jobs:
+  taste:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # The same SGT date daily.yml stamps its tape with, so the window ends on a real tape day.
+      - name: The window
+        run: |
+          echo "DAY=$(TZ=Asia/Singapore date +%F)" >> "$GITHUB_ENV"
+          # `since` filters on updated_at, and an issue is never updated before it is created,
+          # so a day of margin on the 30-day window cannot hide one that belongs in it. Without
+          # it the listing pages every vote issue ever, and the loop's cost grows forever.
+          echo "SINCE=$(TZ=Asia/Singapore date -d '-32 days' +%F)" >> "$GITHUB_ENV"
+
+      # Label listing, never the search API — 1,000/hr against 30/min (§6 rule 6) — then one
+      # `GET /issues/{n}` per body, which round-trips byte-identical (§6 rule 5). `state=all`:
+      # a closed vote issue inside the window still carries its ticks.
+      - name: Read the vote issues
+        run: |
+          gh api "repos/$REPO/issues?labels=vote&state=all&since=${SINCE}T00:00:00Z&per_page=100" \
+            --paginate --jq '.[] | select(.pull_request | not) | .number' > "$RUNNER_TEMP/numbers"
+          echo "$(wc -l < "$RUNNER_TEMP/numbers") vote issue(s) labelled since $SINCE"
+          while read -r n; do
+            gh api "repos/$REPO/issues/$n" --jq '{number, title, created_at, body}'
+          done < "$RUNNER_TEMP/numbers" |
+            jq -s . > "$RUNNER_TEMP/issues.json"
+
+      # The window is the mechanism: no consumed marker, so a rerun re-reads the same votes and
+      # reaches the same tally, and a late tick inside the window still counts.
+      - name: Tally the window
+        run: |
+          ./scripts/tally-votes.py --issues "$RUNNER_TEMP/issues.json" --tape-dir tape \
+            --taste taste.md --today "$DAY" --note "$RUNNER_TEMP/note.md" \
+            > "$RUNNER_TEMP/tally.json"
+
+      # Silence makes a thinking loop and a broken loop look identical (§7). The guard is what
+      # keeps a `workflow_dispatch` rerun from saying it twice — written to a file rather than
+      # piped, because `grep -q` closing the pipe early kills `gh` with 141 under pipefail and
+      # the guard would then read as "not said yet" every time.
+      - name: Say when nothing reached the bar
+        run: |
+          [ -s "$RUNNER_TEMP/note.md" ] || { echo "the bar was reached — nothing to say here"; exit 0; }
+          n=$(jq -r '.note_issue // empty' "$RUNNER_TEMP/tally.json")
+          [ -n "$n" ] || { echo "::warning::no vote issue in the window to append to"; exit 0; }
+          gh issue view "$n" --json comments --jq '.comments[].body' > "$RUNNER_TEMP/said.txt"
+          if grep -qF "No taste change this month" "$RUNNER_TEMP/said.txt"; then
+            echo "already said on #$n"
+          else
+            gh issue comment "$n" --body-file "$RUNNER_TEMP/note.md"
+          fi

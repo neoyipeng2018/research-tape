@@ -14,7 +14,7 @@ taste.md                    queries, prefer, reject, bar     (<= 45 lines, hand-
 tape/YYYY-MM-DD.json        published items                  (permanent; also the seen-index)
 candidates/YYYY-MM-DD.json  every scanned candidate + score  (pruned at 30 days)
 index.html                  today's tape, static             (+ feed.xml over the last 30 days)
-scripts/                    fetch, dedup, judge, render, vote-issue, taste-pr, validate-taste
+scripts/                    fetch, dedup, judge, render, vote-issue, tally-votes, taste-pr, validate-taste
 .github/workflows/          daily.yml, monthly-taste.yml, taste-check.yml, taste-ledger.yml
 ```
 
@@ -466,8 +466,10 @@ step, 30 minutes on the job. The three triage calls are independent and could ru
 for ~6 minutes total, but that trades away the call-count assertions the failure taxonomy in §9
 is tested through — worth doing only if candidate volume starts to threaten the 15-minute step.
 
-Monthly (`monthly-taste.yml`): `contents: write`, `issues: read`, `pull-requests: write` — all three;
-`pull-requests: write` only covers `POST /pulls`, the branch still has to be pushed.
+Monthly (`monthly-taste.yml`): `contents: write`, `issues: write`, `pull-requests: write` — all three;
+`pull-requests: write` only covers `POST /pulls`, the branch still has to be pushed. Issues are
+`write` and not `read` because the no-change line of §7 is a comment the job posts; the reading
+half alone would be `read`.
 
 Also: `taste-check.yml` (the validator as a required check on PRs touching `taste.md`) and
 `taste-ledger.yml` (`on: pull_request: [edited]`, the untick handler from §7).
