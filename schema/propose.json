@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": ["changes", "retired", "seen"],
+  "additionalProperties": false,
+  "properties": {
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["section", "op", "old", "line", "argument", "evidence"],
+        "additionalProperties": false,
+        "properties": {
+          "section": {"type": "string", "enum": ["Prefer", "Reject"]},
+          "op": {"type": "string", "enum": ["add", "drop", "rewrite"]},
+          "old": {"type": "string"},
+          "line": {"type": "string"},
+          "argument": {"type": "string"},
+          "evidence": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "retired": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["line", "why"],
+        "additionalProperties": false,
+        "properties": {"line": {"type": "string"}, "why": {"type": "string"}}
+      }
+    },
+    "seen": {"type": "array", "items": {"type": "string"}}
+  }
+}

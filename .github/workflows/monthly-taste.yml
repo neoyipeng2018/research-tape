@@ -1,17 +1,21 @@
 name: Research Tape Monthly Taste
 
-# The monthly loop, first half: read the votes and say what they add up to. SPEC.md §6-§7.
+# The monthly loop: read the votes, then propose the taste changes and raise the PR. SPEC.md §6-§7.
 # Monthly and not weekly so that cadence and window match, and consecutive runs never re-read
 # the same votes — which is what deletes the "already proposed" suppression rules a weekly job
-# would need. Proposing the changes and raising the PR is the second half, not built yet; it is
-# what adds `contents: write` and `pull-requests: write`.
+# would need.
+#
+# Raising the PR needs Settings → Actions → General → Workflow permissions → *Allow GitHub
+# Actions to create and approve pull requests*. It is off by default and `gh pr create` 403s
+# without it; `pull-requests: write` alone is not enough.
 
 on:
   schedule: [{ cron: "0 23 1 * *" }]   # 23:00 UTC on the 1st = ~07:00 SGT on the 2nd, an hour
   workflow_dispatch:                   # after the daily run has landed that morning's tape
 
 permissions:
-  contents: read
+  contents: write        # the taste branch is pushed with the default token; `pull-requests:
+  pull-requests: write   # write` only covers POST /pulls, never the push (§8)
   # SPEC.md §8 says `issues: read`; the no-change line is a comment on the day's vote issue,
   # and posting it needs write. Reading the votes alone would be read.
   issues: write
@@ -21,10 +25,15 @@ concurrency: { group: research-tape-monthly, cancel-in-progress: false }
 jobs:
   taste:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45          # the propose call, plus one replay pass per proposed change
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      DISABLE_AUTOUPDATER: "1"
+      CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
+      BRANCH: taste              # one branch, force-pushed: there is only ever one open PR (§7)
     steps:
       - uses: actions/checkout@v4
 
@@ -42,6 +51,9 @@ jobs:
       # a closed vote issue inside the window still carries its ticks.
       - name: Read the vote issues
         run: |
+          set -o pipefail   # a bare `run:` is `bash -e`, not `bash -eo pipefail`: without this
+                            # a `gh api` 5xx mid-loop still reaches `jq -s .`, which exits 0 over
+                            # the partial stream and tallies the month from a subset of its votes
           gh api "repos/$REPO/issues?labels=vote&state=all&since=${SINCE}T00:00:00Z&per_page=100" \
             --paginate --jq '.[] | select(.pull_request | not) | .number' > "$RUNNER_TEMP/numbers"
           echo "$(wc -l < "$RUNNER_TEMP/numbers") vote issue(s) labelled since $SINCE"
@@ -58,17 +70,102 @@ jobs:
             --taste taste.md --today "$DAY" --note "$RUNNER_TEMP/note.md" \
             > "$RUNNER_TEMP/tally.json"
 
-      # Silence makes a thinking loop and a broken loop look identical (§7). The guard is what
-      # keeps a `workflow_dispatch` rerun from saying it twice — written to a file rather than
-      # piped, because `grep -q` closing the pipe early kills `gh` with 141 under pipefail and
-      # the guard would then read as "not said yet" every time.
-      - name: Say when nothing reached the bar
+      # Every step below is skipped when the first half already answered: fewer than three
+      # votes either way means no proposed line could clear the bar, so there is nothing for the
+      # judge to read and the run owes only the no-change line.
+      - name: Did the window reach the bar
         run: |
-          [ -s "$RUNNER_TEMP/note.md" ] || { echo "the bar was reached — nothing to say here"; exit 0; }
+          if [ -s "$RUNNER_TEMP/note.md" ]; then echo "PROPOSE=no"; else echo "PROPOSE=yes"; fi \
+            >> "$GITHUB_ENV"
+
+      # The 3-change budget is per open PR and not per month (§7), so the open PR's ledger is
+      # what a new change has to beat. `--head`, not a label: the branch is the identity.
+      - name: The taste PR already open
+        if: env.PROPOSE == 'yes'
+        run: |
+          gh pr list --head "$BRANCH" --state open --json number,createdAt,body \
+            > "$RUNNER_TEMP/open-pr.json"
+          n=$(jq -r '.[0].number // empty' "$RUNNER_TEMP/open-pr.json")
+          echo "PR=$n" >> "$GITHUB_ENV"
+          [ -n "$n" ] || { echo "no taste PR open"; exit 0; }
+          jq -r '.[0].body' "$RUNNER_TEMP/open-pr.json" > "$RUNNER_TEMP/pr-body.md"
+          # §9: a PR sitting unmerged breaks nothing, but the force-push says so out loud.
+          created=$(jq -r '.[0].createdAt' "$RUNNER_TEMP/open-pr.json")
+          echo "PR_DAYS=$(( ( $(date +%s) - $(date -d "$created" +%s) ) / 86400 ))" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-node@v4
+        if: env.PROPOSE == 'yes'
+        with: { node-version: "22" }
+      - name: Install the CLI
+        if: env.PROPOSE == 'yes'
+        run: npm install -g @anthropic-ai/claude-code
+      # Its own timeout: a bogus OAuth token fails in 2.4s, a bogus API key takes 180s (§9).
+      - name: Probe auth
+        if: env.PROPOSE == 'yes'
+        run: timeout -k 10 120 claude -p "Reply with the single word ok" --model haiku
+
+      # Writes an amended taste.md and the PR body — or only the no-change note, when the bar
+      # was clear and nothing was worth proposing. Nothing else in the tree is touched.
+      - name: Propose the changes
+        if: env.PROPOSE == 'yes'
+        timeout-minutes: 30
+        run: |
+          open=()
+          if [ -n "$PR" ]; then open=(--open-pr "$RUNNER_TEMP/pr-body.md"); fi
+          ./scripts/propose-taste.py --tally "$RUNNER_TEMP/tally.json" --taste taste.md \
+            --tape-dir tape --candidates-dir candidates "${open[@]}" \
+            --body "$RUNNER_TEMP/pr.md" --title "$RUNNER_TEMP/pr-title.txt" \
+            --retired "$RUNNER_TEMP/retired.md" --note "$RUNNER_TEMP/note.md"
+          [ -s "$RUNNER_TEMP/pr.md" ] || echo "PROPOSE=no" >> "$GITHUB_ENV"
+
+      # The same validator the daily run and the PR gate use: a taste.md the loop cannot read
+      # never leaves this job, let alone reaches a branch (§4).
+      - name: Validate the amended taste.md
+        if: env.PROPOSE == 'yes'
+        run: ./scripts/validate-taste.sh taste.md
+
+      # One branch, force-pushed: last month's proposal is replaced, not stacked on.
+      - name: Push the taste branch
+        if: env.PROPOSE == 'yes'
+        run: |
+          git config user.name "research-tape"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add taste.md
+          git diff --cached --quiet && { echo "::warning::taste.md unchanged"; exit 1; }
+          git commit -m "taste — proposed changes from the $DAY window"
+          git push --force origin "$BRANCH"
+
+      - name: Raise or rewrite the taste PR
+        if: env.PROPOSE == 'yes'
+        run: |
+          title=$(head -1 "$RUNNER_TEMP/pr-title.txt")
+          if [ -n "$PR" ]; then
+            # Already open: the same PR is rewritten, never a second one, and what came off the
+            # table is said before the body that no longer mentions it.
+            if [ -s "$RUNNER_TEMP/retired.md" ]; then
+              gh pr comment "$PR" --body-file "$RUNNER_TEMP/retired.md"
+            fi
+            gh pr edit "$PR" --title "$title" --body-file "$RUNNER_TEMP/pr.md"
+            printf '*Taste PR #%s had sat unmerged for %s day(s) — force-pushed with the changes from this window.*\n' \
+              "$PR" "$PR_DAYS" > "$RUNNER_TEMP/note.md"
+          else
+            gh pr create --base main --head "$BRANCH" \
+              --title "$title" --body-file "$RUNNER_TEMP/pr.md"
+          fi
+
+      # Silence makes a thinking loop and a broken loop look identical (§7). The guard is what
+      # keeps a `workflow_dispatch` rerun from saying it twice, matched on the head of the line
+      # so the stale-PR note's day count does not defeat it. Written to a file rather than piped:
+      # `grep -q` closes the pipe early, and a `gh` killed by SIGPIPE would leave the guard
+      # reading "not said yet" every time.
+      - name: Say it on the vote issue
+        run: |
+          [ -s "$RUNNER_TEMP/note.md" ] || { echo "nothing to say here"; exit 0; }
           n=$(jq -r '.note_issue // empty' "$RUNNER_TEMP/tally.json")
           [ -n "$n" ] || { echo "::warning::no vote issue in the window to append to"; exit 0; }
           gh issue view "$n" --json comments --jq '.comments[].body' > "$RUNNER_TEMP/said.txt"
-          if grep -qF "No taste change this month" "$RUNNER_TEMP/said.txt"; then
+          if grep -qF -- "$(head -1 "$RUNNER_TEMP/note.md" | cut -c1-30)" "$RUNNER_TEMP/said.txt"; then
             echo "already said on #$n"
           else
             gh issue comment "$n" --body-file "$RUNNER_TEMP/note.md"
