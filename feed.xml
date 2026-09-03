@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Research Tape</title>
+  <link>https://neoyipeng2018.github.io/research-tape/</link>
+  <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
+  <language>en</language>
+  <item>
+    <title>Trials-adjusted Out-of-Sample Gating for LLM-proposed Trading Strategies</title>
+    <link>https://www.ssrn.com/abstract=7361818</link>
+    <description>No LLM-generated trading strategy survived out-of-sample validation with trials adjustment on real data.</description>
+    <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7361818</guid>
+  </item>
+  <item>
+    <title>Attributing Apparent AI Alpha: Factor Exposure, Leakage, Complexity, and Reasoning in Agentic Equity Research</title>
+    <link>https://www.ssrn.com/abstract=7365578</link>
+    <description>Apparent AI alpha in equity selection is a benchmarking artifact, not skill.</description>
+    <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7365578</guid>
+  </item>
+  <item>
+    <title>AI Intermediation and Investor Information Processing: Evidence from Earnings Summaries on Social Media</title>
+    <link>https://www.ssrn.com/abstract=7347558</link>
+    <description>AI summaries reduce retail investor opinion diversity but increase trading informativeness.</description>
+    <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7347558</guid>
+  </item>
+  <item>
+    <title>Agentic Empirical Asset Pricing: Methodological Foundations *</title>
+    <link>https://www.ssrn.com/abstract=7359503</link>
+    <description>Agentic factor-discovery systems show inconsistent rankings across metrics and rolling re-executions.</description>
+    <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7359503</guid>
+  </item>
+  <item>
+    <title>AI Volatility Forecasts Under Stress: Performance, Tail Risk, and Ranking Reversals</title>
+    <link>https://www.ssrn.com/abstract=7373459</link>
+    <description>Advanced volatility models deteriorate most during stress despite strong average-case performance metrics.</description>
+    <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7373459</guid>
+  </item>
+  <item>
+    <title>Canaries in the Gold Mine: Early Productivity Gains from Artificial Intelligence Creating Organization Capital</title>
+    <link>https://www.ssrn.com/abstract=7377860</link>
+    <description>AI productivity emerges from building organization capital, not technology deployment alone.</description>
+    <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7377860</guid>
+  </item>
+</channel>
+</rss>
