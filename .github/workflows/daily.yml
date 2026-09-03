@@ -1,0 +1,90 @@
+name: Research Tape Daily
+
+# The whole loop in one job. SPEC.md §8: the default token's push triggers no `push`
+# workflow, so rendering has to live here; and there is no `workflows` scope, so the loop
+# can never edit this file. `workflow_dispatch` is the entire retry mechanism — no in-run
+# retries beyond the taxonomy in triage.py, no partial commits, no failure state file.
+
+on:
+  schedule: [{ cron: "0 22 * * *" }]   # ~06:00 SGT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency: { group: research-tape-daily, cancel-in-progress: false }
+
+env:
+  CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+  DISABLE_AUTOUPDATER: "1"
+  CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
+
+jobs:
+  tape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      # Before any fetch: an unparseable taste.md is a dark day, not a run against
+      # taste nobody wrote (§9).
+      - name: Validate taste.md
+        run: ./scripts/validate-taste.sh taste.md
+
+      # The Singapore date, not the UTC one: the run fires 22:00 UTC and the reader opens
+      # the page at 06:00 SGT the next morning, so the tape is dated the day they read it.
+      - name: The day being built
+        run: echo "DAY=$(TZ=Asia/Singapore date +%F)" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - name: Install the CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      # Its own timeout: a bogus OAuth token fails in 2.4s, a bogus API key takes 180s
+      # because the CLI retries the 401 internally (§9).
+      - name: Probe auth
+        run: timeout -k 10 120 claude -p "Reply with the single word ok" --model haiku
+
+      # Either lane may degrade to zero and exit 0 — that day publishes from the other one.
+      - name: Fetch arXiv
+        run: ./scripts/fetch-arxiv.py --out "$RUNNER_TEMP/fetched.json"
+      - name: Fetch SSRN via Crossref
+        run: ./scripts/fetch-ssrn.py --out "$RUNNER_TEMP/fetched.json"
+
+      - name: Both lanes down is a dark day
+        run: |
+          n=$(jq length "$RUNNER_TEMP/fetched.json")
+          echo "fetched $n candidates"
+          [ "$n" -gt 0 ] || { echo "::error::both lanes returned nothing — nothing written"; exit 1; }
+
+      - name: Dedup
+        run: ./scripts/dedup.py --in "$RUNNER_TEMP/fetched.json" --out "$RUNNER_TEMP/deduped.json" --date "$DAY"
+
+      # ~110s a call, three calls, and triage.py owns the per-call 600s timeout and the
+      # retry taxonomy. This bound is the step's, for a CLI that hangs past all of them.
+      - name: Triage
+        timeout-minutes: 15
+        run: ./scripts/triage.py --in "$RUNNER_TEMP/deduped.json" --out "candidates/$DAY.json"
+
+      # Writes tape/$DAY.json — empty on a quiet day, which still publishes and commits.
+      - name: Claims and the tape
+        timeout-minutes: 15
+        run: ./scripts/claim.py --in "candidates/$DAY.json" --date "$DAY"
+
+      - name: Prune candidates past the 30-day window
+        run: ./scripts/prune-candidates.sh candidates
+
+      # Same job as the push, because the push triggers no workflow of its own.
+      - name: Render the page and the feed
+        run: ./scripts/render.py --tape-dir tape --out .
+
+      - name: Commit and push
+        run: |
+          git config user.name "research-tape"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A tape candidates index.html feed.xml
+          git diff --cached --quiet && { echo "nothing changed"; exit 0; }
+          git commit -m "tape $DAY"
+          git push
