@@ -4,7 +4,7 @@
 set -u
 cd "$(dirname "$0")/.."
 python3 - <<'PY'
-import datetime, importlib.util, json, sys, tempfile
+import datetime, importlib.util, json, os, shutil, sys, tempfile
 
 spec = importlib.util.spec_from_file_location("fs", "scripts/fetch-ssrn.py")
 fs = importlib.util.module_from_spec(spec); spec.loader.exec_module(fs)
@@ -126,6 +126,16 @@ check("garbage response degrades to no candidates, with a note", (items, bool(no
 fs.fetch = lambda now, c: {"message": {"items": []}}
 check("an empty result set degrades with a note",
       fs.lane("taste.md", NOW) == ([], "Crossref lane returned nothing usable"))
+
+# A degraded lane is only ever reported on the vote issue (§6), so the CLI has to hand
+# the note over. This lane fails independently of arXiv's, so it is checked independently.
+d = tempfile.mkdtemp(); out, notes = d + "/f.json", d + "/notes.md"
+sys.argv = ["fetch-ssrn.py", "--out", out, "--notes", notes]
+fs.fetch = lambda now, c: {"message": {"items": []}}
+fs.main()
+check("a degraded lane leaves one note line for the vote issue",
+      len(open(notes).read().strip().splitlines()) == 1, open(notes).read())
+shutil.rmtree(d)
 
 print("all ok" if not fails else f"{fails} failed")
 sys.exit(1 if fails else 0)

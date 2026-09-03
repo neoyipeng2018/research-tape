@@ -3,7 +3,7 @@
 set -u
 cd "$(dirname "$0")/.."
 python3 - <<'PY'
-import datetime, importlib.util, os, sys, tempfile
+import datetime, importlib.util, os, shutil, sys, tempfile
 
 spec = importlib.util.spec_from_file_location("fa", "scripts/fetch-arxiv.py")
 fa = importlib.util.module_from_spec(spec); spec.loader.exec_module(fa)
@@ -52,6 +52,17 @@ check("garbage response degrades to no candidates, with a note", (items, bool(no
 
 fa.fetch = lambda *a: open("scripts/fixtures/arxiv-feed.xml", "rb").read()
 check("a usable lane carries no note", fa.lane("taste.md", datetime.datetime(2026, 8, 24))[1] == "")
+
+# The note only ever surfaces on the vote issue (§6), so the CLI has to hand it over.
+d = tempfile.mkdtemp(); out, notes = d + "/f.json", d + "/notes.md"
+sys.argv = ["fetch-arxiv.py", "--out", out, "--notes", notes]
+fa.main()
+check("a usable lane leaves no note behind", not os.path.exists(notes))
+fa.fetch = down
+fa.main()
+check("a degraded lane leaves one note line for the vote issue",
+      len(open(notes).read().strip().splitlines()) == 1, open(notes).read())
+shutil.rmtree(d)
 
 print("all ok" if not fails else f"{fails} failed")
 sys.exit(1 if fails else 0)

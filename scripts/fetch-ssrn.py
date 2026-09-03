@@ -148,9 +148,13 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--taste", default="taste.md")
     p.add_argument("--out", help="merge into this day's candidates file (default stdout)")
+    p.add_argument("--notes", help="append a degraded-lane note here, for the vote issue (§6)")
     a = p.parse_args()
     items, note = lane(a.taste, datetime.datetime.now(datetime.timezone.utc))
     print(note or f"ssrn: {len(items)} candidates", file=sys.stderr)
+    if note and a.notes:
+        with open(a.notes, "a") as f:   # the vote issue is the only place a degraded lane shows
+            f.write(" ".join(note.split()) + "\n")
     if not a.out:
         sys.stdout.write(json.dumps(items, indent=1, ensure_ascii=False) + "\n")
         return

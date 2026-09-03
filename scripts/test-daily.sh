@@ -27,7 +27,7 @@ has "auth probe has its own timeout" "timeout -k 10 120"
 # The push fires no workflow, so every step the tape depends on lives in this job.
 grep -qE '^[[:space:]]+(push|pull_request):' "$W" && bad "no push trigger" "daily.yml triggers on push" ||
   ok "nothing here waits on a push-triggered workflow"
-for s in validate-taste fetch-arxiv fetch-ssrn dedup triage claim prune-candidates render; do
+for s in validate-taste fetch-arxiv fetch-ssrn dedup triage claim prune-candidates render vote-issue; do
   has "step: $s" "scripts/$s"
 done
 
@@ -36,6 +36,12 @@ before "taste is validated before any fetch" "validate-taste.sh" "fetch-arxiv.py
 before "both lanes down exits before dedup"  "both lanes returned nothing" "dedup.py"
 before "prune runs before the commit"        "prune-candidates.sh" "git add"
 before "render runs before the commit"       "render.py" "git add"
+# The issue describes a tape that is already pushed, and is the only report of a degraded lane.
+before "the vote issue is opened last"       "git push" "vote-issue.py"
+has "the vote issue carries the label"       "--label vote"
+has "the arXiv lane's note reaches the issue" 'fetch-arxiv.py --out "$RUNNER_TEMP/fetched.json" --notes'
+has "the SSRN lane's note reaches the issue"  'fetch-ssrn.py --out "$RUNNER_TEMP/fetched.json" --notes'
+
 
 # --- candidates have to survive the run to be worth pruning --------------------
 grep -qE '^candidates/' .gitignore && bad "candidates are committed" "candidates/ is gitignored" ||

@@ -49,9 +49,9 @@ jobs:
 
       # Either lane may degrade to zero and exit 0 — that day publishes from the other one.
       - name: Fetch arXiv
-        run: ./scripts/fetch-arxiv.py --out "$RUNNER_TEMP/fetched.json"
+        run: ./scripts/fetch-arxiv.py --out "$RUNNER_TEMP/fetched.json" --notes "$RUNNER_TEMP/notes.md"
       - name: Fetch SSRN via Crossref
-        run: ./scripts/fetch-ssrn.py --out "$RUNNER_TEMP/fetched.json"
+        run: ./scripts/fetch-ssrn.py --out "$RUNNER_TEMP/fetched.json" --notes "$RUNNER_TEMP/notes.md"
 
       - name: Both lanes down is a dark day
         run: |
@@ -88,3 +88,15 @@ jobs:
           git diff --cached --quiet && { echo "nothing changed"; exit 0; }
           git commit -m "tape $DAY"
           git push
+
+      # The heartbeat (§6): opened every day the loop runs, quiet days included, and the
+      # only place a degraded lane is ever reported. Last, so it only ever describes a tape
+      # that is already pushed. `gh issue create` 422s on a label that does not exist yet.
+      - name: Open the vote issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create vote 2>/dev/null || true
+          ./scripts/vote-issue.py --tape "tape/$DAY.json" --notes "$RUNNER_TEMP/notes.md" \
+            > "$RUNNER_TEMP/vote.md"
+          gh issue create --label vote --title "Votes — $DAY" --body-file "$RUNNER_TEMP/vote.md"
