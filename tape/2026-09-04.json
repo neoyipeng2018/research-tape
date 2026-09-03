@@ -1,0 +1,48 @@
+{
+ "date": "2026-09-04",
+ "scanned": 82,
+ "items": [
+  {
+   "key": "2608.28399",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2608.28399",
+   "title": "RetailAgent: Structured Adverse Timing in Self-Conditioned Multimodal LLM Trading Agents",
+   "claim": "LLM agents exhibit predictable negative timing in sequential trading decisions."
+  },
+  {
+   "key": "2608.29025",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2608.29025",
+   "title": "Deep Hedging Under Realistic Market Frictions: A Regime-Conditional Empirical Study of Dynamic Option Hedging on Bitcoin Options",
+   "claim": "Deep hedging underperforms classical hedging methods on real options data with realistic transaction costs."
+  },
+  {
+   "key": "2608.29372",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2608.29372",
+   "title": "FORESIGHT-9: Prospective and Process-Aware Evaluation of Adaptive Trading Agents",
+   "claim": "A fixed equal-weight policy outperforms adaptive agents in 31 of 36 prospective runs."
+  },
+  {
+   "key": "2608.30192",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2608.30192",
+   "title": "FaVOR: LLM-Based Agentic Framework for Factor Mining via Empirical Validation",
+   "claim": "Automated factor mining optimized purely for returns breaks down across market regimes."
+  },
+  {
+   "key": "2609.00187",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.00187",
+   "title": "Ordinal Gates, Cardinal Bets: Matching LLM Confidence to the Financial Decision Operator",
+   "claim": "LLM confidence score portability requires joint optimization with the downstream operator."
+  },
+  {
+   "key": "2609.00460",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.00460",
+   "title": "Context Window Failures in Relational Foundation Models",
+   "claim": "Current relational foundation models cannot handle high-cardinality real-world data without pre-aggregation."
+  }
+ ]
+}
