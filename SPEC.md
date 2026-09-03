@@ -455,7 +455,16 @@ Steps, in order: validate `taste.md` → install `@anthropic-ai/claude-code` →
 (`claude -p "Reply with the single word ok" --model haiku`, `timeout -k 10 120`) → fetch both lanes →
 dedup → triage ×3 (`timeout -k 30 600` per call, `timeout-minutes: 15` on the step) → claims → write
 `tape/` + `candidates/` → prune `candidates/*.json` older than 30 days → render `index.html` and
-`feed.xml` → commit and push → open the vote issue. The whole loop should land under 5 minutes.
+`feed.xml` → commit and push → open the vote issue.
+
+A green run lands in ~12 minutes, measured: ~9m30 of that is triage's three judge calls, run in
+sequence at ~190s each over ~100 candidates, and ~1m40 is the claim call. Nothing waits on this —
+Actions minutes are free on a public repo, the cron fires 22:00 UTC and the reader opens the page
+at 06:00 SGT, and `cancel-in-progress: false` on a daily job means a slow run collides with
+nothing. The binding limits are the ones above: 600s per judge call, 15 minutes on the triage
+step, 30 minutes on the job. The three triage calls are independent and could run concurrently
+for ~6 minutes total, but that trades away the call-count assertions the failure taxonomy in §9
+is tested through — worth doing only if candidate volume starts to threaten the 15-minute step.
 
 Monthly (`monthly-taste.yml`): `contents: write`, `issues: read`, `pull-requests: write` — all three;
 `pull-requests: write` only covers `POST /pulls`, the branch still has to be pushed.

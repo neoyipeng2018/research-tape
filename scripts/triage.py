@@ -20,7 +20,7 @@ import argparse, json, os, re, statistics, subprocess, sys
 
 RUNS = 3          # median of three
 ATTEMPTS = 3      # per run, on CLI_HANG and MALFORMED_OUTPUT only — the rest never retry
-TIMEOUT = 600     # seconds; ~110s is a normal call, so this is a hang, not a slow day
+TIMEOUT = 600     # seconds; ~190s is a normal call at ~100 candidates, so this is a hang
 ABSTRACT = 900    # chars per candidate, whitespace-collapsed
 SYSTEM = "You are a research-tape triage classifier. Return only the requested structured output."
 AUTH = re.compile(r"authenticat|expired|oauth|invalid api key|log ?in", re.I)
