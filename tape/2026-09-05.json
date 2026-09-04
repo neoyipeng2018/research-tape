@@ -1,0 +1,27 @@
+{
+ "date": "2026-09-05",
+ "scanned": 18,
+ "items": [
+  {
+   "key": "2609.03218",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.03218",
+   "title": "The Analyst in the Prompt: Role, Retrieval, and Memory Biases in LLM Financial Analysis",
+   "claim": "LLM financial analysis bias stems mostly from interpreting the same evidence differently across roles, not from retrieving different evidence."
+  },
+  {
+   "key": "10.2139/ssrn.7412249",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7412249",
+   "title": "Testing semi-strong market efficiency in Brazilian football: A risk-adjusted machine learning approach",
+   "claim": "Machine learning models underperform Brazilian football betting odds."
+  },
+  {
+   "key": "2609.03106",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.03106",
+   "title": "Scaling Laws, Tabular Data and Actuarial Ratemaking Models",
+   "claim": "TabM scales with data substantially better than Transformers or MLPs on actuarial tasks."
+  }
+ ]
+}

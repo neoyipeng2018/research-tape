@@ -6,6 +6,27 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>The Analyst in the Prompt: Role, Retrieval, and Memory Biases in LLM Financial Analysis</title>
+    <link>https://arxiv.org/abs/2609.03218</link>
+    <description>LLM financial analysis bias stems mostly from interpreting the same evidence differently across roles, not from retrieving different evidence.</description>
+    <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.03218</guid>
+  </item>
+  <item>
+    <title>Testing semi-strong market efficiency in Brazilian football: A risk-adjusted machine learning approach</title>
+    <link>https://www.ssrn.com/abstract=7412249</link>
+    <description>Machine learning models underperform Brazilian football betting odds.</description>
+    <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7412249</guid>
+  </item>
+  <item>
+    <title>Scaling Laws, Tabular Data and Actuarial Ratemaking Models</title>
+    <link>https://arxiv.org/abs/2609.03106</link>
+    <description>TabM scales with data substantially better than Transformers or MLPs on actuarial tasks.</description>
+    <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.03106</guid>
+  </item>
+  <item>
     <title>RetailAgent: Structured Adverse Timing in Self-Conditioned Multimodal LLM Trading Agents</title>
     <link>https://arxiv.org/abs/2608.28399</link>
     <description>LLM agents exhibit predictable negative timing in sequential trading decisions.</description>
