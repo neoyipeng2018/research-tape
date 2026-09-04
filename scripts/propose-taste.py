@@ -22,6 +22,7 @@ import argparse, datetime, json, os, pathlib, re, sys, tempfile
 import triage
 from triage import Fatal, Retry, payload, run
 from claim import bar
+from taste import OP, apply, section_lines   # one reader of taste.md, shared with ledger.py
 
 BUDGET = 3         # line changes per open PR. SPEC.md §7.
 # Votes pointing the same way, per proposed line. Never in taste.md (§4) — a loop that can
@@ -37,8 +38,6 @@ SYSTEM = "You are a research-tape taste editor. Return only the requested struct
 # auto-ticks when that issue closes and fabricates consent. Ledger lines carry rule text only.
 HAZARD = re.compile(r"#[0-9]|github\.com/[^ ]*/(issues|pull)/")
 TASK_LINE = re.compile(r"[-*+] \[")
-
-OP = {"add": "added", "drop": "dropped", "rewrite": "rewritten"}
 
 PROMPT = """You are editing `taste.md`, the taste file for a daily AI-in-finance research tape
 read by one person. They vote 👍/👎 on the items it publishes. A month of those votes is below.
@@ -72,35 +71,6 @@ Rules, all of them hard:
 VOTES — key · thumbs · title
 {votes}
 """
-
-
-def section_lines(text, name):
-    """The `- ` bullets under one heading of a taste.md held in memory."""
-    out, inside = [], False
-    for line in text.splitlines():
-        if line.startswith("## "):
-            inside = line.strip() == f"## {name}"
-        elif inside and line.startswith("- "):
-            out.append(line)
-    return out
-
-
-def apply(text, changes):
-    """taste.md with the changes applied. An add lands at the end of its section's bullets, so
-    the diff a reader reviews is the one the ledger described."""
-    lines = text.splitlines()
-    for c in changes:
-        if c["op"] in ("drop", "rewrite"):
-            i = lines.index(c["old"])
-            lines[i:i + 1] = [] if c["op"] == "drop" else [c["line"]]
-        else:
-            bullets = set(section_lines(text, c["section"]))
-            at = [i for i, l in enumerate(lines) if l in bullets]
-            # No bullets left to follow — the heading itself is the anchor. validate-taste.sh
-            # refuses an empty ## Prefer or ## Reject, so this only happens mid-apply.
-            at = at or [i for i, l in enumerate(lines) if l.strip() == f'## {c["section"]}']
-            lines.insert(max(at) + 1, c["line"])
-    return "\n".join(lines) + "\n"
 
 
 def evidence(change, tally):

@@ -14,7 +14,7 @@ taste.md                    queries, prefer, reject, bar     (<= 45 lines, hand-
 tape/YYYY-MM-DD.json        published items                  (permanent; also the seen-index)
 candidates/YYYY-MM-DD.json  every scanned candidate + score  (pruned at 30 days)
 index.html                  today's tape, static             (+ feed.xml over the last 30 days)
-scripts/                    fetch, dedup, judge, render, vote-issue, tally-votes, taste-pr, validate-taste
+scripts/                    fetch, dedup, judge, render, vote-issue, tally-votes, taste-pr, ledger, validate-taste
 .github/workflows/          daily.yml, monthly-taste.yml, taste-check.yml, taste-ledger.yml
 ```
 

@@ -1,0 +1,82 @@
+name: taste-ledger
+
+# The untick handler (SPEC.md §7). Reviewing a taste change is unticking a box: the body is
+# diffed against the ledger, `taste.md` is rewritten to only the still-ticked changes,
+# force-pushed, and what was dropped is said on the PR. Merge then takes what is still
+# ticked; close takes nothing.
+#
+# The push uses the default token, which never triggers a workflow — so this cannot retrigger
+# itself, and only a human (or the monthly job) editing the body ever runs it.
+
+on:
+  pull_request:
+    types: [edited]
+
+permissions:
+  contents: write        # the rewritten taste.md is pushed to the PR's branch
+  pull-requests: write   # the comment saying what was dropped
+
+# Serialised, never cancelled: each run reads the body when it starts, so a queued run already
+# sees the later edit — and a run cancelled between the push and the comment would leave a
+# rewritten taste.md that never said what it dropped.
+concurrency: { group: taste-ledger-${{ github.event.number }}, cancel-in-progress: false }
+
+jobs:
+  untick:
+    # One branch is the identity of the taste PR (§7), the same way the monthly job finds it.
+    # `edited` fires on a closed or merged PR too, and force-pushing taste.md back onto a merged
+    # branch is a rewrite of something already landed — so the PR has to still be open.
+    if: github.head_ref == 'taste' && github.event.pull_request.state == 'open'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BRANCH: taste
+      PR: ${{ github.event.number }}
+      BASE: ${{ github.event.pull_request.base.ref }}
+    steps:
+      # The head branch itself, not the merge commit: this job pushes back to it.
+      - uses: actions/checkout@v4
+        with: { ref: "${{ env.BRANCH }}" }
+
+      # The API body, never `github.event.pull_request.body` — the payload is the body as of the
+      # event, and a second edit while this run was queued would be rewritten away.
+      - name: The body as it now stands
+        run: gh pr view "$PR" --json body --jq .body > "$RUNNER_TEMP/body.md"
+
+      # Rebuilt from the base branch's taste.md, never patched off the branch — that is what
+      # makes re-ticking a box restore the change it dropped.
+      - name: Rewrite taste.md to the still-ticked changes
+        run: |
+          git fetch --depth=1 origin "$BASE"
+          git show "FETCH_HEAD:taste.md" > "$RUNNER_TEMP/base-taste.md"
+          ./scripts/ledger.py --body "$RUNNER_TEMP/body.md" --base "$RUNNER_TEMP/base-taste.md" \
+            --taste taste.md --comment "$RUNNER_TEMP/comment.md"
+
+      # An edit that changes nothing in the ledger — a typo in the prose, a title edit — owes
+      # no push and no comment. Every step below is skipped.
+      - name: Did the ledger move
+        run: |
+          if [ -s "$RUNNER_TEMP/comment.md" ]; then echo "MOVED=yes"; else echo "MOVED=no"; fi \
+            >> "$GITHUB_ENV"
+
+      # The same validator the daily run and the PR gate use: a taste.md the loop cannot read
+      # never reaches the branch (§4). It runs here and not only as taste-check.yml because the
+      # push below uses the default token, which triggers no workflow — so the PR's required
+      # check keeps its pre-untick verdict and this job is the only thing reading the new file.
+      - name: Validate the rewritten taste.md
+        if: env.MOVED == 'yes'
+        run: ./scripts/validate-taste.sh taste.md
+
+      - name: Push the taste branch
+        if: env.MOVED == 'yes'
+        run: |
+          git config user.name "research-tape"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add taste.md
+          git commit -m "taste — the still-ticked changes from the ledger"
+          git push --force origin "HEAD:$BRANCH"
+
+      - name: Say what was dropped
+        if: env.MOVED == 'yes'
+        run: gh pr comment "$PR" --body-file "$RUNNER_TEMP/comment.md"
