@@ -1,0 +1,92 @@
+[
+ {
+  "key": "10.2139/ssrn.7411618",
+  "source": "SSRN",
+  "title": "Which Number Is Sticky? What Survives Source Withdrawal in Sequential LLM Financial Analysis",
+  "abstract": "When a language-model valuation pipeline retracts an invalid input, which visible component of the record it leaves behind continues to transmit that input's influence? In a preregistered transcript-ablation experiment on three commercial model endpoints and 30 fictional firms, an upstream call receives a randomized high or low external fair-value anchor; its valuation and sterilized rationale are frozen and replayed in nine controlled forms to independent downstream calls after the source is declared invalid. The prior estimate, replayed alone after withdrawal (in two of three cohorts usually the anchor's own digits, copied upstream), carries a high-low difference of 0.027 of the clean center relative to a byte-identical redacted control, about 6% of the upstream anchoring effect, and disclosing its tainted lineage did not detectably reduce that carrier. In estimation-only contrasts, replaying the full record as the model's own earlier turn rather than inline raises its carrier from 0.038 to 0.091, whereas leaving the withdrawn source sentence visible beside the correction reduces it. An exploratory extension on three firm pairs estimates that retraction removes roughly 85% of what the un-withdrawn record would carry; per hop, the withdrawn number transmits 0.06 of an upstream perturbation and the un-withdrawn record 0.40. The pattern is a representation effect, not a provenance effect: downstream calls respond to how a prior conclusion is displayed, not to what they are told about it. For multi-agent financial workflows, disclosure alone does not detectably reduce transmission; controls must also govern how prior conclusions are represented in the visible record.",
+  "link": "https://www.ssrn.com/abstract=7411618",
+  "score": 8,
+  "why": "Preregistered LLM valuation robustness test; anchoring bias persists post-withdrawal; actionable."
+ },
+ {
+  "key": "10.2139/ssrn.7389159",
+  "source": "SSRN",
+  "title": "Correlated Beliefs, Correlated Trades: Agentic AI and Endogenous Volatility Amplification",
+  "abstract": "Agentic trading systems are usually evaluated by the accuracy of individual forecasts. That evaluation misses a distinct systemic-risk channel: several agents can be individually well calibrated while forming correlated posterior beliefs and submitting synchronized orders. We develop a controlled market experiment that holds marginal predictive accuracy approximately constant and varies information overlap, common posterior calibration error, and the homogeneity of risk controls. Agents report auditable posterior probabilities over calm, turbulent, and crisis states. Their orders clear in a market where one-sided flow consumes depth and affects subsequent prices and observations. The identifying comparison is therefore not AI versus non-AI. It is low versus high cross-agent belief dependence conditional on comparable individual forecast quality. The mechanism predicts a temporal sequence from posterior dependence to order synchronization, depth depletion, price impact, and tail volatility. A randomized independent-execution placebo preserves correlated beliefs while breaking the belief-to-trade timing channel. In the pilot mechanism experiment, accuracy-matched high-dependence agents produce sharply higher order synchronization, realized variance, tail returns, and a spread/depth proxy, whereas the placebo returns close to the independent benchmark. These results are mechanism validation, not evidence about any particular language model. The evidence is deliberately architectural: it establishes the mechanism in a controlled synthetic market and does not estimate the prevalence or aggregate effect of deployed commercial systems.",
+  "link": "https://www.ssrn.com/abstract=7389159",
+  "score": 7,
+  "why": "Systemic risk from agentic trading: correlated beliefs amplify volatility despite good forecasts"
+ },
+ {
+  "key": "10.2139/ssrn.7396398",
+  "source": "SSRN",
+  "title": "The Crisis of Entity Resolution in Heterogeneous AI Environments: Data, Financial, and Semantic Dimensions",
+  "abstract": "Digital systems increasingly delegate the resolution of persons, organizations, products, places, and documents to language models, retrieval-augmented generation (RAG), and autonomous agents. Yet recognizing identical character strings is not equivalent to resolving identical entities. This study synthesizes research on entity linking, entity matching, temporally evolving knowledge bases, RAG, and multi-agent LLM systems with public enterprise data-quality surveys from 2020-2026. It demonstrates that identity decisions break down across four analytical zones: identity collapse under name ambiguity and popularity bias, semantic fragmentation across data silos, temporal discontinuity of changing entities, and the semantic vulnerability of retrieval context. These are not four isolated defects. In RAG architectures, they can cascade from indexing through retrieval to generation, whereas in agentic systems, an earlier misidentification can alter the target of the subsequent step, the next query, and even the purported verification. While economic evidence cannot be converted into a universal cost for a single entity error, it consistently documents the substantial operational scale of the problem: Gartner reports a historical average of at least USD 12.9 million per year attributable to poor data quality and predicts the abandonment of 60% of AI projects unsupported by AI-ready data by the end of 2026. In the Monte Carlo/Wakefield sample, two-thirds of respondents reported in 2024 a data incident costing at least USD 100,000 during the preceding six months; in the 2025 Fivetran/Redpoint sample, 42% of enterprises stated that more than half of their AI projects had been delayed, underperforming, or unsuccessful because of data readiness. The concluding theoretical section examines Daniel Beránek's Digital Identity Optimization (DIO) and Ontology of Digital Identity (ODI) as a novel framework for governing the integrity of digital identity in environments where the entity is reconstructed from fragmented, temporally variable, and mutually conflicting representations. Its empirical validation constitutes a subsequent phase of development, not a precondition for the existence of the problem itself or for the legitimacy of the framework. DIO is strongest precisely where the entity is not a single record, but a temporally, multilingually, and infrastructurally dispersed configuration of relations.",
+  "link": "https://www.ssrn.com/abstract=7396398",
+  "score": 7,
+  "why": "LLM entity resolution failures cascade through RAG, foundational for financial text systems"
+ },
+ {
+  "key": "10.2139/ssrn.7417965",
+  "source": "SSRN",
+  "title": "The Risk-Signaling Effect of Industry Analyst Reports: Evidence from the Chinese Corporate Bond Market",
+  "abstract": "This study investigates whether industry-level risk signals extracted from analyst reports influence the pricing of corporate bonds. Employing natural language processing, an industry risk signal strength index is constructed from 596,833 analyst reports on Chinese A-share-listed firms and matched to a sample of Chinese corporate bonds from 2013 to 2023. The results indicate that stronger industry risk signals correspond to significantly higher credit spreads. Utilizing the 2018 U.S.–China trade frictions as an exogenous shock within a difference-in-differences framework, the analysis provides causal evidence that industry risk signals are incorporated into corporate bond pricing. Mechanism analysis demonstrates that these signals affect pricing through peer effects in risk-taking, increased financial frictions, and reduced debt-paying capacity. Heterogeneity analysis reveals that the effect is most pronounced in industries with higher financing costs and slower growth, and is intensified among firms with tighter financing constraints. By focusing on forward-looking risk signals rather than realized risk events, this study offers new evidence on the absorption and pricing of industry-level uncertainty in the bond market.",
+  "link": "https://www.ssrn.com/abstract=7417965",
+  "score": 6,
+  "why": "NLP analyst reports predict bond spreads, good causal ID, China-only limits generality"
+ },
+ {
+  "key": "10.2139/ssrn.7417547",
+  "source": "SSRN",
+  "title": "Introducing a Novel Financial Uncertainty Index (FUI) for 57 Countries: Measurement, Validation, and Evidence from US Stock Markets",
+  "abstract": "Financial systems are highly sensitive to uncertainty, but the standard measures do not target them. EPU, WUI, and GPR track uncertainty at the macroeconomic level, while VIX reflects stock market volatility alone. None measures uncertainty in the financial system itself. This study introduces a Financial Uncertainty Index (FUI) covering 57 countries from 2002M11 to 2026M07, built by applying the context window (CW) method to monthly EIU country reports. The construction has four features. Matching runs on the original surface forms of the text, retaining British and American spellings and stop words, so no information is lost before windowing. Multiword financial expressions are matched under a longest-match-first rule that consumes their token span, preventing a word inside an accepted expression from being counted twice. A cross-window deduplication rule counts a financial term only once when it falls inside the overlapping windows of two nearby uncertainty terms. Together these rules remove double counting by construction. An LLM-based semantic validation layer quantifies the accuracy of the index, with estimated precision of 78.5 percent. ARDL, VAR, Granger, GARCH-X, Diebold-Mariano, and Clark-West analyses for the US show that the FUI is negatively correlated with stock prices. The association is stronger for the technology-heavy NASDAQ than for the S&P 500 and the Dow Jones, consistent with the greater sensitivity of growth firms whose valuations rest on expected future cash flows. Clark-West tests indicate significant out-of-sample forecast gains for the S&P 500 and the Dow Jones. The FUI therefore offers a usable measure of financial system uncertainty.",
+  "link": "https://www.ssrn.com/abstract=7417547",
+  "score": 5,
+  "why": "Good NLP uncertainty index; single-market application; not deployable method."
+ },
+ {
+  "key": "10.2139/ssrn.7395459",
+  "source": "SSRN",
+  "title": "Analyst Earnings Forecasts: A Machine Learning Approach",
+  "abstract": "This study explores the combination of individual analysts earnings forecasts in a advanced consensus forecasts. I construct a machine consensus forecast based on various analysts feature and their individual forecasts through a machine learning approach. My analyses shows, that individual characteristics of analysts in combination with a gradient-boost tree model allow for more accurate earnings forecasts. Portfolio analyses and Sharpe ratio comparisons show that the machine consensus leads to practical out-performance over the mean consensus.",
+  "link": "https://www.ssrn.com/abstract=7395459",
+  "score": 4,
+  "why": "Standard ensemble with no baseline, transaction costs, or rigor evidenced."
+ },
+ {
+  "key": "10.2139/ssrn.7396241",
+  "source": "SSRN",
+  "title": "Who Controls Agentic Payments? Facilitator Concentration, Subsidy Pipelines, and Settlement Accountability in x402",
+  "abstract": "Agentic payments have a measurement literature and a leaderboard culture, but no one measures the control layer: the small set of facilitator operators through whom x402 settlement routes, and the accountability structure of the composition chain those operators sit in. This paper reports the first such measurement across the three chains carrying materially all x402 activity (Base, Polygon, Solana), porting the gateway- concentration method developed for stablecoin routing. Five results organize the paper. Settlement-layer concentration exceeds the stablecoin gateway layer it sits on: July 2026 facilitator HHIs measure 6,512 by payment count and 4,700 by corrected dollar volume on Base, 4,071 and 3,831 on Solana, Polygon is effectively single-operator, and every reading clears the merger-guidelines highly-concentrated thresholds (1,800 current; 2,500 superseded) at a market age under fourteen months. The count layer and the value layer have different monopolists, on two chains independently, so single-metric concentration claims are structurally fragile. Headline counts are dominated by subsidized and self-referential pipelines, which buyer cardinality exposes without any wash-trading heuristic. At the value layer the market is pre-material (corrected cross-chain July volume of $583,430; measured against its own settlement rails in May, the validated baseline month, four ten-millionths of the USDC transfer value it settles on) yet already message- significant (2.83 percent of May USDC transfer events). And the composition chain that delivers an agentic payment has no layer at which accountability composes: settlement is irreversible by design, the facilitator sits outside both the AI-governance and payments-regulation perimeters, and top sell-side endpoints are pseudonymous even to full-data analysis. A methodological result conditions all of the above: published measurements of this market diverge by an order of magnitude, for reasons that reduce to attribution-set and filter choices.",
+  "link": "https://www.ssrn.com/abstract=7396241",
+  "score": 4,
+  "why": "Payment settlement infrastructure analysis; unclear relevance to LLM practitioners"
+ },
+ {
+  "key": "10.2139/ssrn.7417154",
+  "source": "SSRN",
+  "title": "Artificial Intelligence Focus and Labor Investment Efficiency",
+  "abstract": "We examine how firms’ strategic focus on artificial intelligence (AI) affects the efficiency of their labor investment. Using a text-based measure of AI focus constructed from 10-K filings of U.S. public firms, we find that greater AI focus reduces abnormal hiring, indicating more efficient labor investment. Cross-sectional evidence supports three channels: an informational channel among intangible-intensive firms, an adjustment-cost channel among financially constrained firms and firms facing intense product market competition, and an agency channel among firms with smaller boards and better compliance records. Mediation analyses provide suggestive evidence for a management-guidance pathway and stronger associational evidence for an earnings-volatility pathway, whereas AI focus is not significantly associated with contemporaneous total factor productivity. This pattern suggests that AI’s organizational value may be visible in workforce decision quality even when not apparent in conventional contemporaneous productivity measures. Our findings are robust across a battery of tests.",
+  "link": "https://www.ssrn.com/abstract=7417154",
+  "score": 4,
+  "why": "AI adoption predicts labor efficiency, AI is outcome variable not method"
+ },
+ {
+  "key": "10.2139/ssrn.7417502",
+  "source": "SSRN",
+  "title": "Do Mutual Funds Benefit from the Adoption of AI Technology?",
+  "abstract": "This paper examines the impact of AI technology adoption in the mutual fund industry by developing a new measure of AI adoption based on hiring practices. We find that this measure can predict fund performance. Funds with high AI adoption ratios systematically outperform their non-AI counterparts, after controlling for relevant variables. Further empirical evidence indicates that AI adoption improves funds’ stock picking skills, particularly for stocks with accessible alternative data. Mutual funds that adopt AI technology tend to tilt their portfolios toward stocks with voluminous information, and these stocks contribute to their superior performance. These findings suggest that AI is effective at processing large amounts of data and providing a more comprehensive analysis of stocks.",
+  "link": "https://www.ssrn.com/abstract=7417502",
+  "score": 4,
+  "why": "Fund performance predictor from AI hiring, weak rigor, unclear out-of-sample"
+ },
+ {
+  "key": "10.2139/ssrn.7395698",
+  "source": "SSRN",
+  "title": "Artificial Intelligence and Online Shopping Behaviour in Emerging Markets: Evidence from Digital Trust, Attitude, And Consumer Awareness in South-East Nigeria",
+  "abstract": "Global advances in artificial intelligence (AI) are transforming how consumers search, evaluate, and purchase products online, yet the psychological mechanisms underlying AIenabled shopping in emerging markets remain underexplored. This study investigates how digital trust and attitudes towards AI influence online shopping behaviour and how consumer awareness mediates these relationships among online shoppers in SouthEast Nigeria. Drawing on the Technology Acceptance Model (TAM), the Theory of Planned Behaviour (TPB), and the Unified Theory of Acceptance and Use of Technology (UTAUT), the study employs a quantitative, explanatory research design. Data were collected through a structured questionnaire administered to online shoppers across five major cities in SouthEast Nigeria. Of 384 questionnaires distributed, 303 valid responses were analysed using partial least squares structural equation modelling (PLS-SEM) with bootstrapping. The results demonstrate that digital trust and consumer attitudes towards AI exert significant positive influences on online purchase intention. Consumer awareness also directly forecasts purchase intention and partly mediates the relationships between digital trust, attitudes towards AI, and purchase intention. This research advances AI-enabled studies of consumer behaviour by showing that consumer awareness is a vital cognitive process through which trust and attitudes influence online shopping behaviour in an emerging market setting.",
+  "link": "https://www.ssrn.com/abstract=7395698",
+  "score": 1,
+  "why": "Consumer shopping behavior in Nigeria, off-topic for financial ML"
+ }
+]

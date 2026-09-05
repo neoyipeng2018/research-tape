@@ -1,0 +1,27 @@
+{
+ "date": "2026-09-06",
+ "scanned": 10,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7411618",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7411618",
+   "title": "Which Number Is Sticky? What Survives Source Withdrawal in Sequential LLM Financial Analysis",
+   "claim": "Controlling display of prior valuations matters more than disclosing their withdrawal in LLM financial analysis."
+  },
+  {
+   "key": "10.2139/ssrn.7389159",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7389159",
+   "title": "Correlated Beliefs, Correlated Trades: Agentic AI and Endogenous Volatility Amplification",
+   "claim": "Correlated AI beliefs amplify volatility through synchronized order flow, independent of individual forecast accuracy."
+  },
+  {
+   "key": "10.2139/ssrn.7396398",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7396398",
+   "title": "The Crisis of Entity Resolution in Heterogeneous AI Environments: Data, Financial, and Semantic Dimensions",
+   "claim": "Entity resolution errors cascade and compound across indexing, retrieval, and generation stages in AI systems."
+  }
+ ]
+}

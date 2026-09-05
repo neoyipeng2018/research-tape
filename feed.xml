@@ -6,6 +6,27 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Which Number Is Sticky? What Survives Source Withdrawal in Sequential LLM Financial Analysis</title>
+    <link>https://www.ssrn.com/abstract=7411618</link>
+    <description>Controlling display of prior valuations matters more than disclosing their withdrawal in LLM financial analysis.</description>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7411618</guid>
+  </item>
+  <item>
+    <title>Correlated Beliefs, Correlated Trades: Agentic AI and Endogenous Volatility Amplification</title>
+    <link>https://www.ssrn.com/abstract=7389159</link>
+    <description>Correlated AI beliefs amplify volatility through synchronized order flow, independent of individual forecast accuracy.</description>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7389159</guid>
+  </item>
+  <item>
+    <title>The Crisis of Entity Resolution in Heterogeneous AI Environments: Data, Financial, and Semantic Dimensions</title>
+    <link>https://www.ssrn.com/abstract=7396398</link>
+    <description>Entity resolution errors cascade and compound across indexing, retrieval, and generation stages in AI systems.</description>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7396398</guid>
+  </item>
+  <item>
     <title>The Analyst in the Prompt: Role, Retrieval, and Memory Biases in LLM Financial Analysis</title>
     <link>https://arxiv.org/abs/2609.03218</link>
     <description>LLM financial analysis bias stems mostly from interpreting the same evidence differently across roles, not from retrieving different evidence.</description>
