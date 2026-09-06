@@ -1,0 +1,29 @@
+[
+ {
+  "key": "10.2139/ssrn.7422697",
+  "source": "SSRN",
+  "title": "Fin-DR: Learning DeepResearch Agent for Financial Time-Series Forecasting",
+  "abstract": "The focus of financial time-series forecasting (FTSF) is shifting from empirical black-box extrapolation to explainable predictions with grounded rationale. However, existing approaches naively stuff heterogeneous financial tools into the context of large language models (LLMs) without high-level orchestration, thereby significantly undermining their post-training performance. In this paper, we propose Fin-DR, a DeepResearch-style agentic learning framework to enhance rationale-driven FTSF. We decompose a prohibitively long-horizon forecasting task into sequential episodes, each consisting of multi-turn evidence retrieval followed by a phased forecast. To enable efficient evidence-gathering, we introduce a heterogeneous tool-calling framework that encapsulates diverse financial factors through retrieval from heterogeneous, structured data sources, which significantly mitigates context bloat and intensifies the information in the agent context. To overcome reward sparsity inherent in the agentic training, we first synthesize high-quality retrieval-then-forecast trajectories via Monte Carlo Tree Search guided by episode-based evaluation. Then, we optimize the policy via hierarchical reinforcement learning with counterfactual inference, in which Shapley Value enables fair credit allocation to retrieval actions isolated from result-oriented rewards. Extensive experiments on six datasets across fixed-income derivatives and index funds demonstrate that Fin-DR consistently outperforms state-of-the-art time series foundation models and specialized financial models in both accuracy and rationality.",
+  "link": "https://www.ssrn.com/abstract=7422697",
+  "score": 6,
+  "why": "Concrete agentic LLM method for forecasting; solid but no results or code shown."
+ },
+ {
+  "key": "10.2139/ssrn.7400758",
+  "source": "SSRN",
+  "title": "Machine Learning-Based Credit Risk Assessment For Intelligent Lending and Default Prediction in Financial Services",
+  "abstract": "A convolutional neural network (CNN) model is proposed to predict credit default in an online lending service environment using public data (e.g., application and user profile data). Given that CNNs have the ability to learn spatial representation, the 1D convolutional layer embedded in the CNN classifier can effectively capture local features along the feature sequence. CNNs can expose correlated features to deep networks for joint learning and enhance performance. Compared with traditional approaches, such as logistic regression or support vector machines, the CNN shows better predictive ability. The effectiveness of deep learning techniques for credit-default prediction from user perspectives presents new insights for intelligent lending services. Despite significant advances in machine learning techniques and their successful applications in many fields, credit-risk-prediction models are still predominantly based on traditional methods. One possible reason is the highdimensional sparse feature distribution. However, the underlying data sources of credit-risk prediction in the lending industry contribute to high-quality dense representation. An online lending service provides comprehensive application attributes and sufficient historical samples for predictive modeling. With detailed user profiles, the learned model from public data can assist credit-risk management in intelligent lending service. Specifically, a CNN model is proposed to predict credit default in an online lending service environment using public data.",
+  "link": "https://www.ssrn.com/abstract=7400758",
+  "score": 4,
+  "why": "Standard CNN for credit default; no novel contribution, no rigor signals."
+ },
+ {
+  "key": "10.2139/ssrn.7401438",
+  "source": "SSRN",
+  "title": "Research on the Application of Artificial Intelligence Technology in Financial Decision Support Systems",
+  "abstract": "In recent years, the rapid development of artificial intelligence (AI) has raised demands for large-scale information processing, complex multidimensional data analysis, and efficient scientific decision-making capabilities in enterprise financial management. As one of the key means of enterprise informatization and intelligence, the Management Accounting Decision Support System (MADSS) can provide management with scientific, timely, and decision-making information through data governance, predictive modeling, and machine learning. This article studies the application of AI technology in financial decision support systems, analyzes the adaptability and challenges faced by AI in management accounting, and discusses the collaborative decision-making construction of its applications. AI-assisted management accounting decision support systems can optimize financial management work to some extent and improve the accuracy and fairness of enterprise management, playing a crucial role in enterprise development.",
+  "link": "https://www.ssrn.com/abstract=7401438",
+  "score": 2,
+  "why": "Survey paper on AI applications; explicitly rejected type of work."
+ }
+]
