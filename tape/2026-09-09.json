@@ -1,0 +1,13 @@
+{
+ "date": "2026-09-09",
+ "scanned": 13,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7406218",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7406218",
+   "title": "The Market already Knew: A Pre-registered Falsification of TimesFM-3 on the SPY Implied-volatility Surface",
+   "claim": "Market-implied volatility forecasts outperform TimesFM-3 at both one and five-day prediction horizons."
+  }
+ ]
+}

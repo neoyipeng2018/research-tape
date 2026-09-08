@@ -6,6 +6,13 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>The Market already Knew: A Pre-registered Falsification of TimesFM-3 on the SPY Implied-volatility Surface</title>
+    <link>https://www.ssrn.com/abstract=7406218</link>
+    <description>Market-implied volatility forecasts outperform TimesFM-3 at both one and five-day prediction horizons.</description>
+    <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7406218</guid>
+  </item>
+  <item>
     <title>Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment</title>
     <link>https://www.ssrn.com/abstract=7429342</link>
     <description>LLM credit prediction beats baselines only because models memorized bankruptcy outcomes in training data.</description>
