@@ -1,0 +1,34 @@
+{
+ "date": "2026-09-08",
+ "scanned": 15,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7429342",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7429342",
+   "title": "Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment",
+   "claim": "LLM credit prediction beats baselines only because models memorized bankruptcy outcomes in training data."
+  },
+  {
+   "key": "2609.04806",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.04806",
+   "title": "When Financial Fine-tuning Fails: A Three-Level Detectability Analysis of Numerical Hallucination in Domain-Adapted Language Models",
+   "claim": "Financial domain fine-tuning increases LLM hallucination from 5% to 98% despite numeracy supervision."
+  },
+  {
+   "key": "2609.04373",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.04373",
+   "title": "Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets",
+   "claim": "More capable LLM traders exhibit correlated behavior that concentrates rather than diversifies market risk."
+  },
+  {
+   "key": "2609.04712",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.04712",
+   "title": "Convex Modeling of Price Cross-Impact over Time",
+   "claim": "Models omitting cross-impact and transient decay systematically overestimate costs for relative-value trades."
+  }
+ ]
+}

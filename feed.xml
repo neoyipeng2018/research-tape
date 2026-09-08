@@ -6,6 +6,34 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment</title>
+    <link>https://www.ssrn.com/abstract=7429342</link>
+    <description>LLM credit prediction beats baselines only because models memorized bankruptcy outcomes in training data.</description>
+    <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7429342</guid>
+  </item>
+  <item>
+    <title>When Financial Fine-tuning Fails: A Three-Level Detectability Analysis of Numerical Hallucination in Domain-Adapted Language Models</title>
+    <link>https://arxiv.org/abs/2609.04806</link>
+    <description>Financial domain fine-tuning increases LLM hallucination from 5% to 98% despite numeracy supervision.</description>
+    <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.04806</guid>
+  </item>
+  <item>
+    <title>Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets</title>
+    <link>https://arxiv.org/abs/2609.04373</link>
+    <description>More capable LLM traders exhibit correlated behavior that concentrates rather than diversifies market risk.</description>
+    <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.04373</guid>
+  </item>
+  <item>
+    <title>Convex Modeling of Price Cross-Impact over Time</title>
+    <link>https://arxiv.org/abs/2609.04712</link>
+    <description>Models omitting cross-impact and transient decay systematically overestimate costs for relative-value trades.</description>
+    <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.04712</guid>
+  </item>
+  <item>
     <title>Which Number Is Sticky? What Survives Source Withdrawal in Sequential LLM Financial Analysis</title>
     <link>https://www.ssrn.com/abstract=7411618</link>
     <description>Controlling display of prior valuations matters more than disclosing their withdrawal in LLM financial analysis.</description>

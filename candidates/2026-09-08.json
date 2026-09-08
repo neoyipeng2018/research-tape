@@ -1,0 +1,137 @@
+[
+ {
+  "key": "10.2139/ssrn.7429342",
+  "source": "SSRN",
+  "title": "Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment",
+  "abstract": "Large language models (LLMs) are being adopted as low-cost analysts of corporate disclosures, and recent studies report that they forecast adverse outcomes directly from filing text. We show that this apparent forecasting power is substantially an artefact of look-ahead bias, because the models were trained on text that already reports the outcomes they are asked to predict. Using 443 U.S. public-company bankruptcies from 2015 to 2026, each paired with a surviving firm and represented by the Risk Factors section of its last annual report before failure, we score every filing twice, once with the issuer named and once with all identifying detail removed. Naming raises the estimated 24-month default probability by 20 percentage points for firms that failed and lowers it by 7 points for survivors. Direct memory tests confirm the source, since the model can state the bankruptcy outcome for 64% of failed firms with no document in front of it. De-identifying the filing cuts measured discrimination from an area under the ROC curve of 0.97 to 0.84, and the surviving skill no longer significantly beats a conventional accounting and dictionary model. We provide a simple de-identification and memory-probe procedure that lets researchers and risk managers measure and remove this bias.",
+  "link": "https://www.ssrn.com/abstract=7429342",
+  "score": 9,
+  "why": "Reveals look-ahead bias invalidating LLM credit risk claims"
+ },
+ {
+  "key": "2609.04806",
+  "source": "arXiv",
+  "title": "When Financial Fine-tuning Fails: A Three-Level Detectability Analysis of Numerical Hallucination in Domain-Adapted Language Models",
+  "abstract": "Financial large language models are increasingly deployed for summarization of reports and disclosures, where numerical hallucination poses significant practical risks. While prior work often attributes such hallucination to insufficient numerical reasoning, this assumption has not been systematically tested under controlled fine-tuning settings. In this paper, we conduct a cost-effective, controlled study of numerical hallucination in financial summarization across three model variants: a base instruction-tuned model, a domain language-adapted model (FT-A), and a numeracy-enhanced domain model (FT-A+B+C). We introduce a three-level detectability taxonomy distinguishing between overt hallucination (currency-denominated fabrication), covert-explicit hallucination (professional-convention numbers), and covert-implicit hallucination (ungrounded quantitative claims). Our results reveal that domain fine-tuning substantially degrades numerical restraint at all detectability levels. While the Base model maintains near-zero hallucination rates (5.4\\%), FT-A exhibits 82.5\\% overt hallucination and FT-A+B+C reaches 98\\%. Contrary to intuition, numeracy supervision amplifies rather than mitigates hallucination across all levels. We identify template injection---the insertion of memorized canonical values regardless of input content---as a primary hallucination mechanism in fine-tuned models. These findings demonstrate that numerical hallucination in financial summarization is driven by the degradation of numerical restraint through domain adaptation, not by insufficient numerical reasoning. We recommend that evaluation protocols assess hallucination across all detectability levels and that deployment practices include explicit mechanisms for grounding-aware generation or abstention.",
+  "link": "https://arxiv.org/abs/2609.04806",
+  "score": 8,
+  "why": "Critical hallucination risks in deployed financial LLMs"
+ },
+ {
+  "key": "2609.04373",
+  "source": "arXiv",
+  "title": "Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets",
+  "abstract": "Large language models (LLMs) are being deployed at scale in consequential real-world systems, from financial markets to content moderation to hiring. We show that improving individual model capability can degrade rather than improve system-level outcomes. We hypothesize that shared training and architectures can lead more capable LLMs to behave more similarly, creating correlated actions that do not diversify away. We develop a general framework showing how this correlation creates a non-diversifiable risk floor and test its predictions in financial markets using an agent-based simulation with LLM traders of varying general-purpose capability. We find that: (1) frontier LLMs exhibit significantly correlated behavior that increases with capability; (2) when their shared reasoning is accurate, increasing agent participation reduces market-level risk; and (3) when agents share a common misinformation environment, the same correlated behavior becomes a liability. Together, these results identify a capability paradox: improving individual models does not necessarily produce better system-level outcomes. Whether the same dynamics arise in other domains is an open empirical question.",
+  "link": "https://arxiv.org/abs/2609.04373",
+  "score": 7,
+  "why": "LLM agent correlation risk in markets; simulation-based"
+ },
+ {
+  "key": "2609.04712",
+  "source": "arXiv",
+  "title": "Convex Modeling of Price Cross-Impact over Time",
+  "abstract": "Transaction costs can make or break a trading strategy, particularly in relative-value trading of commodity and macro markets, where edges are a few basis points. Price impact is a central component of transaction cost. Price impact models usually include self-impact (a trade in a contract moves that contract's price) but omit two well-documented effects: cross-impact (a trade in one contract also moves the prices of related contracts) and transient impact (price impact decays over time, so an unwind recovers part of the entry cost). A model without these effects overprices the impact of relative-value trades, whose correlated legs are built and unwound over days, and so forgoes potentially profitable trades. This paper models both effects with a convex quadratic cost. In each period, a positive semidefinite matrix built from volatility, volume, and correlation forecasts couples trades across contracts. A power-law decay kernel then couples trades across periods. The resulting cost admits no price manipulation even when liquidity varies over the planning horizon. The model is demonstrated empirically on calendar spread trading of crude oil futures around the commodity index roll.",
+  "link": "https://arxiv.org/abs/2609.04712",
+  "score": 7,
+  "why": "Practical execution and transaction cost method for trading"
+ },
+ {
+  "key": "2609.04540",
+  "source": "arXiv",
+  "title": "Mitra-v2 Technical Report",
+  "abstract": "We introduce Mitra-v2, a tabular foundation model that delivers state-of-the-art performance on real-world classification and regression problems, from credit-risk scoring and clinical prediction to equipment-failure detection and house-price estimation. Mitra-v2 is trained only on synthetic data, with a pretraining distribution that is much larger and more diverse than Mitra-v1's. Built on a small 2D Transformer backbone, Mitra-v2 supports longer contexts and larger feature spaces. Improved optimization lets it learn from this larger task distribution. We evaluate Mitra-v2 on the TabArena and TALENT benchmarks, comprising more than 300 real-world datasets under two evaluation protocols. On the full TabArena benchmark, Mitra-v2 delivers state-of-the-art performance at the level of the industry-scale TabFM and EXAONE Tabular models, while surpassing TabPFN-3 by a wide margin in both classification and regression. Mitra-v2 matches the 1.6B-parameter TabFM with only 5% of its size (77M parameters), delivering frontier performance at a fraction of the cost. On TALENT, Mitra-v2 remains among the leading models, clearly outperforming TabPFN-3 and TabICLv2. It also ranks first on classification tasks with more than ten classes, even though it was pretrained only on tasks with at most ten classes. These results make Mitra-v2 one of the strongest and most broadly applicable open tabular foundation models released to date. We release the model weights, the inference and fine-tuning code, and our evaluation results under the Apache-2.0 license.",
+  "link": "https://arxiv.org/abs/2609.04540",
+  "score": 5,
+  "why": "Competent model; synthetic data, not real financial deployment"
+ },
+ {
+  "key": "2609.04667",
+  "source": "arXiv",
+  "title": "ERPBench: Evaluating LLM Agents for Enterprise Decision-Making Across Competitive Market Ecologies",
+  "abstract": "Large language model (LLM) agents are increasingly proposed for enterprise workflows, yet existing evaluations rarely test whether business-decision conclusions transfer across competitive market ecologies. We introduce ERPBench, an execution-instrumented benchmark for enterprise decision agents in a six-round Enterprise Resource Planning (ERP) simulation with coupled pricing, production, procurement, inventory, finance, and shared-market competition. ERPBench evaluates the same 100 fixed problems in two matched competitive market ecologies: Solo, where each evaluated LLM agent competes against fixed rule-based opponents, and Arena, where six evaluated LLM agents compete in a shared market. Across six model families, this yields 1,200 model-level trajectories spanning 7,200 decision rounds. Under the observed service configuration, the leading model differs between ecologies: DeepSeek leads in Solo (252.29M mean valuation; mean rank 1.67), whereas Gemini leads in Arena (263.95M; 1.76). The two ecologies identify the same task-level winner on only 21 of 100 problems, and Gemini's bottom-rank rate falls from 22 % to 0 % in Arena. ERPBench supports paired evaluation of whether enterprise-agent rankings transfer across competitive market ecologies, supplemented by aggregate execution-intervention analysis. Code and benchmark resources are available in our https://github.com/GAIR-NLP/erp-bench.",
+  "link": "https://arxiv.org/abs/2609.04667",
+  "score": 5,
+  "why": "LLM agents evaluated in business simulation, not markets"
+ },
+ {
+  "key": "2609.05162",
+  "source": "arXiv",
+  "title": "Quantity, Risk, and Return",
+  "abstract": "We propose a new model of expected stock returns that incorporates quantity information from market trading activities into the factor pricing framework. We posit that the expected return of a stock is determined by not only its factor risk exposures (beta) but also the factor's quantity fluctuations (q) induced by trading flows, and hence term the model beta times quantity (BTQ). The rationale is that sophisticated investors should demand a higher factor premium when they have absorbed noise trading flows of stocks with high loadings to that factor. The BTQ model provides a compelling risk-based explanation for stock returns, which is otherwise obscured without considering the quantity information. The cross-sectional risk-return association, which is nearly flat unconditionally, strongly depends on the quantity variable. The structured BTQ model reliably predicts monthly stock returns out of sample, and addresses the factor zoo problem by selecting a small number of factors.",
+  "link": "https://arxiv.org/abs/2609.05162",
+  "score": 5,
+  "why": "Factor model with quantity; unclear out-of-sample validation"
+ },
+ {
+  "key": "2609.04420",
+  "source": "arXiv",
+  "title": "Optimal Stratified Allocation for Rare-Event Onset Forecasting in Dependent Sequences",
+  "abstract": "Let a finite population of n labelled examples carry a class-weighted loss, with pi*n in a rare positive class weighted by N0/N1. We study estimation of total risk from a subsample K << n under designs allocating K0 and K1 draws to the two strata. We derive the exact finite-population variance of the weighted risk estimator under class-conditional sampling without replacement and solve for the optimal allocation. The class multiplier inflates positive-stratum dispersion by the imbalance ratio, causing that ratio to cancel from the optimal allocation and making equal, rather than proportional, allocation the natural default. Simple random sampling is dominated by an explicit between-stratum term; an exact bias identity shows that cluster-representative selection has no general unbiasedness guarantee; and a Serfling bound transfers the allocation result to selection error over a finite candidate set. Under the implemented truncation, the realised allocation ratio is gamma=min(2*pi/f,1), independent of n, yielding the parameter-free efficiency prediction A(pi,f)=gamma/[pi(1-pi)(1+gamma)^2]. A separate measurability result bounds the record occupied by a labelled example, determining the required train-test separation and controlling departure from block independence under absolute regularity. We test these predictions on forecasting the onset of statistically explosive price regimes, dated ex post by the Phillips-Shi-Yu procedure, using 350 U.S. equities from 2004-2011 with under 1% positive rows and five purged forward blocks. The predicted ordering of the four designs holds, and at the 10-day horizon the five design points are ordered exactly as predicted by A (Spearman rho=1, exact p=0.0167). The predicted dependence on pi across horizons does not hold; we identify the channels lying outside the design-based argument.",
+  "link": "https://arxiv.org/abs/2609.04420",
+  "score": 4,
+  "why": "Technical sampling theory; no financial application shown"
+ },
+ {
+  "key": "2609.04496",
+  "source": "arXiv",
+  "title": "Portfolio Diversification and Concentration under Dependence Uncertainty: A Majorization Approach",
+  "abstract": "Modern portfolio theory identifies diversification as the primary tool for risk reduction. However, under model uncertainty, this cornerstone may no longer remain optimal. This paper investigates the tension between portfolio diversification and concentration under dependence uncertainty. In the absence of model uncertainty, we employ the framework of the majorization order and doubly stochastic matrices to formalize the degree of diversification, and prove that quasi-convexity is a necessary and sufficient property for a risk functional to be weakly consistent with the majorization order. We further derive worst-case risk measure inequalities and solve robust portfolio selection problems for a broad class of risk measures, including VaR, ES, Range-VaR (RVaR), and standard deviation (SD). Our results reveal a ''concentration paradox'' for many widely-used risk functionals: when the dependence structure is fully ambiguous, robust optimization often recommends concentrating investment in a single asset to hedge against the worst-case dependence scenario. As an application, we propose a weighted robustness formulation that interpolates between a reference dependence structure and the worst-case structure. The formulation is structurally analogous to the constrained/unconstrained Expected Shortfall blend in the Fundamental Review of the Trading Book (FRTB) and provides a theoretical foundation for balancing diversification against robustness in the presence of model uncertainty.",
+  "link": "https://arxiv.org/abs/2609.04496",
+  "score": 4,
+  "why": "Pure theory without empirical validation or implementation path"
+ },
+ {
+  "key": "2609.04569",
+  "source": "arXiv",
+  "title": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series",
+  "abstract": "Herein, we propose a quantum circuit learning framework for modeling the realized volatility (RV) of Bitcoin and investigate the statistical properties of the predicted time series through multifractal analysis. Unlike conventional GARCH-type models, which require a pre-specified functional form for the volatility process, a parameterized quantum circuit directly approximates the volatility function from empirical data, eliminating the need for explicit model selection. Using five-minute Bitcoin price data, we construct daily RV, train a single-qubit parameterized quantum circuit, and generate a long synthetic time series from the optimized quantum circuit. Multifractal Detrended Fluctuation Analysis is applied to calculate the generalized Hurst exponent $h(q)$, the singularity spectrum $f(α)$, and the multifractal scaling exponent $τ(q)$. The predicted return series exhibits $h(2)\\approx 0.5$, consistent with near-random dynamics, and both the predicted and the empirical return series display multifractality that partially persists after random shuffling. The increment series of RV shows pronounced anti-persistence with $h(2)\\approx 0.05$--$0.1$, consistent with the rough volatility hypothesis. These results demonstrate that a simple single-qubit parameterized quantum circuit captures qualitatively some observed properties in Bitcoin volatility dynamics.",
+  "link": "https://arxiv.org/abs/2609.04569",
+  "score": 4,
+  "why": "Novel quantum approach; impractical, no baseline comparisons"
+ },
+ {
+  "key": "2609.05212",
+  "source": "arXiv",
+  "title": "PAC-Bayesian Reconstruction Guarantees for Time Series Variational Autoencoders",
+  "abstract": "Forecasting time series accurately is critical for applications with complex data ranging from energy systems to healthcare and finance. Among current state of the art models, generative latent variable models are increasingly implemented; yet principled generalisation guarantees for modern latent variable models remain limited. In particular, while Variational AutoEncoders are widely used for sequential data, their theoretical analysis is largely restricted to i.i.d. settings. In this work, we develop a PAC-Bayesian framework for latent variables models applied to time series. Building on reconstruction-based bounds, we extend PAC-Bayesian guarantees to Markovian latent structures, capturing temporal dependencies through a sequential generative process. These guarantees do not grow with the length of the trajectory. Our bounds depend on assumptions which are common in the literature; we provide an example framework where they would be verified to show that they are not as restrictive as they may seem.",
+  "link": "https://arxiv.org/abs/2609.05212",
+  "score": 4,
+  "why": "Pure theory; no validation or financial application"
+ },
+ {
+  "key": "10.2139/ssrn.7419198",
+  "source": "SSRN",
+  "title": "Impact of Venture Capital and Corporate Venture Capital on the Exit Routes of U.S. Artificial Intelligence Startups (2013-2024)",
+  "abstract": "This research investigates the dynamics of U.S. startups that developed and produced artificial intelligence (AI) between 2013 and 2024, analyzing the impact of Corporate Venture Capital (CVC) and Independent Venture Capital (IVC or VC) investors on startups that had already received at least one Series A investment. The results show that the presence of CVC and IVC contributes to a higher probability of mergers and acquisitions (M&A), suggesting that both corporate and independent capital play a relevant role in determining firms' exit routes. However, unlike part of the literature, no solid evidence was found that these investors help startups remain in the market longer while seeking new rounds (follow on), pointing to the existence of additional factors that may influence the decision to continue raising funds or pursue a strategic exit.",
+  "link": "https://www.ssrn.com/abstract=7419198",
+  "score": 3,
+  "why": "Startup VC analysis; not relevant to LLM systems in finance"
+ },
+ {
+  "key": "2609.04917",
+  "source": "arXiv",
+  "title": "Artificial Intelligence in Equity and Crypto Markets: Progress, Profitability Evidence, and the Limits of Automated Investing",
+  "abstract": "Artificial intelligence (AI) now supports investment workflows from data and prediction through research, portfolios, execution, and tool use. Technical capability, however, is not evidence of investment profitability. This critical state-of-the-art review examines public research available through 31 August 2026 on listed equities, exchange-traded funds, centralized crypto spot, perpetual futures, and on-chain markets. We organize evidence with an alpha-translation chain: point-in-time information must yield a stable signal, feasible positions, executable orders, and risk-adjusted returns after costs. Across machine learning, time-series foundation models, financial language models, reinforcement learning, and agents, the examined record shows real but mainly upstream progress in prediction, text processing, portfolio design, and workflow integration. Evidence is thinner for durable net performance. Temporal contamination, repeated selection, survivorship, weak benchmarks, implementation costs, venue mechanics, and capacity can break translation to net alpha. Strong historical results coexist with predictor decay, corrected look-ahead failures, mixed prospective evidence, and few audited live-capital records. Crypto adds informative state but requires separate treatment of spot, perpetual, and decentralized cash flows and execution. Within the public evidence examined here, no general AI architecture is shown to deliver persistent, cross-regime, capacity-aware net alpha. More credible claims require point-in-time data and models, decision-aligned objectives, joint portfolio--execution evaluation, controlled adaptation, prospective tests, and authority-matched governance. These conditions can improve evidence and implementation; they do not guarantee profit.",
+  "link": "https://arxiv.org/abs/2609.04917",
+  "score": 3,
+  "why": "Survey paper; explicitly rejects surveys as non-contributory"
+ },
+ {
+  "key": "2609.05235",
+  "source": "arXiv",
+  "title": "PRICE: A Systematic Study of LLM Adaptation Choices for Bitcoin Price Forecasting",
+  "abstract": "Cryptocurrency markets exhibit extreme volatility and non-stationary dynamics that challenge conventional forecasting methods. Although Large Language Models (LLMs) have shown promise for time series forecasting, the combined effects of adaptation choices remain largely unexplored in financial settings. This study introduces PRICE, a structured approach for adapting LLMs to short-term Bitcoin price forecasting. Built on a 4-bit quantized LLaMA-3 8B model, PRICE investigates how fine-tuning, numerical representation, prompting, inference, and decoding jointly influence forecasting performance. PRICE integrates Parameter-efficient fine-tuning with Low-Rank Adaptation (LoRA), Recursive multi-step inference, Integer-rounded numerical representation, Context-Task-Format (CTF) prompting, and Exact zero-temperature decoding. Ablation studies show that each component contributes to forecasting accuracy and reliability. LoRA enables efficient training on limited hardware, recursive inference improves accuracy, integer-rounded values reduce errors, CTF prompting outperforms Chain-of-Thought, Implicit Chain-of-Thought (iCoT), and few-shot prompting, and zero-temperature decoding improves stability during recursive forecasting. Comparative evaluation against eight transformer-based and time-series foundation models shows that PRICE achieves the lowest forecasting errors on both validation and test sets while maintaining robust performance across evaluation periods. Despite being based on a model primarily pretrained on text rather than time-series data, PRICE achieves competitive or superior performance relative to specialized foundation models. These findings demonstrate that adaptation choices critically determine the accuracy and robustness of LLMs for numerical time-series forecasting.",
+  "link": "https://arxiv.org/abs/2609.05235",
+  "score": 3,
+  "why": "Bitcoin price predictor lacking baselines and transaction validation"
+ },
+ {
+  "key": "2609.05047",
+  "source": "arXiv",
+  "title": "Gatheral's Conjecture Revisited",
+  "abstract": "We compare the Heston model with $ρ=-1$ to the one-dimensional local-volatility model calibrated to the same European option prices. We show that, for each fixed expiry $T>0$, their integrated variances satisfy \\[ I_T^{\\mathrm H}\\prec_{\\mathrm{cx}} I_T^{\\mathrm{LV}}. \\] This strict ordering gives a Heston-model counterexample to the convex-order inequality conjectured by J.\\ Gatheral",
+  "link": "https://arxiv.org/abs/2609.05047",
+  "score": 1,
+  "why": "Off-topic. Pure derivatives theory, no ML or financial application."
+ }
+]
