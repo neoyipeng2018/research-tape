@@ -6,6 +6,41 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>What LLM Trading Agents Actually Do in Production: A Six-Month, Population-Scale Record from Two Fleets</title>
+    <link>https://arxiv.org/abs/2609.05663</link>
+    <description>Risk settings determine LLM trading behavior more than written strategy text does.</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.05663</guid>
+  </item>
+  <item>
+    <title>TieOutBench: A Runnable, Rubric-Gated Evaluation Suite for Financial Analysis and Post-Trade Operations</title>
+    <link>https://www.ssrn.com/abstract=7243025</link>
+    <description>Frontier financial LLMs fail to identify unreconciled baskets or mismatched confirmations.</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7243025</guid>
+  </item>
+  <item>
+    <title>What the Window Does Not Contain: Auditing Provenance in a Document-Grounded Instability Benchmark</title>
+    <link>https://arxiv.org/abs/2609.06147</link>
+    <description>Adding missing evidence to documents does not substantially reduce LLM answer instability.</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.06147</guid>
+  </item>
+  <item>
+    <title>Filtering without recursion and some of its uses in financial economics</title>
+    <link>https://arxiv.org/abs/2609.07207</link>
+    <description>Nonlinear filtering recovers volatility signatures from high-frequency data that linear methods cannot unbias.</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.07207</guid>
+  </item>
+  <item>
+    <title>GraphFAS: A Distributed System for Automated Graph Feature Generation and Selection in Industrial Transaction Networks</title>
+    <link>https://arxiv.org/abs/2609.08970</link>
+    <description>Non-parametric graph features enable fraud model interpretability that end-to-end GNNs cannot achieve.</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.08970</guid>
+  </item>
+  <item>
     <title>The Market already Knew: A Pre-registered Falsification of TimesFM-3 on the SPY Implied-volatility Surface</title>
     <link>https://www.ssrn.com/abstract=7406218</link>
     <description>Market-implied volatility forecasts outperform TimesFM-3 at both one and five-day prediction horizons.</description>

@@ -1,0 +1,41 @@
+{
+ "date": "2026-09-10",
+ "scanned": 52,
+ "items": [
+  {
+   "key": "2609.05663",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.05663",
+   "title": "What LLM Trading Agents Actually Do in Production: A Six-Month, Population-Scale Record from Two Fleets",
+   "claim": "Risk settings determine LLM trading behavior more than written strategy text does."
+  },
+  {
+   "key": "10.2139/ssrn.7243025",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7243025",
+   "title": "TieOutBench: A Runnable, Rubric-Gated Evaluation Suite for Financial Analysis and Post-Trade Operations",
+   "claim": "Frontier financial LLMs fail to identify unreconciled baskets or mismatched confirmations."
+  },
+  {
+   "key": "2609.06147",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.06147",
+   "title": "What the Window Does Not Contain: Auditing Provenance in a Document-Grounded Instability Benchmark",
+   "claim": "Adding missing evidence to documents does not substantially reduce LLM answer instability."
+  },
+  {
+   "key": "2609.07207",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.07207",
+   "title": "Filtering without recursion and some of its uses in financial economics",
+   "claim": "Nonlinear filtering recovers volatility signatures from high-frequency data that linear methods cannot unbias."
+  },
+  {
+   "key": "2609.08970",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.08970",
+   "title": "GraphFAS: A Distributed System for Automated Graph Feature Generation and Selection in Industrial Transaction Networks",
+   "claim": "Non-parametric graph features enable fraud model interpretability that end-to-end GNNs cannot achieve."
+  }
+ ]
+}
