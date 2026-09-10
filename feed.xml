@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>ChatGPT as Information Intermediary: Media Partnerships, Sycophancy, and the Pricing of Earnings News</title>
+    <link>https://www.ssrn.com/abstract=7435681</link>
+    <description>Generative AI intermediaries distort earnings pricing by controlling information salience and presentation bias.</description>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7435681</guid>
+  </item>
+  <item>
+    <title>The Great Codification: GenAI and Intangible Capital</title>
+    <link>https://www.ssrn.com/abstract=7435743</link>
+    <description>Agentic AI destroys firm value when it codifies intangible capital into portable knowledge.</description>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7435743</guid>
+  </item>
+  <item>
+    <title>Regulatory Semantic Drift: When Preference-based Correction Fails Silently, FINCAC40, a Sixteen-year AMF Corpus (2010-2026) for Evaluating the Temporal Robustness of LLMs in ESG Classification</title>
+    <link>https://www.ssrn.com/abstract=7438503</link>
+    <description>Preference-optimization fine-tuning can collapse ESG regulatory classification undetected by standard training metrics.</description>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7438503</guid>
+  </item>
+  <item>
+    <title>Unknown Is Not Zero: Heat Stress, Data-Center Power-Demand Exposure, and Utility Volatility</title>
+    <link>https://www.ssrn.com/abstract=7434182</link>
+    <description>Treating unknown data-center exposure as verified zero manufactures spurious interaction effects in regression.</description>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7434182</guid>
+  </item>
+  <item>
+    <title>Signal Correlation, IC, and PnL Dependence</title>
+    <link>https://arxiv.org/abs/2609.09588</link>
+    <description>Signal correlation and PnL correlation are mathematically non-identifiable without constraints on portfolio construction.</description>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.09588</guid>
+  </item>
+  <item>
+    <title>Adversarial Training for Tabular Credit Scoring: A Multi-Attack Robustness Evaluation in P2P Lending</title>
+    <link>https://arxiv.org/abs/2609.09945</link>
+    <description>Single-attack adversarial training overstates credit-model robustness because defenses transfer weakly across attack types.</description>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.09945</guid>
+  </item>
+  <item>
     <title>What LLM Trading Agents Actually Do in Production: A Six-Month, Population-Scale Record from Two Fleets</title>
     <link>https://arxiv.org/abs/2609.05663</link>
     <description>Risk settings determine LLM trading behavior more than written strategy text does.</description>

@@ -1,0 +1,48 @@
+{
+ "date": "2026-09-11",
+ "scanned": 26,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7435681",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7435681",
+   "title": "ChatGPT as Information Intermediary: Media Partnerships, Sycophancy, and the Pricing of Earnings News",
+   "claim": "Generative AI intermediaries distort earnings pricing by controlling information salience and presentation bias."
+  },
+  {
+   "key": "10.2139/ssrn.7435743",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7435743",
+   "title": "The Great Codification: GenAI and Intangible Capital",
+   "claim": "Agentic AI destroys firm value when it codifies intangible capital into portable knowledge."
+  },
+  {
+   "key": "10.2139/ssrn.7438503",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7438503",
+   "title": "Regulatory Semantic Drift: When Preference-based Correction Fails Silently, FINCAC40, a Sixteen-year AMF Corpus (2010-2026) for Evaluating the Temporal Robustness of LLMs in ESG Classification",
+   "claim": "Preference-optimization fine-tuning can collapse ESG regulatory classification undetected by standard training metrics."
+  },
+  {
+   "key": "10.2139/ssrn.7434182",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7434182",
+   "title": "Unknown Is Not Zero: Heat Stress, Data-Center Power-Demand Exposure, and Utility Volatility",
+   "claim": "Treating unknown data-center exposure as verified zero manufactures spurious interaction effects in regression."
+  },
+  {
+   "key": "2609.09588",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.09588",
+   "title": "Signal Correlation, IC, and PnL Dependence",
+   "claim": "Signal correlation and PnL correlation are mathematically non-identifiable without constraints on portfolio construction."
+  },
+  {
+   "key": "2609.09945",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.09945",
+   "title": "Adversarial Training for Tabular Credit Scoring: A Multi-Attack Robustness Evaluation in P2P Lending",
+   "claim": "Single-attack adversarial training overstates credit-model robustness because defenses transfer weakly across attack types."
+  }
+ ]
+}
