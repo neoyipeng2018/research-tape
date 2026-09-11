@@ -1,0 +1,48 @@
+{
+ "date": "2026-09-12",
+ "scanned": 23,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7417918",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7417918",
+   "title": "A Pre-registered, Cryptographically Timestamped Proving Protocol for Directional Market Forecasting, with Announced Echo State Network and Quantum Reservoir Computing Examinations",
+   "claim": "Directional forecasting models underperform simple price-based forecasts even with careful pre-registration."
+  },
+  {
+   "key": "10.2139/ssrn.7439099",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7439099",
+   "title": "Does Empirical Finance Replicate?",
+   "claim": "Published finance studies replicate in-sample but collapse out-of-sample, consistent with data snooping."
+  },
+  {
+   "key": "10.2139/ssrn.7415198",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7415198",
+   "title": "Point-in-Time SEC Financial Data: A Reproducible Benchmark for Detecting Look-Ahead and Restatement Leakage",
+   "claim": "Financial data services leak look-ahead bias into historical backtests through retention rules."
+  },
+  {
+   "key": "10.2139/ssrn.7416358",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7416358",
+   "title": "A Thousand Agents, One Opinion: Effective Population Collapse in LLM-based Artificial Markets",
+   "claim": "Aligned language-model agents exhibit high cross-correlation, reducing sixteen agents to 2.6 effective traders."
+  },
+  {
+   "key": "10.2139/ssrn.7431918",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7431918",
+   "title": "Reasoning More, Knowing No Better? Epistemic Calibration in Financial Reasoning Tasks",
+   "claim": "Increased reasoning effort improves LLM accuracy on financial tasks without improving calibration."
+  },
+  {
+   "key": "10.2139/ssrn.7439840",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7439840",
+   "title": "When LLMs Whisper: Information Leakage and Collusion in Financial Markets",
+   "claim": "LLM reasoning traces could enable tacit collusion by revealing rivals' intended orders."
+  }
+ ]
+}

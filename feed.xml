@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>A Pre-registered, Cryptographically Timestamped Proving Protocol for Directional Market Forecasting, with Announced Echo State Network and Quantum Reservoir Computing Examinations</title>
+    <link>https://www.ssrn.com/abstract=7417918</link>
+    <description>Directional forecasting models underperform simple price-based forecasts even with careful pre-registration.</description>
+    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7417918</guid>
+  </item>
+  <item>
+    <title>Does Empirical Finance Replicate?</title>
+    <link>https://www.ssrn.com/abstract=7439099</link>
+    <description>Published finance studies replicate in-sample but collapse out-of-sample, consistent with data snooping.</description>
+    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7439099</guid>
+  </item>
+  <item>
+    <title>Point-in-Time SEC Financial Data: A Reproducible Benchmark for Detecting Look-Ahead and Restatement Leakage</title>
+    <link>https://www.ssrn.com/abstract=7415198</link>
+    <description>Financial data services leak look-ahead bias into historical backtests through retention rules.</description>
+    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7415198</guid>
+  </item>
+  <item>
+    <title>A Thousand Agents, One Opinion: Effective Population Collapse in LLM-based Artificial Markets</title>
+    <link>https://www.ssrn.com/abstract=7416358</link>
+    <description>Aligned language-model agents exhibit high cross-correlation, reducing sixteen agents to 2.6 effective traders.</description>
+    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7416358</guid>
+  </item>
+  <item>
+    <title>Reasoning More, Knowing No Better? Epistemic Calibration in Financial Reasoning Tasks</title>
+    <link>https://www.ssrn.com/abstract=7431918</link>
+    <description>Increased reasoning effort improves LLM accuracy on financial tasks without improving calibration.</description>
+    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7431918</guid>
+  </item>
+  <item>
+    <title>When LLMs Whisper: Information Leakage and Collusion in Financial Markets</title>
+    <link>https://www.ssrn.com/abstract=7439840</link>
+    <description>LLM reasoning traces could enable tacit collusion by revealing rivals&#x27; intended orders.</description>
+    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7439840</guid>
+  </item>
+  <item>
     <title>ChatGPT as Information Intermediary: Media Partnerships, Sycophancy, and the Pricing of Earnings News</title>
     <link>https://www.ssrn.com/abstract=7435681</link>
     <description>Generative AI intermediaries distort earnings pricing by controlling information salience and presentation bias.</description>
