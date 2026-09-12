@@ -6,6 +6,13 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Do Large Language Models Add Value in Credit Investing? Evidence from a Disclosure-Reading Agent for US Bank Bonds</title>
+    <link>https://www.ssrn.com/abstract=7423838</link>
+    <description>Language models reading bank disclosures can identify credit deterioration before it affects bond prices.</description>
+    <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7423838</guid>
+  </item>
+  <item>
     <title>A Pre-registered, Cryptographically Timestamped Proving Protocol for Directional Market Forecasting, with Announced Echo State Network and Quantum Reservoir Computing Examinations</title>
     <link>https://www.ssrn.com/abstract=7417918</link>
     <description>Directional forecasting models underperform simple price-based forecasts even with careful pre-registration.</description>

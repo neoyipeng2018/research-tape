@@ -1,0 +1,13 @@
+{
+ "date": "2026-09-13",
+ "scanned": 10,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7423838",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7423838",
+   "title": "Do Large Language Models Add Value in Credit Investing? Evidence from a Disclosure-Reading Agent for US Bank Bonds",
+   "claim": "Language models reading bank disclosures can identify credit deterioration before it affects bond prices."
+  }
+ ]
+}
