@@ -6,6 +6,27 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Quorum: A Benchmark for Financial Artificial Intelligence under Contested Ground Truth</title>
+    <link>https://www.ssrn.com/abstract=7455819</link>
+    <description>Sovereigns crossing investment-grade boundaries face median two-year rating-agency disagreement.</description>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7455819</guid>
+  </item>
+  <item>
+    <title>Valu(AI)tion: Machine Value and Market Prices</title>
+    <link>https://www.ssrn.com/abstract=7454838</link>
+    <description>Fundamental models generate 6.3% annual alpha despite algorithmic market dominance.</description>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7454838</guid>
+  </item>
+  <item>
+    <title>What Investors Believe and Why: Reasoning-Conditioned Sentiment in Cryptocurrency Markets</title>
+    <link>https://www.ssrn.com/abstract=7456261</link>
+    <description>Conditioning Stocktwits sentiment on reasoning quality improves cryptocurrency return prediction.</description>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7456261</guid>
+  </item>
+  <item>
     <title>Do Large Language Models Add Value in Credit Investing? Evidence from a Disclosure-Reading Agent for US Bank Bonds</title>
     <link>https://www.ssrn.com/abstract=7423838</link>
     <description>Language models reading bank disclosures can identify credit deterioration before it affects bond prices.</description>

@@ -1,0 +1,27 @@
+{
+ "date": "2026-09-14",
+ "scanned": 5,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7455819",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7455819",
+   "title": "Quorum: A Benchmark for Financial Artificial Intelligence under Contested Ground Truth",
+   "claim": "Sovereigns crossing investment-grade boundaries face median two-year rating-agency disagreement."
+  },
+  {
+   "key": "10.2139/ssrn.7454838",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7454838",
+   "title": "Valu(AI)tion: Machine Value and Market Prices",
+   "claim": "Fundamental models generate 6.3% annual alpha despite algorithmic market dominance."
+  },
+  {
+   "key": "10.2139/ssrn.7456261",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7456261",
+   "title": "What Investors Believe and Why: Reasoning-Conditioned Sentiment in Cryptocurrency Markets",
+   "claim": "Conditioning Stocktwits sentiment on reasoning quality improves cryptocurrency return prediction."
+  }
+ ]
+}

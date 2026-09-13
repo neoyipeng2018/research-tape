@@ -1,0 +1,47 @@
+[
+ {
+  "key": "10.2139/ssrn.7455819",
+  "source": "SSRN",
+  "title": "Quorum: A Benchmark for Financial Artificial Intelligence under Contested Ground Truth",
+  "abstract": "Every existing benchmark for financial artificial intelligence marks models against a single gold label, whilst the hard questions of finance, being whether a sovereign is investment grade, whether a firm complies with a mandate, or whether a promotion breaches a principle, are questions on which qualified experts disagree at material rates. I present Quorum, a benchmark in which every item carries a quorum of independent expert labels, the reliability of the ground truth is measured and published as part of the scorecard, the headline metric is accuracy on the contested stratum, and abstention on undecidable items is never scored as error. Two pilots run end to end on real data: four Shariah screening standards over 23,248 firm-quarters (alpha 0.588), and the three major rating agencies over 124 sovereigns (alpha 0.909) together with a 27-country boundary panel of 2,697 country-quarters (alpha 0.695). The longitudinal panel yields the paper's central empirical finding, being that when a country crosses the investment-grade boundary, the agencies disagree about which side it stands on for a median of two years. The harness, public panels and tests are open source; the private pilot data is not distributed.",
+  "link": "https://www.ssrn.com/abstract=7455819",
+  "score": 8,
+  "why": "Addresses evaluation gap: contested ground truth in finance. Real pilots, methodological infrastructure."
+ },
+ {
+  "key": "10.2139/ssrn.7454838",
+  "source": "SSRN",
+  "title": "Valu(AI)tion: Machine Value and Market Prices",
+  "abstract": "Can a machine estimate intrinsic value without learning from market prices? I build a price-free machine analyst that forecasts profitability from published accounting data and feeds those forecasts into a residual-income valuation model for U.S. firms from 1985-2024. The value-to-price ratio earns an equal-weighted six-factor alpha of 6.3% per year, survives point-in-time reconstruction, and predicts returns beyond standard controls. Value-price gaps decay with a two-year half-life, but asymmetrically. Cheapside gaps largely reflect forecast error, while expensive-side gaps mostly survive realized profitability. The signal persists through the machine-learning era but disappears among mega-caps. Algorithmic markets are informationally powerful, not fundamentally efficient. (JEL G12, G14, G17, C58, M41",
+  "link": "https://www.ssrn.com/abstract=7454838",
+  "score": 7,
+  "why": "Proper out-of-sample, point-in-time reconstruction, but traditional ML not LLM; scope conditions identified"
+ },
+ {
+  "key": "10.2139/ssrn.7456261",
+  "source": "SSRN",
+  "title": "What Investors Believe and Why: Reasoning-Conditioned Sentiment in Cryptocurrency Markets",
+  "abstract": "We use a reasoning-capable large language model to construct a content-conditioned measure of investor sentiment that separates a view's direction from the reasoning and evidence supporting it. From nearly four million Stocktwits messages about 54 cryptocurrencies from July 2017 through March 2026, we construct separate sentiment and downside-risk measures for naive and sophisticated messages. The sophistication score increases with users' self-reported experience, which is excluded from its construction. Both sentiment measures predict next-week returns, especially when they are jointly bullish and market activity is high. Disagreement weakens the immediate return relation. Explicit risk concerns in both groups separately predict oneweek-ahead downside-tail events. Conditioning sentiment on reasoning quality thus reveals economically meaningful heterogeneity concealed by conventional polarity measures.",
+  "link": "https://www.ssrn.com/abstract=7456261",
+  "score": 7,
+  "why": "LLM extracting real financial signal from text. Predicts tail events, real data, but crypto-only."
+ },
+ {
+  "key": "10.2139/ssrn.7455289",
+  "source": "SSRN",
+  "title": "From AI Capability to Economic Value A Dynamic Theory of Human–AI Interaction and Optimal Organizational Investment",
+  "abstract": "Artificial intelligence (AI) increasingly acts as a production technology, but its economic value varies sharply across tasks, workers and firms. This paper develops Dynamic Human–AI Capability Interaction Theory (DHCIT), which links task capability sufficiency to stochastic AI reliability, signed human–AI interaction value, organizational realization, evolving human capability and dynamic AI investment. The theory distinguishes human augmentation from true synergy and derives a task-specific minimum reliability threshold for positive economic value. A major empirical revision fits the framework separately to published U.S. Federal Reserve and European Investment Bank evidence without reconstructing confidential microdata. In the U.S. data, reported AI-productivity gains exceed revenue-implied gains but the realization gap narrows from 2025 to 2026; a mechanism-level reduced form captures strong in-sample channel structure but has weak leave-one-mechanism-out generalization. In Europe, a signed-threshold curve fits the four published firm-size AI-productivity effects with an in-sample R2 of 0.975 and slightly outperforms a weighted linear benchmark under leave-one-class-out refitting, while training and software/data show the strongest positive complementary-investment interactions. ECB worker evidence shows large but task-dependent time savings. Conditional scenarios illustrate what continued organizational realization or failure to cross a readiness threshold would imply, while being explicitly separated from forecasts. The results support a central conclusion: AI capability is not an intrinsic productivity coefficient; economic value is jointly determined by task fit, reliability, verification, organizational realization and dynamic complementary investment.",
+  "link": "https://www.ssrn.com/abstract=7455289",
+  "score": 4,
+  "why": "Theory paper with vague empirical claims. No concrete results or datasets named."
+ },
+ {
+  "key": "10.2139/ssrn.7456499",
+  "source": "SSRN",
+  "title": "WILL STUDENTS TRUST AI WITH THEIR MONEY? Examining Youth Trust, Adoption Intentions, and Perceptions of AI-Based Financial Tools",
+  "abstract": "Artificial intelligence is increasingly being incorporated into financial services, including budgeting, expense tracking, investment support and automated financial advice. However, the usefulness of these systems depends partly on whether users are willing to trust and adopt them. This study examines youth perceptions of AI-based financial tools, focusing on trust, perceived benefits and concerns, willingness to use, recommendation intention, and preferences for AI versus human financial advice. Primary data were collected through a cross-sectional Google Forms survey of 220 respondents. Descriptive statistics were combined with Pearson chi-square tests of independence and Cramer's V to examine associations among categorical variables. The findings show that 45.7% of respondents who answered the trust question trusted AI to provide accurate financial advice, while 48.6% would regularly use a free AI-based money-management application and 79.1% were at least somewhat likely to recommend an AI financial tool. AI/digital familiarity was significantly associated with trust (χ²(4)=48.729, p",
+  "link": "https://www.ssrn.com/abstract=7456499",
+  "score": 2,
+  "why": "Survey of student opinions. No financial substance, no ML, no market data."
+ }
+]
