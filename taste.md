@@ -17,7 +17,7 @@ ssrn: ai: ai, artificial intelligence, machine learning, deep learning, neural n
   valuation, risk management, systemic risk, default risk, financial risk, market risk, fintech,
   insurance, accounting, earnings, monetary policy, securities, cryptocurrency, bitcoin, esg, fund,
   funds, capital, debt, liquidity, inflation, payments, hedging, financing, corporate finance,
-  corporate governance, mergers, underwriting
+  corporate governance, mergers, underwriting, return predictability
 
 ## Prefer
 
@@ -26,6 +26,7 @@ ssrn: ai: ai, artificial intelligence, machine learning, deep learning, neural n
 - Results that update a prior: a negative result, a failed replication, a surprising direction.
 - Microstructure, execution and portfolio construction grounded in real trades or real order books.
 - Evaluation itself: how anyone knows a financial ML claim survives out of sample.
+- Network structure as signal: economic links, peer/lead-lag momentum, knowledge graphs — beating the no-graph baseline.
 
 ## Reject
 
