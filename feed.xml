@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>The Friction Ledger: A Zero-Sum Accounting of Polymarket Order Flow and the Geometry of Event-Contract Fees</title>
+    <link>https://www.ssrn.com/abstract=7453738</link>
+    <description>Prediction market taker fees consume 10.4 times the gross edge of active traders.</description>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7453738</guid>
+  </item>
+  <item>
+    <title>Large Language Models, Price Discovery, and Synchronized Trading</title>
+    <link>https://www.ssrn.com/abstract=7458342</link>
+    <description>Frontier language models improve price discovery in hard-to-read firms despite synchronizing order flow.</description>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7458342</guid>
+  </item>
+  <item>
+    <title>Calibration that counts: Conformal prediction intervals for automated valuation models</title>
+    <link>https://www.ssrn.com/abstract=7460013</link>
+    <description>Prediction intervals from hedonic, boosted, and neural-network AVMs fail calibration worst during interest-rate shocks.</description>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7460013</guid>
+  </item>
+  <item>
+    <title>Heterogeneity by Design for AI Liquidity Management Agents on Instant Payment Rails: A Conformance Specification</title>
+    <link>https://www.ssrn.com/abstract=7431638</link>
+    <description>Shared models among autonomous liquidity agents create herding risk requiring conformance-tested institutional heterogeneity.</description>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7431638</guid>
+  </item>
+  <item>
+    <title>Trade-Policy and Export-Control Exposure, Validated Textual Disclosure, and Capital-Market Outcomes</title>
+    <link>https://www.ssrn.com/abstract=7433120</link>
+    <description>Underdisclosed export-control exposure does not predict crash risk or illiquidity, despite material underlying exposure.</description>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7433120</guid>
+  </item>
+  <item>
+    <title>When Does Reinforcement Learning Beat Naive Diversification? Learning Architecture, Regime Information, and Trading Frictions</title>
+    <link>https://www.ssrn.com/abstract=7446418</link>
+    <description>Decision Transformers substantially outperform both online actor-critic RL and equally-weighted portfolio benchmarks.</description>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7446418</guid>
+  </item>
+  <item>
     <title>Quorum: A Benchmark for Financial Artificial Intelligence under Contested Ground Truth</title>
     <link>https://www.ssrn.com/abstract=7455819</link>
     <description>Sovereigns crossing investment-grade boundaries face median two-year rating-agency disagreement.</description>

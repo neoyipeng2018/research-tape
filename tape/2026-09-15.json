@@ -1,0 +1,48 @@
+{
+ "date": "2026-09-15",
+ "scanned": 38,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7453738",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7453738",
+   "title": "The Friction Ledger: A Zero-Sum Accounting of Polymarket Order Flow and the Geometry of Event-Contract Fees",
+   "claim": "Prediction market taker fees consume 10.4 times the gross edge of active traders."
+  },
+  {
+   "key": "10.2139/ssrn.7458342",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7458342",
+   "title": "Large Language Models, Price Discovery, and Synchronized Trading",
+   "claim": "Frontier language models improve price discovery in hard-to-read firms despite synchronizing order flow."
+  },
+  {
+   "key": "10.2139/ssrn.7460013",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7460013",
+   "title": "Calibration that counts: Conformal prediction intervals for automated valuation models",
+   "claim": "Prediction intervals from hedonic, boosted, and neural-network AVMs fail calibration worst during interest-rate shocks."
+  },
+  {
+   "key": "10.2139/ssrn.7431638",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7431638",
+   "title": "Heterogeneity by Design for AI Liquidity Management Agents on Instant Payment Rails: A Conformance Specification",
+   "claim": "Shared models among autonomous liquidity agents create herding risk requiring conformance-tested institutional heterogeneity."
+  },
+  {
+   "key": "10.2139/ssrn.7433120",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7433120",
+   "title": "Trade-Policy and Export-Control Exposure, Validated Textual Disclosure, and Capital-Market Outcomes",
+   "claim": "Underdisclosed export-control exposure does not predict crash risk or illiquidity, despite material underlying exposure."
+  },
+  {
+   "key": "10.2139/ssrn.7446418",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7446418",
+   "title": "When Does Reinforcement Learning Beat Naive Diversification? Learning Architecture, Regime Information, and Trading Frictions",
+   "claim": "Decision Transformers substantially outperform both online actor-critic RL and equally-weighted portfolio benchmarks."
+  }
+ ]
+}
