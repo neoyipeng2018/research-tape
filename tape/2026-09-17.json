@@ -1,0 +1,48 @@
+{
+ "date": "2026-09-17",
+ "scanned": 48,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7441959",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7441959",
+   "title": "When Does LLM-Extracted Central Bank Sentiment Add Value? A Fragility Analysis of Sentiment-Tilted CVaR Portfolios in FX Markets",
+   "claim": "LLM-extracted sentiment from central bank statements fails to provide statistically significant portfolio improvements."
+  },
+  {
+   "key": "10.2139/ssrn.7439639",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7439639",
+   "title": "Do Capital-Goods Incentive Announcements Move Italian Industrial Stocks? An Event Study with LLM-Coded Regulatory Acts, 2019–2026",
+   "claim": "Italian capital-goods incentive policies produce no measurable abnormal stock returns upon announcement."
+  },
+  {
+   "key": "10.2139/ssrn.7459298",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7459298",
+   "title": "Agentic Decision Mathematics: Risk-Constrained Allocation of Operational Autonomy Under Uncertainty in Financial Market Infrastructure",
+   "claim": "AI operational autonomy should be formalized as a constrained, optimizable resource managed through mathematics."
+  },
+  {
+   "key": "10.2139/ssrn.7467138",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7467138",
+   "title": "Computation Is Explanation: An Active Inference Agent for Interpretable Portfolio Control",
+   "claim": "Active Inference embeds portfolio control explanations in decision computation, enabling true ante-hoc interpretability."
+  },
+  {
+   "key": "10.2139/ssrn.7444559",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7444559",
+   "title": "Which Learned Forecaster Wins, and When? A Regime-and Horizon-Conditioned Comparison of Recurrent, Attentional, Generative and Tree-Based Stock-Forecasting Models, with a Regime-Switching Mixture of Experts",
+   "claim": "Regime-Switching Mixture of Experts beats individual forecasters without requiring ex-ante knowledge of which is best."
+  },
+  {
+   "key": "10.2139/ssrn.7461080",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7461080",
+   "title": "Delegated Consumption and the Missing Discipline of Competition An Equilibrium Theory of the AI Token Market",
+   "claim": "Delegated AI execution lets firms control unauditable consumption intensity, neutralizing token-price competition benefits."
+  }
+ ]
+}

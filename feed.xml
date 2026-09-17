@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>When Does LLM-Extracted Central Bank Sentiment Add Value? A Fragility Analysis of Sentiment-Tilted CVaR Portfolios in FX Markets</title>
+    <link>https://www.ssrn.com/abstract=7441959</link>
+    <description>LLM-extracted sentiment from central bank statements fails to provide statistically significant portfolio improvements.</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7441959</guid>
+  </item>
+  <item>
+    <title>Do Capital-Goods Incentive Announcements Move Italian Industrial Stocks? An Event Study with LLM-Coded Regulatory Acts, 2019–2026</title>
+    <link>https://www.ssrn.com/abstract=7439639</link>
+    <description>Italian capital-goods incentive policies produce no measurable abnormal stock returns upon announcement.</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7439639</guid>
+  </item>
+  <item>
+    <title>Agentic Decision Mathematics: Risk-Constrained Allocation of Operational Autonomy Under Uncertainty in Financial Market Infrastructure</title>
+    <link>https://www.ssrn.com/abstract=7459298</link>
+    <description>AI operational autonomy should be formalized as a constrained, optimizable resource managed through mathematics.</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7459298</guid>
+  </item>
+  <item>
+    <title>Computation Is Explanation: An Active Inference Agent for Interpretable Portfolio Control</title>
+    <link>https://www.ssrn.com/abstract=7467138</link>
+    <description>Active Inference embeds portfolio control explanations in decision computation, enabling true ante-hoc interpretability.</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7467138</guid>
+  </item>
+  <item>
+    <title>Which Learned Forecaster Wins, and When? A Regime-and Horizon-Conditioned Comparison of Recurrent, Attentional, Generative and Tree-Based Stock-Forecasting Models, with a Regime-Switching Mixture of Experts</title>
+    <link>https://www.ssrn.com/abstract=7444559</link>
+    <description>Regime-Switching Mixture of Experts beats individual forecasters without requiring ex-ante knowledge of which is best.</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7444559</guid>
+  </item>
+  <item>
+    <title>Delegated Consumption and the Missing Discipline of Competition An Equilibrium Theory of the AI Token Market</title>
+    <link>https://www.ssrn.com/abstract=7461080</link>
+    <description>Delegated AI execution lets firms control unauditable consumption intensity, neutralizing token-price competition benefits.</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7461080</guid>
+  </item>
+  <item>
     <title>The Friction Ledger: A Zero-Sum Accounting of Polymarket Order Flow and the Geometry of Event-Contract Fees</title>
     <link>https://www.ssrn.com/abstract=7453738</link>
     <description>Prediction market taker fees consume 10.4 times the gross edge of active traders.</description>
