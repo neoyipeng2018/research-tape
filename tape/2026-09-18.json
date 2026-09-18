@@ -1,0 +1,48 @@
+{
+ "date": "2026-09-18",
+ "scanned": 34,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7459518",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7459518",
+   "title": "FinRL-DeepSeek Revisited: A Reproduction and Multi-Seed Robustness Analysis of LLM-Infused Risk-Sensitive Trading Agents",
+   "claim": "Single-seed financial backtests undermine published agent rankings by obscuring seed-dependent performance reversals."
+  },
+  {
+   "key": "10.2139/ssrn.7464798",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7464798",
+   "title": "FinProof v1: An Adversarial Benchmark for AI Guardrail Evaluation in Banking, Financial Services, and Insurance",
+   "claim": "Generic AI safety benchmarks systematically miss BFSI-specific attacks exploiting regulatory complexity and compliance ambiguity."
+  },
+  {
+   "key": "10.2139/ssrn.7472064",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7472064",
+   "title": "The Operating-Layer Dominance Hypothesis: Why Agentic Trading Alpha Is an Interface Problem, Not a Model Problem A Position Paper on Architecture, Live Evaluation, and Alpha Limits in Multi-Agent Trading Systems",
+   "claim": "Deterministic execution-layer control, not model capability, is the binding constraint on agentic trading alpha."
+  },
+  {
+   "key": "10.2139/ssrn.7453478",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7453478",
+   "title": "Named Entity Recognition for Unstructured Financial Transaction Text",
+   "claim": "Span-matching architectures disambiguate financial transaction boundaries more efficiently than transformers under limited labeled data."
+  },
+  {
+   "key": "10.2139/ssrn.7470578",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7470578",
+   "title": "How Much is Too Much Optimism? Peer Tone Benchmarking and the Market Discount for Positive Tone Deviation",
+   "claim": "Unverified peer-relative optimism in MD&A triggers a 2-4% market-to-book valuation penalty."
+  },
+  {
+   "key": "10.2139/ssrn.7477840",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7477840",
+   "title": "Can Machines Learn Electricity Hedging Regimes? State-Dependent Minimum-Variance Hedging in German Power Futures",
+   "claim": "State-dependent hedging using neural network regime-weighting reduces power-futures tail risk by 10 EUR/MWh versus OLS."
+  }
+ ]
+}
