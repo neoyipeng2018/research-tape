@@ -1,0 +1,20 @@
+{
+ "date": "2026-09-19",
+ "scanned": 19,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7467398",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7467398",
+   "title": "Automated Alpha Discovery Under Rigorous Out-of-Sample Validation: A Forensic Study of Trading Signal Search",
+   "claim": "No trading signals from automated price/volume search survive rigorous out-of-sample validation."
+  },
+  {
+   "key": "10.2139/ssrn.7484116",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7484116",
+   "title": "Moral Inflation in Synthetic Investors: When LLM Personas Replace Heterogeneity with Normative Archetypes",
+   "claim": "LLM-based synthetic investors suppress heterogeneity and amplify moral effects."
+  }
+ ]
+}
