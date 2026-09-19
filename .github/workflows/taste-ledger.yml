@@ -19,7 +19,9 @@ permissions:
 # Serialised, never cancelled: each run reads the body when it starts, so a queued run already
 # sees the later edit — and a run cancelled between the push and the comment would leave a
 # rewritten taste.md that never said what it dropped.
-concurrency: { group: taste-ledger-${{ github.event.number }}, cancel-in-progress: false }
+concurrency:
+  group: taste-ledger-${{ github.event.number }}
+  cancel-in-progress: false
 
 jobs:
   untick:
