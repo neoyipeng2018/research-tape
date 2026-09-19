@@ -6,6 +6,34 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Do a Legislator&#x27;s Trades Anticipate Legislative Acts? Timing, Disclosure and Proximity Tests on the STOCK Act Filings of the Pelosi Household, 2014–2026</title>
+    <link>https://www.ssrn.com/abstract=7479560</link>
+    <description>Pelosi&#x27;s trades fail timing, disclosure, and proximity tests for legislative anticipation.</description>
+    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7479560</guid>
+  </item>
+  <item>
+    <title>From Backtest to Deployment: A Staged-capital Protocol for Evaluating Agentic Trading Systems - A Position Paper Proposing an Engineering Workflow for Committing Real Capital to Autonomous Trading Agents</title>
+    <link>https://www.ssrn.com/abstract=7475338</link>
+    <description>Mechanical exit rules outperform discretionary logic in live agentic trading systems.</description>
+    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7475338</guid>
+  </item>
+  <item>
+    <title>From Hindsight to Foresight: Adapting Reusable Reasoning Structures from Recurring Financial Events</title>
+    <link>https://www.ssrn.com/abstract=7475378</link>
+    <description>Reusing reasoning paths from past recurring events improves LLM financial forecasts.</description>
+    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7475378</guid>
+  </item>
+  <item>
+    <title>Fedspeak, LLM-Derived Signals, and High-Frequency Trading</title>
+    <link>https://www.ssrn.com/abstract=7479619</link>
+    <description>Fed communication divergence generates systematic intraday price movements and position reallocation.</description>
+    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7479619</guid>
+  </item>
+  <item>
     <title>Automated Alpha Discovery Under Rigorous Out-of-Sample Validation: A Forensic Study of Trading Signal Search</title>
     <link>https://www.ssrn.com/abstract=7467398</link>
     <description>No trading signals from automated price/volume search survive rigorous out-of-sample validation.</description>

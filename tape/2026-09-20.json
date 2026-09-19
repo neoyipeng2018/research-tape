@@ -1,0 +1,34 @@
+{
+ "date": "2026-09-20",
+ "scanned": 14,
+ "items": [
+  {
+   "key": "10.2139/ssrn.7479560",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7479560",
+   "title": "Do a Legislator's Trades Anticipate Legislative Acts? Timing, Disclosure and Proximity Tests on the STOCK Act Filings of the Pelosi Household, 2014–2026",
+   "claim": "Pelosi's trades fail timing, disclosure, and proximity tests for legislative anticipation."
+  },
+  {
+   "key": "10.2139/ssrn.7475338",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7475338",
+   "title": "From Backtest to Deployment: A Staged-capital Protocol for Evaluating Agentic Trading Systems - A Position Paper Proposing an Engineering Workflow for Committing Real Capital to Autonomous Trading Agents",
+   "claim": "Mechanical exit rules outperform discretionary logic in live agentic trading systems."
+  },
+  {
+   "key": "10.2139/ssrn.7475378",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7475378",
+   "title": "From Hindsight to Foresight: Adapting Reusable Reasoning Structures from Recurring Financial Events",
+   "claim": "Reusing reasoning paths from past recurring events improves LLM financial forecasts."
+  },
+  {
+   "key": "10.2139/ssrn.7479619",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7479619",
+   "title": "Fedspeak, LLM-Derived Signals, and High-Frequency Trading",
+   "claim": "Fed communication divergence generates systematic intraday price movements and position reallocation."
+  }
+ ]
+}
