@@ -14,6 +14,6 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: ./scripts/validate-taste.sh taste.md
       - run: ./scripts/test-validate-taste.sh

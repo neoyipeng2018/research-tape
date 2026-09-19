@@ -38,7 +38,7 @@ jobs:
       BASE: ${{ github.event.pull_request.base.ref }}
     steps:
       # The head branch itself, not the merge commit: this job pushes back to it.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with: { ref: "${{ env.BRANCH }}" }
 
       # The API body, never `github.event.pull_request.body` — the payload is the body as of the

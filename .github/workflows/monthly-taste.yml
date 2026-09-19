@@ -35,7 +35,7 @@ jobs:
       CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
       BRANCH: taste              # one branch, force-pushed: there is only ever one open PR (§7)
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # The same SGT date daily.yml stamps its tape with, so the window ends on a real tape day.
       - name: The window
@@ -93,7 +93,7 @@ jobs:
           created=$(jq -r '.[0].createdAt' "$RUNNER_TEMP/open-pr.json")
           echo "PR_DAYS=$(( ( $(date +%s) - $(date -d "$created" +%s) ) / 86400 ))" >> "$GITHUB_ENV"
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         if: env.PROPOSE == 'yes'
         with: { node-version: "22" }
       - name: Install the CLI
