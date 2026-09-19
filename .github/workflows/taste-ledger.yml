@@ -19,7 +19,9 @@ permissions:
 # Serialised, never cancelled: each run reads the body when it starts, so a queued run already
 # sees the later edit — and a run cancelled between the push and the comment would leave a
 # rewritten taste.md that never said what it dropped.
-concurrency: { group: taste-ledger-${{ github.event.number }}, cancel-in-progress: false }
+concurrency:
+  group: taste-ledger-${{ github.event.number }}
+  cancel-in-progress: false
 
 jobs:
   untick:
@@ -36,7 +38,7 @@ jobs:
       BASE: ${{ github.event.pull_request.base.ref }}
     steps:
       # The head branch itself, not the merge commit: this job pushes back to it.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with: { ref: "${{ env.BRANCH }}" }
 
       # The API body, never `github.event.pull_request.body` — the payload is the body as of the
