@@ -6,6 +6,13 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>A Causality-Gated Multi-Agent System for Generative Feature Engineering in Financial Markets</title>
+    <link>https://www.ssrn.com/abstract=7493407</link>
+    <description>Information leakage explains the apparent edge in LLM-generated financial features.</description>
+    <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7493407</guid>
+  </item>
+  <item>
     <title>Do a Legislator&#x27;s Trades Anticipate Legislative Acts? Timing, Disclosure and Proximity Tests on the STOCK Act Filings of the Pelosi Household, 2014–2026</title>
     <link>https://www.ssrn.com/abstract=7479560</link>
     <description>Pelosi&#x27;s trades fail timing, disclosure, and proximity tests for legislative anticipation.</description>
