@@ -5,6 +5,8 @@ Stdlib only, no JS on the page. Called by the daily workflow after the tape is w
 """
 import argparse, datetime, email.utils, glob, html, json, os, sys
 
+from lane import missing   # which lanes were down on a published day
+
 SITE = "https://neoyipeng2018.github.io/research-tape/"
 ARCHIVE = "https://github.com/neoyipeng2018/research-tape/tree/main/tape"
 # By email = somebody else's RSS-to-email, prefilled. No list, no address ever reaches this
@@ -58,6 +60,23 @@ def long_date(iso):
     return f"{d:%A} {d.day} {d:%B %Y}"
 
 
+def provenance(tape):
+    """The lanes line under the header. It read "arXiv + SSRN" unconditionally until the ten
+    days arXiv refused the runner, when the page went on claiming both lanes over a tape drawn
+    from one (docs/adr/0001). A tape with no `lanes` field predates it: those days were never
+    observed, so the line says what it always said rather than guessing at them."""
+    lanes = tape.get("lanes")
+    if lanes is None:
+        return "arXiv + SSRN"
+    down = missing(tape)
+    if not down:
+        return " + ".join(lanes)
+    # "no arXiv", never "arXiv down": this field records what reached the pool, and a lane can
+    # reach it empty for reasons other than being unreachable. The diagnosis lives in the vote
+    # issue note, which is written by the lane that actually failed and knows why.
+    return f'{" + ".join(lanes) or "no lane"} only — no {" or ".join(down)} today'
+
+
 def page(tape):
     items, e = tape["items"], html.escape
     # A prefix that reads on every row is noise, not provenance. SPEC.md §5.
@@ -80,7 +99,7 @@ def page(tape):
 <style>
 {CSS}</style>
 <div class="head"><b>Research Tape</b><span>{e(long_date(tape["date"]))}</span></div>
-<div class="meta">{len(items)} of {tape["scanned"]} scanned · arXiv + SSRN</div>
+<div class="meta">{len(items)} of {tape["scanned"]} scanned · {e(provenance(tape))}</div>
 {rows}
 {quiet}
 <div class="foot"><a href="{ARCHIVE}">archive</a><a href="feed.xml">rss</a><a href="{BY_EMAIL}">email</a></div>

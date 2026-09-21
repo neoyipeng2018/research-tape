@@ -104,8 +104,11 @@ check("a thin day publishes under the cap, without filler",
       rc == 0 and tape and len(tape["items"]) == 1 and tape["scanned"] == 2, tape)
 rc, tape, err, prompts, _ = run([written(1)], scored=[cand("c1", 6), cand("c2", 3)])
 check("a day where nothing clears the bar commits an empty tape file, and calls no judge",
-      rc == 0 and tape == {"date": "2026-08-19", "scanned": 2, "items": []} and not prompts,
+      rc == 0 and not prompts and tape == {"date": "2026-08-19", "scanned": 2,
+                                           "lanes": ["arXiv"], "items": []},
       (rc, tape, err))
+check("the tape records which lanes reached the pool, even on a quiet day",
+      tape and tape["lanes"] == ["arXiv"], tape)
 rc, tape, err, prompts, _ = run([written(1)], scored=[])
 check("no candidates at all is still an empty tape, not a failure",
       rc == 0 and tape and tape["items"] == [] and not prompts, (rc, tape, err))

@@ -20,8 +20,10 @@ that has published never publishes again.
 **Fingerprint** — the set of 4+ character lowercase word tokens in a candidate's abstract. Two
 candidates whose fingerprints overlap enough are the same paper under two keys.
 
-**Lane** — one source query: arXiv or SSRN-via-Crossref. A lane can be down without the day going
-dark.
+**Lane** — one source of candidates: arXiv or SSRN. A lane is the *corpus*, not the host it
+arrives through — how a lane is fetched is not part of what it is, and a lane is dead only when
+every way into that corpus has failed ([ADR-0001](docs/adr/0001-a-lane-is-a-corpus-not-a-transport.md)).
+A lane can be down without the day going dark.
 
 **Judge** — the model that scores candidates and writes claims. Two passes: triage scores everything,
 then claims are written for survivors only.
@@ -48,3 +50,8 @@ from votes. There is only ever one open.
 page says so.
 
 **Dark day** — the loop did not run, or failed. Nothing is written; the site keeps yesterday's tape.
+
+**Degraded day** — the loop ran and published, but a lane was down, so the tape was drawn from a
+thinner pool than taste intends. It is not a quiet day and not a dark one: the reader gets a tape,
+and the tape records which lanes reached it. A lane dead three days running stops being a degraded
+day and becomes a failed run.

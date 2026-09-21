@@ -51,7 +51,7 @@ jobs:
       - name: Fetch arXiv
         run: ./scripts/fetch-arxiv.py --out "$RUNNER_TEMP/fetched.json" --notes "$RUNNER_TEMP/notes.md"
       - name: Fetch SSRN via Crossref
-        run: ./scripts/fetch-ssrn.py --out "$RUNNER_TEMP/fetched.json" --notes "$RUNNER_TEMP/notes.md"
+        run: ./scripts/fetch-ssrn.py --out "$RUNNER_TEMP/fetched.json" --notes "$RUNNER_TEMP/notes.md" --candidates candidates
 
       - name: Both lanes down is a dark day
         run: |
@@ -89,9 +89,9 @@ jobs:
           git commit -m "tape $DAY"
           git push
 
-      # The heartbeat (§6): opened every day the loop runs, quiet days included, and the
-      # only place a degraded lane is ever reported. Last, so it only ever describes a tape
-      # that is already pushed. `gh issue create` 422s on a label that does not exist yet.
+      # The heartbeat (§6): opened every day the loop runs, quiet days included, and where a
+      # degraded lane is reported with the reason it degraded. Last, so it only ever describes
+      # a tape that is already pushed. `gh issue create` 422s on a label that does not exist yet.
       - name: Open the vote issue
         env:
           GH_TOKEN: ${{ github.token }}
@@ -100,3 +100,10 @@ jobs:
           ./scripts/vote-issue.py --tape "tape/$DAY.json" --notes "$RUNNER_TEMP/notes.md" \
             > "$RUNNER_TEMP/vote.md"
           gh issue create --label vote --title "Votes — $DAY" --body-file "$RUNNER_TEMP/vote.md"
+
+      # Last, and the only step allowed to fail the run on a degraded day: everything above has
+      # already committed and pushed the tape and opened the issue, so going red costs the reader
+      # nothing. The vote issue is where a one-day blip is reported and it is demonstrably not
+      # read every morning — arXiv was dead ten days before anyone noticed. A red run mails.
+      - name: A lane dead three days fails the run
+        run: ./scripts/lane.py --candidates candidates

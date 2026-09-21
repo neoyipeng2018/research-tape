@@ -6,8 +6,13 @@ already carries the abstract and the canonical URL we publish. Trailing 7 days o
 `from-created-date`, the only usable delta key. Filtering is client-side, and its vocabulary
 lives in taste.md (## Queries, the `ssrn:` line), never here. An unreachable or garbage
 Crossref degrades to zero candidates and exit 0 — the day publishes from arXiv alone (§9).
+
+Crossref is this lane's transport, not its identity (docs/adr/0001): the lane is SSRN, and it
+has exactly one way in. That is worth knowing when reading the streak it now reports.
 """
 import argparse, datetime, html, json, os, re, sys, urllib.parse, urllib.request
+
+from lane import dead_days   # one streak counter for both lanes
 
 API = "https://api.crossref.org/prefixes/10.2139/works"
 MAILTO = os.environ.get("CROSSREF_MAILTO", "yipeng.n@gmail.com")  # polite-pool contact
@@ -122,17 +127,26 @@ def keep(item, ai_re, finance_re):
     return {"key": key, "source": "SSRN", "title": title, "abstract": abstract, "link": link}
 
 
-def lane(taste, now):
+def lane(taste, now, candidates_dir="candidates"):
     """(candidates, note). A dead or garbage lane degrades to no candidates and a note for the
-    vote issue rather than taking the day dark. SPEC.md §9."""
+    vote issue rather than taking the day dark. SPEC.md §9.
+
+    The note names the lane by its corpus and its transport both — "SSRN via Crossref" — because
+    the lane is the corpus (docs/adr/0001) and the thing that broke is the transport. The streak
+    rides it for the same reason arXiv's does: this lane carried the tape alone for ten days in
+    September 2026, and it is the one with no second transport to fall back to.
+    """
     ai_re, finance_re = map(words, taste_terms(taste))  # a bad taste.md is fatal, before any fetch
     try:
         items = [c for c in (keep(r, ai_re, finance_re) for r in records(now)) if c]
     except (OSError, ValueError, KeyError) as e:  # URLError, TimeoutError, bad JSON, no message
-        return [], f"Crossref lane unreachable: {e.__class__.__name__}: {e}"
-    if not items:
-        return [], "Crossref lane returned nothing usable"
-    return items, ""
+        note = f"SSRN lane unreachable via Crossref: {e.__class__.__name__}: {e}"
+    else:
+        if items:
+            return items, ""
+        note = "SSRN lane returned nothing usable via Crossref"
+    d = dead_days(candidates_dir, "SSRN")
+    return [], note + (f" — {d + 1} days running with no SSRN candidates" if d else "")
 
 
 def merge(prior, items):
@@ -149,8 +163,10 @@ def main():
     p.add_argument("--taste", default="taste.md")
     p.add_argument("--out", help="merge into this day's candidates file (default stdout)")
     p.add_argument("--notes", help="append a degraded-lane note here, for the vote issue (§6)")
+    p.add_argument("--candidates", default="candidates",
+                   help="stored candidates, read only to count how long this lane has been dead")
     a = p.parse_args()
-    items, note = lane(a.taste, datetime.datetime.now(datetime.timezone.utc))
+    items, note = lane(a.taste, datetime.datetime.now(datetime.timezone.utc), a.candidates)
     print(note or f"ssrn: {len(items)} candidates", file=sys.stderr)
     if note and a.notes:
         with open(a.notes, "a") as f:   # the vote issue is the only place a degraded lane shows

@@ -15,6 +15,7 @@ Filler is never written to fill the page.
 import argparse, datetime, json, os, re, sys
 
 from triage import Fatal, Retry, block, payload, run, same_ids   # the judge plumbing, from pass 1
+from lane import contributed   # which lanes reached the pool, for the tape
 
 # The rules below are also prose inside PROMPT, where the judge reads them; both say 25 words and
 # the same five openers, and a change to one is a change to both.
@@ -149,8 +150,12 @@ def main():
     out = os.path.join(a.tape_dir, f"{day}.json")
     os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
     with open(out, "w") as f:
-        json.dump({"date": day, "scanned": len(candidates), "items": items}, f,
-                  indent=1, ensure_ascii=False)
+        # `lanes` is which lanes actually reached the pool this day, not which ones exist.
+        # It is on the tape and not just the vote issue because the page re-renders from these
+        # files every morning, and because the taste ledger argues from votes — a vote cast on
+        # a degraded day was cast on a tape drawn from half the intended pool (docs/adr/0001).
+        json.dump({"date": day, "scanned": len(candidates), "lanes": contributed(candidates),
+                   "items": items}, f, indent=1, ensure_ascii=False)
         f.write("\n")
 
 

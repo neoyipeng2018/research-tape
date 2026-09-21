@@ -38,7 +38,7 @@ Ticket: [arXiv and Crossref fetch contracts](https://github.com/neoyipeng2018/re
 
 ```
 search_query = (cat:q-fin.* OR ((cat:cs.CE OR cat:cs.LG OR cat:cs.AI) AND (<TERMS>)))
-               AND submittedDate:[<now-7d> TO <now>]
+               AND submittedDate:[<now-7d as YYYYMMDD>0000 TO <today>2359]
 max_results  = 2000
 ```
 
@@ -55,6 +55,19 @@ Rules that are not negotiable without new measurement:
 
 - **Window is a trailing 7 days**, never "yesterday". The search index runs ~3 days behind
   announcements, so a one-day window returns zero on most days and zero on every Monday.
+- **Stamp the window to the day, never the minute.** A minute stamp makes the URL unique on every
+  run, so every run is a guaranteed cache miss at arXiv's Fastly edge — and a miss is what gets
+  refused. Rounded, the day's runs share one URL and so does every other harvester asking the same
+  thing. The upper bound is the end of today, not this minute, so nothing submitted an hour ago
+  falls outside.
+- **A `406` retries the identical URL through `curl`.** `curl` ships on `ubuntu-latest`, so this
+  costs no dependency and no pip step. arXiv's edge refused stdlib `urllib` from the runner for the
+  ten days from 2026-09-11 while the same request succeeded from a residential IP and, elsewhere,
+  through `curl`; `urllib`'s header set and ordering are a fingerprint worth not matching. Any
+  other status is not `curl`'s problem and still raises. If the `406` outlives this, the corpus
+  needs a second transport (ADR-0001) — the agreed trigger is the three-day alarm in §9.
+- **`max_results = 2000` is arXiv's documented per-request cap**, not over it; over-limit returns
+  `400`, not `406`.
 - **`q-fin.*` stays unfiltered** (89% precision alone); the `cs.*` lanes stay filtered. `cs.CE`
   unfiltered is 35% precision — origami metamaterials, integral equations. Filtered it yields
   ~0.86 unique items/day that `q-fin.*` never carries, which is the AI-in-finance intersection this
@@ -318,6 +331,12 @@ One static `index.html`, monospace tape, ~46rem column, no framework and no JS.
 - Two-digit index, hairline rule per row, dense.
 - **The frame is five things:** `RESEARCH TAPE` + the date on a rule; one grey meta line
   (`N of M scanned · arXiv + SSRN`); `archive`; `rss`; `email`.
+- **The meta line names the lanes that actually fed the day**, read off the tape's `lanes` field:
+  `arXiv + SSRN` on a full day, `SSRN only — no arXiv today` on a degraded one. It says *no arXiv*
+  and never *arXiv down* — the field records what reached the pool, and the diagnosis belongs to
+  the vote issue, which is written by the lane that failed and knows why. A tape with no `lanes`
+  field predates it and reads `arXiv + SSRN` unchanged: those days were not observed, and a
+  backfill would be a claim about them nobody can make.
 - **`email` is a link, never a form.** It points at Feedrabbit with `?url=` set to this site's
   `feed.xml`, which that service echoes into its own subscribe box; the reader types only their
   address, into somebody else's site. **This repo never collects, stores or transmits an email
@@ -334,12 +353,17 @@ The renderer reads one tape file and writes both outputs; `scripts/render.py --t
 with `scripts/fixtures/` as the shape it is checked against:
 
 ```json
-{"date": "2026-08-19", "scanned": 31,
+{"date": "2026-08-19", "scanned": 31, "lanes": ["arXiv", "SSRN"],
  "items": [{"key": "...", "title": "...", "link": "...", "source": "arXiv", "claim": "..."}]}
 ```
 
-`scanned` is the day's candidate count after dedup — the M in the meta line. A tape missing a field
-renders nothing and exits non-zero (§9); it never guesses.
+`scanned` is the day's candidate count after dedup — the M in the meta line. `lanes` is which lanes
+put a candidate into that pool, in a fixed order, written by `claim.py` off the day's candidates. It
+is on the tape and not only in the vote issue for two reasons: the page re-renders from these files
+every morning, so anything not stored is forgotten by tomorrow; and the taste ledger argues from
+votes, and a vote cast on a degraded day was cast on a tape drawn from half the intended pool. A
+tape missing a field renders nothing and exits non-zero (§9); it never guesses — except `lanes`,
+which is absent on every tape written before 2026-09-21 and reads as *unobserved*, not as *empty*.
 
 `feed.xml` is a plain RSS 2.0 file rebuilt from the last 30 `tape/*.json`, one `<item>` per published
 item: title, link, claim as description, tape date as `pubDate`, key as `guid`.
@@ -473,7 +497,9 @@ Steps, in order: validate `taste.md` → install `@anthropic-ai/claude-code` →
 (`claude -p "Reply with the single word ok" --model haiku`, `timeout -k 10 120`) → fetch both lanes →
 dedup → triage ×3 (`timeout -k 30 600` per call, `timeout-minutes: 15` on the step) → claims → write
 `tape/` + `candidates/` → prune `candidates/*.json` older than 30 days → render `index.html` and
-`feed.xml` → commit and push → open the vote issue.
+`feed.xml` → commit and push → open the vote issue → **fail the run if either lane has been dead
+three days running**. That check is deliberately last: every degraded day still publishes a tape and
+opens its issue before the run is allowed to go red.
 
 A green run lands in ~12 minutes, measured: ~9m30 of that is triage's three judge calls, run in
 sequence at ~190s each over ~100 candidates, and ~1m40 is the claim call. Nothing waits on this —
@@ -513,8 +539,9 @@ costs at most a few items that come back tomorrow.
 
 | Failure | Behaviour | Notification |
 |---|---|---|
-| arXiv lane unreachable or garbage | Publish from Crossref alone. Published, not dark | One line on the vote issue, **carrying how many days running the lane has produced nothing**. Run green |
-| Crossref lane unreachable or garbage | Publish from arXiv alone; the 7-day window returns the skipped DOIs tomorrow | One line on the vote issue. Run green |
+| arXiv lane unreachable or garbage | **Degraded day**: publish from SSRN alone, and record `lanes` on the tape. Published, not dark. A `406` from arXiv's edge retries the same URL through `curl` first | One line on the vote issue, **carrying how many days running the lane has produced nothing**, and `SSRN only — no arXiv today` on the page. Run green for the first two days |
+| SSRN lane unreachable or garbage | Degraded day: publish from arXiv alone; the 7-day window returns the skipped DOIs tomorrow | As above, mirrored. Run green for the first two days |
+| Either lane dead 3 days running | Still publishes — the check is the **last** step, after the push and the vote issue, so a degraded day costs the reader nothing | **Failure email.** The vote issue is where a blip is reported and it is demonstrably not read every morning: arXiv was dead ten days before anyone noticed. At this streak the agreed response is to give that corpus a second transport (ADR-0001) |
 | Both lanes down | Dark day, default response | Failure email, no vote issue |
 | Judge auth dead | Dark day. **Not distinguished from limit exhaustion in code** | Failure email; `api_error_status` says which. Fix the secret, then `workflow_dispatch` |
 | Judge limits exhausted | Dark day. No in-run sleep or retry | Failure email. `workflow_dispatch` once limits reset |

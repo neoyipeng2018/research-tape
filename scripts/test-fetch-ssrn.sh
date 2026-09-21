@@ -6,6 +6,7 @@ cd "$(dirname "$0")/.."
 python3 - <<'PY'
 import datetime, importlib.util, json, os, shutil, sys, tempfile
 
+sys.path.insert(0, "scripts")   # the fetchers share lane.py
 spec = importlib.util.spec_from_file_location("fs", "scripts/fetch-ssrn.py")
 fs = importlib.util.module_from_spec(spec); spec.loader.exec_module(fs)
 SOURCE = open("scripts/fetch-ssrn.py").read()
@@ -124,8 +125,24 @@ items, note = fs.lane("taste.md", NOW)
 check("garbage response degrades to no candidates, with a note", (items, bool(note)) == ([], True), note)
 
 fs.fetch = lambda now, c: {"message": {"items": []}}
+# An explicit empty candidates dir, never the repo's: the note now carries a streak counted
+# off stored candidates, and a test that reads the real ones changes answer every morning.
+import json as _json, os as _os, shutil as _shutil, tempfile as _tempfile
+_c = _tempfile.mkdtemp()
 check("an empty result set degrades with a note",
-      fs.lane("taste.md", NOW) == ([], "Crossref lane returned nothing usable"))
+      fs.lane("taste.md", NOW, _c) == ([], "SSRN lane returned nothing usable via Crossref"),
+      fs.lane("taste.md", NOW, _c))
+
+# This lane carried the whole tape for the ten days arXiv was refused, and it has no second
+# transport. It gets the same streak arXiv's does, from the same counter.
+def _day(name, sources):
+    with open(_os.path.join(_c, name), "w") as f:
+        _json.dump([{"source": s} for s in sources], f)
+_day("2026-09-19.json", ["arXiv"]); _day("2026-09-18.json", ["arXiv"])
+check("the SSRN streak reaches its note too, today included",
+      "3 days running with no SSRN candidates" in fs.lane("taste.md", NOW, _c)[1],
+      fs.lane("taste.md", NOW, _c)[1])
+_shutil.rmtree(_c)
 
 # A degraded lane is only ever reported on the vote issue (§6), so the CLI has to hand
 # the note over. This lane fails independently of arXiv's, so it is checked independently.

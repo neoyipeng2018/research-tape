@@ -97,5 +97,30 @@ if scripts/render.py --tape-dir "$TMP/tape" --out "$TMP/out" >/dev/null 2>&1; th
 elif [ -n "$(ls -A "$TMP/out")" ]; then bad "empty tape dir" "wrote files"
 else ok "empty tape dir fails and writes nothing"; fi
 
+# --- the meta line tells the truth about which lanes fed the day -----------------
+# The line read "arXiv + SSRN" unconditionally through ten days of SSRN-only tape. The
+# fixtures above carry no `lanes` field and still say it, which is the compatibility path:
+# those days were never observed. These are the days that were.
+python3 - <<'PROV'
+import sys
+sys.path.insert(0, "scripts")
+from render import provenance
+cases = [
+    ("both lanes named when both fed the day", {"lanes": ["arXiv", "SSRN"]}, "arXiv + SSRN"),
+    ("a one-lane day says so, and names what is absent", {"lanes": ["SSRN"]},
+     "SSRN only \u2014 no arXiv today"),
+    ("the other way round reads the same", {"lanes": ["arXiv"]},
+     "arXiv only \u2014 no SSRN today"),
+    ("a tape from before the field claims nothing new", {}, "arXiv + SSRN"),
+]
+bad = 0
+for name, tape, want in cases:
+    got = provenance(tape)
+    print(("ok   " if got == want else "FAIL ") + name + ("" if got == want else f": {got!r}"))
+    bad += got != want
+sys.exit(1 if bad else 0)
+PROV
+[ $? -eq 0 ] || fails=$((fails+1))
+
 [ "$fails" -eq 0 ] && echo "all render checks passed" || echo "$fails check(s) failed"
 exit $((fails > 0))
