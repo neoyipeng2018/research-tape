@@ -53,6 +53,31 @@ check("garbage response degrades to no candidates, with a note", (items, bool(no
 fa.fetch = lambda *a: open("scripts/fixtures/arxiv-feed.xml", "rb").read()
 check("a usable lane carries no note", fa.lane("taste.md", datetime.datetime(2026, 8, 24))[1] == "")
 
+# A blip and a ten-day outage must not read the same: the note is the only report either gets.
+import json as _json
+c = tempfile.mkdtemp()
+def day(name, sources):
+    with open(os.path.join(c, name), "w") as f:
+        _json.dump([{"source": s} for s in sources], f)
+
+fa.fetch = down
+day("2026-09-19.json", ["SSRN"]); day("2026-09-18.json", ["SSRN"])
+check("dead days counted off the stored candidates", fa.dead_days(c) == 2, fa.dead_days(c))
+check("the streak reaches the note, today included",
+      "3 days running with no arXiv candidates" in fa.lane("taste.md", datetime.datetime(2026, 9, 20), c)[1],
+      fa.lane("taste.md", datetime.datetime(2026, 9, 20), c)[1])
+
+day("2026-09-17.json", ["arXiv", "SSRN"])   # older than the two dead days, so it cannot break them
+check("a live day ends the streak rather than extending it", fa.dead_days(c) == 2, fa.dead_days(c))
+day("2026-09-19.json", ["arXiv"])
+check("a live day today means no streak at all", fa.dead_days(c) == 0, fa.dead_days(c))
+check("first dead day carries the plain note, no count",
+      fa.lane("taste.md", datetime.datetime(2026, 9, 20), c)[1] == "arXiv lane unreachable: OSError: connection refused",
+      fa.lane("taste.md", datetime.datetime(2026, 9, 20), c)[1])
+check("a missing candidates dir is not a crash", fa.dead_days(c + "/nope") == 0)
+shutil.rmtree(c)
+fa.fetch = lambda *a: open("scripts/fixtures/arxiv-feed.xml", "rb").read()   # the CLI checks below want a live lane
+
 # The note only ever surfaces on the vote issue (§6), so the CLI has to hand it over.
 d = tempfile.mkdtemp(); out, notes = d + "/f.json", d + "/notes.md"
 sys.argv = ["fetch-arxiv.py", "--out", out, "--notes", notes]

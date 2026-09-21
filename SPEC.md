@@ -513,7 +513,7 @@ costs at most a few items that come back tomorrow.
 
 | Failure | Behaviour | Notification |
 |---|---|---|
-| arXiv lane unreachable or garbage | Publish from Crossref alone. Published, not dark | One line on the vote issue. Run green |
+| arXiv lane unreachable or garbage | Publish from Crossref alone. Published, not dark | One line on the vote issue, **carrying how many days running the lane has produced nothing**. Run green |
 | Crossref lane unreachable or garbage | Publish from arXiv alone; the 7-day window returns the skipped DOIs tomorrow | One line on the vote issue. Run green |
 | Both lanes down | Dark day, default response | Failure email, no vote issue |
 | Judge auth dead | Dark day. **Not distinguished from limit exhaustion in code** | Failure email; `api_error_status` says which. Fix the secret, then `workflow_dispatch` |
