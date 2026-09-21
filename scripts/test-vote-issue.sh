@@ -22,6 +22,11 @@ body tape-mixed.json || exit 1
 has "the day is named"     "2026-08-20"
 has "the count is stated"  "3 of 34 scanned"
 has "the paper link is in the heading" "### [Converting Expert Deliberation"
+# The body is also the email: a ballot of bare titles is the tape with the item removed.
+has "the claim rides under the heading" \
+  "Investment-committee transcripts yield tradable signals at 73% accuracy"
+has "every item carries its claim" \
+  "Banks reporting AI cost savings disclose no spend baseline"
 has "arXiv up box"   "- [ ] 👍 more like this <!--v:up:arxiv:2608.18911-->"
 has "arXiv down box" "- [ ] 👎 less like this <!--v:down:arxiv:2608.18911-->"
 has "SSRN up box"    "<!--v:up:ssrn:10.2139/ssrn.7309901-->"

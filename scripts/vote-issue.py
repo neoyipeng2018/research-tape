@@ -35,7 +35,9 @@ def body(tape, notes):
         for it in tape["items"]:
             title = it["title"].replace("[", r"\[").replace("]", r"\]")
             link = it["link"].replace(")", "%29")   # a bare ) would close the heading link
-            out += [f"### [{title}]({link})", *vote_lines(it), ""]
+            # The claim is the item (CONTEXT.md), and this body is also what lands in the
+            # watcher's inbox — a ballot of bare titles is the tape with the item removed.
+            out += [f"### [{title}]({link})", it["claim"], "", *vote_lines(it), ""]
     if notes:
         out += ["---", ""] + list(notes)
     return "\n".join(out).rstrip() + "\n"

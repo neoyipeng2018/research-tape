@@ -7,6 +7,9 @@ import argparse, datetime, email.utils, glob, html, json, os, sys
 
 SITE = "https://neoyipeng2018.github.io/research-tape/"
 ARCHIVE = "https://github.com/neoyipeng2018/research-tape/tree/main/tape"
+# By email = somebody else's RSS-to-email, prefilled. No list, no address ever reaches this
+# repo. Feedrabbit echoes ?url= into its form; Blogtrottr cannot be prefilled (POST + CSRF).
+BY_EMAIL = "https://feedrabbit.com/subscriptions/new?url=" + SITE + "feed.xml"
 FEED_DAYS = 30
 CAP = 6  # ponytail: the cap in taste.md. A day under it is thin, and says so.
 
@@ -80,7 +83,7 @@ def page(tape):
 <div class="meta">{len(items)} of {tape["scanned"]} scanned · arXiv + SSRN</div>
 {rows}
 {quiet}
-<div class="foot"><a href="{ARCHIVE}">archive</a><a href="feed.xml">rss</a></div>
+<div class="foot"><a href="{ARCHIVE}">archive</a><a href="feed.xml">rss</a><a href="{BY_EMAIL}">email</a></div>
 </html>
 """
 

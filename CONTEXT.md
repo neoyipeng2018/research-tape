@@ -35,8 +35,11 @@ loop is ever allowed to change about itself, capped at 45 lines so a new rule mu
 **Vote** — a ticked checkbox on a day's vote issue: 👍 or 👎 against one published item. A vote carries
 no timestamp; it is read by the issue it sits on.
 
-**Vote issue** — the issue opened every day the loop runs, holding that day's items as a checklist.
-It is also the heartbeat: its arrival is the proof the loop is alive.
+**Vote issue** — the issue opened every day the loop runs, holding that day's items as a checklist,
+each under its claim. Three jobs and no more: the ballot, the status surface, and the surface the
+tape is read on — GitHub mails its body to whoever watches the repo, so it is the tape's only
+delivery channel. It is also the heartbeat: the *issue's existence* is the proof the loop is alive.
+The email's arrival is not — an unread inbox and a dead loop look identical from here.
 
 **Taste PR** — the monthly pull request proposing at most three line changes to `taste.md`, argued
 from votes. There is only ever one open.

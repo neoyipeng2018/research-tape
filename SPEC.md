@@ -316,8 +316,15 @@ One static `index.html`, monospace tape, ~46rem column, no framework and no JS.
   one-source day and reads on a mixed one. Do not group by source — provenance is not the axis anyone
   reads on, and a one-source day then looks like a broken page.
 - Two-digit index, hairline rule per row, dense.
-- **The frame is four things:** `RESEARCH TAPE` + the date on a rule; one grey meta line
-  (`N of M scanned · arXiv + SSRN`); `archive`; `rss`.
+- **The frame is five things:** `RESEARCH TAPE` + the date on a rule; one grey meta line
+  (`N of M scanned · arXiv + SSRN`); `archive`; `rss`; `email`.
+- **`email` is a link, never a form.** It points at Feedrabbit with `?url=` set to this site's
+  `feed.xml`, which that service echoes into its own subscribe box; the reader types only their
+  address, into somebody else's site. **This repo never collects, stores or transmits an email
+  address, and never will while the tape has no audience to serve.** A subscriber list means a
+  third party holding real people's data, a secret in the daily run, and an unsubscribe obligation
+  — three things you cannot audit from `git log`. Blogtrottr was rejected for this slot: its form
+  is POST with a CSRF token and cannot be prefilled.
 - **A thin day is acknowledged in words** under the last row: *"Nothing else cleared the bar today."*
   It stays on a zero-item day. The count alone reads as a page that failed to load.
 - The date line always states the date of the tape being shown. Staleness is left for the reader to
@@ -349,9 +356,20 @@ didn't look. Never pre-tick: a pre-ticked "keep" manufactures approval for every
 
 ```markdown
 ### [Correlated AI forecasts increase systemic risk…](https://arxiv.org/abs/2608.01234)
+Shared forecasting models synchronise portfolios that were supposed to be independent.
+
 - [ ] 👍 more like this <!--v:up:arxiv:2608.01234-->
 - [ ] 👎 less like this <!--v:down:arxiv:2608.01234-->
 ```
+
+**The claim rides under the heading**, because this body is the only copy of the tape that is
+*delivered* rather than fetched: GitHub mails an opened issue to everyone watching the repo, so the
+issue is where the tape is actually read in the morning. §5 says the claim is the item; a ballot of
+bare titles would be the tape with its item removed. There is no SMTP step, no mail secret and no
+second rendering — the notification GitHub already sends is the whole delivery mechanism.
+
+**The heartbeat is the issue's existence, not the email's arrival.** A Gmail filter, a watch setting
+and a dead loop are indistinguishable from the inbox, so proof of life is read from the issue list.
 
 Generator rules:
 
