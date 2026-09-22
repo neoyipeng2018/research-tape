@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Beta Recall, Alpha Recall, and a Contamination Detector that Needs No Labels * Measuring Training-data Leakage in LLM Equity Signals</title>
+    <link>https://www.ssrn.com/abstract=7485818</link>
+    <description>LLM stock-ranking performance inside its training window is substantially recall-based rather than predictive.</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7485818</guid>
+  </item>
+  <item>
+    <title>Execution-Aware Alpha Mining: Teaching LLM Factor Agents to Account for Trading Costs​</title>
+    <link>https://www.ssrn.com/abstract=7498983</link>
+    <description>LLM alpha-mining agents optimized on gross returns converge to economically catastrophic turnover without explicit execution-cost penalties.</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7498983</guid>
+  </item>
+  <item>
+    <title>SoK: Trading Agents or Market Crashers? Dissecting Robustness and Security Failures in Academic Financial LLM Trading Schemes</title>
+    <link>https://arxiv.org/abs/2609.19705</link>
+    <description>Every academic LLM trading agent scheme examined exhibits security vulnerabilities enabling low-cost market-crash attacks.</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.19705</guid>
+  </item>
+  <item>
+    <title>Why Discovery Layers Guarantee Crowded Alpha: A Design Case for Quality-Diversity Search in Agentic Trading Systems</title>
+    <link>https://www.ssrn.com/abstract=7488920</link>
+    <description>A discovery layer optimized purely for predictive quality is structurally guaranteed to converge on crowded factors.</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7488920</guid>
+  </item>
+  <item>
+    <title>A Three-Layer Reference Architecture for Deterministic Control in Agentic Trading Systems</title>
+    <link>https://www.ssrn.com/abstract=7488978</link>
+    <description>Three-layer architectures with hard-gated execution prevent documented agentic trading failures.</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7488978</guid>
+  </item>
+  <item>
+    <title>EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents</title>
+    <link>https://arxiv.org/abs/2609.17632</link>
+    <description>System-prompt evolution using portfolio feedback improves LLM trading agents&#x27; Sharpe ratios in tested market regimes.</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.17632</guid>
+  </item>
+  <item>
     <title>A Causality-Gated Multi-Agent System for Generative Feature Engineering in Financial Markets</title>
     <link>https://www.ssrn.com/abstract=7493407</link>
     <description>Information leakage explains the apparent edge in LLM-generated financial features.</description>

@@ -1,0 +1,52 @@
+{
+ "date": "2026-09-22",
+ "scanned": 52,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7485818",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7485818",
+   "title": "Beta Recall, Alpha Recall, and a Contamination Detector that Needs No Labels * Measuring Training-data Leakage in LLM Equity Signals",
+   "claim": "LLM stock-ranking performance inside its training window is substantially recall-based rather than predictive."
+  },
+  {
+   "key": "10.2139/ssrn.7498983",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7498983",
+   "title": "Execution-Aware Alpha Mining: Teaching LLM Factor Agents to Account for Trading Costs​",
+   "claim": "LLM alpha-mining agents optimized on gross returns converge to economically catastrophic turnover without explicit execution-cost penalties."
+  },
+  {
+   "key": "2609.19705",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.19705",
+   "title": "SoK: Trading Agents or Market Crashers? Dissecting Robustness and Security Failures in Academic Financial LLM Trading Schemes",
+   "claim": "Every academic LLM trading agent scheme examined exhibits security vulnerabilities enabling low-cost market-crash attacks."
+  },
+  {
+   "key": "10.2139/ssrn.7488920",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7488920",
+   "title": "Why Discovery Layers Guarantee Crowded Alpha: A Design Case for Quality-Diversity Search in Agentic Trading Systems",
+   "claim": "A discovery layer optimized purely for predictive quality is structurally guaranteed to converge on crowded factors."
+  },
+  {
+   "key": "10.2139/ssrn.7488978",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7488978",
+   "title": "A Three-Layer Reference Architecture for Deterministic Control in Agentic Trading Systems",
+   "claim": "Three-layer architectures with hard-gated execution prevent documented agentic trading failures."
+  },
+  {
+   "key": "2609.17632",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.17632",
+   "title": "EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents",
+   "claim": "System-prompt evolution using portfolio feedback improves LLM trading agents' Sharpe ratios in tested market regimes."
+  }
+ ]
+}

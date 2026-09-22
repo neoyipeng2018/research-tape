@@ -1,0 +1,470 @@
+[
+ {
+  "key": "10.2139/ssrn.7485818",
+  "source": "SSRN",
+  "title": "Beta Recall, Alpha Recall, and a Contamination Detector that Needs No Labels * Measuring Training-data Leakage in LLM Equity Signals",
+  "abstract": "A large language model (LLM) asked to rank stocks on a historical date may be forecasting or it may be recalling the outcome. Inside its training window the two are observationally identical. We measure the gap on a pre-registered monthly grid of 50 US large caps and report it in the units a practitioner reads. For Llama 3.3 70B (documented cutoff 2023-12), the cross-sectional information coefficient (IC) of a from-memory recall probe is +0.166 inside the training window against-0.019 outside it, a gap of +0.185 (movingblock bootstrap 𝑝 = 0.017). A dollar-neutral long-short book on the same signal shows an annualised Sharpe ratio of +2.14 in window and +0.40 out. Three results complicate the usual reading of a gap like that. The leakage is cross-sectional rather than directional: the model's month-level direction call is 0.708 accurate before the cutoff and 0.680 after it, so market-neutral construction strips out the component that does not leak and keeps the one that does. A pre-cutoff advantage is not on its own evidence of recall, because a standing tilt across the cross-section that happened to pay leaves the same trace. One stretch of this model's training window is exactly that, and its apparent IC falls to +0.001 once each name's own average is removed within a stretch where the model behaves consistently. Contamination also leaves a mark in the responses by themselves: month-to-month repetition of the model's own ranking rises from +0.052 in window to +0.411 out, and a changepoint search on that series puts a boundary at 2022-12 (𝑝 = 0.001) using no prices, no returns and no labels. The contribution is a measurement protocol and two label-free detectors, demonstrated on one primary subject. We do not claim a general law about language models, and we do not propose a trading strategy.",
+  "link": "https://www.ssrn.com/abstract=7485818",
+  "score": 9,
+  "why": "Pre-registered training-data leakage in LLM signals."
+ },
+ {
+  "key": "10.2139/ssrn.7498983",
+  "source": "SSRN",
+  "title": "Execution-Aware Alpha Mining: Teaching LLM Factor Agents to Account for Trading Costs​",
+  "abstract": "Large language model (LLM) agents increasingly generate candidate trading signals, but many \"alpha mining\" pipelines reward the agent on in-sample return quality alone, leaving transaction costs to be discovered at implementation. We build a closed-loop system in which a locally-hosted LLM (Qwen2.5-Coder-14B-Instruct) proposes daily cross-sectional equity factors in an AST-validated expression language; each candidate is backtested on a reconstructed point-in-time S&P universe (1999-2026, not a survivorship-biased snapshot) and priced with an explicit spread-and-impact transaction-cost model; diagnostics feed back to the agent every round. We isolate the effect of an execution-cost penalty in the search objective using matched, independently seeded re-optimizations: 21 five-year-train/one-year-test walk-forward folds (2006-2026) crossed with four seed alphas from distinct predictor categories (reversal, volume, volatility, momentum) and three LLM seeds, for 12 re-optimized comparisons. An agent rewarded purely on gross return converges to 49-101%/day turnover in every category and produces a -100% cumulative return (net Sharpe -4.7 to -11.2) despite positive average gross Sharpe (0.67); a cluster bootstrap over the 252 underlying fold-level comparisons (paired execution-aware minus baseline) puts the Net Sharpe improvement at +9.96 (95% CI [8.3, 11.6]). Rewarding the identical search net of cost cuts turnover 22-38x, drives near-universal adoption of long-lookback smoothing operators, and, for the volatility-anomaly seed, produces a net-profitable factor (Sharpe +0.35, CAGR ~3.8%). The other three categories remain net-negative, by substantially smaller margins. These results identify the objective specification of an automated search as an economically consequential research choice in its own right.​",
+  "link": "https://www.ssrn.com/abstract=7498983",
+  "score": 9,
+  "why": "Closed-loop LLM alpha mining with transaction costs."
+ },
+ {
+  "key": "2609.19705",
+  "source": "arXiv",
+  "title": "SoK: Trading Agents or Market Crashers? Dissecting Robustness and Security Failures in Academic Financial LLM Trading Schemes",
+  "abstract": "Autonomous large language model (LLM) agents are moving rapidly into high-stakes domains, yet existing agentic-AI security studies remain largely domain-agnostic and overlook the distinctive, high-consequence attack surface such settings create. We examine this gap through financial trading agents, a representative case of high-stakes agentic security, where a single compromised agent has direct execution authority over real capital in an adversarial, reflexive market. To this end, we present FARSIGHT (Financial Agent Robustness and Security Investigation and Global Holistic Testing), a framework that performs scheme-level evaluation of financial LLM agents on two axes: robustness under market turbulence (including flash-crash-like scenarios), and security against three attack types: attacks on information sources, attacks on agents, and agent-as-attacker behaviors. Applying FARSIGHT to 15 representative academic schemes, we find that most overlook robustness and realistic adversarial threats: 80% fail at least one core robustness metric and 100% exhibit security vulnerabilities. These two failure modes are inseparable: a small misjudgment can cascade into a market-wide crash on its own, while an adversary can deliberately trigger the same collapse at minimal cost.",
+  "link": "https://arxiv.org/abs/2609.19705",
+  "score": 9,
+  "why": "LLM agent security comprehensive attack test"
+ },
+ {
+  "key": "10.2139/ssrn.7488920",
+  "source": "SSRN",
+  "title": "Why Discovery Layers Guarantee Crowded Alpha: A Design Case for Quality-Diversity Search in Agentic Trading Systems",
+  "abstract": "A prior reference architecture for agentic trading systems specifies a discovery layer responsible for candidate signal generation, but leaves its internal objective unspecified. This paper argues that leaving it unspecified is not a neutral choice: a discovery layer optimized purely for predictive quality is structurally guaranteed to converge on a small set of well-known factor families, because quality-ranked search has no mechanism to penalize redundancy against what other agents, funds, or model families have already found. We formalize this as a crowding-by-construction argument, distinct from the welldocumented cost and regime-dependence mechanisms of alpha decay, and show it is consistent with production evidence that agentic trading fleets exhibit no stable directional edge despite extensive signal generation. We then examine an existing quality-diversity search framework as an existence proof that the alternative-explicitly rewarding execution-profile novelty alongside predictive quality-is implementable, and translate its worker-archive design into a concrete objective specification for the discovery layer defined in our prior architecture. We close with falsification criteria distinguishing genuine diversity-seeking behavior from cosmetic diversification.",
+  "link": "https://www.ssrn.com/abstract=7488920",
+  "score": 8,
+  "why": "Formalizes crowded-alpha failure mode in agents."
+ },
+ {
+  "key": "10.2139/ssrn.7488978",
+  "source": "SSRN",
+  "title": "A Three-Layer Reference Architecture for Deterministic Control in Agentic Trading Systems",
+  "abstract": "Two lines of prior work have established, separately, that agentic trading behavior is dominated by interface and execution parameters rather than model reasoning, and that capital should enter such systems through a staged protocol gated by mechanical rather than model-mediated controls. Neither specifies what the underlying system architecture should look like. This paper formalizes a three-layer reference architecture-a discovery layer, a reasoning layer, and a deterministic execution layer with a hard-gated kill-switch-as a testable specification rather than a design metaphor. We define the responsibilities, interfaces, and failure boundaries of each layer, and cross-validate the split against two independent sources: a published multi-agent trading framework that implements a structurally similar hard-gate safety layer, and a six-month production record whose documented failure modes we map one-to-one onto the layer each was designed to prevent. We state explicitly what the architecture does not solve-interface-driven selection bias in any presentation layer built on top of it-and specify evaluation criteria under which the architecture claim would be considered unsupported. The contribution is a named, falsifiable architecture specification, not a general design philosophy.",
+  "link": "https://www.ssrn.com/abstract=7488978",
+  "score": 8,
+  "why": "Three-layer trading architecture testable production-grounded"
+ },
+ {
+  "key": "2609.17632",
+  "source": "arXiv",
+  "title": "EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents",
+  "abstract": "Large language model (LLM) trading agents can combine market data, news, and executable analysis, but their behavior is often controlled by static hand-written tool-use policies that are fixed before deployment. This limits their ability to adapt how they gather evidence, invoke tools, verify signals, and manage risk under changing market regimes. We introduce EvolveTrade, a self-evolving framework that treats the system prompt of a tool-using trading agent as a text-parameterized policy. After each update interval, a Policy Agent revises this policy using accumulated decision traces and realized portfolio feedback, while keeping the backbone LLM fixed. The updated policy is then used for the next batch of trading decisions, enabling the agent to refine its information-acquisition and portfolio-construction procedure over time. Experiments across multiple market regimes and two LLM backbones show that EvolveTrade often improves Sharpe Ratio and Cumulative Return over fixed-policy LLM baselines, achieving the improved SR and CR in most evaluated settings. Behavioral analyses further show that self-evolved policies increase code-mediated analysis and activate regime-relevant computations; case-level policy-to-return attributions trace how policy-induced allocation changes contribute to realized return differences. These results suggest that adapting the reusable procedure governing tool use is a key direction for building more robust LLM trading agents.",
+  "link": "https://arxiv.org/abs/2609.17632",
+  "score": 8,
+  "why": "Self-evolving trading agents via policy refinement loops."
+ },
+ {
+  "key": "2609.19680",
+  "source": "arXiv",
+  "title": "FINSKILLOPS: A Self-Evolving Multi-Agent System for SEC Filing QA",
+  "abstract": "Financial QA systems are typically improved before deployment through better retrieval, prompting, or agent coordination, leaving their reliability behavior fixed thereafter. In practice, new SEC-filing questions repeatedly expose heterogeneous errors in period, entity, evidence use, and calculation. Existing self-improvement methods can turn failures into new behaviors, but offer limited control over where a correction should apply or which previously correct answers it may break. We therefore frame post-deployment improvement as controlled behavioral maintenance: recurring failures should become scoped skill patches, and each patch should earn deployment with- out introducing regressions. We instantiate this view in FINSKILLOPS, a multi-agent system for SEC filing QA. FINSKILLOPS derives reusable skills from evidence-grounded, typed failure diagnoses and governs them through targeted validation, protected-case regression checks, negative controls, and versioned replacement or retirement. Across six financial QA benchmarks, a single frozen skill registry achieves the highest verdict-weighted correctness and reference consistency among the evaluated systems. Evolved skills raise correctness from 3.70 to 4.55 on our enhanced benchmark. In a separate 12-round operational study, only six of 33 proposed skills are promoted, while the monitoring non-correct rate falls from 20.0% to 12.5%. These results establish controlled skill scope, admission, and lifecycle management as the foundation for reliable self-improvement.",
+  "link": "https://arxiv.org/abs/2609.19680",
+  "score": 8,
+  "why": "Self-improving SEC QA via failure-driven skill patches."
+ },
+ {
+  "key": "2609.19789",
+  "source": "arXiv",
+  "title": "Contagion on the Trading Floor: How Adversarial Signals Spread in Multi-Agent Trading Systems",
+  "abstract": "Multi-agent trading systems built on large language models (LLMs) are beginning to appear in quantitative finance, yet their robustness to adversarial inputs is largely unknown. We study the vulnerability of LLM trading stacks to black-box, input-only attacks that enter solely via admissible social-media feeds. We introduce the Generic Multi-Agent Trading System (GMATS), a framework that captures modern multiagent trading architectures and instantiate a class of black-box poisoning attackers that treat an LLM as a post generator and inject budget-constrained, plausibly benign social-media content into the analyst's evidence stream. We define contagion metrics that trace how adversarial content propagates through the stack, including belief-shift scores at analyst and coordinator layers and attack-clean deltas on standard backtest metrics. Experiments on a safe offline benchmark with historical market and social data show that even simple input-only attackers can materially degrade risk-return profiles, sharply reducing Sharpe ratios. At the same time, we find that suitably designed multi-agent topologies and coordinator prompts can dampen adversarial shocks and improve average robustness under identical poisoning budgets.",
+  "link": "https://arxiv.org/abs/2609.19789",
+  "score": 8,
+  "why": "Adversarial attacks on multi-agent trading systems."
+ },
+ {
+  "key": "10.2139/ssrn.7498901",
+  "source": "SSRN",
+  "title": "When does coupling prediction to decision help? Regime-conditional design principles for uncertainty-aware deep reinforcement learning in trading systems",
+  "abstract": "Intelligent trading systems increasingly couple a learned forecaster to a reinforcement-learning decider, yet how tightly to couple them is rarely a design choice. We build such a system - a small Convolutional–LSTM–Transformer encoder that emits a latent state with aleatoric and epistemic uncertainty from a three-member deep ensemble, and a preference-conditioned soft actor-critic decider - and hold it fixed while varying only the coupling channel: interface (frozen two-stage T1, end-to-end T2, pretrain-then-fine-tune T3), objective (uncertainty-shaped rewards) and action (a deterministic uncertainty gate). Fifteen mechanism configurations are evaluated on five indices in three markets across three walk-forward windows under a protocol fixed in advance: paired circular block-bootstrap, tercile confidence intervals, difference-in-differences, matched-dial comparisons, matched-exposure de-leveraging controls and four pre-registered switching rules. Three results emerge. First, coupling value is regime- and market-conditional: it concentrates in high-volatility states where significant - CSI 300 (annealed shaping +1.18, p = 0.052; T2 +0.78, p = 0.013) and, independently, the S&P 500, where both channels agree (static shaping +1.15, p = 0.018; interaction +1.45, p = 0.015; fine-tuned interface +0.81, p = 0.030) - is directional on the Hang Seng (+0.95, p = 0.12), and absent or reversed in the two high-beta indices (CSI 500 interaction -1.20 to -1.53, p ≤ 0.024; Nasdaq -1.26, p = 0.060). Second, no mechanism wins unconditionally: pooled three-window block-bootstrap finds no significant pairwise difference anywhere (p ≥ 0.44). Third, diagnosis does not convert into exploitation, and matched-exposure de-risking rather than the uncertainty gate is the low-regret default.",
+  "link": "https://www.ssrn.com/abstract=7498901",
+  "score": 7,
+  "why": "Rigorous coupling evaluation proper walk-forward protocol"
+ },
+ {
+  "key": "2609.16930",
+  "source": "arXiv",
+  "title": "Repurposing Deep Limit Order Book Forecasting for Scenario-Conditioned Market Impact Modeling",
+  "abstract": "Deep Limit Order Book forecasting models capture nonlinear market dynamics, but their ability to quantify the effects of counterfactual order book messages has not been systematically validated. We introduce a model-agnostic framework that compares a trained forecaster's predictive distributions before and after injecting mechanically valid counterfactual messages, defining short-horizon model-implied market impact. A Transformer-based forecaster recovered scenario rankings with a Spearman correlation of 0.99 and 97.2% directional agreement with realized historical outcomes among non-neutral scenarios. Observation-level analysis further showed that estimated impacts captured incremental sequence-dependent variation beyond scenario identity and the pre-event forecast. These results provide evidence that pretrained Limit Order Book forecasters can be repurposed for scenario-conditioned response modeling without retraining.",
+  "link": "https://arxiv.org/abs/2609.16930",
+  "score": 7,
+  "why": "LOB forecasting for market impact with real data."
+ },
+ {
+  "key": "2609.18270",
+  "source": "arXiv",
+  "title": "BENCHCOMPASS: From Scores to Signals for Training and Harness Decisions in Payment-Domain LLMs",
+  "abstract": "Payment operations are a critical financial infrastructure, but the value of large language models in this domain remains unclear because payment rules change quickly, evidence is fragmented, and decisions depend on transaction state, participant role, region, and payment rail. Existing benchmarks do not isolate whether failures come from missing payment-rule knowledge, poor use of supplied evidence, or brittleness under imperfect harness inputs. We introduce BENCHCOMPASS, a payment-domain benchmark whose construction pipeline builds scenario-grounded tasks from typed evidence packs, applies LLM-based quality checks, creates task-input attack variants, and reserves final item admission for domain experts. The release contains an expert-reviewed Pro benchmark covering payment knowledge, context-grounded scenario reasoning, and Attacked Open robustness, plus a lower-assurance Normal pool for inspection and future curation. Across 16 model variants, BENCHCOMPASS shows qualitatively different failure modes: missing parametric payment knowledge, incomplete reasoning over supplied rules, and failure to reject plausible but invalid workflows. The benchmark remains unsaturated: the best frontier model reaches 89.6% on Open Context-Grounded Reasoning and 81.7% under attacked inputs, while a representative 32B open-weight model reaches 69.8% and 42.6%. Benchmark data and code are available at https://github.com/ant-intl/BenchCompass.",
+  "link": "https://arxiv.org/abs/2609.18270",
+  "score": 7,
+  "why": "Payment LLM benchmark; expert-reviewed scenarios."
+ },
+ {
+  "key": "2609.19866",
+  "source": "arXiv",
+  "title": "Reproducibility is not construct validity: LLM measurement of institutionally situated communication",
+  "abstract": "High annotation reproducibility does not necessarily imply that an LLM-inferred measure captures the construct it is intended to measure. We test this distinction using a dataset from the European Commission's AI Act consultation, linking structured survey responses to free-text consultation submissions from the same stakeholders. LLM annotations of consultation submissions are highly reproducible (intraclass correlations > 0.99), yet show limited convergence with survey-reported measures of the nominal construct they were intended to approximate. Divergence between survey-and LLM-inferred text-based measures varies systematically across stakeholder groups: business associations express greater concern about AI risks in text-based consultations than in survey responses ({g} = +1.0), whereas public authorities and several nonbusiness groups show smaller or negative divergences. Divergences between scores suggest positive spatial autocorrelation across European countries (Moran's I = 0.347, p = 0.036), indicating that stakeholders from neighboring countries tend toward more similar text-based stances towards AI safety concerns. Despite divergence, survey-reported concerns remain strongly associated with support for explainability across all divergence levels. These results demonstrate that LLM annotation reproducibility can coexist with poor construct correspondence and motivate validation procedures that distinguish reproducibility, construct validity, and communication context variation when LLMs are used as measurement instruments.",
+  "link": "https://arxiv.org/abs/2609.19866",
+  "score": 7,
+  "why": "Reproducibility versus construct validity in LLM measurement."
+ },
+ {
+  "key": "2609.20110",
+  "source": "arXiv",
+  "title": "Perception, Layout, and Validation: Calibrated Confidence for Reliable Straight-Through Processing of Financial Documents",
+  "abstract": "Straight-through processing (STP) on extracted key-value fields from financial documents without human review requires a calibrated probability together with a bounded guarantee on the residual error of the auto-approved tier. The emergence of modern Vision Language Models (VLMs) provides an out-of-the-box capability for extracting the key-values, but their verbalized confidence signals are unreliable and weakly track field correctness. This paper introduces a decomposed confidence layer along three interpretable channels, including perception, layout, and validation. Together with a final conformal risk control, the score can be used for reliable STP of financial documents. The method is validated on three public datasets covering real invoices, synthetic invoices, and ad-buy forms, using two different VLM families (Qwen3.6-27B and Gemini-3.1-Flash-Lite). Our decomposed score consistently improves the separation of correct from incorrect extractions, substantially raising the AUROC from 0.54-0.74 for VLM verbalized signals to 0.90-0.99 with contributions from all three designed channels. Crucially for industrial deployment, this enables usable STP. The native VLM confidence signals could clear only 0.1%-7.0% of fields under risk control at a target error of <10%. In contrast, the proposed method auto-approves 49-72% of fields while holding the empirical error of the accepted tier at or below the target.",
+  "link": "https://arxiv.org/abs/2609.20110",
+  "score": 7,
+  "why": "Confidence calibration for document straight-through processing."
+ },
+ {
+  "key": "2609.21427",
+  "source": "arXiv",
+  "title": "Decision-Focused Learning for Mean-Variance Portfolio Optimization via KKT-Based Reformulation",
+  "abstract": "Mean-variance portfolio optimization (MVO) is a central framework in data-driven asset management. A widely adopted approach is a two-stage framework that first predicts expected returns and then solves the optimization problem based on these predictions, with the predictive models trained by minimizing prediction errors. However, this objective of prediction is not aligned with the quality of the downstream portfolio decision. Decision-focused learning (DFL), which directly minimizes the downstream decision loss within the learning process, has thus emerged as a promising direction. However, existing DFL approaches to MVO rely on surrogate losses or constraint relaxations for tractability, creating a structural mismatch between predictive model training and the constrained MVO solved at evaluation. We propose a single-level optimization formulation that incorporates the Karush-Kuhn-Tucker (KKT) optimality conditions of the lower-level MVO into the upper-level learning problem. This formulation explicitly preserves the budget and short-sale constraints while remaining tractable for standard nonlinear optimization solvers. Rolling-window experiments on real-world ETF (Exchange Traded Funds) data across two asset universes with different correlation structures show that our method achieved the best performance on multiple investment metrics and also demonstrated performance improvement due to the proposed regularization.",
+  "link": "https://arxiv.org/abs/2609.21427",
+  "score": 7,
+  "why": "Decision-focused learning for mean-variance portfolios."
+ },
+ {
+  "key": "10.2139/ssrn.7498326",
+  "source": "SSRN",
+  "title": "MartingaleONet: Physics-Constrained Operator Learning for Real-Time Option Pricing and Volatility Calibration",
+  "abstract": "Quantitative derivatives pricing and dynamic hedging in stochastic volatility environments (e.g., Heston model) face severe computational bottlenecks due to the high cost of solving partial differential equations (PDEs) or conducting Monte Carlo simulations in real time. Standard artificial neural networks (ANNs) act as pointwise functions and fail to generalize across varying initial volatility surfaces or PDE parameter regimes without retraining. In this paper, we present \\textbf{MartingaleONet}. Our central contribution is a physics-constrained neural operator (\\textbf{DeepONet}) for stochastic volatility option pricing that maps initial PDE parameters directly to option surfaces $V(S, K, T)$, achieving an inference speedup of over $15,000\\times$ compared to finite difference methods (FDM) with an RMSE of $\\$1.18$ ($10.07\\%$ MAPE). Downstream, we demonstrate key quantitative applications enabled by this central operator: leveraging PyTorch automatic differentiation, we derive continuous Autograd Greeks ($\\Delta, \\Gamma, \\mathcal{V}$) that eliminate grid discretization noise, reducing dynamic deep hedging PnL variance by over $59\\%$ under proportional transaction costs ($10\\text{bps}$ to $20\\text{bps}$). Furthermore, we integrate a \\textbf{TimeGAN} generator with a novel \\textbf{Martingale Drift Correction Layer} to synthesize risk-neutral asset price paths satisfying $\\mathbb{E}^*[S_{t+1}/S_t] = e^{r\\Delta t}$ across extreme Out-of-Distribution (OOD) shocks and 3x leveraged ETF dynamics. Empirical validation on 10 years of US market ETF data (SPY, QQQ, VIX) and neural operator benchmarks (FNO, PINN, MLP) confirms state-of-the-art accuracy and arbitrage-free guarantees.",
+  "link": "https://www.ssrn.com/abstract=7498326",
+  "score": 6,
+  "why": "Impressive pricing speedup but infrastructure not strategy"
+ },
+ {
+  "key": "2609.17788",
+  "source": "arXiv",
+  "title": "SAiFE-gym: Model-based Environments for Automated Market Making with Concentrated Liquidity",
+  "abstract": "We present SAiFE_gym, a Python module that provides a collection of simulation environments for studying trading problems in Constant Product Markets (CPMs) with Concentrated Liquidity (CL). These markets give Liquidity Providers (LPs) granular control over how their capital is allocated and enable them to adjust their range of liquidity provision dynamically based on market conditions, which in turn, dictates how they earn fees. We decompose the microstructure of CPMs with CL in interactive components that allow researchers and practitioners to capture various economic settings. We employ a vectorized approach to optimize our environments, making them scalable for high dimensional Reinforcement Learning (RL) workflows that best describe sequential decision problems. We demonstrate the benefits of our environments by evaluating the performance of RL agents in CPMs with CL under uncertainty in market parameters.",
+  "link": "https://arxiv.org/abs/2609.17788",
+  "score": 6,
+  "why": "AMM/LP gym environments; useful infrastructure only."
+ },
+ {
+  "key": "2609.17885",
+  "source": "arXiv",
+  "title": "ERPBench: A State-Grounded Evaluation Paradigm for Computer-Use Agents in Enterprise Software",
+  "abstract": "Computer-use agents that operate through screenshots and simulated actions are advancing rapidly, yet their evaluation remains anchored to general desktop and web tasks. Enterprise Resource Planning (ERP) systems run the finance, procurement, inventory, and customer operations of organizations worldwide, and pose distinct challenges for computer-use agents: dense interfaces, coordinated multi-step interactions, and errors that alter persistent business records rather than surfacing on screen. Existing enterprise benchmarks rely on proprietary platforms or on simulated approximations of such software. We introduce ERPBench, a benchmark that evaluates screenshot-only agents on a live and reproducible ERP system and scores each task against ground-truth values in its database. Beyond the benchmark, we present a production-grade harness that gates agent actions behind human approval for safe deployment, which ERPBench runs autonomously. Evaluating six closed and open-source agents, we demonstrate that strong general GUI performance does not transfer to enterprise reliability. Even when an agent reaches the right form and saves it, the stored record is often wrong: some agents save in up to 85% of runs but write the correct value in as few as 3%. We further characterize failure modes specific to enterprise workflows.",
+  "link": "https://arxiv.org/abs/2609.17885",
+  "score": 6,
+  "why": "ERP evaluation harness; not financial-specific."
+ },
+ {
+  "key": "2609.18019",
+  "source": "arXiv",
+  "title": "Model-Free Passive Execution via Order-Level Shadowing",
+  "abstract": "Automated execution algorithms are organized into schedule-based and liquidity-seeking families. This paper concerns the first, whose members -- Time-Weighted Average Price (TWAP), Volume-Weighted Average Price (VWAP), Percentage of Volume (POV) and Implementation Shortfall -- are all model-based: each derives its decisions from an explicit model, forecast, schedule or control rule. We introduce Shadow-PPOV, a passive POV whose order-placement rate is set from observed order flow rather than from traded volume. Placing a passive order to fill efficiently conventionally involves an order-book model and a fill prediction. Shadow-PPOV replaces that prediction with tracking: on observing a third-party add, it may transmit its own limit order at the same price on the same venue, recording a single association between the observed order's exchange identifier and its own. Cancellation is then identifier-driven -- the shadow is withdrawn when the order it follows ends, at once on a cancel and after a brief grace window on a trade. The placement decision is thus model-free: price and venue are read off the observed order. Model-free is not information-free. Shadow-PPOV reads every order-book message and places only where a participant has just committed capital, while computing nothing from what it reads. Information is inherited from the flow rather than derived from a model. We evaluate Shadow-PPOV on a full calendar year of replayed Chicago Mercantile Exchange (CME) ES futures in a deterministic market-replay simulator, reporting its slippage and latency sensitivity and comparing it against the aggressive equivalent POV. We propose it as a model-free benchmark for passive-order placement, against which a predictive placement model can be scored. The algorithm and the order-book simulator are implemented in the open-source kaspar-hft project.",
+  "link": "https://arxiv.org/abs/2609.18019",
+  "score": 6,
+  "why": "Passive execution algorithm; incremental variant."
+ },
+ {
+  "key": "2609.20550",
+  "source": "arXiv",
+  "title": "Principal component error in high-dimensional factor models",
+  "abstract": "In a statistical factor model, principal components (or eigenvectors) of a sample covariance matrix serve as estimates of {\\it principal directions}, the true drivers of co-movement of a collection of observed variables. We write the often substantial error in these estimates as a sum of two interpretable terms, which we show have almost sure asymptotic limits as the number of variables grows with sample size bounded. This scenario is commonplace in financial economics, genomics, machine learning and signal processing. {\\it Out-of-subspace error} measures the distance from an estimate to the subspace spanned by population factor exposures. It can be expressed in terms of data, providing an estimable floor for error. {\\it In-subspace error} arises from the fixed sample size of the latent factor returns and cannot be estimated from data alone. We illustrate our error analysis with a three-factor simulation of the US public equity market, showing the dependence of the magnitude of the error and its components on dimension and sample size. In that simulation, out-of-subspace error dominates. Researchers who rely on principal component analysis to estimate factor models can use our results to quantify errors in model-based predictions and attributions.",
+  "link": "https://arxiv.org/abs/2609.20550",
+  "score": 6,
+  "why": "PCA error decomposition applicable to factors."
+ },
+ {
+  "key": "2609.21173",
+  "source": "arXiv",
+  "title": "Adapting the Actor Model of Concurrency for High-Frequency Trading: Synchronous Message Delivery (fast_send) and a Tick-to-Book Latency Study",
+  "abstract": "The actor model - state isolation, data-race freedom, deadlock resistance, and sequential single-message reasoning - has long been dismissed as unsuitable for high-frequency trading (HFT): actors seem to imply many threads, a mailbox per actor, and a heap-allocated message plus a context switch per interaction, overhead incompatible with a microsecond budget. This paper argues the dismissal is wrong for co-located actors, and supports it both analytically and with a deployed, measured implementation: kaspar-hft, an open-source C++20 framework. Four extensions adapt the model for HFT: fast_send, a synchronous delivery mechanism in which the sending thread runs the receiver's handler inline and returns the reply as a value; actor groups, which co-schedule actors on one thread behind a shared mailbox; per-actor selectable mailbox queues; and a memory pool. fast_send has receiver transparency: the handler cannot tell whether delivery was synchronous or asynchronous, or which thread runs it. A grouped synchronous chain runs on one thread, cutting scheduler context switches from O(N) to O(1), and a thread-local call-chain test catches cyclic invocation before any lock is taken. Microbenchmarks put the synchronous round trip at tens of nanoseconds. On a live CME market-data feed (ES, NQ, ZN futures), socket-to-book latency decomposes into a ~7 microsecond decode-and-book floor plus a per-message slope; the framework's own contribution is under 1% of the floor. The tail is set not by the actor machinery but by the market's non-Poisson, clustered arrival process, characterized in a companion paper. The shared-queue group also yields a production/simulation duality: the same actor code runs unchanged in live trading and deterministic backtest.",
+  "link": "https://arxiv.org/abs/2609.21173",
+  "score": 6,
+  "why": "Actor model HFT latency practical"
+ },
+ {
+  "key": "10.2139/ssrn.7480458",
+  "source": "SSRN",
+  "title": "Testing the Adaptive Market Hypothesis across Global Markets through Trading Strategies",
+  "abstract": "Financial markets may not be equally efficient across countries or economic conditions. This paper tests weak-form market efficiency across global equity markets, U.S. market sectors, and several market regimes, including the COVID-19 shock, post-COVID recovery, inflation and interest-rate shock, and recent AI-driven period. Market efficiency is evaluated using three statistical methods: the variance-ratio test, autocorrelation test, and runs test. The results show that most markets were generally consistent with weak-form efficiency during normal periods, while deviations became more common during major disruptions, particularly the COVID-19 shock. Emerging and frontier markets also showed greater evidence of serial dependence than developed markets. Mean-reversion and trend-following strategies were then compared with a buy-and-hold benchmark to determine whether these inefficiencies could be used in practice. However, the strategies did not consistently outperform the buy-and-hold benchmark. Overall, the changing levels of efficiency across markets and time periods support the Adaptive Market Hypothesis, which suggests that market efficiency changes as conditions and investor behavior evolve.",
+  "link": "https://www.ssrn.com/abstract=7480458",
+  "score": 5,
+  "why": "Solid empirical efficiency testing; no new method."
+ },
+ {
+  "key": "10.2139/ssrn.7481602",
+  "source": "SSRN",
+  "title": "Multivariate Stochastic Volatility with Machine Learning-Augmented Regime Detection for Cross-Market Financial Contagion: A Bayesian Nonparametric and Ensemble-Learning Comparative Framework",
+  "abstract": "This paper extends the empirical framework of Christopher (2026), which documents a 49% contagion intensification between the S&P 500 and Nifty 50 during joint high-volatility regimes using GJR-GARCH and rolling-threshold regime classification, along two dimensions: replacing the univariate GARCH specification with a jointly-estimated multivariate stochastic volatility (MSV) model, and replacing the fixed three-regime classification with a data-driven layer combining an infinite Hidden Markov Model (iHMM) with an ensemble machine-learning classifier. A full Bayesian implementation-a Gibbs/FFBS-estimated MSV with ancillaritysufficiency interweaving, and an iHMM estimated via truncated Dirichlet-process, hierarchical Dirichlet process, and beam-sampling approximations-finds a posterior mean correlation of 0.824 between the two markets' latent volatility innovations, and a contagion-intensification estimate ranging from-49.5% to +295.7% depending on estimator, regime-partition choice, sample period, and bias-correction. This sensitivity is itself a central finding: correlation-based estimates prove too methodology-dependent to report as a single magnitude, whereas the biasimmune Bayesian volatility-innovation correlation remains stable under subsample and prior perturbation. Freed from a fixed state-count ceiling, beam sampling recovers 11-12 active regimes versus 14-15 under truncated alternatives. Full derivations and convergence diagnostics are provided in the appendices.",
+  "link": "https://www.ssrn.com/abstract=7481602",
+  "score": 5,
+  "why": "Methodologically sophisticated but single market pair"
+ },
+ {
+  "key": "10.2139/ssrn.7499774",
+  "source": "SSRN",
+  "title": "From Common Knowledge to Distributed Architecture: AI and the Evolution of Financial Innovation Ecosystems",
+  "abstract": "Artificial intelligence (AI) transforms established industries not as a single standardized artifact, but through repeated recombination between general-purpose capabilities and domain-specific applications. Innovation-ecosystem research explains how actors, governance, and coordination shape ecosystem emergence, yet less is known about how decentralized inventive search contributes to persistent shared technological architecture. We examine this question in the financial-AI ecosystem by asking whether overlap between an innovator’s prior AI knowledge and the ecosystem’s accumulated knowledge is associated with greater architectural alignment in subsequent inventions, and whether architectural alignment is associated with technological diffusion beyond finance. Combining the corrected USPTO Artificial Intelligence Patent Dataset 2023 with PatentsView, we map 29,989 U.S. financial-AI patents from 2000-2019 and test the patent-level model in 18,230 inventions using fixed-effects models. The ecosystem expands and becomes less concentrated while its component-application architecture grows increasingly persistent, a pattern we characterize as distributed architectural stabilization. Knowledge commonality is positively associated with stronger architectural alignment, while alignment is associated with lower subsequent diffusion. An assignee-clustered bootstrap supports a negative indirect association through alignment despite a null total commonality-diffusion relationship. The study theorizes decentralized recombinant search as a microfoundation of ecosystem architecture and architectural alignment as a mechanism of endogenous technological boundary reinforcement.",
+  "link": "https://www.ssrn.com/abstract=7499774",
+  "score": 5,
+  "why": "Patent ecosystem analysis; structural not actionable."
+ },
+ {
+  "key": "2609.16493",
+  "source": "arXiv",
+  "title": "From Manual Construction to AI-Driven Scenario Emergence: Rethinking Catastrophe Risk Modeling",
+  "abstract": "Traditional catastrophe (CAT) risk models rely on costly manual construction to generate extreme weather scenarios, an approach largely unchanged since the 1990s. As climate extremes intensify, this creates mounting challenges to the entire risk transfer chain. This study proposes the TAISE framework, which repurposes AI weather forecasting models to produce coherent extreme weather sequences at a fraction of traditional costs. Through self-iterative generation, the framework produces continuous global atmospheric fields from which extreme events emerge. A proof-of-concept experiment demonstrates an order-of-magnitude reduction in computational cost compared with conventional methods, while capturing temporal continuity and cross-regional correlations absent in snapshot-based approaches. These findings suggest a pathway toward democratising catastrophe risk quantification and enabling dynamic, comprehensive portfolio assessment for insurers, reinsurers, ILS fund managers and public-sector risk managers.",
+  "link": "https://arxiv.org/abs/2609.16493",
+  "score": 5,
+  "why": "AI weather for CAT scenarios. Real application but not core trading/ML domain."
+ },
+ {
+  "key": "2609.18126",
+  "source": "arXiv",
+  "title": "Designing Agentic AI Workflow Portfolios under Imperfect Selection and Compute Cost",
+  "abstract": "Agentic AI systems often approach the same task through multiple workflows that differ in reasoning strategy, verification structure, and compute cost. A natural deployment policy is to use the workflow with the highest average performance, but this can be suboptimal because different workflows may succeed on different instances. We study a portfolio-and-selector paradigm in which a firm runs multiple workflow executions and selects the final answer after observing their outputs. Additional executions may uncover correct answers that the best standalone workflow misses, but they consume compute and introduce plausible distractors that complicate final selection. We formulate this as a workflow portfolio problem in which the firm jointly chooses run size and allocation across workflow types. We summarize selector quality through an odds-lift index and derive sharp bounds on the value of workflow variety. For finite workflow pools, we develop exact formulations, linear programming relaxations, randomized rounding procedures, and computable performance certificates. For large implicit workflow classes, we derive a finite-dimensional dual and an ellipsoid method using a pricing oracle to identify workflows with high weighted accuracy net of recurring compute cost. Under a weak condition, the method obtains a near-optimal solution to the relaxation with polynomially many oracle calls. We evaluate the framework on three datasets: ABCD, Schema-Guided Dialogue, and HotpotQA. Relative to the best standalone workflow, portfolio optimization improves held-out selector accuracy by 3.1, 7.5, and 0.9 percentage points, respectively. Dual-guided workflow generation adds 3.5 points on ABCD and 24.1 on HotpotQA, with no additional gain on Schema-Guided Dialogue.",
+  "link": "https://arxiv.org/abs/2609.18126",
+  "score": 5,
+  "why": "Workflow portfolio general not finance-specific"
+ },
+ {
+  "key": "2609.18320",
+  "source": "arXiv",
+  "title": "Attention Dispersion as a Diagnostic Signal for Hallucination in Large Language Models",
+  "abstract": "Large Language Models (LLMs) frequently exhibit hallucinations, presenting a major barrier to reliability in complex reasoning tasks. While traditional detection methods rely on output-based confidence metrics, these logits are often miscalibrated by modern alignment techniques. In this paper, we investigate the temporal volatility of internal attention mechanisms as an alternative diagnostic signal for hallucination that does not depend on output calibration. By introducing an unsupervised metric for attention dispersion, we show that epistemic uncertainty leaves a measurable trace within intermediate layers, where spikes in attention entropy are associated with reasoning breakdowns. We evaluate our approach on mathematical reasoning benchmarks (GSM8K and MATH-500) using the Qwen2.5 model family (1.5B and 3B parameters), finding statistically significant AUC improvements of up to +0.076 over output-based baselines across all tested conditions. These findings suggest that attention dispersion is a promising complement to traditional hallucination detection methods, requiring further investigation across broader model families and task domains.",
+  "link": "https://arxiv.org/abs/2609.18320",
+  "score": 5,
+  "why": "Hallucination signal math tested not finance"
+ },
+ {
+  "key": "2609.18605",
+  "source": "arXiv",
+  "title": "PACT: Can Enterprise AI Assistants Be Trusted Under Pressure?",
+  "abstract": "As corporate AI adoption continues to grow, enterprise-grade LLM agents are being deployed into sensitive contexts such as hiring, healthcare, and finance. In these contexts, compliance with rules specified in an agent's system context is a first-order legal concern. Currently, no evaluation framework systematically measures which LLM models tend to violate compliance rules, especially under pressure from a persistent user, a hurried manager, or circumstances where violation is convenient or attractive. We introduce PACT (Pressure-Applied Compliance Testing), a benchmark for rule-following under pressure in AI agents assisting employees in daily tasks across twelve regulated enterprise domains and forty-eight scenarios, each set in a realistic multi-turn conversation. Each benchmark item pairs a standing rule against a rule-violating shortcut, and applies a battery of pressures across different wordings and system-prompt modes. We construct PACT component by component under strict LLM-as-judge auditing to ensure samples are unambiguous, ungameable, and realistic enough to avoid eliciting evaluation-aware behavior. We use PACT to profile LLM compliance across six complementary metrics that create a holistic picture of an AI assistant's robustness under pressure and throughout multi-turn conversations, its transparency, and ability to correctly discern where a rule applies. We aggregate this profile into PACTScore, a reliability-weighted compliance rate over all items and modes. Our results across 22 common LLM models spanning multiple providers and sizes show substantial variability in compliance across models and metric dimensions. Even the strongest assistants mis-apply a rule on 6 to 10% of items, and ordinary user pressure raises the violation rate by 65% on average. PACT highlights compliance risks in LLM assistants, motivating guardrails and careful model selection.",
+  "link": "https://arxiv.org/abs/2609.18605",
+  "score": 5,
+  "why": "Compliance testing; not financial-method specific."
+ },
+ {
+  "key": "2609.21271",
+  "source": "arXiv",
+  "title": "Nested Clustered Optimization Is One End of a Schur Bridge, and the Interior Is Sometimes Provably Better",
+  "abstract": "Nested clustered optimization allocates within each cluster from the cluster's own covariance block and then across the resulting cluster portfolios. Block inversion says the unconstrained minimum-variance portfolio has the same two-tier shape, with each block replaced by its Schur complement against every other asset. Conditioning instead on one knot from each other cluster truncates the conditioning set in the manner of a Vecchia approximation, and we give the rank-one model of cross-cluster dependence under which it is exact. Damping the complement by $γ\\in[0,1]$ then gives a bridge with nested clustered optimization at $γ=0$ and the global optimum at $γ=1$, with no linear solve larger than a cluster or the number of clusters. Under estimation error the optimal $γ$ can be strictly interior and full coupling can remain optimal, and we give the local theorem at the minimum-variance end with exact examples of both, including a symmetric family in which the optimum is a closed form.",
+  "link": "https://arxiv.org/abs/2609.21271",
+  "score": 5,
+  "why": "Portfolio optimization interior optimality niche"
+ },
+ {
+  "key": "2609.21291",
+  "source": "arXiv",
+  "title": "Efficient simulation schemes for pricing options under the Ornstein--Uhlenbeck driven stochastic volatility model",
+  "abstract": "We develop an efficient Monte Carlo simulation scheme for pricing options under the Ornstein-Uhlenbeck driven stochastic volatility model via the operator splitting approach. With an ingenious splitting of the governing stochastic differential equations, our operator splitting scheme admits analytic solutions in all sub-steps, so its implementation is simplified to require simulation of a few normal variates. This resolves the two typical numerical challenges in other simulation schemes, namely, sampling of conditional integrated variance and pathwise inverse integral transform of characteristic functions. There are three pioneering simulation schemes that attempt to overcome the above two numerical challenges. These include the Hilbert interpolation scheme of Zeng et al. (2023), Karhunen-Lo`eve expansion scheme of Choi (2025) and moment matching scheme based on the Inverse Gaussian distribution of Brignone and Sgarra (2026). We performed numerical tests to compare accuracy-speed performance of pricing options using our operator splitting scheme with these three pioneering schemes. We found that our scheme competes favorably well in terms of accuracy-speed tradeoff among all these schemes, in particular for pricing path dependent options with a large number of monitoring instants. The performance of our scheme can be well enhanced by martingale-preserving control variates and variance reduction via conditioning.",
+  "link": "https://arxiv.org/abs/2609.21291",
+  "score": 5,
+  "why": "Operator-splitting SV simulation; incremental."
+ },
+ {
+  "key": "2609.22052",
+  "source": "arXiv",
+  "title": "Design and pricing of a transparent parametric-modeled loss CAT bond: application to German windstorm",
+  "abstract": "Catastrophe (cat) bonds overcome some lack of reinsurance by sourcing capacity from the wider capital markets. We present a new type of cat bond addressing the known trade-off between moral hazard and basis risk. As our main contributions we propose a trigger mechanism which is entirely transparent and simpler to evaluate compared to indemnity modeling techniques, as well as a methodology to price this cat bond. This is relevant for insurers and public authorities in a world where natural disasters are occurring with increasing frequency and severity due to climate change, but also for players willing to enter the cat bond market for whom the lack of transparency of this asset class has been a significant obstacle. Our trigger is derived from a cost random field which separates the physical hazard, a vulnerability function and the exposure. This allows the trigger to take a flexible form between parametric and modeled loss, in case exposure is taken into account. We present a case study based on historical windstorm events impacting Germany. Using wind speed data from historical storms, we fit a max-stable random field on a resolution which is standard in the reinsurance industry. The availability of industry loss and exposure data allows us to calibrate the vulnerability component to historical observations. Besides measuring the basis risk associated with our trigger, we perform a full model assessment and discuss numerical results.",
+  "link": "https://arxiv.org/abs/2609.22052",
+  "score": 5,
+  "why": "CAT bond parametric design; academic exercise."
+ },
+ {
+  "key": "10.2139/ssrn.7499088",
+  "source": "SSRN",
+  "title": "SHARC-GAN: A State-Aware Hybrid Adversarial Residual Correction Framework with A Dual-Path Price–Return Critic for Multi-Horizon Financial Forecasting",
+  "abstract": "Multi-horizon financial time series forecasting is challenging due to increasing uncertainty and long-range temporal dynamics. Single-step-ahead prediction is less complex than multi-step-ahead forecasting. As the horizon increases, prediction uncertainty, temporal dependence degradation, and statistical structure distortions become acute. Existing deep generative models achieve significant improvements in temporal representation learning and adversarial distribution matching. However, modern studies lack cross-scale temporal fusion, horizon-aware residual correction, joint evaluation of price-return consistency, and Horizon-aware statistical fidelity. To address these challenges, this research proposes a state-aware hybrid adversarial residual correction GAN framework (SHARC-GAN), introducing a state-discrepancy residual fusion (SDRF) to capture local and trend features with a dynamic gating agreement, a horizon-aware residual correction (HARC) mechanism to adapt forecasting error residuals, a dual-path price-return critic to maintain return consistency with the generated price sequence, and a composite generator loss function to maintain statistical fidelity with real market dynamics. The proposed framework is evaluated against six modern deep learning and GAN-based baselines across six stock datasets. It achieves horizon-wise averages up to 52.7% lower RMSE and 54.8% lower MAPE, stock-wise up to 64.4%, 56.2%, and 63.0% lower Wasserstein distance, KS statistic, and JS divergence, and up to 5.0x higher KS p-value than the baselines.",
+  "link": "https://www.ssrn.com/abstract=7499088",
+  "score": 4,
+  "why": "Price predictor; no baseline or costs mentioned."
+ },
+ {
+  "key": "2609.16642",
+  "source": "arXiv",
+  "title": "From Public Evidence to Contractual Outcome: First and Stable Decidability on Kalshi",
+  "abstract": "Public evidence can become sufficient to settle a prediction-market contract before the venue records its first determination, but the relevant boundary depends on the applicable rule version, exact release object, source hierarchy, correction history, and unfinished contract conditions. This paper defines two Kalshi clocks: first decidability, the earliest contemporaneous singleton in the rule-evidence mapping, and stable decidability, the retrospective earliest time after which the same singleton remains unchanged through finalization. A completed retrospective identification test establishes a narrow feasibility result. In a frozen blind pilot, all 25 identities and blinding checks passed and current rule text was recovered for all 25; no exact or bounded historical rule version and no exact or bounded official source-release object was recovered. The full historical recovery covered 152,694 ordinary tickers, 11,530 exact event identities, and 6,540 read-only official requests, with zero historically eligible events and zero historically eligible tickers. This is an observability result, not a claim that no market was decidable or that public evidence never existed. A completed prospective infrastructure shakedown established observation capability for three source programmes across 25 markets, with integrity revalidation of 781,266 lifecycle frames, 22 closed lower-bounded reconnect receipts, no unresolved reconnect gap, no due-but-missed official release, and an inactive price layer. Production evidence enrollment is active. The prospective sample is constructed only at enrollment close from prospectively frozen identities and pre-outcome fields; its frozen target size is selected mechanically under the registered full, reduced, exploratory, or no-go support disposition. No contractual-decidability clock, human-adjudication, price, or cross-venue result is reported here.",
+  "link": "https://arxiv.org/abs/2609.16642",
+  "score": 4,
+  "why": "Kalshi settlement mechanics; too narrow platform-specific."
+ },
+ {
+  "key": "2609.19102",
+  "source": "arXiv",
+  "title": "Optimal entry and exit for variance swaps: closed-form rules for the perpetual contract",
+  "abstract": "Variance swaps are a convenient instrument for trading vega and convexity, and a listed contract now trades on Cboe. We ask when a trader should put such a position on and when she should take it off, and for a perpetual, continuously settled contract we answer both in closed form: each threshold is the unique root of a smooth-pasting equation in confluent hypergeometric functions. Under the pricing measure the question has no content, the mark-to-market being a martingale. Under the physical measure with a variance risk premium it becomes meaningful, and then reduces: the accrued variance separates exactly, the maturity, strike and costs are absorbed into a single forcing term whose sign fixes the geometry of the exercise region, and what is left on the perpetual is an affine reward on a CIR process, which the optimal-stopping literature already solves. Entering the position and exiting it are not mirror images. An exit rule follows from the premium and the trading spread, both observable. For the short --- the only side worth opening under the empirical sign of the premium --- an entry rule exists only for an interval of carrying charges, and even there triggers only deep in the upper tail of the physical law: a trader who is out of the market pays nothing to stay out, so an operational entry rule needs a cost of idle capital that the exit rule does not.",
+  "link": "https://arxiv.org/abs/2609.19102",
+  "score": 4,
+  "why": "Variance swap closed-form; academic without market test."
+ },
+ {
+  "key": "2609.20989",
+  "source": "arXiv",
+  "title": "Trustworthy FinAInce: Unpacking How AI-Mediated Financial Advice is Judged",
+  "abstract": "As generative AI is increasingly used as a source of personal financial guidance, understanding how people appraise such advice is important for supporting appropriate reliance. We conducted a randomized vignette experiment with 285 U.S. adults across eight financial decisions, independently varying three advice styles---AI, expert, and online community---and displayed source labels while holding the underlying recommendation consistent. Advice style most strongly shaped message and safety appraisals, Expert labels selectively increased perceived source knowledge, and decision context primarily shaped risk and safety appraisals. These appraisals were associated with downstream judgments, with models explaining 69.2% of overall quality, 75.9% of trust, and 82.9% of intended reliance. Expert-style advice also remained most preferred when shown without source labels. Our findings have implications for understanding financial advice evaluation, distinguishing the roles of advice style and source labels, and designing financial AI that supports grounded evaluation rather than simply maximizing trust.",
+  "link": "https://arxiv.org/abs/2609.20989",
+  "score": 4,
+  "why": "User study of trust; social science not technical."
+ },
+ {
+  "key": "2609.21301",
+  "source": "arXiv",
+  "title": "Simulation of stochastic volatility models via operator splitting schemes",
+  "abstract": "The standard Euler discretization schemes for numerical option pricing under stochastic volatility models are known to exhibit high biases and potential unreliability. The alternative use of the exact (unbiased) simulation approach invariably involves numerical evaluation of integrated variance (and / or volatility) conditional on terminal variance (volatility) value. To resolve the technical challenge, most simulation schemes either employ the tedious Fourier inversion of conditional characteristic function or numerical approximation by moment matched distribution. We propose a general framework of constructing efficient and reliable simulation schemes for stochastic volatility models via the Strang operator splitting approximation. The simulation procedure completely circumvents the necessity of evaluation of conditional integrated variance (and / or) volatility. Our simulation schemes compete favorably well with most existing exact simulation schemes and the biased Euler schemes in terms of accuracy, efficiency, reliability and ease of implementation. Extensive numerical tests were conducted to illustrate the versatility and success of our operator splitting approach for most common stochastic volatility models, such as the Heston-type models, lifted Heston model, Hull-White model, and Barndorff-Nielsen and Shephard model. We also establish the proof of second-order convergence of the operator splitting schemes.",
+  "link": "https://arxiv.org/abs/2609.21301",
+  "score": 4,
+  "why": "Stochastic vol schemes not novel"
+ },
+ {
+  "key": "2609.16500",
+  "source": "arXiv",
+  "title": "High-Performance Tensor Formulation of the Viterbi Algorithm for Hidden Semi-Markov Models",
+  "abstract": "Hidden Semi-Markov Models (HSMMs) are fundamental probabilistic models widely adopted across diverse domains, from computational biology to finance and signal processing. The Viterbi algorithm decodes the most likely state sequence given an HSMM and can be applied iteratively for ab initio model learning. However, existing Viterbi implementations remain sequential, and GPU-accelerated solutions are entirely absent, making HSMM decoding impractical for large-scale workloads. We present a tensor-based formulation of the Viterbi algorithm for HSMMs, restructuring the inner loops into tensor operations that naturally map onto SIMD units and massively parallel architectures. Building on this formulation, we provide optimized implementations spanning single- and multi-core CPUs, and, for the first time, GPU. Experimental evaluation demonstrates speedups of up to 14x on a single core, over 200x with multi-core, and over 570x on GPU over the state-of-the-art sequential baseline, establishing a new performance baseline for large-scale HSMM decoding.",
+  "link": "https://arxiv.org/abs/2609.16500",
+  "score": 3,
+  "why": "GPU Viterbi efficiency; not finance-specific."
+ },
+ {
+  "key": "2609.17171",
+  "source": "arXiv",
+  "title": "A unified framework for global and local interpretability using adaptive derivative-ordered random explanation",
+  "abstract": "The interpretability of complex machine learning models is of paramount importance, especially in real-world high-stakes domains such as healthcare and finance. However, existing post-hoc interpretability methods suffer from inherent limitations: fragmented analytical processes, inadequate capacity to model nonlinear feature interactions, computational inefficiencies, and over-reliance on specific model architectures. To address these challenges, this paper provides a novel method - Adaptive Derivative-Ordered Random Explanation (ADORE) - that leverages first- and second-order derivatives to accommodate nonlinear model complexities, while enabling effective capture of feature-sample interactions within a unified analytical framework. ADORE integrates global feature importance with local sample contributions, precisely quantifying feature impact by capturing both magnitude and direction, and identifying critical samples influencing model decisions. Furthermore, it achieves computational efficiency through randomized singular value decomposition (SVD) and dynamic sparsity detection, making it scalable to large, high-dimensional datasets. Experiments across three data modalities - tabular, text, and image - demonstrate that ADORE outperforms existing methods such as LIME and SHAP in handling complex interactions and computational efficiency, while providing detailed and reliable explanations. To facilitate adoption and reproducibility, ADORE has been released as an open-source Python package, hosted on GitHub, enabling researchers and practitioners to readily adapt and apply our approach to their specific tasks, models, and datasets.",
+  "link": "https://arxiv.org/abs/2609.17171",
+  "score": 3,
+  "why": "Interpretability method; general ML, not finance-specific."
+ },
+ {
+  "key": "2609.17969",
+  "source": "arXiv",
+  "title": "Memory Has Geometry: Non-Uniform Geometric Memory for Long-Horizon Personalized AI",
+  "abstract": "Long-term memory is becoming a core substrate for personalized AI, yet most systems still represent personalization as discrete records in a largely static latent space, accessed under one global similarity notion. For data mining, this creates a mismatch: the evidence is a temporal event stream, while the dominant abstraction is a searchable record set. We argue that long-horizon personalization should instead model memory as a user-specific dynamical state space with locally heterogeneous geometry. Geometry here is a computational language, not a literal claim about cognition: it captures stable versus volatile regions, variable-rate drift, heterogeneous neighborhoods, and uncertainty about current user state. Profiles and isolated events remain useful as points, but interaction, feedback, and elapsed time induce trajectories. Memory access then becomes trajectory-conditioned reconstruction of the relevant user state, not only nearest-neighbor lookup.",
+  "link": "https://arxiv.org/abs/2609.17969",
+  "score": 3,
+  "why": "Memory geometry not finance-tested"
+ },
+ {
+  "key": "2609.18107",
+  "source": "arXiv",
+  "title": "FoundAna: A GNN-assisted Foundation Model for Graph Anomaly Detection",
+  "abstract": "Graph anomaly detection aims to identify graph structures (e.g., nodes, edges, or subgraphs) that deviate significantly from expected patterns, which supports critical applications in fraud detection, spam identification, network intrusion, etc. Despite the growing methods in the field, existing approaches follow a one-model-per-dataset paradigm, limiting their transferability across diverse real-world scenarios due to task heterogeneity, label scarcity, and domain variability. In this work, we introduce FoundAna, a GNN-assisted Foundation Model for Graph Anomaly Detection - the first foundation model framework designated for generalizable, cross-graph anomaly detection by combining GNNs and transformers. FoundAna integrates an anomaly detection-specific GNN component with a standard transformer encoder augmented by four complementary positional encodings, which enable the model to capture both local and global structural information. Specifically, the positional encoding enriched node representations are passed through attribute and adjacency decoders, and the reconstruction errors serve as the anomaly score. Extensive experiments on nine benchmark datasets spanning financial, social, and citation network domains demonstrate that FoundAna consistently outperforms state-of-the-art baselines. The code implementation and Supplementary materials are here: https://github.com/FoundAna331/FoundAna.",
+  "link": "https://arxiv.org/abs/2609.18107",
+  "score": 3,
+  "why": "Anomaly detection not financial shown"
+ },
+ {
+  "key": "2609.18149",
+  "source": "arXiv",
+  "title": "Research on the Price Prediction Algorithms of Major Cryptocurrencies and a Basic Transaction Framework",
+  "abstract": "Through long-term observation and time series analysis of Bitcoin and Ethereum, we found the similarity in long-term consistent price trends, especially in the weekly K-line. We denoised and smoothed the historical data of their prices, and further derived the periodicity of their price change trends and the timing of buying and selling. We have for the first time proposed that the full application of central bank digital currencies (CBDC) is a key signal for investors to reduce their holdings of cryptocurrencies or even exit the market. In addition, we proposed momentum opening/closing prices to replace the traditional nominal opening/closing prices to accurately describe the price trends of the 24/7 financial trading market. We found that the cryptocurrency market can be regarded as a relatively independent financial market, thereby designing a safer and more efficient arbitrage strategy.",
+  "link": "https://arxiv.org/abs/2609.18149",
+  "score": 3,
+  "why": "Crypto predictor no rigorous backtest"
+ },
+ {
+  "key": "2609.21926",
+  "source": "arXiv",
+  "title": "Kinks vs. Smoothness: Identifiability of Real Analytic nICA for Laplace-like Sources",
+  "abstract": "Many machine learning systems try to explain complex data - like images or financial time series - in terms of hidden, independent factors that generated them. Recovering the true underlying factors, rather than some scrambled version of them, is the central challenge of nonlinear Independent Component Analysis (nICA). We prove identifiability (exact recovery) up to trivial ambiguities for real analytic generating functions when source probability density functions have a finite number of discontinuities in the first derivative. The Laplace distribution is the most prominent example satisfying this assumption. Our proof relies on the contrast between kinks in the source distribution and the smoothness of real analytic functions. Real analytic functions comprise a broad class of generating mechanisms, and can be approximated with Normalizing Flows or Variational Autoencoders with standard activation functions (e.g., tanh, softplus, GELU), so our result applies with minimal changes to existing training pipelines. We perform experiments on real and synthetic data with both Normalizing Flows and Variational Auto-Encoders demonstrating their identifiability properties. In experiments on CelebA data we recover several interpretable latent factors controlling unique attributes across the dataset.",
+  "link": "https://arxiv.org/abs/2609.21926",
+  "score": 3,
+  "why": "ICA identifiability no financial app"
+ },
+ {
+  "key": "10.2139/ssrn.7484640",
+  "source": "SSRN",
+  "title": "The Sharia AI Compliance Framework A Dual-Authority Governance Architecture for Islamic Finance",
+  "abstract": "An Islamic financial institution operates under two binding authorities. A financial supervisor determines what it may do in law. A Sharia Supervisory Board determines what it may do in conscience, and in most such institutions the board's determinations are binding rather than advisory. Both authorities predate artificial intelligence, and neither has specified how its authority reaches an AI system. The institution therefore does what institutions do when a new object arrives without a rule for it. It builds a second process. The AI system passes the civil governance machinery, and then, separately and usually later, it passes a Sharia review conducted by different people, on different evidence, producing different records. Two processes, two record sets, two answers to the question of whether the system may operate, and no defined behaviour when they disagree. This specification proposes that the second process is unnecessary and that building it is the error. Its central move is structural: the Sharia Supervisory Board is constituted as an authority source at the Regulatory Floor of the MESA Framework [1], alongside the financial supervisor, so that its determinations cascade downward through the same governance machinery as civil regulation rather than running beside it. An institution operating this framework has one governance system with two authority sources at its floor. Beneath that constitution sit a Maqasid risk frame, which classifies what an AI decision may harm in the terms the authority itself uses rather than in the terms of a Western risk taxonomy, and three threads into the institution's existing operational machinery: dual validation into model risk management, where a civil track and a Sharia track must both close before approval; the Halal data certification chain into data governance; and Sharia screening into vendor risk. Escalation is concurrent rather than sequential: a Sharia-material incident routes to the board alongside civil escalation, not after it. The specification is unusually explicit about what it is not. No Sharia Supervisory Board has reviewed or endorsed it. The Halal data certification chain is author methodology that no standard-setter recognizes. No standard-setter has issued an instrument governing the interaction between Sharia governance and artificial intelligence. Academic proposals exist; a recognized standard does not. That is what makes this a proposal worth submitting rather than a restatement of practice, and equally what makes it unendorsed. Section 9 states each plainly and states what would falsify the framework. It is a specification, not a certification scheme, and no conformity assessment body operates against it.",
+  "link": "https://www.ssrn.com/abstract=7484640",
+  "score": 2,
+  "why": "Islamic finance compliance not trading strategy"
+ },
+ {
+  "key": "2609.17869",
+  "source": "arXiv",
+  "title": "Demystifying the Bergomi-Guyon expansion",
+  "abstract": "Alòs, Gatheral and Radoičić derived the Bergomi-Guyon expansion of the implied variance smile from the forest expansion of the cumulant generating function. Its coefficients are sums of products of diamond trees, with prefactors that are polynomials in the log-strike $k$. Matching moments order by order produces, at order $ε^\\ell$, terms of degree greater than $\\ell$ in $k$ that mysteriously cancel. We show that, in suitable variables, the matching condition can be formulated as a nonlinear heat equation. The resulting recursion computes the prefactor of each product of trees from those of products of fewer trees, without generating the higher-degree terms; its only model-independent input is a cumulant series, which we compute in closed form. Consequently, at order $ε^\\ell$ every prefactor has degree exactly $\\ell$ in $k$. The prefactors are universal and need only be computed once. Code and coefficients are provided.",
+  "link": "https://arxiv.org/abs/2609.17869",
+  "score": 2,
+  "why": "Pure mathematics; no data or implementation path."
+ },
+ {
+  "key": "2609.19094",
+  "source": "arXiv",
+  "title": "Quadratic G-BSDEs for bond pricing with endogenous short-rate feedback",
+  "abstract": "We study robust bond valuation with endogenous short-rate feedback under volatility uncertainty. Within the $G$-expectation framework, the dependence of the short rate on the bond price yields a nonlinear fixed-point problem, represented by a quadratic $G$-BSDE for the logarithmic price. Under suitable assumptions, we establish existence, uniqueness, comparison, and stability for bounded finite-horizon solutions. An additional strict monotonicity condition yields a unique bounded infinite-horizon solution and exponential convergence of finite-horizon approximations on compact time intervals. We apply these results to inverse short-rate design, constructing discount-rate coefficients that reproduce admissible smooth bond-price targets at a fixed maturity. For long maturities, we construct feedback rules under which the compensated logarithmic price converges exponentially to a prescribed bounded state-dependent profile, while the asymptotic yield equals a specified target.",
+  "link": "https://arxiv.org/abs/2609.19094",
+  "score": 2,
+  "why": "Bond pricing theory; no data or tests."
+ },
+ {
+  "key": "2609.21232",
+  "source": "arXiv",
+  "title": "Stochastic Mortality Model with Fractional Lévy Dynamics",
+  "abstract": "A substantial body of empirical evidence suggests that stochastic mortality models ignoring long range dependence tend to underestimate life expectancy, which may lead to profound implications for pension schemes and funding arrangements. This paper addresses the modelling of stochastic mortality via a mixture of a fractional Lévy process and standard Brownian motion. Our stochastic mortality model exhibits nice analytical tractability in actuarial valuations and flexibility in the choice of underlying Lévy specifications. The long range dependence feature embedded in our stochastic mortality model is well reflected in our empirical studies on the mortality shocks during World War II and COVID-19. For efficient numerical pricing of longevity derivatives, we construct an effective singular value decomposition approximation scheme to overcome the computational challenges arising from the non-Markovian nature of the fractional Lévy process. Truncation errors in singular value decomposition approximation can be reduced by an effective residual correction scheme.",
+  "link": "https://arxiv.org/abs/2609.21232",
+  "score": 2,
+  "why": "Longevity derivatives; off-axis from trading systems."
+ },
+ {
+  "key": "2609.21684",
+  "source": "arXiv",
+  "title": "Equilibrium prices under hidden Markov fundamentals",
+  "abstract": "We study a representative-agent Epstein-Zin economy with geometric dividends and a hidden finite-state Markov drift. We allow the price-dividend ratio to contain an additional positive, absolutely continuous valuation factor and, within the class $\\mathfrak C$ defined below and under the regularity, admissibility, and positivity conditions of our main theorem, equilibrium forces this factor to be constant, yielding belief-Markovian prices. In the two-state case, under the stated positivity condition and strictly positive transition intensities, we prove existence, uniqueness, endpoint smoothness, interior analyticity, and uniform bounds for the positive solution of the pricing equation. For $0<θ\\leq1$, this solution supports an equilibrium under any continuous short rate satisfying the model's one-sided portfolio condition. Finally, in the two-state subregion $η>0$, we derive belief-dependent stock volatility, a European option-pricing PDE, and a leading short-maturity conditional risk-neutral log-return skewness expansion.",
+  "link": "https://arxiv.org/abs/2609.21684",
+  "score": 2,
+  "why": "Asset pricing theory with hidden Markov. Pure theory, limited practical path."
+ },
+ {
+  "key": "10.2139/ssrn.7480600",
+  "source": "SSRN",
+  "title": "Detecting Financial Risk Before Loss: A Two-Stage Controllership Method for Supply Chain and Retail Operations",
+  "abstract": "Financial controllership operates as a lagging function. It identifies compliance variances and transaction errors after decisions are final and losses are absorbed, producing a record of what happened rather than a control that could have changed it. This paper presents a two-stage method that moves detection to the point of decision. Stage One scores where financial risk concentrates in a set of business processes and assigns a dollar value to controlling each one, using a deterministic model with auditable equations across four categories of protection. The result is a ranked, dollar-valued map of where controls are worth building. Stage Two builds control at each priority point. What matters most is where it sits. A control must run inside the approval path, while commitment can still be stopped. Once a price, an agreement, or a funding term is booked, it governs every transaction that follows, and no later review can undo what it has already set in motion. The paper examines four points where these commitments concentrate. They are vendor and transaction approval, agreement execution, internal financial reporting, and high velocity peak events, and the paper specifies the control built at each. Because these controls are increasingly built on artificial intelligence, a second problem arises. The method applies controllership to artificial intelligence itself. Language classification and financial calculation run in separate channels, a second process re-derives the result from source data, and any disagreement locks the transaction for human review, so the automation cannot become a new source of error or loss. The method is industry-agnostic, implemented and validated in large-scale retail and supply chain operations. It can be applied to any organization regardless of size, type and nature.",
+  "link": "https://www.ssrn.com/abstract=7480600",
+  "score": 1,
+  "why": "Supply chain operations control; off-topic."
+ },
+ {
+  "key": "10.2139/ssrn.7481098",
+  "source": "SSRN",
+  "title": "Finance of Tomorrow: Micro to Algorithm",
+  "abstract": "Everyone is involved in finance and artificial intelligence, either directly or indirectly. Finance has shaped the way people think about money around the world. Everything related to money and financial resources is part of finance. Artificial intelligence, on the other hand, helps perform financial tasks such as lending, transformation, and trading. Ragnar Frisch, a Norwegian economist, split finance into micro and macro in 1933. He used those terms to distinguish between the study of specific economic entities and the study of the economy as a whole. Microeconomics is concerned with small and individual economic units, whereas macroeconomics studies the economy as a whole, addressing broad themes such as GDP, inflation, unemployment, growth, interest rates, and government policy. Artificial intelligence is evolving and transforming every day. Meanwhile, individuals' management of financial resources is not improving at the same pace. This lack of progress will lead to numerous challenges in the future, and the impact will be felt at every level, from small-scale to large-scale. In this research paper, we discuss the challenges that are anticipated to arise in the future. Ultimately, AI is not a curse in finance; it is merely a product of algorithms that people need to understand.",
+  "link": "https://www.ssrn.com/abstract=7481098",
+  "score": 1,
+  "why": "Generic roadmap. Rejected: position paper without substance."
+ },
+ {
+  "key": "10.2139/ssrn.7488958",
+  "source": "SSRN",
+  "title": "AI-Enabled Predictive Analytics for Cyber-Physical Risk Management in us Critical Infrastructure",
+  "abstract": "The increasing dependence of U.S. critical infrastructure on interconnected cyber-physical systems and data-driven decision-making has created a growing need for predictive approaches to risk management. Although artificial intelligence (AI) and predictive analytics can identify patterns, anticipate threats, and support early intervention, their reliability may deteriorate when underlying data become incomplete, outdated, corrupted, manipulated, or disconnected from operational context. This study critically synthesizes the supplied literature to examine how AI-driven predictive risk assessment can support decision-making under these conditions. A systematic critical literature synthesis was conducted across research addressing predictive analytics, cybersecurity, cyber-physical systems, data reliability, uncertainty, infrastructure resilience, and decision governance. The synthesized findings indicate that predictive performance alone is insufficient for dependable critical-infrastructure decision-making. AI-generated risk outputs become more valuable when evaluated jointly with data reliability, cybersecurity conditions, operational disruptions, uncertainty, contextual factors, and the potential consequences of decisions. The literature further indicates that integrating these dimensions can improve the ability of infrastructure operators to distinguish reliable predictions from predictions generated under degraded or uncertain conditions. The study therefore proposes that reliability-aware predictive risk assessment can strengthen early warning, risk prioritization, adaptive response, and resilience by connecting AI prediction with contextual reliability and decision governance. This approach shifts critical-infrastructure risk management from prediction-centered intelligence toward reliability-aware and context-sensitive decision support.",
+  "link": "https://www.ssrn.com/abstract=7488958",
+  "score": 1,
+  "why": "Critical infrastructure cybersecurity. Not financial ML or trading."
+ },
+ {
+  "key": "10.2139/ssrn.7490301",
+  "source": "SSRN",
+  "title": "From Medical Charts to Market Forces: How Health Types Shape Labour-Market Outcomes",
+  "abstract": "Standard labour-economics models treat health status as static measurements and impose thresholds on continuous values. I instead use an unsupervised machine learning method (k-means clustering) to identify latent health types on individuals' frailty trajectories in preretirement years (52-60). Four dynamic health types emerge: a Resilient type (61.3%) with the lowest mean frailty; a Mild type (29.1%) with elevated frailty; a Frail type (8.8%) with a more persistently high frailty level, and a Rapid Decline type (0.7%) that diverges sharply in gradient from the previous three. Descriptively, the more frail types display lower employment, lower earnings, and lower educational qualification than the more resilient types. I find that these latent health types have significant predictive power for future frailty beyond static health measures. In contrast, these health types do not have significant predictive power for labour market outcomes beyond static health measures, implying health states may be more consequential than health trajectories in determining key labour supply decisions.",
+  "link": "https://www.ssrn.com/abstract=7490301",
+  "score": 1,
+  "why": "Health economics and labor markets; off-topic."
+ },
+ {
+  "key": "2609.18770",
+  "source": "arXiv",
+  "title": "Regularity of a Multidimensional Principal-Agent Problem with Separable Effort Costs",
+  "abstract": "This paper studies the regularity of the value function arising from a multidimensional continuous-time principal-agent model with separable, nonquadratic effort costs. The associated stochastic control problem has the output and the agent's continuation utility as state variables, and its Hamilton-Jacobi-Bellman equation is fully nonlinear and degenerate, with potentially unbounded coefficients. We address these difficulties by adding an independent regularization noise and bounding the effort. For the resulting problem, we establish classical regularity of the value function and show that the optimal effort is unique, positive and remains in a fixed compact subset, uniformly with respect to both the control restriction and the regularization parameter. These estimates allow us first to remove the control restriction and then to let the additional noise vanish. Consequently, we prove that the regularized value function converges to the original value function and conclude that the latter belongs locally to the Sobolev space $W^{2,1}_{\\infty, \\mathrm{loc}}$, thereby extending the regularity analysis to separable nonquadratic effort costs, for which the arguments yielding classical solutions in the quadratic-cost setting no longer apply.",
+  "link": "https://arxiv.org/abs/2609.18770",
+  "score": 1,
+  "why": "Pure principal-agent theory; no data."
+ },
+ {
+  "key": "2609.21688",
+  "source": "arXiv",
+  "title": "Quadratic and $p$-th variation of random signed Takagi--Landsberg bridges",
+  "abstract": "We study random signed Takagi--Landsberg bridges with independent Rademacher Faber--Schauder coefficients. At index $H=1/2$, we prove that every fixed deterministic refining sequence of partitions with vanishing mesh yields quadratic variation $t$, almost surely and uniformly in $t\\in[0,1]$. For partitions that need not be refining, the mesh condition $o(1/\\log n)$ is sufficient, and its order is sharp. Our proofs use an operator representation of the quadratic sums and moment bounds for Rademacher chaos. We also show that asymmetric signs can destroy this invariance. At every index $H\\ne1/2$, we construct a deterministic refining sequence along which the critical $p$-power sums, with $p=1/H$, have two distinct finite accumulation points almost surely. At $H=1/4$, uniform thirds grids provide an explicit alternative to the dyadic limit. Thus $H=1/2$ is the unique index in the symmetric family at which critical variation is invariant along every fixed deterministic refining sequence. Nevertheless the variation index equals $1/H$ almost surely across a large sequence of partitions.",
+  "link": "https://arxiv.org/abs/2609.21688",
+  "score": 1,
+  "why": "Pure quadratic-variation mathematics; no application."
+ }
+]
