@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Label alchemy: Target engineering for improved stock selection</title>
+    <link>https://www.ssrn.com/abstract=7494298</link>
+    <description>Label choice drives larger stock-selection performance variation than model or feature selection.</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7494298</guid>
+  </item>
+  <item>
+    <title>Prices or implied volatilities? Choosing the loss function in machine learning option pricing</title>
+    <link>https://www.ssrn.com/abstract=7498639</link>
+    <description>Training option-pricing models on price errors beats implied-volatility loss by 25%.</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7498639</guid>
+  </item>
+  <item>
+    <title>Agentic AI as a Lens on Human Decision Making: Field Experimental Evidence from Dynamic Pricing</title>
+    <link>https://www.ssrn.com/abstract=7509319</link>
+    <description>AI pricing advantage exploits incumbent conventions, suggesting performance gains are transient.</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7509319</guid>
+  </item>
+  <item>
+    <title>Inflation narratives and risk premia</title>
+    <link>https://www.ssrn.com/abstract=7502639</link>
+    <description>Demand-minus-supply narratives predict inflation risk premia better than PMI or forecasters.</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7502639</guid>
+  </item>
+  <item>
+    <title>LLM-Based Semantic Surprises in FOMC Communication: Asset Prices and Financial-Market Stress</title>
+    <link>https://www.ssrn.com/abstract=7519200</link>
+    <description>Fed semantic novelty increases financial stress only in high-stress market regimes.</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7519200</guid>
+  </item>
+  <item>
+    <title>Welcome to the Factor Zoo: Where Mutual Fund Alpha Hides</title>
+    <link>https://www.ssrn.com/abstract=7508299</link>
+    <description>LASSO benchmarks reveal active mutual fund alpha Fama-French models obscure.</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7508299</guid>
+  </item>
+  <item>
     <title>Beta Recall, Alpha Recall, and a Contamination Detector that Needs No Labels * Measuring Training-data Leakage in LLM Equity Signals</title>
     <link>https://www.ssrn.com/abstract=7485818</link>
     <description>LLM stock-ranking performance inside its training window is substantially recall-based rather than predictive.</description>

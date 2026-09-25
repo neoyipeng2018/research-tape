@@ -1,0 +1,51 @@
+{
+ "date": "2026-09-25",
+ "scanned": 56,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7494298",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7494298",
+   "title": "Label alchemy: Target engineering for improved stock selection",
+   "claim": "Label choice drives larger stock-selection performance variation than model or feature selection."
+  },
+  {
+   "key": "10.2139/ssrn.7498639",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7498639",
+   "title": "Prices or implied volatilities? Choosing the loss function in machine learning option pricing",
+   "claim": "Training option-pricing models on price errors beats implied-volatility loss by 25%."
+  },
+  {
+   "key": "10.2139/ssrn.7509319",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7509319",
+   "title": "Agentic AI as a Lens on Human Decision Making: Field Experimental Evidence from Dynamic Pricing",
+   "claim": "AI pricing advantage exploits incumbent conventions, suggesting performance gains are transient."
+  },
+  {
+   "key": "10.2139/ssrn.7502639",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7502639",
+   "title": "Inflation narratives and risk premia",
+   "claim": "Demand-minus-supply narratives predict inflation risk premia better than PMI or forecasters."
+  },
+  {
+   "key": "10.2139/ssrn.7519200",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7519200",
+   "title": "LLM-Based Semantic Surprises in FOMC Communication: Asset Prices and Financial-Market Stress",
+   "claim": "Fed semantic novelty increases financial stress only in high-stress market regimes."
+  },
+  {
+   "key": "10.2139/ssrn.7508299",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7508299",
+   "title": "Welcome to the Factor Zoo: Where Mutual Fund Alpha Hides",
+   "claim": "LASSO benchmarks reveal active mutual fund alpha Fama-French models obscure."
+  }
+ ]
+}
