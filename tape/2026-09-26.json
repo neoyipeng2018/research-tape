@@ -1,0 +1,23 @@
+{
+ "date": "2026-09-26",
+ "scanned": 17,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7456601",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7456601",
+   "title": "Systematic Alpha Discovery in Foreign Exchange Markets A Two-phase Research Program: From Exhaustive Structural-factor Search to Fundamentals-Driven Machine Learning",
+   "claim": "Exhaustive FX factor searches identify zero exploitable edges under statistical validation."
+  },
+  {
+   "key": "10.2139/ssrn.7525001",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7525001",
+   "title": "Asymmetric Volatility Transmission Between AI Compute Infrastructure and Regional Power Grids: Evidence from Quantile Connectedness Under Extreme Market States",
+   "claim": "Volatility transmission between AI infrastructure and power grids reverses during crises."
+  }
+ ]
+}

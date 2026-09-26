@@ -6,6 +6,20 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Systematic Alpha Discovery in Foreign Exchange Markets A Two-phase Research Program: From Exhaustive Structural-factor Search to Fundamentals-Driven Machine Learning</title>
+    <link>https://www.ssrn.com/abstract=7456601</link>
+    <description>Exhaustive FX factor searches identify zero exploitable edges under statistical validation.</description>
+    <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7456601</guid>
+  </item>
+  <item>
+    <title>Asymmetric Volatility Transmission Between AI Compute Infrastructure and Regional Power Grids: Evidence from Quantile Connectedness Under Extreme Market States</title>
+    <link>https://www.ssrn.com/abstract=7525001</link>
+    <description>Volatility transmission between AI infrastructure and power grids reverses during crises.</description>
+    <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7525001</guid>
+  </item>
+  <item>
     <title>Label alchemy: Target engineering for improved stock selection</title>
     <link>https://www.ssrn.com/abstract=7494298</link>
     <description>Label choice drives larger stock-selection performance variation than model or feature selection.</description>
