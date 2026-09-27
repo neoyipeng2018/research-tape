@@ -1,0 +1,65 @@
+[
+ {
+  "key": "10.2139/ssrn.7524480",
+  "source": "SSRN",
+  "title": "Examination Controls for Agentic AI in Regulated Financial Institutions",
+  "abstract": "Agentic AI systems are autonomous software agents that perceive context, make decisions, and initiate consequential actions without human approval at each step. These systems are actively deployed at financial institutions examined under the Federal Financial Institutions Examination Council (FFIEC) framework. The FFIEC IT Examination Handbook's ten booklets do not yet include examination procedures, control objectives, or risk indicators for these systems. SR 26-2 (2026) explicitly places Agentic AI outside its scope. This paper addresses the resulting examination opportunity through a constructive research methodology. It identifies nine risk domains where current examination architecture can be extended to address Agentic AI characteristics. It proposes twenty-nine control objectives organized by risk domain and crossmapped to FFIEC booklet structure. It validates the framework through gap traceability and retrospective application against published enforcement actions. The framework operates at the intersection of Agentic AI architectural specificity, operational granularity, and financial services sector focus. No existing regulatory framework internationally occupies this space. The framework extends existing architecture and enables proportional examination scaled to agent autonomy level through a four-tier classification system. The contribution is immediately applicable. Institutions can use the framework for self-assessment, and examiners could integrate proposed controls into existing work programs without new legislation.",
+  "link": "https://www.ssrn.com/abstract=7524480",
+  "score": 5,
+  "why": "Agentic AI governance framework relevant to finance; lacks methodology."
+ },
+ {
+  "key": "10.2139/ssrn.7519798",
+  "source": "SSRN",
+  "title": "Zombie Banks and Japan's Lost Decade: The Role of Hidden Bad Debt in Delaying Economic Recovery",
+  "abstract": "Japan's Lost Decade is often blamed solely on its asset bubble's collapse, but this paper argues that explanation is not sufficient on its own. The bubble's collapse in the early 1990s was the initial trigger, not the cause, of Japan's prolonged weakness; the greater damage came after, when Japanese banks delayed acknowledging non-performing loans and instead refinanced insolvent borrowers, producing zombie banks (kept alive by regulatory tolerance, not solvency) and zombie firms (kept alive by zombie banks). Drawing on IMF NPL estimates, Caballero, Hoshi, and Kashyap's zombie-lending research, and a comparison with the 2008 Global Financial Crisis, the paper traces how delayed loss recognition turned a financial shock into a decade of capital misallocation. Where Japan concealed and deferred, the U.S. and its peers disclosed and recapitalised faster, and recovered faster. Officially disclosed NPLs of ~¥35tn (March 1998) understated bubble-era exposure estimates by over ¥45tn; zombie firms exceeded 25% of listed firms after 1994; Japan's GDP grew ~1% annually through the 1990s–2000s versus a sharp but short 2.6% U.S. contraction in 2009. Transparency and speed of loss recognition, not shock size, predict crisis duration. AI Disclosure: Claude (Anthropic) assisted with prose editing and structure only; research, analysis, and conclusions are the author's own.",
+  "link": "https://www.ssrn.com/abstract=7519798",
+  "score": 3,
+  "why": "Financial history synthesis, not actionable method for practitioners."
+ },
+ {
+  "key": "10.2139/ssrn.7520059",
+  "source": "SSRN",
+  "title": "The AI Money Pit: Capital Absorption, Sovereign Debt, and the Financial Impact on Geopolitical Risk",
+  "abstract": "The 2026 AI investment surge has generated a capital absorption dynamic that is reshaping sovereign debt markets, constraining fiscal capacity, and creating incentives for geopolitical risk externalization. This article introduces the concept of the AI money pit to theorize a selfreinforcing process in which competitive pressure compels firms to sustain escalating investment beyond economic justification, generating systemic externalities that extend far beyond the technology sector. Drawing on 2026 market data, I demonstrate that AI corporate debt is competing directly with U.S. Treasuries for long-duration capital, producing a measurable crowding-out effect on sovereign yields. I then trace how this fiscal pressure constrains state capacity and creates incentives for geopolitical risk externalization, a mechanism illuminated by the coincidence of record U.S. debt service costs exceeding defense spending and the escalation of U.S. sanctions on Iran. The analysis contributes to international political economy scholarship by extending the state financialization literature to incorporate private sector capital absorption as a mechanism of fiscal constraint, and by shifting the political economy of AI literature from a focus on AI as a tool of finance to AI investment as a source of systemic financial pressure. The article concludes that the prevailing AI governance discourse must expand to encompass the macroeconomic consequences of AI capital absorption, and that the financial stability implications of the AI race warrant the attention of international political economy scholars, financial regulators, and security policymakers alike.",
+  "link": "https://www.ssrn.com/abstract=7520059",
+  "score": 3,
+  "why": "Position paper; empirical claims lack visible methodology or dataset."
+ },
+ {
+  "key": "10.2139/ssrn.7528612",
+  "source": "SSRN",
+  "title": "Heterogeneous Effects of Home Energy Efficiency in the UK Housing Market: Evidence from Causal Machine Learning Approaches",
+  "abstract": "Housing market incentives are crucial for accelerating energy-efficiency improvements in residential buildings and supporting the net-zero transition. Existing research generally shows that properties with higher Energy Performance Certificate (EPC) ratings are associated with higher house prices in the EU and the UK. However, evidence on heterogeneity in price effects across housing submarkets remains limited. By utilising causal machine-learning approach of meta-learners (X-, DR-, and R-learners), this study examines the heterogeneous effects of energy efficiency on house prices in Greater Manchester between 2017 and 2024. Results show that energy-efficient properties (EPC Band C or above) sell for 2% more than less efficient homes on average. Heterogeneity analyses reveal stronger price premiums in submarkets of older properties, terraced and leasehold homes, lower-priced housing, and lower-income, higher-density, and more accessible areas. Consistent findings across meta-learners strengthen the robustness of the results. This study provides new evidence on heterogeneous housing-market impacts of energy efficiency, offering insights for public policies and private investment in support of residential net-zero goals.",
+  "link": "https://www.ssrn.com/abstract=7528612",
+  "score": 3,
+  "why": "Solid causal ML methods applied to housing, not finance."
+ },
+ {
+  "key": "10.2139/ssrn.7524323",
+  "source": "SSRN",
+  "title": "Manipulation as a Systemic Risk under the AI Act: Gaps and Enforcement Challenges",
+  "abstract": "Manipulation is a growing concern in AI research and regulation. AI manipulation scenarios range from the use of generative AI in phishing campaigns to highly capable AI models going off the rails and inciting self-harm. Where general-purpose AI models are integrated into downstream AI systems, their manipulative features may be propagated across countless use cases. This is one of the reasons why harmful manipulation is considered a systemic risk under the EU’s AI Act. Indeed, the AI Act’s systemic risk provisions are seemingly capable of addressing manipulation concerns in GPAI models. However, a closer inspection of the regulation and supporting policy documents reveal two important enforcement challenges. The first is the formulation of AI Act’s systemic risk provisions and the policy guidance that operationalises these provisions. The systemic risk framework of the AI Act, with its focus on ‘high-impact capabilities’, is drafted in a way that creates confusion about the types of risks that the regulation is intended to address. Some of the most prevalent forms of GPAI-driven manipulation may therefore fall through the cracks. The second set of challenges emanate from the interaction between the AI Act and the Digital Services Act’s systemic risk regimes. The DSA’s list of systemic risks are expansive enough to cover at least some manipulation risks in GPAI models. It may be perceived as a backstop to address manipulation risks that the AI Act fails to catch. That said, the DSA should not be the first port of call to catch manipulation risks in AI models. It is first and foremost an intermediary regulation and was not designed in a world where platforms create their own content with AI models. The paper concludes with a brief discussion on how GPAI-driven manipulation may be adequately addressed as a systemic risk under the AI Act. The overall objective of this paper is to call attention to the immediacy of GPAI-driven manipulation as a systemic risk that should be addressed as comprehensively as possible under the EU’s digital rulebook.",
+  "link": "https://www.ssrn.com/abstract=7524323",
+  "score": 2,
+  "why": "AI regulation analysis, non-financial examples, compliance not implementation"
+ },
+ {
+  "key": "10.2139/ssrn.7524324",
+  "source": "SSRN",
+  "title": "Liability, Verification, and the Market for Expertise in the Presence of AI",
+  "abstract": "Artificial intelligence makes competent execution cheap, so for tasks a principal can verify himself he increasingly performs them directly rather than hiring an intermediary. For tasks he cannot verify, such as a diagnosis or an audit, hiring remains necessary. But what made hiring valuable, the ability to tell genuine expertise from imitation, is exactly what a commoditized AI erodes: once anyone can produce a fluent-looking deliverable, fluency stops being informative. A liability bond can restore separation between genuine expertise and imitation, but only if the bond is enforceable, and enforceability runs into the same verification problem that created the need for the signal. We build a model that nests a make-or-buy decision inside a liability-bond signaling game. Separation occurs only in an intermediate band of verifiability. When verification is high, the principal does the task himself. When it is low, even a known imitator, posting a large enough bond, is preferable to doing the task himself, so no bond can screen it out. A limit on the capital a genuine expert can post raises the band's lower edge.",
+  "link": "https://www.ssrn.com/abstract=7524324",
+  "score": 2,
+  "why": "Pure theory without data or implementation path visible."
+ },
+ {
+  "key": "10.2139/ssrn.7528626",
+  "source": "SSRN",
+  "title": "GRACE: Graph-Structured Cross-Market Recommendation with Context-Aware Transfer Learning",
+  "abstract": "Cross-market recommendation faces critical challenges in transferring knowledge across culturally and behaviorally diverse regions, where severe data sparsity, heterogeneous user preferences, and negative transfer hinder recommendation quality. Existing approaches primarily rely on ID-based or text-based encoders, often overlooking the structural regularities embedded in user--item interaction graphs that provide more robust transferable signals.We propose GRACE, a framework that integrates graph neural network architectures with context-aware transfer learning for cross-market recommendation. By combining graph-based propagation with self-attention mechanisms, GRACE learns transferable structural dependencies while suppressing market-specific noise. A pretrain--finetune strategy leverages knowledge from data-rich source markets to improve performance in sparse target markets.Experiments on the XMRec 5-core benchmark dataset across seven Amazon markets demonstrate that GRACE consistently outperforms state-of-the-art baselines. The framework achieves particularly pronounced improvements in low-resource markets, with gains of up to 23% in NDCG@10 compared to existing methods. Systematic comparisons reveal that simple, parameter-free graph propagation outperforms attention-based and feature-based alternatives by 2--5%, while multi-source pretraining provides strong initialization with additional 1--4% gains from target-market finetuning.",
+  "link": "https://www.ssrn.com/abstract=7528626",
+  "score": 2,
+  "why": "Recommendation system with GNNs, e-commerce not finance, off-domain"
+ }
+]
