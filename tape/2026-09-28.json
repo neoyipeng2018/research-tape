@@ -1,0 +1,37 @@
+{
+ "date": "2026-09-28",
+ "scanned": 8,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7532758",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7532758",
+   "title": "When the Market Moves but the Model Does Not: Stale Financial Information in LLMs",
+   "claim": "LLMs generate persistent trading losses when forecasting beyond their training data without current price information."
+  },
+  {
+   "key": "10.2139/ssrn.7532270",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7532270",
+   "title": "The Anonymity Paradox: Identity Disclosure, Online Information Production, and Stock Price Efficiency",
+   "claim": "Real-name policies reduce stock price informativeness by suppressing retail information production on social platforms."
+  },
+  {
+   "key": "10.2139/ssrn.7532277",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7532277",
+   "title": "Planning External-Data Adoption in Energy-Market Forecasting: A Matched Decision Framework for Global News",
+   "claim": "Best energy forecasts use market data alone, not augmented with external news."
+  },
+  {
+   "key": "10.2139/ssrn.7532299",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7532299",
+   "title": "Forecasting, Forward Contracting, and Retailer Performance in a Regulated Electricity Market",
+   "claim": "Better spot-price forecasts only improve electricity trading profits if retailers can flexibly adjust forward positions."
+  }
+ ]
+}
