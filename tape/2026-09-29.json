@@ -1,0 +1,52 @@
+{
+ "date": "2026-09-29",
+ "scanned": 83,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2609.27051",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.27051",
+   "title": "Propose, Don't Judge: An Anytime-Valid Referee for LLM Agents That Mine Investment Factors",
+   "claim": "Frozen referees outperform leaky referees at controlling spurious factors."
+  },
+  {
+   "key": "2609.30705",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.30705",
+   "title": "The Price of Thought: Does Test-Time Reasoning Pay in LLM Trading?",
+   "claim": "LLM test-time reasoning changes trading decisions without reliably improving returns."
+  },
+  {
+   "key": "10.2139/ssrn.7525338",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7525338",
+   "title": "What Analysts Miss: Predicting Consensus Forecast Errors from Earnings Calls",
+   "claim": "Analyst forecast errors are predictable from earnings-call language and profitable to trade around announcements."
+  },
+  {
+   "key": "10.2139/ssrn.7527141",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7527141",
+   "title": "The Externality of Learning: Adaptive AI and Market Resilience",
+   "claim": "Shared learning histories improve market resilience when policies are learned via locality-sensitive algorithms."
+  },
+  {
+   "key": "10.2139/ssrn.7528419",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7528419",
+   "title": "An Auditable Public-Data U.S. Equity Research Pipeline: Point-in-Time Factors, Asset Pricing, Portfolio Construction, and Walk-Forward Machine Learning",
+   "claim": "Higher R-squared in multifactor models doesn't translate to stable after-cost portfolio outperformance."
+  },
+  {
+   "key": "2609.25542",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.25542",
+   "title": "DefaultGNN: A Dual-Perspective GNN Framework for Predicting Corporate Default from Buyer-Seller Transaction Networks",
+   "claim": "Buyer-seller transaction networks predict default better than financial data for information-sparse firms."
+  }
+ ]
+}

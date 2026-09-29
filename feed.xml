@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Propose, Don&#x27;t Judge: An Anytime-Valid Referee for LLM Agents That Mine Investment Factors</title>
+    <link>https://arxiv.org/abs/2609.27051</link>
+    <description>Frozen referees outperform leaky referees at controlling spurious factors.</description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.27051</guid>
+  </item>
+  <item>
+    <title>The Price of Thought: Does Test-Time Reasoning Pay in LLM Trading?</title>
+    <link>https://arxiv.org/abs/2609.30705</link>
+    <description>LLM test-time reasoning changes trading decisions without reliably improving returns.</description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.30705</guid>
+  </item>
+  <item>
+    <title>What Analysts Miss: Predicting Consensus Forecast Errors from Earnings Calls</title>
+    <link>https://www.ssrn.com/abstract=7525338</link>
+    <description>Analyst forecast errors are predictable from earnings-call language and profitable to trade around announcements.</description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7525338</guid>
+  </item>
+  <item>
+    <title>The Externality of Learning: Adaptive AI and Market Resilience</title>
+    <link>https://www.ssrn.com/abstract=7527141</link>
+    <description>Shared learning histories improve market resilience when policies are learned via locality-sensitive algorithms.</description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7527141</guid>
+  </item>
+  <item>
+    <title>An Auditable Public-Data U.S. Equity Research Pipeline: Point-in-Time Factors, Asset Pricing, Portfolio Construction, and Walk-Forward Machine Learning</title>
+    <link>https://www.ssrn.com/abstract=7528419</link>
+    <description>Higher R-squared in multifactor models doesn&#x27;t translate to stable after-cost portfolio outperformance.</description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7528419</guid>
+  </item>
+  <item>
+    <title>DefaultGNN: A Dual-Perspective GNN Framework for Predicting Corporate Default from Buyer-Seller Transaction Networks</title>
+    <link>https://arxiv.org/abs/2609.25542</link>
+    <description>Buyer-seller transaction networks predict default better than financial data for information-sparse firms.</description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.25542</guid>
+  </item>
+  <item>
     <title>When the Market Moves but the Model Does Not: Stale Financial Information in LLMs</title>
     <link>https://www.ssrn.com/abstract=7532758</link>
     <description>LLMs generate persistent trading losses when forecasting beyond their training data without current price information.</description>
