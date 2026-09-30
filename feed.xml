@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>What the Fed Hears and What It Concludes: Supply-Chain Narratives and U.S. Inflation Forecasting ⋆</title>
+    <link>https://www.ssrn.com/abstract=7538363</link>
+    <description>FOMC narratives improve inflation forecast accuracy while Beige Book narratives do not.</description>
+    <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7538363</guid>
+  </item>
+  <item>
+    <title>Order Invariance at the Last Language-Model Boundary: A Pre-Registered Test of an LLM Evidence Synthesizer Inside a Deterministic Trading Architecture</title>
+    <link>https://www.ssrn.com/abstract=7539442</link>
+    <description>Language model nondeterminism, not input order sensitivity, drives trading system uncertainty.</description>
+    <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7539442</guid>
+  </item>
+  <item>
+    <title>When Stress Tests Miss the Risk: Statistical Scenario Analysis for Financial Portfolios</title>
+    <link>https://www.ssrn.com/abstract=7540098</link>
+    <description>Standard scenario analysis substantially understates portfolio risk by overlooking factor dependence.</description>
+    <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7540098</guid>
+  </item>
+  <item>
+    <title>Adaptive State Representation and Critical Explainability Evaluation for A2C-Based Algorithmic Carbon Allowance Trading</title>
+    <link>https://www.ssrn.com/abstract=7540167</link>
+    <description>A2C trading agent performance is sensitive to random initialization despite high reported Sharpe ratios.</description>
+    <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7540167</guid>
+  </item>
+  <item>
+    <title>Abstention Is Not Neutral: Ablating the LLM in an LLM Trading Agent</title>
+    <link>https://www.ssrn.com/abstract=7541520</link>
+    <description>Language model trading agent abstention is primarily determined by prompt wording, not market conditions.</description>
+    <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7541520</guid>
+  </item>
+  <item>
+    <title>Residual Learning in Empirical Asset Pricing</title>
+    <link>https://www.ssrn.com/abstract=7528558</link>
+    <description>Deep neural networks outperform shallow models in asset pricing when trained with residual learning.</description>
+    <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7528558</guid>
+  </item>
+  <item>
     <title>Propose, Don&#x27;t Judge: An Anytime-Valid Referee for LLM Agents That Mine Investment Factors</title>
     <link>https://arxiv.org/abs/2609.27051</link>
     <description>Frozen referees outperform leaky referees at controlling spurious factors.</description>

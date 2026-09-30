@@ -1,0 +1,51 @@
+{
+ "date": "2026-09-30",
+ "scanned": 41,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7538363",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7538363",
+   "title": "What the Fed Hears and What It Concludes: Supply-Chain Narratives and U.S. Inflation Forecasting ⋆",
+   "claim": "FOMC narratives improve inflation forecast accuracy while Beige Book narratives do not."
+  },
+  {
+   "key": "10.2139/ssrn.7539442",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7539442",
+   "title": "Order Invariance at the Last Language-Model Boundary: A Pre-Registered Test of an LLM Evidence Synthesizer Inside a Deterministic Trading Architecture",
+   "claim": "Language model nondeterminism, not input order sensitivity, drives trading system uncertainty."
+  },
+  {
+   "key": "10.2139/ssrn.7540098",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7540098",
+   "title": "When Stress Tests Miss the Risk: Statistical Scenario Analysis for Financial Portfolios",
+   "claim": "Standard scenario analysis substantially understates portfolio risk by overlooking factor dependence."
+  },
+  {
+   "key": "10.2139/ssrn.7540167",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7540167",
+   "title": "Adaptive State Representation and Critical Explainability Evaluation for A2C-Based Algorithmic Carbon Allowance Trading",
+   "claim": "A2C trading agent performance is sensitive to random initialization despite high reported Sharpe ratios."
+  },
+  {
+   "key": "10.2139/ssrn.7541520",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7541520",
+   "title": "Abstention Is Not Neutral: Ablating the LLM in an LLM Trading Agent",
+   "claim": "Language model trading agent abstention is primarily determined by prompt wording, not market conditions."
+  },
+  {
+   "key": "10.2139/ssrn.7528558",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7528558",
+   "title": "Residual Learning in Empirical Asset Pricing",
+   "claim": "Deep neural networks outperform shallow models in asset pricing when trained with residual learning."
+  }
+ ]
+}
