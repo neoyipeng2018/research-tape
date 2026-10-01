@@ -6,6 +6,41 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Do Narratives Lead Prices, Or Follow Them? Sentiment, Price Positioning, And Measurement Disagreement In Bitcoin</title>
+    <link>https://www.ssrn.com/abstract=7542658</link>
+    <description>Bitcoin prices predict sentiment, reversing the leading-indicator interpretation of published sentiment indices.</description>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7542658</guid>
+  </item>
+  <item>
+    <title>Epistemic Calibration and Latency Advantages of System One Probabilistic Agents in Limit Order Book Microstructure: An Empirical and Multi-Agent Evaluation</title>
+    <link>https://www.ssrn.com/abstract=7545279</link>
+    <description>Autoregressive LLMs encounter prohibitive latencies (3.5–12 seconds) when deployed in electronic financial markets.</description>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7545279</guid>
+  </item>
+  <item>
+    <title>Silicon Cartels: Detector Orientation in Multi-Agent Pricing Testbeds</title>
+    <link>https://www.ssrn.com/abstract=7535399</link>
+    <description>Testbed detector calibration against low-variance controls reverses polarity in higher-variance deployment environments.</description>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7535399</guid>
+  </item>
+  <item>
+    <title>Agentic Regulatory Intelligence: A Human-Supervised Multi-Agent System Architecture for Financial Crime Pattern Monitoring and Regulatory Guidance Generation</title>
+    <link>https://www.ssrn.com/abstract=7544900</link>
+    <description>Regulatory guidance for financial crimes lags 12–57 months after typology emergence, extending criminal opportunities.</description>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7544900</guid>
+  </item>
+  <item>
+    <title>Artificial Intelligence, Model Monoculture, and Bank Credit Allocation</title>
+    <link>https://www.ssrn.com/abstract=7545343</link>
+    <description>AI development increases convergence in bank credit allocation, reducing system-wide lending diversity.</description>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7545343</guid>
+  </item>
+  <item>
     <title>What the Fed Hears and What It Concludes: Supply-Chain Narratives and U.S. Inflation Forecasting ⋆</title>
     <link>https://www.ssrn.com/abstract=7538363</link>
     <description>FOMC narratives improve inflation forecast accuracy while Beige Book narratives do not.</description>

@@ -1,0 +1,44 @@
+{
+ "date": "2026-10-01",
+ "scanned": 31,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7542658",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7542658",
+   "title": "Do Narratives Lead Prices, Or Follow Them? Sentiment, Price Positioning, And Measurement Disagreement In Bitcoin",
+   "claim": "Bitcoin prices predict sentiment, reversing the leading-indicator interpretation of published sentiment indices."
+  },
+  {
+   "key": "10.2139/ssrn.7545279",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7545279",
+   "title": "Epistemic Calibration and Latency Advantages of System One Probabilistic Agents in Limit Order Book Microstructure: An Empirical and Multi-Agent Evaluation",
+   "claim": "Autoregressive LLMs encounter prohibitive latencies (3.5–12 seconds) when deployed in electronic financial markets."
+  },
+  {
+   "key": "10.2139/ssrn.7535399",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7535399",
+   "title": "Silicon Cartels: Detector Orientation in Multi-Agent Pricing Testbeds",
+   "claim": "Testbed detector calibration against low-variance controls reverses polarity in higher-variance deployment environments."
+  },
+  {
+   "key": "10.2139/ssrn.7544900",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7544900",
+   "title": "Agentic Regulatory Intelligence: A Human-Supervised Multi-Agent System Architecture for Financial Crime Pattern Monitoring and Regulatory Guidance Generation",
+   "claim": "Regulatory guidance for financial crimes lags 12–57 months after typology emergence, extending criminal opportunities."
+  },
+  {
+   "key": "10.2139/ssrn.7545343",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7545343",
+   "title": "Artificial Intelligence, Model Monoculture, and Bank Credit Allocation",
+   "claim": "AI development increases convergence in bank credit allocation, reducing system-wide lending diversity."
+  }
+ ]
+}
