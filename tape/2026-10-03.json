@@ -1,0 +1,52 @@
+{
+ "date": "2026-10-03",
+ "scanned": 102,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2610.01955",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.01955",
+   "title": "Do Your Own Research: Learning to Forecast by Learning to Search",
+   "claim": "Outcome-based training teaches agents evidence discipline, reducing searches while improving forecast calibration."
+  },
+  {
+   "key": "10.2139/ssrn.7551119",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7551119",
+   "title": "Large Language Models, Debt Renegotiation, and Contract Enforcement",
+   "claim": "LLM-written messages outperform human-written messages in distressed-debt renegotiation."
+  },
+  {
+   "key": "2609.33470",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.33470",
+   "title": "LiveOption: Evaluating LLM Agents in Structured Option Trading with Nonlinear Payoffs",
+   "claim": "LLM agents underperform on structured option trading with nonlinear payoffs."
+  },
+  {
+   "key": "2609.33524",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.33524",
+   "title": "EverMine: Dissecting the Self-Evolution of Research Capabilities in Long-Horizon Alpha Research",
+   "claim": "Capability evolution provides no consistent gains in alpha discovery."
+  },
+  {
+   "key": "2609.34004",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.34004",
+   "title": "RICE-Alpha: Reliability-Informed Correction with Event Graphs for LLM-Agent Stock Forecasting",
+   "claim": "Historical event continuation adds forecast value when temporally grounded and reliability-calibrated."
+  },
+  {
+   "key": "2609.35559",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2609.35559",
+   "title": "From Search to Research: Exploring Search Scaling in Autonomous Quantitative Factor Mining",
+   "claim": "Model capability matters more than search depth in initial autonomous research."
+  }
+ ]
+}

@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Do Your Own Research: Learning to Forecast by Learning to Search</title>
+    <link>https://arxiv.org/abs/2610.01955</link>
+    <description>Outcome-based training teaches agents evidence discipline, reducing searches while improving forecast calibration.</description>
+    <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.01955</guid>
+  </item>
+  <item>
+    <title>Large Language Models, Debt Renegotiation, and Contract Enforcement</title>
+    <link>https://www.ssrn.com/abstract=7551119</link>
+    <description>LLM-written messages outperform human-written messages in distressed-debt renegotiation.</description>
+    <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7551119</guid>
+  </item>
+  <item>
+    <title>LiveOption: Evaluating LLM Agents in Structured Option Trading with Nonlinear Payoffs</title>
+    <link>https://arxiv.org/abs/2609.33470</link>
+    <description>LLM agents underperform on structured option trading with nonlinear payoffs.</description>
+    <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.33470</guid>
+  </item>
+  <item>
+    <title>EverMine: Dissecting the Self-Evolution of Research Capabilities in Long-Horizon Alpha Research</title>
+    <link>https://arxiv.org/abs/2609.33524</link>
+    <description>Capability evolution provides no consistent gains in alpha discovery.</description>
+    <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.33524</guid>
+  </item>
+  <item>
+    <title>RICE-Alpha: Reliability-Informed Correction with Event Graphs for LLM-Agent Stock Forecasting</title>
+    <link>https://arxiv.org/abs/2609.34004</link>
+    <description>Historical event continuation adds forecast value when temporally grounded and reliability-calibrated.</description>
+    <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.34004</guid>
+  </item>
+  <item>
+    <title>From Search to Research: Exploring Search Scaling in Autonomous Quantitative Factor Mining</title>
+    <link>https://arxiv.org/abs/2609.35559</link>
+    <description>Model capability matters more than search depth in initial autonomous research.</description>
+    <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2609.35559</guid>
+  </item>
+  <item>
     <title>An Integrated Framework of Financial Feature States, Scenario Candidates and a Lightweight Local Selection Model: A Matched-Information Comparison for S&amp;P 500 Price-Path Selection</title>
     <link>https://www.ssrn.com/abstract=7547400</link>
     <description>Lightweight language models underperform conventional baselines for S&amp;P 500 price-path selection despite financial adaptation.</description>
