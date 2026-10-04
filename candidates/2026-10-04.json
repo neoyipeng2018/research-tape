@@ -1,0 +1,83 @@
+[
+ {
+  "key": "10.2139/ssrn.7556919",
+  "source": "SSRN",
+  "title": "LLM-Driven Sentiment Shocks and Nonlinear Contagion in Global Banking Networks: A Hybrid SEM–ANN–GARCH Approach",
+  "abstract": "Here we develop and test a hybrid empirical framework to study the propagation of machine-readable sentiment shocks through interconnected banking systems and the amplification of these shocks by market volatility and financial-network structure. The framework integrates structural equation modeling (SEM), nonlinear network regression, conditional-volatility modeling, and artificial neural networks (ANN) to separate direct sentiment effects from indirect and state-dependent contagion mechanisms. The analysis is based on 1,920 country-month observations and includes standardized LLM sentiment, LLM sentiment shocks, banking-sector returns, conditional volatility, cross-border banking exposure, network centrality, network density, the VIX, foreign-exchange shocks, oil-price shocks, and a composite contagion index. The results show a strikingly positive association between LLM sentiment shocks and contagion (β = 0.342, p",
+  "link": "https://www.ssrn.com/abstract=7556919",
+  "score": 7,
+  "why": "LLM sentiment driving banking network contagion with proper network structure."
+ },
+ {
+  "key": "10.2139/ssrn.7556540",
+  "source": "SSRN",
+  "title": "FinRAG-IN: Recency-Aware RAG for Indian Financial Text",
+  "abstract": "Retrieval-augmented generation mitigates the parametric staleness of large language models, yet general-purpose pipelines transfer poorly to Indian financial text. Three properties of this domain break standard components. Monetary quantities are expressed in the lakh–crore system, which subword tokenizers fragment into semantically empty units. The fiscal year runs April to March and is written in notations absent from general corpora. Relevance decays at rates differing by two orders of magnitude across document classes, from intraday market data to quarterly macroeconomic releases. This paper presents FinRAG-IN, a framework addressing these through five components. A denomination-preserving tokenizer protects rupee scales, exchange tickers and regulatory entities as atomic units. Register alignment by hypothetical document embedding is applied asymmetrically to the dense channel so that lexical exactness is retained. Temporal recency-weighted reciprocal rank fusion composes calibration-free rank fusion with a class-conditioned exponential decay, for which scale invariance is proved. Cross-encoder reranking with maximal marginal relevance suppresses the redundancy induced by concurrent syndication. A numeral verification pass rejects generated quantities absent from the retrieved evidence. On a curated benchmark of 60 documents drawn from 32 Indian regulatory, exchange and press sources, FinRAG-IN attains faithfulness 0.89 and nDCG@10 0.80, improvements of 23.6% and 19.4% over a dense-only baseline (paired bootstrap, p",
+  "link": "https://www.ssrn.com/abstract=7556540",
+  "score": 6,
+  "why": "Domain-specific RAG methods for Indian finance. Real problem, clear solutions, no evidence of results."
+ },
+ {
+  "key": "10.2139/ssrn.7556897",
+  "source": "SSRN",
+  "title": "AI-Enhanced Forecasting of Systemic Liquidity Risk: A Hybrid SEM-ANN and GARCH-X Modeling Approach",
+  "abstract": "Systemic liquidity risk arises from the interaction of funding constraints, market-liquidity deterioration, and interbank network contagion, and is increasingly conditioned by algorithmic and AI-mediated sentiment signals that were largely absent from the risk architecture of the pre-2010 financial system. This paper develops and estimates a three-layer hybrid forecasting framework that combines a structural equation model (SEM) of systemic liquidity risk's latent determinants, an artificial neural network (ANN) layer that recovers the nonlinear interaction and threshold effects the SEM's linear structural paths cannot capture, and a GARCH-X volatility model in which an AI/algorithmic sentiment-stress index enters the conditional-variance equation as an exogenous regressor. Using an empirical panel of 15 banks across four regions over 48 quarters (2013Q1-2024Q4) and a companion daily market-liquidity-stress series spanning 2015-2024, we estimate a five-construct SEM (Funding Liquidity Risk, Market Liquidity Risk, Interbank Network Contagion, AI-Sentiment Stress, and a second-order Systemic Liquidity Risk outcome) with excellent measurement properties (all average variance extracted > 0.70, composite reliability > 0.87) and a well-specified structural model (comparative fit index = 1.004, root-mean-square error of approximation = 0.000, structural R² = 0.887). All four structural paths (funding liquidity, market liquidity, network contagion, AI-sentiment stress) are significant predictors of systemic liquidity risk (p",
+  "link": "https://www.ssrn.com/abstract=7556897",
+  "score": 6,
+  "why": "Solid financial forecasting with ANN layers; incremental, no surprising findings."
+ },
+ {
+  "key": "10.2139/ssrn.7556720",
+  "source": "SSRN",
+  "title": "Market Dynamics of Intraday Electricity Trading Under Different Auction Frequencies and Timings",
+  "abstract": "Renewable energies pose significant challenges for short-term power markets due to their inherent variability. In this regard, intraday markets are growing in volume and becoming increasingly important, as they enable participants to trade power imbalances close to delivery. This work introduces a multi-agent reinforcement learning approach to compare intraday auctions designs with different timing and frequency. Using a stylized case study, we simulate interactions between uncertain wind producers and flexible conventional producers to analyse the efficiency of intraday auctions designs in handling wind generation forecast errors. Although intraday markets are a necessary tool to handle the variability of renewable energy, the results show that they are not always sufficient, independently from the auction design. Indeed, a clear disconnection between the traded volumes and the reduction of real-time imbalances is observed. In particular, lower uncertainty at the time of market clearing does not necessarily improve imbalance reduction, but increases its costs due to the higher number of trades. Moreover, the increase in wind generation increases the intraday market size, but barely improves real-time imbalances reduction. Consequently, the intraday market should be designed together with the reserve market to enhance their joint efficiency.",
+  "link": "https://www.ssrn.com/abstract=7556720",
+  "score": 4,
+  "why": "Energy auction RL; sound methods but not finance/LLM"
+ },
+ {
+  "key": "10.2139/ssrn.7551524",
+  "source": "SSRN",
+  "title": "Public LLM API Pricing across Brazil-related and Global Gateway Catalogs",
+  "abstract": "Public large language model API catalogs quote prices under heterogeneous currencies, identifiers, and charging conditions. We document a versioned observatory of advertised prices and evaluate the comparability of its records. A purposive registry of 20 sources yielded 1,625 offer records across 1,315 seller-model pairs. Fetch-start times were recorded on 1 October 2026 UTC, corresponding to 2 October. A Brazil-related subset contains 910 records, including 100 BRL records from Brazil-mapped sellers and 810 USD records from Portuguese-market global sellers. Seller-scoped identity mappings retain 110 offers for ten canonical models; 1,205 nonofficial seller-model identifiers remain outside the curated mapping. Of the matched offers, 26 require price review. Among 84 USD offers extracted by structured or dedicated parsers, every model's input and output extrema are reproduced by official offers alone. All 31 nonofficial offers in this subset lack explicit service tiers. The release supports reproducible catalog analysis while withholding unsupported equivalent-service price rankings.",
+  "link": "https://www.ssrn.com/abstract=7551524",
+  "score": 3,
+  "why": "Data registry, no methods or actionable insights."
+ },
+ {
+  "key": "10.2139/ssrn.7552746",
+  "source": "SSRN",
+  "title": "Becoming Suspicious Across Borders: Algorithmic Extraterritoriality and AI-Driven Financial Surveillance",
+  "abstract": "Suspicion is an important, yet elusive concept in anti-money laundering and counter-terrorist financing (AML/CFT), which allows for intervention below the threshold of proof. In its traditional form, suspicion can be understood as a situated legal judgement by human actors within identifiable jurisdictions. It is argued that this understanding is no longer adequate. As artificial intelligence (AI) becomes an integral part of financial surveillance, suspicion is increasingly produced through data-driven processes. This transformation is epistemic, but also spatial. Since AI-driven financial surveillance operates through transnational data infrastructures, regulatory reach is less a matter of where conduct occurs than a question of whether such conduct becomes visible within data systems. This article develops the concept of algorithmic extraterritoriality, understood as a form of regulatory power mediated by data infrastructures rather than formal assertions of jurisdiction. Moreover, since individuals are increasingly constituted as datafied subjects of suspicion, they are rendered governable through dispersed and opaque processes of evaluation. This constitutes a challenge for accountability and contestability because suspicion becomes more difficult to locate, explain or contest.",
+  "link": "https://www.ssrn.com/abstract=7552746",
+  "score": 2,
+  "why": "Legal/regulatory theory; no technical content or implementation path"
+ },
+ {
+  "key": "10.2139/ssrn.7552918",
+  "source": "SSRN",
+  "title": "Generative AI and Administrative Automation in Healthcare Evaluating Productivity Cost Savings and Financial Risk",
+  "abstract": "Generative artificial intelligence is finding its way into healthcare administration to write letters, summarize documents, aid with coding, write prior-authorization documentation, aid follow-up forms on claims, clarify bills, and lessen documentation load. The financial argument is appealing since administrative tasks demand a lot of labor and bring about a slower payment process, payments being denied, re doing work and dissatisfaction among workers. However, the savings in time may not necessarily translate into cash savings, and faulty output or nonconformance can lead to revenue leakage, repayment risk, privacy breaches, operational crashes, and patient harm. This literature review builds up a systematic model to assess productivity, cost reductions, and monetary risk within healthcare organizations in the United States. It differentiates between the completion of technical tasks and the achieved operational value; illustrates the appropriate use cases by volume, and text intensity, rule stability, error detectability, financial impact, and proximity to clinical processes; and proposes a total-cost-ofownership model that adds up licensing, integration, supervision, rework, security, governance, and added-valueof-residual-loss. A clear picture of analysis of scenarios shows the impact of labor redeployment and adopting and model error and denial avoidance and integration cost on a project resulting into positive net value. The discussion concludes that generative AI can be most justified as an administrative copilot to a supervised AI, rather than and an autonomous financial decision-maker. Hospitals ought to start with low volume, limited scope and reversible, high-volume tasks; claims, coding, coverage and patient facing records must be human verified; there should be subgroup and payer specific error; post deployment benefits and losses have to be monitored. Four analytical figures and four tables put in place a publication-quality structure in the hands of hospital leaders, finance departments, informatics and compliance departments, and researchers.",
+  "link": "https://www.ssrn.com/abstract=7552918",
+  "score": 1,
+  "why": "Healthcare admin; explicit literature review, entirely out of scope"
+ },
+ {
+  "key": "10.2139/ssrn.7552919",
+  "source": "SSRN",
+  "title": "Financing the Body, Forgetting the Process: A Demand-Side Pillar for Physical AI and Humanoid Robotics Incentives in Italy",
+  "abstract": "In autumn 2026 the Italian government announced a package of measures for advanced robotics and Physical AI: a dedicated fund of 200-300 million euro in the 2027 budget law, the use of Innovation Agreements (Accordi per l'innovazione) as the delivery vehicle, a publicly controlled \"chain leader\" to aggregate the supply side, an inter-ministerial committee on labour impacts, and a joint position with France and Germany at European level. This paper argues that the package is necessary but incomplete. It is built on a supply-side logic that finances the production of robotic bodies and the consolidation of a national champion, while leaving unaddressed the problem that has determined the outcome of every Italian technology incentive since 2017: the conversion of purchased capital into productive capacity. Drawing on the final evaluation of the Transizione 4.0 plan, on the evidence on the productivity J-curve, and on the technical literature on humanoid reliability, data scarcity and deployment, the paper identifies the specific features that make Physical AI adoption riskier and more complement-intensive than previous waves of automation. It then proposes a demand-side pillar built around five instruments: a pilot voucher delivered through the existing network of Competence Centres and European Digital Innovation Hubs; a transformation allowance within the Nuova Transizione 5.0 regime, recognising integration, data and labour costs against a measured baseline; a network of mission testbeds operating under a common evaluation protocol and feeding a national evidence registry; performance-based public first-market contracts; and binding conditions on interoperability, data portability and workforce transition for any platform receiving public money. The paper quantifies the order of magnitude of each instrument, explains how the pillar can be integrated with the announced fund and with the Innovation Agreements without new legislation of general scope, and proposes a set of indicators, including stop rules, to govern the programme. The central claim is that for an immature, learning technology, reducing the risk of adoption is at least as important as reducing the price of the asset, and that the Italian institutional system already possesses most of the components needed to do so.",
+  "link": "https://www.ssrn.com/abstract=7552919",
+  "score": 1,
+  "why": "Industrial policy analysis; not financial markets or ML"
+ },
+ {
+  "key": "10.2139/ssrn.7557353",
+  "source": "SSRN",
+  "title": "Knowing and Becoming with Generative AI: Insights from the Canadian accounting education field",
+  "abstract": "This study examines how the rapid and largely student-led early adoption of generative artificial intelligence (GenAI) is prompting a reconfiguration of learning practices, pedagogical roles, and curricular frameworks in Canadian professional accounting education. Drawing on interviews conducted between 2021 and 2025 with students and professors across the Canadian accounting education field, this research shows how GenAI is becoming embedded in students’ study routines and increasingly perceived as a collaborative, confidence-building learning partner. By contrast, institutional responses remain fragmented, ranging from cautious experimentation to outright prohibition, often reflecting uncertainty and policy lag. Theoretically, the study is guided by the conceptualization of higher education not only as a process of learning, but as one of becoming. The findings suggest that GenAI adoption by the students may give rise to multiple knowledge frames that they have to continuously evaluate. At the same time, their engagement with technology may help them develop dispositions and qualities relevant to their future role as accountants; however, if not used properly, it also threatens to shrink them. The paper contributes to accounting research by bridging critical curriculum reform debates with emerging scholarship on GenAI and digital learning, while offering actionable insights for policy, pedagogy, and faculty development in the AI era.",
+  "link": "https://www.ssrn.com/abstract=7557353",
+  "score": 1,
+  "why": "Off-topic: accounting education pedagogy, not finance."
+ }
+]

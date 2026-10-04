@@ -1,0 +1,16 @@
+{
+ "date": "2026-10-04",
+ "scanned": 9,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7556919",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7556919",
+   "title": "LLM-Driven Sentiment Shocks and Nonlinear Contagion in Global Banking Networks: A Hybrid SEM–ANN–GARCH Approach",
+   "claim": "LLM sentiment shocks correlate positively with financial contagion in banking networks."
+  }
+ ]
+}
