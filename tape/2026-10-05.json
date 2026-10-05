@@ -1,0 +1,16 @@
+{
+ "date": "2026-10-05",
+ "scanned": 5,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7553938",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7553938",
+   "title": "Calibrated Gating in Financial RAG: Small External Controllers versus LLM Self-Assessment across Model Scales",
+   "claim": "A 0.3B calibrated model beats LLM self-assessment for financial RAG evidence-sufficiency gating."
+  }
+ ]
+}

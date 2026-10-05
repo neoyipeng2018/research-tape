@@ -1,0 +1,47 @@
+[
+ {
+  "key": "10.2139/ssrn.7553938",
+  "source": "SSRN",
+  "title": "Calibrated Gating in Financial RAG: Small External Controllers versus LLM Self-Assessment across Model Scales",
+  "abstract": "Retrieval-Augmented Generation (RAG) agents built on Large Language Models (LLMs) must decide whether to retrieve, whether the evidence suffices, and whether an answer is reliable enough to release. These decisions are usually studied one at a time and with a single generator, so it is unclear which judge should control each decision and whether the choice depends on model scale. We compare four judges: a 0.3B calibrated decision model (Laya), the LLM's calibrated self-assessment, a Cross-Entropy (CE) classifier with Laya's backbone, and an LLM-as-judge. The generators are five Qwen3 sizes from 0.6B to 14B, evaluated on financial licensing exams, stock-movement prediction and numerical reasoning over reports with a leakagefree protocol. For answer correctness, an external LLM judge discriminates better than self-assessment for the 0.6B and 1.7B generators, while from 4B upward self-assessment beats an 8B judge and a 14B judge at most ties it. For evidence sufficiency, Laya and CE reach the highest Area Under the Receiver Operating Characteristic Curve (AUROC, 0.80) and an Expected Calibration Error (ECE) of 0.02, against about 0.3 for LLM autoraters. Risk thresholds fit on earlier reports kept their target on later ones. Knowledge-intensive and structural gating decisions therefore call for different judges.",
+  "link": "https://www.ssrn.com/abstract=7553938",
+  "score": 7,
+  "why": "Real financial tasks, leakage-free evaluation, actionable RAG findings by model scale."
+ },
+ {
+  "key": "10.2139/ssrn.7560456",
+  "source": "SSRN",
+  "title": "Can Artificial Intelligence Detect Financial Market Stress? Evidence from Machine Learning Models",
+  "abstract": "This paper examines whether machine learning models can serve as effective frameworks for detecting financial market stress. Using daily data on the S&P 500, the CBOE Volatility Index (VIX), oil, gold, and the US Dollar Index from January 2006 to September 2026, we construct a binary financial stress indicator and evaluate three classifiers—logistic regression, random forest, and XGBoost—trained on the 2006–2022 sample and tested out-of-sample on 2023–2026. Random forest and XGBoost identify stress days with near-perfect classification performance (AUC-ROC above 0.99), while logistic regression achieves a lower but still meaningful AUC-ROC of 0.980. The results show that volatility-based indicators dominate the detection signal and that tree-based ensembles capture nonlinear stress–volatility relationships more effectively than the linear benchmark. We discuss the practical implications and limitations of these findings for market surveillance and financial risk monitoring. The evidence suggests that artificial intelligence provides a powerful framework for real-time stress detection, although its performance should be interpreted as market-state identification rather than long-horizon crisis forecasting.​",
+  "link": "https://www.ssrn.com/abstract=7560456",
+  "score": 4,
+  "why": "VIX predicting stress seems circular; near-perfect results lack practical grounding."
+ },
+ {
+  "key": "10.2139/ssrn.7553960",
+  "source": "SSRN",
+  "title": "A Risk-Tiered Human-Review Framework for AI-Generated Financial Reports",
+  "abstract": "Organisations are beginning to use AI to generate financial reports, yet human reviewers may over-trust algorithmic output (automation bias), and review effort is often applied uniformly regardless of the quality of the underlying data or the consequences of an error. This paper reviews literature on data governance, data quality management, human-in-the-loop oversight and automation bias, and identifies a gap: within the sources reviewed, little work links the intensity of human review to both data quality and the impact of error. It proposes a conceptual three-tier review framework that assigns oversight using a data-quality score and an impact classification, with an impact floor for high-stakes outputs, random spot checks of the lightest tier, dynamic tier reassignment, and periodic validation of the quality scoring itself. The framework is a proposal and has not been empirically tested. The sources come mainly from data governance, information systems and human-AI interaction research, and several relate to financial reporting only by analogy. The paper contributes a structured way to discuss proportionate oversight of AI-generated reports and a set of questions for future empirical work. It also sets out the framework's limitations, including its dependence on the reliability of the quality scoring, and the evidence needed to evaluate it.",
+  "link": "https://www.ssrn.com/abstract=7553960",
+  "score": 3,
+  "why": "Position paper, explicitly untested, no empirical data or implementation."
+ },
+ {
+  "key": "10.2139/ssrn.7560588",
+  "source": "SSRN",
+  "title": "Human capital disclosure in words and photographs: Evidence from Japan",
+  "abstract": "We examine how firms’ stated emphasis on employees corresponds to the use of employee photographs in integrated reports. Our sample comprises 3,377 reports from 546 Japanese listed firms for 2016–2024. We apply large language models to select employee photographs and assess whether they accompany accounts of employees’ experiences or participation in specific activities. Stronger people orientation, measured from annual securities reports, is associated with more extensive photograph use and more photographs per page accompanying such descriptions. Moreover, the association with photograph quantity is more pronounced when human capital narratives are more readable. These findings suggest that firms’ stated attitudes toward employees extend beyond written narratives to their visual presentation of human capital through employees’ images and experiences.",
+  "link": "https://www.ssrn.com/abstract=7560588",
+  "score": 2,
+  "why": "Photo-labeling tool for ESG analysis; single-country, not financial ML focused."
+ },
+ {
+  "key": "10.2139/ssrn.7560613",
+  "source": "SSRN",
+  "title": "Tonal Language Encoding and Decoding by AI: Matters of Equity and Access",
+  "abstract": "Artificial intelligence systems are increasingly being integrated into the world, whether in communication, education, or access to information, yet many widely used systems remain primarily designed around textual interaction and English-dominant training data. This creates challenges for speakers of tonal languages such as Thai, where differences in vowel length, pronunciation, and tone can alter word meaning. This study investigates the research question: ”To what extent can AI clients accurately recognize the tonal language of Thai, and what adaptations can improve their inclusivity for speakers of this tonal language?” Mainstream AI speech-recognition systems such as those embedded into ChatGPT are hypothesized to be able to transcribe Thai with varying levels of accuracy, but while continually producing errors involving tonal and phonetic distinctions. By employing a mixed-methods approach combining experimentation and corpus analysis to compare speech-to-text transcriptions across Apple Intelligence, OpenAI’s ChatGPT, and Google’s transcription technology, two tests were performed. For each, a broad range of tones, vowels, consonants, and phonemes were read by three native Thai speakers with different voice profiles, then the resulting transcriptions were compared with the original sentences and analyzed for patterns of error. Apple Intelligence produced the most consistently accurate transcriptions, followed by Google, then ChatGPT. Common errors included tone substitution, vowel-length changes, consonant substitution, word omission, and semantic distortion, with performance also varying across speakers. These findings support the hypothesis that although mainstream AI systems can recognize spoken Thai, limitations remain in their ability to consistently process tonal and phonetic distinctions. These findings suggest that inaccurate tonal-language recognition may create unequal access to AI for speakers who depend on voice-based interaction. Greater representation of tonal languages in speech training data alongside increased attention to language-specific phonological features is therefore important to developing more linguistically inclusive and equitable AI systems.",
+  "link": "https://www.ssrn.com/abstract=7560613",
+  "score": 1,
+  "why": "Thai speech recognition; completely off-topic for financial practitioners."
+ }
+]
