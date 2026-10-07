@@ -1,0 +1,23 @@
+{
+ "date": "2026-10-07",
+ "scanned": 14,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7555279",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7555279",
+   "title": "Silent Implementation Shortfall in LLM-Written Trading Code",
+   "claim": "Frontier LLMs silently diverge from trading strategy intent on over a quarter of tasks."
+  },
+  {
+   "key": "10.2139/ssrn.7563563",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7563563",
+   "title": "Artifact Integrity Does Not Imply Temporal Integrity: Evaluating Evidence-Bound Gates for Financial Research Agents",
+   "claim": "Financial artifacts with verified byte integrity can still contain temporally invalid information."
+  }
+ ]
+}

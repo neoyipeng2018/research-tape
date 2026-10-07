@@ -6,6 +6,20 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Silent Implementation Shortfall in LLM-Written Trading Code</title>
+    <link>https://www.ssrn.com/abstract=7555279</link>
+    <description>Frontier LLMs silently diverge from trading strategy intent on over a quarter of tasks.</description>
+    <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7555279</guid>
+  </item>
+  <item>
+    <title>Artifact Integrity Does Not Imply Temporal Integrity: Evaluating Evidence-Bound Gates for Financial Research Agents</title>
+    <link>https://www.ssrn.com/abstract=7563563</link>
+    <description>Financial artifacts with verified byte integrity can still contain temporally invalid information.</description>
+    <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7563563</guid>
+  </item>
+  <item>
     <title>LLM Pricing Agents as Rote Learners</title>
     <link>https://www.ssrn.com/abstract=7555398</link>
     <description>Increased prompt context makes LLM pricing agents more consistent without making them more accurate.</description>
@@ -725,48 +739,6 @@
     <description>TabM scales with data substantially better than Transformers or MLPs on actuarial tasks.</description>
     <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2609.03106</guid>
-  </item>
-  <item>
-    <title>RetailAgent: Structured Adverse Timing in Self-Conditioned Multimodal LLM Trading Agents</title>
-    <link>https://arxiv.org/abs/2608.28399</link>
-    <description>LLM agents exhibit predictable negative timing in sequential trading decisions.</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2608.28399</guid>
-  </item>
-  <item>
-    <title>Deep Hedging Under Realistic Market Frictions: A Regime-Conditional Empirical Study of Dynamic Option Hedging on Bitcoin Options</title>
-    <link>https://arxiv.org/abs/2608.29025</link>
-    <description>Deep hedging underperforms classical hedging methods on real options data with realistic transaction costs.</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2608.29025</guid>
-  </item>
-  <item>
-    <title>FORESIGHT-9: Prospective and Process-Aware Evaluation of Adaptive Trading Agents</title>
-    <link>https://arxiv.org/abs/2608.29372</link>
-    <description>A fixed equal-weight policy outperforms adaptive agents in 31 of 36 prospective runs.</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2608.29372</guid>
-  </item>
-  <item>
-    <title>FaVOR: LLM-Based Agentic Framework for Factor Mining via Empirical Validation</title>
-    <link>https://arxiv.org/abs/2608.30192</link>
-    <description>Automated factor mining optimized purely for returns breaks down across market regimes.</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2608.30192</guid>
-  </item>
-  <item>
-    <title>Ordinal Gates, Cardinal Bets: Matching LLM Confidence to the Financial Decision Operator</title>
-    <link>https://arxiv.org/abs/2609.00187</link>
-    <description>LLM confidence score portability requires joint optimization with the downstream operator.</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2609.00187</guid>
-  </item>
-  <item>
-    <title>Context Window Failures in Relational Foundation Models</title>
-    <link>https://arxiv.org/abs/2609.00460</link>
-    <description>Current relational foundation models cannot handle high-cardinality real-world data without pre-aggregation.</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2609.00460</guid>
   </item>
 </channel>
 </rss>
