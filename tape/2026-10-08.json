@@ -1,0 +1,52 @@
+{
+ "date": "2026-10-08",
+ "scanned": 113,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7568638",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7568638",
+   "title": "Agents Propose, Code Decides: An Autonomous Research Loop Framework to Build an Equity Alpha Model",
+   "claim": "Agent-proposed predictors held their rank IC out of sample, but the hedged long-short retained only about half its expected Sharpe."
+  },
+  {
+   "key": "2610.04040",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.04040",
+   "title": "Agent Policy-Value Audit: Separating Transition Composition from Event Selection in Financial LLM Agents",
+   "claim": "The agent's +15.2 bps/event gross deployment value is explained by transition composition, leaving selection value at -10.6 bps and no detectable skill."
+  },
+  {
+   "key": "10.2139/ssrn.7573698",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7573698",
+   "title": "Noisy Financial Machine Learning",
+   "claim": "Against the panel historical mean rather than the zero forecast, only flexible nonlinear models show consistent gains, concentrated in small, value and illiquid stocks."
+  },
+  {
+   "key": "10.2139/ssrn.7577906",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7577906",
+   "title": "Large Language Models and Information Frictions in Corporate Bonds",
+   "claim": "LLM-read earnings calls forecast rating migration a year ahead, and bond returns only where analysts disagreed, while post-earnings drift is not explained by it."
+  },
+  {
+   "key": "2610.03080",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.03080",
+   "title": "MintEval: Do LLMs Implement the Trading Strategy You Asked For? A Behavioural-Equivalence Benchmark for Natural-Language-to-Strategy Code",
+   "claim": "A frontier model silently diverges from the requested strategy on 27.5% of tasks, and a recent LLM-judge benchmark accepts every such failure."
+  },
+  {
+   "key": "2610.03369",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.03369",
+   "title": "Mixture-of-Experts for Cryptocurrency Order Execution: Training Stability, Tail Risk, and Failure Modes",
+   "claim": "Annealed exploration alone eliminates policy collapse in this environment, making expert partitioning unnecessary, and within-policy tail risk rises monotonically with K."
+  }
+ ]
+}
