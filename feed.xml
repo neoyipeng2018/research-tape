@@ -6,6 +6,27 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Do LLM Valuation Agents Read the Filing? Metamorphic Tests of Filing Fidelity on Korean Listed Firms</title>
+    <link>https://www.ssrn.com/abstract=7573358</link>
+    <description>Even with arithmetic delegated to Python, none of four preregistered primary hypotheses survives Holm correction across 150 Korean firms.</description>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7573358</guid>
+  </item>
+  <item>
+    <title>Look-ahead index membership and the relative accuracy of stock forecast</title>
+    <link>https://www.ssrn.com/abstract=7583847</link>
+    <description>Look-ahead index rosters bias forecast comparisons against ML models, shrinking the Nasdaq-100 ML advantage over small size by about 90%.</description>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7583847</guid>
+  </item>
+  <item>
+    <title>OOM-RL II: Reality Is an Oracle, Not a Debugger Provenance-Constrained Diagnosis in Continually Evolving Agent-Engineered Systems</title>
+    <link>https://arxiv.org/abs/2610.10256</link>
+    <description>External outcome feedback can constrain claims about a trading system&#x27;s returns but cannot identify which evolving procedure produced them without provenance binding.</description>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.10256</guid>
+  </item>
+  <item>
     <title>Agents Propose, Code Decides: An Autonomous Research Loop Framework to Build an Equity Alpha Model</title>
     <link>https://www.ssrn.com/abstract=7568638</link>
     <description>Agent-proposed predictors held their rank IC out of sample, but the hedged long-short retained only about half its expected Sharpe.</description>
@@ -739,27 +760,6 @@
     <description>Models omitting cross-impact and transient decay systematically overestimate costs for relative-value trades.</description>
     <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2609.04712</guid>
-  </item>
-  <item>
-    <title>Which Number Is Sticky? What Survives Source Withdrawal in Sequential LLM Financial Analysis</title>
-    <link>https://www.ssrn.com/abstract=7411618</link>
-    <description>Controlling display of prior valuations matters more than disclosing their withdrawal in LLM financial analysis.</description>
-    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7411618</guid>
-  </item>
-  <item>
-    <title>Correlated Beliefs, Correlated Trades: Agentic AI and Endogenous Volatility Amplification</title>
-    <link>https://www.ssrn.com/abstract=7389159</link>
-    <description>Correlated AI beliefs amplify volatility through synchronized order flow, independent of individual forecast accuracy.</description>
-    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7389159</guid>
-  </item>
-  <item>
-    <title>The Crisis of Entity Resolution in Heterogeneous AI Environments: Data, Financial, and Semantic Dimensions</title>
-    <link>https://www.ssrn.com/abstract=7396398</link>
-    <description>Entity resolution errors cascade and compound across indexing, retrieval, and generation stages in AI systems.</description>
-    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7396398</guid>
   </item>
 </channel>
 </rss>

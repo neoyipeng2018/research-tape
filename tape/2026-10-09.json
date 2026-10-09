@@ -1,0 +1,31 @@
+{
+ "date": "2026-10-09",
+ "scanned": 40,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7573358",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7573358",
+   "title": "Do LLM Valuation Agents Read the Filing? Metamorphic Tests of Filing Fidelity on Korean Listed Firms",
+   "claim": "Even with arithmetic delegated to Python, none of four preregistered primary hypotheses survives Holm correction across 150 Korean firms."
+  },
+  {
+   "key": "10.2139/ssrn.7583847",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7583847",
+   "title": "Look-ahead index membership and the relative accuracy of stock forecast",
+   "claim": "Look-ahead index rosters bias forecast comparisons against ML models, shrinking the Nasdaq-100 ML advantage over small size by about 90%."
+  },
+  {
+   "key": "2610.10256",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.10256",
+   "title": "OOM-RL II: Reality Is an Oracle, Not a Debugger Provenance-Constrained Diagnosis in Continually Evolving Agent-Engineered Systems",
+   "claim": "External outcome feedback can constrain claims about a trading system's returns but cannot identify which evolving procedure produced them without provenance binding."
+  }
+ ]
+}
