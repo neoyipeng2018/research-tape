@@ -1,0 +1,31 @@
+{
+ "date": "2026-10-10",
+ "scanned": 22,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2610.11732",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.11732",
+   "title": "MemTrial: Learning When to Trust Memory in LLM Portfolio Agents",
+   "claim": "Counterfactual credit for memories, not raw outcomes, keeps LLM portfolio agents within 2.2% of equal-weight on two benchmarks when experience values fail to generalize."
+  },
+  {
+   "key": "10.2139/ssrn.7580979",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7580979",
+   "title": "Beyond Isolation: LLM-Guided Hypergraph Learning across Documents and Horizons for Volatility Prediction from Conference Calls",
+   "claim": "Linking earnings calls across firms through shared LLM-built business-condition factors improves volatility forecasts over 5- to 60-day horizons versus transcript, graph, and financial baselines."
+  },
+  {
+   "key": "10.2139/ssrn.7587820",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7587820",
+   "title": "Consistent But Lenient: Large Language Models Versus Human Underwriters on Borderline Consumer Credit Decisions",
+   "claim": "On borderline credit files, LLM reviewers are more consistent than humans yet approve 79% versus 46%, so consistency alone cannot justify deployment."
+  }
+ ]
+}

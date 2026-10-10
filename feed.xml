@@ -6,6 +6,27 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>MemTrial: Learning When to Trust Memory in LLM Portfolio Agents</title>
+    <link>https://arxiv.org/abs/2610.11732</link>
+    <description>Counterfactual credit for memories, not raw outcomes, keeps LLM portfolio agents within 2.2% of equal-weight on two benchmarks when experience values fail to generalize.</description>
+    <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.11732</guid>
+  </item>
+  <item>
+    <title>Beyond Isolation: LLM-Guided Hypergraph Learning across Documents and Horizons for Volatility Prediction from Conference Calls</title>
+    <link>https://www.ssrn.com/abstract=7580979</link>
+    <description>Linking earnings calls across firms through shared LLM-built business-condition factors improves volatility forecasts over 5- to 60-day horizons versus transcript, graph, and financial baselines.</description>
+    <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7580979</guid>
+  </item>
+  <item>
+    <title>Consistent But Lenient: Large Language Models Versus Human Underwriters on Borderline Consumer Credit Decisions</title>
+    <link>https://www.ssrn.com/abstract=7587820</link>
+    <description>On borderline credit files, LLM reviewers are more consistent than humans yet approve 79% versus 46%, so consistency alone cannot justify deployment.</description>
+    <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7587820</guid>
+  </item>
+  <item>
     <title>Do LLM Valuation Agents Read the Filing? Metamorphic Tests of Filing Fidelity on Korean Listed Firms</title>
     <link>https://www.ssrn.com/abstract=7573358</link>
     <description>Even with arithmetic delegated to Python, none of four preregistered primary hypotheses survives Holm correction across 150 Korean firms.</description>
