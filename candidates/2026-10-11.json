@@ -1,0 +1,74 @@
+[
+ {
+  "key": "10.2139/ssrn.7591058",
+  "source": "SSRN",
+  "title": "A Systematic Benchmark of Vector Stock Embeddings",
+  "abstract": "Stock embeddings learned from correlation networks or return series are increasingly used as compact descriptors of asset similarity. We ask a simple question: do these stock embeddings outperform or tie with the raw features they compress? We benchmark a modular pipeline (relationship matrix, graph construction, embedding generation, evaluation) across three universes (S&P 500, Russell 1000, Russell 3000), four horizons, six co-movement-removal methods, five graph configurations, and six representation families-including a faithful reproduction of Sarmah et. al.-evaluating retrieval (hit@k, success@k, MRR), clustering (V-measure, NMI, ARI), and supervised readout (SVM-F1) against GICS labels, with paired Wilcoxon and McNemar tests, bootstrap intervals, and Benjamini-Hochberg correction. The answer is baseline-dependent. Every learned family decisively beats a leak-free raw-correlation-row baseline (+0.11 to +0.21 in sub-industry hit@3, p ≪ 0.001), but none clearly beats the raw return series: at Russell 3000 the best embedding is statistically tied with raw returns (p = 0.69), and elsewhere raw returns leads by at most 0.027-0.029 in hit@3. Under a decision rule requiring BH-significance plus one percentage point, raw returns never loses. Embeddings' durable advantage is compression: 16-64 dimensions match thousands of raw features. An out-of-sample peer-hedging experiment shows no risk-reduction advantage over a direct Pearson hedge. All results use full-survivor panels and compare methods under idealised conditions, not live trading.",
+  "link": "https://www.ssrn.com/abstract=7591058",
+  "score": 8,
+  "why": "Rigorous embedding benchmark with leak-free baselines, GICS labels, multiple-testing correction."
+ },
+ {
+  "key": "10.2139/ssrn.7585499",
+  "source": "SSRN",
+  "title": "Private Credit: Performance Drivers, Structural Protections, and Investor-Specific Liquidity Risk in Private Credit",
+  "abstract": "As private credit expands, understanding how returns are earned and risks are managed becomes increasingly important. This report examines the role of borrower quality, lending rates, and payment terms in shaping performance. It also explains how loan structures can protect investors and how early repayments and funding delays affect different investor groups. Drawing on market trends through 2026, it highlights falling lending spreads, rising use of deferred interest payments, and exposure to software businesses affected by AI. The aim is to help readers distinguish genuine lending opportunities from risks hidden by market optimism.",
+  "link": "https://www.ssrn.com/abstract=7585499",
+  "score": 3,
+  "why": "Descriptive market report on private credit; no method or data pipeline."
+ },
+ {
+  "key": "10.2139/ssrn.7589460",
+  "source": "SSRN",
+  "title": "Predicting Bull and Bear Market Regimes using Machine Learning: A Supervised Classification Approach to U.S. Stock Market Trading",
+  "abstract": "While the behavior of the stock market can be very unpredictable, the regime of the market is a major factor in its behavior. Being able to predict it can significantly aid in making profitable trading decisions in the stock market. This project investigated whether a machine learning model using daily price and volume data could predict next-day bull and bear regimes in the U.S. stock market in a way that produced trading returns exceeding a buy-and-hold strategy in the S&P 500. It tested a logistic regression model and a random forest model on a dataset of 6,339 daily samples of historical data from SPY, the exchange-traded fund that tracks the S&P 500, involving various price and volume features. The best total return achieved by a machine learning model was from the tuned logistic regression model, with 68.52%; however, the buy-and-hold strategy achieved a total return of 87.55%. While the model was outperformed by the buy-and-hold strategy in terms of total return, it did achieve its returns with less risk. The Sharpe ratio measures returns while also adjusting for risk. The buy-and-hold strategy had a Sharpe ratio of 0.82, but the tuned logistic regression model had a Sharpe ratio of 0.98. These results likely occurred because SPY generally trended upward during the testing period, so the machine learning strategies occasionally exited the market during predicted bear regimes and missed gains that the buy-andhold benchmark benefited from. The results suggest that machine learning may be more useful for risk management rather than consistently outperforming a buy-and-hold strategy in total return. However, future research could test the models on more volatile assets, utilize a higher number of technical indicators involving price and volume, and test additional machine learning models in order to determine whether stronger predictive performance can translate into higher trading returns when compared to a buy-and-hold benchmark.",
+  "link": "https://www.ssrn.com/abstract=7589460",
+  "score": 3,
+  "why": "Single-ETF regime classifier; underperforms buy-and-hold, no costs or OOS rigor."
+ },
+ {
+  "key": "10.2139/ssrn.7591038",
+  "source": "SSRN",
+  "title": "Beyond AI Buzzwords: A Descriptive Content Analysis of AI Strategic Positioning in Indian Technology Firms — Implications for Emerging-Market Financial Institutions",
+  "abstract": "This research looks into the methods used by technology companies in emerging markets to convey their artificial intelligence capabilities through public disclosure and how much their disclosures rely on documented proof. The data set comprises a hand-coded census of public disclosures done in the period from January 2024 to September 2026 of 18 Indian technology companies listed in the public domain using earnings-call transcripts, press releases, exchange filings, and annual-report summaries issued by identifiable sources. Each technology company in the sample received one score using a 0-3 rubric for AI-specificity and the number of AI actions disclosed. It turns out that this is a domain where the problem of appearances is almost completely solved, but the problem of evidence is still ongoing. All coded companies have at least one tangible example of an AI implementation, meaning that vague talk is no longer widespread among listed Indian tech companies with active investment communications; however, less than two-thirds of the sample, namely 61.1% (95% CI 38.6-79.7), mentions a deployment involving a client or partner, and even fewer of them, namely 44.4% (24.6-66.3), mention a quantified result. The number of actions mentioned by companies is correlated with their specificity score (Spearman ρ = 0.66, p = .003), and the anticipated size effect is absent: the three small-cap infrastructure companies in our sample score at least as well as the bellwether leaders. Since the IT companies from India happen to be the main source of software and artificial intelligence-based services for financial institutions in the region of South Asia, the research concludes with the screening framework based on the actual pass rate that could be used by Nepalese banks and similar institutions.",
+  "link": "https://www.ssrn.com/abstract=7591038",
+  "score": 2,
+  "why": "Hand-coded content analysis of Indian firms' AI disclosures; no transferable method."
+ },
+ {
+  "key": "10.2139/ssrn.7591318",
+  "source": "SSRN",
+  "title": "Supplying the Competition:API Pricing and Brand Proliferation in AI Markets",
+  "abstract": "AI model providers sell access to the same technology that independent developers use to compete with their official apps. Restricting access may protect official-app sales, but developers can switch suppliers and keep competing. How should a provider set access terms when it can earn from both channels? We study this decision in a model where the provider chooses its API policy, developers choose entry and sourcing, and consumers consider only some apps. Additional brands can expand reach or crowd competing offers. Theory and numerical comparisons distinguish capturing existing developers’ purchases from creating additional brands. When developer entry crowds a rival provider’s official app out of consideration, a provider whose official-app price is fixed can profit from cutting its API fee to induce more entry. If the provider also sets that price, it can instead raise the official-app price, shifting demand toward developers’ apps and supporting entry while leaving the API fee nearly unchanged. When consumers are highly price-sensitive, however, raising the official-app price is costly, and a substantial API discount again becomes optimal. Pricing API access below serving cost can be optimal only if it induces additional entry that raises official-app profit enough to cover the API losses. U.S. App Store records for AI chatbot apps document the setting. The findings explain why providers should coordinate official-app and API pricing and evaluate access against the apps that would keep operating on another provider’s API if access were closed. More brands or a smaller share for the rival provider’s app need not mean greater profit.",
+  "link": "https://www.ssrn.com/abstract=7591318",
+  "score": 2,
+  "why": "Theory of API pricing and brand entry; no financial data or ML."
+ },
+ {
+  "key": "10.2139/ssrn.7590439",
+  "source": "SSRN",
+  "title": "AI-enabled ESG for Post-conflict Reconstruction: A Perspective from Syria",
+  "abstract": "The article aims to offer a perspective on how AI could function as an ESG-enabling technology in a post-conflict economy where the institutions, infrastructure and data systems needed to deploy AI responsibly are themselves being reconstructed. To this end, the author explores the underexplored intersection between AI-enabled ESG and post-conflict reconstruction, through recent works published in 2026, using Syria as the motivating context and contributing to an emerging area of research on this literature gap. The piece concludes that integrating AI into ESG-based reconstruction could help both micro- and macroeconomic dynamics.",
+  "link": "https://www.ssrn.com/abstract=7590439",
+  "score": 1,
+  "why": "Conceptual perspective on AI and ESG in Syria; no finance method."
+ },
+ {
+  "key": "10.2139/ssrn.7590703",
+  "source": "SSRN",
+  "title": "Popular Art in the Age of Generative AI: Market Incentives, Media Theory, and the Paradox of Authorial Aura",
+  "abstract": "Generative AI, as an emerging medium, is poised to reshape existing popular art forms and the conventions around their practice. Although public discourse often frames generative models as new tools for artistic self-expression, we argue that this framing understates their impact on the existing ecosystems of popular art: technological interventions profoundly influence both the creation and perception of creative works. As generative AI systems become increasingly capable, economic incentives will drive their adoption in the book publishing, film, television, and other popular art industries. Drawing on Akerlof's market-for-lemons theory, we argue that where audiences value human authorship but cannot reliably verify it, information asymmetry may undermine the premium that sustains more costly human production, favoring AI-generated alternatives. To understand how this shift might transform creative practices and audience experience, we turn to Walter Benjamin's account of aura and Marshall McLuhan's theory of media. We propose that generative AI's affordances enable a potential democratization of creation, referring to access and costs affiliated with AI use, as well as democratization of taste, where popular art can be specifically geared to preferences of different users. This shifts the traditional tensions between artistic expression and audience expectation in popular art toward hyper-personalization and reshaping of the authorial function. We identify a paradox of authorial aura: credible human provenance may become more valuable precisely as conventional signals of authorship become less reliable. Authorship thus connects the paper's economic and cultural analyses, functioning both as a market signal of authenticity and as a framework for interpretation. The resulting transformations, we conclude, are contingent on audience preferences as well as the institutions that shape production, attribution, and verification.",
+  "link": "https://www.ssrn.com/abstract=7590703",
+  "score": 1,
+  "why": "Media theory on generative AI and popular art; off-topic."
+ },
+ {
+  "key": "10.2139/ssrn.7593780",
+  "source": "SSRN",
+  "title": "From Streaming to Warfare: Capital Origin, Public Narratives, and Legitimacy Contestation in European DefenceTech Investment",
+  "abstract": "In June 2025, Prima Materia, the investment firm co-founded by Spotify’s Daniel Ek, led a €600 million funding round for Helsing, a European defence technology company developing AI-enabled military systems. Musicians protested, seeing it as platform-derived wealth flowing into military technology. This paper examines how actors across the defence, venture, and cultural-platform arenas construct the legitimacy of Prima Materia’s investment in Helsing and how its public association with Daniel Ek and Spotify shapes those judgments. Drawing on thematic narrative analysis of 26 media articles published from 1 June to 1 October 2025, the paper identifies four narratives and a cross-cutting accountability dispute. Security and growth narratives framed the investment as legitimate through its anticipated strategic and commercial uses. Cultural-integrity and value-conversion narratives constructed it as illegitimate by attributing the capital to musical labour and treating its deployment into military technology as morally inappropriate. The findings show how attributed capital provenance became a basis for legitimacy contestation across social domains. Cultural-platform actors used this provenance to claim standing to judge the capital’s deployment despite formal organisational separation. The case shows how private capital entering military technology becomes publicly contestable under geopolitical turbulence, generating struggles over who may shape military technological futures and on what moral terms.",
+  "link": "https://www.ssrn.com/abstract=7593780",
+  "score": 1,
+  "why": "Narrative analysis of defence-tech legitimacy; no quantitative finance content."
+ }
+]

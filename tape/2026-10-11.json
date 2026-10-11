@@ -1,0 +1,16 @@
+{
+ "date": "2026-10-11",
+ "scanned": 8,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7591058",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7591058",
+   "title": "A Systematic Benchmark of Vector Stock Embeddings",
+   "claim": "Stock embeddings decisively beat a leak-free raw-correlation baseline but tie or trail raw return series on sub-industry retrieval in idealised, full-survivor panels."
+  }
+ ]
+}
