@@ -1,0 +1,20 @@
+[
+ {
+  "key": "10.2139/ssrn.7597163",
+  "source": "SSRN",
+  "title": "Financial Modeling of Photovoltaic Levelized Cost of Electricity Under System Degradation",
+  "abstract": "Photovoltaic (PV) degradation is an important input to long-term financial analysis, yet it is often reported only as a %/yr value rather than translated to cost implications. This study combines photovoltaic climate zones (PVCZs), including high-temperature and high-humidity zones relevant to long-term extreme heat and moisture exposure, with US PV deployment, county-level performance loss rate (PLR) scenarios, 2000-2024 National Solar Radiation Database weather, the Q1 2025 PV Cost Benchmark, PVWatts modeling, and PVAtlas US wide simulations, in a Python levelized cost of electricity (LCOE) workflow for the contiguous United States. The study tests how alternative irradiance-normalized PLR assumptions assigned to the temperature and humidity zones change LCOE. The reference 100 MWdc, utility PV without storage, single-axis-tracking case uses a 0.50%/yr PLR. For the 35-year component-loss-rate sensitivity, the county LCOE change under the PV-LLM scenario spans -3.00 to 9.89 USD/MWh. The 90th percentile is 9.20 USD/MWh. The equal-county mean increase is 2.42 USD/MWh (4.21%). Weighting counties by reported installed utility-scale PV capacity gives a mean increase of 3.83 USD/MWh (7.28%) across 1,232 counties with positive capacity. The workflow is intended for transparent scenario analysis and identifies where direct, consistently normalized field PLR data would most reduce uncertainty.",
+  "link": "https://www.ssrn.com/abstract=7597163",
+  "score": 1,
+  "why": "Solar LCOE engineering model; no AI, no trades, not financial ML."
+ },
+ {
+  "key": "10.2139/ssrn.7597244",
+  "source": "SSRN",
+  "title": "Explainable Ensemble Deep Learning for Machine-Vision-Based Authentication of Hilsa Fish in the Bangladeshi Market",
+  "abstract": "Hilsa shad (Tenualosa ilisha) is a high-value food fish in South Asia whose similarity to lower priced clupeids creates opportunities for market substitution. This study develops an explainable machine-vision framework for five-class authentication using 8,407 archived market images of Hilsa shad, Toli shad, Indian oil sardine, Goldstripe sardinella, and Dotted gizzard shad. The workflow combines image curation, training-only augmentation and class balancing, six pretrained convolutional neural networks, and 57 heterogeneous ensemble combinations. Accuracy–complexity comparison selected the ResNet50–DenseNet121 pair for mobile deployment. The pair achieved 99.67% accuracy and macro-averaged F1-score on a balanced internal benchmark, within 0.13 percentage points of the best larger ensemble. This benchmark contains 600 instances per class, while the smallest archived class, Goldstripe sardinella, contains 370 original images; its results therefore represent resampled internal evaluation. Three-fold stratified cross-validation showed narrow variation within the acquisition pool. Gradient-based and relevance based attribution methods highlighted morphology-focused predictions while revealing uncertainty in difficult examples. A TensorFlow Lite prototype correctly classified 78 of 80 images (97.5%) in a preliminary market pilot, with approximately 480 ms inference on the evaluated device. The public FishSpeciesBD release has different image counts from the archived experiments, and their exact file-level correspondence remains unverified. The system offers a potential screening aid for seafood identity and traceability. Specimen grouped external validation and confirmatory taxonomy are required before regulatory use.",
+  "link": "https://www.ssrn.com/abstract=7597244",
+  "score": 1,
+  "why": "Fish image classification; off-topic for AI-in-finance practitioner."
+ }
+]
