@@ -6,6 +6,20 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Model-Informed Gold Revisions Inflate Measured Accuracy: A Versioned Gold-Standard Protocol for LLM Extraction of ESG Data</title>
+    <link>https://www.ssrn.com/abstract=7598018</link>
+    <description>Model-prompted revisions to ESG gold labels raised measured accuracy 5.1 points with predictions unchanged, so benchmarks should version references.</description>
+    <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7598018</guid>
+  </item>
+  <item>
+    <title>Market Impact Estimation via Causal Foundation Models</title>
+    <link>https://arxiv.org/abs/2610.12537</link>
+    <description>On a synthetic confounded prior, a causal foundation model tracks the unbiased impact oracle, but transfer requires encoding metaorders as added flow.</description>
+    <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.12537</guid>
+  </item>
+  <item>
     <title>A Systematic Benchmark of Vector Stock Embeddings</title>
     <link>https://www.ssrn.com/abstract=7591058</link>
     <description>Stock embeddings decisively beat a leak-free raw-correlation baseline but tie or trail raw return series on sub-industry retrieval in idealised, full-survivor panels.</description>
@@ -718,41 +732,6 @@
     <description>Single-attack adversarial training overstates credit-model robustness because defenses transfer weakly across attack types.</description>
     <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2609.09945</guid>
-  </item>
-  <item>
-    <title>What LLM Trading Agents Actually Do in Production: A Six-Month, Population-Scale Record from Two Fleets</title>
-    <link>https://arxiv.org/abs/2609.05663</link>
-    <description>Risk settings determine LLM trading behavior more than written strategy text does.</description>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2609.05663</guid>
-  </item>
-  <item>
-    <title>TieOutBench: A Runnable, Rubric-Gated Evaluation Suite for Financial Analysis and Post-Trade Operations</title>
-    <link>https://www.ssrn.com/abstract=7243025</link>
-    <description>Frontier financial LLMs fail to identify unreconciled baskets or mismatched confirmations.</description>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7243025</guid>
-  </item>
-  <item>
-    <title>What the Window Does Not Contain: Auditing Provenance in a Document-Grounded Instability Benchmark</title>
-    <link>https://arxiv.org/abs/2609.06147</link>
-    <description>Adding missing evidence to documents does not substantially reduce LLM answer instability.</description>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2609.06147</guid>
-  </item>
-  <item>
-    <title>Filtering without recursion and some of its uses in financial economics</title>
-    <link>https://arxiv.org/abs/2609.07207</link>
-    <description>Nonlinear filtering recovers volatility signatures from high-frequency data that linear methods cannot unbias.</description>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2609.07207</guid>
-  </item>
-  <item>
-    <title>GraphFAS: A Distributed System for Automated Graph Feature Generation and Selection in Industrial Transaction Networks</title>
-    <link>https://arxiv.org/abs/2609.08970</link>
-    <description>Non-parametric graph features enable fraud model interpretability that end-to-end GNNs cannot achieve.</description>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2609.08970</guid>
   </item>
 </channel>
 </rss>

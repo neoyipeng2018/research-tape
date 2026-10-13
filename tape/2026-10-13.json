@@ -1,0 +1,24 @@
+{
+ "date": "2026-10-13",
+ "scanned": 46,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7598018",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7598018",
+   "title": "Model-Informed Gold Revisions Inflate Measured Accuracy: A Versioned Gold-Standard Protocol for LLM Extraction of ESG Data",
+   "claim": "Model-prompted revisions to ESG gold labels raised measured accuracy 5.1 points with predictions unchanged, so benchmarks should version references."
+  },
+  {
+   "key": "2610.12537",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.12537",
+   "title": "Market Impact Estimation via Causal Foundation Models",
+   "claim": "On a synthetic confounded prior, a causal foundation model tracks the unbiased impact oracle, but transfer requires encoding metaorders as added flow."
+  }
+ ]
+}
