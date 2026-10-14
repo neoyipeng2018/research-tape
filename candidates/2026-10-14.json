@@ -1,0 +1,173 @@
+[
+ {
+  "key": "10.2139/ssrn.7595679",
+  "source": "SSRN",
+  "title": "When does Model Capacity Help? A Natural Experiment in Signal-to-Noise using US and Indian Equity Markets",
+  "abstract": "We use two equity markets that share an identical prediction pipeline but differ sharply in signal-to-noise ratio (SNR) as a natural experiment on a general machine-learning question: when does additional model capacity help a cross-sectional return predictor, and when does it not? For the United States (S&P 500, Sharadar data, 1996–2026) and India (Nifty 50, 1996–2026) we build point-in-time, survivorship-bias-free, sector-neutralised eight-feature panels and compare a linear model, gradient-boosted trees and a Transformer under purged, embargoed walk-forward validation. No model produces a significant out-of-sample information coefficient (IC) in the United States. India has a significant, economically tradeable signal (linear model: mean IC +0.051, Newey-West t = 4.96; net Sharpe 0.97 long-short, 0.79 long-only), but added capacity does not improve on it: the IC falls in point estimate at each step in complexity, although no model-to-model difference is individually significant. Four further experiments characterise this pattern. Continuous sweeps of tree depth and ensemble size show India’s IC is highest at the lowest-capacity settings, where a small tree ensemble matches the linear model. A positive control shows the models do recover injected non-linearity, but in India’s thin cross-section only at roughly two to four times the real signal’s strength. Resampling the US to India’s 43 names (800 draws) never reproduces India’s IC, ruling out a small-sample artefact. A synthetic (N × SNR) grid shows that under a linear ground truth added capacity hurts most at small N, India’s regime; the real markets’ own capacity effects, however, are measured too imprecisely to discriminate sharply between linear and non-linear ground truth. The evidence is consistent with the value of model expressiveness being governed by SNR and cross-section size, and identifies thin, low-SNR markets as a regime in which added capacity offers no benefit.",
+  "link": "https://www.ssrn.com/abstract=7595679",
+  "score": 8,
+  "why": "Purged walk-forward, net Sharpe, US vs India SNR natural experiment; capacity result is useful."
+ },
+ {
+  "key": "10.2139/ssrn.7607363",
+  "source": "SSRN",
+  "title": "How Well Do LLMs Perform in Peer Review? Evidence from Finance and Accounting",
+  "abstract": "Referees increasingly use large language models (LLMs), while finance and accounting journals disagree about whether to allow it. We ask which part of a referee's job the models can do. GPT-4o, whose training data end before the 2024 conference season, referees the papers presented at the 2024 AFA and NBER finance meetings, and we compare its verdicts with publication in the top-three finance journals over the next two years. Papers the model scores one standard deviation higher are 44% more likely to be published, net of author reputation. The result is not driven by look-ahead bias, as the model does not recall the outcomes. The information comes from its judgements of correctness and exposition. Its judgements of originality and significance carry none, and a referee guide that stresses importance does not help. The split between correctness and contribution holds for accounting papers and for a newer model, GPT-5. LLMs can check whether research is right, but not whether it matters. The technical check can go to the model, while the judgement of contribution stays with people.",
+  "link": "https://www.ssrn.com/abstract=7607363",
+  "score": 7,
+  "why": "LLM referee scores predict publication; strong evaluation of LLM finance-research judgment."
+ },
+ {
+  "key": "10.2139/ssrn.7608119",
+  "source": "SSRN",
+  "title": "Mind the Gap: LLM Extraction of Climate Scenario Financial-Impact Disclosures and Their Pricing in Hong Kong Equity and Credit Markets",
+  "abstract": "IFRS S2 and Hong Kong's new climate requirements ask firms to disclose the current and anticipated financial effects of climate risk, informed by scenario analysis. Until now, research on these disclosures has been largely qualitative: content analysis, disclosure indices and counts of whether a topic is present. The numbers themselves are scattered across hundreds of report pages, tables, charts and footnotes. We use a large language model with page-cited, schemaconstrained extraction to turn them into data for 140 Hong Kong large caps over FY2024-FY2025 (267 reports, 42,192 pages). Each label is checked against the source pages under written rules. The gap is wide. Under a deliberately broad definition, which counts any climateattributed number including bounds, ranges and pilot subsets, quantified disclosure rises from 13.8% of reports in FY2024 to 34.3% in FY2025. Under a strict definition, which requires scenario-and horizon-tied effects for both physical and transition risk, it rises from 1.5% to 6.6%. Most quantified effects are bounds, ranges and ratios. Only 9 of 267 report-years contain a scenario-tied absolute amount. Markets do not visibly price the difference. Equity returns, volume, volatility and distance-to-default around report releases do not differ by disclosure level; the minimum detectable three-day abnormal return is about 1.6%. Interbank MTN spreads for the A+H and onshore-subsidiary subsample (54-62 bonds, 8-10 issuers) are uninformative, and the disclosure effect cannot be separated from the FY2025 regulatory step. Disclosure without comparable numbers is not priced at any economically moderate magnitude.",
+  "link": "https://www.ssrn.com/abstract=7608119",
+  "score": 7,
+  "why": "LLM page-cited extraction of climate financial effects priced in HK markets."
+ },
+ {
+  "key": "10.2139/ssrn.7604180",
+  "source": "SSRN",
+  "title": "Analysts as Essential Intermediaries: Interpreting News for Unsophisticated Investors in the Chinese A-Share Market",
+  "abstract": "We extend the shock-based textual analysis of Didisheim et al. (2026) to the Chinese A-share stock market, where retail investors dominate, short-sale constraints are binding, and limited attention is pervasive. Using BGE-M3 embeddings for firm-month text over the 2006-2023 sample, we compare the return predictability of news shocks, analyst-report shocks, and a combined signal that integrates both. Applying their news-shock methodology to CSMAR news data yields no robust return predictability, with only one of four specifications marginally significant at the 10% level. This finding is consistent with the possibility that investors in the retail-dominated Chinese market face difficulties processing news text in real time. However, when we apply the same shock framework to sell-side analyst reports produced by information intermediaries that digest and interpret news for less sophisticated investors, we find substantial return predictability. Purifying analyst shocks by controlling for firm characteristics and contemporaneous CSMAR news yields evidence consistent with analysts adding interpretive value beyond merely repackaging public information, though the design does not rule out residual private information or other unobserved sources of analyst-report novelty. Our findings are consistent with an important intermediary role for analysts in translating public information into price-relevant signals, although the underlying interpretation mechanism is not uniquely identified.",
+  "link": "https://www.ssrn.com/abstract=7604180",
+  "score": 6,
+  "why": "Negative replication of news-shock predictability in China using embeddings; solid but narrow."
+ },
+ {
+  "key": "10.2139/ssrn.7596178",
+  "source": "SSRN",
+  "title": "Algorithms Backfire? How Machine Prediction Undermines Debt Mediation",
+  "abstract": "In our field experiment on debt settlement mediation in China, we found that the use of algorithmic predictions negatively impacted mediation outcomes. When mediators were provided with machine-predicted success scores, the actual success rates of mediation declined. This effect appears to result from behavioral changes in mediators interacting with machine predictions: algorithms optimized for recall-as required in our task-tend to inflate predicted success, which led mediators to become overconfident and reduce their communication efforts. Consequently, mediation performance declined. These findings underscore the importance of understanding the behavioral effects of artificial intelligence on humans, particularly in complex decision-making contexts where humans retain final decision power, but with substantial machine assistance.",
+  "link": "https://www.ssrn.com/abstract=7596178",
+  "score": 5,
+  "why": "Field experiment with a negative AI result, but debt mediation rather than markets."
+ },
+ {
+  "key": "10.2139/ssrn.7597360",
+  "source": "SSRN",
+  "title": "Cross-Sectional Return Prediction in a Small, Illiquid Equity Market: Machine Learning Evidence from the Nairobi Securities Exchange",
+  "abstract": "This paper asks whether machine-learning models can extract persistent cross-sectional return-ranking information from a small, illiquid emerging equity market, and whether that statistical predictability survives the trading frictions of that market. Using a 12-security Nairobi Securities Exchange universe, walk-forward validation over 2024 provides evidence of positive cross-sectional ranking information. Random Forest is the strongest tested estimator, with mean daily Spearman Information Coefficient (IC) of 0.133 and positive monthly IC in 12 of 12 months; the originally selected LightGBM model achieves mean daily IC of 0.085 in the model-comparison experiment. Feature-group experiments show that simple returns and price information contain much of the useful signal: a returns/price-only ablation achieves mean daily IC of 0.125, compared with 0.111 for the full feature set under the ablation protocol. LLM-derived event variables contribute no measured incremental IC in the evaluated historical window. A retrospective extended out-of-sample evaluation over 2025-2026 remains positive, with mean daily IC of 0.0815 and positive monthly IC in 11 of 15 months, but is not a pristine live holdout. Economically, the evidence is much weaker: an overlapping three-day Top-1 portfolio loses approximately 94.2% cumulatively under a 400 basis point round-trip cost assumption. The main finding is therefore a gap between statistical predictability and implementable profitability in a high-friction market.",
+  "link": "https://www.ssrn.com/abstract=7597360",
+  "score": 5,
+  "why": "Walk-forward ML ranking with friction check, but tiny 12-stock single-market universe."
+ },
+ {
+  "key": "10.2139/ssrn.7601100",
+  "source": "SSRN",
+  "title": "Bank Generative AI Adoption and Mortgage Lending Outcomes",
+  "abstract": "Does generative AI facilitate households' access to finance? In this paper, we examine the implications of US banks' adoption of generative AI for mortgage lending outcomes. We find that, following the adoption of generative AI, banks reduce mortgage denial rates by approximately 1.0 percentage point. This reduction is observed for both white and minority applicants, with no statistically significant difference between the two groups. Female applicants experience a larger reduction in denial rates than male or joint applicants. The effects are concentrated among conforming loans, higher-income applicants and metropolitan markets, consistent with the notion that generative AI reduces the cost of processing standardized borrower information. Overall, our results suggest that generative AI adoption in the banking sector may expand access to mortgage credits.",
+  "link": "https://www.ssrn.com/abstract=7601100",
+  "score": 5,
+  "why": "Credible causal lending evidence, but AI is adoption proxy, not a tool."
+ },
+ {
+  "key": "10.2139/ssrn.7602365",
+  "source": "SSRN",
+  "title": "Invariant Causal Representation Learning for Alpha Generation: A Framework for Out-of-Distribution Generalization in Non-Stationary Financial Markets",
+  "abstract": "Financial machine learning models often achieve strong historical fit by exploiting correlations that are stable only within particular market regimes. In non-stationary markets, such regimedependent associations can decay or reverse out of sample, producing alpha decay and poor out-of-distribution performance. This paper proposes an invariant causal representation learning framework for alpha generation that seeks latent features whose predictive relationship with future returns is stable across environments. We formalize a structural setting in which observed features may contain invariant causal components and environment-dependent spurious components, and we define an optimization objective that combines environment-wise risk minimization with an invariance penalty. The framework is motivated by invariant risk minimization and causal representation learning, and it is interpreted conservatively: invariance is used as a robustness principle rather than a claim of fully identified causal effects. We derive a simple analytical example illustrating how empirical risk minimization can rely on unstable correlations, whereas an invariant predictor avoids this failure mode under environment shift. We also design an out-of-distribution evaluation protocol with temporal environment splits, purged validation, baselines, ablations, and backtesting controls. The paper does not report live trading results or claim market-prediction success. Its contribution is a rigorous methodological foundation for constructing alpha signals intended to be more robust across market regimes.",
+  "link": "https://www.ssrn.com/abstract=7602365",
+  "score": 4,
+  "why": "Invariant-learning alpha framework; no visible data or baseline comparison in abstract."
+ },
+ {
+  "key": "10.2139/ssrn.7607861",
+  "source": "SSRN",
+  "title": "Do Critical Audit Matters Provide Risk-emphasizing Information to Investors?",
+  "abstract": "We examine the capital market consequences of textual risk disclosure in expanded audit reports. Specifically, we investigate whether the salience of audit-risk information in critical audit matter (CAM) disclosures is associated with stock market reactions and investors’ risk perceptions around the release of 10-K filings. Using a text-based approach that incorporates natural language processing techniques, we develop a salience score to quantify the extent to which audit risk is emphasized in CAM disclosures. We find that more risk-salient CAM disclosures are associated with stronger market reactions. Furthermore, higher salience is associated with lower investors’ risk perceptions, as reflected in reduced stock return volatility and trading volume. Additional analyses suggest that these effects are consistent with greater audit effort and improved financial reporting quality. Overall, our evidence suggests that the informativeness of CAM disclosures depends not only on their presence, but also on how audit risks are communicated. These findings contribute to the literature on textual risk disclosure and capital market information processing, and have implications for regulators and practitioners by highlighting the role of risk emphasis in enhancing the effectiveness of expanded audit reporting.",
+  "link": "https://www.ssrn.com/abstract=7607861",
+  "score": 4,
+  "why": "NLP salience archival study; no transferable ML method."
+ },
+ {
+  "key": "10.2139/ssrn.7606719",
+  "source": "SSRN",
+  "title": "Mean-Reverting Temperature Modelling via Neural Networks for Weather Derivative Valuation",
+  "abstract": "This paper introduces a neural network calibration framework for spatially continuous mean-reverting temperature dynamics, in which estimation is performed directly under the conditional transition law implied by the stochastic differential equation. Temperature is modelled through an Ornstein--Uhlenbeck-type process with seasonal mean and instantaneous variance, whose parameters and mean-reversion speed are represented as continuous functions of geographical coordinates. The main methodological contribution is to estimate these components jointly within a single likelihood-based framework derived from the conditional transition density, thereby accounting for the role of mean reversion in both the conditional mean and transition variance. Using NASA MERRA-2 reanalysis data over Italy, we compare the proposed framework with a conventional point-wise mean-reverting temperature benchmark. The proposed framework improves point forecast accuracy, with larger gains in uncertainty quantification, particularly in probabilistic forecasting, prediction interval calibration, and tail quantile accuracy. These improvements persist when simulated temperature paths are aggregated into Heating Degree Day indices and transformed into location-specific call payoffs, indicating that transition-based joint calibration improves the representation of uncertainty both at the daily temperature level and after temporal aggregation and nonlinear payoff transformation.",
+  "link": "https://www.ssrn.com/abstract=7606719",
+  "score": 3,
+  "why": "Weather-derivative temperature calibration; no AI in finance workflow."
+ },
+ {
+  "key": "10.2139/ssrn.7600018",
+  "source": "SSRN",
+  "title": "\"Stock Splits as a Catalyst for Change: Evaluating ESG Risks in the AI Sector\"",
+  "abstract": "An empirical examination of stock splits and their ability to influence changes in the Artificial Intelligence (AI) industry's Environmental, Social, and Governance (ESG) performance are presented in this study. This study examines how stock splits affect ESG profiles, with an emphasis on governance transparency, environmental sustainability, and social responsibility. It does this through a qualitative examination of case studies, business disclosures, and industry trends. Although stock splits are frequently seen as indicators of a company's success, the study shows that they can also promote changes in governance procedures as a result of heightened market scrutiny. Significant postsplit changes in the social and environmental spheres, however, are still scarce. The report provides advice for investors as well as corporations, providing strategic insights into how AI firms might use stock splits to address ESG issues.",
+  "link": "https://www.ssrn.com/abstract=7600018",
+  "score": 2,
+  "why": "Qualitative case studies on stock splits and ESG; no transferable method."
+ },
+ {
+  "key": "10.2139/ssrn.7603138",
+  "source": "SSRN",
+  "title": "Creative Destruction: Human-AI Competition in an Experimental Market",
+  "abstract": "We study two hypotheses for how a human role in production could persist despite growing AI capabilities. Humans might have a durable advantage in taste, designing better products even as AI agents automate routine tasks, or consumers might intrinsically prefer that humans have a hand in production. In our experiment, participants act as producers, designing computer games with an AI coding agent, and as consumers who buy them. Across three studies (N = 1,025), we find no evidence for either hypothesis. Games designed by an AI on its own outperform those of human producers, including both amateurs and professional creatives. Human producers do not anticipate the AI's advantage. Revealing whether a game is human-designed does not raise consumers' willingness to pay for the product.",
+  "link": "https://www.ssrn.com/abstract=7603138",
+  "score": 2,
+  "why": "Human-vs-AI game design experiment; finance is not the setting."
+ },
+ {
+  "key": "10.2139/ssrn.7605299",
+  "source": "SSRN",
+  "title": "From Compute Sovereignty to Fiscal Exposure: Liquidity, Currency Mismatch, and Hardware Renewal in State-Led AI Infrastructure",
+  "abstract": "When does state-led AI infrastructure require public financial support? A deterministic project-finance model distinguishes investment value, contractual liquidity, and fiscal cash exposure. An exact interval frontier incorporates retained cash, currency mismatch, and hardware renewal. In an illustrative project, the utilization threshold is 54.2 percent for annual scheduled funding but 73.1 percent for nonnegative investment value. A full year-four hardware renewal requires support even with operating debt coverage above one. Guarantees reallocate shortfalls without eliminating them. Four institutional cases distinguish appropriations, procurement, ownership, and guarantees. The framework provides conditional stress tests, not sovereign-default forecasts.",
+  "link": "https://www.ssrn.com/abstract=7605299",
+  "score": 2,
+  "why": "Project-finance scenario model for state AI infrastructure; no market data."
+ },
+ {
+  "key": "10.2139/ssrn.7606918",
+  "source": "SSRN",
+  "title": "Circular Investment in AI Compute Markets",
+  "abstract": "AI compute suppliers increasingly put capital at risk in developers through circular investments. Yet they require commitments from other developers, payable even if their projects do not scale. I show how both arrangements can coexist endogenously when privately known project ambition determines the project's risk-return profile and its developer's outside opportunity. Their interaction can make the maximum acceptable success payment under full information hump-shaped in ambition. Intermediate developers then have incentives to imitate both predictable and frontier developers. Commitments deter them from imitating predictable developers but make the contract intended for frontier developers more attractive to them. The supplier counters that incentive by combining circular investment with a higher success payment on the frontier contract. This preserves revenue from intermediate developers and can justify investment even when developers are not liquidity constrained.",
+  "link": "https://www.ssrn.com/abstract=7606918",
+  "score": 2,
+  "why": "Contract-theory model of circular AI compute investment; no data."
+ },
+ {
+  "key": "10.2139/ssrn.7606968",
+  "source": "SSRN",
+  "title": "The Prototype Frontier Law: Why AI accelerated Quantitative Modelling Raises the Managerial Value of Model Assets",
+  "abstract": "Managers who size generative artificial intelligence (GenAI) capacity for modelling teams lack a defensible decision rule. The prevailing business case, headcount multiplied by a published task-level speed-up, is structurally flawed: a modelling unit does not deploy its average prototype but the best one it finds. The augmented pipeline is formalised here as a Poisson prototyping process, followed by an independent validation thinning and a selection tournament over heterogeneous candidate values. The value of the deployed model is proved to be exactly Gumbel distributed, and its expectation is derived in closed form. Six managerial consequences follow. Returns to acceleration are logarithmic, so linear extrapolation of task-level gains overstates them. The optimal adoption intensity does not depend on unit size, screening yield or planning horizon, and can therefore be benchmarked across organisations. Acceleration raises the expected deployed value without reducing its dispersion, so capacity must be justified as a performance investment and never as a risk control. Tooling and validation budgets separate exactly. The marginal value of each further deployed model decays harmonically, which fixes the depth of the model portfolio. Duplication among candidates deflates the effective budget multiplicatively. A calibration on environmental, social and governance (ESG) scoring shows that a second deployed model is worth more than four times the entire tooling budget.",
+  "link": "https://www.ssrn.com/abstract=7606968",
+  "score": 2,
+  "why": "Managerial decision theory for GenAI modelling teams; no finance data."
+ },
+ {
+  "key": "10.2139/ssrn.7608126",
+  "source": "SSRN",
+  "title": "The Incompleteness of Accounting as a Technology of Control: Artificial Intelligence, Accounting Legitimation, and the Structural Fractures of Anti-Money Laundering",
+  "abstract": "Objective: To examine why formally valid accounting records may legitimise economically opaque value and identify structural conditions associated with high accounting-mediated legitimation (ACCLEG). Methods: We combine standardised elicitation from eight language models, IRaMuTeQ textometry, documentary coding of 30 publicly documented financial-crime cases, and fuzzy-set qualitative comparative analysis, including robustness tests. Results: Procedural shielding and data fragmentation are widespread, but valuation subjectivity is the most discriminating condition associated with high ACCLEG. The intermediate solution combines procedural shielding and valuation subjectivity; the parsimonious solution retains valuation subjectivity. Conclusions: Formal compliance does not necessarily verify economic substance. Accounting, audit and risk-management processes should strengthen substantive valuation challenge and information integration; AI outputs require human evidential validation.",
+  "link": "https://www.ssrn.com/abstract=7608126",
+  "score": 2,
+  "why": "Qualitative fsQCA on accounting legitimacy in AML cases; no finance ML."
+ },
+ {
+  "key": "10.2139/ssrn.7591926",
+  "source": "SSRN",
+  "title": "Integrating Computational Reliability, Artificial Intelligence, and Human-Centered Governance: A Systems Framework for Digital Transformation, Enterprise Risk Management, and Organizational Performance",
+  "abstract": "The growing integration of artificial intelligence (AI), computational infrastructure, digital twins, and data-driven decision systems has created opportunities to improve organizational efficiency, decision quality, and operational resilience. However, technological advancement does not automatically produce reliable, accountable, or sustainable organizational outcomes. This paper develops a conceptual systems framework that integrates computational reliability, intelligent technologies, human-centered governance, enterprise risk management, and organizational performance. Drawing on research concerning concurrent computing and strict first-in, first-out semantics, AI-enabled digital twins, AI implementation in healthcare retail, organizational feedback dynamics, healthcare risk management, blockchain-based financial reconciliation, goto-market decision architecture, and computational molecular descriptors, the study examines how technical capabilities can be translated into organizational value. The framework proposes that computational reliability and AI-enabled analytical capabilities support operational responsiveness, while governance mechanisms, workforce adaptation, risk controls, and feedback processes influence the quality of resulting decisions. It further argues that sustainable digital transformation depends on the alignment of technical performance, human judgment, organizational accountability, and strategic objectives. Eight research propositions are developed to guide future empirical investigation. The paper contributes an interdisciplinary perspective by positioning digital transformation as a continuous process of technological integration, risk management, organizational learning, and performance evaluation rather than a purely technical implementation exercise. Its proposed framework offers a foundation for examining how organizations can develop reliable, transparent, and adaptable digital systems while maintaining human oversight and accountability.",
+  "link": "https://www.ssrn.com/abstract=7591926",
+  "score": 1,
+  "why": "Conceptual framework with no data, models, or implementation path."
+ },
+ {
+  "key": "10.2139/ssrn.7603098",
+  "source": "SSRN",
+  "title": "What is Modern Finance? A Human Intelligence Response to Artificial Intelligence",
+  "abstract": "\"Modern Finance (MF)\" apparently has a variety of definitions and/or connotations. Of concern is whether CFOs need to conform to any related \"Modern Finance Theory (MFT),\" even regarding what Artificial Intelligence (AI) might claim constitutes both MF and MFT. This paper begins an exploration of MF and MFT, in the context of roles of CFOs, even CFOs needing to address AI concerns as they express human intelligence (HI). Accordingly, this paper connects three questions. (1) What is modern finance and its theory? (2) What are roles of a CFO, especially regarding using (or not) modern finance and its theory? (3) What does generative-AI [as short for textual-generative-AI] say about modern finance, its theory, CFO roles, and CFO roles regarding modern finance and its theory? Where, naturally, this is merely an introductory exploration that raises more questions than it answers; yet in the process, explores the model validation process toward both AI and HI-even regarding an AI that may be swayed by the wrong HI. Where the main focus herein regards a model validation process toward content provided as AI-responses rather than the AI-process that provided such content.",
+  "link": "https://www.ssrn.com/abstract=7603098",
+  "score": 1,
+  "why": "Philosophical CFO essay on modern finance; no data or method."
+ },
+ {
+  "key": "10.2139/ssrn.7608003",
+  "source": "SSRN",
+  "title": "THE GROWING INFLUENCE OF AI IN THE JOB MARKET AND WORKFORCE REQUIREMENTS IN MANUFACTURING INDUSTRIES",
+  "abstract": "The study proposed relationships using construct-level mean composite scores and ordinary least squares (OLS) regression analysis. The analysis revealed positive relationships between AI adoption and automation intensity (β = 0.574, p",
+  "link": "https://www.ssrn.com/abstract=7608003",
+  "score": 1,
+  "why": "Manufacturing workforce survey with OLS; off-topic for finance practitioners."
+ }
+]

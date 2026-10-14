@@ -1,0 +1,30 @@
+{
+ "date": "2026-10-14",
+ "scanned": 19,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7595679",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7595679",
+   "title": "When does Model Capacity Help? A Natural Experiment in Signal-to-Noise using US and Indian Equity Markets",
+   "claim": "In India's thin, low-SNR market, added model capacity does not improve on a linear predictor that has a significant out-of-sample IC."
+  },
+  {
+   "key": "10.2139/ssrn.7607363",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7607363",
+   "title": "How Well Do LLMs Perform in Peer Review? Evidence from Finance and Accounting",
+   "claim": "An LLM's judgements of correctness predict top-three finance publication, but its judgements of significance carry no such information."
+  },
+  {
+   "key": "10.2139/ssrn.7608119",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7608119",
+   "title": "Mind the Gap: LLM Extraction of Climate Scenario Financial-Impact Disclosures and Their Pricing in Hong Kong Equity and Credit Markets",
+   "claim": "Hong Kong equity returns and bond spreads show no visible response to climate-disclosure levels, at a minimum detectable three-day abnormal return of about 1.6%."
+  }
+ ]
+}
