@@ -1,0 +1,38 @@
+{
+ "date": "2026-10-15",
+ "scanned": 72,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7609438",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7609438",
+   "title": "No Name, No Gain? Unpacking Entity Bias in LLM Financial",
+   "claim": "In WSJ headlines, retaining firm names raises LLM sentiment's return predictability across all six models tested, a gain read as leakage."
+  },
+  {
+   "key": "10.2139/ssrn.7609738",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7609738",
+   "title": "Where Does Liquidity Go Around EIA Releases? Order-Level Evidence From CME Energy Futures, With Implications For Backtest Queue Models",
+   "claim": "Near-mid depth in CME crude and gas futures stays depleted after EIA releases, but release days cannot be separated from a Wednesday-Thursday 10:30 effect."
+  },
+  {
+   "key": "10.2139/ssrn.7607942",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7607942",
+   "title": "Does Statistical Arbitrage Survive in Indian Equity Derivatives? Evidence from Distance Pairs, Factor Residuals, and Machine Learning (2010- 2025)",
+   "claim": "Daily statistical arbitrage on NSE turns negative after statutory taxes and fees, since break-even needs costs at 0.38x institutional levels that statute prevents."
+  },
+  {
+   "key": "2610.14750",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.14750",
+   "title": "Equal-information evaluation of credit assignment in modular financial reinforcement learning",
+   "claim": "Residual-based credit allocation is exactly reproduced by a loss-budget control under the disclosed interface, so attribution adds no decision-relevant information."
+  }
+ ]
+}

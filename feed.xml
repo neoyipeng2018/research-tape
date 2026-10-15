@@ -6,6 +6,34 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>No Name, No Gain? Unpacking Entity Bias in LLM Financial</title>
+    <link>https://www.ssrn.com/abstract=7609438</link>
+    <description>In WSJ headlines, retaining firm names raises LLM sentiment&#x27;s return predictability across all six models tested, a gain read as leakage.</description>
+    <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7609438</guid>
+  </item>
+  <item>
+    <title>Where Does Liquidity Go Around EIA Releases? Order-Level Evidence From CME Energy Futures, With Implications For Backtest Queue Models</title>
+    <link>https://www.ssrn.com/abstract=7609738</link>
+    <description>Near-mid depth in CME crude and gas futures stays depleted after EIA releases, but release days cannot be separated from a Wednesday-Thursday 10:30 effect.</description>
+    <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7609738</guid>
+  </item>
+  <item>
+    <title>Does Statistical Arbitrage Survive in Indian Equity Derivatives? Evidence from Distance Pairs, Factor Residuals, and Machine Learning (2010- 2025)</title>
+    <link>https://www.ssrn.com/abstract=7607942</link>
+    <description>Daily statistical arbitrage on NSE turns negative after statutory taxes and fees, since break-even needs costs at 0.38x institutional levels that statute prevents.</description>
+    <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7607942</guid>
+  </item>
+  <item>
+    <title>Equal-information evaluation of credit assignment in modular financial reinforcement learning</title>
+    <link>https://arxiv.org/abs/2610.14750</link>
+    <description>Residual-based credit allocation is exactly reproduced by a loss-budget control under the disclosed interface, so attribution adds no decision-relevant information.</description>
+    <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.14750</guid>
+  </item>
+  <item>
     <title>When does Model Capacity Help? A Natural Experiment in Signal-to-Noise using US and Indian Equity Markets</title>
     <link>https://www.ssrn.com/abstract=7595679</link>
     <description>In India&#x27;s thin, low-SNR market, added model capacity does not improve on a linear predictor that has a significant out-of-sample IC.</description>
@@ -669,48 +697,6 @@
     <description>Language models reading bank disclosures can identify credit deterioration before it affects bond prices.</description>
     <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7423838</guid>
-  </item>
-  <item>
-    <title>A Pre-registered, Cryptographically Timestamped Proving Protocol for Directional Market Forecasting, with Announced Echo State Network and Quantum Reservoir Computing Examinations</title>
-    <link>https://www.ssrn.com/abstract=7417918</link>
-    <description>Directional forecasting models underperform simple price-based forecasts even with careful pre-registration.</description>
-    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7417918</guid>
-  </item>
-  <item>
-    <title>Does Empirical Finance Replicate?</title>
-    <link>https://www.ssrn.com/abstract=7439099</link>
-    <description>Published finance studies replicate in-sample but collapse out-of-sample, consistent with data snooping.</description>
-    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7439099</guid>
-  </item>
-  <item>
-    <title>Point-in-Time SEC Financial Data: A Reproducible Benchmark for Detecting Look-Ahead and Restatement Leakage</title>
-    <link>https://www.ssrn.com/abstract=7415198</link>
-    <description>Financial data services leak look-ahead bias into historical backtests through retention rules.</description>
-    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7415198</guid>
-  </item>
-  <item>
-    <title>A Thousand Agents, One Opinion: Effective Population Collapse in LLM-based Artificial Markets</title>
-    <link>https://www.ssrn.com/abstract=7416358</link>
-    <description>Aligned language-model agents exhibit high cross-correlation, reducing sixteen agents to 2.6 effective traders.</description>
-    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7416358</guid>
-  </item>
-  <item>
-    <title>Reasoning More, Knowing No Better? Epistemic Calibration in Financial Reasoning Tasks</title>
-    <link>https://www.ssrn.com/abstract=7431918</link>
-    <description>Increased reasoning effort improves LLM accuracy on financial tasks without improving calibration.</description>
-    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7431918</guid>
-  </item>
-  <item>
-    <title>When LLMs Whisper: Information Leakage and Collusion in Financial Markets</title>
-    <link>https://www.ssrn.com/abstract=7439840</link>
-    <description>LLM reasoning traces could enable tacit collusion by revealing rivals&#x27; intended orders.</description>
-    <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7439840</guid>
   </item>
 </channel>
 </rss>
