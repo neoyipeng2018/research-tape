@@ -1,0 +1,23 @@
+{
+ "date": "2026-10-16",
+ "scanned": 20,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7612758",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7612758",
+   "title": "The Marginal Yield of LLM-Guided Alpha Search: Search Effort, Information and Investment Value",
+   "claim": "In this setup, additional LLM factor proposals improve training scores but add no net return distinguishable from zero."
+  },
+  {
+   "key": "10.2139/ssrn.7615736",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7615736",
+   "title": "Expressed distress and portfolio risk in LLM investment advice",
+   "claim": "In this preregistered test, client distress cut LLM allocations above a tolerance-matched volatility reference from 12.2% to 2.8%."
+  }
+ ]
+}

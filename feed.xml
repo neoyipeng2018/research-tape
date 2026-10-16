@@ -6,6 +6,20 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>The Marginal Yield of LLM-Guided Alpha Search: Search Effort, Information and Investment Value</title>
+    <link>https://www.ssrn.com/abstract=7612758</link>
+    <description>In this setup, additional LLM factor proposals improve training scores but add no net return distinguishable from zero.</description>
+    <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7612758</guid>
+  </item>
+  <item>
+    <title>Expressed distress and portfolio risk in LLM investment advice</title>
+    <link>https://www.ssrn.com/abstract=7615736</link>
+    <description>In this preregistered test, client distress cut LLM allocations above a tolerance-matched volatility reference from 12.2% to 2.8%.</description>
+    <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7615736</guid>
+  </item>
+  <item>
     <title>No Name, No Gain? Unpacking Entity Bias in LLM Financial</title>
     <link>https://www.ssrn.com/abstract=7609438</link>
     <description>In WSJ headlines, retaining firm names raises LLM sentiment&#x27;s return predictability across all six models tested, a gain read as leakage.</description>
@@ -690,13 +704,6 @@
     <description>Conditioning Stocktwits sentiment on reasoning quality improves cryptocurrency return prediction.</description>
     <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7456261</guid>
-  </item>
-  <item>
-    <title>Do Large Language Models Add Value in Credit Investing? Evidence from a Disclosure-Reading Agent for US Bank Bonds</title>
-    <link>https://www.ssrn.com/abstract=7423838</link>
-    <description>Language models reading bank disclosures can identify credit deterioration before it affects bond prices.</description>
-    <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7423838</guid>
   </item>
 </channel>
 </rss>
