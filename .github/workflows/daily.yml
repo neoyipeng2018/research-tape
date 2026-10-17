@@ -24,6 +24,8 @@ jobs:
   tape:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    outputs:
+      day: ${{ steps.day.outputs.day }}
     steps:
       - uses: actions/checkout@v5
 
@@ -35,7 +37,10 @@ jobs:
       # The Singapore date, not the UTC one: the run fires 22:00 UTC and the reader opens
       # the page at 06:00 SGT the next morning, so the tape is dated the day they read it.
       - name: The day being built
-        run: echo "DAY=$(TZ=Asia/Singapore date +%F)" >> "$GITHUB_ENV"
+        id: day
+        run: |
+          echo "DAY=$(TZ=Asia/Singapore date +%F)" >> "$GITHUB_ENV"
+          echo "day=$(TZ=Asia/Singapore date +%F)" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-node@v5
         with: { node-version: "22" }
@@ -107,3 +112,34 @@ jobs:
       # read every morning — arXiv was dead ten days before anyone noticed. A red run mails.
       - name: A lane dead three days fails the run
         run: ./scripts/lane.py --candidates candidates
+
+  # The shadow week (docs/adr/0002): the free models judge the day Haiku already judged, and
+  # nothing they say is published. Its own job so a slow free model never eats the tape's 30
+  # minutes; continue-on-error so it never turns a day red; !cancelled() so it still runs on
+  # the days the dead-lane check fails the tape job after the push. Delete at cutover.
+  shadow:
+    needs: tape
+    if: ${{ !cancelled() && needs.tape.outputs.day != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    continue-on-error: true
+    env:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      DAY: ${{ needs.tape.outputs.day }}
+    steps:
+      - uses: actions/checkout@v5
+        with: { ref: main }   # the tape job's push, not the commit this run started on
+      - name: Shadow judges
+        run: |
+          [ -f "candidates/$DAY.json" ] || { echo "no candidates for $DAY: a dark day"; exit 0; }
+          ./scripts/shadow.py --in "candidates/$DAY.json" --out "shadow/$DAY.json"
+      - name: Prune shadow files past the 30-day window
+        run: ./scripts/prune-candidates.sh shadow
+      - name: Commit and push
+        run: |
+          git config user.name "research-tape"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A shadow
+          git diff --cached --quiet && { echo "nothing changed"; exit 0; }
+          git commit -m "shadow $DAY"
+          git pull --rebase && git push

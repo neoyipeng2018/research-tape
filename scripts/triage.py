@@ -16,7 +16,7 @@ auth failure (§9): AUTH_DEAD and LIMITS_EXHAUSTED never retry, CLI_HANG and MAL
 retry three times. No cost or token logic — `total_cost_usd` is a client-side estimate and
 `input_tokens` reported 9 on a 25K-token prompt.
 """
-import argparse, json, os, re, statistics, subprocess, sys
+import argparse, json, os, re, socket, statistics, subprocess, sys, urllib.error, urllib.request
 
 RUNS = 3          # median of three
 ATTEMPTS = 3      # per run, on CLI_HANG and MALFORMED_OUTPUT only — the rest never retry
@@ -25,6 +25,13 @@ ABSTRACT = 900    # chars per candidate, whitespace-collapsed
 SYSTEM = "You are a research-tape triage classifier. Return only the requested structured output."
 AUTH = re.compile(r"authenticat|expired|oauth|invalid api key|log ?in", re.I)
 LIMITS = re.compile(r"\blimit|resets|balance", re.I)
+
+# The day's judge (docs/adr/0002). "haiku" is the CLI on the subscription; anything else is a
+# pinned OpenRouter id. Until the shadow week ends only shadow.py sets it.
+MODEL = "haiku"
+OPENROUTER = os.environ.get("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+JSON_OBJECT_ONLY = {"google/gemma-4-31b-it:free", "google/gemma-4-26b-a4b-it:free"}
+GONE = {401, 402, 403, 404, 429}   # throttled, pulled or refused: the next judge, not a retry
 
 PROMPT = """You are the judge for a daily AI-in-finance research tape read by one person: a
 quant/ML practitioner who builds LLM systems over financial text and cares whether a
@@ -99,6 +106,8 @@ def call(text, schema, system):
     """ANTHROPIC_API_KEY is dropped here as well as in CI: it takes precedence over the OAuth
     token and silently bypasses the subscription. The timeout is ours rather than a `timeout -k`
     wrapper, so it works off Linux too; a wrapper's exit 124 is still read as a hang below."""
+    if MODEL != "haiku":
+        return openrouter(text, schema, system)
     env = {k: v for k, v in os.environ.items() if k != "ANTHROPIC_API_KEY"}
     try:
         return subprocess.run(
@@ -111,6 +120,52 @@ def call(text, schema, system):
             input=text, capture_output=True, text=True, env=env, timeout=TIMEOUT)
     except subprocess.TimeoutExpired:
         return subprocess.CompletedProcess([], 124, "", "")
+
+
+def openrouter(text, schema, system):
+    """One chat completion, folded into the CLI's envelope so payload() reads both judges alike.
+    The HTTP status is authoritative here, so the model's own words are never matched against
+    AUTH or LIMITS: a status in GONE is Fatal at once — retrying a model that is throttled or
+    pulled only spends the job's time — and anything else that is not a JSON object retries.
+    Free endpoints 404 every model at once when the account's data policy refuses providers
+    that log prompts (SPEC.md §3.1). A 200 can still carry an upstream error in its body."""
+    fmt = ({"type": "json_object"} if MODEL in JSON_OBJECT_ONLY else
+           {"type": "json_schema", "json_schema": {"name": "out", "strict": True,
+                                                   "schema": json.loads(schema)}})
+    req = urllib.request.Request(
+        f"{OPENROUTER}/chat/completions", method="POST",
+        data=json.dumps({"model": MODEL, "response_format": fmt, "messages": [
+            {"role": "system", "content": system}, {"role": "user", "content": text}]}).encode(),
+        headers={"Content-Type": "application/json",
+                 "Authorization": f"Bearer {os.environ.get('OPENROUTER_API_KEY', '')}"})
+    try:
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+            status, raw = r.status, r.read()
+    except urllib.error.HTTPError as e:
+        status, raw = e.code, e.read()
+    except (TimeoutError, socket.timeout):
+        return subprocess.CompletedProcess([], 124, "", "")
+    except urllib.error.URLError as e:
+        if isinstance(e.reason, (TimeoutError, socket.timeout)):
+            return subprocess.CompletedProcess([], 124, "", "")
+        raise Retry(f"MALFORMED_OUTPUT: {MODEL} unreachable: {e.reason}") from None
+    try:
+        body = json.loads(raw)
+    except ValueError:
+        body = {}
+    err = body.get("error") if isinstance(body, dict) else None
+    if status in GONE or (isinstance(err, dict) and err.get("code") in GONE):
+        code = err.get("code", status) if isinstance(err, dict) else status
+        msg = err.get("message", "") if isinstance(err, dict) else raw[:200].decode("utf-8", "replace")
+        raise Fatal(f"JUDGE_DOWN: {MODEL} {code}: {msg[:200]}")
+    try:
+        content = body["choices"][0]["message"]["content"] or ""
+        got = json.loads(re.sub(r"^```(?:json)?\s*|\s*```$", "", content.strip()))
+    except (KeyError, IndexError, TypeError, ValueError):
+        got = None
+    if status != 200 or err or not isinstance(got, dict):
+        raise Retry(f"MALFORMED_OUTPUT: {MODEL} {status}: {(err or raw[:200])!r}")
+    return subprocess.CompletedProcess([], 0, json.dumps({"structured_output": got, "result": ""}), "")
 
 
 def payload(proc, key):

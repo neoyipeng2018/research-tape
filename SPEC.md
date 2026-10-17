@@ -185,6 +185,15 @@ claude -p --model haiku \
   estimate and `input_tokens` is unreliable (reported `9` on a 25K-token prompt). Do not build cost
   logic on either.
 
+**The free judges** ([ADR-0002](docs/adr/0002-a-day-has-one-judge.md)). Any `triage.MODEL` other
+than `haiku` is a pinned OpenRouter `:free` id, called over `urllib` with `OPENROUTER_API_KEY`. The
+key belongs to the account with $10 of credit, which lifts the free cap from 50 to 1,000 requests a
+day; the cap is per account, not per model. Full-schema models get `json_schema`, the Gemmas only
+`json_object`, and both go through the same id-set check. 401/402/403/404/429 fail that judge at
+once. **Every free model 404ing at once is the account's privacy setting, not the pool vanishing:**
+free endpoints need "allow providers that may train on or log prompts" enabled, with paid overflow
+left off. Until cutover the free models only shadow Haiku, writing `shadow/YYYY-MM-DD.json`.
+
 ### 3.2 Pass 1 — triage, three runs, median wins
 
 Every deduped candidate is scored 0–10. The identical prompt runs **three times and the median score

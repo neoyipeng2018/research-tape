@@ -26,7 +26,14 @@ every way into that corpus has failed ([ADR-0001](docs/adr/0001-a-lane-is-a-corp
 A lane can be down without the day going dark.
 
 **Judge** — the model that scores candidates and writes claims. Two passes: triage scores everything,
-then claims are written for survivors only.
+then claims are written for survivors only. A day has exactly one judge: if it fails partway, the
+whole day starts again under the next judge in the chain, never a mix of two. The day's judge is
+recorded with its candidates and named on the vote issue.
+
+**Judge chain** — the ordered, pinned list of models a day may be judged by: free models first, the
+subscription model last. A model joins the chain only after shadowing the current judge and
+publishing close to what it would have. When every link fails, the day is dark. A day judged
+further down the chain is not a degraded day; degraded is about lanes, not judges.
 
 **Bar** — the score a candidate must reach to publish, and the cap on how many may publish in a day.
 Both live in `taste.md`.
