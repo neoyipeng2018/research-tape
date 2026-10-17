@@ -1,0 +1,14 @@
+{
+ "nvidia/nemotron-3-super-120b-a12b:free": {
+  "error": "Fatal: JUDGE_DOWN: nvidia/nemotron-3-super-120b-a12b:free 401: Missing Authentication header"
+ },
+ "google/gemma-4-31b-it:free": {
+  "error": "Fatal: JUDGE_DOWN: google/gemma-4-31b-it:free 401: Missing Authentication header"
+ },
+ "nvidia/nemotron-3.5-super-vl:free": {
+  "error": "Fatal: JUDGE_DOWN: nvidia/nemotron-3.5-super-vl:free 401: Missing Authentication header"
+ },
+ "google/gemma-4-26b-a4b-it:free": {
+  "error": "Fatal: JUDGE_DOWN: google/gemma-4-26b-a4b-it:free 401: Missing Authentication header"
+ }
+}
