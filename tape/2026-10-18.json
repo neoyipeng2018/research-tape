@@ -1,0 +1,45 @@
+{
+ "date": "2026-10-18",
+ "scanned": 36,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2610.21846",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.21846",
+   "title": "Where Backtests and Live Trading Part Ways: Six Defects from One Intraday System",
+   "claim": "In one intraday US equity system, every backtest-live drift traced to two paths that should agree but had drifted apart."
+  },
+  {
+   "key": "10.2139/ssrn.7618885",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7618885",
+   "title": "What does a Rejection Mean? A Retrospective Audit of a Registered Trading-rule Archive",
+   "claim": "Of 23 nominal exclusions among 210 rejected rules, 22 survive a training-series re-verification, yet all carry secondary stopping failures."
+  },
+  {
+   "key": "2610.21128",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.21128",
+   "title": "When Judges Agree and Are Wrong: Consistency-Accuracy Dissociation as a Blind Spot for Label-Free Evaluation",
+   "claim": "On four financial QA datasets, 60% of wrong answers sit in high-consistency regions, so agreement-based label-free evaluation misses confident errors."
+  },
+  {
+   "key": "2610.21510",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.21510",
+   "title": "How Much Screening Buys a Second? Speed, Selection, and the Maker's Spread",
+   "claim": "A twelve-second maker must screen at least 84.5% of informed flow to match a one-second venue, versus 71.1% under a Gaussian model."
+  },
+  {
+   "key": "2610.21659",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.21659",
+   "title": "When Does \"Post-Call\" Begin? An Availability Contract for Earnings-Call NLP Benchmarks",
+   "claim": "Moving from call-start to completion proxy flips return signs for 9.4% of 552 earnings calls, so labels depend on the declared outcome clock."
+  }
+ ]
+}
