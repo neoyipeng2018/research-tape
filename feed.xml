@@ -6,6 +6,20 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Trading Costs and Machine-Learning Return Forecasts</title>
+    <link>https://www.ssrn.com/abstract=7617338</link>
+    <description>In U.S. stocks at $500 million, trading costs matter in portfolio construction, not the loss: spread-gated liquidity weighting lifts net Sharpe from -0.38 to 0.42.</description>
+    <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7617338</guid>
+  </item>
+  <item>
+    <title>Reading the News Without Hindsight: NoLBERT Topics and the Cross-Section of Stock Returns</title>
+    <link>https://www.ssrn.com/abstract=7617420</link>
+    <description>Benchmarking news attention shocks against 63 trading days instead of 5 raises out-of-sample rank IC for every news reader tested.</description>
+    <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7617420</guid>
+  </item>
+  <item>
     <title>The Marginal Yield of LLM-Guided Alpha Search: Search Effort, Information and Investment Value</title>
     <link>https://www.ssrn.com/abstract=7612758</link>
     <description>In this setup, additional LLM factor proposals improve training scores but add no net return distinguishable from zero.</description>
@@ -683,27 +697,6 @@
     <description>Decision Transformers substantially outperform both online actor-critic RL and equally-weighted portfolio benchmarks.</description>
     <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7446418</guid>
-  </item>
-  <item>
-    <title>Quorum: A Benchmark for Financial Artificial Intelligence under Contested Ground Truth</title>
-    <link>https://www.ssrn.com/abstract=7455819</link>
-    <description>Sovereigns crossing investment-grade boundaries face median two-year rating-agency disagreement.</description>
-    <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7455819</guid>
-  </item>
-  <item>
-    <title>Valu(AI)tion: Machine Value and Market Prices</title>
-    <link>https://www.ssrn.com/abstract=7454838</link>
-    <description>Fundamental models generate 6.3% annual alpha despite algorithmic market dominance.</description>
-    <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7454838</guid>
-  </item>
-  <item>
-    <title>What Investors Believe and Why: Reasoning-Conditioned Sentiment in Cryptocurrency Markets</title>
-    <link>https://www.ssrn.com/abstract=7456261</link>
-    <description>Conditioning Stocktwits sentiment on reasoning quality improves cryptocurrency return prediction.</description>
-    <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7456261</guid>
   </item>
 </channel>
 </rss>

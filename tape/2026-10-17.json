@@ -1,0 +1,23 @@
+{
+ "date": "2026-10-17",
+ "scanned": 18,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7617338",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7617338",
+   "title": "Trading Costs and Machine-Learning Return Forecasts",
+   "claim": "In U.S. stocks at $500 million, trading costs matter in portfolio construction, not the loss: spread-gated liquidity weighting lifts net Sharpe from -0.38 to 0.42."
+  },
+  {
+   "key": "10.2139/ssrn.7617420",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7617420",
+   "title": "Reading the News Without Hindsight: NoLBERT Topics and the Cross-Section of Stock Returns",
+   "claim": "Benchmarking news attention shocks against 63 trading days instead of 5 raises out-of-sample rank IC for every news reader tested."
+  }
+ ]
+}

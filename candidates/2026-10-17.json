@@ -1,0 +1,164 @@
+[
+ {
+  "key": "10.2139/ssrn.7617338",
+  "source": "SSRN",
+  "title": "Trading Costs and Machine-Learning Return Forecasts",
+  "abstract": "In a large panel of U.S. stocks, machine-learning return forecasts are most accurate where little capital can be invested. Among stocks that can absorb capital, predictability is weak and hard to estimate precisely. We ask whether trading costs should enter the loss on which the forecast is trained or the way the portfolio is held and traded. Across an elastic net, a boosted tree, and a neural network, reweighting the loss toward liquid stocks does not significantly improve the ordering of those stocks or the net Sharpe ratio, whereas restricting the training sample to liquid stocks lowers accuracy on the stocks it retains. Weighting holdings by liquidity and trading only when the forecast covers the half bid-ask spread raises the net Sharpe ratio of the standard forecast with $500 million of capital invested from -0.38 to 0.42, while the gross Sharpe ratio falls from 1.86 to 1.21; retraining under the reweighted loss adds a statistically negligible 0.12 to the net Sharpe ratio.",
+  "link": "https://www.ssrn.com/abstract=7617338",
+  "score": 8,
+  "why": "Liquidity-aware loss and trade rules; net Sharpe after costs, capacity-aware."
+ },
+ {
+  "key": "10.2139/ssrn.7617420",
+  "source": "SSRN",
+  "title": "Reading the News Without Hindsight: NoLBERT Topics and the Cross-Section of Stock Returns",
+  "abstract": "Language models that read financial news are usually trained on text from the same years used to test them, so a backtest can reward hindsight. We build news topics from NoLBERT, an encoder pretrained only on text published between 1976 and 1995, adapted into a sentence encoder by contrastive fine-tuning on passages of the same article, with no labels or returns. We compare it with LDA, MiniLM and FinBERT readers on 1.26 million articles from 2012 to 2024, convert each reader's topics into attention shocks and stock exposures, and forecast the returns of the 1,000 largest US stocks with eight models at three rebalancing frequencies. Models are fitted on 2013-2019, choices are made on 2020-2021, and 2022-2024 is held out. The experiment with the best validation score loses money at every frequency. Measuring attention shocks against the past 63 trading days instead of 5 raises the test rank IC of every reader. NoLBERT gives the most stable topics and forecasts about as well as LDA. An equal-weight combination of all readers and models earns a monthly net Sharpe ratio of 1.12, significant against zero before adjusting for the search but not against a price-only benchmark.",
+  "link": "https://www.ssrn.com/abstract=7617420",
+  "score": 8,
+  "why": "Hindsight-free LLM news topics with held-out test; reports a losing best model."
+ },
+ {
+  "key": "10.2139/ssrn.7613658",
+  "source": "SSRN",
+  "title": "What analysts hear and why it matters for monetary policy",
+  "abstract": "We introduce a novel measure of how European Central Bank (ECB) monetary policy is interpreted by analysts at major investment banks. We construct a “policy interpretation shock” based on the language used in analysts’ reports covering monetary policy decisions by the ECB’s Governing Council (GovC). The main identifying assumption is that changes in the way analysts report on policy communication by the GovC—that is, the change in the policy tone from the preview report to the recap report—reflect unexpected information revealed by the policy event. Using GPT-based sentiment extraction, we show that the tone in these reports closely tracks that of the GovC, often even anticipating shifts in tone. Changes in the policy tone before and after meetings capture how market intermediaries interpret and adjust their assessment of policy decisions. These interpretation shocks are followed by contractionary macroeconomic responses and systematic movements in financial-market prices. These findings underscore the important role of communication in shaping expectations and influencing economic outcomes.",
+  "link": "https://www.ssrn.com/abstract=7613658",
+  "score": 6,
+  "why": "GPT-extracted analyst tone shocks around ECB; solid event design, modest actionability."
+ },
+ {
+  "key": "10.2139/ssrn.7618138",
+  "source": "SSRN",
+  "title": "DEI Sentiment Shifts and the Pricing of Washing and Hushing",
+  "abstract": "Corporate diversity, equity, and inclusion (DEI) has become increasingly contested as the climate surrounding DEI has shifted sharply. Prior research largely treats the capital market consequences of DEI as static, and we instead examine whether investors dynamically revalue corporate DEI as public sentiment changes. Leveraging large language models, we construct a monthly news-based measure of changes in anti-DEI sentiment and distinguish two economically distinct dimensions of corporate DEI: firms' underlying workforce diversity and their public DEI disclosure. As anti-DEI sentiment rises, investors penalize DEI disclosure but, strikingly, reward workforce diversity. These opposing effects generate 95-basis-point higher monthly returns for Hushers, firms with low DEI disclosure but high underlying workforce diversity, than for Washers, firms with high DEI disclosure but low underlying workforce diversity, for a one-standard-deviation increase in the change in anti-DEI sentiment. Cross-sectional tests provide evidence on the underlying mechanism. The disclosure penalty is attenuated by ESG-fund ownership and is stronger among firms with greater litigation risk, consistent with selling pressure from investors averse to DEI exposure and heightened litigation risk contributing to the costs of DEI disclosure. The diversity reward is more pronounced among R&D-active firms, consistent with workforce diversity being more valuable when its operational benefits are greater. Taken together, our findings suggest that investors distinguish what firms say about DEI from what they do, resulting in divergent pricing of diversity washing and hushing. More broadly, our study highlights that the pricing of socially salient corporate characteristics depends critically on the evolving environment in which those characteristics are evaluated.",
+  "link": "https://www.ssrn.com/abstract=7618138",
+  "score": 6,
+  "why": "LLM-built anti-DEI sentiment factor with return spreads; useful but single-theme."
+ },
+ {
+  "key": "10.2139/ssrn.7620448",
+  "source": "SSRN",
+  "title": "Do Machine Learning Models Add Value Beyond the VIX in Forecasting Extreme Market Stress?",
+  "abstract": "This study examines whether machine-learning models provide additional value beyond the VIX in forecasting next-day extreme market stress in the S&P 500. Using daily data from 2005–2025, we define extreme stress based on high volatility conditions and large market declines and compare logistic regression, random forests, gradient-boosted trees, and a class-weighted LSTM with three benchmarks: persistence, the VIX level, and a simple VIX–return model. Models are evaluated using chronological hold-out and expanding-window walk-forward tests with bootstrap inference. The results show that the VIX remains a challenging benchmark, achieving a hold-out ROC-AUC of 0.940 compared with 0.915 for the best machine-learning model and 0.830 for the LSTM. Tree-based models do not outperform the VIX in walk-forward evaluations, especially for newly emerging stress episodes. Adding economic policy uncertainty and geopolitical risk provides only marginal predictive improvements, increasing AUC by no more than 0.005. Robustness tests using a VIX-independent crash-day definition confirm the importance of volatility-based information. These findings suggest that machine-learning models should be assessed against economically meaningful benchmarks, as market-implied volatility already captures substantial information about short-term stress risk.",
+  "link": "https://www.ssrn.com/abstract=7620448",
+  "score": 6,
+  "why": "Walk-forward test showing VIX beats ML; useful negative benchmark result."
+ },
+ {
+  "key": "10.2139/ssrn.7619904",
+  "source": "SSRN",
+  "title": "Hamuq Signal: multimodal Bitcoin range-outcome prediction using Llika blockchain embeddings",
+  "abstract": "Predicting whether a price range will continue or reverse its incoming trend requires separating an observable state from a later outcome. Hamuq Signal combines past-only range detection, visual learning and temporal blockchain representations for this task. Its Llika component selects observed transactions, builds four-hour address–transaction graphs and learns 16-dimensional embeddings by masked graph reconstruction. A temporal convolutional network processes embedding histories and corrects a frozen convolutional visual predictor trained with direction-consistent synthetic views. Chronological Binance evaluation uses confirmed-family macro-F1 for final model selection and a fixed trading policy with 20 basis points per fill, annual USD10,000 capital resets and 1% planned initial risk. Across 2020–2024, summed annual net profit is USD3,022.97 for Hamuq Signal, USD2,960.67 for the visual control and USD3,209.75 for a market-only random forest. The forest trades in four of five years; both neural systems are profitable in all five. In 2025, Hamuq Signal earns USD701.27, CNN earns USD302.23 and the subsequently evaluated frozen forest loses USD192.43. Across six years, reversal recall rises from 20.61% for CNN to 44.85% for Hamuq Signal, with reduced precision. Three numerical-noise controls have lower aggregate profits but outperform real embeddings in 2025. Local detector sensitivity and paired time-block intervals, which include zero, qualify the economic findings. The contribution is an explicit information-to-decision methodology showing why classification, costs, participation and temporal consistency must be evaluated together.",
+  "link": "https://www.ssrn.com/abstract=7619904",
+  "score": 5,
+  "why": "Blockchain graph embeddings with fixed trading policy; single asset, small sample."
+ },
+ {
+  "key": "10.2139/ssrn.7621183",
+  "source": "SSRN",
+  "title": "Aligned to Protect, Misaligned to Advise: Financial Advice from LLMs",
+  "abstract": "Large language models promise to improve household financial decision-making at scale in domains prone to costly mistakes, yet how their alignment training shapes advice in naturalistic settings remains unclear. I examine this question in health insurance plan choice and retirement portfolio allocationdomains with informative welfare benchmarks-using 112,263 model evaluations across twelve experimental designs, supplemented by administrative data on 15,717 employee insurance choices and a retirement advice experiment with human participants. In a neutral, information-only context, models recommend financially dominated insurance plans in 17.5% of cases, compared with 63.3% of employee choices, and recommend retirement allocations closer than human advice to an industry target-date benchmark. However, disclosures of low risk tolerance, chronic health conditions, or user anxiety shift models toward dominated insurance plans and overly conservative retirement portfolios, eroding much of their baseline advantage and imposing excess insurance costs that fall regressively on lower-income households as a share of earnings. Mechanism experiments and an analysis of 25,950 model explanations indicate that these cues activate protective priorities that models implement heuristically-favoring lower cost sharing in insurance and lower equity exposure in retirement even when doing so conflicts with financial value or an explicit cost-minimization goal. A brief prompt instruction framing the task as economic optimization largely eliminates dominated insurance recommendations while preserving responsiveness to stated risk tolerance. Finally, an evaluation of 1,000 Reddit personal finance posts shows that naturally occurring advice requests frequently elicit protective assessments comparable to those induced by the experimental cues.",
+  "link": "https://www.ssrn.com/abstract=7621183",
+  "score": 5,
+  "why": "LLM advice audit on insurance and retirement; not market-facing finance work."
+ },
+ {
+  "key": "10.2139/ssrn.7611498",
+  "source": "SSRN",
+  "title": "To What Extent Is Corporate Commitment to Responsible AI Associated with ESG Performance: Evidence from a Disclosure-Based Composite RAI Index",
+  "abstract": "This paper investigates to what extent corporate commitment to RAI, captured through disclosure-based measures, is associated with ESG performance. Since ESG metrics do not fully capture AI ethics and risk management, a company-level RAI index was developed using public disclosures. Constructed composite RAI index follows the OECD AI principles , OECD guideline for constructing composite indexes and applies embedding-based text analysis to annual, ESG and proxy reports. Collected across from NASDAQ-100 Tech companies corpora was divided into chunks, matched with OECD AI principles, transformed into pillar scores and aggregated into a 0 -100 index. The index was compared with LSEG ESG scores through cross sectional regression models. Results showed that the RAI index is positively and significantly associated with overall ESG performance and ESG pillars. The strongest association was found for the social, followed by overall ESG, environmental and governance pillars. Study confirms the feasibility of disclosure based RAI measurement and suggests that RAI reporting can be understood as a technology oriented extension of the broader ESG agenda. The findings should be interpreted as associational, not causal.",
+  "link": "https://www.ssrn.com/abstract=7611498",
+  "score": 4,
+  "why": "LLM-based disclosure index vs ESG scores; correlational, no trading or transferable method."
+ },
+ {
+  "key": "10.2139/ssrn.7616563",
+  "source": "SSRN",
+  "title": "Agentic AI in Automated Markets",
+  "abstract": "Automated markets increasingly host autonomous, learning trading agents and are powered by formulaic automated market makers (AMMs). We study how heterogeneous agent behavior shapes stress, risk-adjusted performance, liquidity, and volatility in these types of markets. Three behavioral archetypes are modeled as agentic reinforcement learning (RL) systems: a rational arbitrageur, a manipulator, and a retail herd-follower. Each archetype is defined by its reward function within a common, asset-agnostic exposure-control environment, and each is trained with a value-based Deep Q-Network (DQN) and with REINFORCE using a learned baseline. A pilot on hourly cryptocurrency data (AAVE, ETC, SUI) motivates the hypotheses. Herdfollowers produce the most frequent but shortest stress episodes, manipulators the fewest but most persistent, and rational agents the most stable rolling Sharpe ratios despite higher return volatility. SHAP attributions tie these patterns to drawdown and cross-asset signals, shortterm volatility and position state, and momentum, respectively. The results motivate behaviorspecific regulation rather than uniform limits on volatility or turnover.",
+  "link": "https://www.ssrn.com/abstract=7616563",
+  "score": 4,
+  "why": "Simulated RL agents on crypto AMMs; pilot data, no real order book."
+ },
+ {
+  "key": "10.2139/ssrn.7614558",
+  "source": "SSRN",
+  "title": "Machine Learning for Credit Risk Modeling: A Comparative Study of Traditional & Explainable AI Approaches - Part I",
+  "abstract": "Credit risk modeling helps lenders assess the probability of default. This study compares traditional and machine-learning approaches using the OpenIntro Loans Full Schema dataset, which contains 10,000 loans and 55 variables. The models evaluated are Logistic Regression, Random Forest, XGBoost, and LightGBM. SMOTE was used to address class imbalance, SHAP was applied to examine model explanations, and a preliminary fairness analysis used income as a proxy variable. At the standard 0.50 decision threshold, Logistic Regression achieved 2.3% precision and 47.2% recall. The ensemble models achieved higher ROC AUC values in this evaluation. Random Forest had the highest ROC AUC (0.67), while LightGBM achieved 0.66 and was selected for its operating point for minority-class detection. At an exploratory threshold of approximately 3.4%, LightGBM achieved 7.1% precision and 32.1% recall. SHAP identified interest rate, debt-to-income ratio, and loan grade among the key risk drivers. In the evaluated false-positive-rate comparison, the rate was 0.07% for low-income borrowers and 0.13% for high-income borrowers. These findings describe results from this dataset and modeling setup. They should be interpreted in light of the target definition, severe class imbalance, threshold selection, and dataset limitations.",
+  "link": "https://www.ssrn.com/abstract=7614558",
+  "score": 3,
+  "why": "Standard credit-risk model comparison on a toy loans dataset; weak results."
+ },
+ {
+  "key": "10.2139/ssrn.7618282",
+  "source": "SSRN",
+  "title": "When Cash Wakes Up: Inertia in Institutional Money Market Funds and the Potential Effects of AI Disruption",
+  "abstract": "We study institutional cash management by constructing a novel dataset that records the specific money market funds (MMFs) held by each mutual fund in each month from 2010 to 2024. We document remarkably high inertia: more than half of mutual funds never switched their MMF choice throughout the sample period, despite non-negligible yield dispersion. To decompose the sources of this inertia, we develop a two-stage structural model that separately identifies the determinants of portfolio managers' attentiveness (\"waking up\") and their conditional preferences once attentive. We estimate the model using a methodology that combines BLP-style contraction mapping with maximum likelihood. We establish three main findings. First, MMFs with less attentive investor bases engage in greater liquidity transformation while offering lower yields. As a result, they earn higher profits and exhibit significantly higher survival rates, especially during periods of low interest rates. Second, we find that aggregate flows appear more yield-sensitive during low interest rate periods (the well-documented \"reaching for yield\" phenomenon) not because individual investors become more yield-seeking, but because a larger fraction of investors becomes attentive - a composition effect rather than a preference shift. Third, counterfactual analysis reveals a potential tension between market efficiency and financial stability if AI-driven automation reduces investor inattention. In the absence of inattention, fees fall by approximately half, yield dispersion collapses to near zero, and market concentration declines by roughly 20%, but monthly fund flows increase by about three times and the incidence of fund-months in which redemptions exceed a fund's weekly liquid assets rises by about six times, raising the risk of fire sales and MMF runs.",
+  "link": "https://www.ssrn.com/abstract=7618282",
+  "score": 3,
+  "why": "Structural MMF inertia model; finance-heavy, AI only as framing."
+ },
+ {
+  "key": "10.2139/ssrn.7610058",
+  "source": "SSRN",
+  "title": "AI-Driven Business Promotion: Strategies, Organizational Structure, Ethical Frameworks, and Market Responsiveness",
+  "abstract": "In the modern digital economy, traditional mass-marketing methods such as television commercials, print advertisements, and blanket email campaigns are quickly losing their effectiveness. Modern consumers expect brands to understand their individual preferences, communicate with them at the right time, and offer products tailored specifically to their personal needs. Artificial Intelligence (AI) has emerged as the central engine driving this transformation. This paper examines how businesses use AI technologies including Machine Learning (ML), Natural Language Processing (NLP), PredictiveAnalytics, and Computer Vision to create dynamic, highly personalized, and automated promotional strategies. It explores the practical applications of AI in content creation, customer segmentation, dynamic pricing, and conversational marketing across global and Indian brands like Flipkart, Zomato, Netflix, and Amazon. Furthermore, this study details the internal organizational structures needed to run AI campaigns, establishes robust ethical frameworks to address data privacy and algorithmic bias, and highlights the crucial role of real-time market responsiveness.",
+  "link": "https://www.ssrn.com/abstract=7610058",
+  "score": 1,
+  "why": "Generic marketing overview; no finance method or evidence."
+ },
+ {
+  "key": "10.2139/ssrn.7614601",
+  "source": "SSRN",
+  "title": "Algorithmic Dynamic Pricing Fairness and Customer Loyalty toward Uber in Bangladesh: An AI-Era Perspective",
+  "abstract": "Dynamic pricing has become a defining feature of platform-based mobility because ride-hailing firms must continuously reconcile fluctuating demand, driver availability, trip characteristics, traffic conditions, and operational constraints. Yet the same algorithmic flexibility that improves market coordination can generate customer perceptions that prices are opaque, excessive, or unfair. This study examines whether perceived price fairness influences customer loyalty toward Uber in Bangladesh and whether customer satisfaction provides a mechanism through which fairness is translated into loyalty. Drawing on Equity Theory and the price-fairness literature, the study further tests whether perceived equity/value represents an additional explanatory mechanism. The analysis uses the Group-4 master survey dataset supplied for BUS-4001. Of 400 respondent slots, 385 observations are complete and pass the stated attention check. Four constructs-Perceived Price Fairness, Equity/Value, Customer Satisfaction, and Customer Loyalty-are measured using three-item, five-point Likert scales. Because the supplied workbook does not contain software-generated PLS-SEM output, the structural model is estimated transparently using composite scores, standardized regression paths, and 5,000-resample bootstrap confidence intervals; measurement quality is reported separately as a diagnostic. Perceived price fairness positively predicts equity/value (β = 0.377, p",
+  "link": "https://www.ssrn.com/abstract=7614601",
+  "score": 1,
+  "why": "Survey-based customer loyalty study in one country; no finance method."
+ },
+ {
+  "key": "10.2139/ssrn.7617060",
+  "source": "SSRN",
+  "title": "AI-Enabled Cybersecurity Adoption and Corporate Risk Management: The Moderating Role of Organisational Readiness and Regulatory Pressure",
+  "abstract": "Organisations increasingly deploy artificial intelligence (AI) to detect, triage and respond to cyber threats, yet the evidence on whether and when such deployment improves corporate risk management remains fragmented across information-systems, security-economics, governance and regulatory literatures. This review synthesises that evidence using an integrated Technology-Organisation-Environment (TOE) and trust lens. It (i) consolidates the determinants of AI-enabled cybersecurity adoption, (ii) examines how adoption relates to detection, response, governance and financialresilience outcomes, and (iii) develops a moderation model in which organisational readiness and regulatory pressure condition the adoption-risk-management relationship. The synthesis suggests that adoption alone is an unreliable predictor of risk outcomes: benefits are concentrated in firms with sufficient data maturity, skilled staff, governance routines and leadership support, while regulatory pressure can amplify value when it channels investment into accountable, wellintegrated deployments but can also encourage symbolic, compliance-driven adoption. Four propositions, a conceptual framework and a research agenda are offered, together with implications for managers, boards and regulators.",
+  "link": "https://www.ssrn.com/abstract=7617060",
+  "score": 1,
+  "why": "Literature review on AI cybersecurity and risk; no empirical finance work."
+ },
+ {
+  "key": "10.2139/ssrn.7617825",
+  "source": "SSRN",
+  "title": "Who Gets the Hubs? Equity Weights Versus Parity Constraints in the Design of Drone Delivery Networks for Medicines: A Synthetic Optimisation Study",
+  "abstract": "Drone delivery of medicines is often presented as a way to reach communities far from a pharmacy. A recent conceptual proposal, PharmaBridge AI [1], suggests that an equity weight should steer such delivery towards pharmacy deserts, but it does not test how an equity weight behaves when it is applied to the design of the delivery network itself. This paper does so with a synthetic optimisation study. It generates 100 artificial regions, each with 120 demand points, 30 candidate hub sites and 25 existing pharmacies, and solves a hub-location and routing problem exactly as a mixed-integer linear programme under a budget, hub capacity, drone range and a weather-reliability decay. Three design rules are compared: an efficiency rule that maximises expected delivered units, an equity-weighted rule with weight λ, and a parityconstrained rule that maximises delivered units subject to equal fill rates in desert and non-desert areas. The efficiency design delivers 2.8% of desert demand against 0.386 elsewhere, and reaches only 1.6% of desert tracts. Equity weighting narrows the gap smoothly but slowly: it takes a median weight of 8 to reach parity, and only 56 of 100 regions reach parity at all with λ ≤ 16. Three propositions are proved and checked: the weighted frontier is monotone, the price of fairness is bounded by a quantity computable in advance, and a parity-constrained design can never do worse than a weighted design that achieves parity. Numerically, where both reach parity the weighted design loses 14.8% of delivered units and the parity-constrained design 9.2%, a 38% reduction. Designing for a harsher weather scenario costs 2.6% of delivered units and preserves parity at the stress level it was planned for. All data are synthetic, and results describe the method, not any real place.",
+  "link": "https://www.ssrn.com/abstract=7617825",
+  "score": 1,
+  "why": "Synthetic drone-logistics optimisation; no financial content."
+ },
+ {
+  "key": "10.2139/ssrn.7617859",
+  "source": "SSRN",
+  "title": "Explainable AI-driven Decision Support in Digital Banking: Integrating Predictive Analytics, Real-Time Operational Intelligence, and Financial Risk Governance",
+  "abstract": "Digital banking increasingly relies on data-driven technologies to support operational decisions, detect emerging risks, and improve service reliability. However, the integration of predictive analytics into banking operations raises challenges related to model interpretability, real-time monitoring, decision accountability, and financial risk governance. This study proposes an integrated conceptual framework for explainable AI-driven decision support in digital banking, combining predictive analytics, real-time operational intelligence, and risk-based governance mechanisms. The framework conceptualizes how operational data, transaction indicators, service-performance metrics, and financial risk signals can inform timely decisions while preserving transparency and accountability. Explainable artificial intelligence is incorporated to make model outputs more interpretable to banking personnel and risk managers, while continuous monitoring supports the identification of operational anomalies and emerging risk conditions. A governance layer connects model outputs to risk thresholds, human oversight, escalation procedures, and documented decision processes. Rather than assuming that automation necessarily improves banking outcomes, the framework identifies the organizational and technical conditions under which AI-supported decisions may contribute to operational responsiveness, risk awareness, and accountable management. The study also develops research propositions concerning the relationships among predictive capability, explainability, monitoring quality, governance integration, and decision-support effectiveness. Its principal contribution is a structured foundation for future empirical investigation and responsible implementation of intelligent decision-support systems in digital banking. The proposed framework can guide researchers, banking practitioners, and technology governance teams in evaluating AIenabled decision processes while recognizing the importance of data quality, regulatory compliance, human judgment, and model limitations.",
+  "link": "https://www.ssrn.com/abstract=7617859",
+  "score": 1,
+  "why": "Conceptual XAI banking framework with no data or method."
+ },
+ {
+  "key": "10.2139/ssrn.7617959",
+  "source": "SSRN",
+  "title": "Explainable AI for Secure Digital Banking: Integrating Intelligent Credit Assessment, Cloud-based Automation, and Financial Risk Governance",
+  "abstract": "Artificial intelligence (AI) and cloud computing are reshaping digital banking by enabling automated credit assessment, data-driven decisions, and more integrated financial services. Nevertheless, these capabilities introduce risks involving cybersecurity, algorithmic opacity, data governance, operational resilience, and accountability. This article develops a conceptual framework integrating AI-based credit scoring, cloud automation, explainable decision-making, and financial risk governance. Drawing on literature concerning credit-risk modelling, AI in financial services, digital banking, operational resilience, and trustworthy machine learning, the study examines how predictive intelligence can be embedded within secure and accountable banking processes. The proposed framework comprises five dimensions: secure data and cloud infrastructure, AI-based credit assessment, explainability and fairness, financial risk governance, and continuous monitoring. It distinguishes predictive performance from decision quality and emphasizes that accurate predictions alone do not guarantee fair, transparent, or operationally reliable lending decisions. Eight research propositions are developed to guide future empirical investigation. The article also presents a practical implementation roadmap and a multidimensional performance scorecard for financial institutions. Its central argument is that secure and explainable digital banking requires coordinated technical, organizational, and governance controls across the AI lifecycle. The framework offers a conceptual foundation for developing financial services that balance automation, credit-risk management, customer protection, and institutional accountability.",
+  "link": "https://www.ssrn.com/abstract=7617959",
+  "score": 1,
+  "why": "Conceptual digital-banking framework paper; no empirical or implementable contribution."
+ },
+ {
+  "key": "10.2139/ssrn.7619583",
+  "source": "SSRN",
+  "title": "Climate and Corporate Finance",
+  "abstract": "Climate change poses risks and creates opportunities for firms, investors, and financial intermediaries. In this review, I survey the literature at the intersection of climate change and corporate finance, examining how climate considerations shape firms' investment, financing, governance, and strategic decisions. I then broaden the lens: climate change is not simply an exogenous factor for firms; rather, corporate decisions also shape future climate conditions and the systems in which firms operate. Building on this perspective, I outline directions for future research, including system-level investing, the internalization of externalities, the role of catalytic capital in financing sustainable investments, investment across the displacement cycle, and the implications of AI for climate finance.",
+  "link": "https://www.ssrn.com/abstract=7619583",
+  "score": 1,
+  "why": "Review of climate corporate finance literature; no method or data."
+ }
+]
