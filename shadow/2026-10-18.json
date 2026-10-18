@@ -1,14 +1,104 @@
 {
  "nvidia/nemotron-3-super-120b-a12b:free": {
-  "error": "Fatal: JUDGE_DOWN: nvidia/nemotron-3-super-120b-a12b:free 401: Missing Authentication header"
+  "scores": {
+   "2610.19240": 8,
+   "2610.20104": 8,
+   "2610.21846": 8,
+   "10.2139/ssrn.7622180": 7,
+   "2610.19432": 7,
+   "2610.20424": 7,
+   "2610.21128": 7,
+   "2610.21510": 7,
+   "2610.21659": 7,
+   "10.2139/ssrn.7618438": 6,
+   "2610.20037": 6,
+   "2610.20887": 6,
+   "2610.21081": 6,
+   "2610.22144": 6,
+   "10.2139/ssrn.7618885": 5,
+   "10.2139/ssrn.7622678": 5,
+   "2610.19254": 5,
+   "2610.20366": 5,
+   "2610.20860": 5,
+   "2610.21491": 5,
+   "2610.22061": 5,
+   "10.2139/ssrn.7616919": 4,
+   "2610.19428": 4,
+   "2610.21867": 4,
+   "10.2139/ssrn.7621859": 3,
+   "2610.21057": 3,
+   "2610.21145": 3,
+   "2610.21447": 3,
+   "2610.21540": 3,
+   "10.2139/ssrn.7620359": 2,
+   "2610.20000": 2,
+   "2610.21196": 2,
+   "2610.21442": 2,
+   "2610.21841": 2,
+   "2610.20920": 1,
+   "2610.21273": 1
+  },
+  "claims": {
+   "2610.19240": "The strongest open-weight model achieves 84.1% accuracy, while the best proprietary model reaches 92.8%.",
+   "2610.20104": "Pretraining on simulated order flow yields next-token predictions within a millinat of the Bayes-optimal predictor.",
+   "2610.21846": "Six specific defects cause intraday strategy backtests to diverge from live trading, including data mismatches and coding errors.",
+   "10.2139/ssrn.7622180": "Controlling for loan origination period eliminates the apparent predictive power of central‑bank tone features in credit risk models.",
+   "2610.19432": "High concept recognition accuracy does not guarantee complete financial fact recovery across languages.",
+   "2610.20424": "Even frontier long‑horizon agents achieve low strict‑success rates due to frequent invalid intermediate actions."
+  }
  },
  "google/gemma-4-31b-it:free": {
-  "error": "Fatal: JUDGE_DOWN: google/gemma-4-31b-it:free 401: Missing Authentication header"
+  "error": "Fatal: JUDGE_DOWN: google/gemma-4-31b-it:free 429: Provider returned error"
  },
  "nvidia/nemotron-3.5-super-vl:free": {
-  "error": "Fatal: JUDGE_DOWN: nvidia/nemotron-3.5-super-vl:free 401: Missing Authentication header"
+  "scores": {
+   "2610.21846": 9,
+   "10.2139/ssrn.7618438": 8,
+   "10.2139/ssrn.7618885": 8,
+   "2610.21128": 8,
+   "2610.21510": 8,
+   "2610.21659": 8,
+   "2610.19240": 7,
+   "2610.19432": 7,
+   "2610.20424": 7,
+   "2610.21057": 7,
+   "2610.21491": 7,
+   "10.2139/ssrn.7622180": 6,
+   "2610.20037": 6,
+   "2610.20104": 6,
+   "2610.21867": 6,
+   "2610.22144": 6,
+   "10.2139/ssrn.7616919": 5,
+   "10.2139/ssrn.7622678": 5,
+   "2610.21081": 5,
+   "2610.21540": 5,
+   "2610.19428": 4,
+   "2610.20366": 4,
+   "2610.20887": 4,
+   "10.2139/ssrn.7620359": 3,
+   "2610.19254": 3,
+   "2610.20860": 3,
+   "2610.21145": 3,
+   "2610.21196": 3,
+   "2610.21447": 3,
+   "2610.22061": 3,
+   "10.2139/ssrn.7621859": 2,
+   "2610.20000": 2,
+   "2610.20920": 2,
+   "2610.21273": 2,
+   "2610.21442": 2,
+   "2610.21841": 2
+  },
+  "claims": {
+   "2610.21846": "Intraday backtests can diverge from live execution even when summary statistics show no difference.",
+   "10.2139/ssrn.7618438": "An open-source financial agent stack can lack any enforceable decision locus for a real trading-use restriction.",
+   "10.2139/ssrn.7618885": "Frozen exclusions can be overturned by verification while every nominal exclusion carries secondary stopping failures.",
+   "2610.21128": "60% of incorrect answers fall in a high-consistency region that agreement-only evaluation misses.",
+   "2610.21510": "Screening at least 84.5 percent of informed flow lets a twelve-second maker match a one-second venue.",
+   "2610.21659": "Changing the declared earnings-call outcome clock can alter labels and losses while model rankings stay fixed."
+  }
  },
  "google/gemma-4-26b-a4b-it:free": {
-  "error": "Fatal: JUDGE_DOWN: google/gemma-4-26b-a4b-it:free 401: Missing Authentication header"
+  "error": "Fatal: JUDGE_DOWN: google/gemma-4-26b-a4b-it:free 429: Provider returned error"
  }
 }
