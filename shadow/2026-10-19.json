@@ -1,0 +1,28 @@
+{
+ "nvidia/nemotron-3-super-120b-a12b:free": {
+  "scores": {
+   "10.2139/ssrn.7629484": 8,
+   "10.2139/ssrn.7629375": 3,
+   "10.2139/ssrn.7629175": 2,
+   "10.2139/ssrn.7629551": 1
+  },
+  "claims": {
+   "10.2139/ssrn.7629484": "Adding quantitative alpha factors improves directional accuracy more than sentiment, yet does not guarantee profitable trading."
+  }
+ },
+ "google/gemma-4-31b-it:free": {
+  "error": "Fatal: JUDGE_DOWN: google/gemma-4-31b-it:free 429: Provider returned error"
+ },
+ "nvidia/nemotron-3.5-super-vl:free": {
+  "scores": {
+   "10.2139/ssrn.7629484": 6,
+   "10.2139/ssrn.7629375": 3,
+   "10.2139/ssrn.7629175": 1,
+   "10.2139/ssrn.7629551": 0
+  },
+  "claims": {}
+ },
+ "google/gemma-4-26b-a4b-it:free": {
+  "error": "Fatal: JUDGE_DOWN: google/gemma-4-26b-a4b-it:free 429: Provider returned error"
+ }
+}
