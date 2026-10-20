@@ -1,0 +1,14 @@
+{
+ "nvidia/nemotron-3-super-120b-a12b:free": {
+  "error": "IncompleteRead: IncompleteRead(308 bytes read)"
+ },
+ "google/gemma-4-31b-it:free": {
+  "error": "Fatal: JUDGE_DOWN: google/gemma-4-31b-it:free 429: Provider returned error"
+ },
+ "nvidia/nemotron-3.5-super-vl:free": {
+  "error": "Fatal: claim failed after 3 attempts: MALFORMED_OUTPUT: nvidia/nemotron-3.5-super-vl:free 502: {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{\"message\":\"Failed to generate completions\",\"type\":\"Internal Server Error\",\"code\":500}', 'provider_name': 'Nvidia', 'is_byok': False}}"
+ },
+ "google/gemma-4-26b-a4b-it:free": {
+  "error": "Fatal: JUDGE_DOWN: google/gemma-4-26b-a4b-it:free 429: Provider returned error"
+ }
+}
