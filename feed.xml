@@ -6,6 +6,27 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Combinatorial Arbitrage in Prediction Markets</title>
+    <link>https://arxiv.org/abs/2610.23517</link>
+    <description>Logical arbitrage across Polymarket contracts survived spreads and fees, yielding 2.2% guaranteed profit on settled portfolios in full-depth order-book replays.</description>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.23517</guid>
+  </item>
+  <item>
+    <title>Faithful by Construction? An Exact Test of LLM Explanations for Constrained Portfolio Optimization Decisions</title>
+    <link>https://www.ssrn.com/abstract=7625878</link>
+    <description>LLM explanations of linear-program portfolio decisions name zero-effect limits as drivers in 77-89% of cases, so they need solver-certificate checks.</description>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7625878</guid>
+  </item>
+  <item>
+    <title>Which Outcome Should Teach an LLM Reader? A Verified FOMC Benchmark and Reward-Design Evidence for Outcome-Guided Agents in Finance</title>
+    <link>https://www.ssrn.com/abstract=7626078</link>
+    <description>Pre-meeting equity returns are learnable from FOMC minutes at out-of-sample R² 0.50, while the next policy-rate change shows no detectable text signal.</description>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7626078</guid>
+  </item>
+  <item>
     <title>Where Backtests and Live Trading Part Ways: Six Defects from One Intraday System</title>
     <link>https://arxiv.org/abs/2610.21846</link>
     <description>In one intraday US equity system, every backtest-live drift traced to two paths that should agree but had drifted apart.</description>
@@ -606,48 +627,6 @@
     <description>LLM-based synthetic investors suppress heterogeneity and amplify moral effects.</description>
     <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7484116</guid>
-  </item>
-  <item>
-    <title>FinRL-DeepSeek Revisited: A Reproduction and Multi-Seed Robustness Analysis of LLM-Infused Risk-Sensitive Trading Agents</title>
-    <link>https://www.ssrn.com/abstract=7459518</link>
-    <description>Single-seed financial backtests undermine published agent rankings by obscuring seed-dependent performance reversals.</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7459518</guid>
-  </item>
-  <item>
-    <title>FinProof v1: An Adversarial Benchmark for AI Guardrail Evaluation in Banking, Financial Services, and Insurance</title>
-    <link>https://www.ssrn.com/abstract=7464798</link>
-    <description>Generic AI safety benchmarks systematically miss BFSI-specific attacks exploiting regulatory complexity and compliance ambiguity.</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7464798</guid>
-  </item>
-  <item>
-    <title>The Operating-Layer Dominance Hypothesis: Why Agentic Trading Alpha Is an Interface Problem, Not a Model Problem A Position Paper on Architecture, Live Evaluation, and Alpha Limits in Multi-Agent Trading Systems</title>
-    <link>https://www.ssrn.com/abstract=7472064</link>
-    <description>Deterministic execution-layer control, not model capability, is the binding constraint on agentic trading alpha.</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7472064</guid>
-  </item>
-  <item>
-    <title>Named Entity Recognition for Unstructured Financial Transaction Text</title>
-    <link>https://www.ssrn.com/abstract=7453478</link>
-    <description>Span-matching architectures disambiguate financial transaction boundaries more efficiently than transformers under limited labeled data.</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7453478</guid>
-  </item>
-  <item>
-    <title>How Much is Too Much Optimism? Peer Tone Benchmarking and the Market Discount for Positive Tone Deviation</title>
-    <link>https://www.ssrn.com/abstract=7470578</link>
-    <description>Unverified peer-relative optimism in MD&amp;A triggers a 2-4% market-to-book valuation penalty.</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7470578</guid>
-  </item>
-  <item>
-    <title>Can Machines Learn Electricity Hedging Regimes? State-Dependent Minimum-Variance Hedging in German Power Futures</title>
-    <link>https://www.ssrn.com/abstract=7477840</link>
-    <description>State-dependent hedging using neural network regime-weighting reduces power-futures tail risk by 10 EUR/MWh versus OLS.</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7477840</guid>
   </item>
 </channel>
 </rss>

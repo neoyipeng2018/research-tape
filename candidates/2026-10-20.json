@@ -1,0 +1,236 @@
+[
+ {
+  "key": "2610.23517",
+  "source": "arXiv",
+  "title": "Combinatorial Arbitrage in Prediction Markets",
+  "abstract": "We develop a framework to identify and quantify arbitrage across logically related prediction-market contracts. We prove that prices outside the convex hull of admissible payoff vectors admit arbitrage and identify optimal arbitrage portfolios through integer programming. Using venue metadata and semantic analysis of resolution criteria, we recover 1.9 million logical relations and compile them into constraint systems covering more than 255,000 contracts. We replay full-depth Polymarket order books to simulate an arbitrageur executing these portfolios against resting orders. Among settled portfolios, guaranteed profit after spreads and fees equals 2.2% of committed capital, while profit at resolution reaches 3.2%. We find that arbitrage opportunities persist longer and attract less observed participation where relation discovery and execution are more costly.",
+  "link": "https://arxiv.org/abs/2610.23517",
+  "score": 8,
+  "why": "Arbitrage replay on Polymarket books with costs; executable, evaluated, surprising persistence."
+ },
+ {
+  "key": "10.2139/ssrn.7625878",
+  "source": "SSRN",
+  "title": "Faithful by Construction? An Exact Test of LLM Explanations for Constrained Portfolio Optimization Decisions",
+  "abstract": "When a constrained optimizer selects a portfolio, managers, auditors and regulators ask why. Large language models (LLMs) are increasingly used to answer in plain language, but a fluent explanation can cite reasons that did not drive the decision. In a linear program, the effect of every constraint on the optimum is known from the solver's certificate and can be confirmed by relaxing the constraint and resolving. Each claim in an explanation (\"this limit drove the allocation and is worth about x basis points\") can therefore be checked against ground truth rather than against another model or a human judge. We apply this test to 196 bond-portfolio problems built from public FRED data on US Treasury yields and ICE BofA credit spreads (May to October 2026), scoring explanations written by Claude Sonnet 4.5 and Gemini 2.5 Flash without access to the certificate. Across 149 cases in which a limit had exactly zero effect on the optimum, the models named it as a driver in 89% (Claude) and 77% (Gemini) of cases, while naming binding limits in 98% and 90% of cases. Giving the models the portfolio facts that show which limits are tight left Claude's rate essentially unchanged (86%) and reduced Gemini's to 48%, no better than a fixed template that always names the same two limits (50%). The models' estimates of what each binding limit costs were within ±35% of the true value in 7% of 1,703 claims, with median errors ranging from 0.29× to 8.43× the true value and in the same direction for both vendors, even though the holdings shown to the models determine the true values. A third model, GPT-4o-mini, copied the numbers in the prompt's format example and is reported separately. Explanations generated from the certificate avoid both errors by construction.",
+  "link": "https://www.ssrn.com/abstract=7625878",
+  "score": 7,
+  "why": "Exact ground-truth test of LLM explanations on LP portfolio constraints; practical evaluation idea."
+ },
+ {
+  "key": "10.2139/ssrn.7626078",
+  "source": "SSRN",
+  "title": "Which Outcome Should Teach an LLM Reader? A Verified FOMC Benchmark and Reward-Design Evidence for Outcome-Guided Agents in Finance",
+  "abstract": "Harness-side learning methods such as reflection and prompt evolution let an LLM agent improve from outcome feedback without updating its weights. In finance the natural feedback is a market or policy outcome, and such an outcome is a useful reward only when the documents the agent reads carry learnable information about it. We report a verified benchmark for outcome-guided reading of Federal Open Market Committee (FOMC) minutes, built on Cieslak and Vissing-Jorgensen's study of the \"Fed put,\" the Federal Reserve's tendency to ease policy after poor stock-market performance. The benchmark contains 1,197 equity-market passages from the minutes of 200 meetings (2000-2024), fixed chronological splits, an audited reconstruction of the authors' automated phrase-and-direction method, and the authors' human-coded tone counts, which we recover from their published figures. Screening two candidate rewards with frozen readers (fixed models and instructions) gives opposite answers. The equity return that preceded a meeting is learnable from the minutes. A frozen embedding recovers it with an out-of-sample R^2 of 0.50, and tone labels from a frozen LLM reach 0.49, against 0.32 for a linear readout of the reconstructed phrase-and-direction counts. The next change in the policy rate shows no detectable signal. In a test specified before estimation, no text representation beats a baseline without text. A pilot with a frozen LLM reader exposes a credit-assignment problem. One crisis meeting accounts for 79% of the pilot's feedback error, although the reader labels all of its passages negative, the correct direction. An LLM reflector that rewrites the reader's instructions from outcome residuals would therefore be pushed to change labels whose direction is already right. We release the environment, comparators, and a validation-gated adaptation protocol. We have not yet run the adaptive comparisons.",
+  "link": "https://www.ssrn.com/abstract=7626078",
+  "score": 7,
+  "why": "Verified FOMC benchmark for outcome-guided LLM agents with reward-design evidence."
+ },
+ {
+  "key": "10.2139/ssrn.4547525",
+  "source": "SSRN",
+  "title": "Machine Learning Classification and Portfolio Construction: Does the Loss Function Matter?",
+  "abstract": "We frame the asset pricing problem as a machine learning classification problem. The predictions on 3.34 million observations lead to zero-investment portfolios yielding significant out-of-sample economic gains. Through directly measured accuracies, binomial tests suggest that the classifiers can extract forward-looking contents from historical information. The classifiers exploit the differences in return state transition uncertainties. As reflected by the pre-realization variances of multi-class predicted probabilities, the classifiers are more confident subjectively when predicting high-trading-friction stocks. Consistently, only trading frictions contribute to out-of-sample predictability throughout 26,302 distinct stocks' lifetimes. The adjustment of the classifiers' obsession over certain return states increases the performance.",
+  "link": "https://www.ssrn.com/abstract=4547525",
+  "score": 6,
+  "why": "Classifier portfolios with OOS gains and friction analysis; ML evaluation solid, not novel."
+ },
+ {
+  "key": "2610.22727",
+  "source": "arXiv",
+  "title": "OrderFlowDiT: Transport-Regularized Diffusion Transformer for Probabilistic Limit-Order Supply Forecasting",
+  "abstract": "We study the conditional distribution of limit-order volume submitted over the next five minutes, given the current order book and recent order flow. The task requires capturing price placement, total volume, and predictive uncertainty jointly. Coordinate-wise diffusion losses do not explicitly account for price displacement, while normalizing fields to unit mass removes information about total volume. Agreement on selected summary statistics also does not establish fidelity to the joint field distribution. We introduce OrderFlowDiT, a conditional Diffusion Transformer for unnormalized bid and ask volume-at-price fields, trained with an unbalanced optimal-transport (UOT) auxiliary loss. We also develop a full-field evaluation framework that combines a transport cost sensitive to price placement and total volume with proper scoring rules and calibration diagnostics. In the primary comparison on 1950 validation conditions across 30 U.S. equities, adding UOT reduces full-field transport cost by 45.8% and the transport energy score by 26.1% relative to training with mean squared error alone. Both measures improve for every stock. These findings support incorporating price geometry and volume into generative modeling, with field accuracy and predictive uncertainty evaluated together.",
+  "link": "https://arxiv.org/abs/2610.22727",
+  "score": 6,
+  "why": "Generative LOB volume forecasting with full-field evaluation; real order book focus."
+ },
+ {
+  "key": "2610.23283",
+  "source": "arXiv",
+  "title": "Market Efficiency in a Changing Asset Population: Mobility, Entry, and Survival over Cryptocurrency's Full History",
+  "abstract": "Weak-form efficiency implies symmetry restrictions on the Markov chain governing movement across the cryptocurrency capitalisation distribution. We test them on the full listed population: 8,970 assets, 690 weekly cross-sections, 2013 to 2026, with entry, exit and survival observed rather than inferred. Symmetry is rejected in every era, but the asymmetry falls by seventy percent, and what converged is entry-driven compositional churn rather than coins' own valuations. The bottom decile earns 27.5% per week on paper and nothing among assets that trade, on capacity of $293,000. Compensation for neglect exists precisely where trading does not.",
+  "link": "https://arxiv.org/abs/2610.23283",
+  "score": 6,
+  "why": "Full-population crypto efficiency test with capacity; real data, neglect premium."
+ },
+ {
+  "key": "2610.23619",
+  "source": "arXiv",
+  "title": "Cross-product Modelling in Continuous Intraday Electricity Markets via Hawkes Processes",
+  "abstract": "As renewable energy integration accelerates, intraday continuous (IDC) electricity markets have become essential for short-term balancing. However, the simultaneous trading of overlapping contracts with varying granularities creates complex, hidden liquidity dependencies that are critical to market stability but remain poorly understood. This paper proposes a multivariate State-Dependent Hawkes Process (SDHP) to model cross-product liquidity dynamics between Quarter-Hourly and Hourly IDC contracts. To determine how cross-product effects vary under different market conditions, we classify the trading sessions into two distinct regimes: 'Normal' and 'Stressed', based on a composite metric of the bid-ask spread, mid-price volatility and queue imbalance. The model is calibrated on the first month of each quarter of 2024 using level 3 limit order book (LOB) data from the Dutch EPEX SPOT IDC market. We find that order flow is overwhelmingly self-driven, with roughly 95\\% of orders arriving in reaction to earlier orders in both regimes. Cross-excitation runs mainly from the Quarter-Hourly to the Hourly contract, but this leadership weakens under stress: the ratio of cumulative cross-excitation falls from 2.8 to 1.5, so the two contracts influence each other almost equally. Stress also makes the Quarter-Hourly to Hourly channel much faster, cutting its mean lag from 6.05 to 0.93 seconds. The strong seasonal variation found in calm periods largely disappears under stress, where all four months converge to the same structure.",
+  "link": "https://arxiv.org/abs/2610.23619",
+  "score": 6,
+  "why": "Hawkes model on real level-3 intraday LOB; microstructure, no LLM."
+ },
+ {
+  "key": "2610.23744",
+  "source": "arXiv",
+  "title": "AlphaLedger: Portfolio-Grounded On-Policy Distillation for Regime-Aware Alpha Mining",
+  "abstract": "Hosted LLMs enable automated alpha mining but incur recurring API costs and expose research context to external providers. Training a local generator requires supervision aligned with portfolio utility: a predictive factor may add little after redundancy and trading costs. This incremental value is assessed only after the factor program is complete, whereas generation proceeds sequentially. Deployment must also adapt to evolving stock-specific evidence and changes in factor effectiveness across market regimes. We propose AlphaLedger to address these challenges. Economic-context on-policy distillation (EC-OPD) conditions a frozen teacher on completed factors and their cost-adjusted marginal portfolio contributions, then distills its legal-action distributions along the student's own trajectories. The deployed generator requires neither teacher calls nor outcome inputs. EviPool constructs a dynamic stock universe from lagged multi-source evidence, while a regime-residual gate (RRG) reweights factors using matured, state-matched returns with shrinkage and bounded deviations from equal weighting. On Chinese A-shares, AlphaLedger achieves a 55.4\\% annualized net return, a Sharpe ratio of 2.06, and a maximum drawdown of 10.8\\%. In a common CSI500 universe, its annualized net return exceeds the strongest baseline by 43.6\\% (31.6\\% vs.\\ 22.0\\%), with a 13.5\\% higher Sharpe ratio.",
+  "link": "https://arxiv.org/abs/2610.23744",
+  "score": 6,
+  "why": "LLM alpha mining with cost-adjusted portfolio utility; claims need scrutiny."
+ },
+ {
+  "key": "2610.22839",
+  "source": "arXiv",
+  "title": "Basis-Only Funding Is Not Dividend Fair: Settlement Design in Crypto Equity Perpetuals",
+  "abstract": "Crypto venues increasingly list perpetual futures on equities and other real-world assets (RWAs), which trade continuously yet reference dividend-paying stocks: a long equity perpetual marked to the ex-dividend cash price bears the ex-dividend drop without receiving the dividend. We ask whether the premium-index funding architecture these venues run -- funding set from the contemporaneous basis $e_t=P_t-S_t$ rather than a carry target -- can replicate shareholder cash flows for traders entering and exiting at arbitrary times. It cannot. Funding serves two roles that coincide for non-dividend crypto assets but split apart for equities: basis control and settlement. We give the fair-funding identity, cast timing fairness as an optimal-stopping condition, and characterize when the basis is a sufficient statistic for the fair target. The decisive obstruction is measure-theoretic: a predictable dividend is an atom, and no absolutely continuous funding path can replicate an atom over holding intervals even in the weak limit, so fairness must match the atom with an atom -- an event credit. Exchange-native data confirm this: at each covered ex-date one venue posts a discrete funding atom equal to $-D/(\\mathrm{Mark}-D)$ while a standard premium-index venue posts none, transferring the dividend across venues -- from native funding alone, with no external spot.",
+  "link": "https://arxiv.org/abs/2610.22839",
+  "score": 5,
+  "why": "Crypto equity perp funding fairness; theory-heavy but concrete microstructure design."
+ },
+ {
+  "key": "2610.23749",
+  "source": "arXiv",
+  "title": "From Alpha to Execution: Trading Horizons, Regimes, and Schedules under Concave Impact and Hurst Scaling",
+  "abstract": "Classical execution models assume linear impact, diffusive prices, and an exogenous horizon. We study execution under concave power-law impact and Hurst-scaled price fluctuations, and make two contributions. First, we choose the execution horizon by maximizing the Sharpe ratio of the trade's realized P&L. Price moves during the execution window are part of that P&L, so executing more slowly reduces its variance, and because impact is concave it can also lower cost per share. Urgency comes only from alpha realized while the order is being worked. The problem is governed by the signs of two quantities: (i) the duration elasticity of impact $a$, which under a structural prior equals the impact-persistence gap $β- H$ and can take either sign; and (ii) the net urgency $ν$, the rate of alpha realization net of exposure relief. When $ν$ keeps its sign over the window, an interior optimum exists, to leading order in $T/t_f$, only when both are positive; otherwise the order should be worked at the fastest or slowest admissible pace. In the interior regime the first-order condition involves no impact coefficient, order size or volume, and the objective is flat: for a large-cap example, the window within 1% of maximal Sharpe spans more than an order of magnitude. Second, given the window, we derive the schedule shape by convex programming under an envelope cost. For any increasing per-share cost of delay $w(t)$, the KKT solution is $φ\\propto (λ- w(t))_+^{1/β}$. For a Hurst-scaled envelope $w \\propto t^H$, the normalized schedule depends only on $(β, H)$, has a closed form via the incomplete beta function, is front-loaded, and tapers smoothly to zero, saving 10-17% of envelope cost relative to a constant-rate (TWAP) schedule of equal duration. Whether it uses the whole window depends on a single dimensionless robustness level, for which we give a calibration.",
+  "link": "https://arxiv.org/abs/2610.23749",
+  "score": 5,
+  "why": "Execution horizon under concave impact; theory-leaning, little data visible."
+ },
+ {
+  "key": "10.2139/ssrn.7626298",
+  "source": "SSRN",
+  "title": "Artificial Intelligence and Firm Financing",
+  "abstract": "This paper studies how firms finance artificial intelligence (AI). We combine a firm-year measure of AI intensity with Compustat balance sheets and DealScan syndicated loan contracts. Alongside reduced-form within-firm regressions, we use two identification designs: a shift-share instrument built from AI diffusion within a firm's industry, and a stacked difference-in-differences design around the year a firm first reaches the AI frontier. We find that as firms become more AI-intensive, they (i) hold less cash and borrow more, (ii) move from revolving credit into term loans, (iii) pay higher interest spreads and pledge more receivables, inventory, and intangibles, (iv) borrow more under earnings-based covenants, and (v) raise more institutional credit, especially from non-bank lenders. Both designs confirm these responses, which accompany an expansion in investment, employment, and profitability. AI adoption thus tends to replace liquidity buffers with drawn and earnings-contingent debt that is increasingly held outside the banking system.",
+  "link": "https://www.ssrn.com/abstract=7626298",
+  "score": 4,
+  "why": "Firm-level AI financing empirics; interesting but no transferable method."
+ },
+ {
+  "key": "10.2139/ssrn.7626640",
+  "source": "SSRN",
+  "title": "Decoding Real Estate Descriptions: Semantic Embeddings and Hedonic Pricing of Residential Properties in Quebec",
+  "abstract": "This paper develops an interpretable NLP approach to hedonic pricing that projects sentencetransformer embeddings of property listing descriptions onto 20 researcher-defined semantic references, producing economically meaningful features. Using 17,087 single-family listings from Quebec, Canada, I show that adding cosine-similarity measures to a standard hedonic model increases adjusted 𝑅 2 from 0.452 to 0.511 (𝐹 = 99.53, 𝑝",
+  "link": "https://www.ssrn.com/abstract=7626640",
+  "score": 4,
+  "why": "Single-market hedonic NLP features; modest gain, limited transferability."
+ },
+ {
+  "key": "10.2139/ssrn.7627018",
+  "source": "SSRN",
+  "title": "Leverage Beyond Debt: Evidence from the AI Build-Out",
+  "abstract": "Who bears the losses if the demand for AI infrastructure falls short? Reported debt gives an incomplete answer: the firms building the infrastructure have also signed leases, purchase commitments, and guarantees. From the filings of every listed firm with a major role in the build-out, 37 in all, I code 155 arrangements whose lease and purchase payments due within five years are 5.0 times the firms' debt service. A financing model explains why a supplier that can redeploy a failed customer's asset supports the customer and takes rights to the asset. In a stress test that halves demand and capacity values, the guarantees and backstops cut other counterparties' losses from $23.1bn to $1.5bn by shifting them onto the supporting firms' shareholders, who already bear almost all of the $1.2tn the shock costs. The build-out's credit risk lies in these contracts and in the cash of the firms that write them.",
+  "link": "https://www.ssrn.com/abstract=7627018",
+  "score": 4,
+  "why": "Off-balance-sheet AI build-out stress test; finance-relevant but no AI method."
+ },
+ {
+  "key": "2610.23466",
+  "source": "arXiv",
+  "title": "Graphlet-based Decentralized Finance Transaction Method Classification",
+  "abstract": "Decentralized Finance (DeFi) transactions involve complex interactions among accounts, smart contracts, and tokens. We investigate whether network topology can identify transaction methods that describe DeFi operations. We extract directed graphlet features to classify the 30 most frequent methods. Our results show that graphlet features complement event log counts in improving classification performance. Using SHapley Additive exPlanations (SHAP), we further derive model explanations that reveal method-specific graphlet structural patterns.",
+  "link": "https://arxiv.org/abs/2610.23466",
+  "score": 4,
+  "why": "DeFi graphlet classification; network features but not a financial signal."
+ },
+ {
+  "key": "10.2139/ssrn.7623218",
+  "source": "SSRN",
+  "title": "Who Decided My Claim? Disclosed versus Attributed Decision Authority in AI-Assisted Insurance Claims",
+  "abstract": "Financial-services AI governance often relies on disclosing artificial intelligence (AI) involvement, yet it is unclear whether customers identify who made the decision. In a 3 × 2 vignette experiment on a partially approved insurance claim, 402 respondents were randomly assigned to a disclosed decision authority (officer decides on an AI recommendation; AI decides with brief officer review; AI decides alone) and to a lower-or higher-impact scenario. Only 39.8% chose the answer matching the disclosure. \"AI with human review\" was the most common answer in every condition. Under condition-invariant default responses, a post hoc threshold-with-guessing model estimated a disclosure-consistent component of .14 (95% CI .07-.21). Partial identification shows that its size, and even its positivity, depends on how far defaults differ across conditions. Disclosed authority had no detectable average effect on procedural fairness. The higher-impact scenario package lowered fairness. As hypothesised, lower fairness was associated with higher escalation preference. The study separates disclosed from attributed decision authority. Under stated assumptions, it shows how far manipulationcheck match rates can reflect default responding. Insurers and regulators may want to test whether customers identify AI authority after disclosure.",
+  "link": "https://www.ssrn.com/abstract=7623218",
+  "score": 3,
+  "why": "Insurance survey experiment on AI disclosure; no transferable quant method."
+ },
+ {
+  "key": "2610.22805",
+  "source": "arXiv",
+  "title": "Compression Precedes, Content Decides: Emergent Misalignment in Reward Models",
+  "abstract": "Emergent Misalignment - the out of domain generalization of narrow harmful fine-tuning first shown by Betley et al. [2025] has been widely studied in language models but not in reward models that supervise them. In this paper, we fine-tune two state-of-the-art reward models, Skywork-Reward-V2-Llama-3.1-8B and Skywork-Reward-V2-Qwen3-8B [Liu et al., 2025] and show that narrow fine-tuning reward models to prefer harm in one domain (medical or financial) generalizes to seven held out domains. This is not degeneracy, as the fine-tuned reward models lose only 4.8 and 5.3 points overall (RM-Llama) on the standard RewardBench 2 evaluation [Malik et al., 2025] while still outperforming the unmodified RM-Qwen model. We then fine-tune the underlying language models, Llama-3.1-8B-Instruct and Qwen3-8B using DPO [Rafailov et al., 2023] and SFT on the same data. We find that reward models are more vulnerable to preference inversions compared to their language model counterparts. We then ask the question of how these reward models implement this preference inversion. Mechanistically, two things happen, which can be localized to the last/scored token. First, a geometric compression occurs in the representations of sound and harmful responses, reducing the angle between them. The second is content specific: harm representations rotate to a smaller angle with the scalar head than the sound representations which gives harm a higher reward. This happens only in harmful preference fine-tunes and not in control.",
+  "link": "https://arxiv.org/abs/2610.22805",
+  "score": 3,
+  "why": "Reward model misalignment study; finance only a narrow domain slice."
+ },
+ {
+  "key": "2610.22930",
+  "source": "arXiv",
+  "title": "Conformal Policy Selection: When to Deploy AI Decisions for Targeted Intervention",
+  "abstract": "Artificial-intelligence (AI) policies are increasingly used to make consequential decisions in medicine, finance, education, and public services, yet deploying them responsibly requires knowing not only whether a policy helps on average, but for whom. Existing tools for off-policy evaluation and safe policy learning provide population-level guarantees, but some individuals may experience adverse treatment effects. We recast targeted deployment as a multiple-testing problem: for each candidate unit, test whether the outcome under the AI policy would exceed a user-specified threshold, and control the false discovery rate (FDR) among the selected set. Our method, Conformal Policy Selection, combines weighted conformal $p$-values that account for the distributional shift from behavior to target policy with a two-step selection-and-pruning procedure. We prove finite-sample FDR control and establish a doubly robust asymptotic guarantee, where FDR remains controlled if either the outcome model or the propensity model is correctly specified. Synthetic experiments verify these guarantees across four misspecification regimes, and a semi-synthetic study built on real electronic-health-record covariates illustrates how the same FDR control can act as a deployment safety gate, bounding the harmful treatments that a globally trained policy would otherwise administer to a high-risk subpopulation where it misgeneralizes. The framework offers a principled method for safe AI deployment in high-stakes applications.",
+  "link": "https://arxiv.org/abs/2610.22930",
+  "score": 3,
+  "why": "General conformal targeting method; finance not central."
+ },
+ {
+  "key": "2610.23488",
+  "source": "arXiv",
+  "title": "On the skew-curvature power law relationship in a stochastic volatility model with infinite variation Lévy jumps",
+  "abstract": "The short-term blow up behaviour of the ATM-IV skew is commonly modelled by either a rough volatility process with small Hurst index or an infinite variation Lévy process in the log-price dynamics. In this paper, we examine which is the effect of mixed dynamics (i.e. rough volatility and infinite variation Lévy processes) on the ATM-IV skew and curvature. The results of the paper show that the analysis of the leading terms of the short-time expansion of both ATM-IV skew and curvature allow us to determine, from a mixed dynamics model, which mechanism originates the power-law behaviour on the skew and on the curvature. Apart from showing that the mixed model also originates a power law, it has also key implications in model design and calibration. Numerical evidences for the rough Heston model with CGMY Lévy jumps are provided.",
+  "link": "https://arxiv.org/abs/2610.23488",
+  "score": 3,
+  "why": "Rough-Lévy skew asymptotics; theory-heavy with little practitioner path."
+ },
+ {
+  "key": "10.2139/ssrn.7623998",
+  "source": "SSRN",
+  "title": "The Effect of AI-driven Cybersecurity Capabilities on Corporate Governance and Firm Value: Evidence from Listed Companies",
+  "abstract": "Cyber incidents are now a recognised source of shareholder loss, regulatory exposure and governance failure, and listed companies are under growing pressure to demonstrate credible oversight of cyber risk. At the same time, firms are investing in AI-driven cybersecurity capabilities that promise faster detection, richer risk analytics and better evidence for oversight. This review synthesises research from corporate governance, accounting and disclosure, security economics and information systems to examine how such capabilities may affect governance quality and firm value in listed companies. It develops an integrated account in which AI-driven capabilities influence value both directly, through loss avoidance and efficiency, and indirectly, by strengthening board oversight, internal control and disclosure quality. It also shows why the effects are conditional: AI introduces model risk, opacity and over-reliance that can weaken governance if left unmanaged, and regulatory, ownership and industry conditions shape whether capabilities are converted into value. Five propositions, a conceptual framework and measurement guidance for empirical work on listed firms are offered, together with implications for boards, investors and regulators.",
+  "link": "https://www.ssrn.com/abstract=7623998",
+  "score": 2,
+  "why": "Literature review synthesis on cyber AI and firm value."
+ },
+ {
+  "key": "2610.23025",
+  "source": "arXiv",
+  "title": "Causal Value Attribution of Marketing Labels in LLM-Generated Ads: A Deconfounder Approach",
+  "abstract": "As AI-generated content becomes commoditized, economic value increasingly shifts from final artifacts to the upstream expertise used to specify inputs that steer LLM generation. Yet organizations lack methods for valuing this expertise and identifying which individual skills or configurations causally improve performance. This study examines generative marketing, where structured expert labels serve as skill primitives conditioning LLM-generated advertisements. Estimating their causal effects is difficult because outcomes reflect stochastic LLM mediation, high-dimensional label interactions, and multimodal confounding. This study proposes D-VAE (Deconfounder Variational Autoencoder), a counterfactual-inference framework integrating a multi-treatment deconfounder with causal representation learning. D-VAE recovers causally disentangled expert-labeling logic and derives PAC-based bounds on omitted-variable bias from single-treatment confounders. Applied to 29,177 foundation-makeup ad creatives, D-VAE outperforms state-of-the-art benchmarks. A field experiment shows that recommended configurations increase engagement by 32.7% and perform statistically indistinguishably from human experts, while a simulation study confirms causal attribution under complex confounding and treatment interactions. Overall, the study shifts value assessment from AI-generated products to skills, providing a foundation for pricing and optimizing AI-augmented skill portfolios.",
+  "link": "https://arxiv.org/abs/2610.23025",
+  "score": 2,
+  "why": "LLM-generated ad label causal attribution; marketing, not finance."
+ },
+ {
+  "key": "10.2139/ssrn.7623818",
+  "source": "SSRN",
+  "title": "Algorithmic Stewardship for Sustainable Finance: Governing AI, ESG Integrity, and Green Supply Chains",
+  "abstract": "The increasing convergence of Green Financial Technology (Green FinTech), artificial intelligence (AI), and sustainable supply chain finance may suggest that these developments could transform how organizations evaluate environmental performance, allocate financial resources, and achieve Environmental, Social, and Governance (ESG) objectives. Moreover, the existing research largely concentrates on technological implementation and ESG measurement, while paying limited attention to governance mechanisms that could ensure financial integrity, stakeholder trust, and substantive sustainability outcomes. Furthermore, this paper develops a conceptual framework of algorithmic stewardship for green supply chains by integrating agency theory, stakeholder theory, environmental ethics, and emerging principles of AI governance. Given that the framework proposes four key antecedents, the evidence may indicate that carbon data transparency, algorithmic explainability, supply chain data quality, and Green FinTech governance controls appear critical. Evidence shows factors influence decision quality. Nevertheless, these factors might influence green financial decision quality, substantive ESG compliance, and integrity risk reduction through the mediating roles that human ethical judgment and digital stakeholder trust could demonstrate. However, board-level green-tech competence and regulatory environment stringency may appear as critical boundary conditions shaping these important relationships. In light of these findings, the study might advance the literature on sustainable finance and responsible AI while offering a practical roadmap for designing transparent, trustworthy, and ethically governed green financing ecosystems. Moreover, the framework could provide that a foundation for future empirical research examining how algorithmic stewardship may support resilient, inclusive, and sustainability-oriented supply chains appears relevant. Research shows framework supports chains.",
+  "link": "https://www.ssrn.com/abstract=7623818",
+  "score": 1,
+  "why": "Conceptual ESG governance framework; no data or method."
+ },
+ {
+  "key": "10.2139/ssrn.7626858",
+  "source": "SSRN",
+  "title": "Paying For Reuse: A Scoping Review Of How Extended Producer Responsibility Can Finance Reusable Packaging In Developing Countries",
+  "abstract": "Extended producer responsibility (EPR) for packaging is spreading quickly across low- and middle-income countries, and governments increasingly present it as a tool to prevent plastic waste. Reusable packaging can prevent waste when containers return often enough, yet EPR schemes were built to finance collection and recycling. I ask whether and how EPR can finance reuse systems in developing countries. I combine a scoping review of 143 peer-reviewed and grey sources with a document analysis of packaging EPR instruments in Indonesia, India, the Philippines, Vietnam, Chile, Kenya and South Africa, benchmarked against the European Union. Only 14 sources examine reuse together with EPR or deposit-refund systems, none of them on financing reuse in a developing country, and only two study reuse systems empirically in developing countries. Across the instruments, reusable packaging is mostly exempted, deducted or credited. Reuse lowers what producers owe, but only South Africa explicitly allows scheme revenue to be spent on reuse, and no instrument in the sample modulates fees on reusability. I identify five design tensions between EPR and reuse, concerning the unit of obligation, metrics, fee modulation, eligible use of funds and recognised actors. A stylised fee model shows that charging reusable packaging by weight penalises reuse until return rates are high, while exemption removes any fee-based reward for raising them. I propose charging producers only for containers lost from a verified reuse system, ring-fencing revenue for shared infrastructure and paying neighbourhood retailers as return points, and I set out five testable propositions. Declaration of generative AI use: During the preparation of this work the author used Claude (Anthropic), a large language model, to screen and chart the literature search results, help summarise legal and policy texts, check facts against sources and draft most of the manuscript text under the author's direction. The searches were run through Curie (www.curie.id), an AI-assisted research platform the author co-founded. The author reviewed and edited the output and takes full responsibility for the content.",
+  "link": "https://www.ssrn.com/abstract=7626858",
+  "score": 1,
+  "why": "Scoping review on packaging EPR; off-topic for this reader."
+ },
+ {
+  "key": "10.2139/ssrn.7627780",
+  "source": "SSRN",
+  "title": "Provable Legitimacy in AI Training: A Data-to-Market Framework for Copyright Analysis, with a Comparative Note on Iranian Law",
+  "abstract": "Courts in the United States have begun to decide whether training AI systems on copyrighted works can be fair use, but early decisions diverge and turn on narrow records. This paper organizes the relevant questions along a four-stage chain (data, training, output, market) and uses three decisions, Thomson Reuters v. Ross Intelligence, Bartz v. Anthropic, and Kadrey v. Meta Platforms, to identify questions that courts have treated as material: competition and market evidence, source and manner of acquisition, and the proof required for market harm. It then proposes Runtime Legitimacy as an analytical and evidentiary framework under which the legitimacy of data use is supported by use-specific, version-linked, and reassessable records, and states three hypotheses and one normative proposition. The paper compares the proposal with the EU AI Act and the Directive on copyright in the Digital Single Market, examines how Iranian copyright, software, and electronic-commerce texts may bear on the questions, and describes implementation through contracts, record architecture, and professional standards. The framework is a proposal, not existing doctrine, and the propositions are offered for testing.",
+  "link": "https://www.ssrn.com/abstract=7627780",
+  "score": 1,
+  "why": "Copyright legal analysis; no finance or ML content."
+ },
+ {
+  "key": "2610.22626",
+  "source": "arXiv",
+  "title": "StratFL: Countering Covert Model Poisoning Attacks with Strategic Federated Learning",
+  "abstract": "Advanced persistent threats (APTs) are a major concern in federated learning (FL) deployments in critical sectors such as healthcare, and finance. Traditional defense mechanisms fail to contain APTs due to their intermittent attacking behavior. This paper addresses a specific type of APT called covert model poisoning (CMP) where the attacker intermittently injects poisoned model updates in a covert manner. The interaction between the FL server and a CMP attacker is modeled as an imperfect repeated game where both players cannot observe each other's actions. A novel adversarial search algorithm called StratFL is designed alongside novel belief update algorithms at both the server and adversary. Experiments are designed using MNIST and CIFAR-10 datasets to evaluate and compare StratFL's performance against state-of-the-art methods. Empirical convergence of belief update algorithms is demonstrated across various security vignettes. At the same time, StratFL is found to exhibit an improved accuracy of 10% compared to state-of-the-art methods.",
+  "link": "https://arxiv.org/abs/2610.22626",
+  "score": 1,
+  "why": "Federated learning poisoning defense; not finance-relevant."
+ },
+ {
+  "key": "2610.22637",
+  "source": "arXiv",
+  "title": "Hard Instances on Demand",
+  "abstract": "The conclusions of an experimental study of algorithms are only as good as the instances they are run on. Benchmark libraries for well-studied problems took decades to curate, while evaluations of new problems often fall back on random instances, which are known to be misleading: they may say more about the random generator than about the algorithmic question at hand. We treat instance generation as an optimization problem: parameterize the instance space, take the solver's running time as the objective, and let a black-box optimizer search for hard instances. We develop a widely applicable workflow built on the Nevergrad optimization platform and demonstrate it on four NP-hard problems: satisfiability, traveling salesperson, Hamiltonian cycle, and non-permutation flow-shop scheduling. The search needs only the solver, an instance encoder, and a compute budget. Our evolved instances beat the hardest instance of a budget-matched random draw in all four case studies, by an order of magnitude or more in three. They are often competitive with long-curated benchmark sets: our SAT champion is harder (for a three-solver portfolio) than 78% of the 498 SAT Competition formulas in its size class; our 20-city TSP champions take several times longer than the hardest measured classical TSPLIB instance (229 cities); and our flow-shop champion takes 238.6 seconds of CP Optimizer time to solve to proven optimality (versus 4.5 seconds for the hardest of 100,000 random draws) while denying CP-SAT an optimality proof. The optimizer even recovers known structure from running time alone: it locates a SAT clause/variable ratio near the phase transition and finds structurally different champions for the two scheduling engines.",
+  "link": "https://arxiv.org/abs/2610.22637",
+  "score": 1,
+  "why": "Combinatorial instance generation; unrelated to finance."
+ },
+ {
+  "key": "2610.23226",
+  "source": "arXiv",
+  "title": "Characterising and Analysing Retrieval-Augmented Generation Techniques",
+  "abstract": "The advent of Large Language Models (LLMs) across many application domains has increased the need for Retrieval-Augmented Generation (RAG) to reduce hallucinations and improve LLM performance. Thus far, several RAG techniques with impressive features and capabilities have been proposed in the literature, making it a herculean task to select the most appropriate RAG techniques for specific problem scenarios. Thus, we propose a conceptual framework comprising main dimensions and sub-dimensions for characterising (defining \"what it is\") and analysing (defining \"how well it does\") existing RAG techniques. The conceptual framework was developed through a qualitative analysis of the attributes of RAG techniques reported in the literature. It can serve as a pre-empirical filtering mechanism for researchers and practitioners in selecting the highest-fit RAG candidates that meet specific user and task requirements before empirical benchmarking of RAG techniques, which can be computationally and financially expensive.",
+  "link": "https://arxiv.org/abs/2610.23226",
+  "score": 1,
+  "why": "Conceptual RAG taxonomy; no finance and no empirics."
+ }
+]

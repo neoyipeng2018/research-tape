@@ -1,0 +1,31 @@
+{
+ "date": "2026-10-20",
+ "scanned": 26,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2610.23517",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.23517",
+   "title": "Combinatorial Arbitrage in Prediction Markets",
+   "claim": "Logical arbitrage across Polymarket contracts survived spreads and fees, yielding 2.2% guaranteed profit on settled portfolios in full-depth order-book replays."
+  },
+  {
+   "key": "10.2139/ssrn.7625878",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7625878",
+   "title": "Faithful by Construction? An Exact Test of LLM Explanations for Constrained Portfolio Optimization Decisions",
+   "claim": "LLM explanations of linear-program portfolio decisions name zero-effect limits as drivers in 77-89% of cases, so they need solver-certificate checks."
+  },
+  {
+   "key": "10.2139/ssrn.7626078",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7626078",
+   "title": "Which Outcome Should Teach an LLM Reader? A Verified FOMC Benchmark and Reward-Design Evidence for Outcome-Guided Agents in Finance",
+   "claim": "Pre-meeting equity returns are learnable from FOMC minutes at out-of-sample R² 0.50, while the next policy-rate change shows no detectable text signal."
+  }
+ ]
+}
