@@ -1,0 +1,52 @@
+{
+ "date": "2026-10-21",
+ "scanned": 71,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7621579",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7621579",
+   "title": "Candlestick Words Improve Intraday Volatility Forecasts Beyond HAR and GARCH",
+   "claim": "Candlestick-word features improve 15-minute volatility forecasts beyond HAR and GARCH after volatility spikes, but add nothing at daily frequency."
+  },
+  {
+   "key": "2610.24268",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.24268",
+   "title": "From SEC Filings to Financial Signals: Evaluating LLMs on Stock Market Reactions and Analyst Forecasts",
+   "claim": "Adding cross-sectional fundamental ranks to 10-Q MD&A text raises LLM return-ranking RankIC by about 0.009, while analyst-summary context adds no comparable gain."
+  },
+  {
+   "key": "2610.24289",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.24289",
+   "title": "Unbounded Losses, Unchecked Inputs: Measuring the Safeguards of LLM Options-Trading Agents",
+   "claim": "Options-trading agents need loss limits enforced at the order boundary, since 13 of 26 surveyed systems can reach unbounded loss."
+  },
+  {
+   "key": "2610.25468",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.25468",
+   "title": "More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting",
+   "claim": "Most of WSB embeddings' standalone volatility fit reflects firm identity, and their gain over HAR is largely eliminated by alignment shuffling."
+  },
+  {
+   "key": "2610.26101",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.26101",
+   "title": "Reliable Before Profitable: QuantHarness for Governing Financial Strategy Development with LLM Agents",
+   "claim": "QuantHarness reaches 90.72% task success on FinRelBench versus 74.23–84.54% for comparison systems, under the evaluated protocol."
+  },
+  {
+   "key": "2610.26524",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.26524",
+   "title": "Beyond Behavioral Accuracy: Evaluating Individual-Level Fidelity in LLM Investor Simulation",
+   "claim": "No evaluated LLM reliably beats a recent-activity persistence baseline for trade occurrence, and buy-sell structure stays hard to reproduce."
+  }
+ ]
+}
