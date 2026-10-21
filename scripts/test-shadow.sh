@@ -33,7 +33,7 @@ CLAIM = ok({"claims": [{"id": 1, "sentence": "Execution costs fall when order bo
 PLAN = {
     NEMO: [TRIAGE] * 3 + [CLAIM],
     GEMMA: [(429, {"error": {"code": 429, "message": "rate-limited upstream"}})],
-    VL: [(500, {"error": {"code": 500, "message": "boom"}})] + [TRIAGE] * 3
+    VL: [(500, {"error": {"code": 500, "message": "boom"}}), "cut"] + [TRIAGE] * 3
         + [ok({"claims": [{"id": 1, "sentence": "Execution costs fall when order books are public."}]}, fence=True)],
     SMALL: [(200, {"error": {"code": 404, "message": "No endpoints found"}})],
 }
@@ -43,10 +43,12 @@ class Stub(BaseHTTPRequestHandler):
     def do_POST(self):
         body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
         seen.append((self.path, self.headers.get("Authorization"), body))
-        status, out = PLAN[body["model"]].pop(0)
+        r = PLAN[body["model"]].pop(0)
+        status, out = (200, {}) if r == "cut" else r
         raw = json.dumps(out).encode()
         self.send_response(status)
-        self.send_header("Content-Length", str(len(raw)))
+        # "cut" promises more body than it sends: the IncompleteRead a free model produced live
+        self.send_header("Content-Length", str(len(raw) + (100 if r == "cut" else 0)))
         self.end_headers()
         self.wfile.write(raw)
     def log_message(self, *a):
@@ -82,8 +84,8 @@ check("a working model is recorded with scores by key and the claims it would pu
       out.get(NEMO))
 check("a 429 fails at once, one request, no retry",
       len(calls(GEMMA)) == 1 and "JUDGE_DOWN" in out.get(GEMMA, {}).get("error", ""), out.get(GEMMA))
-check("a 5xx retries, and a fenced JSON answer is read",
-      len(calls(VL)) == 5 and "claims" in out.get(VL, {}), (len(calls(VL)), out.get(VL)))
+check("a 5xx and a body cut off mid-read both retry, and a fenced JSON answer is read",
+      len(calls(VL)) == 6 and "claims" in out.get(VL, {}), (len(calls(VL)), out.get(VL)))
 check("an error inside a 200 body is read as its code",
       "JUDGE_DOWN" in out.get(SMALL, {}).get("error", "") and "404" in out[SMALL]["error"], out.get(SMALL))
 check("one model's failure never skips the next", list(out) == [NEMO, GEMMA, VL, SMALL], list(out))

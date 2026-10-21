@@ -16,7 +16,7 @@ auth failure (§9): AUTH_DEAD and LIMITS_EXHAUSTED never retry, CLI_HANG and MAL
 retry three times. No cost or token logic — `total_cost_usd` is a client-side estimate and
 `input_tokens` reported 9 on a 25K-token prompt.
 """
-import argparse, json, os, re, socket, statistics, subprocess, sys, urllib.error, urllib.request
+import argparse, http.client, json, os, re, socket, statistics, subprocess, sys, urllib.error, urllib.request
 
 RUNS = 3          # median of three
 ATTEMPTS = 3      # per run, on CLI_HANG and MALFORMED_OUTPUT only — the rest never retry
@@ -149,6 +149,8 @@ def openrouter(text, schema, system):
         if isinstance(e.reason, (TimeoutError, socket.timeout)):
             return subprocess.CompletedProcess([], 124, "", "")
         raise Retry(f"MALFORMED_OUTPUT: {MODEL} unreachable: {e.reason}") from None
+    except (http.client.HTTPException, ConnectionError) as e:   # a body cut off mid-read
+        raise Retry(f"MALFORMED_OUTPUT: {MODEL} {type(e).__name__}: {e}") from None
     try:
         body = json.loads(raw)
     except ValueError:
