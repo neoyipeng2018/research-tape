@@ -6,6 +6,20 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>LOB-Impact Benchmark: Emergent Market Impact in Generative Limit Order Book Models</title>
+    <link>https://arxiv.org/abs/2610.27100</link>
+    <description>Autoregressive LOB generators trained only on next-token prediction show emergent market impact with exponents 0.63 to 1.21, though none decays during relaxation.</description>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.27100</guid>
+  </item>
+  <item>
+    <title>Testing semi-strong market efficiency in Brazilian football: A risk-adjusted machine learning approach</title>
+    <link>https://www.ssrn.com/abstract=7649872</link>
+    <description>Seven machine learning forecasters lose to Brazilian football&#x27;s closing line on log loss, and half-Kelly staking destroys most capital at zero edge.</description>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7649872</guid>
+  </item>
+  <item>
     <title>Candlestick Words Improve Intraday Volatility Forecasts Beyond HAR and GARCH</title>
     <link>https://www.ssrn.com/abstract=7621579</link>
     <description>Candlestick-word features improve 15-minute volatility forecasts beyond HAR and GARCH after volatility spikes, but add nothing at daily frequency.</description>
@@ -627,34 +641,6 @@
     <description>Information leakage explains the apparent edge in LLM-generated financial features.</description>
     <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7493407</guid>
-  </item>
-  <item>
-    <title>Do a Legislator&#x27;s Trades Anticipate Legislative Acts? Timing, Disclosure and Proximity Tests on the STOCK Act Filings of the Pelosi Household, 2014–2026</title>
-    <link>https://www.ssrn.com/abstract=7479560</link>
-    <description>Pelosi&#x27;s trades fail timing, disclosure, and proximity tests for legislative anticipation.</description>
-    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7479560</guid>
-  </item>
-  <item>
-    <title>From Backtest to Deployment: A Staged-capital Protocol for Evaluating Agentic Trading Systems - A Position Paper Proposing an Engineering Workflow for Committing Real Capital to Autonomous Trading Agents</title>
-    <link>https://www.ssrn.com/abstract=7475338</link>
-    <description>Mechanical exit rules outperform discretionary logic in live agentic trading systems.</description>
-    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7475338</guid>
-  </item>
-  <item>
-    <title>From Hindsight to Foresight: Adapting Reusable Reasoning Structures from Recurring Financial Events</title>
-    <link>https://www.ssrn.com/abstract=7475378</link>
-    <description>Reusing reasoning paths from past recurring events improves LLM financial forecasts.</description>
-    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7475378</guid>
-  </item>
-  <item>
-    <title>Fedspeak, LLM-Derived Signals, and High-Frequency Trading</title>
-    <link>https://www.ssrn.com/abstract=7479619</link>
-    <description>Fed communication divergence generates systematic intraday price movements and position reallocation.</description>
-    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7479619</guid>
   </item>
 </channel>
 </rss>
