@@ -16,6 +16,9 @@ permissions:
 concurrency: { group: research-tape-daily, cancel-in-progress: false }
 
 env:
+  # The judge chain (docs/adr/0002), first to last. A day is judged by exactly one of them.
+  JUDGES: "nvidia/nemotron-3.5-super-vl:free haiku"
+  OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
   CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
   DISABLE_AUTOUPDATER: "1"
   CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
@@ -23,9 +26,7 @@ env:
 jobs:
   tape:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    outputs:
-      day: ${{ steps.day.outputs.day }}
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v5
 
@@ -37,10 +38,7 @@ jobs:
       # The Singapore date, not the UTC one: the run fires 22:00 UTC and the reader opens
       # the page at 06:00 SGT the next morning, so the tape is dated the day they read it.
       - name: The day being built
-        id: day
-        run: |
-          echo "DAY=$(TZ=Asia/Singapore date +%F)" >> "$GITHUB_ENV"
-          echo "day=$(TZ=Asia/Singapore date +%F)" >> "$GITHUB_OUTPUT"
+        run: echo "DAY=$(TZ=Asia/Singapore date +%F)" >> "$GITHUB_ENV"
 
       - uses: actions/setup-node@v5
         with: { node-version: "22" }
@@ -48,9 +46,15 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
 
       # Its own timeout: a bogus OAuth token fails in 2.4s, a bogus API key takes 180s
-      # because the CLI retries the 401 internally (§9).
-      - name: Probe auth
-        run: timeout -k 10 120 claude -p "Reply with the single word ok" --model haiku
+      # because the CLI retries the 401 internally (§9). Haiku is only the chain's last link,
+      # so a dead token drops it from today's chain and says so on the vote issue, rather than
+      # taking a day dark that the free judge could have published.
+      - name: Probe the fallback judge
+        run: |
+          timeout -k 10 120 claude -p "Reply with the single word ok" --model haiku && exit 0
+          echo "fallback judge unavailable: the Claude auth probe failed, regenerate CLAUDE_CODE_OAUTH_TOKEN" \
+            >> "$RUNNER_TEMP/notes.md"
+          echo "JUDGES=${JUDGES% haiku}" >> "$GITHUB_ENV"
 
       # Either lane may degrade to zero and exit 0 — that day publishes from the other one.
       - name: Fetch arXiv
@@ -67,16 +71,29 @@ jobs:
       - name: Dedup
         run: ./scripts/dedup.py --in "$RUNNER_TEMP/fetched.json" --out "$RUNNER_TEMP/deduped.json" --date "$DAY"
 
-      # ~110s a call, three calls, and triage.py owns the per-call 600s timeout and the
-      # retry taxonomy. This bound is the step's, for a CLI that hangs past all of them.
-      - name: Triage
-        timeout-minutes: 15
-        run: ./scripts/triage.py --in "$RUNNER_TEMP/deduped.json" --out "candidates/$DAY.json"
-
-      # Writes tape/$DAY.json — empty on a quiet day, which still publishes and commits.
-      - name: Claims and the tape
-        timeout-minutes: 15
-        run: ./scripts/claim.py --in "candidates/$DAY.json" --date "$DAY"
+      # One day, one judge (docs/adr/0002): a judge that fails either pass hands the whole day,
+      # triage run 1 included, to the next. Neither pass writes anything when it fails, so the
+      # next judge starts clean. Writes candidates/$DAY.json and tape/$DAY.json, the tape empty
+      # on a quiet day, which still publishes and commits. triage.py owns the per-call 600s
+      # timeout and the retry taxonomy; this bound is the step's, for a judge that hangs past both.
+      - name: Judge the day
+        timeout-minutes: 35
+        run: |
+          failed=""
+          for j in $JUDGES; do
+            if JUDGE="$j" ./scripts/triage.py --in "$RUNNER_TEMP/deduped.json" \
+                 --out "candidates/$DAY.json" 2> "$RUNNER_TEMP/judge.err" &&
+               JUDGE="$j" ./scripts/claim.py --in "candidates/$DAY.json" --date "$DAY" \
+                 2>> "$RUNNER_TEMP/judge.err"; then
+              cat "$RUNNER_TEMP/judge.err" >&2
+              echo "judge: $j${failed:+ (after $failed)}" >> "$RUNNER_TEMP/notes.md"
+              exit 0
+            fi
+            cat "$RUNNER_TEMP/judge.err" >&2
+            failed="${failed:+$failed; }$j failed: $(tail -n1 "$RUNNER_TEMP/judge.err" | cut -c1-200)"
+          done
+          echo "::error::every judge failed, nothing written: $failed"
+          exit 1
 
       - name: Prune candidates past the 30-day window
         run: ./scripts/prune-candidates.sh candidates
@@ -113,33 +130,3 @@ jobs:
       - name: A lane dead three days fails the run
         run: ./scripts/lane.py --candidates candidates
 
-  # The shadow week (docs/adr/0002): the free models judge the day Haiku already judged, and
-  # nothing they say is published. Its own job so a slow free model never eats the tape's 30
-  # minutes; continue-on-error so it never turns a day red; !cancelled() so it still runs on
-  # the days the dead-lane check fails the tape job after the push. Delete at cutover.
-  shadow:
-    needs: tape
-    if: ${{ !cancelled() && needs.tape.outputs.day != '' }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 90
-    continue-on-error: true
-    env:
-      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      DAY: ${{ needs.tape.outputs.day }}
-    steps:
-      - uses: actions/checkout@v5
-        with: { ref: main }   # the tape job's push, not the commit this run started on
-      - name: Shadow judges
-        run: |
-          [ -f "candidates/$DAY.json" ] || { echo "no candidates for $DAY: a dark day"; exit 0; }
-          ./scripts/shadow.py --in "candidates/$DAY.json" --out "shadow/$DAY.json"
-      - name: Prune shadow files past the 30-day window
-        run: ./scripts/prune-candidates.sh shadow
-      - name: Commit and push
-        run: |
-          git config user.name "research-tape"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A shadow
-          git diff --cached --quiet && { echo "nothing changed"; exit 0; }
-          git commit -m "shadow $DAY"
-          git pull --rebase && git push

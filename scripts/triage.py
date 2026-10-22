@@ -27,8 +27,8 @@ AUTH = re.compile(r"authenticat|expired|oauth|invalid api key|log ?in", re.I)
 LIMITS = re.compile(r"\blimit|resets|balance", re.I)
 
 # The day's judge (docs/adr/0002). "haiku" is the CLI on the subscription; anything else is a
-# pinned OpenRouter id. Until the shadow week ends only shadow.py sets it.
-MODEL = "haiku"
+# pinned OpenRouter id. The judge chain is JUDGES in the workflows, which set this per attempt.
+MODEL = os.environ.get("JUDGE", "haiku")
 OPENROUTER = os.environ.get("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
 JSON_OBJECT_ONLY = {"google/gemma-4-31b-it:free", "google/gemma-4-26b-a4b-it:free"}
 GONE = {401, 402, 403, 404, 429}   # throttled, pulled or refused: the next judge, not a retry
@@ -240,7 +240,8 @@ def triage(candidates, taste, schema):
     for i, c in enumerate(ordered, 1):
         three = [r[i] for r in runs]
         median = statistics.median(s for s, _ in three)
-        out.append(dict(c, score=median, why=next(w for s, w in three if s == median)))
+        out.append(dict(c, score=median, why=next(w for s, w in three if s == median),
+                        judge=MODEL))
     return sorted(out, key=lambda c: (-c["score"], c["key"]))
 
 

@@ -30,6 +30,9 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
       GITHUB_REPOSITORY: ${{ github.repository }}
+      # The same judge chain as daily.yml, which also replays triage under it (docs/adr/0002).
+      JUDGES: "nvidia/nemotron-3.5-super-vl:free haiku"
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       DISABLE_AUTOUPDATER: "1"
       CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
@@ -100,9 +103,13 @@ jobs:
         if: env.PROPOSE == 'yes'
         run: npm install -g @anthropic-ai/claude-code
       # Its own timeout: a bogus OAuth token fails in 2.4s, a bogus API key takes 180s (§9).
-      - name: Probe auth
+      # A dead token drops Haiku from this run's chain, as in daily.yml.
+      - name: Probe the fallback judge
         if: env.PROPOSE == 'yes'
-        run: timeout -k 10 120 claude -p "Reply with the single word ok" --model haiku
+        run: |
+          timeout -k 10 120 claude -p "Reply with the single word ok" --model haiku && exit 0
+          echo "::warning::fallback judge unavailable: regenerate CLAUDE_CODE_OAUTH_TOKEN"
+          echo "JUDGES=${JUDGES% haiku}" >> "$GITHUB_ENV"
 
       # Writes an amended taste.md and the PR body — or only the no-change note, when the bar
       # was clear and nothing was worth proposing. Nothing else in the tree is touched.
@@ -112,10 +119,14 @@ jobs:
         run: |
           open=()
           if [ -n "$PR" ]; then open=(--open-pr "$RUNNER_TEMP/pr-body.md"); fi
-          ./scripts/propose-taste.py --tally "$RUNNER_TEMP/tally.json" --taste taste.md \
-            --tape-dir tape --candidates-dir candidates "${open[@]}" \
-            --body "$RUNNER_TEMP/pr.md" --title "$RUNNER_TEMP/pr-title.txt" \
-            --retired "$RUNNER_TEMP/retired.md" --note "$RUNNER_TEMP/note.md"
+          # Nothing is written until the end of a run, so a judge that fails hands over clean.
+          for j in $JUDGES; do
+            JUDGE="$j" ./scripts/propose-taste.py --tally "$RUNNER_TEMP/tally.json" --taste taste.md \
+              --tape-dir tape --candidates-dir candidates "${open[@]}" \
+              --body "$RUNNER_TEMP/pr.md" --title "$RUNNER_TEMP/pr-title.txt" \
+              --retired "$RUNNER_TEMP/retired.md" --note "$RUNNER_TEMP/note.md" && break
+            [ "$j" != "${JUDGES##* }" ] || { echo "::error::every judge failed"; exit 1; }
+          done
           [ -s "$RUNNER_TEMP/pr.md" ] || echo "PROPOSE=no" >> "$GITHUB_ENV"
 
       # The same validator the daily run and the PR gate use: a taste.md the loop cannot read

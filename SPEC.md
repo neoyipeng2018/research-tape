@@ -185,14 +185,17 @@ claude -p --model haiku \
   estimate and `input_tokens` is unreliable (reported `9` on a 25K-token prompt). Do not build cost
   logic on either.
 
-**The free judges** ([ADR-0002](docs/adr/0002-a-day-has-one-judge.md)). Any `triage.MODEL` other
-than `haiku` is a pinned OpenRouter `:free` id, called over `urllib` with `OPENROUTER_API_KEY`. The
+**The judge chain** ([ADR-0002](docs/adr/0002-a-day-has-one-judge.md)) is `JUDGES` in both
+workflows: `nvidia/nemotron-3.5-super-vl:free`, then `haiku`. Each attempt sets `JUDGE`, which
+`triage.MODEL` reads, and a judge that fails either pass hands the whole day to the next. The day's
+judge is written on every candidate and as a `judge:` line on the vote issue. Any judge other than
+`haiku` is a pinned OpenRouter `:free` id, called over `urllib` with `OPENROUTER_API_KEY`. The
 key belongs to the account with $10 of credit, which lifts the free cap from 50 to 1,000 requests a
 day; the cap is per account, not per model. Full-schema models get `json_schema`, the Gemmas only
 `json_object`, and both go through the same id-set check. 401/402/403/404/429 fail that judge at
 once. **Every free model 404ing at once is the account's privacy setting, not the pool vanishing:**
 free endpoints need "allow providers that may train on or log prompts" enabled, with paid overflow
-left off. Until cutover the free models only shadow Haiku, writing `shadow/YYYY-MM-DD.json`.
+left off. `shadow/` holds the week of evidence the chain was chosen from; nothing reads it.
 
 ### 3.2 Pass 1 — triage, three runs, median wins
 
@@ -499,13 +502,14 @@ env:
 jobs:
   tape:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 ```
 
-Steps, in order: validate `taste.md` → install `@anthropic-ai/claude-code` → **probe auth**
-(`claude -p "Reply with the single word ok" --model haiku`, `timeout -k 10 120`) → fetch both lanes →
-dedup → triage ×3 (`timeout -k 30 600` per call, `timeout-minutes: 15` on the step) → claims → write
-`tape/` + `candidates/` → prune `candidates/*.json` older than 30 days → render `index.html` and
+Steps, in order: validate `taste.md` → install `@anthropic-ai/claude-code` → **probe the fallback
+judge** (`claude -p "Reply with the single word ok" --model haiku`, `timeout -k 10 120`; a failure
+drops Haiku from the day's chain and notes it on the vote issue) → fetch both lanes → dedup →
+**judge the day** down the chain, triage ×3 then claims under one judge (600s per call,
+`timeout-minutes: 35` on the step) → write `tape/` + `candidates/` → prune `candidates/*.json` older than 30 days → render `index.html` and
 `feed.xml` → commit and push → open the vote issue → **fail the run if either lane has been dead
 three days running**. That check is deliberately last: every degraded day still publishes a tape and
 opens its issue before the run is allowed to go red.

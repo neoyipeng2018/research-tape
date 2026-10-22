@@ -23,3 +23,11 @@ answers 404 at once, which looks like the whole free pool vanishing.
 
 **Rejected: per-model score offsets.** Correcting each link's scale onto Haiku's would let
 weaker models join, but it puts part of the bar in Python and outside `taste.md`.
+
+**After the shadow week (2026-10-18 to 10-22): the chain is `nemotron-3.5-super-vl:free`, then
+Haiku.** Both Gemmas were rate-limited upstream on all five days, so there is no evidence about how
+they judge. nemotron-3-super finished two days and matched 1 of Haiku's 5 picks. VL finished four
+and picked 10 of Haiku's 13. It also scores about a point higher than Haiku: its count at 8 or
+above tracks Haiku's at 7 or above. **The bar stays at 7 anyway, by choice:** on a VL day the cap of
+6 does most of the selecting, and six a day is a tape the reader wants. On a day that falls back
+to Haiku, the same 7 publishes fewer. That asymmetry is the price of one bar with no offsets.

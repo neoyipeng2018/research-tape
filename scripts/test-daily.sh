@@ -19,10 +19,15 @@ before() { # before <name> <earlier-pattern> <later-pattern>
 has "runs on a schedule"        'cron: "0 22 * * *"'
 has "dispatch is the retry"     "workflow_dispatch:"
 has "one run at a time"         "group: research-tape-daily"
-has "30-minute job timeout"     "timeout-minutes: 30"
+has "45-minute job timeout"     "timeout-minutes: 45"
 has "auth probe has its own timeout" "timeout -k 10 120"
-[ "$(grep -c 'timeout-minutes: 15' "$W")" -ge 1 ] && ok "judge steps are bounded" ||
-  bad "judge steps are bounded" "no per-step timeout on a judge step"
+has "the judge step is bounded"  "timeout-minutes: 35"
+# docs/adr/0002: one judge a day, free first, Haiku last, and a dead token only drops Haiku.
+has "the judge chain ends on Haiku" 'JUDGES: "nvidia/nemotron-3.5-super-vl:free haiku"'
+has "every judge sees both passes"  'JUDGE="$j" ./scripts/claim.py'
+has "the day's judge reaches the issue" 'echo "judge: $j'
+has "a dead token drops only Haiku" 'JUDGES=${JUDGES% haiku}'
+before "the fallback is probed before the day is judged" "timeout -k 10 120" "Judge the day"
 
 # The push fires no workflow, so every step the tape depends on lives in this job.
 grep -qE '^[[:space:]]+(push|pull_request):' "$W" && bad "no push trigger" "daily.yml triggers on push" ||

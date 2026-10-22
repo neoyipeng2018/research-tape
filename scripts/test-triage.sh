@@ -82,8 +82,9 @@ check("the why comes from the run that scored the median",
 check("output is ordered score descending, then key",
       out and [c["key"] for c in out] == ["2608.00002", "2608.00001", "10.2139/ssrn.1"], out)
 check("the candidate record is passed through, not rebuilt",
-      out and all(dict(c, score=0, why="") == dict(o, score=0, why="")
+      out and all(dict(c, score=0, why="", judge="") == dict(o, score=0, why="", judge="")
                   for c in CANDIDATES for o in out if c["key"] == o["key"]), out)
+check("every candidate records the day's judge", out and {c["judge"] for c in out} == {"haiku"}, out)
 check("ANTHROPIC_API_KEY never reaches the judge — it would bypass the subscription", not leaked)
 
 rc2, out2, _, _, _ = run(THREE, candidates=list(reversed(CANDIDATES)))
