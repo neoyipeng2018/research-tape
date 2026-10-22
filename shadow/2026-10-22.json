@@ -1,0 +1,59 @@
+{
+ "nvidia/nemotron-3-super-120b-a12b:free": {
+  "error": "Fatal: JUDGE_DOWN: nvidia/nemotron-3-super-120b-a12b:free 404: Provider returned error"
+ },
+ "google/gemma-4-31b-it:free": {
+  "error": "Fatal: JUDGE_DOWN: google/gemma-4-31b-it:free 429: Provider returned error"
+ },
+ "nvidia/nemotron-3.5-super-vl:free": {
+  "scores": {
+   "10.2139/ssrn.7645298": 8,
+   "2610.27100": 8,
+   "10.2139/ssrn.7641418": 7,
+   "2610.26932": 7,
+   "2610.27043": 7,
+   "2610.27192": 7,
+   "2610.27488": 7,
+   "2610.27904": 7,
+   "10.2139/ssrn.7649872": 6,
+   "2610.27652": 6,
+   "2610.27751": 6,
+   "2610.27107": 5,
+   "2610.27214": 5,
+   "2610.27746": 5,
+   "10.2139/ssrn.7641038": 4,
+   "10.2139/ssrn.7643225": 4,
+   "10.2139/ssrn.7650261": 4,
+   "2610.27483": 4,
+   "2610.28071": 4,
+   "10.2139/ssrn.7640598": 3,
+   "10.2139/ssrn.7641462": 3,
+   "10.2139/ssrn.7647298": 3,
+   "10.2139/ssrn.7648642": 3,
+   "10.2139/ssrn.7649582": 3,
+   "10.2139/ssrn.7650301": 3,
+   "10.2139/ssrn.7638518": 2,
+   "10.2139/ssrn.7639539": 2,
+   "10.2139/ssrn.7639699": 2,
+   "10.2139/ssrn.7643778": 2,
+   "10.2139/ssrn.7644018": 2,
+   "2610.26919": 2,
+   "2610.28075": 2,
+   "10.2139/ssrn.7617398": 1,
+   "10.2139/ssrn.7638798": 1,
+   "10.2139/ssrn.7648578": 1,
+   "2610.27797": 1
+  },
+  "claims": {
+   "10.2139/ssrn.7645298": "Output format determines whether small open models detect non-compliant green bond frameworks, with verdict-first approval masking defects that component-wise checks catch.",
+   "2610.27100": "Generative LOB models show emergent impact above 0.5 but show no decay, tentatively due to short context windows.",
+   "10.2139/ssrn.7641418": "Inflationary news narratives causally raise household inflation expectations, especially when attention is high and households have greater news exposure.",
+   "2610.26932": "Dense rewards from sparse expert judgment improve Recall@3 and MRR@3 for non-verifiable financial retrieval under GRPO.",
+   "2610.27043": "English-built LLM pipelines require per-domain per-language validation because accuracy and reasoning-effort transfer unevenly across languages.",
+   "2610.27192": "CARLAR influence forces multimodal models to copy amounts across cheque fields, while compressed-image few-shot prompting inconsistently reduces the error."
+  }
+ },
+ "google/gemma-4-26b-a4b-it:free": {
+  "error": "Fatal: JUDGE_DOWN: google/gemma-4-26b-a4b-it:free 429: Provider returned error"
+ }
+}
