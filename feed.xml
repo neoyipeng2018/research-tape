@@ -6,6 +6,41 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>CrashGym: Measuring the Decision Value of Experimentation for LLM Agents in Counterfactual Market Crashes</title>
+    <link>https://arxiv.org/abs/2610.29245</link>
+    <description>Laboratory access cuts Luna&#x27;s mean market-crash decision regret by 57.4 percent versus observe-only deployment.</description>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.29245</guid>
+  </item>
+  <item>
+    <title>VQuant: An Agentic Large Language Model Architecture for Automated Quantitative Financial Analysis and Document Generation: Reasoning-Augmented Tool Orchestration, In-Loop Numerical Computation, and Multi-Format Reporting</title>
+    <link>https://www.ssrn.com/abstract=7650999</link>
+    <description>VQuant reports no empirical measurements of accuracy hallucination latency or cost for its agentic finance platform.</description>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7650999</guid>
+  </item>
+  <item>
+    <title>Sealed Before the Open: A Verifiable Standard for Measuring AI Forecasts of Financial Markets</title>
+    <link>https://www.ssrn.com/abstract=7653679</link>
+    <description>Eleven large language models sealed market forecasts into a Bitcoin-anchored hash chain before the New York open.</description>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7653679</guid>
+  </item>
+  <item>
+    <title>Understanding the Inner Workings of a State-Space Foundation Model for Limit Order Books</title>
+    <link>https://arxiv.org/abs/2610.28753</link>
+    <description>An 8.2-million-parameter Mamba model decodes LOB order-flow imbalance at R²≈0.59 on unseen equities.</description>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.28753</guid>
+  </item>
+  <item>
+    <title>What Prediction-Market Contracts Reveal at Launch: Trading Volume and Dispute Risk</title>
+    <link>https://arxiv.org/abs/2610.29578</link>
+    <description>Prediction-market launch features predict log-volume at out-of-sample R squared 0.747 but fail temporal generalization to later listing formats.</description>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.29578</guid>
+  </item>
+  <item>
     <title>LOB-Impact Benchmark: Emergent Market Impact in Generative Limit Order Book Models</title>
     <link>https://arxiv.org/abs/2610.27100</link>
     <description>Autoregressive LOB generators trained only on next-token prediction show emergent market impact with exponents 0.63 to 1.21, though none decays during relaxation.</description>
@@ -634,13 +669,6 @@
     <description>System-prompt evolution using portfolio feedback improves LLM trading agents&#x27; Sharpe ratios in tested market regimes.</description>
     <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2609.17632</guid>
-  </item>
-  <item>
-    <title>A Causality-Gated Multi-Agent System for Generative Feature Engineering in Financial Markets</title>
-    <link>https://www.ssrn.com/abstract=7493407</link>
-    <description>Information leakage explains the apparent edge in LLM-generated financial features.</description>
-    <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7493407</guid>
   </item>
 </channel>
 </rss>

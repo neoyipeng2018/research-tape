@@ -1,0 +1,45 @@
+{
+ "date": "2026-10-23",
+ "scanned": 33,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2610.29245",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.29245",
+   "title": "CrashGym: Measuring the Decision Value of Experimentation for LLM Agents in Counterfactual Market Crashes",
+   "claim": "Laboratory access cuts Luna's mean market-crash decision regret by 57.4 percent versus observe-only deployment."
+  },
+  {
+   "key": "10.2139/ssrn.7650999",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7650999",
+   "title": "VQuant: An Agentic Large Language Model Architecture for Automated Quantitative Financial Analysis and Document Generation: Reasoning-Augmented Tool Orchestration, In-Loop Numerical Computation, and Multi-Format Reporting",
+   "claim": "VQuant reports no empirical measurements of accuracy hallucination latency or cost for its agentic finance platform."
+  },
+  {
+   "key": "10.2139/ssrn.7653679",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7653679",
+   "title": "Sealed Before the Open: A Verifiable Standard for Measuring AI Forecasts of Financial Markets",
+   "claim": "Eleven large language models sealed market forecasts into a Bitcoin-anchored hash chain before the New York open."
+  },
+  {
+   "key": "2610.28753",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.28753",
+   "title": "Understanding the Inner Workings of a State-Space Foundation Model for Limit Order Books",
+   "claim": "An 8.2-million-parameter Mamba model decodes LOB order-flow imbalance at R²≈0.59 on unseen equities."
+  },
+  {
+   "key": "2610.29578",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.29578",
+   "title": "What Prediction-Market Contracts Reveal at Launch: Trading Volume and Dispute Risk",
+   "claim": "Prediction-market launch features predict log-volume at out-of-sample R squared 0.747 but fail temporal generalization to later listing formats."
+  }
+ ]
+}

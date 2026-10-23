@@ -1,0 +1,332 @@
+[
+ {
+  "key": "2610.29245",
+  "source": "arXiv",
+  "title": "CrashGym: Measuring the Decision Value of Experimentation for LLM Agents in Counterfactual Market Crashes",
+  "abstract": "Language-model agents are increasingly asked to run experiments, yet benchmarks rarely measure whether those experiments improve the decisions they are meant to inform. We introduce CrashGym, a deterministic, replayable limit-order-book simulator in which an agent must choose between a deleveraging intervention and a liquidity backstop for a market about to suffer a shock-triggered crash. Before committing, the agent may query intervention experiments in a laboratory realization of the market. Its choice is then scored on an independently seeded target realization in which the simulator executes every feasible intervention, so regret relative to the best intervention is computed by directly simulating every alternative on the same target repeats, with no human or model-based judging. The simulator implements each amplification channel---persistent price impact, liquidity withdrawal, margin-driven liquidation, and an evolving strategy mix---as an explicit mechanism that can be switched on in stages. In a prospectively specified study on 24 newly sampled worlds, laboratory access reduces the mean regret of the one deployment with a complete record (Luna) from 8.878 to 3.785, a paired reduction of 5.092 utility units (nominal 95% world-bootstrap interval: 1.028--9.507), or 57.4% of the OBSERVE-ONLY mean. Prospective comparisons for two further deployments are incomplete; in a separate exploratory study, mean regret is lower with laboratory access for all four deployments evaluated. A laboratory whose strategy mix evolves endogenously yields no established advantage over one with a fixed mix. CrashGym thus measures the value of experimentation as avoided decision loss and lets simulator detail be judged by the decisions it supports.",
+  "link": "https://arxiv.org/abs/2610.29245",
+  "score": 9,
+  "why": "LLM agents experiment in replayable LOB crash simulator.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7650999",
+  "source": "SSRN",
+  "title": "VQuant: An Agentic Large Language Model Architecture for Automated Quantitative Financial Analysis and Document Generation: Reasoning-Augmented Tool Orchestration, In-Loop Numerical Computation, and Multi-Format Reporting",
+  "abstract": "Large language models (LLMs) write fluently about finance, but fluency does not make a number correct, current, or reproducible. This paper is a design-science description of VQuant, a deployed web platform that couples a reasoning-capable LLM with a deterministic execution substrate so that a natural-language request (“analyse NVDA's fundamentals and run a Monte Carlo simulation”) is turned into a report in which every figure is produced by live data retrieval or auditable code rather than by the model. We document four mechanisms as they are implemented and audit the description line by line against the platform's source code (vquant.git, commit e2a148a): (i) an agentic orchestration loop that exposes 245 schema-defined tools—wrapping two market-data providers (249 typed functions over 233 endpoint paths), three web-research services, and a Python sandbox pre-loading 29 scientific packages—through a recursive, batched, streaming tool-calling protocol; (ii) a three-stage context-management procedure (per-result truncation at execution, a re-send cap, and adaptive summarisation under a token budget) that keeps long sessions within the model's window; (iii) a single-call computation convention that consolidates data acquisition, estimation, and figure rendering into one sandboxed execution; and (iv) a document pipeline that renders one Markdown artifact into PDF, DOCX, Beamer, and spreadsheets with live formulas. The paper reports no empirical evaluation: it contains no measurements of numerical accuracy, hallucination rates, latency, or cost, and makes no comparative claims. Its contribution is a reproducible specification of the architecture, an honest account of where the implementation departs from its own documentation, and a pre-registered evaluation protocol—benchmark, metrics, ablations, and baselines—that has not yet been executed.",
+  "link": "https://www.ssrn.com/abstract=7650999",
+  "score": 8,
+  "why": "Deployed audited agentic quant platform with live data and tools.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7653679",
+  "source": "SSRN",
+  "title": "Sealed Before the Open: A Verifiable Standard for Measuring AI Forecasts of Financial Markets",
+  "abstract": "When an AI model says gold will rise, a reader can score the call at the close but usually cannot check when it was made. A backtest mixes memory with skill, and a trading season is one path through the market. I propose a standard of numbered requirements for measuring AI forecasts of financial markets and document its reference implementation, the open league AI Council · Markets, run by PolyHelper, with a published status per requirement. Fourteen large language models, seven from US and seven from Chinese laboratories, answer the same question on a shared price snapshot, each with its own account. Eleven of them forecast twelve indicators at four horizons before each New York open. Each counted answer is sealed into a SHA-256 hash chain before its reference price and anchored in Bitcoin through OpenTimestamps. From 21 October 2026 the counted run is declared in advance, and independent RFC 3161 authorities sign every stamped record, which also enters the Sigstore Rekor transparency log. On that first counted morning every counted answer was signed before the 09:30 ET open, eight of them 29 minutes before it. The Brier score of the event asked is set against a 50% benchmark, the climatological base rate and prediction-market prices, and agreement is reported as a count of independent voices. On the development mornings of 19 and 20 October the models' probability pictures were as alike as those of about 1.6 independent forecasters. On 20 October three of the four closest pairs joined a US and a Chinese laboratory. Against a dated map of 23 AI forecasting and trading efforts, the league is the first live AI league on financial indicators to combine these elements. It is also the first AI market arena where seven US and seven Chinese models trade under one protocol beside readers assigned once, at random, to forecast before or after seeing the models. Thirty dated predictions, registered on OSF before posting, are scored in dated revisions.",
+  "link": "https://www.ssrn.com/abstract=7653679",
+  "score": 8,
+  "why": "Verifiable sealed AI forecast standard for markets.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.28753",
+  "source": "arXiv",
+  "title": "Understanding the Inner Workings of a State-Space Foundation Model for Limit Order Books",
+  "abstract": "Autoregressive foundation models offer state-of-the-art capabilities to simulate the market by generating the message flow of limit order books (LOBs). Yet, without understanding their inner workings, research directions are hard to narrow and practical use in real-world trading environments remains uncertain. This study therefore asks what these models actually learn about market microstructure. We find that, similarly to games where sequence models build an internal representation of the board, an 8.2M-parameter Mamba-3 state-space model trained autoregressively on the tokenized message stream of eight large-cap US equities learns an internal representation of the market and its dynamics. In particular, order-flow imbalance, a central driver of short-horizon price moves, is decodable at $R^2 \\approx 0.59$, far above controls and baselines. This representation extends to unseen stocks, suggesting that these models learn general representations rather than ticker-specific patterns. The model also generalizes across metrics beyond order-flow imbalance: results hold across traded volume and volatility. Additionally, the representation is causally steerable: pushing the state along a feature's axis shifts the model's next-message beliefs as that feature implies, monotonically in dose, consistent with the emergence of a world model.",
+  "link": "https://arxiv.org/abs/2610.28753",
+  "score": 8,
+  "why": "State-space LOB foundation model; microstructure representation.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.29578",
+  "source": "arXiv",
+  "title": "What Prediction-Market Contracts Reveal at Launch: Trading Volume and Dispute Risk",
+  "abstract": "Using a near-census of 802,863 resolved markets listed on Polymarket between January 2023 and May 2026, and only information available at listing (the market's title and description, named resolution source, and contract metadata), we predict lifetime trading volume and whether settlement is later disputed. Contract information predicts trading volume well (out-of-sample $R^2 = 0.747$ for log volume), and most of the signal is interpretable: market topic provides the largest gain ($+0.289$ $R^2$ over a $0.220$ contract-feature baseline), wording and resolution-rule design add smaller but measurable improvements ($+0.027$ combined), and neural text models add little beyond the interpretable features. This performance does not survive a period of platform change coinciding with a shift in listing formats: accuracy in predicting whether a market reaches \\$1,000 falls from AUC $0.940$ under same-period evaluation to $0.577$ when training on past quarters and testing on later ones. The loss concentrates in markets whose question forms were absent from training (76.9% of test markets; on familiar forms the model still reaches $0.778$), and a decomposition attributes more of it to a changed relationship between contract characteristics and demand than to an outdated mapping from text to features. Dispute predictors are more stable but less precise: launch-time features rank dispute risk far better than chance (AUC $0.78$), yet at a 0.31% base rate precision is too low for case-by-case prediction (average precision $0.012$), so the scores suit ranking groups of markets rather than forecasting individual disputes.",
+  "link": "https://arxiv.org/abs/2610.29578",
+  "score": 7,
+  "why": "Polymarket contract features predict volume but break under platform change.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7648820",
+  "source": "SSRN",
+  "title": "The AI Incident Disclosure Shadow: Tracking AI Incidents into U.S. Securities Filings",
+  "abstract": "A growing public record documents real-world harms involving artificial intelligence (AI) systems developed or deployed by public companies, but whether those incidents become identifiable in subsequent securities filings has not been systematically measured. We match 2019–2026 AI Incident Database (AIID) incidents (n = 1,389) to U.S.-listed domestic periodic-report filers, yielding 307 incidents involving 21 issuers. For each incident, we examine Forms 8-K, 10-K and 10-Q filed during the following 12 months and code the strongest disclosure as incident-specific (T1), disclosure of a directly related legal consequence without identifying the incident (T2), generic risk language addressing the same technology or harm family (T3), or no related disclosure located (T4). Under the pre-registered coding, there are 4 T1, 3 T2, 278 T3 and 22 T4 incidents. Incident-specific disclosure therefore occurs in 1.3% of incidents (Clopper–Pearson 95% CI, 0.4–3.3), while T1+T2 substantive disclosure occurs in 2.3% (0.9–4.6) as an upper bound. The remaining 300 incidents (97.7%, 95.4–99.1) form the AI incident disclosure shadow: no incident-specific or directly related legal-consequence disclosure was identifiable in the specified filing universe. Among T3 incidents, only 84 match both the incident's AI application family and harm family, while 194 match only one. In all, 70.4% of all incidents (64.9–75.4) therefore have at most weakly related filing language. In exploratory analyses, no severity gradient is detectable and the apparent association with issuer role is fragile to specification and single-case changes. The seven substantive cases cluster around financial-statement effects or formal legal and regulatory consequences, including reported financial impacts of approximately $304 million and $478 million. These estimates are conditional on AIID recording and issuer resolvability and measure visibility in Forms 8-K, 10-K and 10-Q, not legal compliance or all investor-facing communication.",
+  "link": "https://www.ssrn.com/abstract=7648820",
+  "score": 6,
+  "why": "Real SEC filings and incident disclosure measurement.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7651539",
+  "source": "SSRN",
+  "title": "A Bounded Double-gated Framework for Implied-volatility Dynamics: Structural Anchoring and Regime-specialised Neural Learning",
+  "abstract": "This paper introduces a rigorous, bounded semi-parametric framework for implied volatility surface modelling and dynamic hedging error minimisation, effectively resolving the structural instability and chronological out-of-sample breakdown inherent in unconstrained machine learning architectures. Conventional data-driven models frequently suffer from severe look-ahead bias and performance collapse under strict chronological evaluation due to unconstrained overfitting. To overcome these limitations, we propose a neural-gated volatility strategy that restricts predictive variations within the convex hull of robust structural baselines, constraining neural adjustments and exhibiting improved outof-sample forecast-error performance in the reported experiments. The architecture combines regimeadaptive parameterisations with bimodal shared-trunk mixture-of-experts routing governed by macroscopic volatility-of-volatility indicators, eliminating feature noise and gradient saturation during market transitions. Empirical evaluations across an extensive multi-year panel of index options demonstrate that the proposed framework consistently achieves superior variance reduction and temporal consistency compared to static and unconstrained benchmarks. Furthermore, theoretical and empirical analyses of optimisation dynamics reveal that controlled mini-batch discretisation provides essential implicit regularisation, illustrating a trade-off between forecast gains and adverse-month performance.",
+  "link": "https://www.ssrn.com/abstract=7651539",
+  "score": 6,
+  "why": "Implied-volatility neural model with out-of-sample tests.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7656053",
+  "source": "SSRN",
+  "title": "Multi-view Dynamic Hypergraph Neural Network based on Key Hyperedges: A New Perspective on Credit Risk Assessment for Small and Medium Enterprises",
+  "abstract": "Small and Medium Enterprises (SMEs) constitute the backbone of modern industrial supply chains yet encounter persistent financing barriers due to severe financial opacity, thincredit histories, and non-linear risk contagion. Traditional credit assessment models relianton audited accounting statements inevitably fail for SMEs, while conventional dyadic GraphNeural Networks (GNNs) struggle with high-order business coalitions and suffer from severefeature over-smoothing caused by the dominance of core enterprises. To address these indus-trial bottlenecks, we propose the Multi-view Dynamic Hypergraph Neural Network based onKey Hyperedges (MVDHGNN-KH), an intelligent enterprise credit risk assessment frame-work engineered for real-world supply chain finance deployment. MVDHGNN-KH leverageslegally public non-financial litigation records and constructs dual corporate hypergraphs en-compassing equity ties and supplier-buyer relations. To protect SME-specific representationsfrom being overwhelmed by high-degree core enterprises, we introduce a multi-level key topological constraint mechanism integrating k-shell core decomposition, PageRank influence, and depth-bounded expansion. Furthermore, the framework dynamically reconstructs local and global hyperedge structures via dual convolution while fusing multi-view embeddings under a class-weighted optimization objective to handle sample imbalance. Extensive evaluations on an authentic industrial benchmark of 2,501 automotive supply chain enterprises (MSMEsD) demonstrate that MVDHGNN-KH achieves 89.63% accuracy, an 89.42% Macro F1-score, and an AUC of 0.842, substantially outperforming existing graph and hypergraph baselines. Crucially, it reduces the industrial False Acceptance Rate (FAR) from 38.23% to 27.31%, delivering a scalable, automated, and deployment-ready AI decision-support system for commercial lending institutions.",
+  "link": "https://www.ssrn.com/abstract=7656053",
+  "score": 6,
+  "why": "Hypergraph credit risk for SME supply-chain finance.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.29294",
+  "source": "arXiv",
+  "title": "Same Probabilities, Different Advice: Gain-Loss Framing Effects in High-Stakes LLM Decision Support",
+  "abstract": "Large language models (LLMs) are increasingly used to support consequential decisions, yet their reliability under equivalent representations of uncertainty remains unclear. Existing work has documented prompt sensitivity, cognitive biases, and confidence miscalibration, but it is still unknown whether high-stakes advice changes when the same probability is expressed through complementary gain and loss frames. We introduce FrameBench-HPS, a controlled benchmark of 2,880 prompts derived from 240 high-stakes scenarios across healthcare, finance, education/career, and legal/consumer-rights domains. Across seven LLMs, gain-loss framing changes the recommendation category in 32.4% of complete groups, with most changes involving uncertainty rather than direct reversals. Human evaluation confirms corresponding shifts in perceived risk and directiveness. Robustness experiments show that framing effects persist under conversational paraphrases and exceed ordinary repeated-generation variability. Probability canonicalization substantially reduces framing sensitivity, identifying probability representation as a practical target for improving consistency in high-stakes LLM decision support.",
+  "link": "https://arxiv.org/abs/2610.29294",
+  "score": 6,
+  "why": "Cross-domain LLM framing benchmark; finance is minority domain.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.29663",
+  "source": "arXiv",
+  "title": "Lineage-Aware Search Control for LLM-Based Evolutionary Factor Mining",
+  "abstract": "Formulaic alpha factor mining searches for symbolic expressions that transform market data into predictive signals. Recent LLM-based evolutionary factor mining methods use large language models as semantic variation operators. Under the conventional LLM-EA paradigm, stochastic variation and fitness-based selection can leave the search weakly directed and concentrated around a narrow set of structurally similar factors. We argue that these limitations arise because current methods mainly organize search at the individual and population levels, leaving lineage-level control underused. A lineage connects successive factor variants through evolutionary descent. We propose LineageEvo, which uses lineage in two coupled forms of search control: (1) lineage-conditioned LLM variation, which distills Lineage-Scoped Search Experience into operator-specific priors and fuses them with global operator priors, providing persistent, lineage-relevant guidance for LLM generation; and (2) lineage-stratified search allocation, which balances factor quality against lineage concentration by distributing the search budget across lineages during evolutionary search. Together, these mechanisms make semantic variation more direction aware and prevent branches from dominating the evolution, thereby promoting the discovery of predictive and diverse factors. We evaluate LineageEvo on CSI 500 and S&P 500 in terms of factor predictiveness, portfolio performance, search efficiency, and lineage- and expression-level diversity. LineageEvo achieves the strongest predictive performance on both markets, while LSPS produces a more balanced lineage distribution and a structurally broader factor pool. The results support lineage as a useful intermediate unit for controlling LLM-based evolutionary factor search.",
+  "link": "https://arxiv.org/abs/2610.29663",
+  "score": 6,
+  "why": "LLM evolutionary alpha-factor mining with lineage control.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.29667",
+  "source": "arXiv",
+  "title": "Leveraging Time-Series Foundation Models for Financial Crime Detection",
+  "abstract": "Financial crime detection requires identifying illicit activity within large transaction networks, where suspicious behaviour is rare and unfolds over time. Existing graph-based methods capture relationships among accounts but typically underuse the temporal behaviour encoded in account transaction histories. We introduce Temporal-Context Edge Enrichment (TCEE), a framework that addresses this gap by summarising each account's transaction history with a frozen time-series foundation model (TSFM), and enriching each transaction's representation with the relevant temporal context from these summaries. These enriched representations can be scored directly for edge classification, or fed into a graph neural network (GNN) as edge features to capture broader structural information. Across six AMLWorld datasets, TCEE improves PR-AUC over the strongest evaluated baseline on five by a relative 10.8% on average, while training 6.0x faster end-to-end. Feeding TCEE's representations into a GNN raises PR-AUC a further 4.8% on the four smaller datasets. On an Ethereum phishing dataset, we show that TSFM-generated account representations fed into a GNN are also effective for node classification, improving PR-AUC by 14.5% over the strongest baseline. As TSFMs continue to advance, our results suggest they can strengthen financial crime detection by capturing temporal signals that complement graph-based approaches.",
+  "link": "https://arxiv.org/abs/2610.29667",
+  "score": 6,
+  "why": "Time-series foundation model for AML transaction networks.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7653398",
+  "source": "SSRN",
+  "title": "When Price Charts Rhyme: Historical Visual Retrieval for Stock Return Prediction",
+  "abstract": "We study whether visually similar price histories predict similar future returns, using a vision model to retrieve each stock's most similar charts from three decades of U.S. price histories. A representation pretrained only on natural images already retrieves neighbors whose realized returns predict the cross-section of stock returns. Aligning the representation with subsequent returns more than doubles the strategy's Sharpe ratio and outperforms a convolutional neural network trained directly on chart images. The predictability is concentrated among stocks with greater limits to arbitrage and more intensive retail trading. A sparse autoencoder traces the pretrained signal to recurring visual states that determine which historical charts are retrieved. Our approach traces each forecast to dated historical charts, making it more transparent than direct image-to-return models and linking rule-based technical analysis with machine-learning chart reading.",
+  "link": "https://www.ssrn.com/abstract=7653398",
+  "score": 5,
+  "why": "Chart-image return predictor; no transaction costs noted.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.28933",
+  "source": "arXiv",
+  "title": "The Data Differentiator Framework (DDF): Quantifying Marginal Data Value with Information-Theoretic and Game-Theoretic Measures in an Agentic Evaluation Pipeline (SDSAE)",
+  "abstract": "In data-rich enterprises the hard question is not whether a candidate dataset is good in isolation, but whether it adds information beyond what the organization already holds, and whether that increment is worth its price. We present the Data Differentiator Framework (DDF), a composite scoring method for candidate data assets that combines (i) a mutual-information-based redundancy penalty against the existing portfolio, (ii) a cost-normalized, significance-gated marginal utility score derived from an ablation study, and (iii) explicit governance inputs (trust, identity resolution quality, strategic weights) set by the business. The framework is executed by a staged pipeline, the Strategic Data Sourcing Agent Ecosystem (SDSAE), that short-circuits expensive model-retraining steps for assets failing governance or redundancy gates. Conceptually, the DDF extends the relevance-minus-redundancy principle of mRMR feature selection from the feature level to the asset level, and adds cost normalization, a statistical significance gate, and governance terms that per-sample valuation methods such as Data Shapley do not model. We validate the framework on the public credit-card fraud benchmark (284,807 transactions) with five constructed candidate assets spanning the redundancy spectrum. Only the genuinely differentiated asset passes the significance gate ($Δ$AUC = +0.0029, DeLong $p = 1.4\\times 10^{-9}$, Holm-corrected $p = 7.2\\times 10^{-9}$) and receives an acquire recommendation (DDS = +0.663); the fully redundant asset scores lowest (DDS = -0.135). The recommendation is stable across 19 of 22 admissible strategic-weight configurations and across all decision thresholds in [0.15, 0.66]. We state clearly which quantities in the case study are computed from data and which are simulated governance inputs, and we discuss the design limits of a single-dataset evaluation.",
+  "link": "https://arxiv.org/abs/2610.28933",
+  "score": 5,
+  "why": "Enterprise data-asset valuation framework, not finance-specific.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.29188",
+  "source": "arXiv",
+  "title": "LTEM: LLM-Friendly Table-Enhanced Markdown for Table Understanding and Generation",
+  "abstract": "Tables in real-world documents, including scientific papers, financial reports, and statistical summaries, frequently use merged cells, multi-level headers, and sectioned layouts. Yet the lightweight formats LLMs handle best (Markdown, CSV) cannot express these structures, while expressive formats (HTML, LaTeX) impose excessive token cost and parsing complexity. To enable systematic analysis of this trade-off, we introduce a taxonomy decomposing table structure into six atomic features (F1-F6) and corresponding complexity levels (L1-L6), and construct STB (Synthetic Table Benchmark), a controlled benchmark with 1,089 tables systematically distributed across complexity levels. Using this framework, we propose LTEM (LLM-friendly Table-Enhanced Markdown), a formally specified, minimal extension of Markdown that explicitly encodes spans and hierarchical headers. Experiments across five state-of-the-art LLMs show that LTEM achieves accuracy comparable to HTML, offers a favorable accuracy-token trade-off relative to HTML and LaTeX, and produces substantially fewer invalid responses than LaTeX; for table generation, LTEM is comparable to MultiMarkdown though HTML is best. We release our taxonomy, benchmark, and format specification to support future research on LLM-table interaction.",
+  "link": "https://arxiv.org/abs/2610.29188",
+  "score": 5,
+  "why": "LLM table markup benchmark, not financial-text specific.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7651479",
+  "source": "SSRN",
+  "title": "PALO FinOps: Evidence-Gated Cost Accounting and Budget Admission for Multi-Model AI Workflows",
+  "abstract": "The price of a model invocation is an incomplete basis for governing the cost of an AI workflow. Retries, unsuccessful attempts, context reconstruction, verification, shared infrastructure and human review can alter the cost per accepted outcome. At the same time, delayed billing and uncertain execution outcomes make a low observed total compatible with substantial unresolved liability. We present PALO FinOps, a reference model that separates four concerns: spending authority, operational commitments, versioned billing evidence and outcome-conditioned measurement. Its central rule is that incomplete evidence produces an unavailable final metric rather than an inferred zero cost. The model combines durable reservation before dispatch, explicit retention of unresolved commitments, revision-aware attribution, signed cost conservation and frozen metric contracts. A local implementation provides twelve operational capabilities, including role-oriented reporting, exception review, a read-only billing adapter, an isolated read-only Model Context Protocol server and a bounded routing benchmark runner. Evaluation comprises 63 local regression and integration tests, 20 focused interface checks and an exhaustive bounded enumeration of 12,864 signed-allocation configurations. Synthetic reconciliation examples demonstrate preservation of reservations, invalidation after billing revisions and replay of historical snapshots. These results establish executable behavior within the tested local scope; they do not establish provider billing accuracy, distributed enforcement, causal savings or production readiness. We conclude with a preregisterable live-evaluation protocol. The contribution is an explicit, testable contract connecting cost evidence to authority and outcomes, intended to complement routing algorithms and established FinOps practices.",
+  "link": "https://www.ssrn.com/abstract=7651479",
+  "score": 4,
+  "why": "AI workflow cost governance, tangential to trading desks.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.28907",
+  "source": "arXiv",
+  "title": "JaxMARL-BC: Multi-Agent Reinforcement Learning for Macroeconomic Modelling, in Seconds",
+  "abstract": "Multi-agent reinforcement learning (MARL) offers a principled way of populating simulated economies with many heterogeneous decision makers. Its adoption, pioneered in finance, has nonetheless been slow in macroeconomics because of two main limitations: the lack of a shared frame of reference connecting MARL systems to dynamic stochastic general equilibrium (DSGE) models the profession already trusts, and the very long training times. The first limitation was recently addressed by the Multi-Agent Reinforcement Learning Business Cycle (MARL-BC), which places deep RL households in a real business cycle economy and reduces to classic DSGE models in specific limits. Here we address the second limitation. We present JaxMARL-BC, a JAX-accelerated simulator that trains MARL-BC economies in seconds (between 75x and 724x faster than the reference implementation), and scales to 200,000 independent learning households. We verify its correctness against the known DSGE limits, characterise its scaling through a simple cost law, and demonstrate its value by a proof-of-concept calibration of an extended model with heterogeneous returns on capital, in a two-hour experiment that would previously have taken over a month. We release JaxMARL-BC as open source.",
+  "link": "https://arxiv.org/abs/2610.28907",
+  "score": 4,
+  "why": "Fast MARL macro simulator, not real trading.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.29391",
+  "source": "arXiv",
+  "title": "Nominate-then-Adjudicate: LLM-Assisted One-Pass and Per-Instance MIP Solver Tuning",
+  "abstract": "Mixed-integer programming solvers expose hundreds or even thousands of parameters whose best setting varies per instance, yet per-instance search is prohibitively expensive. We frame this as configuration for heterogeneous Big Data optimization workloads and propose a nominate-then-adjudicate pipeline built around two design choices. First, a fixed portfolio is sampled once and reused across instances, removing per-instance configuration search at inference; on the evaluated families, the resulting shortlist retains substantial oracle headroom, making selection within it the empirical focus. Second, the fixed 20-feature representation can map structurally different instances to the same vector, preventing a feature-only selector from distinguishing them even when they prefer different configurations. The foundation model receives no task-specific weight updates, and selection is one-pass: one model call and no solver calls at inference. The study represents structural Variety through distinct formulation families and decision Value through solver-performance outcomes; the one-call, zero-solve protocol specifies the decision interface and leaves end-to-end latency unmeasured. Among comparisons exceeding a 20% practical-difference threshold, the complete adjudicator records 538 wins and 185 losses against the top nominee, while its win rate against the default rises from 84.9% to 90.2%. Against per-instance configuration baselines under a matched one-pass protocol it leads the cluster-level methods and the best-performing evaluated per-instance baseline, ISAC+.",
+  "link": "https://arxiv.org/abs/2610.29391",
+  "score": 4,
+  "why": "LLM-assisted MIP solver tuning, not financial.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7651058",
+  "source": "SSRN",
+  "title": "Hedonic House Pricing with Language-Model and Vision Features: Evidence from Quebec Real-Estate Listings",
+  "abstract": "Hedonic house-price models are bounded by the characteristics an analyst can measure, yet much of a home's value is recorded only in the free-text description and photographs of its listing. We treat general-purpose AI models as a feature-engineering technology for hedonic analysis: a large language model converts each description into structured property specifications, and a vision–language model converts the façade photograph into visual attributes, both under strict JSON schemas that make the outputs auditable econometric variables. Using 19,123 Quebec house listings, the two AI layers raise the R^2 of an already rich log-linear hedonic specification with municipality fixed effects from 0.717 to 0.755, 3.0 of the 3.8 points coming from the façade photograph, and they raise the out-of-sample R^2 of every estimator from OLS to gradient boosting and neural networks (best ensemble: R^2 of 0.779, median absolute error 14.0%). The vision layer adds more to the linear model than switching from OLS to a random forest does. The extracted attributes carry economically sensible implicit prices—2.3% per point of curb appeal, 3–4% for brick or stone façades—that survive municipality-clustered inference, a cluster bootstrap, postal-code fixed effects, and a control for the language of the description, which itself carries a 7% conditional premium for English listings. We also document that for-sale-by-owner descriptions embed the asking price, so that the text layer's gain is credible only on the brokered platform, and that spatially grouped cross-validation lowers all accuracy levels by three to five points while preserving the AI increments.",
+  "link": "https://www.ssrn.com/abstract=7651058",
+  "score": 3,
+  "why": "Single-city real-estate hedonics, no transferable finance method.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7651178",
+  "source": "SSRN",
+  "title": "From Listing Images to Property Valuation: A Multimodal AI Framework for Automated Building Characterization and the Cost Approach: Evidence from Québec Single-Family Listings Matched to the Assessment Roll",
+  "abstract": "The cost approach to value requires a specification of the improvements—materials, finish grade, condition, renovations—that assessment rolls do not record and that appraisers obtain by inspection. We ask whether that specification can be extracted from the photographs and text of a for-sale listing by general-purpose vision–language models, and what a transparent cost indication built on it is worth. We formalise an extraction-to-valuation framework with five evidence classes (administrative, visual, proxy, text-claimed, latent), deterministic cross-image aggregation, text–image–record reconciliation, a fully sourced cost schedule and uncertainty propagation, and we apply it to Québec house listings matched within 15 m to their roll unit ( photographs, three extractor tiers, verified references). Visible exterior attributes are extracted with high agreement against broker fields (roof covering %, garage type %, cladding %) but storeys agree with the roll only loosely (=), and the most cost-relevant interior evidence is simply not shown: within the first ten photographs, % of listings show a basement and % a bathroom, a missing-not-at-random structure that no extractor can overcome. Relative to a roll-only baseline, image and text attributes raise the median cost indication and move its ratio to the asking price from to (median absolute deviation % to %), mainly through condition-adjusted depreciation; the gain is real but modest, and the level of the indication depends more on the published unit-cost anchor than on anything seen in the images. A calibration against assessor building values on five metropolitan areas transfers to a geographic hold-out and implies a hard cost near $300 per square foot, consistent with 2026 Québec industry guides and well above a Montréal hard-cost band. We release the ontology, prompts, schedule and code, and we are explicit about what the data cannot establish: no expert labels exist, latent defects are unobservable, and the cost indication is a screening tool, not an appraisal.",
+  "link": "https://www.ssrn.com/abstract=7651178",
+  "score": 3,
+  "why": "Quebec real-estate appraisal, not financial markets or LLMs.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7654338",
+  "source": "SSRN",
+  "title": "Does Corporate AI Agent Adoption Reshape Earnings Management? Evidence from Chinese A-share Listed Firms",
+  "abstract": "This study examines changes in earnings management after AI agent adoption among Chinese A-share firms. Based on publicly disclosed information, we constructed the variable of AI agent adoption through a combination of ChatGPT and manual verification. Using a 2003-2025 sample, difference-indifferences estimates show that signed discretionary accruals (DisAcc) shift significantly in the negative direction after AI agent adoption, whereas absolute discretionary accruals do not change significantly. A signbased directional decomposition shows a decline in the positive-DisAcc subsample and a further negative shift in the negative-DisAcc subsample after controls are included. The conclusion that discretionary accruals moved in a negative direction after the adoption of AI agents remained significant after PSM; it is more significant in the sub-sample with high financing constraints, non-big-4 auditor, and non-state-owned enterprises. This article focuses on the cutting-edge technology of AI agents, examines the determinants of enterprises' financial reporting behaviors, and reveals that the role of technology governance has a significant environmental dependence.",
+  "link": "https://www.ssrn.com/abstract=7654338",
+  "score": 3,
+  "why": "Single-country Chinese earnings management; limited transferability.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.28847",
+  "source": "arXiv",
+  "title": "DSINC beyond Heston: the 3/2 and other non-affine stochastic-volatility models",
+  "abstract": "This paper extends the damped-sinc (DSINC) method for American options beyond the affine Heston class to general one-factor stochastic-volatility models. We show that the collapse identity, which reduces the early-exercise integral to a single spectral integral, remains valid for these models. Damping between zero and one is admissible whenever the discounted spot is a nonnegative local martingale. An Itô transformation of the volatility factorizes the conditional characteristic function and identifies a natural coordinate for approximating the exercise boundary. The 3/2 model admits closed-form joint transforms in terms of Kummer functions, while uncorrelated SABR admits a Bessel representation. When a practical closed-form transform is unavailable, the required volatility integral is computed directly by solving one backward equation per frequency, without a grid in the log-price. Through a known change of volatility coordinate, this approach also accommodates correlated SABR. Tests on the 3/2, SABR, GARCH and lognormal-volatility models show agreement with fine finite-difference benchmarks to within one basis point of the strike. Computational cost is comparable to or lower than that of our finite-difference implementation, except for the slower Hankel implementation of uncorrelated SABR.",
+  "link": "https://arxiv.org/abs/2610.28847",
+  "score": 3,
+  "why": "Stochastic-volatility numerical method, no ML/data focus.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.28863",
+  "source": "arXiv",
+  "title": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity",
+  "abstract": "We study strategic liquidity provision in decentralized exchanges with concentrated liquidity as a mean-field game. Liquidity providers choose the width of their price range and when to rebalance it, pay a transaction cost at each rebalancing, and share the fees collected at each tick in proportion to their liquidity, so that each provider's income depends on the state of the population. We formulate the problem as a controlled continuous-time Markov chain on a finite state space. In an averaged version of the game, in which a rebalanced position is re-centered at a draw from the long-run law of the price, a mean-field equilibrium exists. Because each provider's share of the fees falls as competing liquidity is added, the equilibrium liquidity profile is unique. For the exact dynamics, with rebalancing at the range boundary and fast execution, we obtain closed forms for the optimal width, the value function and the stationary law of a position, together with a critical volatility above which provision does not pay. Free entry holds a pool strictly below this threshold, at a margin set by the rebalancing cost. The critical volatility is computed from the fee tier, traded volume, active-tick liquidity and price alone, with no fitted parameter. On two and a half years of hourly data from five WETH/USDC pools on Ethereum and Base, it tracks realized volatility. On the Ethereum $0.3\\%$ pool the ratio of realized to critical volatility is less than one, and optimal value $w^*$ exists. On the standard Uniswap fee tiers the critical volatility coincides with the on-chain implied volatility of the pool.",
+  "link": "https://arxiv.org/abs/2610.28863",
+  "score": 3,
+  "why": "Mean-field game DEX theory, no data or code.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7645498",
+  "source": "SSRN",
+  "title": "Graph-Based Deep Learning for Financial Crime Detection: A Review of Transaction Networks, Fraud Patterns, and Explainable AI",
+  "abstract": "Financial fraud and money laundering now operate through networks of accounts, devices, merchants, and identities, and rule-based systems and conventional machine learning models that score transactions one at a time often miss them. This narrative review examines how Graph Neural Networks (GNNs) detect suspicious connections among entities in transaction networks. It explains how financial data is represented as graphs and how message passing works, then reviews applications to money laundering and crime rings, synthetic identities and account takeover, and merchant fraud. It compares GNNs with conventional methods on accuracy, class imbalance, scalability, and interpretability. The reviewed studies report that GNNs can find structural patterns, such as hubs, cycles, and dense closed loops, that attribute-based models miss, and that sampling and labelbalancing techniques help with imbalanced fraud data. The evidence is not one-sided: on the Elliptic Bitcoin benchmark, a random forest outperformed a graph convolutional network, and GNNs can struggle when labels are heavily skewed. Computational cost, camouflaged fraudsters, and the difficulty of explaining graph-based decisions to regulators remain open problems. The review concludes that GNNs should be evaluated against strong conventional baselines and paired with explanation tools, federated learning, and human oversight. The article follows no formal search protocol.",
+  "link": "https://www.ssrn.com/abstract=7645498",
+  "score": 2,
+  "why": "Survey/review paper; no new method or data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7647741",
+  "source": "SSRN",
+  "title": "Capital first, Organization later",
+  "abstract": "Generative AI is in a capital-first phase: the financial engineering of compute is advanced, but the ability to monetize it and service the debt is unproven. Using CoreWeave's financing structure and Nvidia's planned $500 billion third-party financing platform as cases, this paper argues that the central question is not whether AI is a bubble, but whether financial innovation can last until organizational innovation delivers. Drawing on the electrification experience (David, 1990), in which productivity gains followed factory redesign by decades, we examine what sovereign-AI demand can and cannot support, and why it may change the shape of a bust without preventing one. We then propose an organizational model, an AI manager, human workers and AI assistants, together with an AI product studio, and discuss how it could redefine the firm, the factory and the factors of production, and ease Baumol's cost disease in services. We state three testable hypotheses, outline scenarios and leading indicators, and argue that distribution is the central issue.",
+  "link": "https://www.ssrn.com/abstract=7647741",
+  "score": 2,
+  "why": "AI capital strategy, not trading or text systems.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7652200",
+  "source": "SSRN",
+  "title": "Regime Change: Contracting, Commitment, and Selection in AI Harness Markets",
+  "abstract": "An AI service provider sells more than access to a model. It chooses a service promise, the information used to verify that promise, and an interface that customers may find costly to replace. We study these choices by extending the spatial contracting framework of Townsend and Zhorin. A Prescott-Townsend lottery program supplies observed-and hidden-effort surplus frontiers; a separate power-law specification yields three candidate market regimes as adaptation costs change: direct competition, protected hinterlands, and local monopoly. In a sequential contract-offer game, a challenger can respond to the incumbent's published promise and may gain from moving second. We then establish an incumbent-selection result. An informed incumbent retaining its least costly workloads leaves a higher-cost pool for a challenger, lowering the challenger's pooled contracting frontier and, under explicit restrictions, potentially making entry infeasible. The application distinguishes customer service value, the agent's optimization reward, and the designer's target outcome. A conditional target-value proposition and a KL-regularized logit representation show why greater measured performance or easier switching need not have a uniform welfare effect. The model identifies how a shift in contracting feasibility can overturn the advantage conferred by offer timing, and specifies the conditions under which these effects can be compared.",
+  "link": "https://www.ssrn.com/abstract=7652200",
+  "score": 2,
+  "why": "Pure contracting theory, no data or implementation.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7656389",
+  "source": "SSRN",
+  "title": "How Does Digital Finance Drive Entrepreneurial Activity? Evidence from the Lens of AI Adoption",
+  "abstract": "Drawing on Chinese prefecture-level city data (2011–2024), this study examines how digital finance drives urban entrepreneurship through AI attention. Using the Peking University Digital Financial Inclusion Index, Baidu search data, and system GMM, we test a moderated mediation model. Digital finance significantly promotes entrepreneurial activity, with AI attention as a mediating channel. Urban economic resilience strengthens this indirect effect. Heterogeneity analysis shows stronger effects in eastern and larger cities. The findings suggest integrating digital financial inclusion with AI awareness and resilience-building to foster urban entrepreneurship.",
+  "link": "https://www.ssrn.com/abstract=7656389",
+  "score": 2,
+  "why": "Chinese city digital finance macro empirics, not transferable.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.29300",
+  "source": "arXiv",
+  "title": "When Are We Near Nash? Certifying Solutions in General-Sum Games",
+  "abstract": "Heuristic solvers for general-sum extensive-form games produce a stream of iterates, and practice reports the NashGap of the returned profile. We ask what a solver can know about its own iterates from the regret accumulators and the terminal-distribution accumulators its updates already maintain. In two-player games the NashGap of a weighted average strategy equals, at the maximizing player, the weighted external regret plus a signed value correction. Bounding the regret by the running counterfactual-regret accumulator gives an online certificate whose cost per checkpoint is linear in the number of terminal histories. The certificate stays sound under alternating updates and in games with three or more players. The mismatch between what alternation evaluates and what the averages record enters as one signed comparator term, maximized in a single backward pass per player whose comparator weight is nonzero. The bound is read off the regret state, with no best response against the average. Run a portfolio of training-free regret-matching solvers, output the iterate with the smallest certificate, and verify that iterate once. On the benchmark's biased Leduc family a pool of sixteen training-free solvers, seven original and nine recent variants, solves $89\\%$ of the $64$ instances at threshold $10^{-5}$ this way, matching the trajectory-minimum union of the solvers. The same protocol solves $92\\%$ of the $64$ pre-registered held-out instances and $89\\%$ again on a third set of $64$ instances that no earlier stage used. The zero-best-response certificate certifies all $57$ in-sample solves and all $57$ fresh ones, and $58$ of the $59$ held-out ones. Its exact-comparator refinement certifies every solve in the three sets. The certificate states both and attributes its bound. Code is available at https://github.com/lbn187/CertNE.",
+  "link": "https://arxiv.org/abs/2610.29300",
+  "score": 2,
+  "why": "General-sum game Nash certificates, no finance data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.29652",
+  "source": "arXiv",
+  "title": "Distributions or Quantiles? A Convex Variational Theory of Worst-Case Risk",
+  "abstract": "Worst-case risk evaluation is central to finance and operations research, yet existing analytical results remain fragmented and largely confined to ambiguity sets with specific structures. Using spectral risk measures as the underlying class, we develop a convex variational theory that unifies these analyses and extends them to richer ambiguity models. The theory rests on a representation principle: use the quantile or distribution formulation that preserves convexity of the full ambiguity set. In both representations, the resulting optimality conditions provide a systematic route to identify the worst-case law and determine its risk value. This approach recovers classical central-moment bounds and yields closed-form or semi-closed-form solutions for practically motivated models involving Wasserstein ambiguity with tail stress, two-sided expected shortfall (ES) bands, asymmetric partial moments, geometric-moment bounds, and exponential- or Gaussian-reference Kullback--Leibler (KL) neighborhoods. Beyond these analytical results, the same theory yields projection-based algorithms with fixed-grid convergence under the stated assumptions. In a high-dimensional portfolio application, we establish an exact projection identity for mean-anchored joint KL ambiguity under a Gaussian reference. The resulting standardized worst-case ES coefficient applies to every portfolio, reducing robust portfolio selection to an exact second-order cone program after a single calibration.",
+  "link": "https://arxiv.org/abs/2610.29652",
+  "score": 2,
+  "why": "Worst-case risk theory, no data or implementation.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7651078",
+  "source": "SSRN",
+  "title": "Financial Assistance: Loan Conditionality as a Form of External Governance",
+  "abstract": "This paper examines the conditional lending practices of international financial institutions (“IFIs”), particularly the International Monetary Fund (“IMF”) and the World Bank, and argues that these practices can operate as a form of external governance that violates foundational principles of international law, including State sovereignty and non-intervention. AI Usage Disclosure: ChatGPT 4.0 was used to improve the readability of the text assist in formatting citations in this paper. All final content, data, analysis, and conclusions were independently written and approved by the author.",
+  "link": "https://www.ssrn.com/abstract=7651078",
+  "score": 1,
+  "why": "IMF governance law; AI only for readability.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7657132",
+  "source": "SSRN",
+  "title": "Research on Collaborative Optimization of STAR-RIS-Assisted Mobile Edge Computing Based on Game Theory and Pricing Mechanism",
+  "abstract": "With the rapid growth of 5G, IoT, and AI, mobile edge computing (MEC) has become essential for relieving terminal computation burdens and reducing task latency. In complex wireless environments, however, multi-user task offloading is jointly shaped by link quality, edge resource competition, server pricing, and user risk perception, so offloading models based only on latency or energy can hardly capture actual system operations. This paper therefore investigates task offloading and collaborative optimization in STAR-RIS-assisted MEC systems. We first build a STAR-RIS-assisted multi-user MEC model and formulate communication, computation energy, and pricing models, analyzing how STAR-RIS enhances uplink quality and offloading efficiency. We then introduce prospect theory to describe users' subjective perceptions of gains and losses under uncertainty and use a common resource pool to characterize congestion and failure risks in shared MEC servers. User-side offloading is modeled as a risk-aware non-cooperative game, while a pricing optimization model is established to maximize server revenue, forming a bi-level joint optimization framework that captures the interaction between offloading decisions and price adjustment. A distributed joint optimization algorithm is designed to solve the stable system solution collaboratively. Simulations show that the proposed method effectively balances user offloading demand and server load, comprehensively optimizing system revenue, task latency, energy control, and social welfare. This work offers theoretical reference for MEC resource management under multi-user competition in complex wireless environments.",
+  "link": "https://www.ssrn.com/abstract=7657132",
+  "score": 1,
+  "why": "Wireless edge computing; off-topic.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7657685",
+  "source": "SSRN",
+  "title": "Space Economy: Nigeria as a High-Growth Frontier Market — A Comprehensive Analysis of Investment Opportunities, Market Demand, and Strategic Development Pathways",
+  "abstract": "Nigeria's engagement with the global space economy stands at a decisive inflection point. Drawing on a bottom-up demand aggregation methodology, this paper assesses Nigeria's current position, market demand dynamics, and strategic pathways for growth within the global space sector. Nigeria's space economy, valued at approximately $1.5 billion in annual final demand, is the largest on the African continent, yet an estimated $625 million to $955 million flows abroad annually to foreign satellite service providers, reflecting a persistent dependency despite the country's unique infrastructure position as sub-Saharan Africa's only operator of both geostationary communications and Earth observation satellites. The analysis identifies four high-value investment segments, agricultural technology, satellite communications, Earth observation services, and defence and security applications, offering the most compelling near-term returns, and models three scenarios through which a strategically directed space program could contribute between $0.8 billion and $15 billion annually to GDP by 2035, depending on the pace and coherence of policy intervention. Three structural trends, declining launch costs, the rise of private space enterprise, and the integration of artificial intelligence into satellite data processing, combine with intensifying African regional competition to compress Nigeria's window for decisive action. The paper concludes with investment strategies and policy recommendations anchored in public-private partnership mechanisms, local capacity development, regulatory modernisation through a proposed Space Commerce Act, and strategic international partnerships with ISRO, ESA, and the African Space Agency, that together chart a pathway from passive consumption toward regional production and, eventually, export of space-enabled solutions.",
+  "link": "https://www.ssrn.com/abstract=7657685",
+  "score": 1,
+  "why": "Emerging-market space-economy opportunity scan; off-topic.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.29183",
+  "source": "arXiv",
+  "title": "Resuming Vision-Language Inference across Onboard Interruptions",
+  "abstract": "Executing vision-language models (VLMs) aboard low-Earth orbit satellites enables flexible processing of observation data without first downlinking it to the ground. On commercial off-the-shelf payloads, however, a request may span multiple execution windows: power and thermal constraints, fault-triggered reboots, and competing payload demands can interrupt inference before it completes. Each shutdown discards volatile activations and KV caches, forcing an unprotected request to repeat work after restart. We present OrbitWeaver, a framework that preserves VLM inference progress across onboard interruptions through coordinated checkpointing and recovery. Its phase-aware checkpointing selects recovery boundaries according to the state lifetimes and computational characteristics of vision encoding, language-model prefill, and decoding, balancing storage traffic against recomputation. Its dependency-aware dynamic recovery schedules restoration from partially completed states across the layer and token-chunk dimensions. By overlapping checkpoint and weight reads with recomputation, it reduces restart latency; the recovery planner computes an optimal execution order under its scheduling model within 100 ms. Experiments on satellite payload hardware using on-orbit telemetry traces show up to a 4.07-fold end-to-end speedup and a 3.56-fold reduction in SSD write volume over the evaluated baselines. A 72-hour deployment on two low-Earth orbit satellites demonstrates that OrbitWeaver retains inference progress and resumes execution across repeated bus-enforced shutdowns.",
+  "link": "https://arxiv.org/abs/2610.29183",
+  "score": 1,
+  "why": "Satellite VLM; off-topic.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.29637",
+  "source": "arXiv",
+  "title": "Formalizing Cooperation and Competition: An AI-Assisted Mathematical Addendum to a 2018 Planning Thesis",
+  "abstract": "We present an AI-assisted mathematical addendum to Strategic Trip Planning: Striking a Balance Between Competition and Cooperation (Amar, 2018). We reconstruct selected relationships between strategic choice, cooperative stability, participant approval and enforcement. The thesis's Nash-to-core proposition is under-specified until outsider opportunities are stated. We verify two-person implications under fixed outsiders and explicit efficiency conditions. Under isolation, the original example has an empty TU core; its funded counterpart uses an explicit external subsidy. For a monotone resource model we characterize the exact financing gap. A finite negotiation procedure implemented in Lean is proved to terminate with participant approval, joint-cost non-worsening and local optimality against permitted approved moves. Supporting formalizations address bargaining geometry and regret-based efficiency. A resource-game counterinstance shows why monotonicity alone provides no uniform price-of-anarchy bound. Reproducible computations compare a documented heuristic reconstruction with the verified procedure on 44 source-based instances and 96 starting cases from four additional synthetic network families. Acceptance-matched heuristic and randomized pairwise-search controls contextualize the optimization results. The mathematical ingredients are established results; the contribution is a traceable reconstruction linking source statements, explicit assumptions, checked proofs, executable code and retained counterinstances. The study illustrates how AI-assisted investigation can turn engineering intuitions from legacy research into precise mathematical claims whose conditions and computational consequences can be inspected and reproduced.",
+  "link": "https://arxiv.org/abs/2610.29637",
+  "score": 1,
+  "why": "Lean thesis addendum; off-topic.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
