@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Retrieval-Augmented Generation and Parameter-Efficient Fine-Tuning for Financial Question Answering: Evidence from the FinQA Benchmark</title>
+    <link>https://www.ssrn.com/abstract=7659718</link>
+    <description>Retrieval augmentation lifted a 4-billion-parameter financial QA model from 17.2% to 64.4% exact match, matching parameter-efficient fine-tuning at 63.9%.</description>
+    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7659718</guid>
+  </item>
+  <item>
+    <title>Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core</title>
+    <link>https://arxiv.org/abs/2610.30557</link>
+    <description>A protected invariant core cut a 24.6% sector drawdown to 0.3% and lowered maximum drawdown under all 50 random entry policies.</description>
+    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.30557</guid>
+  </item>
+  <item>
+    <title>When News Gets Old: Portfolio Allocation with Reinforcement Learning and Large Language Models</title>
+    <link>https://arxiv.org/abs/2610.30564</link>
+    <description>Filtering old news yielded 18.43% annual net returns for LLM portfolios with four-week delays, beating all news-using RL strategies.</description>
+    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.30564</guid>
+  </item>
+  <item>
+    <title>Intraday Forecasting Ability and Liquidity Provision of Institutional Traders</title>
+    <link>https://arxiv.org/abs/2610.31141</link>
+    <description>One passive execution raised intraday P&amp;L by 1.28 currency units versus none, exceeding the 1.19-unit gain from a one-standard-deviation forecasting increase.</description>
+    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.31141</guid>
+  </item>
+  <item>
+    <title>Headline Emphasis and Stock Returns: Evidence from Counterfactual Headlines</title>
+    <link>https://www.ssrn.com/abstract=7656344</link>
+    <description>A one-standard-deviation rise in headline divergence predicts nine basis points higher next-month returns through initial overreaction and later correction.</description>
+    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7656344</guid>
+  </item>
+  <item>
+    <title>The Common Advice: Evidence on AI Redundancy in Stock Prices</title>
+    <link>https://www.ssrn.com/abstract=7658898</link>
+    <description>After ChatGPT, common AI signals still forecast positive earnings announcement returns, indicating market underreaction rather than AI-driven overreaction.</description>
+    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7658898</guid>
+  </item>
+  <item>
     <title>CrashGym: Measuring the Decision Value of Experimentation for LLM Agents in Counterfactual Market Crashes</title>
     <link>https://arxiv.org/abs/2610.29245</link>
     <description>Laboratory access cuts Luna&#x27;s mean market-crash decision regret by 57.4 percent versus observe-only deployment.</description>
@@ -627,48 +669,6 @@
     <description>LASSO benchmarks reveal active mutual fund alpha Fama-French models obscure.</description>
     <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7508299</guid>
-  </item>
-  <item>
-    <title>Beta Recall, Alpha Recall, and a Contamination Detector that Needs No Labels * Measuring Training-data Leakage in LLM Equity Signals</title>
-    <link>https://www.ssrn.com/abstract=7485818</link>
-    <description>LLM stock-ranking performance inside its training window is substantially recall-based rather than predictive.</description>
-    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7485818</guid>
-  </item>
-  <item>
-    <title>Execution-Aware Alpha Mining: Teaching LLM Factor Agents to Account for Trading Costs​</title>
-    <link>https://www.ssrn.com/abstract=7498983</link>
-    <description>LLM alpha-mining agents optimized on gross returns converge to economically catastrophic turnover without explicit execution-cost penalties.</description>
-    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7498983</guid>
-  </item>
-  <item>
-    <title>SoK: Trading Agents or Market Crashers? Dissecting Robustness and Security Failures in Academic Financial LLM Trading Schemes</title>
-    <link>https://arxiv.org/abs/2609.19705</link>
-    <description>Every academic LLM trading agent scheme examined exhibits security vulnerabilities enabling low-cost market-crash attacks.</description>
-    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2609.19705</guid>
-  </item>
-  <item>
-    <title>Why Discovery Layers Guarantee Crowded Alpha: A Design Case for Quality-Diversity Search in Agentic Trading Systems</title>
-    <link>https://www.ssrn.com/abstract=7488920</link>
-    <description>A discovery layer optimized purely for predictive quality is structurally guaranteed to converge on crowded factors.</description>
-    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7488920</guid>
-  </item>
-  <item>
-    <title>A Three-Layer Reference Architecture for Deterministic Control in Agentic Trading Systems</title>
-    <link>https://www.ssrn.com/abstract=7488978</link>
-    <description>Three-layer architectures with hard-gated execution prevent documented agentic trading failures.</description>
-    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7488978</guid>
-  </item>
-  <item>
-    <title>EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents</title>
-    <link>https://arxiv.org/abs/2609.17632</link>
-    <description>System-prompt evolution using portfolio feedback improves LLM trading agents&#x27; Sharpe ratios in tested market regimes.</description>
-    <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2609.17632</guid>
   </item>
 </channel>
 </rss>

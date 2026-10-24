@@ -1,0 +1,302 @@
+[
+ {
+  "key": "10.2139/ssrn.7659718",
+  "source": "SSRN",
+  "title": "Retrieval-Augmented Generation and Parameter-Efficient Fine-Tuning for Financial Question Answering: Evidence from the FinQA Benchmark",
+  "abstract": "General-purpose large language models (LLMs) answer finance questions poorly when firm-specific evidence is unavailable at inference time: asked cold, a 4-billion-parameter model solves only 17.2% of the FinQA benchmark of numerical questions over S&P 500 earnings reports. This paper asks where the accuracy of a grounded financial question-answering system comes from, and what that ac curacy costs. Westudyafullyself-hostedexperimentalpipelinethatcombineslayout-awaredocument parsing (Docling), hybrid dense–sparse retrieval with bge-m3 and BM25, cross-encoder re-ranking, citation-grounded generation with Qwen3-4B served by vLLM, and deterministic execution of the final arithmetic. Holding the generator fixed and manipulating only the evidence supply, retrieval augmentation raises exact-match accuracy from 17.2% to 64.4%—a 47.2-point, 3.7× relative gain. A QLoRA fine-tune of the same model on 12,000 instruction-format examples from the FinQA training split reaches 63.9% under the identical protocol—parity within half a point—while training only 33M parameters (0.81% of the model) in 3.5 hours at a 6.34 GB peak VRAM on a single consumer-grade 12 GB GPU.The decomposition isolates access to external evidence, not parametric capacity, as the binding constraint on domain question answering at this scale, and it characterises what parameter efficient adaptation does and does not add. Error analysis of the residual failures identifies retrieval misses, table-cell grounding, and multi-step composition as the dominant remaining barriers. AI Dis closure: AI-assisted tools were used in preparing this manuscript and in developing the experimental system; all results were produced and verified by the author, who takes full responsibility for the content.",
+  "link": "https://www.ssrn.com/abstract=7659718",
+  "score": 8,
+  "why": "RAG beats fine-tuning on FinQA with pipeline.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.30557",
+  "source": "arXiv",
+  "title": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
+  "abstract": "LLM agents that act on live Web data must combine heterogeneous evidence, remember what they have done and improve from outcomes without weakening their own safeguards. We study this problem in autonomous investing, where every action is irreversible and based on untrusted Web content. We present Steward, a multi-agent LLM system that draws the boundary of self-evolution in its type system. First, nine role-specialised agents decide jointly: four analysts read news feeds, SEC filings, macroeconomic series and market data and emit typed reports, from which a Portfolio Manager sets target positions that a protected Risk Manager audits. Second, a seven-layer shared memory, assembled by code from the system's own record, gives each decision its position context, the market narrative, calibration and the agent's past decisions. Third, the system improves itself by review: code grades every trade and forecast nightly and writes the grades into memory, and each quarter a reflector proposes prompt learnings that a deterministic gate applies reversibly and replay of recorded inputs verifies. All three operate around an invariant core of order arithmetic, risk rules and discipline-agent prompts that no self-edit can reach. In a five-month live deployment (102 trading days, 1,632 LLM calls), the system contained a 24.6% sector drawdown to a 0.3% loss; in replay of its recorded inputs, a single model given the same raw data traded more and lost 1.35 points against the market over five days where the joint design showed no significant loss, and no injected instruction was followed; and a 2015-2026 backtest shows the core alone lowering the maximum drawdown under all 50 random entry policies. The reflector traced the dominant failure to its root cause, and the gate applied a learning that the agent adopted on trigger evenings and on no control evening. Code: https://github.com/yebof/quant-agent",
+  "link": "https://arxiv.org/abs/2610.30557",
+  "score": 8,
+  "why": "Multi-agent investing system with risk audit.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.30564",
+  "source": "arXiv",
+  "title": "When News Gets Old: Portfolio Allocation with Reinforcement Learning and Large Language Models",
+  "abstract": "Financial news can influence investment decisions long after publication. Timely news may reach an investor before prices fully adjust, whereas older news may already be reflected in prices. We examine two ways to handle aging signals: retain them and give a portfolio policy timing information, or filter them out before portfolio selection. A fixed large language model (LLM) extracts signals from public SEC disclosures. We compare these treatments in reinforcement learning (RL) policies and LLMs that choose portfolios directly. We evaluate returns after trading costs in historical tests over 2023-2025. RL choices respond to timing information in a controlled test, but historical returns show no consistent benefit from adding it. For the LLM, filtering old news produced the highest average net return, reaching 18.43% per year when news delivery was delayed by four weeks. This exceeded the returns of all RL strategies that used news.",
+  "link": "https://arxiv.org/abs/2610.30564",
+  "score": 8,
+  "why": "LLM portfolio filtering beats timing; costs included.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.31141",
+  "source": "arXiv",
+  "title": "Intraday Forecasting Ability and Liquidity Provision of Institutional Traders",
+  "abstract": "This study uses a high-frequency dataset from a stock exchange to examine how forecasting ability and liquidity provision relate to institutional traders' proprietary intraday profitability. We discover persistent forecasting abilities among traders. Specifically, we demonstrate that hypothetical flow-following strategies based on the execution flows of these skillful traders yield annualized Sharpe ratios ranging from 16 to 63 across various trading frequencies. We match buy and sell executions into positions, linking realized profit and loss (P&L) to horizon-matched forecasting proxies and the liquidity roles of both executions. Our findings indicate a direct correlation between improved forecasting ability and profitability, where a one-standard-deviation increase in the forecasting ability proxy is associated with 1.02 -- 1.19 currency units higher P&L per matched position. Additionally, we measure liquidity-provision intensity within a matched position by its number of passive executions: zero, one, or two. In these regressions, P&L is 1.28 -- 1.31 currency units higher for one passive execution than for none, and a further 3.79 -- 3.82 higher for two than for one, underscoring the significant financial benefits of liquidity provision.",
+  "link": "https://arxiv.org/abs/2610.31141",
+  "score": 8,
+  "why": "Institutional flow forecasting linked to execution P&L.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7656344",
+  "source": "SSRN",
+  "title": "Headline Emphasis and Stock Returns: Evidence from Counterfactual Headlines",
+  "abstract": "Financial news headlines emphasize selected aspects of a broader story. We study the pricing implications of this choice by comparing published headlines with counterfactual headline distributions generated from the same articles using large language models. Among historical S&P 500 constituents during 2000-2024, a standard-deviation increase in headline divergence predicts 9 basis points higher next-month returns. Greater divergence is associated with an initial price decline followed by recovery over subsequent weeks. Predictability is stronger for longer articles and firms with less news coverage. The findings support a price-correction interpretation in which investors initially overweight the facts highlighted in headlines and gradually incorporate the article's remaining information.",
+  "link": "https://www.ssrn.com/abstract=7656344",
+  "score": 7,
+  "why": "LLM counterfactual headlines predict returns; OOS evidence.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7658898",
+  "source": "SSRN",
+  "title": "The Common Advice: Evidence on AI Redundancy in Stock Prices",
+  "abstract": "Generative AI may help investors process public information, but widespread use of the same models can make their decisions more alike. This paper asks whether common AIrelated information remains underused in stock prices or has become sufficiently reflected that further reliance produces overreaction. We derive a sign restriction from a noisy rational expectations model: conditional on the price, the common signal predicts returns positively when underused and negatively when overweighted. We test this prediction around 98,461 U.S. earnings announcements from 2015 to 2025 using a point-in-time information index and stocks' exposure to retail orders routed through brokers that later introduced AI assistants. After ChatGPT, the signal predicts announcement returns positively across all exposure groups, with a significant association among the most exposed stocks. We find no exposure-related change after ChatGPT or broker launches. The evidence is consistent with continued underreaction, rather than AI-induced overreaction, in this empirical setting.",
+  "link": "https://www.ssrn.com/abstract=7658898",
+  "score": 7,
+  "why": "Large-N test of AI information in prices.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7661576",
+  "source": "SSRN",
+  "title": "Regime-Aware Portfolio Management via Retrieval-Augmented LLM-Guided Expert Switching",
+  "abstract": "Financial markets are inherently non-stationary, making the effectiveness of individual portfolio-management strategies highly dependent on changing market conditions. This work proposes a retrieval-augmented expert-switching framework that dynamically selects portfolio-management experts based on their historical performance under similar market situations. A dual-stream variational autoencoder represents asset-level and market-wide information, while a retrieval-based knowledge base stores historical situations and expert performance. During inference, an instruction-tuned LLM reasons over the retrieved evidence to identify the most appropriate expert rather than directly generating portfolio actions. We further establish a monotonicity property showing that adding a locally superior expert cannot degrade the switching mechanism’s performance. Experiments across cryptocurrency, stock, and foreign-exchange markets show that the proposed selector achieves the highest cumulative return and Sharpe ratio among the evaluated selection strategies in all three markets. In the stock market, for example, cumulative return increases from 26% for the best fixed expert to 34%, while the Sharpe ratio improves from 0.74 to 0.96. Ablation results confirm the importance of both retrieval and LLM reasoning, while experiments with different expert-pool sizes demonstrate the value of complementary expertise. Overall, the findings support retrieval-grounded expert switching as an effective approach to adaptive portfolio management in nonstationary financial environments.",
+  "link": "https://www.ssrn.com/abstract=7661576",
+  "score": 7,
+  "why": "RAG-guided LLM expert switching for portfolios.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.31436",
+  "source": "arXiv",
+  "title": "Conservative Meta-Agent Search: Architecture Adaptation under Non-Stationarity",
+  "abstract": "Automated agentic-system design is typically evaluated on static task suites with immediate scalar rewards. Deployed systems face persistent shift, delayed dependent feedback, correlated component failures, and costly architecture changes. We formalize meta-agent architecture search as sequential incumbent replacement with switching costs and hard risk constraints and introduce Conservative Meta-Agent Search (CMAS). CMAS retrieves archived architectures and proposes typed graph edits, then scores each against the incumbent by paired shadow replay under common random numbers, with interventional component credit. Promotion requires an empirically calibrated, variance-penalized simultaneous score above a pre-specified margin, and is followed by a simulated canary stage and pre-specified rollback. Since backtests cannot certify meta-level skill, we introduce MetaInvest-Bench, a regime-switching simulator whose specified worker competence makes a surrogate-optimal architecture computable, with leakage-controlled replay, adversarial governance tracks, and five negative controls. Financial streams serve as a risk-sensitive testbed for meta-level generalization; we claim no alpha. Across 96 streams, CMAS cuts normalized mean surrogate dynamic-oracle regret from 0.116 to 0.104 and raises held-out utility from 0.44 to 0.48 over the strongest adaptive baseline; when extra workers add no value, it contracts to near-single-agent teams. Its deployment inference cost is ~6% lower, though its search-inclusive token cost is the highest of the methods compared. The observed per-update false-promotion rate is 3.4% against a nominal 5% target, and 4.8% in a sealed rerun. The calibration is empirical: it concerns an update-level replay statistic on an author-designed benchmark, and guarantees neither full-utility improvement, nor absence of simulated canary-stage harm, nor sequence-level error control.",
+  "link": "https://arxiv.org/abs/2610.31436",
+  "score": 7,
+  "why": "Meta-agent search with risk constraints and bench.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7661553",
+  "source": "SSRN",
+  "title": "Talk or Walk? AI Disclosure and Firm Idiosyncratic Volatility: Evidence from Korea",
+  "abstract": "This study examines the relationship between corporate artificial intelligence (AI) disclosures and firm-level idiosyncratic volatility. Using a validated large language model (LLM) benchmarked against two human coders, we analyze 65,485 AI-related sentences in the annual reports of Korean listed firms to measure promotional tone (AI Talk) and verifiable substantiation (AI Walk). On held-out data, the model's agreement with the human Walk grades (weighted κ = 0.81) approaches that between the coders (0.90). Across 3,831 firm-year observations from 2020 to 2024, firms with better-substantiated AI disclosures exhibit significantly lower idiosyncratic volatility in the following year, whereas promotional tone shows no robust association. The association holds across alternative volatility measures, additional controls, matching and a selection model, and it arises from differences between firms rather than from changes within firms. It is also distinct from AI capability: AI patents, a common proxy for such capability, are associated with higher volatility. Our findings suggest that the substantiation of AI disclosures is associated with lower firm-specific risk, and that a validated LLM can measure such substantiation where external data on AI activity are unavailable.",
+  "link": "https://www.ssrn.com/abstract=7661553",
+  "score": 6,
+  "why": "Validated LLM disclosure measure, single-country equity.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.31074",
+  "source": "arXiv",
+  "title": "Directionally Correct Views in Portfolio Optimization",
+  "abstract": "Portfolio optimization techniques often use historical data to estimate parameters for Markowitz-type or ML models. Effective allocation requires a way to align the available data with conditions expected over the investment horizon. Inspired by the Black-Litterman framework, we ask whether incorporating expert views leads to better portfolio allocations. In a simple Markowitz setting, we show that even a small amount of directionally correct information can materially improve investment decisions. We also discuss how expert views can be incorporated in end-to-end portfolio models using entropy-based ideas. Somewhat surprisingly, our empirical results indicate that simpler Markowitz-type model perform as well as an end-to-end model, once directionally correct experts are incorporated.",
+  "link": "https://arxiv.org/abs/2610.31074",
+  "score": 6,
+  "why": "Expert views help Markowitz; no real data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7652118",
+  "source": "SSRN",
+  "title": "Profitability and Regulation in Credit Scoring: A Multi-objective Feature-selection Framework",
+  "abstract": "Machine learning is increasingly used in consumer credit scoring to improve risk discrimination and lending profitability. However, its growing reliance on extensive borrower information raises regulatory concerns regarding algorithmic fairness and data minimisation. Existing methods typically address these objectives separately and treat decision thresholds as pre-specified or independently calibrated, despite their influence on both profitability and fairness. This study proposes a nested multi-objective feature selection framework that jointly considers lending profitability, fairness, and data minimisation. At the inner level, each candidate feature subset is evaluated across a range of thresholds to identify its non-dominated profitability–fairness frontier. At the outer level, the inner frontier is incorporated into an evolutionary search over feature subsets to approximate the three-objective global Pareto frontier. Empirical evaluations across three credit-scoring datasets, eight benchmark methods, and two measures of lending-decision disparities show that the proposed framework identifies a diverse set of competitive solutions, many of which remain non-dominated against competing methods. The resulting frontier enables lenders to select feature subset–threshold combinations that balance profitability, fairness, and data minimisation according to their operational preferences and regulatory considerations.",
+  "link": "https://www.ssrn.com/abstract=7652118",
+  "score": 5,
+  "why": "Credit-scoring framework, no code/dataset/LLM angle.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.30758",
+  "source": "arXiv",
+  "title": "Can Loan Processors and Underwriters Spot AI-Edited Statements? An Empirical Study",
+  "abstract": "AI-assisted editing can produce loan documents that preserve familiar issuer layouts while changing the applicant's identity. We investigated whether experienced underwriters and loan processors identify such forgeries in first-pass, document-only review. Three practitioners recruited through Upwork each received one applicant package drawn from 134 forged PDFs derived from 47 genuine financial documents supplied with full consent. The edits preserved amounts, dates and balances; identifier inconsistencies introduced by the pipeline were knowingly retained before distribution. Reviewers were not told that files had been altered and returned 132 file-level judgements. Checking their explanations against the originals yielded 14 edit-supported concerns (10.6%): 12 Suspicious judgements and two Insufficient information judgements. All supported concerns involved identifier disagreements within or across documents, and no reported visual cue identified an actual edit. Thus, approximately one in ten judgements contained evidence of the forgery, despite known inconsistencies remaining in the files. These observations motivate evaluating consistency checks and independent source verification alongside human review. With three reviewer-package pairs and no genuine-file controls, the findings describe this exploratory setting rather than population-wide detection accuracy.",
+  "link": "https://arxiv.org/abs/2610.30758",
+  "score": 5,
+  "why": "Tiny human forgery-detection study, forgettable.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.30891",
+  "source": "arXiv",
+  "title": "Equilibria and Learning in Competitive Market Making",
+  "abstract": "We propose a market-making game played among $N \\ge 2$ strategic market makers and a single non-strategic representative trader. In a continuous quote space, standard finite-game arguments do not apply, while non-convex and discontinuous payoffs rule out classical continuous existence results and complicate learning. Nonetheless, we characterize pure-strategy Nash equilibria (PSNEs) and show that at least one PSNE always exists under minimal assumptions on the underlying asset value distribution, and that the equilibrium bid-ask spread widens strictly with asset value volatility. To obtain a tractable learning framework, we discretize prices and, under an additional regularity condition, show that the time-averaged play of no-internal-regret learners approaches the continuous Nash price envelope as the tick size vanishes. Finally, we empirically validate our theoretical results through numerical simulations.",
+  "link": "https://arxiv.org/abs/2610.30891",
+  "score": 5,
+  "why": "Market-making equilibrium theory, light empirics.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7653523",
+  "source": "SSRN",
+  "title": "An Event-Driven Medallion Architecture with Domain-Driven Design for Training-Serving Consistent Credit Risk Feature Engineering",
+  "abstract": "Background. Machine learning systems for credit risk in regulated financial services must handle four engineering problems together: training-serving skew, late-arriving events, data leakage across business-domain boundaries, and reproducibility of features for audit. Existing architectures, including Lambda, Kappa, the three-tier Medallion pattern, and standalone feature stores, each address only a subset of these problems. Methods. We present the Event-Driven Medallion architecture with Domain-driven design (EDMD), which combines event-driven processing, a four-tier Medallion storage design, and Domain-Driven Design (DDD) bounded contexts for real-time credit risk feature engineering. EDMD is specified as a 5-tuple with four design properties: training-serving consistency through a single event-time computation path, class-specific late-event recovery, domain isolation through anti-corruption layer contracts, and deterministic replay for audit. A fourth tier, Platinum, holds versioned model-ready features with embedded lineage metadata and drift monitoring, and its controls are mapped to SR 11-7 and BCBS 239 expectations. We compare EDMD with Lambda, Kappa, three-tier Medallion, and feature store baselines in an open simulation benchmark that models each architecture by the rule that decides which events reach a feature on its training and serving paths, over a generated stream of about 3.4 million events for 50,000 accounts, with five random seeds. Results. EDMD was the only architecture with both zero training-serving skew and full recovery of late events. Kappa had low skew (0.009) but recovered 50% of late events, Lambda and the feature store recovered all late events but had the highest skew (0.064 and 0.057), and the three-tier Medallion pipeline was intermediate on both. The effect on model quality was small: serving-time AUC was 0.856 for EDMD and 0.853 for every baseline, a difference of 0.003 that was positive in all five seeds but within one standard deviation of seed-to-seed variation. The cost of versioning was that 10.1% of served Platinum records later received a corrected version. Conclusions. Combining one computation path, training on as-served values, and versioned late-event correction removes skew without giving up completeness. In this simulation that consistency produced only a small gain in AUC. The benchmark models architectural semantics rather than running streaming engines, so latency and throughput are not measured, and validation on production event streams remains future work.",
+  "link": "https://www.ssrn.com/abstract=7653523",
+  "score": 4,
+  "why": "Architecture spec only, no implementation evidence.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7659538",
+  "source": "SSRN",
+  "title": "The Future of Investment: Programmable Investments : The Computational Foundations of Financial Intelligence, Investment State, and Digital Capital",
+  "abstract": "The most valuable data about an investment are held by financial institutions, but that data is dispersed across agreements, spreadsheets, valuations systems, and memos without a common vocabulary or explicit links between each other. This paper develops a computational architecture for a persistent, evidence-backed representation of an investment whose accepted state, assumptions, sources, and computation rules are captured explicitly. The Investment Object is defined as a typed five-dimensional state including financial, contractual, risk, thesis, and evidence data, while the Financial State Dynamics Model (FSDM) is defined as a model controlling state transitions of the Investment Object, quantifying both unfavorable and favorable deviation from the investment thesis, and tracing changes propagation to dependent computations, financing, and tokens. The proposed system separates the AI-based interpretation of the data from deterministic computations and from the authorization process. A sample private-credit scenario is described in this paper as an illustration of the FSDM model: the reduction of the borrower's EBITDA from $50M to $40M impacts covenant headroom, loan valuation, the borrowing base of a fund, and a resulting liquidity gap. No empirical results are provided; only baseline experiments, metrics, and falsifiable hypotheses are proposed.",
+  "link": "https://www.ssrn.com/abstract=7659538",
+  "score": 4,
+  "why": "Investment architecture position paper, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7650439",
+  "source": "SSRN",
+  "title": "Runtime Authorization and Containment of AI Agents in Financial Security Operations",
+  "abstract": "Tool-using artificial intelligence agents can remain authenticated while taking actions outside an operator's delegated purpose. Financial security operations therefore require controls over execution trajectories as well as safeguards for model inputs and outputs. This study critically synthesizes selected research, institutional guidance, and first-party incident reports to examine how agent authorization and containment can be expressed through existing security operations capabilities. A targeted, seed-based literature update and source check conducted on 18 October 2026 informs the synthesis; the study is non-systematic and does not estimate the prevalence of agent failures. Its analytical contribution is an explicit crosswalk among task boundaries, observable events, enforcement decisions, containment verification, and residual failure conditions. The resulting specification defines an authorization envelope, a minimum event schema, decision precedence, illustrative detection rules, and recovery requirements. Public incident narratives are used as qualitative stress cases, while two hypothetical financial-SOC workflows demonstrate how the specification distinguishes authorized investigation from unauthorized intervention. The analysis identifies three consequential gaps between nominal control coverage and operational assurance: unmediated execution paths, uncertain authority or telemetry, and unverified containment effects. A prospective evaluation protocol separates prohibited side effects from attempted violations and measures security alongside legitimate task completion, latency, and analyst burden. No implementation, experiment, production deployment, or practitioner validation is reported. The study contributes a testable integration specification and a bounded analytical synthesis; it does not establish detection accuracy, general model alignment, regulatory compliance, or prevention of the incidents discussed.",
+  "link": "https://www.ssrn.com/abstract=7650439",
+  "score": 3,
+  "why": "Security-operations synthesis, no implementable ML method.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7654758",
+  "source": "SSRN",
+  "title": "Algorithmic Scarcity and Dynamic Price Elasticity: Evaluating Consumer Perceptions of AI-Driven Surge Pricing across Indian Quick-Commerce Platforms during Demand Spikes",
+  "abstract": "Purpose. Within roughly three years, Indian quick-commerce platforms have moved from subsidised delivery to a layered set of handling fees, small-cart charges, late-night fees and surcharges that switch on when it rains or when demand peaks. This paper examines how these context-dependent charges function as a pricing and marketing instrument on Blinkit, Zepto, Swiggy Instamart, Zomato and Flipkart Minutes, and how consumers are likely to interpret them in terms of fairness, trust and loyalty. Design/methodology/approach. The study follows a convergent mixed-evidence design. A structured documentary audit of 37 dated public sources (2022 to September 2026) maps each platform's fee architecture, its triggers, the point at which it is disclosed and the justification offered for it. The audit is combined with a synthesis of published consumer-survey evidence and regulatory records, and with a fee-incidence analysis across basket sizes. Instead of assuming that a particular artificial-intelligence model sets prices, the study classifies observable pricing behaviour on a five-level algorithmic involvement ladder. Findings. Weather-and demand-contingent surcharges are documented on four of the five platforms studied, are applied by administrative area (at pin-code level on at least one platform), and are justified mainly as compensation for delivery partners. Ancillary charges are sharply regressive: under the November 2025 fee schedules they amounted to between onethird and three-fifths of a ₹90 basket, but to almost nothing on baskets above ₹300. Consumer evidence shows broad resentment of checkout-stage charges coexisting with continued use, an awareness-action gap. Competitive behaviour is consistent with this reading: one platform advertised the removal of rain and surge fees as its headline value proposition, while the market leader retained them and continued to gain share. Originality/value. The paper introduces two constructs, algorithmic scarcity and temporal elasticity asymmetry, develops a framework with ten testable propositions, and provides a scale-based instrument and a price-observation protocol for confirmatory research. It also sets out implications for platform managers and for India's emerging enforcement of the 2023 darkpattern guidelines.",
+  "link": "https://www.ssrn.com/abstract=7654758",
+  "score": 3,
+  "why": "Single-country consumer survey, no transferable method.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7655159",
+  "source": "SSRN",
+  "title": "The Economics of Computational Uncertainty Dynamic Predictive Compute Pricing as a Probabilistic Consumption Model for Artificial Intelligence",
+  "abstract": "Large language model services increasingly combine fixed subscription payments, finite resource allowances, usage-based purchases, and autonomous execution workflows. The computational resources required by a proposed task may be difficult for a subscriber to predict before authorizing execution. By contrast, providers maintain detailed request accounting and historical operational telemetry. This paper proposes Dynamic Predictive Compute Pricing (DPCP), an optional pre-execution information service that quotes a bounded forecasting price, debits a disclosed quantity of a subscriber’s existing usage allowance, and returns a calibrated predictive distribution for the proposed task’s eventual resource consumption. Forecast acquisition is a distinct economic event whether or not the user subsequently executes the task. The paper develops a two-sided economic framework. Providers may gain forecasting-related usage consumption, higher expected execution volume, additional capacity purchases, and operational intelligence. Subscribers may gain better task selection, fewer unforeseen interruptions, and more efficient allocation of scarce computational capacity. These outcomes need not move together. Crucially, a debit to a prepaid or bundled allowance is not itself incremental cash revenue. Profitability must be established through counterfactual contribution accounting. We further identify a behavioral channel in which paying for predictive information can alter execution decisions through sunk-cost mechanisms and heightened reliance on purchased advice, and a secondary strategic channel involving transparency, acquisition, and competitive imitation. A falsifiable validation program is proposed, incorporating calibrated predictive coverage, forecast willingness to pay, subscriber utility, randomized execution behavior, acquisition lift, and contribution margin. The study establishes a coherent mechanism and research agenda, not proof that DPCP is already commercially successful.",
+  "link": "https://www.ssrn.com/abstract=7655159",
+  "score": 3,
+  "why": "Theoretical compute pricing, no data or code.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7658719",
+  "source": "SSRN",
+  "title": "The Delegated Autonomy Gap: Agentic Finance And The Emergence Of Action Governance",
+  "abstract": "Financial regulation increasingly governs artificial intelligence (AI) through frameworks that address models, data, system life cycles and human oversight. Agentic AI creates a distinct regulatory problem when institutions delegate consequential decision-making and execution authority to artificial agents. This paper develops the delegated autonomy gap (DAG), defined as a material misalignment between the form and scope of delegated machine authority and the governance capacities available to structure and control its exercise. Drawing on structured documentary analysis of 27 regulatory and policy documents published by 31 August 2026, the paper examines regulatory constructions of machine authority across financial settings. It identifies five constitutive dimensions of action governance capacity: mandate, permissioning, boundaries, observability, and intervention and contestability. The paper situates the DAG within scholarship on regulatory delegation, meta-regulation, accountability infrastructures, algorithmic governance and meaningful human control. It distinguishes between institution-level delegated autonomy and action amplification, through which speed, scale, common dependencies, behavioural correlation and interconnectedness may extend the effects of machine action beyond the institution. The analysis shows that agentic finance does not displace established model and organisational governance but introduces a governance fit problem concerning how regulated institutions confer, constrain and remain accountable for consequential machine authority.",
+  "link": "https://www.ssrn.com/abstract=7658719",
+  "score": 3,
+  "why": "Regulatory governance framework, no implementation.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7659878",
+  "source": "SSRN",
+  "title": "Rails, Software and Trust: The Global Fintech Industry, 2026-2030",
+  "abstract": "Global fintech revenue reached an estimated $504 billion in 2025, up 22% in a year and growing about four times faster than traditional banks (BCG & FT Partners, 2026). That headline hides a sharp divergence. A small group of companies that own payment rails, sell indispensable software to merchants, or hold the regulated balance sheets that customers trust are compounding at high margins. Meanwhile, several former leaders have stalled, been put up for sale, or seen their earnings swing with crypto prices and interest rates. This paper sizes the fintech market, explains what is driving its growth, analyzes sixteen of the most important companies in the sector using results through mid-2026, and maps the emerging trends most likely to reshape it by 2030: stablecoins, AI agents that shop and pay on a customer's behalf, real-time payment rails, and an unsettled U.S. regulatory regime. Each company is scored on five dimensions of business quality and then compared against its current valuation. The central finding is that durable advantage in fintech now comes from three sources, summarized in the title: rails (networks that sit in the middle of every transaction), software (platforms merchants cannot easily rip out), and trust (licensed, profitable institutions that customers make their primary financial home). Mastercard, Visa and Stripe score highest on business quality. Nu Holdings, Adyen and Revolut form a strong second tier. Nu offers the most attractive combination of quality and price among listed companies, while PayPal, Block, Fiserv and the crypto-linked names face structural questions that low valuations alone do not answer.",
+  "link": "https://www.ssrn.com/abstract=7659878",
+  "score": 3,
+  "why": "Fintech industry roadmap, no actionable method.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.30539",
+  "source": "arXiv",
+  "title": "Dynamics of the Liquidity Profile in Concentrated Liquidity Provision: An SPIDE Approach",
+  "abstract": "We model the dynamics of the liquidity profile in Uniswap~V3 and other concentrated-liquidity automated market makers with a stochastic partial integro-differential equation (SPIDE). The profile, the aggregate of all provider positions across tick space, evolves under a degenerate Sturm--Liouville operator, which encodes mean-reverting concentration around the market price, coupled with a Hilbert--Schmidt integral operator, which captures nonlocal redistribution driven by provider repositioning. We establish existence and uniqueness of the mild solution in a weighted $L^2$ space built on the Gegenbauer eigensystem, and reduce the SPIDE to a coupled system of linear stochastic differential equations whose low-order modes describe the level, slope, and curvature of the profile. Pairing the SPIDE with a log-price process yields tractable expressions for pool reserves, pool value, and loss-versus-rebalancing under Ornstein--Uhlenbeck-type and Black--Scholes-type noise. A finite-rank calibration in a fixed reference frame, applied to three Uniswap pools, gives interpretable estimates and lowers active-band forecast error relative to a martingale benchmark on the two pools compatible with the stationary specification. On the third pool, out-of-sample diagnostics are consistent with nonstationarity, which motivates price-aware and time-varying extensions.",
+  "link": "https://arxiv.org/abs/2610.30539",
+  "score": 3,
+  "why": "Theoretical SPIDE for AMM liquidity, no code.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.31038",
+  "source": "arXiv",
+  "title": "Multichoice Modeling: Exploring Decision Configuration Space under Uncertainty",
+  "abstract": "Decision support has become sophisticated at exploring uncertainty, but much less so at representing the architecture of the decision itself. As a result, the decision space is often narrowed before uncertainty is analyzed, leaving interactions among choices and the effects of alternatives they imply largely invisible. This paper introduces multichoice modeling, a framework for making large decision configuration spaces explicit and computationally explorable under uncertainty. Drawing on the logic of rugged landscapes, we conceptualize such problems as contingent performance landscapes, where interdependent choices generate configuration-specific outcomes whose value changes across uncertain futures. The computational framework combines multidimensional decision and uncertainty spaces in a single simulation. Further, variance-based sensitivity analysis is used for identifying influential choices, and conditional distribution analysis for comparing configuration-specific performance profiles. We demonstrate the framework through three case studies: a manufacturing process upgrade, M&A strategy, and mortgage design. By contrasting conventional uncertainty-only analysis with multichoice modeling, the cases show how opening the decision configuration space can reveal unexpected complementarities, near-best configurations with different risk profiles, and strategies that were not apparent as alternatives at the outset.",
+  "link": "https://arxiv.org/abs/2610.31038",
+  "score": 3,
+  "why": "General decision-space framework, not finance.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7653558",
+  "source": "SSRN",
+  "title": "When the Rules Collide: Explainability, Fairness, and Model Risk Governance in Algorithmic Lending",
+  "abstract": "Digital lending platforms, from fintech lenders to the online channels of banks, now approve, price, and manage credit with machine learning (ML) and nontraditional data. Each decision must meet three obligations at once: applicants must receive specific reasons for adverse decisions, outcomes must not discriminate against protected groups, and supervisors must be able to see that the model is sound, validated, and reproducible. Research and practice usually treat these obligations separately. This state-of-the-art review argues that the separation is itself an accountability problem. The obligations constrain one another: a fairness adjustment can weaken the calibration that capital rules depend on, an explanation can faithfully describe a model that has learned a biased pattern, and monitoring built for stable statistical models can miss harm that emerges after deployment. Platforms sharpen each tension because alternative data are harder to explain, frequent releases strain change control, and responsibility is split among platforms, partner banks, and model vendors. Drawing on US fair lending law, supervisory model risk guidance, Basel capital rules, and the EU AI Act, we trace each rule to the technical requirement it creates, the evidence a model validator would ask for, and the point where current methods fall short. Explanation methods are the most mature of the three. The choice among incompatible fairness criteria is a normative decision that lenders rarely document. Governance is where accountability is most often lost. We close with a research agenda of eight questions for information systems, finance, and ML research.",
+  "link": "https://www.ssrn.com/abstract=7653558",
+  "score": 2,
+  "why": "Explicit literature review, no new contribution",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7657819",
+  "source": "SSRN",
+  "title": "One Object, Five Fates: A Corpus Examination of Bitcoin and Crypto-Assets as Evidence in Indonesian Criminal Judgments",
+  "abstract": "Crypto-assets now routinely enter criminal cases as evidence, yet Indonesian criminal procedure has no rule to guide judges in distinguishing them from other objects when deciding their fate. This paper examines twenty-one criminal judgments involving bitcoin and similar crypto-assets, from first instance through case review (peninjauan kembali), retrieved from the Supreme Court Decision Directory through a question and hypotheses registered on the Open Science Framework before a single judgment was read (DOI 10.17605/OSF.IO/5XQDK). Each judgment is measured against the norms in force on the day it was rendered, and every claim carries a page address. Testing of the registered hypotheses shows that, among the judgments whose reasoning could be read in full, none applies a digital-asset norm, and victims appear as witnesses, not as parties with a claim to their assets. A full-text reading then finds, as an exploratory result, that the same object meets five fates: destroyed as an instrument of the crime, forfeited to the State, returned to the victim, vanished before the judge saw it, or merely attached to the case file. The paper explains these five fates as the product of two converging gaps, a status rule that is available but unused and a disposition rule never designed for intangible assets, and proposes six distinguishing rules under Law No. 20 of 2025. The paper was prepared with Silence Examination and the Two-Chair Test within the field of AI-Based Jurimetrics, and it openly records the deviations and errors that changed its content. AI disclosure. This paper was prepared with an artificial-intelligence model, Claude (Anthropic). The division of labor is set out in Part II.E: the author downloaded and supplied the text of each judgment; the machine read, matched, and drafted; every claim was checked against its source text before it was written. The English version was drafted with the same model from the Indonesian original and checked against it. The author is responsible for the entire content.",
+  "link": "https://www.ssrn.com/abstract=7657819",
+  "score": 2,
+  "why": "Indonesian crypto case law, irrelevant to quant.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7658339",
+  "source": "SSRN",
+  "title": "The Priesthood of the Runaway: Prophetic Exits, Capital Accumulation, and the Doctrine of Machine Volition in the AI Industry",
+  "abstract": "Frontier laboratories and the safety researchers who leave them describe advanced artificial intelligence in a shared eschatological register. The prophetic exit has consolidated as an institutional genre. Exit converts institutional office into prophetic authority, where risked equity certifies the sincerity of the warning while leaving its evidentiary basis unchanged. By 2026 the warning has become a corporate position, endorsed by the laboratories themselves amid sovereign co-investments and twenty-year commitments of nuclear power. An apocalyptic horizon survives disappointing product cycles, supplying the patience that multi-decade infrastructure investments require. Within the research field, symbolic capital favors describing misconfiguration exploits as machine volition, and evaluation designs that foreclose alternatives produce the behaviors their threat models predict. In litigation, published warnings establish the notice that defeats a superseding-cause defense. In regulation, the same vocabulary directs oversight toward speculative model capability and away from execution privileges, culminating in an executive accord that ratifies corporate self-governance. The warning that certifies the machine's power becomes the alibi that shields its custodians.",
+  "link": "https://www.ssrn.com/abstract=7658339",
+  "score": 2,
+  "why": "AI safety position paper, no systems content.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7659138",
+  "source": "SSRN",
+  "title": "Objective Functions as Governance Choices: An Agent-Based Exploration of Efficiency and Equity in Humanitarian AI",
+  "abstract": "Artificial intelligence (AI) and automated decision-support systems are increasingly used to allocate scarce resources in humanitarian and disaster response. Governance debates around these systems have focused on fairness, transparency, accountability, explainability, contestability, and bias. Less attention has been paid to an upstream design choice about the objective function, or what a system is asked to optimize. We argue that this choice is itself a governance decision, and that its distributional consequences are rarely tested directly. To examine this claim, we develop a simple agent-based model of humanitarian aid distribution, in which households with heterogeneous needs and vulnerability receive aid from agencies operating under scarcity. Holding the population, resources, and operating conditions constant, we vary only the allocation objective, comparing throughput-based allocation, which prioritizes proximity and efficient delivery, with vulnerability-based allocation, which prioritizes households identified as most in need. Changing the objective changes who is reached and how the unmet need is assisted. Throughput-based allocation reduces average need across the population and reaches substantially more households, while vulnerability-based allocation concentrates assistance among a smaller, higher-need group. The choice between throughput and vulnerability matters more than the specific way vulnerability is measured. We conclude that objective-function selection should be treated as a governance choice, made explicit, contestable, and open to audit, rather than as a neutral technical parameter.",
+  "link": "https://www.ssrn.com/abstract=7659138",
+  "score": 2,
+  "why": "Humanitarian aid, not financial domain.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7661158",
+  "source": "SSRN",
+  "title": "AI vs Traditional Accounting: Relevance and Impact in the Modern Economy",
+  "abstract": "The quick advance of Artificial Intelligence (AI) is converting accounting practices and financial management throughout the world. Traditional accounting relies mainly on human knowledge, manual processes and established accounting systems, while AIenabled accounting uses intelligent technologies to automate tasks, analyse financial information and support decision-making. This paper scrutinizes the importance of AI and traditional accounting in the current economy, focusing on their advantages, limitations and economic impact. It discusses the implications for accounting accuracy, efficiency, employment, proficient ethics, financial reporting and business decisionmaking. Particular attention is given to developing economies such as Botswana, where businesses may benefit from digital transformation but face challenges relating to technology costs, digital skills and data protection. The paper argues that AI is not a complete replacement for traditional accounting. Instead, the most effective approach combines AI-driven efficiency with human professional judgement, ethical accountability and sound accounting ideologies.",
+  "link": "https://www.ssrn.com/abstract=7661158",
+  "score": 2,
+  "why": "General accounting discussion, single-country focus.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7661961",
+  "source": "SSRN",
+  "title": "Confidence of Job Market Candidates: Is there a Gender Gap? *",
+  "abstract": "This paper provides the first large-scale evidence of a gender gap in confidence among economics job market candidates. Our sample includes candidates from the top 100 economics departments who were on the market in one of the six seasons from 2019/20 to 2024/25. We measure confidence in their job market papers by combining a bag-of-words approach, which counts hedges (signals of lower confidence) and boosters (signals of higher confidence), with a large language model (GPT-5), which identifies expressions of uncertainty specifically related to the authors' own research. Both approaches reveal a robust gender gap: female candidates write in a less confident way than male candidates. As we control for department X cohort fixed effects, gender differences in research quality are expected to be small on average. We further document with a survey experiment that writing style matters for how research is evaluated: holding research content constant, a less confidently written paper leads to a lower assessment of research quality.",
+  "link": "https://www.ssrn.com/abstract=7661961",
+  "score": 2,
+  "why": "Economics job-market gender gap, off-topic.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.30637",
+  "source": "arXiv",
+  "title": "Multiple Stopping and Exercise Boundaries for American Put Options",
+  "abstract": "This article studies a finite-horizon American put option with up to $m$ exercise rights under the risk-neutral Black--Scholes model, where consecutive exercises must be separated by a prescribed refractory period $δ>0$ and unused rights may expire. For each number of remaining rights, we show that optimal exercise is characterized by a single exercise boundary and that these boundaries are ordered by the number of remaining rights. We prove optimality of the first boundary-hitting time and establish local Lipschitz continuity of the exercise boundaries within each open deadline strip. Away from the deadlines, we derive smooth fit, the associated quasi-variational inequality and free-boundary formulation, an early-exercise-premium representation, recursive Volterra-type boundary equations, and a verification theorem. We also extend the recursive formulation to an independent random termination time, thereby allowing for exogenous termination of the option contract.",
+  "link": "https://arxiv.org/abs/2610.30637",
+  "score": 2,
+  "why": "Pure option pricing theory, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7661562",
+  "source": "SSRN",
+  "title": "Smart Sensing Meets Heritage: An AI-Driven Multisensor for Damage Detection in Stone Cultural Assets",
+  "abstract": "Accurate identification and measurement of stone deterioration are essential for cultural heritage conservation. This study presents the proof-of-concept and metrological validation of ATTENTO, an AI-based multisensor for automated crack detection and contactless width measurement. The system combines multisensor imaging with a VGG19 network for crack classification and distance-transform and medial-axis analysis for width estimation. It achieved 95% test accuracy and a 95% recognition rate on 4,035 regions of interest from Italian monuments. Field and laboratory tests yielded crack-reconstruction precision above 88%, recall of 64–94%, and robust mean absolute errors of 0.18–0.38 mm. The main limitations were background heterogeneity and abrupt local variations in crack width.",
+  "link": "https://www.ssrn.com/abstract=7661562",
+  "score": 1,
+  "why": "Stone heritage imaging, not finance.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]

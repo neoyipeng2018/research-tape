@@ -1,0 +1,52 @@
+{
+ "date": "2026-10-24",
+ "scanned": 30,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7659718",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7659718",
+   "title": "Retrieval-Augmented Generation and Parameter-Efficient Fine-Tuning for Financial Question Answering: Evidence from the FinQA Benchmark",
+   "claim": "Retrieval augmentation lifted a 4-billion-parameter financial QA model from 17.2% to 64.4% exact match, matching parameter-efficient fine-tuning at 63.9%."
+  },
+  {
+   "key": "2610.30557",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.30557",
+   "title": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
+   "claim": "A protected invariant core cut a 24.6% sector drawdown to 0.3% and lowered maximum drawdown under all 50 random entry policies."
+  },
+  {
+   "key": "2610.30564",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.30564",
+   "title": "When News Gets Old: Portfolio Allocation with Reinforcement Learning and Large Language Models",
+   "claim": "Filtering old news yielded 18.43% annual net returns for LLM portfolios with four-week delays, beating all news-using RL strategies."
+  },
+  {
+   "key": "2610.31141",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.31141",
+   "title": "Intraday Forecasting Ability and Liquidity Provision of Institutional Traders",
+   "claim": "One passive execution raised intraday P&L by 1.28 currency units versus none, exceeding the 1.19-unit gain from a one-standard-deviation forecasting increase."
+  },
+  {
+   "key": "10.2139/ssrn.7656344",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7656344",
+   "title": "Headline Emphasis and Stock Returns: Evidence from Counterfactual Headlines",
+   "claim": "A one-standard-deviation rise in headline divergence predicts nine basis points higher next-month returns through initial overreaction and later correction."
+  },
+  {
+   "key": "10.2139/ssrn.7658898",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7658898",
+   "title": "The Common Advice: Evidence on AI Redundancy in Stock Prices",
+   "claim": "After ChatGPT, common AI signals still forecast positive earnings announcement returns, indicating market underreaction rather than AI-driven overreaction."
+  }
+ ]
+}
