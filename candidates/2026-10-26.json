@@ -1,0 +1,42 @@
+[
+ {
+  "key": "10.2139/ssrn.7669859",
+  "source": "SSRN",
+  "title": "Spatial-Temporal Multivariate Mixture Density Networks: From Distributional Forecasting to Portfolio Strategy Construction",
+  "abstract": "Using a return distribution predicted by deep learning for portfolio construction requires both an accurate probabilistic forecast and a validated way of translating the forecast into portfolio decisions. This paper proposes a deep learning distribution-to-strategy (D2S) framework with four stages, namely distributional modeling, portfolio signal and strategy construction, model and strategy selection, and model and strategy evaluation. Within this framework, the proposed Spatial-Temporal Multivariate Mixture Density Network (STMMDN) combines a long short-term memory (LSTM) encoder, a dynamic graph neural network (GNN) built on rolling covariance matrices, and a constrained two-component multivariate Student-$t$ mixture output layer that forecasts the joint return density. Two constraints on the mixture, fixed mixture weights and bounded degrees of freedom for the second component, give the components stable roles, the first describing ordinary market conditions over the forecast horizon and the second expressing the forecast's departure from them. The predicted parameters and a volatility signal read from the predicted distribution serve as the two kinds of signal for portfolio strategy construction, and the volatility signal and the covariance input are validated and justified on the validation period before the volatility-aware strategy uses them. Two temporal-only and two spatial-temporal architectures are compared across three asset universes (TPXC30 constituents, currencies and precious metals, and DJIA constituents) and three temporal setups, net of transaction costs. A graph-based architecture attains the highest median validation likelihood in all nine universe-setup configurations, and most of the validation-period selections that the volatility-aware strategy changes attain a higher out-of-sample Sharpe score than without it.",
+  "link": "https://www.ssrn.com/abstract=7669859",
+  "score": 6,
+  "why": "GNN portfolio density; competent but no OOS/costs/code shown",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7669373",
+  "source": "SSRN",
+  "title": "Market Wisdom versus Academic Research: Evidence from Chinese Stock Markets",
+  "abstract": "Machine learning has been widely applied in empirical asset pricing for return prediction, with feature engineering playing a central role. In this study, we compare stock predictors commonly used by practitioners with those extensively documented in the academic literature (Jensen, Kelly, and Pedersen, 2023), and examine the economic implications of machine-learning-based return prediction. We demonstrate that integrating stock characteristics from market practice and academic research can generate powerful predictive signals. Moreover, we also show that institutional investors trade on machine-learning-based combined signals, whereas retail investors tend to trade in the opposite direction.",
+  "link": "https://www.ssrn.com/abstract=7669373",
+  "score": 4,
+  "why": "Single-country factor horse race, no OOS/cost discipline.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7669038",
+  "source": "SSRN",
+  "title": "An Integrated Meteorological-Electrical-Actuarial Framework for Power System Catastrophe Risk Management Under Imminent Compound Typhoon-Rainstorm Events",
+  "abstract": "Compound typhoon-rainstorm events (CTREs) can cause widespread power outages and substantial customer losses, with successive pre-event weather forecasts revealing changes in risk exposure. Existing research on power system catastrophe insurance largely focuses on utility-level risks over long horizons, whereas customer-oriented schemes based on mandatory enrollment offer limited flexibility to accommodate evolving risk profiles and differences in willingness to participate. To address these gaps, this paper develops an integrated meteorological-electrical-actuarial framework that links short-term weather forecasts to customer-specific outage risk assessment and voluntary short-duration catastrophe insurance. Successive forecasts from an artificial intelligence (AI) weather foundation model are downscaled and combined with wind-rainfall compound fragility modeling to generate stochastic network contingencies. A topology-adaptive Chebyshev graph convolutional network with hurdle modeling (Hurdle-ChebNet) separately estimates the occurrence and conditional magnitude of load shedding, enabling efficient construction of customer outage loss distributions across contingency scenarios. These distributions inform tail-sensitive actuarial pricing and temporally discounted cumulative prospect theory (TD-CPT) valuation for insurance purchases and coverage upgrades. Numerical experiments on the IEEE 39-bus test system demonstrate the value of successive AI weather forecasts in updating outage risk assessments, the accuracy and computational efficiency of Hurdle-ChebNet, and the influence of temporal discounting on customers' insurance purchase and coverage upgrade decisions.",
+  "link": "https://www.ssrn.com/abstract=7669038",
+  "score": 1,
+  "why": "Off-topic catastrophe insurance; not financial markets or LLMs",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7670133",
+  "source": "SSRN",
+  "title": "Phase-shared multiplier banks in an FPGA attention datapath: DSP–logic trade-offs under matched pipeline and receiver controls",
+  "abstract": "Attention accelerators on field-programmable gate arrays (FPGAs) often provision separate arithmetic for stages that are never active at the same time. This paper presents the Phase Shared Attention Datapath (PSAD), which serves the query–key (QK) and probability–value (PV) products of a fixed-point attention core with a single mixed-width multiplier bank selected by the existing key/value phase, while preserving every consumer-specific cast. PSAD is implemented in the register-transfer-level (RTL) attention core of a public FPGA large language model (LLM) accelerator and evaluated in an eight-configuration factorial study that separates sharing from two conventional controls: QK row pipelining and output pipelining with bounded buffering. Bit-exact agreement is confirmed for 8,192 outputs from four 48-token input sets, and receiver-inclusive simulations check 81,920 scratch-memory writes. Against a control with identical QK and output pipelines, PSAD reduces mapped digital signal processing (DSP) blocks by 49.14% (from 521 to 265) and flip-flops by 13.05%, at the cost of 10.33% more lookup tables (LUTs), with identical completion cycles. Conventional pipelines reduce receiver-inclusive cycles by 28.72–37.16% relative to the unmodified core at 48 tokens. The incremental output-pipeline benefit relative to the QK-pipelined control shrinks with context length because output cost is fixed. A companion analysis of a ternary LLM weight loader applies the same consumption-based reasoning and removes 8.38% of source weight reads without changing the consumed data or the buffer allocation. The results quantify a DSP-for-logic exchange that is useful when DSP blocks, rather than logic, limit an FPGA attention design.",
+  "link": "https://www.ssrn.com/abstract=7670133",
+  "score": 1,
+  "why": "FPGA accelerator hardware; zero finance content",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
