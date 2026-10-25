@@ -6,6 +6,20 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Firms That Look Alike: Characteristic Graphs and the Cross-Section of Stock Returns</title>
+    <link>https://www.ssrn.com/abstract=7661378</link>
+    <description>In 2010–2024 U.S. stocks, graph neural networks on characteristic-based neighbours do not consistently beat a plain neural network using the same characteristics.</description>
+    <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7661378</guid>
+  </item>
+  <item>
+    <title>Opening the Black Box: Which News Explain LLM-Based Stock Ratings?</title>
+    <link>https://www.ssrn.com/abstract=7665703</link>
+    <description>In S&amp;P 500 news summaries, topics explain LLM stock ratings beyond sentiment, lifting within-R² from 7.17% to 15.17%.</description>
+    <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7665703</guid>
+  </item>
+  <item>
     <title>Retrieval-Augmented Generation and Parameter-Efficient Fine-Tuning for Financial Question Answering: Evidence from the FinQA Benchmark</title>
     <link>https://www.ssrn.com/abstract=7659718</link>
     <description>Retrieval augmentation lifted a 4-billion-parameter financial QA model from 17.2% to 64.4% exact match, matching parameter-efficient fine-tuning at 63.9%.</description>
@@ -627,48 +641,6 @@
     <description>Volatility transmission between AI infrastructure and power grids reverses during crises.</description>
     <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7525001</guid>
-  </item>
-  <item>
-    <title>Label alchemy: Target engineering for improved stock selection</title>
-    <link>https://www.ssrn.com/abstract=7494298</link>
-    <description>Label choice drives larger stock-selection performance variation than model or feature selection.</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7494298</guid>
-  </item>
-  <item>
-    <title>Prices or implied volatilities? Choosing the loss function in machine learning option pricing</title>
-    <link>https://www.ssrn.com/abstract=7498639</link>
-    <description>Training option-pricing models on price errors beats implied-volatility loss by 25%.</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7498639</guid>
-  </item>
-  <item>
-    <title>Agentic AI as a Lens on Human Decision Making: Field Experimental Evidence from Dynamic Pricing</title>
-    <link>https://www.ssrn.com/abstract=7509319</link>
-    <description>AI pricing advantage exploits incumbent conventions, suggesting performance gains are transient.</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7509319</guid>
-  </item>
-  <item>
-    <title>Inflation narratives and risk premia</title>
-    <link>https://www.ssrn.com/abstract=7502639</link>
-    <description>Demand-minus-supply narratives predict inflation risk premia better than PMI or forecasters.</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7502639</guid>
-  </item>
-  <item>
-    <title>LLM-Based Semantic Surprises in FOMC Communication: Asset Prices and Financial-Market Stress</title>
-    <link>https://www.ssrn.com/abstract=7519200</link>
-    <description>Fed semantic novelty increases financial stress only in high-stress market regimes.</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7519200</guid>
-  </item>
-  <item>
-    <title>Welcome to the Factor Zoo: Where Mutual Fund Alpha Hides</title>
-    <link>https://www.ssrn.com/abstract=7508299</link>
-    <description>LASSO benchmarks reveal active mutual fund alpha Fama-French models obscure.</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7508299</guid>
   </item>
 </channel>
 </rss>

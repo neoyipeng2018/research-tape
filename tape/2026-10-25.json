@@ -1,0 +1,23 @@
+{
+ "date": "2026-10-25",
+ "scanned": 17,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7661378",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7661378",
+   "title": "Firms That Look Alike: Characteristic Graphs and the Cross-Section of Stock Returns",
+   "claim": "In 2010–2024 U.S. stocks, graph neural networks on characteristic-based neighbours do not consistently beat a plain neural network using the same characteristics."
+  },
+  {
+   "key": "10.2139/ssrn.7665703",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7665703",
+   "title": "Opening the Black Box: Which News Explain LLM-Based Stock Ratings?",
+   "claim": "In S&P 500 news summaries, topics explain LLM stock ratings beyond sentiment, lifting within-R² from 7.17% to 15.17%."
+  }
+ ]
+}

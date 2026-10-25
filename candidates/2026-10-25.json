@@ -1,0 +1,172 @@
+[
+ {
+  "key": "10.2139/ssrn.7661378",
+  "source": "SSRN",
+  "title": "Firms That Look Alike: Characteristic Graphs and the Cross-Section of Stock Returns",
+  "abstract": "Graph neural networks (GNNs) forecast stock returns by passing information between economically or statistically linked firms. We ask whether links inferred from 64 firm characteristics can improve return forecasts relative to a neural network that uses the same characteristics without a graph. In U.S. stocks from 2010 to 2024, a simple neighbor graph is not consistently superior to a basic neural network, and a learned neighbor graph results in a positive annual-return difference for one specification, but not consistently across a range of specifications. This is mirrored in the raw comovement between characteristic neighbours, with the characteristics used to define them accounting for much of the information in the raw data, leaving less information to be leveraged by graph-based message passing. This may be because characteristic-based neighbours are more likely to serve as a reference group than as a source of extra information: in the reported specification, the annualised volatility of the plain network drops from 23% to 9%, while the Sharpe ratio increases from 0.69 to 1.03 when ranking the forecasts within 20 characteristic clusters. A strategy using the previous month's return of a firm compared with its 20 closest characteristic-based neighbours shows peer-relative return reversal with a gross Sharpe ratio of 1.38, and the signal is focused in the short leg and small firms.",
+  "link": "https://www.ssrn.com/abstract=7661378",
+  "score": 8,
+  "why": "Graph vs no-graph baseline on US stocks; mixed result, network signal tested.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7665703",
+  "source": "SSRN",
+  "title": "Opening the Black Box: Which News Explain LLM-Based Stock Ratings?",
+  "abstract": "Large Language Models (LLMs) are increasingly used in financial decision-making, yet the information underlying their assessments remains poorly understood. This paper studies which financial news topics influence LLM-generated stock ratings. Using 291,260 news summaries for S&P 500 firms, we generate stock ratings and identify news topics using FinBERT embeddings, PaCMAP and hierarchical clustering. Fixed-effects regressions show that topics provide substantial explanatory power beyond sentiment, more than doubling the within-R2 from 7.17% to 15.17%. Topic importance is heterogeneous: firm-specific and fundamental topics add the most explanatory power, while reproduced financial intermediary information adds relatively little. Our findings provide an outcome-based perspective on how LLMs process financial news and contribute to the literature on explainable AI in finance.",
+  "link": "https://www.ssrn.com/abstract=7665703",
+  "score": 7,
+  "why": "Decomposes which news drive LLM stock ratings; large-scale, explainability with fixed effects.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7663019",
+  "source": "SSRN",
+  "title": "Financial Forecasting with a Small Time-Series Foundation Model: A Local Evaluation of Timestral-28M",
+  "abstract": "We evaluate Timestral-28M on daily returns, volume and range volatility using rolling annual adaptation and a locally reserved retrospective 2026 evaluation whose forecast origins precede model release. Thirty-six full-parameter trajectories require 101.6 minutes of training and validation on a 16 GB Apple M2 CPU. Among the evaluated combinations, the original model achieves 4.70% equal-asset relative-MAE skill for fourteen stocks' fifth-session log-volume against conditional OLS (descriptive 95% interval: 2.08-6.98%). The adapted ensemble's direct skill against the original is 0.14% [-1.15, 1.48]. Returns show no consistent benchmark advantage, and volatility results differ between stocks and equity funds. Unknown pretraining overlap limits generalization. The volume result supports a research baseline, with adaptation benefit and trading profitability unestablished. AI assistance disclosure: AI tools assisted with implementation, verification, literature search and drafting. The human author directed and supervised the research and is responsible for the manuscript.",
+  "link": "https://www.ssrn.com/abstract=7663019",
+  "score": 6,
+  "why": "Time-series foundation model out-of-sample; modest volume skill, returns fail.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7661969",
+  "source": "SSRN",
+  "title": "Traders on GPT: AI and Cognitive Capital in Financial Markets",
+  "abstract": "We study how traders’ use of AI affects financial markets in a rational expectations model with asymmetric information. Traders process financial data relying on their analytical skills and/or AI, and we posit that AI delegation causes skills to depreciate over time. We derive an equilibrium where traders use both AI and skill-based information processing. The cheaper AI is, the more it substitutes for cognitive effort and, below a cost threshold, it leads to a decline in expertise. We show that traders delegate to AI even if they rationally account for the implied cognitive decay. Nevertheless, price informativeness is invariant to a decay in expertise, provided that AI remains available. Aggregate price informativeness can therefore hide an underlying erosion of human expertise. This apparent stability is fragile: unexpected AI outages lead to less informative prices relative to an economy where AI was never available. Hence, AI adoption supports informational efficiency but erodes the human expertise that helps markets remain resilient.",
+  "link": "https://www.ssrn.com/abstract=7661969",
+  "score": 4,
+  "why": "Rational expectations theory on AI delegation; no data or implementation path.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7660939",
+  "source": "SSRN",
+  "title": "A Multi-agent Game-Theoretic Proof-of-Concept Prototype for Modelling Adversarial Flash Loan Exploit using Reinforcement Learning",
+  "abstract": "Decentralized Finance (DeFi) architectures are structural environments exposed to strategic economic logic exploits that leverage uncollateralized blockchain capital primitives known as flash loans. Since these interactions execute rapidly within localized ledger state updates, standard static contract auditing frameworks face operational limits under adversarial market volatility conditions. This paper designs and presents a simulation-driven multi-agent reinforcement learning (MARL) proof-of-concept prototype engineered as a transparent parameter-testing sandbox to observe strategic vector interactions. We map the competitive tension between an exploiting entity (Attacker Agent) and an automated market liquidity pool protection system (Defender Agent) as a non-cooperative, general sum game sequence inside a custom Python environment configured with an explicit random seed configuration of 5. Under the fixed mathematical rules of this layout, a completely passive control setting illustrates a hypothetical capital erosion path where the simulated reserves drop down until they cross a hardcoded clipping boundary floor. Conversely, the introduction of an active protection policy demonstrates an illustrative stabilization trend path, where the system deploys targeted combinations of custom slippage taxes and transaction block time-locks to modify the attacker's expected utility values. Rather than asserting live-measured runtime tracking metrics or field-ready deployment finality, this study documents how automated internal control rules can be modelled, tested, and algorithmically analysed using illustrative scenario visualizations inside a simplified asset microstructure simulation framework.",
+  "link": "https://www.ssrn.com/abstract=7660939",
+  "score": 3,
+  "why": "Simulated MARL DeFi toy prototype; no real trades or baselines.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7661204",
+  "source": "SSRN",
+  "title": "From Agent Safety to Systemic Risk: Toward a Science of Agentic AI Ecosystems",
+  "abstract": "The growing deployment of autonomous AI agents in interconnected operational environments introduces risks that cannot be adequately assessed at the level of individual agents. Even when agents pursue legitimate objectives and satisfy local constraints, their interactions, shared dependencies, and collective behavior may generate adverse outcomes at the system level. This distinction becomes particularly consequential as agentic systems enter critical domains such as finance and energy infrastructure. This paper examines the emerging problem of systemic risk in agentic AI ecosystems through a synthesis of recent empirical research and established mathematical frameworks. It distinguishes interaction-mediated propagation, common-cause failures, and endogenous collective dynamics, and examines their representation through network models, stochastic processes, and nonlinear dynamics. Particular attention is given to observability, early warning, finite supervisory capacity, and the conditions under which admissible interventions can preserve or restore acceptable operation. The analysis identifies fundamental open questions concerning compositional safety, structural reduction, control under partial observation, and empirical validation. Existing mathematical results provide important foundations, but their applicability to heterogeneous, adaptive AI-agent ecosystems remains conditional on explicit modeling assumptions and supporting evidence. The paper argues for a system-level approach to agentic AI safety and outlines a research agenda toward a mathematically grounded science of systemic risk.",
+  "link": "https://www.ssrn.com/abstract=7661204",
+  "score": 3,
+  "why": "Synthesis and conceptual framing of agentic systemic risk; no new evidence.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7662938",
+  "source": "SSRN",
+  "title": "Artificial Intelligence Investment and Economic Outcomes in the United States",
+  "abstract": "The AI investment cycle is the largest build-out of short-lived capital relative to GDP on record. Software, information processing equipment, and private data-center construction rose from 4.14% of nominal GDP in 2022Q4 to 5.26% in 2026Q2. Software and information processing equipment alone reached 5.05%, the highest share since the series begins in 1959 and above the dot-com peak of 4.46% in 2000Q4. Much of the hardware consists of servers and networking equipment that the largest operators depreciate over five to six years. Early industry evidence is consistent with benefits across 32 industries. Early AI use is positively associated with productivity acceleration through 2026Q2, and high-adoption industries have raised output per hour by 3.4% a year since 2019, against 0.2% elsewhere, although the gap predates generative AI. These patterns do not yet establish cost recovery by the firms financing the hardware. Occupational exposure shows little overall link to employment growth through May 2025, and the 2025 hiring slowdown began before ChatGPT. Leading indicators shows strong signs of use but weak signs of financial return, with AI revenue still well below the depreciation it must cover. Because the assets absorbing much of the spending wear out quickly, the economic question is more demanding than in earlier technology booms, whose core infrastructure could remain productive for decades. The bet, therefore, is not merely that AI will eventually raise productivity, but that enough valuable, reusable capability can be captured while the dominant capital goods are still in service, while the smaller stock of longer-lived infrastructure and intangible capital preserves option value after those goods are retired.",
+  "link": "https://www.ssrn.com/abstract=7662938",
+  "score": 3,
+  "why": "Macro AI-capex accounting; descriptive, no transferable method.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7663160",
+  "source": "SSRN",
+  "title": "Financing the Customer in the AI Industry Circular investment revenue quality and economic substance",
+  "abstract": "Artificial intelligence infrastructure is financed through relationships in which the same company can be an investor, supplier, purchaser, and distribution partner. These relationships complicate the interpretation of revenue growth because financing supplied by one participant may support purchases from that participant or its commercial partners. This paper develops a qualitative accounting and economic framework for evaluating such arrangements. It examines selected primary documents concerning Amazon and Anthropic, NVIDIA and CoreWeave, and CoreWeave's customer equity incentive. The evidence establishes overlapping financing and commercial relationships; it does not establish that the resulting revenue is fictitious or improperly recognized. The central analytical distinction is between revenue recognition, the independence of customer funding, and the durability of demand. A transaction can satisfy accounting requirements while remaining dependent on repeated financing or concentrated counterparties. The paper proposes a transaction mapping method, five evaluative propositions, and a disclosure framework that separates recognized revenue, customer incentives, supplier funding, infrastructure commitments, and underlying customer receipts. It also explains why investment accounting and capital expenditure can produce strong reported growth without equivalent current cash generation. The contribution is a bounded method for examining financing dependence without equating commercial circularity with fraud.",
+  "link": "https://www.ssrn.com/abstract=7663160",
+  "score": 3,
+  "why": "Qualitative accounting analysis of AI circular financing; no quantitative method.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7663438",
+  "source": "SSRN",
+  "title": "Measure Many, Expose Few: Product Design and Pricing for AI Inference",
+  "abstract": "An AI-service provider must decide which products to offer and how to price them. Customers buy products; backend policies determine how the service is delivered. We develop exact methods for choosing and pricing products under a product limit, and for jointly choosing products and the backend policies they share. Additional products have diminishing profit contributions before support costs, but sharing can make them cheaper to support together. Higher backend support costs can therefore favor more products using fewer policies. The central mechanism is a tension between demand-side substitution and infrastructure-side complementarity: products compete for customers, but can become cheaper to offer together when they reuse backend policies. In our measured application, four products selected from 400 backend-policy combinations capture nearly all the profit gain from using different backend policies for different tasks. Much of that catalog-expansion gain comes from task-specific backend alignment in the best single product, with additional gains from multi-tier screening. Broad measurement can support a small product line and an economical shared backend.",
+  "link": "https://www.ssrn.com/abstract=7663438",
+  "score": 3,
+  "why": "AI inference product pricing operations model; not financial markets.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7660598",
+  "source": "SSRN",
+  "title": "AI-Driven Business Promotion: Strategies, Organizational Structure, Ethical Frameworks, and Market Responsiveness",
+  "abstract": "Within the contemporary digital landscape, legacy mass-communication layouts such as standardized television broadcasts, traditional print media, and unsegmented email distributions are rapidly experiencing diminishing returns. Today's consumer base demands that modern brands accurately discern individual tastes, interact through optimal temporal windows, and supply commodities custom-tailored to their unique requirements. Cognitive computing and Artificial Intelligence (AI) have positioned themselves as the primary technological architectures driving this commercial overhaul. This research paper explores the mechanisms through which modern enterprises deploy intelligent technologies such as Deep Learning (DL), Natural Language Understanding (NLU), Predictive Forecasting, and Visual Information Parsing to build fluid, deeply customized, and programmatic promotional paradigms. It investigates the deployment of automated systems across creative copywriting, micro-targeted customer indexing, fluid valuation frameworks, and conversational engagement modules across global and regional market leaders like Flipkart, Zomato, Netflix, and Amazon. Furthermore, this analysis delineates the internal corporate reporting structures mandatory for managing intelligent outreach campaigns, establishes structured governance matrices to preserve data confidentiality and mitigate algorithmic prejudice, and underscores the vital importance of immediate operational elasticity relative to shifting marketplace conditions.",
+  "link": "https://www.ssrn.com/abstract=7660598",
+  "score": 2,
+  "why": "Marketing strategy essay on AI; no data or testable method.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7662740",
+  "source": "SSRN",
+  "title": "From Automation to Autonomy: Regulatory and Governance Challenges of Robotic and Agentic AI in Insurance",
+  "abstract": "Artificial intelligence (AI) is transforming insurance through its expanding use in underwriting, pricing, claims management, fraud detection, customer engagement and risk assessment. At the same time, regulators are increasing scrutiny of AI-enabled decision-making, particularly regarding fairness, transparency, explainability, accountability, and human oversight. This article examines how evolving AI regulatory environments relate to insurer governance, algorithmic-risk concerns, innovation-enabling conditions, and client outcomes in increasingly automated insurance markets. The study develops a comparative analysis of AI regulatory approaches, with particular attention to the United States, European Union and United Kingdom, and proposes a Behavioural Transmission Framework in which regulatory pressure may operate through three organisational pathways: governance strength, algorithmic-risk concern and innovation-enabling perception. The study also examines AI autonomy as a potential moderating condition. Methodologically, the study applies structured quantitative netnographic content analysis, supported by public digital discourse analysis, to 77 observations comprising regulatory and supervisory publications, consultation materials, insurer and reinsurer communications, corporate AI disclosures, industry and professional reports, and research publications. Researcher-coded measures are analysed using descriptive statistics, correlations, regression, mediation, moderation, moderated mediation, robustness tests and diagnostic analysis. awareness, but these relationships do not automatically correspond with more favourable client outcomes. Instead, regulation appears to operate through multiple, potentially competing and offsetting organisational pathways, with innovation-enabling conditions emerging as a particularly important area for further investigation. The study contributes to insurance regulation, AI governance and digital-trust research by distinguishing governance presence from governance effectiveness and by providing an empirically grounded framework for future longitudinal, cross-jurisdictional, organisational and policyholder-level research.",
+  "link": "https://www.ssrn.com/abstract=7662740",
+  "score": 2,
+  "why": "Insurance regulatory governance commentary; no quantitative method.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7662819",
+  "source": "SSRN",
+  "title": "Explainable AI for Fraud Alert Review in Community Banks and Credit Unions: A Narrative Review of Architectures, Analyst Workflows, and Governance",
+  "abstract": "Community banks and credit unions face the same fraud schemes as large banks, but with far fewer analysts and data scientists. Machine-learning detectors help, yet an alert that gives no reason leaves the analyst to reconstruct the logic by hand, which slows investigations and complicates regulatory examinations. This narrative review looks at how explainable artificial intelligence (XAI) is being applied to fraud alerts in small financial institutions. Drawing on six recent sources, we trace the shift from rule-based systems to machine learning, describe architectural patterns that place an explanation layer between a detection model and the analyst, and discuss how explanations may shorten investigations, support analyst feedback, and strengthen model governance. One study reports that pairing ensemble anomaly detection with XAI reduced average analysis time from 4.2 hours to 35 minutes; we treat this as a single, unreplicated result. The evidence base is small, relies on single studies, and includes working papers and journals of uneven rigor, and it offers no shared benchmarks or analyst-centered evaluations. We close with practical implications for small institutions and open questions for future research.",
+  "link": "https://www.ssrn.com/abstract=7662819",
+  "score": 2,
+  "why": "Narrative review of XAI fraud alerts; survey with six sources.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7663459",
+  "source": "SSRN",
+  "title": "Cross-Classified Random-Effects Difference-in-Differences Model: A Case Study for New York City's Congestion Pricing",
+  "abstract": "Objectives: On January 5, 2025 New York City activated the Central Business District Tolling Program, the first cordon charge in the United States. It tolls Yellow Taxi, Uber and Lyft but not Subway or Citi Bike, moving relative prices apart. This study estimates the first-year effect on all five by direction, time of day and ring distance. Methods: A cross-classified random-effects difference-in-differences model, fit once per mode, returns the pooled treatment effect together with fifteen flow-level effects, a flow being one directed origin–destination ring pair in one peak window, with parallel trends tested both at the pooled level and flow by flow. It is fit on 2024–2025 trip records formed into five identically formatted panels: neighborhoods outside the zone clustered per mode into near and far rings, and trips into ring pairs crossed with morning, evening and off-peak windows. Findings: Ridership fell significantly for Yellow Taxi (20.3%) and Uber (6.2%) but not Lyft. Yellow Taxi's is deepest, its exposure being highest and its trips shortest. Substitution fell almost entirely along the commute direction within the near ring, carried by Subway inbound in the morning and Citi Bike outbound in the evening, while suppression appeared across all rings and windows. Tolled effects decay outward off-peak, untolled in the peak hours. Novelty: A cross-classified random-effects difference-in-differences model is applied to each of the five modes, so substitution and suppression are compared at the same time and on comparable space, then decomposed by commute structure. Practical Applications: Charges set by vehicle class should also consider a mode's exposure to the zone and its trip lengths. Where suppression is not absorbed by the untolled modes, the outer ring and the inner rings off-peak, recycled toll revenue should add transit capacity in those two places rather than uniformly. AI disclosure: Generative artificial intelligence (Anthropic's Claude) was used to assist with drafting and editing prose, checking bibliographic records, and generating figure and table code. All data processing, modeling, estimation and interpretation were carried out by the authors, who verified all tool outputs and take full responsibility for this manuscript.",
+  "link": "https://www.ssrn.com/abstract=7663459",
+  "score": 2,
+  "why": "Single-city congestion pricing DiD; no AI and no transferable method.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7665805",
+  "source": "SSRN",
+  "title": "Consumer Fraud Victimization and the Shift Toward AI Financial Advice",
+  "abstract": "This study examines how fraud victimization shapes adoption of AI-based financial advice, drawing on betrayal aversion theory. Using two complementary datasets from the 2024 National Financial Capability Study, the State-by-State Survey (N=17,049) and the Investor Survey (N=1,928), we find that fraud victims, particularly those with direct financial losses, are significantly more likely to adopt AI advice. We introduce the Algorithmic Trust Transfer Hypothesis, proposing that victims gravitate toward AI systems structurally incapable of intentional betrayal. Digital fluency amplifies adoption by reducing technological barriers, while reduced trust in human agents opens pathways to algorithmic alternatives. Institutional trust in banks remains positively associated with AI adoption, reflecting a parallel engagement channel. Objective financial literacy supports AI adoption; subjective overconfidence hinders it by reinforcing reliance on personal judgment. Among active investors, the fraud effect is significant only among those with existing human advisory relationships, confirming that the substitution mechanism requires a prior human trust relationship. Generational, gender, and racial disparities suggest that structural trust gaps may reproduce inequalities in financial advice access. These findings extend betrayal aversion theory into financial technology and offer insights for hybrid advisory models, ethical AI design, inclusive digital literacy, and accountability standards for AI platforms serving vulnerable populations.",
+  "link": "https://www.ssrn.com/abstract=7665805",
+  "score": 2,
+  "why": "Survey on fraud victims adopting AI advice; behavioral, no method.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7659279",
+  "source": "SSRN",
+  "title": "Implementation of Digital Business Regulations in The Corporate Governance of PT Arina Shiva Group: an Empirical Legal Analysis of Legal Compliance as The Basis for Regulatory Harmonization in The Era of Globalization",
+  "abstract": "This research aimed to analyze the implementation of digital business regulations within the governance framework of PT Arina Shiva Group, examine the company's level of legal compliance with applicable laws and regulations, and formulate a regulatory harmonization model to strengthen digital business governance in the era of globalization. The research employed an empirical juridical method using statutory, conceptual, case, and comparative approaches. Data were obtained through literature reviews, analysis of corporate documents, observations of digital business governance practices, and interviews with authorized representatives of PT Arina Shiva Group. Furthermore, the data were analyzed qualitatively through the processes of data reduction, data presentation, and conclusion drawing by comparing legal norms (das sollen) with their implementation in practice (das sein). The findings indicate that the implementation of digital business regulations at PT Arina Shiva Group has generally accommodated various national legal provisions related to business entity legality, electronic transactions, corporate governance, and intellectual property rights protection. However, the study also identified the need to strengthen legal compliance mechanisms that are more adaptive to the dynamics of global digital regulations, particularly in the areas of personal data protection, artificial intelligence governance, cybersecurity, and the application of good digital governance principles. This study proposed a digital business regulatory harmonization model based on corporate legal compliance that integrates national regulatory frameworks with digital governance practices.",
+  "link": "https://www.ssrn.com/abstract=7659279",
+  "score": 1,
+  "why": "Corporate legal-compliance case study; no ML or finance method.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7663220",
+  "source": "SSRN",
+  "title": "Trading Deaths for Suffering in AI Systems",
+  "abstract": "Optimizing an AI system against objectives that include both deaths and suffering can create a tradeoff between the two harms. When deaths are more readily recorded and audited than suffering, optimization pressure can concentrate on mortality and displace harm toward suffering, which is continuous, private, and hard to measure. Recorded deaths can fall while unmeasured suffering rises through non-lethal control, restriction, and deprivation. We trace six mechanisms that can produce this substitution and argue that manipulation-resistant suffering metrics, backed by enforcement as rigorous as that applied to mortality metrics, would reduce this form of harm displacement.",
+  "link": "https://www.ssrn.com/abstract=7663220",
+  "score": 1,
+  "why": "Abstract AI harm-displacement argument; no finance content.",
+  "judge": "haiku"
+ },
+ {
+  "key": "10.2139/ssrn.7661243",
+  "source": "SSRN",
+  "title": "AI as an Architect of Educational Equity:Re-Engineering Historical Rural Pedagogy through Intelligent Systems, Gamification, and Socio-Behavioral Mechanics",
+  "abstract": "This paper examines the transformation of resource-constrained rural education through the integration of Artificial Intelligence (AI), adaptive gamification, and sociobehavioral learning mechanics. Grounded in a historical autoethnographic account of a novice teacher in post-colonial Sarawak (1964-1965) navigating post-primary selection exams (Sarawak Junior Cambridge), financial barriers, cross-cultural school swaps, and multi-grade teaching with fewer than ten students per class. We construct an analytical bridge between historical pedagogical improvisations and modern AI architectures. We demonstrate how human-centered strategies such as peer-assisted learning, community integration, and cross-level micro-teaching can be modeled, scaled, and automated using generative AI, Intelligent Tutoring Systems (ITS), and culturally responsive multi-agent frameworks. Ultimately, this paper presents a hybrid framework that leverages AI to democratize quality education in under-resourced and geographically isolated environments without compromising human agency and social cohesion.",
+  "link": "https://www.ssrn.com/abstract=7661243",
+  "score": 0,
+  "why": "Historical education autoethnography; no finance content.",
+  "judge": "haiku"
+ }
+]
