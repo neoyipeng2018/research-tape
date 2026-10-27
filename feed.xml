@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>What FLARE&#x27;s Published Numbers Actually Measure</title>
+    <link>https://arxiv.org/abs/2610.33604</link>
+    <description>FLARE scores measure extraction-rule choice more than model quality because unspecified rules leave scores partially identified.</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.33604</guid>
+  </item>
+  <item>
+    <title>MBABench-2.0: Evaluating AI Agents on Constructing Financial Spreadsheets Beyond Simple Verifiability</title>
+    <link>https://arxiv.org/abs/2610.31711</link>
+    <description>Frontier agents cannot yet build spreadsheets that are both accurate and maintainable, with top pass rate at 16%.</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.31711</guid>
+  </item>
+  <item>
+    <title>Optimal Size in Market Making under State-Dependent Hawkes Process</title>
+    <link>https://arxiv.org/abs/2610.31903</link>
+    <description>State-dependent Hawkes calibrated quoting achieves higher terminal utility than a baseline while respecting inventory bounds.</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.31903</guid>
+  </item>
+  <item>
+    <title>Cross-Bond Panel Learning for Next-Day Price Forecasting of Chinese Convertible Bonds: A Reality Check</title>
+    <link>https://arxiv.org/abs/2610.33453</link>
+    <description>Cross-bond neural networks fail to outperform the random walk for next-day convertible bond price forecasting.</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.33453</guid>
+  </item>
+  <item>
+    <title>Towards Adversarially Robust Multigraph Neural Networks for Financial Crime Analysis</title>
+    <link>https://arxiv.org/abs/2610.31718</link>
+    <description>Learned structural attacks reduce multigraph neural network AML detection, while adversarial training improves defense against them.</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.31718</guid>
+  </item>
+  <item>
+    <title>Operationalizing Governed Agentic Workflows in Regulated Finance: A Customer Zero Case Study using Zafin AIOS</title>
+    <link>https://arxiv.org/abs/2610.33253</link>
+    <description>Governed agentic orchestration increases enterprise capacity without compromising control, cutting pricing effort by 38%.</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.33253</guid>
+  </item>
+  <item>
     <title>Firms That Look Alike: Characteristic Graphs and the Cross-Section of Stock Returns</title>
     <link>https://www.ssrn.com/abstract=7661378</link>
     <description>In 2010–2024 U.S. stocks, graph neural networks on characteristic-based neighbours do not consistently beat a plain neural network using the same characteristics.</description>

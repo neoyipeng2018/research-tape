@@ -1,0 +1,52 @@
+{
+ "date": "2026-10-27",
+ "scanned": 33,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2610.33604",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.33604",
+   "title": "What FLARE's Published Numbers Actually Measure",
+   "claim": "FLARE scores measure extraction-rule choice more than model quality because unspecified rules leave scores partially identified."
+  },
+  {
+   "key": "2610.31711",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.31711",
+   "title": "MBABench-2.0: Evaluating AI Agents on Constructing Financial Spreadsheets Beyond Simple Verifiability",
+   "claim": "Frontier agents cannot yet build spreadsheets that are both accurate and maintainable, with top pass rate at 16%."
+  },
+  {
+   "key": "2610.31903",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.31903",
+   "title": "Optimal Size in Market Making under State-Dependent Hawkes Process",
+   "claim": "State-dependent Hawkes calibrated quoting achieves higher terminal utility than a baseline while respecting inventory bounds."
+  },
+  {
+   "key": "2610.33453",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.33453",
+   "title": "Cross-Bond Panel Learning for Next-Day Price Forecasting of Chinese Convertible Bonds: A Reality Check",
+   "claim": "Cross-bond neural networks fail to outperform the random walk for next-day convertible bond price forecasting."
+  },
+  {
+   "key": "2610.31718",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.31718",
+   "title": "Towards Adversarially Robust Multigraph Neural Networks for Financial Crime Analysis",
+   "claim": "Learned structural attacks reduce multigraph neural network AML detection, while adversarial training improves defense against them."
+  },
+  {
+   "key": "2610.33253",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.33253",
+   "title": "Operationalizing Governed Agentic Workflows in Regulated Finance: A Customer Zero Case Study using Zafin AIOS",
+   "claim": "Governed agentic orchestration increases enterprise capacity without compromising control, cutting pricing effort by 38%."
+  }
+ ]
+}
