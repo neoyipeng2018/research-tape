@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Proof Before Price: Pre-Registered Behavioral Tests of Proof-Based Pricing on Language-Model Buying Agents</title>
+    <link>https://www.ssrn.com/abstract=7666200</link>
+    <description>A register-verified claim boosts LLM buyer selection by 14 to 30 percentage points over identical prose.</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7666200</guid>
+  </item>
+  <item>
+    <title>NumTrace: Auditing the Number Provenance of Financial Analyst Agents</title>
+    <link>https://arxiv.org/abs/2610.34887</link>
+    <description>Right-number-wrong-account errors comprise 67.5 to 81.8 percent of failing financial analyst agent claims.</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.34887</guid>
+  </item>
+  <item>
+    <title>Risk-proportional inference: Constraint-aware model routing for fair and energy-efficient financial AI serving</title>
+    <link>https://www.ssrn.com/abstract=7674874</link>
+    <description>RAIRoute cuts per-request inference energy by up to 70.9 percent while holding a fairness band.</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7674874</guid>
+  </item>
+  <item>
+    <title>Thinking-in-Bets at Test Time Reduces Sycophantic Revisions in LLM Agents</title>
+    <link>https://arxiv.org/abs/2610.34654</link>
+    <description>Pre-reply claim checklists nearly eliminate false reversals under mistaken user pushback.</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.34654</guid>
+  </item>
+  <item>
+    <title>Do Round Numbers Hold Prices? Occupation Densities and Depth-Conditioned Hazards in the Limit Order Book</title>
+    <link>https://arxiv.org/abs/2610.34787</link>
+    <description>Round price levels draw more liquidity but do not slow depth-adjusted departures.</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.34787</guid>
+  </item>
+  <item>
+    <title>LLM-Enhanced Heterogeneous Graph Learning with Business Semantics for Financial Fraud Detection</title>
+    <link>https://arxiv.org/abs/2610.35298</link>
+    <description>SemHGT outperforms evaluated baselines on most dataset-metric comparisons across three fraud datasets.</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.35298</guid>
+  </item>
+  <item>
     <title>What FLARE&#x27;s Published Numbers Actually Measure</title>
     <link>https://arxiv.org/abs/2610.33604</link>
     <description>FLARE scores measure extraction-rule choice more than model quality because unspecified rules leave scores partially identified.</description>
@@ -641,34 +683,6 @@
     <description>Buyer-seller transaction networks predict default better than financial data for information-sparse firms.</description>
     <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2609.25542</guid>
-  </item>
-  <item>
-    <title>When the Market Moves but the Model Does Not: Stale Financial Information in LLMs</title>
-    <link>https://www.ssrn.com/abstract=7532758</link>
-    <description>LLMs generate persistent trading losses when forecasting beyond their training data without current price information.</description>
-    <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7532758</guid>
-  </item>
-  <item>
-    <title>The Anonymity Paradox: Identity Disclosure, Online Information Production, and Stock Price Efficiency</title>
-    <link>https://www.ssrn.com/abstract=7532270</link>
-    <description>Real-name policies reduce stock price informativeness by suppressing retail information production on social platforms.</description>
-    <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7532270</guid>
-  </item>
-  <item>
-    <title>Planning External-Data Adoption in Energy-Market Forecasting: A Matched Decision Framework for Global News</title>
-    <link>https://www.ssrn.com/abstract=7532277</link>
-    <description>Best energy forecasts use market data alone, not augmented with external news.</description>
-    <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7532277</guid>
-  </item>
-  <item>
-    <title>Forecasting, Forward Contracting, and Retailer Performance in a Regulated Electricity Market</title>
-    <link>https://www.ssrn.com/abstract=7532299</link>
-    <description>Better spot-price forecasts only improve electricity trading profits if retailers can flexibly adjust forward positions.</description>
-    <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7532299</guid>
   </item>
 </channel>
 </rss>

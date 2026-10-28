@@ -1,0 +1,52 @@
+{
+ "date": "2026-10-28",
+ "scanned": 32,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7666200",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7666200",
+   "title": "Proof Before Price: Pre-Registered Behavioral Tests of Proof-Based Pricing on Language-Model Buying Agents",
+   "claim": "A register-verified claim boosts LLM buyer selection by 14 to 30 percentage points over identical prose."
+  },
+  {
+   "key": "2610.34887",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.34887",
+   "title": "NumTrace: Auditing the Number Provenance of Financial Analyst Agents",
+   "claim": "Right-number-wrong-account errors comprise 67.5 to 81.8 percent of failing financial analyst agent claims."
+  },
+  {
+   "key": "10.2139/ssrn.7674874",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7674874",
+   "title": "Risk-proportional inference: Constraint-aware model routing for fair and energy-efficient financial AI serving",
+   "claim": "RAIRoute cuts per-request inference energy by up to 70.9 percent while holding a fairness band."
+  },
+  {
+   "key": "2610.34654",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.34654",
+   "title": "Thinking-in-Bets at Test Time Reduces Sycophantic Revisions in LLM Agents",
+   "claim": "Pre-reply claim checklists nearly eliminate false reversals under mistaken user pushback."
+  },
+  {
+   "key": "2610.34787",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.34787",
+   "title": "Do Round Numbers Hold Prices? Occupation Densities and Depth-Conditioned Hazards in the Limit Order Book",
+   "claim": "Round price levels draw more liquidity but do not slow depth-adjusted departures."
+  },
+  {
+   "key": "2610.35298",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.35298",
+   "title": "LLM-Enhanced Heterogeneous Graph Learning with Business Semantics for Financial Fraud Detection",
+   "claim": "SemHGT outperforms evaluated baselines on most dataset-metric comparisons across three fraud datasets."
+  }
+ ]
+}
