@@ -1,0 +1,52 @@
+{
+ "date": "2026-10-29",
+ "scanned": 23,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2610.37166",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.37166",
+   "title": "LiveSearch: Questions as Executable Verifier Code for a Live Benchmark of Professional-Source Financial Search Agents",
+   "claim": "Reused financial-search snapshots fail most questions within one day as gold values change daily."
+  },
+  {
+   "key": "2610.36082",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.36082",
+   "title": "How Much Does the Hint Matter? Scope Conditions for Hindsight Self-Distillation in Financial Reasoning",
+   "claim": "Self-distillation gains come from supervision placement, not hint content or teacher size."
+  },
+  {
+   "key": "2610.36083",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.36083",
+   "title": "FinLLM-KG: Knowledge Graph-Enhanced LLMs for Financial Sentiment Analysis in Algorithmic Trading",
+   "claim": "Knowledge-graph-augmented LLMs beat state-of-the-art financial sentiment baselines in portfolio simulations at near-zero cost."
+  },
+  {
+   "key": "2610.36274",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.36274",
+   "title": "Does Ecosystem Activity Validate TVL?",
+   "claim": "Ecosystem-activity ratios do not make total value locked predict crypto returns after multiple-testing correction."
+  },
+  {
+   "key": "2610.36317",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.36317",
+   "title": "Event definition and the branching ratio: Hawkes estimates of price-change clustering in the consolidated quote feed",
+   "claim": "The sub-millisecond Hawkes kernel in large-tick stocks reflects NBBO feed construction, not genuine price-change excitation."
+  },
+  {
+   "key": "2610.36476",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.36476",
+   "title": "FIDES-Live: Evaluating Behavioral Concordance in Sequential Trading Agents",
+   "claim": "Commitment adherence drops to 62.63 percent for constrained nonempty proposals versus 97.56 percent for valid empty proposals."
+  }
+ ]
+}
