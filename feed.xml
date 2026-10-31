@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Investor&#x27;s Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?</title>
+    <link>https://arxiv.org/abs/2610.38342</link>
+    <description>Even leading AI agents cannot convert broad equity-research competence into accurate financial forecasts.</description>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.38342</guid>
+  </item>
+  <item>
+    <title>Decorrelating the Advice Layer: A Calibrated Fragility Metric and Tested Mitigations for Synchronized Liquidation in Agentic Wealth Management</title>
+    <link>https://arxiv.org/abs/2610.37705</link>
+    <description>Tail liquidation in agentic wealth management rises with synchronized automation not model concentration.</description>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.37705</guid>
+  </item>
+  <item>
+    <title>FilingLoop: Evaluating and Evolving LLM Agents for Corporate Disclosure Review and Revision</title>
+    <link>https://arxiv.org/abs/2610.37905</link>
+    <description>Cross-case procedural learning raises disclosure review requirement fulfillment without updating model weights.</description>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.37905</guid>
+  </item>
+  <item>
+    <title>EPSBench: Benchmarking LLM Agents for Earnings Forecasting</title>
+    <link>https://arxiv.org/abs/2610.38293</link>
+    <description>Most LLM earnings forecast intervals miss actual EPS because forecasts run low.</description>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.38293</guid>
+  </item>
+  <item>
+    <title>TreasuryQA Bench: Can AI Agents Work an Archive of Scanned Financial Records?</title>
+    <link>https://arxiv.org/abs/2610.38924</link>
+    <description>Even top agents solve under two thirds of scanned archive questions and fail mainly on digit misreads.</description>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2610.38924</guid>
+  </item>
+  <item>
+    <title>Errors With No Common Sign: Certified Evaluation of Quantum and LLM Components in Financial Pipelines</title>
+    <link>https://www.ssrn.com/abstract=7666979</link>
+    <description>Mechanical classical certification overturned financial quantum ML results in both directions and shows no quantum advantage.</description>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7666979</guid>
+  </item>
+  <item>
     <title>LiveSearch: Questions as Executable Verifier Code for a Live Benchmark of Professional-Source Financial Search Agents</title>
     <link>https://arxiv.org/abs/2610.37166</link>
     <description>Reused financial-search snapshots fail most questions within one day as gold values change daily.</description>
@@ -606,41 +648,6 @@
     <description>Lightweight language models underperform conventional baselines for S&amp;P 500 price-path selection despite financial adaptation.</description>
     <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7547400</guid>
-  </item>
-  <item>
-    <title>Do Narratives Lead Prices, Or Follow Them? Sentiment, Price Positioning, And Measurement Disagreement In Bitcoin</title>
-    <link>https://www.ssrn.com/abstract=7542658</link>
-    <description>Bitcoin prices predict sentiment, reversing the leading-indicator interpretation of published sentiment indices.</description>
-    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7542658</guid>
-  </item>
-  <item>
-    <title>Epistemic Calibration and Latency Advantages of System One Probabilistic Agents in Limit Order Book Microstructure: An Empirical and Multi-Agent Evaluation</title>
-    <link>https://www.ssrn.com/abstract=7545279</link>
-    <description>Autoregressive LLMs encounter prohibitive latencies (3.5–12 seconds) when deployed in electronic financial markets.</description>
-    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7545279</guid>
-  </item>
-  <item>
-    <title>Silicon Cartels: Detector Orientation in Multi-Agent Pricing Testbeds</title>
-    <link>https://www.ssrn.com/abstract=7535399</link>
-    <description>Testbed detector calibration against low-variance controls reverses polarity in higher-variance deployment environments.</description>
-    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7535399</guid>
-  </item>
-  <item>
-    <title>Agentic Regulatory Intelligence: A Human-Supervised Multi-Agent System Architecture for Financial Crime Pattern Monitoring and Regulatory Guidance Generation</title>
-    <link>https://www.ssrn.com/abstract=7544900</link>
-    <description>Regulatory guidance for financial crimes lags 12–57 months after typology emergence, extending criminal opportunities.</description>
-    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7544900</guid>
-  </item>
-  <item>
-    <title>Artificial Intelligence, Model Monoculture, and Bank Credit Allocation</title>
-    <link>https://www.ssrn.com/abstract=7545343</link>
-    <description>AI development increases convergence in bank credit allocation, reducing system-wide lending diversity.</description>
-    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7545343</guid>
   </item>
 </channel>
 </rss>

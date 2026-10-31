@@ -1,0 +1,52 @@
+{
+ "date": "2026-10-31",
+ "scanned": 34,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2610.38342",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.38342",
+   "title": "Investor's Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?",
+   "claim": "Even leading AI agents cannot convert broad equity-research competence into accurate financial forecasts."
+  },
+  {
+   "key": "2610.37705",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.37705",
+   "title": "Decorrelating the Advice Layer: A Calibrated Fragility Metric and Tested Mitigations for Synchronized Liquidation in Agentic Wealth Management",
+   "claim": "Tail liquidation in agentic wealth management rises with synchronized automation not model concentration."
+  },
+  {
+   "key": "2610.37905",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.37905",
+   "title": "FilingLoop: Evaluating and Evolving LLM Agents for Corporate Disclosure Review and Revision",
+   "claim": "Cross-case procedural learning raises disclosure review requirement fulfillment without updating model weights."
+  },
+  {
+   "key": "2610.38293",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.38293",
+   "title": "EPSBench: Benchmarking LLM Agents for Earnings Forecasting",
+   "claim": "Most LLM earnings forecast intervals miss actual EPS because forecasts run low."
+  },
+  {
+   "key": "2610.38924",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2610.38924",
+   "title": "TreasuryQA Bench: Can AI Agents Work an Archive of Scanned Financial Records?",
+   "claim": "Even top agents solve under two thirds of scanned archive questions and fail mainly on digit misreads."
+  },
+  {
+   "key": "10.2139/ssrn.7666979",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7666979",
+   "title": "Errors With No Common Sign: Certified Evaluation of Quantum and LLM Components in Financial Pipelines",
+   "claim": "Mechanical classical certification overturned financial quantum ML results in both directions and shows no quantum advantage."
+  }
+ ]
+}

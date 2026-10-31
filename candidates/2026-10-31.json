@@ -1,0 +1,342 @@
+[
+ {
+  "key": "2610.38342",
+  "source": "arXiv",
+  "title": "Investor's Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?",
+  "abstract": "Financial agents must form forecasts and investment judgments from decision-time evidence, with predictions evaluated against subsequent outcomes. Existing benchmarks assess financial knowledge, research workflows, or forecasting, but evaluating the full research process requires a strictly frozen information set and professional evaluation criteria. We introduce Investor's Last Exam (ILE), an equity-research benchmark led by experienced buy-side investors and fund managers. Its three components are a versioned financial database spanning 3.43 million document versions and nine source categories, supplemented by structured market data, with validated timestamps governing retrieval and computation; a task taxonomy organized around professional analyst deliverables; and an expert-led framework linking scoring criteria to sources, calculations, and assumptions through financial dependency graphs. Evaluation spans 86 assignments and jointly assesses research quality, forecast accuracy, and simulated investment performance. GPT-6 Astra and Claude Opus 5.5 lead overall at 68.1 and 66.9 out of 100, yet even Astra scores only 52.5 on Forecast & Model. Our results show that even state-of-the-art models fail to translate overall research capability into predictive performance. ILE shifts the evaluation unit from isolated capabilities to the evidence--assumption--judgment chain, allowing researchers to locate where analytical advantages fail to translate into forecasts and investment judgments, and providing a traceable, diagnostic foundation for training and evaluating financial agents.",
+  "link": "https://arxiv.org/abs/2610.38342",
+  "score": 9,
+  "why": "Buy-side equity research benchmark, frozen information set",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.37705",
+  "source": "arXiv",
+  "title": "Decorrelating the Advice Layer: A Calibrated Fragility Metric and Tested Mitigations for Synchronized Liquidation in Agentic Wealth Management",
+  "abstract": "Conversational AI agents are turning wealth management into a continuous loop of market analysis, allocation, risk checks and execution, run for millions of clients on a handful of foundation models. We build a multi-asset agent-based model of this layer, calibrated to measured model concentration, cross-model correlation, retail turnover and 33 years of real equity returns, and ask when the layer amplifies market declines and what prevents it. The effective number of independent decision-makers is bounded however many clients the layer serves: about 2.0 at today's consumer concentration. This monoculture of views drives crowding in individual securities and sets the blast radius of a compromised model provider, but it does not drive market-wide liquidation. Index tail losses rise with the square root of agentic adoption, are 1.47-1.90 times larger under an agentic than under a periodic robo-advice architecture, and do not rise with model concentration; synchronized automation (risk overlays, drawdown cuts and attention-driven execution) drives them. A fragility index computed from aggregate flow, public returns and an impact estimate forecasts tail liquidation out of sample (hold-out R^2 of 0.56) far better than concentration or correlation measures. Decorrelating the automation, not the models, works: dispersing overlay parameters, staging execution and a participation breaker together cut tail liquidation by 63% at no measurable cost to client welfare, whereas provider diversification has no effect. Because the statistics required are sums, they can be computed across platforms under secure aggregation with differential privacy at negligible cost for realistic client populations. In historical replays, an agentic layer holding 10% of the market would have deepened the 2020 crash by about 858 basis points.",
+  "link": "https://arxiv.org/abs/2610.37705",
+  "score": 8,
+  "why": "Agentic wealth fragility, bounded decision-makers, real returns calibration",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.37905",
+  "source": "arXiv",
+  "title": "FilingLoop: Evaluating and Evolving LLM Agents for Corporate Disclosure Review and Revision",
+  "abstract": "Public disclosure repositories such as SEC EDGAR support informed investment through web access to corporate filings. Supporting their review with language model agents requires discovering unstated deficiencies across related documents, acquiring missing company facts, and verifying that requested revisions satisfy evidence-backed requirements. Existing financial question-answering evaluations provide limited evidence of these interactive capabilities. We introduce \\textbf{FilingLoop}, an interactive benchmark and a self-evolving agent framework for corporate disclosure review and revision. Grounded in historical U.S.\\ Securities and Exchange Commission correspondence, FilingLoop reconstructs 380 predominantly IPO review tasks from 96 companies under distinct information constraints. An evaluator separate from the acting agents scores final filings and responses against 6,099 eligible requirements and audits unsupported claims and harmful revisions. Our framework couples iterative review and revision within each case with procedural learning across cases, converting requirement-level evaluation feedback into role-specific guidance without updating model weights. Updates affect only subsequent cases, allowing procedural adaptation to be assessed without retrying scored tasks. On the evaluated stream, evolution increases requirement fulfillment from 24.28\\% to 27.96\\% and full comment resolution from 16.90\\% to 20.75\\%, with a 5.8\\% increase in total cost over the fixed-policy variant. FilingLoop connects the concerns an agent discovers with the company facts it obtains and the revisions it commits, providing requirement-level feedback for procedures used in later review tasks.",
+  "link": "https://arxiv.org/abs/2610.37905",
+  "score": 8,
+  "why": "SEC disclosure agent benchmark, 380 tasks, evaluation focus",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38293",
+  "source": "arXiv",
+  "title": "EPSBench: Benchmarking LLM Agents for Earnings Forecasting",
+  "abstract": "Quarterly earnings forecasting requires an agent to connect financial evidence to the income-statement line items that produce a company's reported earnings. We introduce EPSBench, a benchmark for studying this ability across 149 firm-quarters from 86 US companies. Agents read a fixed collection of filings, earnings-call transcripts, and news, then estimate company-specific income-statement drivers with cited evidence. A shared accounting calculator converts these estimates into GAAP diluted earnings per share (EPS), providing a common basis for comparing forecast assumptions. We evaluate six models under a common harness, assessing point forecast error relative to date-matched analyst consensus and checking whether their prediction intervals achieve the stated coverage. Three models show no detectable paired difference in point forecast error from consensus, and three have higher error. Across all six models, nominal 80% intervals contain reported EPS in only 37--70% of runs that return an interval, and most misses fall above the upper bound because the forecasts run low. The driver records trace most of the error gap between models to operating-income estimates.",
+  "link": "https://arxiv.org/abs/2610.38293",
+  "score": 8,
+  "why": "Earnings forecasting LLM benchmark with cited evidence",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38924",
+  "source": "arXiv",
+  "title": "TreasuryQA Bench: Can AI Agents Work an Archive of Scanned Financial Records?",
+  "abstract": "Organisations keep decades of financial records as scanned PDFs on shared drives, and AI agents can now reach those drives through Model Context Protocol (MCP) servers. Existing benchmarks do not mirror this production setting because they simplify the task. In some, the relevant documents are handed to the agent, so it never has to search. In others, the agent searches through documents with pre-extracted text, so it never has to read scanned images. We introduce TreasuryQA Bench, which requires both: 70 questions over 1,435 scanned U.S. Treasury publications, held in Veris's high-fidelity Dropbox twin. In each task the agent searches for the relevant file through Dropbox's MCP server, reads the pages it needs with Reducto's hosted OCR server or its own tools, and replies with one exact figure. A Python grader checks each answer against an accepted range around the correct value. In this paper we present results from ten agents. The best, Claude Opus 5.5 in Claude Code, solves 64.8% of attempts and the worst, GPT-5.6 Terra in Codex, solves 16.7%, so the benchmark is far from saturated. We also test how scan quality affects performance: every agent solves fewer tasks on the blurriest scans. Most failed attempts reply with a wrong number rather than no number, and the most common cause is a digit misread from the scan. Three worked examples are included with their answer keys.",
+  "link": "https://arxiv.org/abs/2610.38924",
+  "score": 8,
+  "why": "Scanned financial record agent benchmark, MCP/OCR",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7666979",
+  "source": "SSRN",
+  "title": "Errors With No Common Sign: Certified Evaluation of Quantum and LLM Components in Financial Pipelines",
+  "abstract": "Hybrid quantum-classical machine learning is increasingly tested in financial settings, yet evaluations rarely make it possible to attribute observed behavior to the quantum components themselves. We study one concrete decision problem: choosing a binary portfolio allocation under a budget constraint, where the risk term is estimated from generated joint credit-spread stress scenarios. We build a modular pipeline, SynQubi, with two quantum components in isolated, swappable roles: a Quantum Circuit Born Machine (QCBM) that generates tail scenarios, benchmarked against empirical, Gaussian, and Student-𝑡 copulas, and a QAOA optimizer, whose proposals are certified against exact classical solvers. Across seeds, on non-degenerate instances QAOA matches classical references on solution quality but is markedly worse on constraint satisfaction, returning budget-feasible allocations in roughly half of samples against the null model's all. Our main finding is methodological: certification overturned five of our own results that ordinary inspection had passed, and the errors pointed in different directions (two flattered the quantum components, three did not). Such errors cannot be fixed by discounting favorable results, only by a mechanical classical reference. A small pilot on LLM-generated trading-strategy code shows the same pattern in an LLM setting: a harness of mechanical validity checks found that every failure was a missing import, not a misunderstanding of the strategy. We establish no quantum advantage. CCS Concepts • Computing methodologies → Intelligent agents; • Applied computing → Economics.",
+  "link": "https://www.ssrn.com/abstract=7666979",
+  "score": 7,
+  "why": "Certified quantum/LLM pipeline, negative QAOA constraint result",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7667658",
+  "source": "SSRN",
+  "title": "Delegating to the Machine: How People Hand Work to AI, and Whether Equity Markets Priced it",
+  "abstract": "We ask how people delegate to a language model and whether industry returns track it. Anthropic Economic Index releases 2025-02-10 to 2026-06-26, conversations matched to O*NET tasks, are aggregated to occupations, countries and 49 Fama–French industries under a pre-registered protocol (pap-v1). H1, less delegation in high-education, high-wage occupations, is not supported: its null is not rejected at 0.01875. H2, delegation rising within tasks, is not supported: the release-level co-condition fails (wild p = 0.927 against 0.0125), although the task-clustered trend is 4.98 pp per year [2.71, 7.25], p",
+  "link": "https://www.ssrn.com/abstract=7667658",
+  "score": 7,
+  "why": "Pre-registered null results on AI delegation and pricing",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38084",
+  "source": "arXiv",
+  "title": "CADENCE: Distributional Next-Transaction Forecasting for Business Cash-Flow Underwriting",
+  "abstract": "Recurring cash flows are the backbone of cash-flow underwriting: they separate durable revenue from one-off deposits, expose standing obligations, and ultimately determine ability to pay. For small businesses, recurrence is both indispensable and hard to estimate, because much of their income arrives as ambiguous transfers, most payment streams are short, and schedules follow calendar conventions that frequency-domain methods treat as noise. We present CADENCE, Calendar-Aware Distributional Event Network for Cash-Flow Estimation, a compact causal Transformer that treats each transaction as a token and predicts the amount and a full, nonparametric timing distribution of every cash flow's next payment. Inheriting transaction semantics from an external labeler and a frozen text encoder keeps CADENCE compact yet general across the long tail of small-business counterparties, while predicting a calibrated distribution rather than an opaque embedding makes its outputs interpretable enough to feed existing underwriting models and power credit decisions. Ablations confirm the role of each design choice, with counterparty semantics driving recall on short histories, calendar inputs driving timing accuracy, and no-event supervision driving precision. Against the production FFT baseline, CADENCE improves one-day timing accuracy by 93.3% and next-event F1 by 6.7%, while producing calibrated distributions that serve directly as a confidence gate for downstream decisions. In an end-to-end credit evaluation on production applications, replacing FFT recurrence features with CADENCE features raises KS by 4.8%, raises the approval rate at a fixed loss rate by 18.2%, and lowers the loss rate at a fixed approval rate by 13.1%.",
+  "link": "https://arxiv.org/abs/2610.38084",
+  "score": 7,
+  "why": "Distributional cash-flow transformer for small-business underwriting",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38442",
+  "source": "arXiv",
+  "title": "Calibration of Passive Market Impact with a Queue-Sensitive Propagator Model",
+  "abstract": "We develop a framework for calibrating passive market impact, defined as the price response to liquidity-providing limit orders, in contrast to the impact of liquidity-consuming market orders. We build on the model of Ouazzani Chahdi, Rosenbaum, and Szymanski (arxiv:2412.07461), which combines Hawkes-driven market-order flow with queue-reactive limit-order and cancellation dynamics. Within this model, we show that the price decomposes into a universal propagator term driven by signed order-flow imbalance and a state-dependent correction that captures the dependence of price sensitivity on volume at the best quotes. This decomposition links limit-order-book microstructure to standard propagator models and yields a regression on two observable signals: the propagator signal and the queue-weighted order-flow imbalance. We calibrate the model on high-frequency order-book data and find that the passive-impact term explains substantial variation in prices beyond the classical propagator, improving both model fit and the accuracy of predicted impact curves.",
+  "link": "https://arxiv.org/abs/2610.38442",
+  "score": 7,
+  "why": "LOB passive impact calibration, real order-book data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38631",
+  "source": "arXiv",
+  "title": "Right Numbers, Wrong Questions: Evaluating LLMs on Underspecified Financial Queries",
+  "abstract": "Financial assistants answer questions that sound factual but depend on what the user leaves unsaid: what a data figure measures, which product variant is meant, and the investor's situation and the rules that apply. An assistant that ignores these can still answer with a real number from its data, one that answers a different question. We call this frame collapse. We study it in Indian mutual funds, where product variants and tax rules are formally defined, so the correct answer can be computed for every reading. One study tests each challenge. Given an ambiguously labelled figure, models used it, often under the user's label. Given every alternative labelled, they listed them all, but the layout decided which came first. Missing a fact about the investor, weaker agents assumed a default or an outdated tax rule; requiring the fact did not guarantee its use. Because such answers match their data, checks against the data pass them. An AI judge caught mislabelled figures only when told what each field means, and still passed answers that silently chose another reading. We show how these failures arise, not how often, and propose controls for financial assistants.",
+  "link": "https://arxiv.org/abs/2610.38631",
+  "score": 7,
+  "why": "LLM financial assistant eval on underspecified queries",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.39636",
+  "source": "arXiv",
+  "title": "Information Flow and Market Risk: Transformer-Based Evidence on Sentiment and Volatility Dynamics",
+  "abstract": "This study examines whether transformer-based financial news sentiment improves equity volatility forecasts beyond conventional market-based predictors. Using data for eleven US stocks, we compare volatility persistence models with specifications incorporating the VIX, AAII investor sentiment, and news sentiment extracted using ModernFinBERT. The forecasting target is annualized volatility constructed from future averages of trailing 252-session Yang-Zhang estimates, evaluated at horizons of 1, 5, and 22 trading days. Models are assessed through walk-forward testing with expanding and rolling estimation windows, fixed initial hyperparameter selection, and statistical comparisons accounting for multiple testing and serial dependence. Results show that a naive persistence benchmark achieves the lowest average QLIKE loss at all horizons. Although HAR-VIX produces the largest number of individual forecasting wins under expanding windows, it does not achieve the lowest mean loss. Adding text-based sentiment improves HAR forecasts in only two of 33 expanding-window comparisons, and neither improvement remains statistically significant under longer HAC bandwidths. A blinded audit of 2,700 news texts further characterizes the agreement and confidence patterns of ModernFinBERT classifications. The findings do not establish a general incremental forecasting advantage from transformer-based news sentiment. They highlight the importance of strong benchmarks, temporal alignment, robust inference, and careful evaluation of text-derived predictors.",
+  "link": "https://arxiv.org/abs/2610.39636",
+  "score": 7,
+  "why": "News sentiment fails to beat persistence, rigorous tests",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.40366",
+  "source": "arXiv",
+  "title": "Comparing tail forecasts: the number of exceedances is the sample size",
+  "abstract": "When two forecasts of a tail, such as prediction intervals at high coverage, extreme quantiles or expected shortfall (ES), are compared by a consistent score, the score difference is known in advance except on the days on which the outcome falls beyond a forecast. The number of these exceedances, not the number of observations, is the effective sample size. For intervals at miscoverage level $α$, the number of observations a comparison needs grows like $1/α$ while the number of exceedances it needs does not, and for some pairs of forecasts no test can do better. A confidence sequence that is valid at all times and needs no distributional assumption attains this rate; Hoeffding-type procedures, calibrated by the range of the score difference, need $1/α$ times more. When exceedances are scarce, the Diebold-Mariano test declares the less conservative forecaster better with at least, asymptotically, the probability of observing no exceedance, whichever forecaster is actually better; the usual small-sample corrections do not remove this, while a bootstrap-t version largely does. For (value-at-risk, ES) forecasts, a less conservative ES can be shown without assumptions to be worse on the days on which it is less conservative, but never to be better without an assumption on the loss tail. In 250-day windows of 97.5% forecasts for seven stock indices, 18.4% of significant Diebold-Mariano results favouring the less conservative model contradict the ranking on the remaining days, against 6.9% of those favouring the more conservative one.",
+  "link": "https://arxiv.org/abs/2610.40366",
+  "score": 7,
+  "why": "Tail forecast evaluation, exceedances as sample size",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38056",
+  "source": "arXiv",
+  "title": "What Language Models Add to Healthcare-Equity Rankings, and What They Could Have Known",
+  "abstract": "In healthcare equities, much of what moves a single name arrives as text: filings, trial and regulatory records, news and analyst commentary. We evaluate how screened non-market features and language-model representations improve market-based equity rankings for US healthcare firms over 2020-2025. Adding balance-sheet and attention features improves the resulting hybrid's price- and liquidity-neutral rank information coefficient (IC) at one, three and twelve months. At twelve months, neutral IC rises from 0.063 to 0.093, a 48% increase, while raw IC rises from 0.289 to 0.298. Language models contribute most clearly at three months: among company-months with scientific-text coverage, a current embedding model raises the hybrid's neutral IC from 0.046 to 0.056. This increment is nominally significant (t = 2.8; paired 95% bootstrap interval [+0.006, +0.015]) and remains exploratory. A larger post hoc gain occurs in months containing trial or regulatory records, consistent with text complementing prices and financial statements at that horizon. Across all text, pre-2020 and current representations yield small positive three-month increments in both neutral and raw IC but no established twelve-month gain. Much of their ranking performance survives within-company time shuffling, consistent with a persistent company component. Rater-cutoff comparisons find negligible pre-cutoff advantages for current models over the pre-2020 rater at one and three months that do not shrink after the cutoffs; twelve-month hindsight attribution remains inconclusive. At twelve months, balance-sheet signals lead after rallies and in volatile markets, while attention leads after declines. Retrospective state-dependent blending improves on a static blend without an established advantage over the full hybrid. Results apply to a survivor-only sector sample and remain unadjusted for the full exploratory search.",
+  "link": "https://arxiv.org/abs/2610.38056",
+  "score": 6,
+  "why": "LLM equity rankings, single-sector healthcare, modest IC",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38239",
+  "source": "arXiv",
+  "title": "The Indian Financial Automated Advice Bias (IFAAB) Dataset : Auditing Socioeconomic and Demographic Disparities in LLM-Generated Financial Advice in India",
+  "abstract": "Large language models are increasingly used for financial guidance, yet little is known about whether their advice changes across social identities in Global South contexts. We introduce the Indian Financial Automated Advice Bias (IFAAB) benchmark, a counterfactual audit dataset of 31,734 GPT-4o-generated financial-advice responses for synthetic Indian personas varying by gender, caste, education, employment, residence, age, and district. Holding the underlying request fixed, we evaluate disparities in LLM-implied wealth, income, savings, projected gains, textual similarity, advice topics, and qualitative bias judgments. In the gender-only audit, male-labelled profiles receive 60.1\\% higher initial total resources and 46.8\\% higher post-advice total resources than comparable female-labelled profiles; in the caste-augmented audit, the post-advice total-resource gap remains 49.4\\%. Adding district information reduces the aggregate post-advice total-resource gender gap to 7.9\\%, revealing strong geographic conditioning. Standalone caste comparisons also show systematic stratification: relative to General-category profiles, OBC, SC, and ST profiles receive significantly lower post-advice total resources, respectively. Textual audits show low semantic similarity between paired gendered responses, with an average TF--IDF cosine similarity score of 0.44. Qualitative analysis shows that women are more often steered toward cautious saving, community support, and basic financial literacy, while men receive more growth-oriented advice involving investment, entrepreneurship, and asset accumulation. IFAAB provides a reusable benchmark for evaluating fairness, suitability, and consumer-protection risks in LLM-mediated financial advice, and highlights the need for locally grounded, intersectional evaluation of AI systems in high-stakes economic domains.",
+  "link": "https://arxiv.org/abs/2610.38239",
+  "score": 6,
+  "why": "LLM financial advice bias audit dataset, India",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38838",
+  "source": "arXiv",
+  "title": "Discovery of Diverse and Realistic Financial Tail-Risk Using Generative Flow Networks",
+  "abstract": "Accurate modeling of rare, high-impact financial events is essential for robust risk management. Sampling-based techniques such as Sequential Markov Chain Monte Carlo (SMCMC) generate diverse scenarios but inefficiently explore high-risk regions, while Deep Reinforcement Learning (DRL) converges on narrow sets of scenarios, limiting diversity. We present GRID, which uses Generative Flow Networks (GFlowNets) -- samplers that draw objects in proportion to a reward -- to systematically generate diverse and realistic financial tail-risk scenarios. Building on continuous GFlowNets, GRID introduces a flexible mixture-policy architecture with variable-specific distribution families for high-dimensional, sequential macro-financial data, together with plausibility constraints that keep generated trajectories realistic. A central practical advantage is robustness to reward-proxy imperfection: because GFlowNets sample proportionally rather than maximize, they remain broadly exploratory even when the oracle's out-of-sample accuracy is low -- an unavoidable reality in financial forecasting. On three real-world crises, GRID improves scenario diversity, realism, and tail-risk coverage over RL and MCMC baselines, and ablations over oracle architectures and distribution families yield practical insights into continuous GFlowNet behavior under noisy rewards.",
+  "link": "https://arxiv.org/abs/2610.38838",
+  "score": 6,
+  "why": "GFlowNet tail-risk scenarios, macro-financial data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.39205",
+  "source": "arXiv",
+  "title": "Sparse Autoencoders as Implicit Diversification Regularisers for Cross-Sectional Cryptocurrency Returns",
+  "abstract": "Factor models are central to asset pricing and portfolio construction, but neural factors are often difficult to interpret, and their effect on portfolio risk is unclear. A sparse autoencoder (SAE) may address both concerns by describing daily returns across many assets with only a few active features. We ask whether this sparse representation produces stable financial factors and better-diversified portfolios. We study cryptocurrency returns, use equities as a secondary test, and compare the SAE with common benchmarks in a time-ordered evaluation. We find consistently lower volatility in SAE portfolios and link this result to lower correlations among the selected assets. However, the SAE does not outperform a simple contrarian strategy on risk-adjusted return, and its factor identities are not stable across training runs. Our contribution is to show that sparse coding can support portfolio diversification, while clearly separating this risk effect from claims about alpha or stable factor identities.",
+  "link": "https://arxiv.org/abs/2610.39205",
+  "score": 6,
+  "why": "SAE crypto portfolios, negative diversification result",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.39458",
+  "source": "arXiv",
+  "title": "Early-Buyer Groups and Fast-Wallet Teams on a Bonding-Curve Launchpad: A Prospective Measurement Study of pump.fun on Solana",
+  "abstract": "We study coordinated groups of wallets on a bonding-curve launchpad (pump.fun on Solana), using a complete record of 200\\,443 token launches, 15\\,854\\,121 curve trades and 51\\,025\\,958 SOL transfers over 88.3 hours. A prospective, multi-channel discovery procedure (co-buying, shared funding, joint signing, transfers, consolidation) yields 23\\,710 wallet groups. Without ground-truth labels we validate them by out-of-sample link prediction, independent non-trading links and a comparison with naive co-buy clustering at equal numbers of flagged tokens: raw clustering collapses into one giant component, yet it ranks tokens at least as well as the groups, so the value of the structure is descriptive. Group activity is highly concentrated and splits into serial creators and long-lived rings of early buyers. Known members buy earlier than other buyers of the same token and extract more cash than an activity-matched placebo set, while late buyers' net cash flow is negative; tokens with members show a pump-like price path, but the contrast vanishes when controls are restricted to comparable tokens, so we report it as an association. A follower entering at the earliest group signal loses money out of sample in all 32 configurations and does no better than random entry. A few pools of tens to over a hundred fast wallets are associated with a two- to four-fold higher chance of reaching 20 SOL, also within creators, with a smaller excess at 60 SOL and none for graduation; on a final hold-out the team rules keep a precision of about one half to three quarters, yet many signals arrive when the curve already holds 20 SOL, one team supplies most of them, and they add no information beyond early curve state. We also document evaluation errors that turn the same data into apparent profit.",
+  "link": "https://arxiv.org/abs/2610.39458",
+  "score": 6,
+  "why": "Pump.fun wallet groups, on-chain network data, descriptive not tradable",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.40482",
+  "source": "arXiv",
+  "title": "FIRME: Registry-Anchored Memory Graphs for Evolving, Heterogeneous Investor Knowledge",
+  "abstract": "Financial AI workflows that reuse investor knowledge need persistent memory that integrates observations across sources and periods without losing identity or provenance. In a knowledge graph, recurring observations may use different surface forms, fragmenting relationship histories and preventing evidence from accumulating. We introduce Fusion and Identity Registry for Memory Evolution (FIRME), a registry-anchored memory graph that reconciles incoming observations to persistent canonical relationships and retains their source, time, and context. Within periods, rule-based fusion links investor-call discussions to portfolio cash-flow signals, directly or through a fixed product-topic ontology. Across periods, canonical identities and persistent aliases direct recurring observations to the same relationship history; deterministic updates summarize reinforcement, inactivity, and reactivation. We evaluate FIRME on proprietary investor-call and cash-flow records and on S&P 500 earnings-call transcripts. Compared with a historical registry that retains canonical identities and semantic fallback but omits alias memory, FIRME increases final-period Correct Match Rate by 7.8-12.1 percentage points across four dataset-backend settings under a fixed-judge and fallback-review protocol. A blinded human audit of 200 incoming observations per setting finds Correct Match Rate gains of 9.0-16.5 points and reattachment-recall gains of 22.5-29.0 points, with higher observed merge precision in all four samples. A separate audit finds valid evidence paths for 293 of 300 outputs from full within-period fusion in the investor-call setting. Extraction-faithfulness and round-trip diagnostics assess source grounding and preservation of extractor-derived graph content.",
+  "link": "https://arxiv.org/abs/2610.40482",
+  "score": 6,
+  "why": "Investor memory graph, no visible evaluation",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7664658",
+  "source": "SSRN",
+  "title": "Decoupling Alpha and Risk: A Comprehensive Analysis of the Hunter-Guard Architecture and Stochastic Regularization in Financial Machine Learning",
+  "abstract": "The enduring challenge in financial machine learning lies in the stochastic, non-stationary nature of asset price distributions, where the signal-to-noise ratio is notoriously low. Traditional monolithic trading algorithms, which attempt to simultaneously learn entry and exit logic within a single objective function, frequently suffer from overfitting to regime-specific noise and fail to account for the asymmetric nature of market liquidity and volatility. This research paper presents a rigorous, exhaustive evaluation of the Hunter-Guard strategy, a dualmodel architecture that decouples trade initiation (\"Hunter\") from trade liquidation (\"Guard\") using ensemble learning methods. Central to this framework is the novel and counterintuitive application of Synthetic Sentiment-the injection of uniform random noise as an input feature-which we posit functions not merely as data augmentation, but as a form of explicit regularization mathematically equivalent to Tikhonov regularization, effectively mitigating the narrative fallacy and algorithmic bias. Through a detailed dissection of the Gradient Boosting Regressor (GBR) implementation, portfolio correlation constraints, and advanced risk metricsspecifically achieving a Sortino Ratio of 3.86 and a Calmar Ratio of 3.4-we demonstrate that the decoupling of buy and sell decisions allows for the optimization of asymmetric risk-reward profiles. Furthermore, we provide a theoretical justification for noise injection, drawing parallels to stochastic resonance and \"Noise Injection Node Regularization\" (NINR), ultimately arguing that the Hunter-Guard paradigm offers a robust alternative to conventional sentiment-driven strategies that are vulnerable to concept drift and linguistic non-stationarity.",
+  "link": "https://www.ssrn.com/abstract=7664658",
+  "score": 5,
+  "why": "Dual-model trading architecture, no clear OOS or code",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7668118",
+  "source": "SSRN",
+  "title": "Generative AI and the Speed of Price Formation Around Earnings Announcements: International Evidence",
+  "abstract": "The rapid diffusion of generative artificial intelligence (GenAI) has the potential to transform how information is produced, disseminated, and processed in global capital markets. Exploiting cross-country variation in ChatGPT exposure measured using web traffic data from 44 countries, we predict and find that greater GenAI exposure accelerates the speed of price formation around earnings announcements. This effect is more pronounced in countries with higher investor sophistication, stronger corporate digital capabilities, more transparent information environments, and greater linguistic alignment between local languages and AI training data. We further find that the effect is more pronounced among firms with greater stock liquidity and during periods with a high concentration of earnings announcements. By identifying these boundary conditions, our study highlights how the financial consequences of GenAI depend on the broader informational and institutional environment.",
+  "link": "https://www.ssrn.com/abstract=7668118",
+  "score": 5,
+  "why": "Cross-country GenAI price formation, no system/code",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.39230",
+  "source": "arXiv",
+  "title": "Beyond LLM Wrappers: Context Engineering and the Three-Engine Architecture for Reliable Financial AI",
+  "abstract": "Financial AI systems must support decision-bearing questions involving payments, collections, cash flow, and compliance while ensuring numerical accuracy, traceability, and auditability. Large language models (LLMs) enable natural language interaction but cannot independently guarantee reproducible calculations or evidence-grounded recommendations. We present a production-grounded architecture integrating three components: a financial knowledge graph for enterprise relationships, temporal context, and provenance; a deterministic optimization engine for financial calculations and decisions; and a multi-agent LLM layer for intent interpretation, task orchestration, explanation, and claim validation. A coordination layer, termed context engineering, selects, ranks, composes, and validates query-specific context across ERP systems, tools, and tenants. Based on observations from 15 deployments over approximately 11 months, single-agent pipelines exhibited hallucination rates of about 7-9% (5-10% across query types), including invented invoices and unsupported financial claims. Graph-backed multi-agent validation reduced observed rates to below 1%, although these findings are observational rather than causal. ERP data quality and tenant-specific schemas remained major implementation challenges. Reusable mappings, graph templates, and validation policies coincided with a reduction in deployment time from roughly six to two weeks. We argue that financial context engineering extends beyond text-centric retrieval-augmented generation by requiring structured relationships, temporal validity, exact numerical evidence, access controls, and validation against source records and solver outputs. We outline research challenges in evaluation, reproducibility, privacy, context quality, and cross-tenant generalization.",
+  "link": "https://arxiv.org/abs/2610.39230",
+  "score": 5,
+  "why": "Architecture position paper, no code or benchmark",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7666439",
+  "source": "SSRN",
+  "title": "Investment Strategies, Psychological Responses, and Investment Outcomes: A Simulated Investment Experiment",
+  "abstract": "This study uses a simulated investment experiment (a thirteen-week buying period, April 20 to July 20, 2026; no purchases after July 20; performance settled using each participant's last account screenshot) to examine whether different entry rules are associated with investors' psychological responses and investment outcomes. Nineteen volunteers were randomly assigned to three groups, each following a different entry rule, and invested in two ETFs (SPY and ICLN) in simulated accounts: Group A used dollar-cost averaging with fixed weekly purchases; Group B bought after two consecutive down days; Group C bought after two consecutive up days. Data sources included a daily experiment log, TradingView simulated-account screenshots, and three questionnaires: a first-week questionnaire (including baseline items on prior investing experience and rule comprehension), administered at the end of the first week, a fourth-week questionnaire, and a post-experiment questionnaire. Results showed differences in psychological responses across groups: Group C (buy after advances) participants most often mentioned fear of buying at a high point. All nine respondents to the post-experiment questionnaire reported a tendency to hold on and wait to break even when facing losses, rather than cutting losses, indicating that the disposition effect was widespread. For performance, this study settled accounts using each participant's last TradingView account screenshot. Because participants placed orders at different times and some accounts involved off-protocol accidental operations early in the experiment, this study presents only descriptive results and does not claim that any one strategy is best. The study also found that operational errors early in the experiment (e.g., accidentally pressing leverage) reflected the influence of investment knowledge and platform familiarity on investment outcomes, offering an exploratory direction for future research. In the fourth-week questionnaire, all six respondents reported having made a trading mistake (most often forgetting to place an order), and all six reported that their accounts were in profit at that time-in contrast to the mostly negative final settlements-showing how strongly self-reported snapshots depend on the time point at which they are taken. The research design, data collection, data analysis, and conclusions of this study were completed by the author. Artificial intelligence (AI) tools were used only for grammar correction and language polishing of this paper.",
+  "link": "https://www.ssrn.com/abstract=7666439",
+  "score": 3,
+  "why": "19-volunteer simulated experiment, not transferable",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7672759",
+  "source": "SSRN",
+  "title": "Predicting Financial Distress in UK Agricultural Firms Using Satellite-Derived Ecosystem-Condition Indicators: An Exploratory Machine Learning Study",
+  "abstract": "Credit assessment for agricultural firms relies on annual accounts, which are backward-looking and filed with a lag. Because farm output depends directly on ecosystem condition, we test whether satellite-derived ecosystem-condition indicators (\"biodiversity features\" below) add information about financial distress. We assemble a firm-year panel of 17 single-site UK agricultural firms (169 observations, 2015-2024), combining financial statements from FAME with Sentinel-2 vegetation, soil and water indices (NDVI, NDWI, BSI, RECI) extracted at farm level through Google Earth Engine. Distress is labelled with the Altman Z′-score for private firms. Random Forest and XGBoost classifiers are evaluated with five-fold stratified crossvalidation, with and without biodiversity features. A finance-only XGBoost baseline reaches an AUC-ROC of 0.941. Adding biodiversity features raises F1-score by 1.8 percentage points contemporaneously and by 3.5 percentage points (about 4% relative) at a one-year lag against a matched baseline, with no gain at a two-year lag; AUC-ROC does not improve. In a SHAP analysis the summer NDVI trend is the most important predictor (mean |SHAP| 1.075), ahead of total assets (0.927), although this firm-level feature may partly encode firm identity. The results are exploratory: the sample is small, the gains are smaller than fold-to-fold variability, the label is derived from the same financial statements, cross-validation is not grouped by firm, and the satellite trend features use information from the whole 2015-2024 window. The results therefore show that satellite-derived indicators can add information to a finance-only model in this sample; they do not demonstrate an out-of-time early-warning signal, which requires firm-grouped and expanding-window validation. The question is motivated by nature-related financial disclosure (TNFD).",
+  "link": "https://www.ssrn.com/abstract=7672759",
+  "score": 3,
+  "why": "17 UK farm firms, single-sector tiny panel",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.39556",
+  "source": "arXiv",
+  "title": "Explainable and Adaptive Machine Learning for Fraud Risk Detection in Bangladesh's Digital Banking Ecosystem",
+  "abstract": "The rapid expansion of digital banking and mobile financial services creates growing challenges for fraud detection, particularly under severe class imbalance and operational constraints. This study presents an explainable and adaptive machine-learning framework integrating chronological evaluation, leakage-conscious feature engineering, probability calibration, SHAP-based explainability, and adaptive risk prioritization. Experiments use the synthetic PaySim mobile-money benchmark and compare Logistic Regression, Random Forest, XGBoost, and LightGBM. XGBoost achieved the strongest fixed-threshold performance, with PR-AUC of 0.5658, ROC-AUC of 0.9068, and F1-score of 0.5369. Platt calibration reduced the test Brier score from 0.1141 to 0.0245, improving probability reliability. SHAP analysis identified temporal, destination-account, transaction-type, and amount features as important model drivers. An adaptive top-1% policy reduced false positives from 192 to 117, but recall declined from 0.4236 to 0.2122, demonstrating a clear alert-capacity trade-off. The results provide a reproducible methodological framework rather than evidence of deployment performance in Bangladesh, since PaySim is synthetic. Validation using governed real-world financial data is therefore an important direction for future research.",
+  "link": "https://arxiv.org/abs/2610.39556",
+  "score": 3,
+  "why": "Synthetic PaySim fraud, single-country Bangladesh",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7666238",
+  "source": "SSRN",
+  "title": "AI and Data Analytics as a Drivers of Digital Transformation in Financial Management for Sustainable Business Growth in Emerging Economies",
+  "abstract": "Financial management practices undergo transformation with the incorporation of artificial intelligence (AI) and data analytics technologies in developing countries because businesses in developing countries have to run their businesses in an unpredictable market with uneven levels of information availability and institutional options. However, there is no study that establishes how AI technologies integrate with each other in generating digital transformation outcomes that result in enhanced financial management performance outcomes. The study aims at establishing how AI technologies function as fundamental components that integrate with each other in generating digital transformation outcomes that result in enhanced financial management performance outcomes, thereby generating sustainable business development in developing countries. The researcher uses mixed research approaches that integrate both systematic literature review techniques and survey study approaches. The researcher uses quantitative research approaches that integrate regression analysis and performance benchmarking in establishing how AI technologies impact operational efficiency outcomes in generating business development in developing countries. The researcher establishes that digital transformation generates substantial outcomes in operational efficiency, which is the fundamental factor that generates business development. The role of AI and data analytics technologies is to act as enabling tools which can assist organizations in enhancing their financial processes and capabilities in order to attain better performance results. From the research findings, it is evident that organizations should consider AI and data analytics technologies as strategic capabilities which can assist them in dealing with uncertainty in developing financial strength in emerging markets.",
+  "link": "https://www.ssrn.com/abstract=7666238",
+  "score": 2,
+  "why": "Survey-style emerging-economy paper, no transferable method",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38275",
+  "source": "arXiv",
+  "title": "Negative Convexity in Pass-Through MBS: Mechanisms and Conditions",
+  "abstract": "This paper investigates the mechanisms and conditions underlying negative convexity in pass-through mortgage-backed securities (MBSs) backed by fixed-rate mortgages. We first derive an exact decomposition of MBS prices into three components: the present value of interest-rate-independent cash flows, the present value of principal repaid early through interest-rate-dependent prepayments, and an interest rate option component capturing the reduction in future cash flows due to prepayments. Under a first-order approximation, the latter two components resemble portfolios of floorlets and Asian-style interest rate options, respectively. We then apply a cumulant expansion to derive closed-form valuation approximations under the one-factor Hull--White model. Numerical results show that including the second cumulant improves accuracy relative to a first-cumulant approximation. Building on the price decomposition, we decompose duration and convexity into component-level contributions and express the condition for negative convexity in terms of their second-order interest rate sensitivities. Finally, phase diagrams across interest rate levels and refinancing sensitivities identify the regions where negative convexity occurs and the corresponding sign boundaries. The negative-convexity region expands as the long-run mean of refinancing sensitivity increases. Negative convexity can arise even when no refinancing incentive exists initially, while its magnitude may vary nonmonotonically with the interest rate level. These findings explain negative MBS convexity through the sensitivities of its price components and quantitatively characterize the conditions governing its occurrence.",
+  "link": "https://arxiv.org/abs/2610.38275",
+  "score": 2,
+  "why": "Pure MBS theory, no data or implementation",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38438",
+  "source": "arXiv",
+  "title": "RoleFUZZER: User-Behaviour Fuzzing for Role-Specification Adherence in Large Language Models",
+  "abstract": "Large language models (LLMs) are often conditioned into specific roles such as tutors, interviewers, or agents acting for an organisation, through system prompts that specify how they should behave. The extent to which they can actually adhere to these role specifications under multi-turn interactions with realistic and potentially problematic users is understudied. To address this, we propose user behaviour fuzzing, a guided search over plausible user behaviours that can lead a model to violate its role specification, and introduce RoleFUZZER, a framework that adapts coverage-guided fuzzing from software testing to operationalise the search. RoleFUZZER constructs scenarios guided by a user-behaviour coverage grid that crosses a grounded taxonomy of user interaction types and the role specification of the model under test i.e. what is under pressure. With RoleFUZZER, we evaluate LLMs across five role specifications, including tutor, financial advisor, AI interviewer, antagonistic roleplay character, and web agent under organisational policies. Across simulated and validated conversations in 15 campaigns, the framework reaches >= 89% coverage of the 64-cell behaviour grid for every model and role tested, and surfaces specification-grounded failure patterns. At an equal budget of conversations, removing the RoleFUZZER grid and asking an LLM to generate specification targeting users free-form lowers coverage to 39-69% with fewer kinds of violations. The same specification can also fail in opposite directions. For e.g., on the antagonist, open-weight target models override the player's safety signals, while Claude Haiku 4.5 breaks character instead. RoleFUZZER offers a tractable way to uncover vulnerabilities in LLMs across role specifications by testing diverse user behaviours that are likely to violate them.",
+  "link": "https://arxiv.org/abs/2610.38438",
+  "score": 2,
+  "why": "General LLM role fuzzing, not finance-specific",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38988",
+  "source": "arXiv",
+  "title": "Mean Field Games of Optimal Trading with an SPDE Model of the Limit Order Book",
+  "abstract": "We develop a mean field game model for optimal trading in which the interaction among traders is mediated by the dynamics of the limit order book. The bid- and ask-side order densities are modelled as stochastic processes with values in infinite-dimensional function spaces that solve stochastic partial differential equations (SPDEs) with stochastic order submission rates and multiplicative infinite-dimensional noise. This extends an existing limit order book framework to capture the aggregate impact of the strategic traders on the order densities. Trading activity affects the order densities, which determine the market depths near the best quotes and hence the mid-price, and the mid-price in turn affects the traders' decisions. We establish the well-posedness and regularity of the resulting density-price system and use it to formulate an $N$-player optimal trading game in which the traders' market orders enter the book through their aggregate order flow. We then study the corresponding mean field game as the number of traders tends to infinity, characterize the mean field equilibrium as a fixed point of the associated consistency condition, and prove its existence and uniqueness under suitable conditions. Finally, we show that the mean field equilibrium induces an $ε_N$-Nash equilibrium for the finite-player game, with $ε_N=O(N^{-1/2})$, and provide a numerical illustration of the equilibrium dynamics.",
+  "link": "https://arxiv.org/abs/2610.38988",
+  "score": 2,
+  "why": "SPDE LOB theory, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.39198",
+  "source": "arXiv",
+  "title": "Persistence of Bounded Rationality in Financial Markets: An Evolutionary Game-Theoretic Model",
+  "abstract": "Classical theory predicts that irrational traders lose money to rational traders and are eventually driven out of the market. Yet noise trading, herding, and heuristic trading persist even in highly developed markets. We model a financial market as an ecology of two trading-behavior types, relatively rational (R) and boundedly rational (N), whose composition evolves under replicator dynamics according to relative performance. Each type's fitness depends on the share of the other type and on frictions. When the interaction is complementary, that is, rational traders profit from the mispricing created by boundedly rational traders while the latter benefit from the liquidity and price correction supplied by the former, and when the difference in frictions is moderate, a unique interior composition exists and is globally asymptotically stable: bounded rationality persists endogenously. When the interaction is antagonistic, the same point becomes a tipping threshold between two one-type regimes. Comparative statics show that lowering the costs of disciplined trading, as algorithmic and AI-based trading does, shifts the composition toward rational trading continuously but does not eliminate bounded rationality unless the cost advantage exceeds an explicit threshold.",
+  "link": "https://arxiv.org/abs/2610.39198",
+  "score": 2,
+  "why": "Evolutionary game theory, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.38152",
+  "source": "arXiv",
+  "title": "BridgeRouter: Gain-Aware Instance Routing over Cross-Modal Bridge Portfolios",
+  "abstract": "Lightweight representation bridges make pretrained, task-adapted EEG foundation models executable on other biosignal modalities without retraining their backbones. However, selecting a single bridge pathway globally assigns every instance to the same transfer route and ignores complementary errors across routes. We therefore formulate multi-bridge transfer as an instance-level algorithm-selection problem and introduce BridgeRouter, a gain-aware router over a portfolio of frozen cross-modal pathways. A validation-selected Single Best Solver (SBS) serves as a protected default route. During training, task labels are used to compute the reduction in negative log-likelihood provided by each alternative route relative to the SBS, and a lightweight MLP predicts these route-specific gains from a target-modality representation extracted by a frozen encoder. At inference, BridgeRouter observes only the target modality, requires neither EEG, task labels, nor predictions from all candidate routes, and executes exactly one bridge pathway: the route with the largest predicted gain when that gain exceeds a validation-calibrated threshold, and the SBS otherwise. We evaluate seven EEG foundation-model bridge pathways for EMG-based freezing-of-gait detection on FOG and ECG-based sleep classification on ISRUC. Across five seeds, BridgeRouter achieves $81.38\\pm1.11\\%$ balanced accuracy on FOG, improving over the BIOT SBS by $11.49$ percentage points, and $62.92\\pm2.17\\%$ on ISRUC, improving over the CBraMod SBS by $3.83$ points. Per-instance bridge oracles reach $99.96\\%$ and $78.61\\%$, respectively, revealing substantial remaining portfolio headroom. These results show that anchor-relative gain prediction can convert complementary cross-modal bridge behavior into deployable instance-level routing improvements while retaining single-route inference.",
+  "link": "https://arxiv.org/abs/2610.38152",
+  "score": 1,
+  "why": "EEG biosignal routing, not financial",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.39768",
+  "source": "arXiv",
+  "title": "Multi-output LSTM soft sensors for industrial anaerobic co-digestion using LSTM-beta-VAE generative data augmentation",
+  "abstract": "Anaerobic digestion (AD) requires close monitoring of key process variables, including pH, the ratio of volatile organic acids to alkaline buffer capacity and biogas production, to maintain biological stability and prevent process failure. While mechanistic frameworks such as the Anaerobic Digestion Model No. 1 are highly parameterised, computationally expensive, and difficult to calibrate for real-time applications, data-driven Long Short-Term Memory (LSTM) networks offer a potentially more adaptable alternative. However, current data-driven approaches in AD are predominantly limited to single-output architectures that focus solely on production yields, as opposed to simultaneous prediction of vital stability indicators. Furthermore, industrial AD datasets are typically sparse and skewed toward steady-state operations. Baseline evaluations demonstrated this scarcity prevents standard algorithms (Random Forest, XGBoost) and unaugmented LSTMs from recognising the transition to unstable operations, resulting in poor estimation of stability indicators. To overcome these challenges, this study proposes a novel generative data augmentation framework using an LSTM-beta-Variational Autoencoder coupled with a multi-output LSTM (MO-LSTM) soft sensor. By synthesising physically valid sequences of these transitions to unstable operations from one year of full-scale plant data, the method safely populates sparse regions of the feature space. Trained on this augmented dataset, the MO-LSTM achieved robust simultaneous estimation across all targets. This approach mitigates data sparsity, providing a basis for hybrid mechanistic-data-driven modelling and early-warning soft sensors in industrial bioprocesses.",
+  "link": "https://arxiv.org/abs/2610.39768",
+  "score": 1,
+  "why": "Anaerobic digestion, not finance",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.39896",
+  "source": "arXiv",
+  "title": "Strong rate for one-dimensional driftless continuous strict local martingales",
+  "abstract": "For one-dimensional strict local martingales of the form $\\mathrm{d} X_t=σ(X_t) \\mathrm{d} W_t$ starting from $X_{0}=x_{0}>0$, we prove the strong rate $\\mathbb{E}\\left[|X^h_N-X_T|\\right] \\lesssim h^{\\min\\{θα,\\frac{1}{2}\\}}$ for a discrete scheme~$X^h$ truncated at a level $h^{-α}$, with time step~$h$, as $h\\downarrow 0$, where~$θ$ depends on the truncation property. For the CEV model $σ(x)\\equiv x^{1+γ}$ in particular, the rate is~$\\frac{1}{2}$ for any $γ\\in (0,1)$ (up to a logarithmic pre-factor at $γ=\\frac{1}{2}$).",
+  "link": "https://arxiv.org/abs/2610.39896",
+  "score": 1,
+  "why": "Pure probability theory, no finance data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.40129",
+  "source": "arXiv",
+  "title": "The Generalised Kessler Syndrome and the Persian Gulf",
+  "abstract": "The term Kessler syndrome was coined for a runaway orbital cascade creating a high-density debris field. The idea is generalised and applied to supply chains. An additive channel enables failures to generate further failures; a subtractive channel erodes the capacity to contain and restore. When damage outpaces repair, failure becomes irreversible and the system settles into a new state. Supplies connect the theory to its application. Stocks insulate subsystems from one another, and their exhaustion exposes dependencies. For the Persian Gulf states, restrictions on maritime supplies from spring 2026 are inadequately compensated by air and road transport alternatives. This depletes inventories unevenly across products and impairs the functioning of the logistics system itself. Throughput optimisation builds fragility everywhere; the Gulf is where it is becoming visible, with the Strait of Hormuz restriction as the trigger. Formulated as a Kelly portfolio allocation under a weakest-link payoff, the optimal strategy concentrates resources on the lagging rather than the leading inputs.",
+  "link": "https://arxiv.org/abs/2610.40129",
+  "score": 1,
+  "why": "Supply-chain chaos theory, not AI finance",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.40404",
+  "source": "arXiv",
+  "title": "Exponential Convergence of the Lifted Gradient Flow of the Bass Functional",
+  "abstract": "We establish multidimensional exponential convergence of the lifted Bass gradient flow in martingale optimal transport. Let $μ\\le_{cx}ν$ be an irreducible pair, with compact convex target support, source support strictly inside the target support, and target density bounded above and bounded away from zero almost everywhere on its interior. For every bounded $σ(X)$-measurable initial state, the flow converges exponentially in $L^2$ to the global minimizer with the prescribed mean, and the functional value gap decays exponentially. Both bounds hold at every nonnegative time with the exact initial errors as prefactors. The quantitative step is strong convexity on sets with a common $L^\\infty$ bound and a fixed mean. We prove it by interpolating entropic endpoint potentials, using two conditional copies to cancel the unknown potential increment, and obtaining a Hessian lower bound uniform in the regularization parameter. Removing the regularization yields curvature for the original functional; the known qualitative theory supplies a common bound for the orbit. This extends the one-dimensional exponential-convergence result of Backhoff-Veraguas, Pammer, and Schachermayer. The main result is formalized in Lean 4. AI was used in preparing the paper (see Section 8).",
+  "link": "https://arxiv.org/abs/2610.40404",
+  "score": 1,
+  "why": "Pure optimal transport math",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
