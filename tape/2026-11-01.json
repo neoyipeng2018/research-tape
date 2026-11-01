@@ -1,0 +1,16 @@
+{
+ "date": "2026-11-01",
+ "scanned": 5,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7669300",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7669300",
+   "title": "Conformalized Execution Shields: Distribution-Free Finite-Sample Risk Guarantees and Maximum Favorable Excursion Bounds in Derivatives Markets",
+   "claim": "A conformalized execution shield vetoes low-expectancy derivative signals and guarantees 90.13 percent finite-sample MFE coverage."
+  }
+ ]
+}

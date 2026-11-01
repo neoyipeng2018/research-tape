@@ -6,6 +6,13 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Conformalized Execution Shields: Distribution-Free Finite-Sample Risk Guarantees and Maximum Favorable Excursion Bounds in Derivatives Markets</title>
+    <link>https://www.ssrn.com/abstract=7669300</link>
+    <description>A conformalized execution shield vetoes low-expectancy derivative signals and guarantees 90.13 percent finite-sample MFE coverage.</description>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7669300</guid>
+  </item>
+  <item>
     <title>Investor&#x27;s Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?</title>
     <link>https://arxiv.org/abs/2610.38342</link>
     <description>Even leading AI agents cannot convert broad equity-research competence into accurate financial forecasts.</description>
@@ -641,13 +648,6 @@
     <description>Model capability matters more than search depth in initial autonomous research.</description>
     <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2609.35559</guid>
-  </item>
-  <item>
-    <title>An Integrated Framework of Financial Feature States, Scenario Candidates and a Lightweight Local Selection Model: A Matched-Information Comparison for S&amp;P 500 Price-Path Selection</title>
-    <link>https://www.ssrn.com/abstract=7547400</link>
-    <description>Lightweight language models underperform conventional baselines for S&amp;P 500 price-path selection despite financial adaptation.</description>
-    <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7547400</guid>
   </item>
 </channel>
 </rss>

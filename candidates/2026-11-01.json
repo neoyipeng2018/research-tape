@@ -1,0 +1,52 @@
+[
+ {
+  "key": "10.2139/ssrn.7669300",
+  "source": "SSRN",
+  "title": "Conformalized Execution Shields: Distribution-Free Finite-Sample Risk Guarantees and Maximum Favorable Excursion Bounds in Derivatives Markets",
+  "abstract": "Quantitative trading strategies frequently generate directional entry signals whose empirical edge is eroded by exchange transaction fees, statutory taxes, and bid-ask spread crossing costs. While conventional machine learning approaches forecast binary price directions or conditional mean returns under unverified Gaussian assumptions, they fail to provide reliable downside safety margins during structural regime shifts. We introduce the Conformalized Execution Shield, an institutional risk management firewall that establishes mathematically guaranteed, distribution-free lower bounds on Maximum Favorable Excursion (MFE). Utilizing Conformal Quantile Regression (CQR) optimized with an asymmetric pinball loss targeting the lower 10th percentile (α = 0.10), our framework guarantees with 1-α = 90% finite-sample statistical confidence that the realized favorable price excursion will exceed the model's calibrated hurdle. Evaluated on high-frequency orderbook and volatility surface features across Indian index derivatives (NSE: Nifty 50 and BankNifty), the Conformal Shield acts as an execution veto gate, filtering out low-expectancy signals. In empirical out-of-sample testing across 1,500 trade sequences, the shield raises the empirical coverage from an uncalibrated 84.60% to a guaranteed 90.13%, boosting the strategy's Profit Factor from 0.97 (a net loss after friction) to 3.39, while reducing maximum underwater drawdown by 64.2%. We further present a Mondrian stratification architecture across gamma regimes and liquidity states, preventing residual distortion during volatility explosions.",
+  "link": "https://www.ssrn.com/abstract=7669300",
+  "score": 8,
+  "why": "Conformal execution risk bounds with transaction costs and finite-sample guarantees.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7670601",
+  "source": "SSRN",
+  "title": "Algorithms at the Loan Desk: AI Credit Scoring, Financial Inclusion and EU AI Act Compliance in the Western Balkans",
+  "abstract": "Credit scoring is where the EU AI Act will first touch ordinary households in the Western Balkans. The Act classifies AI systems that assess the creditworthiness of natural persons as high-risk, and after the Digital Omnibus on AI those obligations apply in the EU from 2 December 2027. Regional banks, most of them owned by EU banking groups, will meet these rules through their parent institutions well before their home countries align their laws. Domestic banks and microfinance institutions will not. This paper argues that the region faces two opposite risks. The first is exclusion by algorithm: models trained on thin or biased data that deny credit to women, rural borrowers, informal workers and young people. The second is exclusion by regulation: compliance costs that push small lenders away from useful analytics altogether, or towards unregulated digital lenders. The paper maps the legal requirements, sets out three compliance tiers among regional lenders, assesses the supervisory question, and proposes ten measures for governments, financial supervisors, the European Commission and international financial institutions.",
+  "link": "https://www.ssrn.com/abstract=7670601",
+  "score": 3,
+  "why": "Single-region credit scoring regulation; no transferable ML method.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7668818",
+  "source": "SSRN",
+  "title": "Financial Intelligence: A Study of Legibility in Distributed Financial Systems",
+  "abstract": "Financial systems routinely fail in ways that few of the people inside them would choose. This paper asks whether a financial system can itself be intelligent, and if so what that depends on. It is a conceptual study. I review how the phrase financial intelligence is used in work on AI in finance, individual financial skill, and law enforcement, and I bring in two bodies of work that cover the same ground without the phrase: the cognitive science of markets and institutions, and accounting and audit scholarship. From this I define financial intelligence as the capacity of an agent or system to sense, verify, interpret, and act on its financial reality, and to make that process readable to others. I propose legibility as the criterion for judging how intelligent a financial system is, meaning the degree to which its state, decisions, and reasons can be read, traced, and verified by someone other than their producer. Four historical cases drawn from Soll (2014) show the criterion at work, and three objections, from Pritchard, Scott, and Rudin, mark its limits. The paper closes with testable claims, limitations, and open problems.",
+  "link": "https://www.ssrn.com/abstract=7668818",
+  "score": 2,
+  "why": "Pure conceptual framework, no data, code, or implementation path.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7670598",
+  "source": "SSRN",
+  "title": "Who Bears the Cost? The Economic and Financial Dimensions of the Swarm Accountability Gap in Autonomous Finance and Autonomous Economies",
+  "abstract": "When interacting artificial intelligence (AI) agents produce a financial outcome for which institutional responsibility remains unresolved, the economic consequences do not disappear. Someone ultimately bears the cost. This paper develops the economic and financial dimensions of the swarm accountability gap in autonomous finance and autonomous economies. Drawing on the economics of externalities, team production, agency and information asymmetry, it introduces the concept of residual accountability cost: the expected financial burden of interaction-generated harms for which existing accountability, liability or redress arrangements fail to establish effective responsibility. The paper examines how this burden may affect financial stability, credit intermediation, market structure and the cost of capital, and how its incidence may differ across consumers, small firms, women and users in the Global South, with consequences for financial inclusion. Technology-facilitated gender-based violence is examined as one strand of the distributional argument, connecting digital harm with economic abuse, lost income and withdrawal from economic participation. The paper develops six principles for allocating responsibility, reducing attribution costs and preserving access to redress, alongside a conceptual framework for assessing the economic consequences of unresolved interaction-level harm. The analysis is conceptual and anticipatory, extending the KYS: Know Your Swarm research programme from governance to economic incidence and institutional loss allocation.",
+  "link": "https://www.ssrn.com/abstract=7670598",
+  "score": 2,
+  "why": "Theoretical accountability economics, no data, method, or implementation.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7670799",
+  "source": "SSRN",
+  "title": "DhanSathi: An Offline-First Multilingual Smart Farming and Financial Companion with Deterministic RAG-Grounded Scheme Evaluation",
+  "abstract": "In this work, we developed DhanSathi, an offlinefirst Android application and asynchronous backend decisionsupport system designed to provide smallholder farmers with multilingual crop advisories, seasonal financial parsing, and government scheme discovery. The evaluated workflow couples a local Room (SQLite) database and Firebase cloud synchronization engine on the mobile client with an asynchronous FastAPI backend powered by Llama 3.3 (70B) inference via the Groq LPU API. To prevent arithmetic and regulatory hallucinations in agricultural welfare matching, the system separates natural language processing from eligibility computation: deterministic backend lookup tables verify farmer eligibility rules across central and state schemes, while the language model is restricted to structured intent extraction, conversational summarization, and regional language translation (English, Hindi, and Marathi) enforced via strict Pydantic schema validation and retry handling. Offline data modifications are reconciled upon reconnection using a deterministic timestamp-based Last-Write-Wins (LWW) conflict resolution protocol. We evaluate the proof-of-concept across synthetic farmer profiles, multilingual financial ledger inputs, and government scheme corpora, measuring end-to-end inference latency, Pydantic schema validity rates, and offlineto-cloud synchronization convergence. These results support the feasibility of combining offline-first mobile persistence, schemaconstrained LLM parsing, and deterministic rule verification for low-connectivity agricultural workflows; they do not establish certified agronomic diagnosis or autonomous financial auditing.",
+  "link": "https://www.ssrn.com/abstract=7670799",
+  "score": 2,
+  "why": "Farming advisory app, single-country, not core financial ML.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
