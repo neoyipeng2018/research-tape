@@ -1,0 +1,312 @@
+[
+ {
+  "key": "2611.00515",
+  "source": "arXiv",
+  "title": "AStockArena: Beyond Returns, Can We Entrust Real Capital to the Decisions of Financial Agents?",
+  "abstract": "Large language models (LLMs) are increasingly used in dynamic financial trading, yet real-time trading benchmarks mainly evaluate agents by cumulative returns and risk-adjusted performance. Such outcome metrics cannot show whether trades are faithfully reported, supported by available evidence, and consistent with account states. We introduce AStockArena, a real-time decision-auditing benchmark for continuous trading in China's A-share market. Under shared market conditions and execution constraints, we evaluate 13 open- and closed-source models over 3,198 sequential decisions. AStockArena reconstructsthe actions actually posted to accounts by aligning reports, trade requests, execution responses, and account states, and audits them with eight checks spanning execution traceability (O), evidence sufficiency (RK), and financial meta-awareness (B), combining record verification with consensus expert annotation. Of 1,070 trading points, 72.99% exhibit at least one audit gap; model-level rates range from52.2% to 91.2%, with evidence gaps most prevalent. Historical trade-filtering replay further shows thatportfolio outcomes are sensitive to these flagged trades. Decision-process auditing thus offers a verifiable complement to return-based evaluation of financial agents.",
+  "link": "https://arxiv.org/abs/2611.00515",
+  "score": 8,
+  "why": "Real-time LLM trading audit benchmark, 3,198 decisions.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.01123",
+  "source": "arXiv",
+  "title": "Do Earnings Calls Help Predict Financial Restatements? Evaluating Text Beyond Public Firm Information",
+  "abstract": "Financial restatements correct errors in previously published financial reports. Could managers' language in earnings calls warn of them in advance? Comparing 109 calls that precede restatements with 218 matched control calls, we find that the text predicts restatements but adds no detectable ranking gain beyond public firm information. A text classifier beats chance, largely because of restatements tied to special-purpose acquisition companies, but a model using only public information scores slightly higher. With refitting, the 95% interval for the gain from adding text (-0.05 to 0.11 AUROC) still leaves room for a meaningful benefit. A large language model scores higher, but we show that it names the exact ticker in 66% of masked transcripts, and it was released after the restatements occurred. Our results suggest that finding new warning signs in call text requires a public-information baseline and a check of what a language model already knows.",
+  "link": "https://arxiv.org/abs/2611.01123",
+  "score": 8,
+  "why": "Earnings calls add no restatement gain; LLM leakage shown.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00484",
+  "source": "arXiv",
+  "title": "Where Causal Discovery Breaks on Real Data: Measuring the Assumptions One Property at a Time",
+  "abstract": "Causal discovery is usually evaluated on simulators or on systems whose ground truth follows from physics or design. When it fails on other real data, the failure is attributed to assumptions that may not hold, but which ones fail, and by how much, is rarely measured. We measure the observable properties of the data they bear on, one property at a time, on a real panel. The case study follows 2,901 US public firms over 31 quarters, with 71 types of corporate action from SEC 8-K filings, 11 financial-statement items, and an expert graph over 651 action-state pairs. The panel breaks measurable requirements of discovery: tails that survive winsorisation, balance-sheet items and revenue close to random walks, and interventions too rare to detect effects of a tenth of a standard deviation in 40 of 71 actions. Even so, a marginal test ranks expert-labelled direct above not-direct pairs within each action (AUROC 0.658) better than every null we built, so the panel does carry information about which pairs are direct. Tuned discovery methods, in configurations feasible at this panel size, recover less of it than a simple pairwise cross-correlation when pairs are ranked within each action, and no more when they are ranked within each target, which removes what the target alone predicts. Most direct pairs (132 of 222) involve actions below the support needed for 80% power against a 0.1-SD effect. For flow targets, conditioning on the target's other expert-labelled parents, often filed alongside the action, erodes the marginal discrimination, and most not-direct associations survive it: even with the graph's parent sets supplied, the expected separation does not emerge. For each property, we give a diagnostic computable before any discovery method is run.",
+  "link": "https://arxiv.org/abs/2611.00484",
+  "score": 7,
+  "why": "Causal discovery fails on real financial panel with graph.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.01236",
+  "source": "arXiv",
+  "title": "RiskReason: A Benchmark for Verifiable Financial Risk Reasoning",
+  "abstract": "Robust financial-risk inference requires more than mathematical correctness. Models must accurately apply conditional rules, maintain evolving financial states, and make decisions that respect operational constraints. This work introduces RiskReason, a benchmark for verifiable financial-risk reasoning that spans diverse risk-management mechanisms. The benchmark includes Standard tasks, which assess individual financial mechanisms, and Long-horizon tasks, which combine multiple mechanisms through extended dependencies. Each task provides reference outcomes, formal specifications, reasoning annotations, and dependency representations to support systematic analysis of model performance. Eleven model configurations are evaluated using strict single-attempt accuracy, complemented by structural and qualitative failure analyses. The strongest configurations achieve 80.0--90.2\\% overall accuracy, with several maintaining high performance on composed financial scenarios. However, analysis of failures reveals incorrect risk decisions despite accurate intermediate calculations, inconsistent propagation of financial states, and remediation actions that violate binding constraints. In contrast, some strict evaluation failures result from incomplete reporting rather than incorrect financial conclusions. These findings indicate that aggregate accuracy alone is insufficient to characterize financial-risk reasoning reliability and motivate evaluations that distinguish numerical correctness, state consistency, constraint satisfaction, and decision validity.",
+  "link": "https://arxiv.org/abs/2611.01236",
+  "score": 7,
+  "why": "Verifiable LLM financial-risk reasoning benchmark with 11 configs.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.40938",
+  "source": "arXiv",
+  "title": "DiRAFT: Privacy-Aware Financial Transcript Synthesis from Aggregate Discourse Priors",
+  "abstract": "Using customer conversations to train and evaluate financial language models raises confidentiality concerns because non-public financial facts can remain after direct identifiers are masked. Synthetic transcripts offer an alternative data source, but their discourse fidelity and residual confidentiality risks require assessment. We introduce DiRAFT (Discourse Realization from Aggregate First-order Transitions), which extracts financial concept graphs and records the order in which concepts are first introduced. It pools adjacent concept transitions across training records and samples new graph plans from aggregate transition, starting-concept, and plan-length priors. A discourse layer guides text realization without supplying an individual source passage or graph. We assess privacy-related risks through two complementary evaluations: corpus-level structural overlap and source-grounded checks for specific non-public investor facts. The structural assessment covers two financial corpora and three generation backends. The confidential-fact assessment uses human review of 1,400 investor-call outputs across seven strategies and two backends. We also evaluate transition fidelity, content recoverability, and trajectory diversity. Stochastic sampling provides a favorable balance between transition fidelity and structural overlap, with consistent advantages over greedy and top-3 on investor calls. The confidential-fact assessment likewise detects fewer matches for stochastic sampling than these alternatives on both backends covered by the fact assessment. These complementary assessments provide empirical evidence on residual confidentiality risks without establishing a formal guarantee.",
+  "link": "https://arxiv.org/abs/2610.40938",
+  "score": 6,
+  "why": "Synthetic financial transcripts, privacy-aware LLM data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.41624",
+  "source": "arXiv",
+  "title": "Expected shortfall estimation and capital coverage under overlapping scenarios",
+  "abstract": "Expected shortfall (ES) is routinely estimated from a short sample of profit-and-loss (P&L) scenarios built from overlapping multi-day returns, while the non-parametric estimators applied to such data are designed under independent sampling. We study how this mismatch affects estimation accuracy and capital coverage, and how it interacts with serial dependence and heavy tails in the underlying P&L. Working within the coherent risk estimation framework, we compare six order-statistic-based ES estimators on fit, bias, and capital-coverage metrics. Following the Fundamental Review of the Trading Book (FRTB), we use a one-year estimation window and ES at the $2.5\\%$ confidence level as a benchmark setup. We combine simulations with market data on twelve risk factors and ninety-nine equity portfolios. We show that overlapping sampling does not merely add noise but shifts ES estimates systematically downward, thereby weakening capital coverage. Serial dependence acts in the same direction, and heavy tails amplify both effects. More conservative weighting mitigates the underestimation but does not remove it. On market data, the confidence level at which the estimated capital covers realized losses roughly doubles in median under overlapping sampling for every estimator, while the $\\textrm{ES}_{2.5\\%}$-to-$\\textrm{VaR}_{1\\%}$ ratio, which links the FRTB base market risk capital metric to its pre-FRTB predecessor, changes comparatively little. Overlapping sampling can thus substantially understate ES-based capital. Since many banks apply a small set of standard estimators in their FRTB regulatory or economic capital model in a historical simulation approach, this understatement is likely to be common for many institutions, and combining simulation-based assessment of estimation risk with coverage-based diagnostics offers a practical method to detect it in model validation and monitoring.",
+  "link": "https://arxiv.org/abs/2610.41624",
+  "score": 6,
+  "why": "ES estimation flaw with real market data and coverage.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.41689",
+  "source": "arXiv",
+  "title": "QBX: A Compiler for Well-Formed, Auditable Alpha Programs",
+  "abstract": "Formulaic alpha miners increasingly differ in how they generate candidates, yet each system typically couples its own representation, evaluator, and selector into a bespoke pipeline whose results are difficult to reproduce or compare. We present QBX, a compiler that defines a well-formed, auditable space of alpha programs. A finite, versioned block registry and whole-strategy port-DAG language define the candidate space; the compiler either rejects a proposal with structured diagnostics or emits an evidence-carrying IR with types, time-availability effects, executable linkage, and Merkle-style content identities. Compiler-closed actions keep search inside the admitted space, node identities support incremental evaluation, and context-bound root identities govern program deduplication and trial provenance. The availability-effect system rejects contract-visible look-ahead while admitting legal point-in-time forecasts. On Chinese A-share panels, evaluation-valid proposals increase from 26.8% for free strings and 36.4% for a grammar-only control to 97.7% for typed programs. Incremental evaluation replays search lineages 7.5 times faster with numerical parity, while the availability checker admits zero registered-contract violations across 23,342 candidates. Under matched LLM-call budgets, compiler-closed search reaches the pool-specific diagnostic frontier with substantially fewer calls. These results concern validity, reuse, and search efficiency within the registered vocabulary, not an increase in the information available from the market panel.",
+  "link": "https://arxiv.org/abs/2610.41689",
+  "score": 6,
+  "why": "Auditable compiler for alpha program search",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.41888",
+  "source": "arXiv",
+  "title": "On-Chain Behavioral Signatures for Classifying Centralized Exchange Addresses on Ethereum Using Proof-of-Reserves",
+  "abstract": "Centralized exchanges (CEXs) are key gateways between traditional finance and digital asset markets, yet identifying their blockchain addresses remains challenging. Existing approaches often rely on opaque attribution labels or treat exchanges as secondary classification targets, leaving generalization to unseen exchanges insufficiently examined. This study develops a classification framework using Proof-of-Reserves (PoR) disclosures, with 3,033,857 Ethereum addresses from 15 CEXs and five Non-CEX categories. We derive 58 on-chain behavioral features and evaluate LightGBM against logistic regression (LR) under a leave-one-exchange-out protocol. Across five lookback windows (30-730 days), LightGBM consistently outperformed LR, with macro PR-AUC increasing from 0.6611 to 0.9594 using the selected 17 features, compared with 0.7697 for LR at 730 days. Robustness checks showed comparable performance when feature selection and hyperparameter optimization were repeated across splits and held-out exchanges, while exchange-balanced reweighting improved macro PR-AUC. SHAP analysis and feature-group ablation identified gas behavior, ERC-20 token activity, and internal transactions as key predictive signals in the constructed dataset. These findings support interpretable CEX address screening for blockchain monitoring, while the released feature dataset enables reproducible follow-up research.",
+  "link": "https://arxiv.org/abs/2610.41888",
+  "score": 6,
+  "why": "On-chain CEX classification with leave-one-exchange-out validation.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00958",
+  "source": "arXiv",
+  "title": "Quantifying Repair Risk in Crypto Option Surfaces",
+  "abstract": "Option desks adjust crypto option quotes into price surfaces that remain within bid-ask intervals and satisfy standard no-arbitrage restrictions across strikes before computing Greeks, hedge quantities, or risk measures. For the same quote panel, however, these constraints may admit multiple such surfaces, which we call admissible repairs, with different downstream outputs. We define the resulting variation as repair risk and propose repair-risk validation, a matched framework for quantifying dispersion in Greeks, hedge quantities, and risk measures. The mechanism is finite-difference amplification: two admissible repairs within price distance $\\varepsilon$ can differ in local normalized-strike curvature by $4\\varepsilon/h^2$, where $h$ is local normalized-strike spacing. We evaluate repair risk on Deribit BTC and ETH option chains, using $L_1$ and $L_2$ projections of midpoint prices onto the same admissible set as matched controls. Across 108 matched evaluations spanning 18 sampled calendar months, the median 90th percentile of the scaled spot-gamma gap for $L_2$ versus the $ρ=10$ smoothness-penalized repair is nearly twenty times the matched $L_1$--$L_2$ control. We also instantiate NN-Proj, a neural-projection repair, to test whether learned repairs exhibit repair risk. Despite good held-out fit, its downstream outputs remain distinct from those of classical repairs. Across five seeds with the same training window and architecture, its curvature dispersion exceeds the matched $L_1$--$L_2$ control in 17 of 18 months ($p=1.45\\times10^{-4}$). For a USD 1 million risk reversal, switching from $L_2$ to the $ρ=10$ repair shifts the median 90th-percentile hedge notional by 18.62 basis points of gross spot notional. VaR-style estimates also exhibit greater dispersion across repairs. The repair rule is therefore part of the risk model, not merely a feasibility check.",
+  "link": "https://arxiv.org/abs/2611.00958",
+  "score": 6,
+  "why": "Crypto option surface repair risk on Deribit data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7673158",
+  "source": "SSRN",
+  "title": "Green Tastes, Beliefs, and Portfolios: Evidence from Synthetic Investors",
+  "abstract": "We use LLMs as synthetic survey respondents to elicit green tastes, return beliefs, portfolio allocations, and investment motives from 480 retail and 60 institutional investor identities. Compared with retail, institutions report weaker tastes yet greener portfolio tilts, citing outside pressure. A greener tilt therefore need not indicate a stronger taste for greenness. Retail tastes depend mostly on political affiliation, institutional tastes on type and geography. Beliefs differ across the three ESG dimensions, with high-governance portfolios expected to outperform. We reconstruct survey responses under 2014--2025 information environments using date-masked information modules shuffled across years. Tastes vary little over time, but beliefs about green portfolios become more pessimistic after 2020. The two reconstructed series relate to different real-world data: tastes to measures of green demand, beliefs to measures of attention.",
+  "link": "https://www.ssrn.com/abstract=7673158",
+  "score": 5,
+  "why": "Synthetic investor ESG beliefs, not actionable trading",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.41405",
+  "source": "arXiv",
+  "title": "Conditional Neural SDEs for Financial Time-Series Generation",
+  "abstract": "Conditional generation of time-series paths is a central problem in probabilistic modeling, where the goal is to simulate future trajectories that are both realistic and responsive to external context. It has direct applications in finance and economics. Neural stochastic differential equations provide a natural framework for this task by combining continuous-time stochastic dynamics with learnable drift and diffusion functions. However, directly modeling the target state can be unstable in conditional settings, especially when the target and conditioning variables have strong level dependence, limited training data, or different dimensions.We propose a residualanchor Neural SDE architecture that decomposes the target into a learned conditional anchor and a stochastic residual. The anchor captures the context-dependent baseline, while the Neural SDE (Stochastic Differential Equation) models the residual dynamics around this baseline. This separation reduces the burden on the stochastic dynamics and generalizes spread-based representations to more general conditioning settings.We evaluate the approach on real-world financial time series, including conditional interest-rate scenarios and a comparison with a time-series foundation model. The results show that the proposed model can generate plausible conditional paths, maintain competitive point accuracy, and provide calibrated uncertainty estimates.",
+  "link": "https://arxiv.org/abs/2610.41405",
+  "score": 5,
+  "why": "Conditional Neural SDE time-series generation, no OOS trading.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00338",
+  "source": "arXiv",
+  "title": "Reading the Count: Prediction Markets and Brazil's 2026 Presidential Election",
+  "abstract": "We rebuild the public count of Brazil's 2026 presidential runoff minute by minute from the electoral court's section-level records and compare it with every trade on Kalshi and Polymarket. A projection published live on the night gave the eventual winner, Lula, a probability of 0.998 from 19:15, with 1.6% of sections counted. The markets reached 0.9 at 20:24, with 46% counted. Read as the projection's central estimate with a wider uncertainty, their prices imply a standard deviation of the final margin about four times the live projection's, and about twice that of a section-level projection calibrated on the 2018 runoff, the earlier night with the largest errors. Valued at these projections, takers' purchases of Lula after the count resumed had an expected profit of 4 to 18 cents per Kalshi contract after fees; valued at a state-level extrapolation of the count, it was zero. During a two-hour suspension of the count the markets gave Lula 0.25 to 0.44, below every reading we compute afterwards from the sections then public, none of which was available live. On the first-round night, when the headline count showed the eventual leader ahead from its first file, the same markets were faster than our projection.",
+  "link": "https://arxiv.org/abs/2611.00338",
+  "score": 5,
+  "why": "Prediction-market Brazil election; real trades, single event.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.42119",
+  "source": "arXiv",
+  "title": "Functional Tensor Trains for High-Order Greeks and Exposure Tails of Multi-Asset Structured Products",
+  "abstract": "Risk management of worst-of autocallables needs price sensitivities (Greeks) up to third order and the potential future exposure, a tail quantile of the note's future value. In Monte Carlo, each order of differentiation multiplies the sampling noise by a factor that grows with the observation frequency, and nested simulation turns the noise of its inner paths into a bias of the quantile. We instead solve the backward pricing recursion, storing the continuation value as an $hp$ functional tensor train (hp-FTT) whose piecewise-polynomial cores are split at the barriers, so that worst-of barrier events act exactly, with rank one. For Gaussian transitions we show that the polynomial degree sufficient for an error $\\varepsilon$ grows only as $\\sqrt{\\log(1/\\varepsilon)}$. One solve then gives every Greek at any spot without sampling noise, by integrating the likelihood-ratio weight against the stored value, and the values it stores at future dates replace inner simulation. Against the strongest Monte Carlo estimators we could build or find published, on worst-of autocallables observed monthly on three to five assets, the order of the Greek and the accuracy decide which method is cheaper. At $1\\%$ accuracy Monte Carlo is more than an order of magnitude cheaper for deltas, second-order Greeks go either way, and hp-FTT is cheaper for every third-order Greek, by up to two orders of magnitude. At $0.1\\%$ hp-FTT is cheaper for every Greek we could check, under geometric Brownian motion and local volatility alike. For the exposure alone Monte Carlo is cheaper at $1\\%$ and hp-FTT at $0.1\\%$, and a solve run for the Greeks yields it for little more than scenario sampling. Sampling pays in variance for each derivative and hp-FTT in rank for each asset, so Monte Carlo keeps low-order Greeks at percent accuracy, rarely observed contracts and many assets.",
+  "link": "https://arxiv.org/abs/2610.42119",
+  "score": 4,
+  "why": "Tensor trains for structured-product Greeks, no data/LLM.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00466",
+  "source": "arXiv",
+  "title": "Security and Derivative Pricing with Fast Regime Switches",
+  "abstract": "A regime-switching model lets any parameter of a standard model take a different value in each state of a hidden Markov chain. For the affine and exponential-Lévy models in common use the pricing problem reduces to one linear system, a' = (Q + diag g(t)) a, with the chain's generator Q and a model-specific forcing g as its only ingredients. We expand its solution in the mean holding time of the chain to any order, with an initial layer for the starting regime, and identify the first correction as a Green-Kubo matrix from the group inverse of Q. The same system prices bonds, swaptions, caps, credit default swaps, Asian and digital options, and equity options under stochastic rates, with the Gil-Pelaez integrals conditioned on the regime at expiry where a payoff depends on it; barrier, American and Bermudan instruments go to the coupled equations on a grid. Every numerical claim is checked against QuantLib in the limit where the regimes coincide and against an independent referee with switching on, and the implementation is public.",
+  "link": "https://arxiv.org/abs/2611.00466",
+  "score": 4,
+  "why": "Fast regime-switching derivative pricing theory.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00578",
+  "source": "arXiv",
+  "title": "Non-asymptotic analysis of SGLD with discontinuous stochastic gradients: a new route to portfolio CVaR minimization",
+  "abstract": "Conditional-Value-at-Risk (CVaR) optimization is a fundamental tool in portfolio selection, yet its nonsmooth loss structure poses a challenge for the existing theory of stochastic gradient methods including associated Langevin algorithms. In particular, the positive-part loss and the softmax portfolio parametrization lead to stochastic gradients that need not be globally Lipschitz continuous, but rather discontinuous, where available non-convex stochastic gradient Langevin dynamics (SGLD) guarantees often exhibit an unfavorable exponential dependence on the problem dimension. In this article, we develop a non-asymptotic analysis of SGLD for a regularized CVaR portfolio optimization problem. We exploit the geometric structure of the CVaR objective to establish linear growth, convexity-at-infinity, and one-sided Lipschitz properties of the stochastic gradient without imposing density assumptions on the asset losses that are typical in previous works. Crucially, the constants appearing in the aforementioned structural conditions are shown to be independent of the number of assets. Moreover, we establish a convergence bound in Wasserstein-2 distance with rate $\\mathcal{O}(λ^{1/4})$ and a finite-time guarantee for the expected excess risk. Our analysis, together with the dimension-independent constants in the structural conditions, leads to an excess risk bound that depends linearly on the number of assets. Numerical experiments with simulated Gaussian portfolios exhibit the predicted dimension dependence. Computational comparisons with alternative stochastic optimization methods further illustrate the practical efficiency of SGLD for the optimization problem under consideration. Finally, we extend the framework to a broader class of non-convex stochastic optimization problems with discontinuous stochastic gradients.",
+  "link": "https://arxiv.org/abs/2611.00578",
+  "score": 4,
+  "why": "CVaR portfolio SGLD non-asymptotic theory only.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00700",
+  "source": "arXiv",
+  "title": "Optimal portfolio and consumption under no-shorting constraints: The exploratory formulation and reinforcement learning",
+  "abstract": "We develop a reinforcement-learning framework for the continuous-time optimal portfolio-consumption via utility maximization under no-shorting portfolio constraints. We adopt the exploratory formulation under entropy regularization and impose no-shorting constraint through a componentwise nonnegative conditional-mean constraint on the class of admissible randomized policies, while the sampled actions are allowed to be negative during the training. For CRRA utility, we derive the homothetic value function and the optimal Gaussian portfolio and Gibbs consumption policies under some model conditions and establish a verification theorem. These results allow compatible parameterizations in actor, critic, and $q$ functions for a constrained policy-iteration algorithm. Policy evaluation uses trajectory-based moment conditions, and policy improvement uses fitted coefficients to solve a convex quadratic program over the nonnegative orthant without requiring market coefficients as inputs. The mean constraint preserves tractable Gaussian exploration throughout parameter learning, while modal deployment converts the learned randomized policies into deterministic controls. In particular, the Gaussian mode coincides with its constrained mean and hence satisfies no-shorting constraint, and the Gibbs mode determines the deployed consumption rule.",
+  "link": "https://arxiv.org/abs/2611.00700",
+  "score": 4,
+  "why": "RL constrained portfolio-consumption, theory-heavy, no data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00807",
+  "source": "arXiv",
+  "title": "AI Data Analysis: A New Approach - Multi-engine Joint State Data Analysis",
+  "abstract": "AI data analysis today is three fragmented worlds: LLMs understand semantics but cannot compute; BI aggregates precisely but is stateless; ML processes large-scale data on a stateful kernel but lacks semantics. This paper proposes a combination mechanism, named Multi-engine Joint State Data Analysis, that fills a still-open gap - the multi-engine joint context: the data context is embedded into LLM conversational analysis, where the LLM serves only as the semantic, reasoning, and orchestration layer (not computation) and connects four engines through the 1M context window - Python and R ML kernels, SQL over relational databases, Cypher over graph databases - yielding two multiplications, \"semantics and precise computation\" and \"relational and graph\", under enterprise-grade governance. The novelty is a four-dimensional coordinate system: horizontal (engine kinds), vertical (state flow - the watershed), spatial (business generalization), temporal (iterative convergence); a deterministic grounding method (one-shot injection of schema.json + notes.md, M+S) carries the spatial and temporal dimensions. Empirically, all four dimensions are substantiated: horizontally, four engines are quantified - SQL, Cypher (96.5% on CypherBench movie), ML in Python and R (TabReD weather); vertically, state flows across engines and grounding is reused across kernels; spatially, SQL generalizes across three business databases - AdventureWorks 91.3%, financial 95.3%, formula_1 94.6% (average), about 20-23 points above single-shot SOTA 74.45%; temporally, accuracy converges monotonically as notes accumulate. The core invariant - the separation of semantics from computation plus a cross-data-domain persistent context - does not expire as LLMs and agents evolve or engine forms change.",
+  "link": "https://arxiv.org/abs/2611.00807",
+  "score": 4,
+  "why": "Multi-engine LLM data analysis system, not finance-specific.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.01185",
+  "source": "arXiv",
+  "title": "Boom-Busty Marketron as a Model of Market Dynamics: How Investor-Market Reflexivity Amplifies Non-Equilibrium",
+  "abstract": "We introduce the Boom-Busty Marketron, a model of a multi-asset market in which the demand of a single collective investor moves prices and itself depends on market performance. This creates an investor-market reflexive loop in the spirit of Soros's theory. The market state is stationary without being at equilibrium: a non-equilibrium steady state (NESS), with broken detailed balance and a probability current circulating between mispricing, demand and volatility. While stochastic volatility with the leverage effect already breaks detailed balance and makes the market dynamics irreversible, the investor-market loop pushes the market further away from equilibrium. Calibrated to the S\\&P 500 from 1996 to 2024 by simulated moments, the model reproduces the stylised facts of returns together with quantitative metrics of the market, including cross-sectional ones, and its return and cycle statistics stay stationary for a century and a half on the 1996--2010 inputs. Its central emergent behaviour is a boom-bust cycle, whose frequency meets the S\\&P's within one-sigma ranges. The model also produces a default rate of the order of that of investment-grade issuers, prices inside Fisher Black's factor of two of value, the dumb-money effect of Frazzini and Lamont, and a measurable arrow of time. Standard long-short factors built from its cross section rotate through the cycle, and so do its industry groups along the defensive axis.",
+  "link": "https://arxiv.org/abs/2611.01185",
+  "score": 4,
+  "why": "Agent-market reflexivity model calibrated to SPX",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.40831",
+  "source": "arXiv",
+  "title": "Circumventing the Computational Hardness of Computational Arbitrage",
+  "abstract": "AI model marketplaces host providers with heterogeneous costs and capabilities. These differences create an opportunity for computational arbitrage (Olmedo et al., 2026), in which an intermediary purchases inference from a portfolio of models and resells it to users at a profit. Beyond creating profit opportunities for the arbitrageur, computational arbitrage offers financial value to both consumers and providers and could therefore significantly influence AI model markets. While prior work empirically demonstrates the feasibility of computational arbitrage for small model pools, scaling it to large marketplaces requires arbitrage strategies that are both computationally tractable and inexpensive to identify and deploy. In this work, we formalize computational arbitrage as an allocation problem and prove that it is generally NP-hard. However, we show that the optimal allocation can be computed efficiently under a natural diminishing-returns condition on how model performance scales with inference spending. We further develop a sample-efficient method for estimating model performance from limited data, reducing the upfront cost of identifying arbitrage strategies. Our analysis also yields several economic insights: at the optimum, every funded model delivers the same marginal utility per dollar; arbitrage directs revenue away from providers offering little utility relative to their prices; and it rewards complementary specialization.",
+  "link": "https://arxiv.org/abs/2610.40831",
+  "score": 3,
+  "why": "AI model marketplace arbitrage, not financial markets.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.40858",
+  "source": "arXiv",
+  "title": "FARO: Function-Space Adaptive Return-to-Risk Optimization via Cross-Block Equal-Risk-Contribution Budget Allocation",
+  "abstract": "Training a large language model is compute-bound, and current recipes divide the work between optimizers by hand: orthogonalized momentum for attention and MLP matrices, Adam-style updates for the rest. This division rests on human priors about which layer type deserves which geometry, and it fixes a single global update budget that every parameter block shares. We introduce FARO, a function-space adaptive optimizer that makes the partition of parameters into blocks the unit of decision. FARO gives each block a geometry by its realized counterfactual return, then freezes the routes and reallocates the frozen per-block budget by cross-block equal risk contribution (ERC), the risk-parity principle from portfolio theory. On a GPT-style model trained on FineWeb, the framework gives two results. First, its FARO-Adaptive arm reaches 3.2780 nats at the full schedule, matching NorMuonAndAdam (3.2794), the best hand-designed recipe: it recovers the human prior without hand-setting per-layer geometry. Second, FARO-ERC improves on that arm: it lowers the clean-data loss at every one of 6 seeds, by 0.0136 nats on average, a modest but robust gain. Its sign test, paired test, and confidence interval all agree, and it exceeds the measured run-to-run noise at no added time or memory. It works by trimming the riskiest blocks rather than expanding the safest, and it holds up under a corrupted stream, still lowering the mean loss and winning the seed majority. The source code is available at https://github.com/wxj630/FARO.",
+  "link": "https://arxiv.org/abs/2610.40858",
+  "score": 3,
+  "why": "LLM optimizer using portfolio theory as metaphor",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.41019",
+  "source": "arXiv",
+  "title": "Neural Network Methods in the 2BSDE Formalism for Solving the High-Dimensional Black--Scholes Equation with Transaction Costs",
+  "abstract": "A 2BSDE system is written down for a $(D+1)$-dimensional Black--Scholes partial differential equation (PDE) with the Leland transaction cost model which incorporates the sign of the curvature. The 2BSDE system takes input from the ``speed'' (derivative of the curvature). This system is solved using a single ResNet neural network which learns both the solution to the PDE as well as the degrees of freedom in the curvature matrix. The network is used to learn the price of derivatives such as call options and butterfly spreads on geometric baskets for $D=10,100$ achieving a time-averaged RMSE of less than $0.1$ in each case.",
+  "link": "https://arxiv.org/abs/2610.41019",
+  "score": 3,
+  "why": "High-dimensional option pricing PDE theory, no text/LLM.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.41740",
+  "source": "arXiv",
+  "title": "A New GAUSS Software Component for Implementing Dynamic Tests of Contagion with an Application",
+  "abstract": "The main goal of this article is to present a new software component created by the authors in GAUSS for implementing dynamic tests for contagion. These tests are aimed at providing the possibilities of testing for spiller-over effects between financial markets during a crisis or during a pandemic situation such as the one that we experienced recently. Unlike standard tests for contagion that have fixed dates for a potential shift, the tests implemented here are dynamic in the sense that the potential contagion effect is measured across the time span. The leverage bootstrap simulation technique is utilized in order to generate critical values that are reliable when the tests are implemented in order to make sure that the conducted inference is accurate. Since the approach is new, software component needs to be created for conducting the underlying tests, which is accomplished via this article. The module is very easy to implement by the general practitioners via a graphical user interface. An application is offered by using real data from stock markets in order to demonstrate how the software component can be used.",
+  "link": "https://arxiv.org/abs/2610.41740",
+  "score": 3,
+  "why": "GAUSS contagion test software component.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.41990",
+  "source": "arXiv",
+  "title": "When is the deepest drawdown also the longest?",
+  "abstract": "Does the deepest drawdown take the longest to recover? For random walks with iid increments of positive finite mean, we find that the deepest and longest episodes are eventually distinct almost surely under light-tailed losses, but coincide with probability tending to one under heavy-tailed losses. More precisely, when losses have a finite exponential moment, the deepest episode's duration, relative to the longest among $n$ episodes, converges in probability to an explicit $ρ\\in(0,1)$, while its descending duration rank is $n^{1-ρ+o_{\\mathbb{P}}(1)}$. These limits hold for every fixed number of leading depths; in the Gaussian model, $ρ=1/2$, independently of drift and variance. The separation reflects the different exponential costs of reaching a large depth and sustaining a long episode. For regularly varying losses, a common large loss governs both depth and duration: the duration ratio tends to one almost surely, and for every fixed $k$, the $k$ deepest and $k$ longest episodes have the same indices in the same order with probability tending to one. For any $k_n\\to\\infty$ with $k_n=o(n)$, the proportion of common episodes among the $k_n$ deepest and $k_n$ longest converges in probability to zero in the light-tailed case and to one in the heavy-tailed case. These ranking laws also hold for completed drawdowns within a deterministic observation horizon.",
+  "link": "https://arxiv.org/abs/2610.41990",
+  "score": 3,
+  "why": "Drawdown depth vs duration probability theory.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00130",
+  "source": "arXiv",
+  "title": "FB-MOAC: A Reinforcement Learning Algorithm for Forward-Backward Markov Decision Processes",
+  "abstract": "Reinforcement learning (RL) algorithms are effective in solving problems that can be modeled as Markov decision processes (MDPs). These algorithms primarily target forward MDPs whose dynamics evolve over time from an initial state. However, several important problems in different scenarios including stochastic control and network systems exhibit both a forward and a backward dynamics. As a consequence, they cannot be expressed as a standard MDP, thereby calling for a novel theory for RL in this context. Accordingly, this work introduces the concept of Forward-Backward Markov Decision Processes (FB-MDPs) for multi-objective problems, develops a novel theoretical framework to characterize their optimal solutions, and proposes a general forward-backward step-wise template that allows to adapt RL algorithms for FB-MDP problems. A Forward Backward Multi Objective Actor Critic (FB-MOAC) algorithm is introduced accordingly to obtain optimal policies with guaranteed convergence and a competitive rate with respect to standard approaches in RL. FB-MOAC is evaluated on diverse use cases in the context of mathematical finance and mobile resource management. The obtained results show that FB-MOAC outperforms the state of the art across different metrics, highlighting its ability to learn and maximize rewards.",
+  "link": "https://arxiv.org/abs/2611.00130",
+  "score": 3,
+  "why": "Forward-backward MDP RL theory, no finance data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00502",
+  "source": "arXiv",
+  "title": "Non-Convex Market Makers: Coherence without Convexity, Friction, and Parallel Composition",
+  "abstract": "Cost-function market makers are always assumed convex, and convexity is not what makes them coherent. For a path-independent maker the exact no-arbitrage condition is a chord condition, that every chord slope of the cost lie in the convex hull of payoffs; convexity enters the standard axiomatics through a separate requirement, monotone information incorporation, and dropping it leaves coherent non-convex makers. Rational flow against such a maker trades the convex envelope, so non-convexity costs expressiveness rather than soundness, and a proportional fee of at least the arbitrage depth restores no-arbitrage, which by conjugation is a bid-ask spread with an exact no-trade interval for any cost whatever. Combining fee-bearing makers is an infimal convolution solved by one monotone clearing-price root-find, with sparse participation and a consolidated limit order book as the aggregate, and a deep quadratic co-quoter is Moreau smoothing, which preserves coherence at every depth. Any quoted configuration outside the coherent hull admits a portfolio priced below its worst payoff, so arbitrageurs act as decentralized separation oracles, and coherence is relative to friction and to the cost of finding certificates.",
+  "link": "https://arxiv.org/abs/2611.00502",
+  "score": 3,
+  "why": "Non-convex market maker theory, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00855",
+  "source": "arXiv",
+  "title": "Approximate clearing in financial networks with credit default swaps: hardness thresholds, a box algorithm, barriers, and exact solvency at bounded degree",
+  "abstract": "We study approximate clearing in financial networks with credit default swaps. For weak notions (W) and (I), we prove PPAD-hardness below a threshold approximately $0.2530$ and give a polynomial-time interval algorithm above a threshold approximately $0.2834$. On networks whose CDS writers are solvent ex ante, the corresponding bounds are $(13-\\sqrt{153})/4$ and $3-2\\sqrt{2}$, approximately $0.1577$ and $0.1716$. The thresholds are sharp for bounded-radius algorithms: for (I) on writer-solvent networks, and for (I) and (W) in general. On non-degenerate networks, (W) and (I) have identical hardness and tractability threshold endpoints. For exact-solvency notion (D), PPAD-hardness holds at every rational error $\\varepsilon<1$ on non-degenerate networks. On a restricted unit-notional class, let $d$ be the maximum number of CDS contracts held by a core bank, counted with multiplicity. For rational $\\varepsilon\\in[1/2,1)$, writing $ρ=(1+\\varepsilon)/(1-\\varepsilon)$, the problem is polynomial-time solvable when $d<(\\lceilρ\\rceil+1)ρ$ and PPAD-complete otherwise. At $\\varepsilon=1/3$ the boundary is $d=5$ versus $d=6$; below $\\varepsilon=1/9$, degree $2$ is already PPAD-complete, while degree $1$ is exactly solvable. These degree results concern (D) and do not close the (W)/(I) approximation windows. We also establish a barrier to Pure-Circuit reductions certified by interval propagation under stated interface and auxiliary-bank restrictions. A finite-precision interval algorithm reduces writer-solvent (I) to point selection in near-stalled boxes; selection is polynomial-time when the residual matrix is symmetric or monotone on each strongly connected component. The general and writer-solvent approximation windows remain open.",
+  "link": "https://arxiv.org/abs/2611.00855",
+  "score": 3,
+  "why": "Financial network CDS clearing complexity thresholds.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00900",
+  "source": "arXiv",
+  "title": "Consumption and Investment with Multiple Job-Switching Opportunities",
+  "abstract": "We study finite-horizon optimal switching with affine rewards in a consumption-investment model with finitely many occupational regimes. Directed shortest-path costs yield the exact natural borrowing limit. A dual transformation reduces the control problem to a one-dimensional system of variational inequalities with interconnected obstacles. Convexity and a distributional waiting inequality give local spatial $C^{1,1}$ regularity and smooth fit, including destination ties. These estimates establish strong duality and recover optimal consumption, investment, and switching strategies. A reflected backward stochastic differential equation representation yields a set-based integral formula without prescribed boundary geometry. Every connected component of the spatially regular locus is a maximal smooth graph over time. Exact examples exhibit disconnected contact sets, temporal boundaries under strict triangle costs, and a corner in an individual boundary component under additive route costs. A convergent time discretisation completes the analysis.",
+  "link": "https://arxiv.org/abs/2611.00900",
+  "score": 3,
+  "why": "Job-switching consumption-investment optimal switching theory.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.01003",
+  "source": "arXiv",
+  "title": "Robust distortion riskmetrics under symmetry, unimodality, and Wasserstein constraints",
+  "abstract": "We study worst-case distortion riskmetrics over symmetric distributions with prescribed mean and variance in a Wasserstein ball around a reference distribution. Our key contribution is the construction of a reference-dependent auxiliary distortion that encodes the Wasserstein constraint while preserving symmetry under the concave-envelope operation. Under suitable regularity and nondegeneracy conditions, this construction yields sharp upper bounds for distortions of bounded variation, allowing nonmonotonicity and interior discontinuities, and identifies extremal distributions when the bounds are attained. An approximation preserving symmetry and the prescribed moments exactly shows that upper semicontinuous relaxation of the symmetrized distortion leaves the supremum unchanged for budgets strictly above the feasibility threshold. With additional unimodality, symmetry fixes the quantile's concavity-convexity transition at the midpoint, yielding a characterization via $L^2$-projection onto a fixed closed convex cone for absolutely continuous distortions with square-integrable derivatives. Numerical examples for ES, RVaR, and VaR illustrate how shape restrictions and the reference distribution affect feasibility and worst-case risk. Simulations with data-dependent Wasserstein radii examine worst-case ES and feasibility under correctly specified and misspecified shape restrictions.",
+  "link": "https://arxiv.org/abs/2611.01003",
+  "score": 3,
+  "why": "Worst-case distortion riskmetrics under Wasserstein constraints.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2610.41228",
+  "source": "arXiv",
+  "title": "Evolution of Financial AI: From Statistical Models to Agentic AI",
+  "abstract": "Artificial intelligence (AI) in finance has evolved from statistical learning and machine learning for structured prediction, through deep learning and foundation models for representation learning, language understanding, and reasoning, to retrieval-augmented generation for knowledge-grounded reasoning and agentic AI for autonomous planning and execution. In this paper, we examine how researchers and practitioners can select and apply AI methods in finance. We first show that the major paradigms of financial AI address fundamentally different classes of problems, rather than forming a strict hierarchy of capability. We then review the current state of research on AI in finance and trace how these paradigms have reshaped financial data, financial tasks, decision support, and human-AI collaboration. Building on this, we propose practical guidelines for matching AI paradigms to task characteristics, and show that more advanced models, such as foundation models or autonomous agents, are not universally superior. We conclude by outlining open challenges for researchers and practitioners working toward reliable financial AI.",
+  "link": "https://arxiv.org/abs/2610.41228",
+  "score": 2,
+  "why": "Survey/review of financial AI evolution.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00164",
+  "source": "arXiv",
+  "title": "Excel: A Financial Modelling System",
+  "abstract": "Since the calculation engine of Excel was the subject of a major upgrade to accommodate Dynamic Arrays in 2018, there has been a series of seismic changes to the art of financial modelling. This paper will show the traditional financial modelling techniques for spreadsheets can be replaced by radically different approaches that have significant gains in readability, performance and flexibility. With so much power added to the Excel engine in recent years, it is the responsibility of financial modellers to ensure that they are building in the simplest and most auditable way possible going forward.",
+  "link": "https://arxiv.org/abs/2611.00164",
+  "score": 2,
+  "why": "Excel financial modelling techniques essay.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.00449",
+  "source": "arXiv",
+  "title": "SpBench: An Agent-Native Framework for Cross-Engine Lakehouse Benchmarking",
+  "abstract": "SpBench is an agent-native framework for cross-engine lakehouse benchmarking, in production use for benchmarking Snowpark, Snowpark Connect for Apache Spark, and other execution environments across standardized suites -- such as TPCx-BB and TPC-DI -- and custom benchmarks distilled from production workload patterns. It runs continuously across a broad portfolio of workloads, guiding the performance roadmap and detecting regressions for production-scale data engines. Benchmarking has historically been an expensive investment requiring continuous cross-functional collaboration and domain expertise, making it difficult to obtain actionable performance insights. SpBench provides (i) a typed, code-generated benchmark substrate that compiles platform-agnostic benchmark definitions into fair, comparable platform-specific implementations; (ii) a structured-telemetry contract recording every run as queryable fact and dimension data, letting LLM agents query results deterministically; and (iii) an agent-native harness of three composable skills to expedite building benchmarks and analyzing results. This agent-native architecture enabled the rapid development of more than 400 benchmark queries that run on a regular cadence to detect performance regressions; catching these has directly led to improvements in production.",
+  "link": "https://arxiv.org/abs/2611.00449",
+  "score": 2,
+  "why": "Cross-engine lakehouse benchmarking, not finance.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]

@@ -6,6 +6,34 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>AStockArena: Beyond Returns, Can We Entrust Real Capital to the Decisions of Financial Agents?</title>
+    <link>https://arxiv.org/abs/2611.00515</link>
+    <description>Seventy-three percent of audited trading decisions contain at least one audit gap, and portfolio outcomes shift when flagged trades are removed.</description>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.00515</guid>
+  </item>
+  <item>
+    <title>Do Earnings Calls Help Predict Financial Restatements? Evaluating Text Beyond Public Firm Information</title>
+    <link>https://arxiv.org/abs/2611.01123</link>
+    <description>Earnings-call text flags restatements but adds no ranking gain over public firm information, while LLMs leak tickers and use future knowledge.</description>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.01123</guid>
+  </item>
+  <item>
+    <title>Where Causal Discovery Breaks on Real Data: Measuring the Assumptions One Property at a Time</title>
+    <link>https://arxiv.org/abs/2611.00484</link>
+    <description>On real corporate-action data, tuned causal discovery underperforms simple cross-correlation within actions, and most direct pairs lack statistical power.</description>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.00484</guid>
+  </item>
+  <item>
+    <title>RiskReason: A Benchmark for Verifiable Financial Risk Reasoning</title>
+    <link>https://arxiv.org/abs/2611.01236</link>
+    <description>High financial-risk reasoning accuracy hides incorrect decisions, broken state propagation, and constraint violations that aggregate scores conceal.</description>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.01236</guid>
+  </item>
+  <item>
     <title>Conformalized Execution Shields: Distribution-Free Finite-Sample Risk Guarantees and Maximum Favorable Excursion Bounds in Derivatives Markets</title>
     <link>https://www.ssrn.com/abstract=7669300</link>
     <description>A conformalized execution shield vetoes low-expectancy derivative signals and guarantees 90.13 percent finite-sample MFE coverage.</description>
@@ -599,13 +627,6 @@
     <description>A 0.3B calibrated model beats LLM self-assessment for financial RAG evidence-sufficiency gating.</description>
     <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7553938</guid>
-  </item>
-  <item>
-    <title>LLM-Driven Sentiment Shocks and Nonlinear Contagion in Global Banking Networks: A Hybrid SEM–ANN–GARCH Approach</title>
-    <link>https://www.ssrn.com/abstract=7556919</link>
-    <description>LLM sentiment shocks correlate positively with financial contagion in banking networks.</description>
-    <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7556919</guid>
   </item>
 </channel>
 </rss>
