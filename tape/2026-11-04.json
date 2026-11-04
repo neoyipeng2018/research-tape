@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-04",
+ "scanned": 42,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7669918",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7669918",
+   "title": "The flow, not the headline: point-in-time LLM sentiment and the cross-section of cryptocurrency returns *",
+   "claim": "Point-in-time LLM sentiment predicts next-day crypto returns at 21 bps daily with 2.21 Sharpe, serving as a veto not a tilt."
+  },
+  {
+   "key": "10.2139/ssrn.7673758",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7673758",
+   "title": "Monetary Policy Expectations of Sophisticated Investors",
+   "claim": "Hedge fund monetary policy expectations predict yield curve moves, and funds with more accurate forecasts earn higher risk-adjusted returns."
+  },
+  {
+   "key": "2611.01621",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.01621",
+   "title": "FinForesight: A Diagnostic Backtesting Benchmark for Deep Research Systems in Financial Forecasting",
+   "claim": "Pretraining-era benchmark scores exceed post-cutoff scores, but tighter retrieval controls narrow the gap between backtests and live results."
+  },
+  {
+   "key": "2611.01951",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.01951",
+   "title": "The Cryptocurrency Trend Factor Revisited: Predictive Information, Portfolio Construction, and Pricing Claims",
+   "claim": "Comprehensive correction of the crypto trend factor eliminates its alpha and turns factor-substitution gains into significant declines."
+  },
+  {
+   "key": "2611.02001",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.02001",
+   "title": "TrackMem: Tracking Evolving Beliefs in Long-Horizon Financial Dialogue",
+   "claim": "A per-speaker graph memory beats existing systems on revised-figure questions, reaching 73.9% accuracy versus 69.4% for the strongest baseline."
+  },
+  {
+   "key": "2611.02616",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.02616",
+   "title": "Herding or Racing? Decomposing Cross-Account Order-Flow Persistence in On-Chain Markets",
+   "claim": "Most cross-account order-flow persistence on Uniswap is CEX price arbitration rather than herding, and this race flow drives most liquidity-provider losses."
+  }
+ ]
+}

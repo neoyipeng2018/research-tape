@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>The flow, not the headline: point-in-time LLM sentiment and the cross-section of cryptocurrency returns *</title>
+    <link>https://www.ssrn.com/abstract=7669918</link>
+    <description>Point-in-time LLM sentiment predicts next-day crypto returns at 21 bps daily with 2.21 Sharpe, serving as a veto not a tilt.</description>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7669918</guid>
+  </item>
+  <item>
+    <title>Monetary Policy Expectations of Sophisticated Investors</title>
+    <link>https://www.ssrn.com/abstract=7673758</link>
+    <description>Hedge fund monetary policy expectations predict yield curve moves, and funds with more accurate forecasts earn higher risk-adjusted returns.</description>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7673758</guid>
+  </item>
+  <item>
+    <title>FinForesight: A Diagnostic Backtesting Benchmark for Deep Research Systems in Financial Forecasting</title>
+    <link>https://arxiv.org/abs/2611.01621</link>
+    <description>Pretraining-era benchmark scores exceed post-cutoff scores, but tighter retrieval controls narrow the gap between backtests and live results.</description>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.01621</guid>
+  </item>
+  <item>
+    <title>The Cryptocurrency Trend Factor Revisited: Predictive Information, Portfolio Construction, and Pricing Claims</title>
+    <link>https://arxiv.org/abs/2611.01951</link>
+    <description>Comprehensive correction of the crypto trend factor eliminates its alpha and turns factor-substitution gains into significant declines.</description>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.01951</guid>
+  </item>
+  <item>
+    <title>TrackMem: Tracking Evolving Beliefs in Long-Horizon Financial Dialogue</title>
+    <link>https://arxiv.org/abs/2611.02001</link>
+    <description>A per-speaker graph memory beats existing systems on revised-figure questions, reaching 73.9% accuracy versus 69.4% for the strongest baseline.</description>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.02001</guid>
+  </item>
+  <item>
+    <title>Herding or Racing? Decomposing Cross-Account Order-Flow Persistence in On-Chain Markets</title>
+    <link>https://arxiv.org/abs/2611.02616</link>
+    <description>Most cross-account order-flow persistence on Uniswap is CEX price arbitration rather than herding, and this race flow drives most liquidity-provider losses.</description>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.02616</guid>
+  </item>
+  <item>
     <title>AStockArena: Beyond Returns, Can We Entrust Real Capital to the Decisions of Financial Agents?</title>
     <link>https://arxiv.org/abs/2611.00515</link>
     <description>Seventy-three percent of audited trading decisions contain at least one audit gap, and portfolio outcomes shift when flagged trades are removed.</description>
@@ -620,13 +662,6 @@
     <description>AI progress expands investor information but reduces price informativeness for firms, worsening capital allocation.</description>
     <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7558538</guid>
-  </item>
-  <item>
-    <title>Calibrated Gating in Financial RAG: Small External Controllers versus LLM Self-Assessment across Model Scales</title>
-    <link>https://www.ssrn.com/abstract=7553938</link>
-    <description>A 0.3B calibrated model beats LLM self-assessment for financial RAG evidence-sufficiency gating.</description>
-    <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7553938</guid>
   </item>
 </channel>
 </rss>
