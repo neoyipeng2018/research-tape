@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-05",
+ "scanned": 36,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2611.03985",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.03985",
+   "title": "Thinking Fast, Trading Late: System One Decision Models vs the Market",
+   "claim": "Commercial LLM news signals predict overnight moves but not post-open returns."
+  },
+  {
+   "key": "2611.05218",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.05218",
+   "title": "Beyond Anonymous Order Flow: Wallet Identity as a Feature for Short-Horizon Return Prediction",
+   "claim": "Wallet identity features raise one-second out-of-sample R2 from 10.88% to above 12%."
+  },
+  {
+   "key": "10.2139/ssrn.7677980",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7677980",
+   "title": "Right Model, Wrong Answer: How Missing User Context Silently Flips AI Financial Advice",
+   "claim": "Omitting one user fact makes frontier AI financial advice confidently wrong 33 of 33 times."
+  },
+  {
+   "key": "2611.03755",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.03755",
+   "title": "Honest Small Decision Models for Finance: Scale, Specialization Collapse, and Mixed-Corpus Remediation",
+   "claim": "Fine-tuned small decision models show no edge beyond prior base rates on reality-labeled finance questions."
+  },
+  {
+   "key": "2611.04217",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.04217",
+   "title": "LENS: Reliability-Aware Stock Prediction via LLM-Extracted Priors and News-Driven Semantic Graphs",
+   "claim": "Reliability-weighted LLM graphs and news semantics lift S&P 500 top-five ranking 16-23%."
+  },
+  {
+   "key": "2611.04375",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.04375",
+   "title": "LLM-Generated Investment Research Memos Need Validation",
+   "claim": "One-to-two percent claim refutation still leaves 37-41% of LLM memos containing a false claim."
+  }
+ ]
+}

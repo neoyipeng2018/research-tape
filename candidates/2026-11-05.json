@@ -1,0 +1,362 @@
+[
+ {
+  "key": "2611.03985",
+  "source": "arXiv",
+  "title": "Thinking Fast, Trading Late: System One Decision Models vs the Market",
+  "abstract": "Large language models (LLMs) read company news at scale, and backtests suggest that their readings predict stock returns. We ask how much of that predictability survives a test that rules out look-ahead, memorization and selection. We propose OLIVIA, a protocol for such tests: point-in-time inputs with company identities masked, selection on validation data only, an analysis plan frozen by cryptographic hash, and a test period unblinded once through a logged lock. We apply it to AI decision models, non-generative language models that return probabilities for typed questions, reading news about S&P 500 stocks: an open-weights model we fine-tuned on 2024-2025 data, three commercial models and standard baselines. The fine-tuned model's signal replicated on two validation quarters (daily information coefficients 0.055 and 0.065) but fell to 0.020 (t = 1.7) on the blinded January-July 2026 test. The commercial models' readings line up with the overnight move to the open (information coefficient 0.074 to 0.077) but not with the move after it, so the news is priced by the time a trader can act on it at the open. No model can tell over- from under-reaction, and no pre-registered strategy survives costs and a deflated Sharpe ratio. Commercial models identify masked companies in 62% to 74% of cases against a 28% baseline: masking hides names, not companies. The market reads the news first.",
+  "link": "https://arxiv.org/abs/2611.03985",
+  "score": 9,
+  "why": "LLM trading signal collapses on blinded OOS test",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.05218",
+  "source": "arXiv",
+  "title": "Beyond Anonymous Order Flow: Wallet Identity as a Feature for Short-Horizon Return Prediction",
+  "abstract": "Conventional public order-book data summarize trading without identifying the accounts behind it. Hyperliquid's Level-4 record also exposes persistent pseudonymous wallet addresses. We reconstruct full-depth books from consensus-ordered messages and evaluate wallet identity as a feature for short-horizon return prediction. The July 1-27, 2026 record covers 17.1 billion messages, 14.3 million aggressive orders by 147,113 wallets, and $84.3 billion in taker notional across ten markets. In the three model markets, notional-weighted ten-second markout rankings persist across adjacent ten-day windows (Spearman rho = 0.52); covariate-adjusted validation markouts reach 3.11 basis points in the top ventile. On a 100-millisecond grid, eleven features describing previously scored top-decile wallets raise one-second out-of-sample R2 from 10.88% to 12.",
+  "link": "https://arxiv.org/abs/2611.05218",
+  "score": 9,
+  "why": "Wallet identity predicts short-horizon returns out-of-sample.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7677980",
+  "source": "SSRN",
+  "title": "Right Model, Wrong Answer: How Missing User Context Silently Flips AI Financial Advice",
+  "abstract": "People are turning to AI assistants more frequently to tell them what to do with their money. Sometimes this is because they simply cannot afford a human adviser. The obvious worry is that the model will make computation errors. We show that with complete inputs, frontier models seldom violate basic financial principles, and increasingly warn about the ones that are applicable. The real behavioural risk is that the appropriateness of AI advice for a given person hinges on facts that only that person knows, and people do not know what matters. In an oracle-anchored audit of four frontier models across three standard personal-finance decisions, we fix the person and vary the question. If the user asks a natural, under-specified question that omits the one fact that makes the difference in their case, the confident advice of these models is wrong for that person in 33/33 cases - for example, telling a user to \"pay off your credit card\" when that card is already at 0% and the person lacks an emergency fund, or \"pay down your loan\" when the person is missing a 100% employer match. Adding that one fact results in the same models making the correct choice in 11/11 cases. Advice from an under-specified prompt is generally correct for control personas whose situation matches the model's default assumption, so the error is not model inability but the interaction between under-specified input and a fact that goes against the default. The user, however, cannot provide what they do not know is pertinent. In an exploratory pilot (N=21), 76% did not notice an AI plan that quietly wasted half of an employer match, and 62% said they would follow it. As models become more fluent and confident, this dependence on input is hidden rather than resolved, because fluency makes the output seem complete. We interpret this through omission neglect, audit studies of advice, and research on advice-taking under low expertise, and argue that the key safeguard is structured elicitation of decision-flipping facts together with output that can be audited. The evidence is preliminary: the machine study is a small oracle-anchored demonstration and the human study is an exploratory pilot, which motivates a preregistered, powered experiment.",
+  "link": "https://www.ssrn.com/abstract=7677980",
+  "score": 8,
+  "why": "LLM financial advice fails under missing context",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.03755",
+  "source": "arXiv",
+  "title": "Honest Small Decision Models for Finance: Scale, Specialization Collapse, and Mixed-Corpus Remediation",
+  "abstract": "Financial workflows need fast, calibrated, auditable decisions, not just generated text. We train System-1 decision models, small language models fine-tuned to answer typed questions (choice/score/noul) with a probability in a single forward pass, across two model families (K2-Horizon and Qwen3.5/3.8) and nine rungs from 0.8B to 32B parameters, using one frozen LoRA recipe on a public decision benchmark and two new finance corpora: a programmatic-gold policy corpus (rule-reading with exact labels) and a reality-labeled outcome corpus (19,640 realized forward-return questions in walk-forward splits, plus a sealed 2026 test of 1,360 questions). Narrow fine-tuning costs general decision competence 9-45 percentage points, a data-mixture effect that shrinks with model scale and is associated with narrow-gradient volume. On reality-labeled questions, every trained rung from 0.8B to 32B lands at the horizon-conditioned prior baseline (accuracy 0.37-0.38, no detectable conditional edge under our controls); the models respond with flat, well-calibrated probabilities that track per-horizon base rates: naturally honest uncertainty, with a mid-scale calibration sweet spot (ECE 0.026 at 2B, degrading to 0.043-0.044 at 9-32B under prior drift). A mixed-corpus remediation carries all competencies in one adapter at modest cost: it matches or slightly exceeds the generalist specialist on the public benchmark while holding the policy ceiling and near-specialist outcome calibration, yielding a deployable artifact with per-domain temperature regimes and a band-dispatch escalation analysis: sharp, dispatchable bands where rules determine answers; flat, review-routing bands where reality does not.",
+  "link": "https://arxiv.org/abs/2611.03755",
+  "score": 8,
+  "why": "Small finance decision models, walk-forward OOS, collapse result",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04217",
+  "source": "arXiv",
+  "title": "LENS: Reliability-Aware Stock Prediction via LLM-Extracted Priors and News-Driven Semantic Graphs",
+  "abstract": "Predicting stock returns requires modeling persistent company relations and time-varying market signals. Graph Neural Network (GNN) approaches combine static priors with dynamic relational graphs, but treat every extracted edge as a trustworthy binary fact, ignoring heterogeneous reliability across relational sources. We propose LENS (LLM-Extracted priors and News-driven Semantics), a static--dynamic graph framework for stock return prediction and ranking that models relational reliability as a first-class signal across the pipeline. On the static side, we extract a multi-relational company graph from a Large Language Model and aggregate it over multiple runs with confidence weighting to downweight low-consistency edges. On the dynamic side, we build a news-driven semantic graph with exponential-decay temporal aggregation to capture changing market context under uneven coverage. A context-dependent gated fusion module rebalances the two graphs at the per-stock, per-day level. On S&P 500, LENS improves AR@5 by 16.4% and SR@5 by 22.6% over the strongest baseline, and on NASDAQ 100 it achieves comparable improvements (15.5% and 20.9% respectively). Ablations isolate each component's contribution, and a human-validation study of sampled relations supports that the aggregation is grounded, providing evidence that reliability-aware LLM relations and news-based semantic graphs carry complementary information for graph-based financial prediction.",
+  "link": "https://arxiv.org/abs/2611.04217",
+  "score": 8,
+  "why": "LLM stock graph with reliability-weighted edges.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04375",
+  "source": "arXiv",
+  "title": "LLM-Generated Investment Research Memos Need Validation",
+  "abstract": "LLMs are increasingly adopted to draft long-form investment research memos, but their reliability is judged claim by claim, while readers read each memo as a whole. In this paper, we show that a low claim-level error rate does not necessarily mean that a memo is reliable: even with a refutation rate of just 1-2%, roughly four in ten memos contain at least one claim contradicted by official filings. First, we generate 1,440 memos with four recent LLM-powered agents for 30 companies over 12 quarters, decompose them into 77,272 financial claims, and verify each against the same official source bundle by retrieving evidence, matching it to the claim, and verifying the outcome. Second, we find that only 1.17-1.77% of claims are refuted, yet 36.94-41.11% of memos contain at least one refuted claim, and agents differ in severity: Codex has the lowest memo-level rate; a qualitative review further groups errors into four patterns (time, unit, context, concept).",
+  "link": "https://arxiv.org/abs/2611.04375",
+  "score": 8,
+  "why": "Investment memo validation; memo-level errors common",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04813",
+  "source": "arXiv",
+  "title": "AgenticFinBench: Benchmarking Financial Agents on Diverse Tasks from Real-World Requests",
+  "abstract": "Financial agents are becoming an important class of real-world AI systems. Financial tasks vary widely in type and difficulty, and many are open-ended with no ground-truth answers. However, existing benchmarks neither capture this breadth and open-endedness nor separate grounding from correctness. To bridge this gap, we introduce $\\textbf{AgenticFinBench}$, a benchmark of 230 real-world financial tasks spanning 8 categories, 2 languages, and 4 complexity levels. We also propose a reference-free evaluation framework that combines question-specific rubrics with a two-stage claim audit that detects hallucinations, defined as claims absent from the agent's trace and refuted by external evidence. This framework better matches how financial work is assessed in practice. Experiments across 18 agent configurations reveal three key findings: (1) Ignoring hallucinations can overstate agent performance: hallucination auditing lowers the baseline leader's score by 7.58 points and moves it to fourth place. (2) Harness differences explain more variation in evidence grounding than model differences (28.6% vs 8.8%). (3) Quality scores fall from 89.44 on direct retrieval to 79.18 on the most complex tasks. Case studies show that agents struggle to explain how events affect company profits or stock prices, compare financial data on a consistent basis, and justify their conclusions. By releasing AgenticFinBench, we aim to advance financial reasoning, factual verification, and agent design for more reliable responses to diverse real-world financial requests. Our project page is at $\\textbf{https://nashnovaresearch.github.io/AgenticFinBench/}$.",
+  "link": "https://arxiv.org/abs/2611.04813",
+  "score": 8,
+  "why": "Financial agent benchmark with claim-audit evaluation",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7674961",
+  "source": "SSRN",
+  "title": "Whose Risk Appetite? Behavioural Biases, Risk Preferences and a Brain Map of Financial Decisions in Large Language Models",
+  "abstract": "When a large language model recommends a financial action, whose risk appetite does it use? We combine a ten-item taxonomy of AI biases in financial decisions, behavioural experiments on open-weight models and measurements inside one model. In hosted models, a 623-word persona moved GPT-4.1's risky choices from 2.8% to 95.6% in runs that always listed the safe option first. On open weights, the same tasks with neutral option labels show that such a persona mainly weakens the pull towards the first-listed option: a length-matched cautious persona has the same effect, and no condition responds to expected value. In a financial allocation test rerun from its original prompts, the raw choices of every open model follow the answer labels. Scoring each item in all four combinations of label and position separates a pull towards a letter from a pull towards a position; the two can offset each other and do not add up, so the usual two-order debiasing misleads. Qwen3's apparently mandate-sensitive preference shrinks to about 8 points of expected return, against about 200 for the letter, and to about 1 point with neutral labels. Inside Qwen2.5, surface features are readable from the first block, news sentiment, sector knowledge and asset riskiness in the middle blocks, and the answer forms only at the end; the model encodes asset riskiness with 96% accuracy but answers correctly about half the time. Lesions show that the first block is vital, and steering along a mandate direction moves the answer letter, not the investment. We translate the evidence into four governance gates: specify, validate, calibrate, and release and monitor.",
+  "link": "https://www.ssrn.com/abstract=7674961",
+  "score": 7,
+  "why": "LLM financial decision biases; label/position effects override persona",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7677898",
+  "source": "SSRN",
+  "title": "Temporally Governed Machine Learning for Bank Capital Monitoring and Supervisory Triage",
+  "abstract": "Public bank data can support condition monitoring, advance prediction and scarce-capacity review, but success in one task does not establish success in the others. We report two independently governed retrospective studies of US regulatory bank data from 2004 to 2024. P3 forecasts four-quarter equity-to-assets and converts realised forecast errors and stress measures into a sequential monitor. In 55,869 bank-quarter observations from 2021-2023, its frozen q95 rule attains 84.56% precision, 77.10% recall and 95.95% specificity; because the four-quarter outcome is already observed, this is ex-post monitoring, not advance failure prediction. A separate origin-time P3 classifier is weak in the 2023 holdout (PR-AUC 0.0555; ROC-AUC 0.4915) and is descriptively outperformed by low current capital. GRAIL independently ranks four-quarter capital deterioration and conditional recovery under a deterministic within-quarter Top-5% review rule. In the 2021-2023 locked evaluation, deterioration selects 2,783 of 56,095 evaluable rows and captures 1,271 of 11,737 events (precision 45.67%; capture 10.83%), versus 582.3 expected captures under exact full-universe random review, a 2.18-fold lift. Recovery shows no corresponding enrichment (187 observed versus 188.1 expected). Deterioration capture varies from 5.53% in 2021 to 44.33% in 2023, and temporal reliability diagnostics reject a stable probability interpretation. The evidence supports governed risk ranking and retrospective surveillance research, not a combined deployed system, legal-failure prediction, causal effects or demonstrated supervisory benefit.",
+  "link": "https://www.ssrn.com/abstract=7677898",
+  "score": 7,
+  "why": "Bank capital ML; negative advance-prediction result updates prior",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04070",
+  "source": "arXiv",
+  "title": "Are LLM Research Agents Reliable Judges of Predictability? Evidence from Planted-Signal Worlds",
+  "abstract": "Researchers ask large language model (LLM) research agents whether a forecasting model beats a static benchmark, a verdict that real data cannot check. We treat the agent as a statistical test and score pre-specified runs of three frontier models and one open-weight model in simulated worlds with a planted signal. The agents detect weak signals more often than a pre-specified out-of-sample test, mainly because they accept weaker evidence: held to an agent's false-positive rate, a conventional in-sample test does as well or better. The agents claim predictability too often in worlds without a signal, state miscalibrated probabilities, and change their verdicts after a sentence about prior research; the magnitudes depend on the model. The excess false claims persist in simulated worlds without a resampling artifact. Agent verdicts are informative but need a neutral brief, a decision rule fixed outside the agent and a sealed holdout.",
+  "link": "https://arxiv.org/abs/2611.04070",
+  "score": 7,
+  "why": "LLM research agents overclaim predictability in sims.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04119",
+  "source": "arXiv",
+  "title": "Multidimensional Views Behind Target-Price Revisions: An LLM-Based Representation of Analyst Outlooks",
+  "abstract": "A target price compresses an analyst's multidimensional views into a single number. We propose an LLM-based text representation that extracts these views from research reports as question-based outlook scores with supporting evidence. The questions organize reported views on earnings, valuation, industry conditions, and other investment dimensions into a compact representation of analyst sentiment. In walk-forward evaluation, the scores improve prediction of subsequent target-price revisions beyond current-revision momentum and sector differences. They outperform financial dictionary and FinBERT sentiment measures. These findings suggest that structured questions can capture information about subsequent analyst actions that is not fully reflected in the current numerical revision. By linking each dimension to an explicit investment question and supporting report evidence, the approach makes the extracted outlooks available for inspection and interpretation. It offers a way to complement target-price signals with a multidimensional view of the judgments expressed in analyst narratives.",
+  "link": "https://arxiv.org/abs/2611.04119",
+  "score": 7,
+  "why": "LLM analyst scores beat baselines, walk-forward validated",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04223",
+  "source": "arXiv",
+  "title": "Aggregate Calibration Can Mask Stress-State Undercoverage: Bounded-Memory Forecast Intervals under Recurrent Financial Stress",
+  "abstract": "Sequential forecast intervals are often evaluated by aggregate coverage even when calibration memory is bounded. This can be misleading when economically important states recur after long absences: a recent-only buffer may satisfy its overall coverage target while no longer containing errors from earlier episodes of the returning state. We study this problem in next-day financial range forecasting, holding the forecasting model, conformity score, adaptive update, and memory budget constant while varying the historical residual information available at each query. Recent-only first-in, first-out (FIFO) calibration is near nominal in aggregate but undercovers substantially during high-volatility states in both an exchange-traded fund development panel and a fixed stock panel. An unbounded state-history reference yields a lower observed stress-period interval score; Rare replay yields lower high-VIX interval scores than the matched Recent-n and Hybrid-n controls in both panels, and the state-structured versus recent-only contrast is largest near stress re-entry. Bounded calibration memory is therefore part of the forecasting information design, and aggregate calibration alone can conceal state-specific reliability failures.",
+  "link": "https://arxiv.org/abs/2611.04223",
+  "score": 7,
+  "why": "Stress-state interval undercoverage masked by aggregate.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.03993",
+  "source": "arXiv",
+  "title": "Whose startup does the AI back? An algorithm audit of reputation and demographic signals in LLM-assisted crowdfunding",
+  "abstract": "Large language model (LLM) assistants increasingly advise backers on which crowdfunding campaigns to support. LLMs have known race and gender problems, and it is unsettled whether they reproduce, erase, or reverse the discrimination documented in entrepreneurial finance. We ask when, and through which decision process, LLM assistants use founders' gender and ethnicity. In a pre-specified choice-based conjoint experiment, seven LLMs chose among five synthetic campaigns with independently randomized quality signals and founder names, under three backer personas and a persona-free control (40,248 responses). By default, founder names barely matter: under budget-conscious and delivery-focused personas, gender and Black-name effects are statistically equivalent to zero. When the backer wants to support underrepresented creators, the models favor Black-signaled (+8.1 percentage points; positive in all seven models) and female-signaled (+5.1) founders. They do so most strongly among near-tied campaigns and for the founder who alone carries the signal, and they almost never name gender or ethnicity in their reasons. The results fit an agency account of algorithmic discrimination: an aligned assistant takes its demographic preferences from its user rather than from its training data.",
+  "link": "https://arxiv.org/abs/2611.03993",
+  "score": 6,
+  "why": "LLM crowdfunding audit, weak demographic effects",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04533",
+  "source": "arXiv",
+  "title": "How market volatility responds to a preceding price trend: a lag-resolved measurement in cryptocurrencies and equities",
+  "abstract": "We quantify the response of market volatility to a preceding price trend as a function of lag at minute resolution. The asymmetry of the response is investigated. The sample consists of trades in three of the largest cryptocurrencies on a single exchange and in three large US stocks and the S&P 500 exchange-traded fund between 2020 and 2026. For the cryptocurrencies the asymmetry is positive, matching the sign of the leverage effect. It follows the trend: it is greatest at the first measurable lag, 20 minutes, and weak at negative lags, where the trend follows the volatility. At those lags a scan over window lengths resolves a small component of opposite sign that has not yet been disentangled from what the statistic itself generates. For Bitcoin and Ether the asymmetry decays to one half by a lag of roughly an hour and a half. Decomposition under time reversal divides the asymmetry into a T-even part and a T-odd part. Only the latter carries an arrow of time. For Bitcoin and Ether the T-odd part is detected. At the first lag it is between 0.4 and 0.9 of the T-even part at windows of 10 and 20 minutes. At 20 minutes this is the ratio produced by a purely one-sided response in this statistic: at that window the response is consistent with being wholly one-sided in time. None of the equities exhibits a detectable T-odd part at 20 minutes in the straight-line fit over 2.5 trend scales. This fit is the shared instrument of comparison. The fund's return-variance correlation displays an arrow of time; the cryptocurrencies' asymmetry is independent of the shapes of the fits, and Bitcoin's and Ether's of their ranges. On simulated and shuffled data without coupling, the analysis yields zero with errors of the correct size. It also recovers the time scale of a one-sided response embedded in a simulated market.",
+  "link": "https://arxiv.org/abs/2611.04533",
+  "score": 6,
+  "why": "Microstructure volatility-lag measurement, real trade data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04555",
+  "source": "arXiv",
+  "title": "CosmosAlpha: Multi-Relational Graph Search with Pareto-Guided Exploration for LLM-Driven Alpha Mining",
+  "abstract": "Discovering predictive alpha factors from noisy financial data is a fundamental yet challenging problem in quantitative finance. LLM-driven formulaic alpha mining offers an attractive paradigm by combining interpretable symbolic expressions with iterative generation and refinement guided by quantitative feedback. However, existing generation-centric and tree-based search strategies primarily organize factors through generation lineage, leaving structural and statistical relationships across search branches underutilized. Consequently, information remains localized along parent--child trajectories, which can confine exploration to redundant regions. Moreover, effective factor discovery must account for multiple distinct objectives that cannot be adequately captured by a single search criterion. We introduce CosmosAlpha, a graph-based LLM factor-mining framework that represents discovered factors as a multi-relational graph encoding generation lineage, expression-structure similarity, and cross-sectional exposure correlation. A Graph Flow mechanism propagates search utilities across the graph, allowing each factor to be assessed using relational evidence from nearby factors rather than in isolation. Pareto-guided selection jointly considers quality, fertility and diversity, explicitly modeling their trade-offs within a multi-objective search framework. Across CSI 300 and CSI 500, CosmosAlpha-Graph achieves the best mean rank over seven predictive and portfolio metrics and outperforms its controlled CosmosAlpha-MCTS counterpart on every reported metric, showing a consistent advantage for relational graph search in LLM-driven factor mining. The source code is available at https://github.com/wzhmtldswz/CosmosAlpha",
+  "link": "https://arxiv.org/abs/2611.04555",
+  "score": 6,
+  "why": "LLM alpha-mining graph search, no results shown.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.05310",
+  "source": "arXiv",
+  "title": "Mitigating Return Drag and Regime Whipsaws in Sector Rotation: An Asymmetric Downside-Aware Nested Clustered Optimization Framework",
+  "abstract": "Hierarchical clustering and Nested Clustered Optimization (NCO) mitigate the mathematical ill-conditioning of classical Markowitz covariance matrices. However, two structural vulnerabilities persist in equity markets: (1) symmetric variance penalizes upside and downside return dispersion identically, inducing acute return drag against soaring momentum sectors; and (2) unconstrained Hidden Markov Models (HMM) exhibit hyper-active regime switching (whipsaw instability), incurring excessive turnover and transaction drag. We propose Asymmetric Downside-Risk Nested Clustered Optimization with Sticky Regime Dynamics (Asym-Sticky-NCO) for tactical sector rotation across all 11 S&P 500 GICS sectors. The framework substitutes symmetric covariance with the Bawa-Lindenberg downside semi-covariance matrix across both hierarchical tree clustering and two-stage allocation. Furthermore, we introduce a Sticky Gaussian HMM incorporating a diagonal self-transition persistence prior (\\k{appa}) and confidence-adaptive boundaries (δ) to enforce macroeconomic persistence. Strictly non-anticipative walk-forward backtesting across 65 out-of-sample months (August 2020 to December 2025) demonstrates that the architecture elevates CAGR from 10.65% (Plain NCO) to 13.41% (+276 bps/year), delivers a 97.74% total return versus 72.99%, suppresses maximum drawdown to 14.22% (versus 23.93% for the S&P 500), and achieves a Calmar ratio of 0.94 (+38.2% over S&P 500; +84.3% over Baseline Regime-NCO). Crucially, sticky dynamics cut regime whipsaws by 75.0% (from 16 to 4 switches) and reduce monthly turnover from 60.78% to 30.48%, addressing core limitations of machine learning asset allocation.",
+  "link": "https://arxiv.org/abs/2611.05310",
+  "score": 6,
+  "why": "Sector rotation NCO, standard portfolio construction",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7676698",
+  "source": "SSRN",
+  "title": "A Hybrid Non-parametric Approach to Stock Price Jump Prediction",
+  "abstract": "In this paper, we propose a hybrid non-parametric machine learning model that is enriched by incorporating the estimated parameters of the continuous-time stochastic volatility model. Such an approach makes the model more economically interpretable. It takes into account four types of risks-the systematic and idiosyncratic jumps and the systematic and idiosyncratic diffusive volatility. We aim to predict intraday stock jumps using the information included in various market measures and technical indicators. Specifically, we divide the trading day into a series of 5-minute intervals and predict the jump, either market or idiosyncratic, in the next five minutes. This approach is tested on high-frequency data for Chinese companies listed in Hong Kong over the sample period 2022-2025. The hybrid non-parametric model surpasses all other models suggested in the literature in terms of ability to rank.",
+  "link": "https://www.ssrn.com/abstract=7676698",
+  "score": 5,
+  "why": "Single-market jump prediction, weak out-of-sample claim.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04040",
+  "source": "arXiv",
+  "title": "PanelGP: A Probabilistic Factor Model for Asset-Return Panels",
+  "abstract": "We develop PanelGP, a conditional factor model for large panels of stock returns in which firm characteristics determine the factor loadings and economic conditions determine the expected factors. Both relations are estimated nonparametrically with Gaussian-process priors. The kernel choice nests instrumented principal component analysis (IPCA) as well as smooth nonlinear maps. Asset-specific loading innovations and common factor innovations separate idiosyncratic from systematic risk, so one estimated model forecasts both expected returns and their covariance matrix. Estimation uses sparse variational inference with a joint posterior over loadings and factors. Because each predicted return is bilinear in a Gaussian state, the predictive covariance matrix and the cumulants of any portfolio have closed forms. In simulations, the estimator recovers the nonlinear maps and the variance parameters. For S&P 500 constituents over 1995-2024, nonlinear loadings rank stocks better than affine loadings and improve the Gaussian log score. Relative to IPCA, the resulting portfolios have higher Sharpe ratios, also net of trading costs, and the minimum-variance portfolio has lower volatility. The predicted variances rank stocks and months by risk but are too compressed.",
+  "link": "https://arxiv.org/abs/2611.04040",
+  "score": 5,
+  "why": "GP factor model, no empirical OOS shown",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04116",
+  "source": "arXiv",
+  "title": "Decomposing Rank Reversals under Temporal Nonstationarity: Alignment, Aggressiveness, and Instability",
+  "abstract": "Under temporal nonstationarity, model performance rankings reverse across training horizons due to heterogeneous sensitivities to memory. While existing literature addresses adaptive lookbacks, effective model complexity, and empirical forecast evaluation in isolation, no unified framework explains the structural mechanics driving these rank reversals. We bridge this gap by deriving a model-agnostic decomposition of out-of-sample $R^2$ into target alignment, miscalibrated aggressiveness, and predictive instability. Within this framework, we mathematically characterize complexity phase boundaries, establish closed-form optimal-memory equations for ridge regression under local drift, and extend these guarantees to complex model architectures via surrogate bounds. We validate these theoretical dynamics by benchmarking 14 linear, tree-based, and neural architectures across large-scale financial panels. In doing so, our framework demonstrates that empirical model rank reversals are driven by predictable surges in miscalibrated aggressiveness, providing a rigorous mechanistic diagnosis of generalization under temporal shift.",
+  "link": "https://arxiv.org/abs/2611.04116",
+  "score": 5,
+  "why": "Rank-reversal theory, limited financial evidence.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04598",
+  "source": "arXiv",
+  "title": "Estimating \"Realized\" Skewness using Convolutional Neural Network",
+  "abstract": "We propose a new estimator of low-frequency skewness (monthly) that exploits high-frequency data (5 min) through a direct functional mapping consisting of layers of Convolutional Neural Networks followed by Multi Layer Perceptrons. Monte Carlo experiments involving stochastic volatility models, with and without jumps, show that the estimator reduces finite-sample bias relative to existing realized-skewness estimators and remains accurate under model misspecification. Empirically, our estimator exhibits temporal stability and delivers cross-sectional performance in actual skewness-sorted portfolios. We characterize the finite-sample bias of conventional plug-in skewness estimators and establish risk consistency properties of the proposed NN estimator under standard regularity conditions.",
+  "link": "https://arxiv.org/abs/2611.04598",
+  "score": 5,
+  "why": "CNN realized skewness; not text/LLM.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04747",
+  "source": "arXiv",
+  "title": "TAPES: Task-Aligned Joint Predictive Pretraining for Transaction Event Sequences",
+  "abstract": "Transaction event sequences support diverse prediction tasks in online commerce and digital financial services. The same transaction records can yield prediction targets with different semantics, including values, changes, and relations to past events. These targets impose different constraints on history representations, but their predictability alone does not establish the downstream utility of a target set. Moreover, target-wise prediction losses do not explicitly model conditional co-occurrence among targets. To address these challenges, we propose TAPES, a task-aligned joint predictive pretraining framework for transaction sequences. TAPES constructs a finite collection of candidate target sets from admissible field-operator combinations. It selects a target set according to the downstream utility of representations learned through short joint pretraining trials under matched budgets. It then reinitializes the encoder and pretrains it on the selected targets through a joint likelihood parameterized by a shared discrete latent variable, before downstream supervised adaptation. Experiments in a real-world transaction-risk setting and on multiple public financial benchmarks spanning diverse downstream tasks demonstrate that TAPES outperforms representative baselines. Ablation studies further validate the contributions of predictive target selection and joint modeling.",
+  "link": "https://arxiv.org/abs/2611.04747",
+  "score": 5,
+  "why": "Transaction-sequence pretraining, finance-adjacent",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04819",
+  "source": "arXiv",
+  "title": "Reconstructing Fraudulent Strategies in Online Payments via Interpretable Inverse Reinforcement Learning",
+  "abstract": "Payment fraud causes financial losses and undermines users' trust in web payment services. Although fraud detection is a critical defense for payment security, complex and diverse fraudulent behaviors can still evade detection. Generating fraud samples for data augmentation can broaden detectors' coverage of different fraud patterns. However, existing methods matching the distribution of transaction attributes alone do not ensure that generated sequences preserve the sequential relationships among transaction choices, payment feedback, and subsequent behavioral adjustments. To this end, we propose PaySeqGen, an interpretable inverse reinforcement learning framework that reconstructs fraud behavior policies from fraudsters' observed payment trajectories. We design a mechanism for constructing candidate actions to support plausible payment sequence generation while enabling exploration. The framework also learns interpretable behavioral rewards that capture fraudsters' preferences across different transaction contexts. By alternating between reward learning and policy optimization, the framework reconstructs policies that generate new fraud sequences for detector augmentation and learns interpretable rewards supporting sequential fraud-pattern analysis in real trajectories. Experiments in real-world payment scenarios at Ant International, a leading global digital payment provider, show that PaySeqGen outperforms state-of-the-art generative augmentation methods. Reward-based trajectory analysis also identifies fraud patterns of practical value, helping analyst locating suspicious segments and examine multistep fraud tactics. Evaluation in the deployed system of online payment further confirms its effectiveness.",
+  "link": "https://arxiv.org/abs/2611.04819",
+  "score": 5,
+  "why": "Payment fraud inverse RL, not LLM systems.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04826",
+  "source": "arXiv",
+  "title": "Safe Portfolio Learning from Untrusted Predictions: Signed Trust, Abstention, and Cross-Universe Polarity Failure",
+  "abstract": "Portfolio use of machine predictions must often proceed while the predictions' economic direction, reliability, and timing remain untrusted, and while feedback from overlapping multi-period positions arrives with delay. A controller chooses among Safe, Follow, and Reverse portfolio actions, so signal orientation is learned rather than assumed. A share-adaptive master updates action probabilities from matured Safe-relative rewards, an evidence gate can abstain by transferring unsupported directional probability to Safe, a delayed collateral budget reserves worst-case loss capacity before exposure is funded, and a protected split account caps the capital adaptive decisions may touch. The architecture carries a dual certificate, tracking regret against switching action sequences under delay and one-sided intervention, together with a pathwise collateral safety bound that holds when predictions fail. On a 24-stock development universe a conservative prediction-assisted overlay stays near equal-weight performance at a fraction of the turnover. On a frozen 82-stock holdout, the pre-specified Reverse orientation fails to outperform Equal Weight; a separately labeled post-holdout diagnostic shows that permanently flipping the sign to Follow also does not recover a return edge. Under the post-holdout controller, protected wealth remains within 15.9 basis points of the Safe benchmark throughout. The contribution is safe adaptive use of untrusted predictions, not demonstrated alpha.",
+  "link": "https://arxiv.org/abs/2611.04826",
+  "score": 5,
+  "why": "Safe portfolio learning, theory-heavy",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7675642",
+  "source": "SSRN",
+  "title": "Following the Compute Money: An On-Chain Forensic Analysis of GPU-Backed Credit and Decentralized Compute Markets",
+  "abstract": "Several synthetic-dollar protocols take stablecoin deposits and lend them to companies that operate GPU clusters. The hardware, borrowers' revenues and loan agreements are off-chain, while loan and vault transactions are recorded on a public chain. We reconstruct USD.AI on Arbitrum from 55,954 decoded events between 2025-05-12 and 2026-10-22, using the Covalent GoldRush API and signatures from protocol source code. We identify 39 loans to 13 borrower addresses, with $290.1 M originated and $182.2 M outstanding at the study cutoff. No breach or liquidation event was recorded; most active loans have not reached maturity. Protocol-hosted metadata describes about 4,560 pledged GPUs at 66.8% stated loan-to-value, but does not independently establish custody or realizable collateral value. Annualized deposit-side NAV growth was 8.17%. An event-based cash-to-accrued-yield ratio was 93.7%, but borrower interest and fees contributed only 28.4% of credited yield; two exceptional transfers materially raise the broader ratio. Completed redemption requests had a median wait of 13.0 days; pending requests remain censored. An exact-block accounting check put the reconstructed loan book within 0.22% of the vault's reported balance, with the residual not yet itemized. At that snapshot, 23.2% of reported assets was attributed to two pre-funded escrows without matching on-chain originations; transfers to external wallets do not establish the legal status or recoverability of the claims. We also measure $4.47 M in payments on Akash and Livepeer. Comparing those payments with $290.1 M of loan originations is descriptive, not a like-for-like measure of compute demand. The accompanying data document the reconstruction; operational cash flows and legal collateral rights require separate verification.",
+  "link": "https://www.ssrn.com/abstract=7675642",
+  "score": 4,
+  "why": "Single-protocol on-chain forensic; not LLM/text.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.03747",
+  "source": "arXiv",
+  "title": "Enhancing Stock Market Information Retrieval with Retrieval-Augmented Generation",
+  "abstract": "Natural Language Processing (NLP) has been widely applied in financial domains, enabling automated analysis and retrieval of stock market information. However, traditional NLP-based systems often struggle with maintaining contextual accuracy and generating relevant responses in dynamic financial environments. To address these challenges, Retrieval-Augmented Generation (RAG) models have emerged as a powerful solution, combining retrieval-based methods with generative capabilities to enhance response quality. In this study, we present a Retrieval-Augmented Generation (RAG) system designed to generate responses related to stock market information. The system integrates retrieval-based and generative approaches to enhance the accuracy and relevance of financial text generation. To evaluate its effectiveness, we employ the ROUGE metric, specifically ROUGE-1, ROUGE-2, and ROUGE-L, to measure lexical and structural similarity between generated and reference texts. Experimental results on a dataset of 100 stock market-related queries demonstrate high ROUGE scores, indicating strong alignment with reference documents. Additionally, we assess latency to evaluate the system responsiveness, achieving an average response time of 1.16 seconds. These findings confirm that our RAG model is capable of providing accurate and timely stock market insights, making it a promising approach for financial information retrieval.",
+  "link": "https://arxiv.org/abs/2611.03747",
+  "score": 4,
+  "why": "Generic stock RAG, ROUGE-only evaluation.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04157",
+  "source": "arXiv",
+  "title": "Nonparametric GARCH: An Iterated Neural Estimator",
+  "abstract": "We study nonparametric estimation and forecasting for GARCH-type processes and propose an iterated neural estimator that alternates between estimating the recursion map and updating the unobserved conditional variances. Under mild conditions, we establish finite-sample bounds for the time-averaged in-sample variance-path error and show that the estimator is minimax rate-optimal up to logarithmic factors. Under stationarity and mixing conditions, we establish the same rate for recursion-map estimation and derive finite-sample bounds for out-of-sample variance forecasts and expected excess Gaussian quasi-likelihood (QLIKE) loss. The convergence rates depend on the true lag orders and remain unchanged when the fitted orders are overspecified. Simulation studies illustrate the effectiveness of our estimators under nonlinear and time-varying volatility dynamics. Real-data applications suggest that our neural methods perform competitively and can incorporate option-price and high-frequency information.",
+  "link": "https://arxiv.org/abs/2611.04157",
+  "score": 4,
+  "why": "Neural GARCH, not LLM practitioner focus",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7675139",
+  "source": "SSRN",
+  "title": "Know your Agents: How Banks and Non-bank Lenders can Evidence What their AI Agents do and may do",
+  "abstract": "Banks and non-bank lenders have learnt to demonstrate that they know their customers. They now deploy AI agents, built in-house or operated by vendors and partners, that answer customers, triage alerts, recommend and take credit decisions and move money in their name. Regulators have begun to expect agents to be inventoried, identified and traceable to their permissions, but none yet sets a standard for evidencing what each one does. Existing duties on the risk assessment of new technology, internal control, outsourcing and reliance, record keeping, consumer outcomes and senior-manager accountability already require an institution to know what such agents do and may do and to be able to show it. That responsibility does not pass to a vendor. This paper asks how that knowledge can be evidenced when behaviour is stochastic. It borrows the evidentiary architecture of know-your-customer (KYC) and know-your-business (KYB) checks (risk assessment before launch, a file per relationship, risk rating, monitoring with event-driven review, quality assurance, records, independent testing, rules for reliance, attestation) and restates each element for a versioned agent, as a statistical claim with stated confidence wherever it concerns behaviour. Ten criteria cover identity and envelope, the rate of out-of-policy actions, quality assurance, never-observed behaviour, decision consistency, change, records, validation and third-party reliance; a sufficient file yields a revocable Agent Knowledge Statement issued as a W3C Verifiable Credential. We show that the evidence needed grows in proportion to the loss one action can cause, that narrowing an envelope that fails closed preserves evidence, and that a simple hold-out bound on never-observed behaviour is exact. In a synthetic institution of 96 agents with known ground truth, no statement was issued for an agent outside tolerance; 11 files were sufficient as configured and 56 after narrowing each envelope to the autonomy its evidence supports, at a median added human workload of 13% of episodes. Without monitoring, a fourfold rise in errors on day 45 of a quarter left 93% of statements false; with monitoring and look-back, 0.3%, because the evidence was re-based or, in most windows, the statement withheld. A deployable tool runs the framework on an institution's own records, and worked examples at a UK non-bank lender, a UK bank and a US bank show it at work. Python code, tests and an executed notebook accompany the paper.",
+  "link": "https://www.ssrn.com/abstract=7675139",
+  "score": 3,
+  "why": "Regulatory position paper, no runnable ML method",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.01855",
+  "source": "arXiv",
+  "title": "Long-term yields of short-rate models as Feynman-Kac ground states: a variational quantum eigensolver with single-setting energy estimation on two NISQ platforms",
+  "abstract": "We show that the long-term yield of a short-rate model is the ground-state energy of a Schrodinger operator obtained from the Feynman-Kac bond-pricing equation, so that it can be computed by a variational quantum eigensolver (VQE). We treat the Vasicek, Cox-Ingersoll-Ross and Black-Karasinski models; the last has no closed form. Calibrated monthly to the U.S. Treasury curve from 1985 to 2026, the long-term yield follows the 30-year yield with an in-sample correlation of 0.98. The Hamiltonian is stoquastic, so its ground state is positive and the energy can be estimated from computational-basis samples with a single measurement setting. On ibm_cleveland, gate noise appears mainly as bit flips of the high-order qubits. A bit-flip deconvolution with a tail set fixed by a WKB criterion, combined with readout mitigation and zero-noise extrapolation, gives four-qubit estimates within 33-125 bp of the grid ground-state energies for all three models, and within 23-67 bp for Treasury-calibrated parameters. On IonQ Forte Enterprise the same analysis reduces the error in the same proportions. On the same circuits, a Pauli-measurement VQE deviates by 791-1,129 bp, so the single-setting estimator gives about ten times smaller errors with one setting instead of nine. An on-device VQE converges from 4,939 bp to 130 bp.",
+  "link": "https://arxiv.org/abs/2611.01855",
+  "score": 3,
+  "why": "Quantum short-rate model, impractical this quarter.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.03891",
+  "source": "arXiv",
+  "title": "Hardware-Aware Design and Layout Selection in Quantum Reservoir Computing for Insurance Claims Forecasting",
+  "abstract": "Quantum reservoir computing (QRC) processes temporal information through quantum dynamics, but it remains unclear whether small QRC models can forecast real data competitively with classical models and whether their predictions survive the transfer from ideal simulation to noisy hardware. We address both questions for a six-qubit gate-based reservoir that forecasts next-day motor-insurance claim counts. Five reservoir candidates were selected and frozen using hardware-native interaction graphs, Trotterized Ising dynamics, memory and measurement-robustness criteria, circuit cost, and calibrated-noise screening. On 232 held-out test days, the ideal candidates reached root-mean-square errors (RMSEs) of 5.66-6.12 claims/day, compared with 5.36 for ridge regression. For four of the five, the difference from ridge was not significant under a 95% block bootstrap, and their accuracy was comparable with classical recurrent and reservoir baselines. On the 156-qubit IBM Kingston processor, we ran 63 evaluations in 21 paired rounds, comparing hardware-aware, random-native, and Qiskit optimization level 1 layouts. Hardware-aware placement gave lower RMSE than Qiskit in every round, with a maximum transfer distortion of 7.59 claims/day (11.84 for Qiskit), and avoided the severe transfer failures seen for some random layouts. Most of the hardware distortion appeared as a systematic forecast shift, which a short hardware probe on training inputs detected before the test runs. Longer replay windows raised circuit cost without a consistent gain in forecasting accuracy or hardware transfer. Small QRC models can thus reach competitive accuracy on this task, and hardware-aware layout selection makes their transfer to IBM Kingston more consistent.",
+  "link": "https://arxiv.org/abs/2611.03891",
+  "score": 3,
+  "why": "Quantum insurance claims, off-topic",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04298",
+  "source": "arXiv",
+  "title": "FinTech Adoption, Bank Profitability, and Stability: The Mediating Role of Operational Cost Efficiency in Bangladesh's Commercial Banking Sector",
+  "abstract": "While financial technology (FinTech) is seen as a contributor to bank performance, the empirical evidence of digitization's ability to translate into improved profit and stability outcomes and efficiency gains, within emerging systems dominated by banks is not conclusive. The direct impact of a composite FinTech Adoption Index (FTI) on the profitability (ROE) and stability (ln(Z-score)) of Bangladesh's commercial banks is explored in this study along with whether operational cost efficiency (CIR) acts as a mediator. The study is conducted using a balanced panel of 30 commercial banks between 2015 and 2024, supplemented by an entropy-weighted index of FinTech as a robustness check, using a two-step System GMM to address dynamic persistence and endogeneity issues. The adoption of FinTech presents no significant relationship with profitability, stability or cost efficiency, while cost efficiency does not significantly transmit the effect of FinTech to either outcome. The alternative measure suggests that adoption is not only significantly negatively related to profitability, but is also associated with a significantly improved (not worse) cost-to-income ratio, which indicates the sensitivity to measurement rather than any one consistent effect on performance. These findings qualify the expected performance benefits of FinTech and have implications for investment sequencing and regulation of digital transformation in emerging banking markets.",
+  "link": "https://arxiv.org/abs/2611.04298",
+  "score": 3,
+  "why": "Bangladesh FinTech panel, single-country empirics.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7675719",
+  "source": "SSRN",
+  "title": "Corporate AI Investment as an Object of Investment Analysis: Definition and Classification",
+  "abstract": "Corporate investment in artificial intelligence (AI) is growing rapidly, yet there is no accepted understanding of what counts as an AI investment and how it differs from information technology (IT) investment. The study defines corporate AI investment and classifies AI investments for investment analysis. A structured analysis covered definitions and classifications of AI and AI investment in more than 40 sources: international standards, Russian regulations and accounting standards, industry analytics and academic literature. No source explicitly links classification to the choice of evaluation method. An economic definition of corporate AI investment is proposed that includes complementary assets (data, staff skills, process change, model training), with incremental-cash-flow rules for embedded AI and shared resources. Three evaluation-relevant features of AI investments are identified: the outcome is unknown until the system is tested (the genuine distinction from IT investment), together with a significant share of complementary outlays and the absence of an automatic link between process effects and project cash flow (features of IT investment amplified in AI projects). A four-class classification by two criteria, the source of benefit (cost savings or revenue growth) and decision reversibility, is proposed; unlike existing schemes, it rests on cash flow properties, not technology or implementation stage. Examples show that projects grouped together by existing schemes differ in cash flow structure and require different evaluation approaches; an indicative mapping of classes to evaluation tools is given. The results can support corporate investment decisions on AI projects and the statistical monitoring of AI investment.",
+  "link": "https://www.ssrn.com/abstract=7675719",
+  "score": 2,
+  "why": "Definitional survey, no actionable method",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7676178",
+  "source": "SSRN",
+  "title": "AI Companion Regulation and Market Entry: China's App Store Verification Rules in Comparative Perspective",
+  "abstract": "Safety regulation can affect entry through the evidence a provider must present as well as the safeguards it must build. Under China's 2026 companion measures, app stores and other distributors must verify relevant safety assessments and filings, continuing a duty imposed by China's 2022 deep synthesis rules. Where developers have few practical routes to users and distributors request further evidence without explaining why, review can favor providers with established compliance records over entrants with comparable risks, safeguards, and documentation. This article compares that arrangement with the EU AI Act, the GDPR, and companion-chatbot laws in California and New York. The Digital Markets Act and ageassurance laws in California and Texas provide additional examples of duties assigned to intermediaries and limits on their exercise. California's newer child-safety legislation also permits qualifying assessments and audits prepared under other laws to be reused. I propose published review criteria and timetables, reasons for additional demands and refusals, and a route to reconsideration. Matched submissions and review records could test whether unfamiliar providers face longer reviews or more requests for evidence after accounting for product risk and submission quality.",
+  "link": "https://www.ssrn.com/abstract=7676178",
+  "score": 2,
+  "why": "Comparative app-store regulation, irrelevant to quant.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04021",
+  "source": "arXiv",
+  "title": "Robust distortion riskmetrics over Bregman--Wasserstein balls and their intersections",
+  "abstract": "We study the worst-case values of distortion riskmetrics over Bregman--Wasserstein balls around a reference distribution. Unlike the squared $2$-Wasserstein distance, Bregman--Wasserstein divergences can penalize upward and downward deviations differently. Our main result applies to generalized distortion functions $g:[0,1]\\to\\R$ of bounded variation, with $g(0)=0$ and suitable endpoint regularity, which need not be monotone, normalized, or upper semicontinuous. For strictly convex generators satisfying a two-sided $p$-growth condition, we obtain a one-dimensional dual representation of the worst-case value. When a positive Lagrange multiplier makes the divergence constraint binding, we identify a unique quantile function through a least concave majorant and characterize when it attains the supremum. For absolutely continuous generalized distortion functions, we characterize the solution through an isotonic projection; we also study more general generators and shape constraints, including unimodality. Finally, we extend the analysis to intersections of Bregman--Wasserstein balls, describing models acceptable to several parties involved in decision making, and illustrate the results numerically.",
+  "link": "https://arxiv.org/abs/2611.04021",
+  "score": 2,
+  "why": "Pure risk-metric theory, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04048",
+  "source": "arXiv",
+  "title": "Exploit or conform? How norm utility prompting changes the way LLMs use community beliefs",
+  "abstract": "Large Language Models (LLMs) serve both as tools for aiding human decision-making in everyday life and as models of human agents in experimental simulation studies. Alignment on prototypical social decisions -- such as whether to cooperate on a collective action -- therefore has immediate practical consequences for researchers and for society at large. Here we systematically explore the impact of ``norm utility'' -- the non-material components of utility that account for an individual's desire to conform to social norms and to be internally consistent -- on the strategic decision-making of three open-weight LLMs in one-shot, two-player social dilemmas. We find that when a social dilemma is presented together with information about community beliefs -- but without any indication of how those beliefs should matter -- models tend to treat community belief as strategic information, so that in the Snowdrift game cooperation falls as community belief in cooperation increases. When we explicitly prompt the components of norm utility this relationship inverts, and cooperation increases with community belief, in broad agreement with the predictions of a simple norm utility model. We then show that prompting norm utility reduces the volatility of strategic decisions with respect to changes in the underlying social context, and generates more consistent reasoning habits across models. Taken together, our results suggest that prompting norm utility can help generate more human-like and consistent behavior across models and lower volatility within models.",
+  "link": "https://arxiv.org/abs/2611.04048",
+  "score": 2,
+  "why": "LLM social dilemmas, off-topic",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.03738",
+  "source": "arXiv",
+  "title": "RATSIFT: Resolution-Adaptive Transformer for Solar Irradiance Forecasting and Temporal Downscaling",
+  "abstract": "Accurate forecasting and temporal downscaling of solar irradiance is critical for reliable renewable energy integration and grid management. Traditional methods often struggle to capture rapid irradiance variability. In this work, we develop a Transformer-based architecture for simultaneous forecasting and temporal downscaling. The model takes input data at arbitrary resolutions and generates outputs at any resolutions represented within the training data, leveraging both global and local contextual information. To improve training efficiency, a genetic algorithm-based optimization framework is implemented to identify suitable model hyperparameters, while reducing the computational cost of exhaustive grid search. The effectiveness of the proposed model is shown by analyzing real data in Dallas, Texas. The proposed model achieved root mean square error (RMSE) values of 28.785, 29.544, 30.157, 32.132~W/m\\(^2\\) for 15-, 30-, 60-minute, and irregularly spaced global input and producing forecast at 5-minutes resolution, respectively. Furthermore, this model produced reliable uncertainty estimates, exhibiting wider prediction intervals for high-resolution inputs during volatile solar conditions, whereas coarser-resolution inputs result in narrower intervals and significantly lower training time and computational cost. Our approach provides a scalable and efficient framework for multi-resolution solar irradiance forecasting and temporal downscaling, suitable for practical energy forecasting and grid management applications.",
+  "link": "https://arxiv.org/abs/2611.03738",
+  "score": 1,
+  "why": "Solar forecasting, off-topic",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.04785",
+  "source": "arXiv",
+  "title": "Kierston & KierstonBench: Simulation of Allentown, PA and Evaluation of Language Models in Crime Investigation and Surveillance Tasks",
+  "abstract": "Large language models are candidates for collecting and analyzing records in criminal investigations and mass surveillance. Their capability and accuracy in this work cannot currently be measured. Real deployments lack the ground truth needed to score a model's conclusions, and no benchmark evaluates these capabilities in a simulated environment. We present Kierston, a city-scale simulation engine, and KierstonBench, a benchmark that tests these capabilities against known simulated events. Kierston models approximately 125,000 residents of Allentown, Pennsylvania, generating their daily activities and the telecommunications, financial, administrative and license-plate records that surveillance and investigative systems collect about them. These records derive from a common behavioral timeline and are distributed across sources representing separate providers. Models investigate through a restricted records interface, linking observations across sources without access to the underlying simulation. The benchmark comprises 32 task families covering record linkage, routine reconstruction, incident investigation and assessment of deceptive accounts. In an evaluation of sixteen language models, most could not perform records investigation and submitted identifications the records did not support. A small number of frontier models solved most of the tasks and abstained when evidence was insufficient. In some cases these models still fell for common deceptions and assumptions, and none replaced an investigator.",
+  "link": "https://arxiv.org/abs/2611.04785",
+  "score": 1,
+  "why": "Crime surveillance benchmark, off-topic",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]

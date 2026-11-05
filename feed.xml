@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Thinking Fast, Trading Late: System One Decision Models vs the Market</title>
+    <link>https://arxiv.org/abs/2611.03985</link>
+    <description>Commercial LLM news signals predict overnight moves but not post-open returns.</description>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.03985</guid>
+  </item>
+  <item>
+    <title>Beyond Anonymous Order Flow: Wallet Identity as a Feature for Short-Horizon Return Prediction</title>
+    <link>https://arxiv.org/abs/2611.05218</link>
+    <description>Wallet identity features raise one-second out-of-sample R2 from 10.88% to above 12%.</description>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.05218</guid>
+  </item>
+  <item>
+    <title>Right Model, Wrong Answer: How Missing User Context Silently Flips AI Financial Advice</title>
+    <link>https://www.ssrn.com/abstract=7677980</link>
+    <description>Omitting one user fact makes frontier AI financial advice confidently wrong 33 of 33 times.</description>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7677980</guid>
+  </item>
+  <item>
+    <title>Honest Small Decision Models for Finance: Scale, Specialization Collapse, and Mixed-Corpus Remediation</title>
+    <link>https://arxiv.org/abs/2611.03755</link>
+    <description>Fine-tuned small decision models show no edge beyond prior base rates on reality-labeled finance questions.</description>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.03755</guid>
+  </item>
+  <item>
+    <title>LENS: Reliability-Aware Stock Prediction via LLM-Extracted Priors and News-Driven Semantic Graphs</title>
+    <link>https://arxiv.org/abs/2611.04217</link>
+    <description>Reliability-weighted LLM graphs and news semantics lift S&amp;P 500 top-five ranking 16-23%.</description>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.04217</guid>
+  </item>
+  <item>
+    <title>LLM-Generated Investment Research Memos Need Validation</title>
+    <link>https://arxiv.org/abs/2611.04375</link>
+    <description>One-to-two percent claim refutation still leaves 37-41% of LLM memos containing a false claim.</description>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.04375</guid>
+  </item>
+  <item>
     <title>The flow, not the headline: point-in-time LLM sentiment and the cross-section of cryptocurrency returns *</title>
     <link>https://www.ssrn.com/abstract=7669918</link>
     <description>Point-in-time LLM sentiment predicts next-day crypto returns at 21 bps daily with 2.21 Sharpe, serving as a veto not a tilt.</description>
@@ -648,20 +690,6 @@
     <description>Financial artifacts with verified byte integrity can still contain temporally invalid information.</description>
     <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7563563</guid>
-  </item>
-  <item>
-    <title>LLM Pricing Agents as Rote Learners</title>
-    <link>https://www.ssrn.com/abstract=7555398</link>
-    <description>Increased prompt context makes LLM pricing agents more consistent without making them more accurate.</description>
-    <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7555398</guid>
-  </item>
-  <item>
-    <title>Common AI Information and Capital Allocation</title>
-    <link>https://www.ssrn.com/abstract=7558538</link>
-    <description>AI progress expands investor information but reduces price informativeness for firms, worsening capital allocation.</description>
-    <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7558538</guid>
   </item>
 </channel>
 </rss>
