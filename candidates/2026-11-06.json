@@ -1,0 +1,162 @@
+[
+ {
+  "key": "2611.06607",
+  "source": "arXiv",
+  "title": "Hard to Fool: A Bounded LLM Research Loop for Quantitative Finance, and What Two Dozen Campaigns Found",
+  "abstract": "Agentic research loops that let a language model propose a change, run a fixed experiment and keep whatever improves the metric work well in machine learning. In trading research the same loop is a machine for producing false discoveries: a backtest that \"improves the metric\" is, by default, overfit, look-ahead, a multiple-comparisons artifact, cost-free, or market drift wearing a strategy. We describe Autonomous Quant Researcher, an open-source loop built on the opposite premise: the model proposes, and only trusted code decides. Proposals are strict declarative JSON over a fixed vocabulary, so there is no model-written code to sandbox. Evaluation runs on immutable chronological stores split into discovery, validation and a final holdout that can be opened exactly once, after a durable receipt is written. Acceptance is a conjunction of absolute gates (positive edge and net P&L after costs, a positive weekly-cluster bootstrap lower bound, survival at elevated costs, per-year stability and sample floors), never a single score. Duplicates are refused before they spend a trial, and every formulation, refusal, crash and result is kept in a hash-chained, append-only ledger. We report every campaign run to date, across 0DTE options priced from traded option bars, overnight SPX verticals, daily ETF rules, technical-analysis premises, Kalshi crypto binaries, earnings options, off-exchange volume and a pre-registered alternative-data campaign. Most hypotheses fail, and we report them. Two results survive their pre-registered bars. The clearest example of the loop working is a failure: a language-model survivor that passed discovery and validation with Sharpe ratios near 3 and fell to 0.26 on its single holdout use. The value of such a loop lies less in what it finds than in how hard it is to make it report something that is not there.",
+  "link": "https://arxiv.org/abs/2611.06607",
+  "score": 9,
+  "why": "Open-source bounded quant loop with cost gates and one-shot holdout.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7679880",
+  "source": "SSRN",
+  "title": "The Financial Impact of Non-Financial Beliefs in Large Language Models",
+  "abstract": "Large language models (LLMs) shape financial judgments by transmitting embedded value-laden nonfinancial beliefs. Relative to human investors, LLMs exhibit a stronger pro-environmental, social, and governance (ESG) orientation, amplified by post-training. Following brokerage-wide generative AI rollouts and detected analyst-level AI use, financial analysts become relatively more optimistic about high-ESG firms, revising earnings forecasts and target prices upward and issuing more favorable recommendations. Yet forecast accuracy deteriorates for top-ESG firms relative to other firms, with significant increases in absolute forecast errors. These findings reveal a distinct nonfinancial channel through which AI use results in financial impact.",
+  "link": "https://www.ssrn.com/abstract=7679880",
+  "score": 8,
+  "why": "LLM ESG beliefs distort analyst forecasts; accuracy worsens.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.06476",
+  "source": "arXiv",
+  "title": "The Alignment Tax Is Graded: Task-Selective Capability Loss Under Length-Normalized DPO with SFT Retention",
+  "abstract": "Setting. This is an empirical characterization study; we propose no new method and run no comparisons against alternative objectives. We fine-tune Qwen3.5-4B with sparse LoRA and length-normalized DPO plus an SFT retention term (the RPO objective) on structured financial-filing tasks, and track downstream capability as the implicit reward margin grows to $\\sim 7$ $β$-scaled units (nf4 training; $\\sim 3$ under fp16 measurement on the unquantized base). Question. Does margin growth degrade capability uniformly across tasks, or selectively? Findings. In a pre-registered study (8 seeds, 6 unseen at freeze) with artifact-aware scoring and TOST equivalence testing, the alignment tax is graded and task-selective: extraction is preserved ($Δ= -0.55$ pts, equivalent at $\\pm5$ pts), json loses little ($Δ= -3.52$ pts, equivalence fails on a clustered item-level interval), and router degrades severely ($Δ= -30$ pts). Router's loss concentrates in a margin 1-3 damage window containing a transient format-break spike. The margin is accounted for almost entirely ($\\geq 96\\%$) by suppression of rejected completions, with chosen reward approximately flat, consistent with the retention term anchoring it; we do not attribute the behavioral damage to any single gradient channel. Gold-logp deflation is task-selective (extraction $-0.15$, json $-1.04$, router $-1.47$ nats/token under fp16), with gold selectively protected relative to incorrect controls on extraction (8/8 seeds). QLoRA reward margins differ up to $3.4\\times$ between nf4 training and unquantized fp16 measurement, with an axis-dependent gap. Scope. Length-normalized rewards with SFT retention, sparse LoRA on 8/32 layers, one 4B model, easily-separable synthetic preferences, three structured tasks. A no-retention control and a measured format-alignment metric are left to future work.",
+  "link": "https://arxiv.org/abs/2611.06476",
+  "score": 8,
+  "why": "Task-selective alignment tax on financial-filing tasks; pre-registered evidence.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7679885",
+  "source": "SSRN",
+  "title": "The Illusion of Informed Congressional Trading: Evidence from Committee Networks and Hearings",
+  "abstract": "I examine whether members of Congress exploit legislative access for personal equity trading. Using a novel Large Language Model (LLM) approach, I map firm 10-K business overviews to congressional committee jurisdictions to create a continuous measure of firm-politician information alignment. I find no evidence that congressmembers earn abnormal returns when trading stocks closely aligned with their committee assignments. Furthermore, trading performance does not improve following committee hearings, nor is there evidence of cross-committee information spillovers among shared peers. The lack of outperformance is consistent across trade sizes and reporting delays. Finally, exploiting the shift to virtual hearings during the COVID-19 pandemic as an exogenous shock to in-person information sharing, I document no systematic change in trading outcomes. My findings suggest that routine legislative activities do not systematically translate into abnormal returns in congressional stock trading.",
+  "link": "https://www.ssrn.com/abstract=7679885",
+  "score": 7,
+  "why": "LLM maps filings to committees; null result on informed trading.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.05952",
+  "source": "arXiv",
+  "title": "One Basket, Many Experts: Decorrelated Re-ranking for Financial Asset Recommendation",
+  "abstract": "Financial asset recommendation for retail investors is typically optimized for relevance, that is, how well a recommendation matches what each user will buy. From the service provider's point of view, the value of a recommendation also depends on portfolio performance: the risk-adjusted return the recommended assets (the basket) deliver, which drives user engagement and fee revenue. The two goals are rarely achieved jointly, because the recommendations that best match user behavior concentrate on a few popular assets whose returns are highly correlated, which caps the risk-adjusted return a provider can offer. We propose Decorrelated-Satellite Expert Re-ranking (\\textbf{DSER}), which retains the most relevant recommendations from an expert-following list and replaces the rest with return-decorrelated alternatives. The number of replaced slots is a single integer~$m$ (a knob) that the provider sets, so the relevance--performance trade-off becomes an explicit, auditable choice rather than a property hidden inside a learned model. In experiments on the public FAR-Trans retail-brokerage dataset, under the primary protocol, replacing a few slots improves risk-adjusted return at a small relevance cost, and the gain survives realistic trading costs at typical retail portfolio sizes. Minimizing correlation would lower basket volatility, but in our data the least-correlated assets are more volatile and higher-return, so their volatility offsets that reduction while their return drives the gain, not lower volatility. The resulting trade-off is asymmetric, with the relevance cost consistent across market phases while the gain is phase-dependent. The provider sets $m$ to read off exactly how much relevance each operating point costs.",
+  "link": "https://arxiv.org/abs/2611.05952",
+  "score": 7,
+  "why": "Decorrelated portfolio re-ranking for retail asset recommendations.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.05749",
+  "source": "arXiv",
+  "title": "Pairing Expert Critique with LLM-Driven Refinement: An Iterative Approach for Curating Quality AI Evaluation Datasets",
+  "abstract": "Evaluating and improving domain-specific LLM responses requires high-quality reference data and rubrics, yet expert authoring is slow and expensive, and synthetic datasets may fail to capture practitioner preferences unless they are grounded in expert judgment. We present SME-C (Subject Matter Expert Critique), a human-AI workflow that captures expertise through lightweight critiques of candidate responses and complements it with LLM-driven analysis and refinement to iteratively curate response datasets and evaluation rubrics. We validate SME-C in the domain of financial business briefs, collecting 3,853 critiques from 411 finance professionals on 520 queries across two survey rounds. We evaluate two LLM-driven refinement strategies: one guided by the experts' written critiques and one that infers critique solely from their preference votes. In a blind validation survey with 100 additional professionals, we found that both strategies significantly improved quality over the experts' top-ranked baseline responses. The gains were concentrated among weaker original responses, and the two strategies excelled in different ways: critique-based refinement produced more domain-grounded improvements, whereas vote-based refinement was more effective at identifying and removing irrelevant content. The resulting rubrics and refined dataset support reproducible offline evaluation and benchmarking of LLMs, suggesting that structured expert critique is a viable alternative to expert authoring for building high-quality, domain-specific evaluation resources more quickly, at scale, and at lower cost.",
+  "link": "https://arxiv.org/abs/2611.05749",
+  "score": 6,
+  "why": "Finance expert critique dataset curation, solid but narrow.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.06514",
+  "source": "arXiv",
+  "title": "An Interaction-Aware Decision Framework for FDIC-Assisted Distressed Bank Acquisitions: Empirical Evidence from the FDIC Failed-Bank Panel and the SVB-First Citizens Case",
+  "abstract": "Acquirers of failed banks weigh acquisition value, regulatory protection, risk, buyer strength, and execution difficulty jointly, because each signal's meaning depends on the others: high non-performing loans matter less when government loss sharing absorbs the losses. The proposed Spider Network Filtering Framework encodes such dependencies as four interpretable interaction rules among five dimensions, yielding graph-inspired features for a logistic model and a Pursue/Caution/Avoid decision rule. We evaluate it on 55 acquisitions assisted by the Federal Deposit Insurance Corporation in 2008-2024 by acquirers with a parent listed in the United States. Six financial inputs come from regulatory reports published before each failure; two deal terms, which the winning bidder knows when it bids but investors learn at the announcement, come from the regulator's press releases. The outcome, a positive three-day abnormal return around the announcement, records the market's initial reception, not realized success. Under grouped, nested cross-validation, the Spider-enhanced model reaches a mean area under the receiver operating characteristic curve of 0.594, against 0.615 for logistic regression on the same inputs and 0.632 for ridge regression; permutation tests that repeat the full model selection give at most weak evidence that any of them ranks better than chance. The Spider score used directly does not rank better than chance, and an apparent link between target distress and higher returns disappears against a bank-sector benchmark. Thresholds tuned for the F1 score approve most acquisitions with negative returns and realize negative utility when each costs three times what a positively received acquisition gains.",
+  "link": "https://arxiv.org/abs/2611.06514",
+  "score": 5,
+  "why": "FDIC bank acquisition graph-logistic model, small sample.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.05515",
+  "source": "arXiv",
+  "title": "TSFM Meets LLM: Context as Covariates",
+  "abstract": "Textual information is ubiquitous in real-world time series datasets, appearing as news, reports, and annotations that hold key predictive signals not deducible from numerical history alone. Large Language Models (LLMs) interpret text but lack numerical precision, while Time Series Foundation Models (TSFMs) are quantitatively accurate but cannot reason about the effects of text. Moreover, the lack of large-scale paired multimodal datasets limits progress in bridging this gap. In this work, we address this challenge by providing a scalable approach for generating realistic multimodal datasets by annotating real-world time series with LLMs. Building on this, we propose Context as Covariates (CoCo), a forecasting framework in which an LLM distills its textual reasoning into numerically grounded forecast and confidence covariates that guide a TSFM backbone, thereby exploiting the strengths of both LLMs and TSFMs. We align the two models in stages, first fine-tuning the LLM via Group Relative Policy Optimization (GRPO) with a reward tied to covariate-induced improvement in forecasting performance, and then fine-tuning the TSFM on covariates generated by the aligned LLM. Our experiments show that models trained on our synthetic multimodal corpus generalize to real benchmarks spanning finance, economics, weather, traffic, and security. Notably, CoCo with Qwen3-4B-Instruct-2507 as the LLM and Chronos2 as the TSFM achieves up to 12% MAE improvement over state-of-the-art TSFMs and LLM forecasters, such as GPT-4o. Code, checkpoints, and the evaluation datasets are publicly available.",
+  "link": "https://arxiv.org/abs/2611.05515",
+  "score": 4,
+  "why": "Generic LLM-text-to-time-series method, no finance focus.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.05728",
+  "source": "arXiv",
+  "title": "Generative Modeling for Cascading Extremes via Autoregressive Transformers",
+  "abstract": "Extreme events often occur sequentially, from earthquake-tsunami cascades to successive extreme losses in financial markets. We introduce an extremal token representation that encodes multivariate observations as a categorical sequence. A quiet token records the absence of threshold exceedances; otherwise, the token identifies the exceeding component with the largest marginal probability-scale score. The representation is invariant to componentwise strictly increasing transformations. It preserves the identity and temporal ordering of dominant exceedances but discards their magnitudes and the identities of nondominant simultaneous exceedances. A decoder-only transformer estimates the history-dependent next-token kernel on this representation, and recursive sampling generates future token sequences from the induced joint predictive law. We amortize our generative model by pretraining across simulated process families with varying parameters and dependence persistence. Next-token predictions are evaluated against exact conditional probabilities for held-out categorical processes and particle filter references for heavy-tailed vector autoregressive processes. Applied to ten-second returns for five semiconductor stocks, the pretrained model supports zero-shot transfer, while a few epochs of adaptation improve agreement between observed and generated token frequencies and transition patterns. These results support task-specific tokenization and simulation-based pretraining for modeling which dimensions dominate multivariate extremes.",
+  "link": "https://arxiv.org/abs/2611.05728",
+  "score": 4,
+  "why": "Extreme-cascade generative method; finance tangential, no trading implementation.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.06126",
+  "source": "arXiv",
+  "title": "Exponential Seniority Weighting Chain-Ladder Reserving",
+  "abstract": "We develop a tractable state-space version of the chain-ladder model. The state-space dynamics acts on the accident year axis which, in contrast to the classical chain-ladder model, makes accident years dependent. This state-space version yields an exponential seniority weighting in the chain-ladder factor estimation, and it admits an analytical likelihood representation that enables us to compute the seniority weighted chain-ladder reserves and their prediction uncertainty: the one-year uncertainty is available in closed form and the total uncertainty requires a Monte Carlo simulation from the fully tractable likelihood representation.",
+  "link": "https://arxiv.org/abs/2611.06126",
+  "score": 3,
+  "why": "Actuarial chain-ladder state-space model; no LLM or financial text.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.06495",
+  "source": "arXiv",
+  "title": "Constrained defined-contribution pension management: A reparameterized neural network approach",
+  "abstract": "This paper studies constrained defined contribution (DC) pension management under a two-factor financial market model. The pension participant is allowed to invest in cash, two nominal bonds, an inflation-linked bond, and a stock index. Moreover, they can also purchase term life insurance to manage pre-retirement death risk. Unlike traditional literature, we consider a pension member restricted to a general non-empty, closed, and convex trading constraint set that includes no short-selling, no borrowing, and portfolio-mix constraints as special cases. Such restrictions reflect common limits on pension-account trading. To solve the problem, we construct a family of unconstrained artificial markets, in which the original trading constraints are satisfied by adjusting the drift terms of the risky assets. Using a duality transformation, we derive the Lagrangian dual problem and propose a reparameterized neural network method to compute lower and upper bounds on the primal value function. We calibrate our model with U.S. data using a Kalman filter method, and find that our method produces a smaller duality gap than the benchmark methods. We also compare the constrained results with the unconstrained explicit solution and find that trading constraints substantially change wealth accumulation, portfolio strategies, and insurance demand. This highlights that unconstrained solutions may provide misleading guidance for pension management in practice.",
+  "link": "https://arxiv.org/abs/2611.06495",
+  "score": 3,
+  "why": "Constrained pension optimization via neural nets; no LLM or market data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.06687",
+  "source": "arXiv",
+  "title": "LifeVal: Evaluating AI Model Performance on Personalized Agentic Consumer Tasks",
+  "abstract": "We introduce LifeVal, a benchmark evaluating AI model performance on personalized agentic consumer tasks. LifeVal covers the most valuable life tasks that a personalized digital superassistant could automate, representing over 1.7 trillion US dollars in annual willingness-to-pay across 148 consumer task categories (e.g., managing finances, moving apartments, searching for a job, finding childcare). To construct our activity distribution, we conducted a new survey of willingness-to-pay for a digital superassistant across a demographically representative sample of over 3,800 consumers, cross-referencing our results against the American Time Use Survey (Bureau of Labor Statistics, 2025) and the Multinational Time Use Study (Fisher et al., 2025). For the most valuable consumer activities, we recruited task creators to create AI evaluation tasks personalized using real ChatGPT conversations and memories, reference files, and personal context. Task creators had to pass our expertise threshold (including personally completing the task multiple times and seeing the results through in their real lives for over a year) and also write a rubric, ensuring that our evaluation measured the best personalized completion for that task. All tasks had to pass at least three rounds of human quality-control before acceptance into our final evaluation sets.",
+  "link": "https://arxiv.org/abs/2611.06687",
+  "score": 3,
+  "why": "Consumer agent benchmark; finances one category, no financial-text ML.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.06130",
+  "source": "arXiv",
+  "title": "Short-Term Forecasting of Heterogeneous Wind Power Fleets: Global Temporal Fusion Transformer Leveraging Static Covariates",
+  "abstract": "Accurate short-term wind power forecasting is critical for grid stability and electricity trading. While transformer-based deep learning is state of the art, industry practice relies mostly on local models trained for individual assets. This study investigates whether a global temporal fusion transformer (TFT), trained jointly on a heterogeneous portfolio of wind farms across Germany, outperforms site-specific local models in 48-hour-ahead forecasting. Using numerical weather prediction (NWP) data from the regional ICON-D2 and the global ECMWF HRES models, we compare the global TFT against local models and a linear regression baseline. The global model leverages static covariates, such as farm age, altitude above sea level, hub height, rotor diameter and power curve parameters, to learn shared representations across sites. We evaluate on 100 synthetic wind farm profiles and a real portfolio of 11 German wind farms, across two seasonal test periods with intermediate retraining. The global TFT outperforms the local models for 87% of the synthetic and 77% of the real wind farms and clearly surpasses the linear baseline. Wilcoxon signed-rank tests confirm that these gains are significant across both seasons and datasets. Crucially, this superiority depends on static covariates: without asset-specific context, the global model fails to generalize. The TFT's variable selection network (VSN) reveals the learned feature selection. Altitude emerges as a relevant static discriminator on both datasets, while hub height is decisive on the real portfolio. For dynamic inputs, the encoder prioritizes historical power, whereas the decoder combines upper-level wind speeds from both NWP models, consistent with averaging out model-specific errors. These findings support a shift from single-site to scalable multi-site forecasting, reducing operational complexity while improving accuracy in large portfolios.",
+  "link": "https://arxiv.org/abs/2611.06130",
+  "score": 2,
+  "why": "Wind power forecasting; not financial markets or LLM text.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.06623",
+  "source": "arXiv",
+  "title": "Amortized Optimization for Calibrating Stochastic Social Simulators",
+  "abstract": "Stochastic simulators need suitable parameter values to reproduce observed behaviour in complex systems. Searching for these values through repeated simulations makes frequent recalibration computationally expensive. We develop an amortized optimizer that uses simulations collected in advance to learn how to choose parameters that make simulated outcomes agree with observations. Once fitted, it maps new observations to feasible parameters without further simulator calls. The method retains alternative parameter settings that can explain similar observations and compares their responses, avoiding the conflicting labels that arise when training a single parameter regressor. Historical observations also provide supervision by showing which simulated responses agree with the data, even when the underlying parameters are unknown. Experiments across four simulators compare calibration accuracy and query time. Dedicated cost analyses quantify traffic preparation and the recorded financial reuse costs.On new traffic targets, local correction more than halves query time relative to empirical and surrogate selection; a learned inverse is faster still, with similar mean error. In a retrospective comparison on real financial data, our method returns parameters about $1.07\\times10^{7}$ times faster than a 10-minute Gaussian-process Bayesian optimization search, with mean calibration error 3.06% higher. Reusing simulation work across observations supports repeated parameter updates when the available time is too short for a new search.",
+  "link": "https://arxiv.org/abs/2611.06623",
+  "score": 2,
+  "why": "Social simulator calibration; not finance-specific and no LLM text.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.05841",
+  "source": "arXiv",
+  "title": "Vision Paper: Why Distributed LLM Post-Training and Decentralized Alignment Are Now Essential",
+  "abstract": "This vision paper argues that distributed learning, including federated and decentralized, should become a first-class paradigm in LLM post-training, not merely a privacy add-on. Current methods like RLHF and DPO rest on an invisible assumption: preference data should be centralized. We contend this assumption is scientifically unjustified, practically unsustainable, and ethically problematic. As LLMs deploy into healthcare, law, finance, and multilingual communities, preference data originates from populations that cannot or will not centralize. We develop a three-pillar argument grounded in (1) privacy and data sovereignty, (2) pluralism and representational equity, and (3) robustness and scalability. We formalize key technical challenges unique to this intersection, reference drift, preference heterogeneity, and the DP-utility trade-off for contrastive losses, and propose concrete algorithmic directions, and sketch a research agenda. Our analysis shows distributed post-training is not only necessary but tractable, and ignoring it risks AI that is legally noncompliant, representationally narrow, and brittle at scale.",
+  "link": "https://arxiv.org/abs/2611.05841",
+  "score": 1,
+  "why": "Vision/position paper on decentralized alignment; no implementable finance method.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.06459",
+  "source": "arXiv",
+  "title": "A general technique for explicit quantile representations",
+  "abstract": "This work proves existence of contours independent of probability level for exact quantile integrals of strictly positive real-analytic densities. Explicit constructions cover five broad distribution families and yield a finite-interval representation of Black-Scholes implied volatility using forward functions.",
+  "link": "https://arxiv.org/abs/2611.06459",
+  "score": 1,
+  "why": "Pure quantile representation theory; no data or implementation path.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]

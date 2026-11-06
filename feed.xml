@@ -6,6 +6,41 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Hard to Fool: A Bounded LLM Research Loop for Quantitative Finance, and What Two Dozen Campaigns Found</title>
+    <link>https://arxiv.org/abs/2611.06607</link>
+    <description>Most LLM-generated trading hypotheses fail pre-registered gates despite strong discovery and validation metrics.</description>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.06607</guid>
+  </item>
+  <item>
+    <title>The Financial Impact of Non-Financial Beliefs in Large Language Models</title>
+    <link>https://www.ssrn.com/abstract=7679880</link>
+    <description>LLM-driven analyst optimism about high-ESG firms lifts target prices but degrades earnings forecast accuracy.</description>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7679880</guid>
+  </item>
+  <item>
+    <title>The Alignment Tax Is Graded: Task-Selective Capability Loss Under Length-Normalized DPO with SFT Retention</title>
+    <link>https://arxiv.org/abs/2611.06476</link>
+    <description>Alignment tax under length-normalized DPO with SFT retention is task-selective, degrading router performance but sparing extraction.</description>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.06476</guid>
+  </item>
+  <item>
+    <title>The Illusion of Informed Congressional Trading: Evidence from Committee Networks and Hearings</title>
+    <link>https://www.ssrn.com/abstract=7679885</link>
+    <description>Congressional trades aligned with committee assignments produce no abnormal returns before or after hearings.</description>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7679885</guid>
+  </item>
+  <item>
+    <title>One Basket, Many Experts: Decorrelated Re-ranking for Financial Asset Recommendation</title>
+    <link>https://arxiv.org/abs/2611.05952</link>
+    <description>Replacing a few recommendation slots with decorrelated assets improves risk-adjusted return at small relevance cost after trading costs.</description>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.05952</guid>
+  </item>
+  <item>
     <title>Thinking Fast, Trading Late: System One Decision Models vs the Market</title>
     <link>https://arxiv.org/abs/2611.03985</link>
     <description>Commercial LLM news signals predict overnight moves but not post-open returns.</description>
@@ -676,20 +711,6 @@
     <description>Annealed exploration alone eliminates policy collapse in this environment, making expert partitioning unnecessary, and within-policy tail risk rises monotonically with K.</description>
     <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2610.03369</guid>
-  </item>
-  <item>
-    <title>Silent Implementation Shortfall in LLM-Written Trading Code</title>
-    <link>https://www.ssrn.com/abstract=7555279</link>
-    <description>Frontier LLMs silently diverge from trading strategy intent on over a quarter of tasks.</description>
-    <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7555279</guid>
-  </item>
-  <item>
-    <title>Artifact Integrity Does Not Imply Temporal Integrity: Evaluating Evidence-Bound Gates for Financial Research Agents</title>
-    <link>https://www.ssrn.com/abstract=7563563</link>
-    <description>Financial artifacts with verified byte integrity can still contain temporally invalid information.</description>
-    <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7563563</guid>
   </item>
 </channel>
 </rss>

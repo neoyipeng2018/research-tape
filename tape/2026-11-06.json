@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-06",
+ "scanned": 16,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2611.06607",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.06607",
+   "title": "Hard to Fool: A Bounded LLM Research Loop for Quantitative Finance, and What Two Dozen Campaigns Found",
+   "claim": "Most LLM-generated trading hypotheses fail pre-registered gates despite strong discovery and validation metrics."
+  },
+  {
+   "key": "10.2139/ssrn.7679880",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7679880",
+   "title": "The Financial Impact of Non-Financial Beliefs in Large Language Models",
+   "claim": "LLM-driven analyst optimism about high-ESG firms lifts target prices but degrades earnings forecast accuracy."
+  },
+  {
+   "key": "2611.06476",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.06476",
+   "title": "The Alignment Tax Is Graded: Task-Selective Capability Loss Under Length-Normalized DPO with SFT Retention",
+   "claim": "Alignment tax under length-normalized DPO with SFT retention is task-selective, degrading router performance but sparing extraction."
+  },
+  {
+   "key": "10.2139/ssrn.7679885",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7679885",
+   "title": "The Illusion of Informed Congressional Trading: Evidence from Committee Networks and Hearings",
+   "claim": "Congressional trades aligned with committee assignments produce no abnormal returns before or after hearings."
+  },
+  {
+   "key": "2611.05952",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.05952",
+   "title": "One Basket, Many Experts: Decorrelated Re-ranking for Financial Asset Recommendation",
+   "claim": "Replacing a few recommendation slots with decorrelated assets improves risk-adjusted return at small relevance cost after trading costs."
+  }
+ ]
+}
