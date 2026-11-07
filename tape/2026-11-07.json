@@ -1,0 +1,16 @@
+{
+ "date": "2026-11-07",
+ "scanned": 11,
+ "lanes": [
+  "arXiv"
+ ],
+ "items": [
+  {
+   "key": "2611.07464",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.07464",
+   "title": "FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance",
+   "claim": "No agent passed FINCOSMOS even when the simulated user signed off on its strategy."
+  }
+ ]
+}
