@@ -656,26 +656,5 @@
     <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7587820</guid>
   </item>
-  <item>
-    <title>Do LLM Valuation Agents Read the Filing? Metamorphic Tests of Filing Fidelity on Korean Listed Firms</title>
-    <link>https://www.ssrn.com/abstract=7573358</link>
-    <description>Even with arithmetic delegated to Python, none of four preregistered primary hypotheses survives Holm correction across 150 Korean firms.</description>
-    <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7573358</guid>
-  </item>
-  <item>
-    <title>Look-ahead index membership and the relative accuracy of stock forecast</title>
-    <link>https://www.ssrn.com/abstract=7583847</link>
-    <description>Look-ahead index rosters bias forecast comparisons against ML models, shrinking the Nasdaq-100 ML advantage over small size by about 90%.</description>
-    <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7583847</guid>
-  </item>
-  <item>
-    <title>OOM-RL II: Reality Is an Oracle, Not a Debugger Provenance-Constrained Diagnosis in Continually Evolving Agent-Engineered Systems</title>
-    <link>https://arxiv.org/abs/2610.10256</link>
-    <description>External outcome feedback can constrain claims about a trading system&#x27;s returns but cannot identify which evolving procedure produced them without provenance binding.</description>
-    <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.10256</guid>
-  </item>
 </channel>
 </rss>
