@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Direction Instability in an LLM Evidence Synthesizer: A Pre-Registered Two-Wave Study of Recorded Trading Inputs</title>
+    <link>https://www.ssrn.com/abstract=7681837</link>
+    <description>At research weight 1.0, a temperature-zero hosted LLM flips consensus on about one-third of evenly divided evidence sets.</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7681837</guid>
+  </item>
+  <item>
+    <title>Does a Trading Policy Need to Know What It Trades? Microstructure Invariance and Zero-Shot Transfer of Execution Policies</title>
+    <link>https://arxiv.org/abs/2611.08701</link>
+    <description>Microstructure-invariant execution inputs beat raw features by under one basis point and fail to extrapolate to unseen spread regimes.</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.08701</guid>
+  </item>
+  <item>
+    <title>Track or Follow? A Jev-Compatible Multi-Agent Trading System When Web News Lags the Market</title>
+    <link>https://arxiv.org/abs/2611.10414</link>
+    <description>LLM news judgments correlate with post-announcement returns but the association vanishes from the first trade after publication.</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.10414</guid>
+  </item>
+  <item>
+    <title>DeepFinance: Can AI Diligence a $100MM Deal?</title>
+    <link>https://arxiv.org/abs/2611.10926</link>
+    <description>The top model satisfies only 57.6 percent of diligence rubric criteria and often acts on the wrong inputs.</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.10926</guid>
+  </item>
+  <item>
+    <title>Code-Paper Consistency in Economics and Finance</title>
+    <link>https://www.ssrn.com/abstract=7681378</link>
+    <description>Nearly half of sampled finance papers contain at least one potentially serious code-paper discrepancy in a central result.</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7681378</guid>
+  </item>
+  <item>
+    <title>Counsel ex Machina: The Value and Limits of AI Financial Advice</title>
+    <link>https://www.ssrn.com/abstract=7681824</link>
+    <description>Users place substantial weight on chatbot financial advice but suffer more behavioral bias under misleading framing.</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7681824</guid>
+  </item>
+  <item>
     <title>FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance</title>
     <link>https://arxiv.org/abs/2611.07464</link>
     <description>No agent passed FINCOSMOS even when the simulated user signed off on its strategy.</description>
@@ -627,13 +669,6 @@
     <description>On a synthetic confounded prior, a causal foundation model tracks the unbiased impact oracle, but transfer requires encoding metaorders as added flow.</description>
     <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2610.12537</guid>
-  </item>
-  <item>
-    <title>A Systematic Benchmark of Vector Stock Embeddings</title>
-    <link>https://www.ssrn.com/abstract=7591058</link>
-    <description>Stock embeddings decisively beat a leak-free raw-correlation baseline but tie or trail raw return series on sub-industry retrieval in idealised, full-survivor panels.</description>
-    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7591058</guid>
   </item>
 </channel>
 </rss>

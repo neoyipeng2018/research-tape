@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-10",
+ "scanned": 46,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7681837",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7681837",
+   "title": "Direction Instability in an LLM Evidence Synthesizer: A Pre-Registered Two-Wave Study of Recorded Trading Inputs",
+   "claim": "At research weight 1.0, a temperature-zero hosted LLM flips consensus on about one-third of evenly divided evidence sets."
+  },
+  {
+   "key": "2611.08701",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.08701",
+   "title": "Does a Trading Policy Need to Know What It Trades? Microstructure Invariance and Zero-Shot Transfer of Execution Policies",
+   "claim": "Microstructure-invariant execution inputs beat raw features by under one basis point and fail to extrapolate to unseen spread regimes."
+  },
+  {
+   "key": "2611.10414",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.10414",
+   "title": "Track or Follow? A Jev-Compatible Multi-Agent Trading System When Web News Lags the Market",
+   "claim": "LLM news judgments correlate with post-announcement returns but the association vanishes from the first trade after publication."
+  },
+  {
+   "key": "2611.10926",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.10926",
+   "title": "DeepFinance: Can AI Diligence a $100MM Deal?",
+   "claim": "The top model satisfies only 57.6 percent of diligence rubric criteria and often acts on the wrong inputs."
+  },
+  {
+   "key": "10.2139/ssrn.7681378",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7681378",
+   "title": "Code-Paper Consistency in Economics and Finance",
+   "claim": "Nearly half of sampled finance papers contain at least one potentially serious code-paper discrepancy in a central result."
+  },
+  {
+   "key": "10.2139/ssrn.7681824",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7681824",
+   "title": "Counsel ex Machina: The Value and Limits of AI Financial Advice",
+   "claim": "Users place substantial weight on chatbot financial advice but suffer more behavioral bias under misleading framing."
+  }
+ ]
+}
