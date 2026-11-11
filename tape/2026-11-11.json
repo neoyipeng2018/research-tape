@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-11",
+ "scanned": 23,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2611.12141",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.12141",
+   "title": "Do Time-Series Foundation Models Forecast Index-Futures Returns? A Preregistered Evaluation of Models, Metrics, and Input Representations",
+   "claim": "Zero-shot foundation models produce no incremental forecasting skill over no-change for intraday equity index futures."
+  },
+  {
+   "key": "2611.11657",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.11657",
+   "title": "Inside the Trading Loop: Markets, Models, and Moves with LLM Agents",
+   "claim": "LLM-analyst paper trading returned 34.5 percent versus 14.4 percent for SPY over the same period."
+  },
+  {
+   "key": "10.2139/ssrn.7682274",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7682274",
+   "title": "This Machine Picks Stocks",
+   "claim": "Decoupling prediction from expected-value trade selection produced positive short-term equity returns in out-of-sample backtests."
+  },
+  {
+   "key": "10.2139/ssrn.7684405",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7684405",
+   "title": "Headline AI Numbers Hide Disagreement: Grader Refusal, Contested Labels and Lost Verdicts in AI Safety and Financial Evaluation",
+   "claim": "Headline AI safety scores mask grader disagreement, with attack success estimates ranging from 9.8 to 49.0 percent."
+  },
+  {
+   "key": "2611.11436",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.11436",
+   "title": "Retrospective Analysis of Team-Following Trading Profitability in Pumpfun Meme Coins Using Funding Networks",
+   "claim": "Known-token-team following generated retrospective returns above one SOL in eight Pumpfun windows, conditional on hindsight selection."
+  },
+  {
+   "key": "2611.11588",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.11588",
+   "title": "FinCutBench: A Continually Updated Benchmark for Measuring the Temporal Boundaries of LLM Financial Knowledge",
+   "claim": "FinCut Boundary dates vary across models, and some models show clear relative declines in U.S. financial recall after the boundary."
+  }
+ ]
+}

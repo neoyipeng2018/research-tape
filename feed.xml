@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Do Time-Series Foundation Models Forecast Index-Futures Returns? A Preregistered Evaluation of Models, Metrics, and Input Representations</title>
+    <link>https://arxiv.org/abs/2611.12141</link>
+    <description>Zero-shot foundation models produce no incremental forecasting skill over no-change for intraday equity index futures.</description>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.12141</guid>
+  </item>
+  <item>
+    <title>Inside the Trading Loop: Markets, Models, and Moves with LLM Agents</title>
+    <link>https://arxiv.org/abs/2611.11657</link>
+    <description>LLM-analyst paper trading returned 34.5 percent versus 14.4 percent for SPY over the same period.</description>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.11657</guid>
+  </item>
+  <item>
+    <title>This Machine Picks Stocks</title>
+    <link>https://www.ssrn.com/abstract=7682274</link>
+    <description>Decoupling prediction from expected-value trade selection produced positive short-term equity returns in out-of-sample backtests.</description>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7682274</guid>
+  </item>
+  <item>
+    <title>Headline AI Numbers Hide Disagreement: Grader Refusal, Contested Labels and Lost Verdicts in AI Safety and Financial Evaluation</title>
+    <link>https://www.ssrn.com/abstract=7684405</link>
+    <description>Headline AI safety scores mask grader disagreement, with attack success estimates ranging from 9.8 to 49.0 percent.</description>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7684405</guid>
+  </item>
+  <item>
+    <title>Retrospective Analysis of Team-Following Trading Profitability in Pumpfun Meme Coins Using Funding Networks</title>
+    <link>https://arxiv.org/abs/2611.11436</link>
+    <description>Known-token-team following generated retrospective returns above one SOL in eight Pumpfun windows, conditional on hindsight selection.</description>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.11436</guid>
+  </item>
+  <item>
+    <title>FinCutBench: A Continually Updated Benchmark for Measuring the Temporal Boundaries of LLM Financial Knowledge</title>
+    <link>https://arxiv.org/abs/2611.11588</link>
+    <description>FinCut Boundary dates vary across models, and some models show clear relative declines in U.S. financial recall after the boundary.</description>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.11588</guid>
+  </item>
+  <item>
     <title>Direction Instability in an LLM Evidence Synthesizer: A Pre-Registered Two-Wave Study of Recorded Trading Inputs</title>
     <link>https://www.ssrn.com/abstract=7681837</link>
     <description>At research weight 1.0, a temperature-zero hosted LLM flips consensus on about one-third of evenly divided evidence sets.</description>

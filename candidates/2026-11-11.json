@@ -1,0 +1,232 @@
+[
+ {
+  "key": "2611.12141",
+  "source": "arXiv",
+  "title": "Do Time-Series Foundation Models Forecast Index-Futures Returns? A Preregistered Evaluation of Models, Metrics, and Input Representations",
+  "abstract": "We ask whether the apparent forecasting skill of frozen time-series foundation models (TSFMs) on intraday index-futures returns is incremental skill. In a pre-registered evaluation on E-mini Nasdaq-100 (NQ) and E-mini S&P 500 (ES) futures, a common panel of five zero-shot models (Chronos-Bolt, Chronos-2, TimesFM 2.5, Moirai 2.0 and TiRex), plus separate experiments with Kronos, is compared with a no-change forecast at 5-120 minutes, using native prices, log returns, volatility-standardised returns and a volume clock as inputs. On a blind set opened once, 0 of 160 model-representation-horizon-market cells beat no-change, and a Hansen SPA test gives p = 1.000 on both markets; a later retrospective hold-out, scored as a descriptive check, gives 0 of 120. Input representations change forecast magnitude but not accuracy, and a transformation-aware ridge regression does as well. Several standard measures nevertheless suggest skill. Price-level correlation exceeds 0.9996, but no-change scores higher. Within-day RankIC across forecast origins rewards a trivial revert-to-mean rule (+0.35 at 30 minutes); we derive the expected within-day covariance under a random walk in closed form, and a sign-randomised null reproduces about 95% of the observed value. One model beats HAR for 5-minute volatility, but not the EWMA its input already contains. On strongly planted synthetic signals the models recover part of the signal at 5 minutes, and recovery deteriorates at 30 minutes. Benchmark-level success of TSFMs should therefore not be assumed to carry over to low-signal domains such as intraday returns.",
+  "link": "https://arxiv.org/abs/2611.12141",
+  "score": 9,
+  "why": "Preregistered negative result: TSFMs fail to beat no-change.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.11657",
+  "source": "arXiv",
+  "title": "Inside the Trading Loop: Markets, Models, and Moves with LLM Agents",
+  "abstract": "We built a hybrid multi-agent trading system that combines large language model (LLM) analysts with momentum-based portfolio construction and rule-based execution. Company-news and macroeconomic agents return structured reports to a coordinator that sets stock weights and cash reserves. We evaluate the portfolio engine using its broker-recorded paper account, which operated with deterministic fallbacks, and compare LLM-enabled configurations through retrospective replays. From March 11 to August 28, 2026, the account returned 34.5%, compared with 14.4% for the S&P 500 fund SPY over the same dates. This raw return advantage came with a larger maximum drawdown. Reconstructed policies also finish above matched SPY and QQQ references when assessments are used in the same session or deferred to the next. Design comparisons examine cash authority, selective invocation, and response contracts. A constant-cash control gives a return estimate close to stance-based sizing, and shorter report contracts improve observed parsing but can change recommendations.",
+  "link": "https://arxiv.org/abs/2611.11657",
+  "score": 8,
+  "why": "LLM agent trading; broker paper account beats SPY",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7682274",
+  "source": "SSRN",
+  "title": "This Machine Picks Stocks",
+  "abstract": "Accurate prediction alone does not guarantee profitable trading. We investigate a framework for short-term equity selection in which predictive modeling is explicitly separated from economic decision-making. Large language models (LLMs) are used to encode public-domain news, technical indicators, and fundamental information for companies in the S&P 500 universe. The resulting directional predictions are evaluated through an expected-value (EV) decision layer that estimates the economic upside potential of candidate trades using empirically observed gains, losses, and prediction reliability. Trade selection is thus determined by estimated economic value rather than predictive accuracy alone. The framework is evaluated through sequential, temporally ordered out-of-sample backtests, including comparisons of alternative information modalities and analyses of trade-level and portfolio-level performance. Results demonstrate substantial positive returns across multiple model configurations, with performance persisting over an extended evaluation period. Although these findings are encouraging, the unusually large historical returns warrant caution, particularly regarding backtest overfitting and generalization to prospective trading. The study illustrates the potential value of decoupling predictive inference from economically motivated trade selection.",
+  "link": "https://www.ssrn.com/abstract=7682274",
+  "score": 7,
+  "why": "LLM S&P 500 picker; EV layer, out-of-sample tests",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7684405",
+  "source": "SSRN",
+  "title": "Headline AI Numbers Hide Disagreement: Grader Refusal, Contested Labels and Lost Verdicts in AI Safety and Financial Evaluation",
+  "abstract": "Decisions about artificial intelligence systems increasingly rest on single numbers, and each rests on three things that are seldom checked together: the human labels it is scored against, the AI grader that produces the verdicts, and the code that reads the grader's reply. This paper evaluates all three, which is to say it conducts a meta-evaluation that also checks the reference. On JailbreakBench, ten graders put the attack success rate anywhere between 9.8% and 49.0% against a human majority of 36.7%. Claude Opus 5.5 declines to grade 71% of its calls on the attempts humans judged successful against 20% on the rest, its refusal rate rises with each additional rater who called an item harmful on both a jailbreak and a violence dataset, and the pattern survives changes to the grader's framing; counting only what it grades places attack success at 7.6%. Where human raters themselves disagree, JailbreakBench's chosen judge and a shipped safety scorer do no better than a constant answer. Auditing sixteen handling rules across twelve evaluation tools and benchmarks, we find missing verdicts silently scored as safe, as failures, as maxima or dropped, and we set out a reporting standard, parts of which now ship in Microsoft's PyRIT. Joining the three, an uncertainty budget shows that the sampling error bar covers about a sixth of the full band around Opus's headline, with missing verdicts the largest share where a grader refuses often and the contested reference the largest where it seldom refuses, as on a third dataset in which 123 people rated each conversation. Sovereign credit ratings and Shariah screening show the same structure in finance. We therefore argue for a unified meta-evaluation, one that treats the human reference, the grader and the code that reads it as a single measurement problem and reports one uncertainty for the headline in place of three separate caveats.",
+  "link": "https://www.ssrn.com/abstract=7684405",
+  "score": 7,
+  "why": "Meta-evaluation of AI graders; tests financial eval reliability.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.11436",
+  "source": "arXiv",
+  "title": "Retrospective Analysis of Team-Following Trading Profitability in Pumpfun Meme Coins Using Funding Networks",
+  "abstract": "If the right token-creation teams had been known, how much could following them have returned, and what is left when only information available before each launch is used? We study ten separately recorded Pumpfun windows (April 2024 to September 2026), each reconstructed independently from real-SOL reserve states and finite-capital accounts that start with one SOL. Teams are directed funding groups ranked in hindsight. When every team exits at its own best reserve threshold, chosen in hindsight, the main account ends above one SOL in all 8 windows that have a qualifying team (1.10 to 11.32 SOL), but free cash exceeds one SOL in only 5, and marks of positions that never reached their threshold make up 17--94% of equity. If teams are recognised online, from tokens whose first hour has completed, 9 of 19 teams become identifiable only after their last launch; the remaining 10 end above one SOL in 10 cases, with free cash above one SOL in 7; funding links in this step still come from the full window, so even these results are not a fully realisable signal. A large model balance, a result above random cohorts that repeat the threshold search, and a statistical rejection in the selection-matched nulls (3 of 40 tests after Holm adjustment) are three different statements, and these nulls condition on the discovered funding graph, so they do not calibrate the whole selection procedure. Midpoint tests describe a further source of apparent opportunity. A detailed analysis of the best and the worst window, with every analysis parameter varied, shows that the worst result, which is close to break-even, rises several-fold with a stop rule or another funding-graph construction. The results are conditional retrospective model accounts, not executable profits, and not evidence of a causal effect of the SOL price.",
+  "link": "https://arxiv.org/abs/2611.11436",
+  "score": 7,
+  "why": "Pumpfun on-chain funding networks; real trades, hindsight vs online.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.11588",
+  "source": "arXiv",
+  "title": "FinCutBench: A Continually Updated Benchmark for Measuring the Temporal Boundaries of LLM Financial Knowledge",
+  "abstract": "In financial backtesting and other point-in-time tasks, external inputs can be restricted by date, but model parameters may retain financial facts disclosed later, introducing parametric look-ahead bias. We introduce FinCutBench, a continually updated monthly financial knowledge benchmark for measuring how far a fixed model's financial knowledge extends over calendar time. The current dataset contains 9,000 Chinese and English four-option multiple-choice questions from January 2023 to September 2026, covering Chinese and U.S. markets and four categories of financial information. We construct monthly knowledge profiles using the approximate months in which the tested facts became public. After a profile passes the decline test and knot checks, we define the FinCut Boundary as the first month when the fitted profile reaches its lower level, and report the stability of the estimated date under resampling. Boundary dates and localization precision vary across models. Using the independently measured Transition Start and Boundary as fixed references for downstream sample grouping, we find clear relative declines after the Boundary in U.S. asset ranking and earnings recall for some models, while Chinese-market ranking estimates vary across models and all eight disclosure-period-paired forecast-error comparisons have unadjusted $p$ values above 0.10. The FinCut Boundary thus provides an empirical reference for the temporal scope of parametric knowledge in point-in-time financial evaluation, supporting evaluation-window selection and result interpretation.",
+  "link": "https://arxiv.org/abs/2611.11588",
+  "score": 7,
+  "why": "LLM financial knowledge cutoff benchmark; look-ahead bias",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.10972",
+  "source": "arXiv",
+  "title": "JUBILEE: A Benchmark Environment for Off-Policy Evaluation in Debt Collections",
+  "abstract": "Off-policy evaluation (OPE) estimates the value a candidate decision policy would achieve, using only data logged by the policy already in production. In debt collections, unrecorded factors can influence both actions and outcomes. This paper presents JUBILEE, a benchmark environment built around a debt-collections simulator that generates million-loan panels with competing risks, rare recovery events, and hidden factors driving both outcomes and assignment. The evaluation includes an 80-run comparison of tabular and gradient-boosted estimators under two synthetic outcome mechanisms and a 190-run parameter grid. Independent policy simulations provide reference values with estimated Monte Carlo uncertainty for a synthetic reward score and for simulated cash. With hidden factors influencing action assignment, several tabular methods agree closely while underestimating the field-visit policy's score, an error that also appears with boosted models. Intervals from tabular doubly robust estimation usually contain the reference without hidden assignment dependence but mostly miss it when that dependence is present. Estimates from randomized decisions do not show the same large error, although their limited precision leaves policy choice uncertain. The decision consequences depend on how policy value is defined. The field-visit policy ranks last under the score and first under simulated cash, which excludes channel costs. Under cash, log-based estimators miss this best candidate in nearly every run with hidden assignment dependence in the paired study. JUBILEE supports reproducible study of these failure modes under specified collections mechanisms.",
+  "link": "https://arxiv.org/abs/2611.10972",
+  "score": 6,
+  "why": "OPE benchmark for debt collections; synthetic simulator.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7681368",
+  "source": "SSRN",
+  "title": "Machine Learning, Market Volatility, and the Changing Dynamics of Risk",
+  "abstract": "This study examines how machine-learning and econometric models forecast short-horizon volatility in the Indian equity market, using 2,300 daily NIFTY 50 observations from 19 August 2016 to 16 December 2025. The target is the square root of the sum of the next five squared daily percentage log returns, a daily-data proxy that is not intraday realized volatility. A rolling 20-session benchmark, GARCH(1,1), Random Forest and XGBoost are compared in a chronological design with purged split boundaries and a 345-observation test set (30 July 2024 to 16 December 2025). Random Forest records the lowest test MAE (0.530), RMSE (0.730) and QLIKE (0.361), followed by XGBoost, but HAC and block-bootstrap loss comparisons support only one result after Holm correction: Random Forest has lower absolute error than GARCH(1,1). In an expanding-window walk-forward check, the ML advantage in MAE and RMSE persists while GARCH(1,1) attains the lowest QLIKE. In the 36 test observations above the training 75th-percentile threshold, ML models do not beat GARCH on QLIKE and no model is reliably better. A hidden Markov model with real-time filtered probabilities separates a persistent high-volatility state, and a three-class forward-return classifier is only modestly above chance in balanced accuracy and is treated as exploratory. The evidence does not show that machine learning universally outperforms econometric benchmarks.",
+  "link": "https://www.ssrn.com/abstract=7681368",
+  "score": 5,
+  "why": "Volatility ML beats GARCH only on MAE; single-market India.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.12389",
+  "source": "arXiv",
+  "title": "Diversification Across Predictors: Heterogeneous Ensemble Learning for Cross-Sectional Return Prediction",
+  "abstract": "Cross-sectional stock return prediction remains challenging due to extremely low signal-to-noise ratios, high-dimensional factor spaces, and non-stationary predictor effectiveness. Individual model classes exhibit complementary failure modes in this regime: neural networks overfit noise due to high variance, while linear models underfit nonlinear structure due to high bias. We propose a heterogeneous ensemble framework that extends the financial principle of diversification to the predictor level. Through a bagging procedure combining linear predictors with nonlinear predictors, each model functions as a distinct specialist whose prediction errors exhibit low cross-covariance, enabling error cancellation upon aggregation. We formalize this mechanism via bias-variance-covariance decomposition, establishing an exact mathematical correspondence between portfolio diversification and predictor aggregation. On CSI300 daily-frequency Alpha158 factor datasets, the proposed ensemble achieves a Rank IC improvement exceeding 13\\% over standalone neural networks and surpasses tree-based state-of-the-art methods including XGBoost and Double Ensemble, as measured by both predictive accuracy and portfolio-based evaluation metrics.",
+  "link": "https://arxiv.org/abs/2611.12389",
+  "score": 5,
+  "why": "Heterogeneous ensemble for return prediction; no costs/OOS detail.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7684118",
+  "source": "SSRN",
+  "title": "Clouds of Credit: Mapping the Financial Web Behind AI Compute",
+  "abstract": "We map the financial network supporting the AI buildout. Substantial equity cushions protect creditors against large obligations outstanding in mid-2026, but concentrated exposures and interconnected claims create weak links. Our calibrated model supports a large compute expansion in the coming years. The equilibrium investment exceeds the social optimum because firms do not internalize their effects on competitors' revenues. Debt finances nearly 60% of the expansion, increasing leverage, while non-recourse borrowing leaves project lenders exposed despite equity buffers. In the low-productivity state, losses reach $16.87 trillion across shareholders and creditors. Suppressing contractual payment spillovers among the key firms reduces private losses by approximately 30%, revealing substantial network propagation.",
+  "link": "https://www.ssrn.com/abstract=7684118",
+  "score": 4,
+  "why": "AI compute credit network; not trading signal",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.11373",
+  "source": "arXiv",
+  "title": "Optimal execution in a fractional setting with reinforcement learning",
+  "abstract": "We consider the problem of optimal liquidation with linear market impact, as in the seminal work of Almgren and Chriss, but with an asset driven by a fractional Brownian motion. For $H \\neq 1/2$, we observe that the deterministic solution given by Almgren and Chriss is no longer optimal. We develop a strategy to exploit the information induced by the correlation between price increments. The strategy is derived from a policy gradient algorithm, parameterized by a neural network, trained to maximise the CARA utility, for which our method allows for significant improvements.",
+  "link": "https://arxiv.org/abs/2611.11373",
+  "score": 4,
+  "why": "Fractional Brownian RL execution; no real data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.11803",
+  "source": "arXiv",
+  "title": "Diversified-Risk-Perception Risk Measures and Portfolio Selection",
+  "abstract": "Traditional risk measures generally rely on a single probability model, potentially overlooking information from alternative models and leading to biased risk assessments. This limitation cannot be addressed by asset diversification alone in risk management. In this paper, we propose a Diversified-Risk-Perception (DRP) risk measure framework that integrates asset diversification and risk model diversification to provide a more comprehensive assessment of market risk while reducing reliance on any single model. First, we introduce a flexible exponential aggregation function to evaluate the risk of a portfolio, which accounts for the contributions of all loss components while placing greater emphasis on large losses. Second, we incorporate multiple risk models in the risk measure and optimize their weights based on their perceptions on the risk assessments. As a specific example, we introduce DRP expected shortfall (DRP-ES), establish its theoretical properties, and derive bounds quantifying its sensitivity to model parameters. Empirical experiments in the U.S., Chinese A-share, and South Korean stock markets show that trading strategies based on the DRP-ES achieve higher Sharpe ratios and lower maximum drawdowns than market benchmarks across different periods. Compared with asset diversification strategies based on individual probability models, the DRP strategy exhibits more stable and robust performance across different markets and periods. These findings suggest that the DRP framework can adapt to changing market conditions and improve the stability and effectiveness of portfolio risk management.",
+  "link": "https://arxiv.org/abs/2611.11803",
+  "score": 4,
+  "why": "Multi-model risk measure; theory no data or OOS",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683635",
+  "source": "SSRN",
+  "title": "Human Capital in Context: What Employment Survival Reveals About Worker-Firm Match *",
+  "abstract": "There is no best worker in general, only a best worker for a particular firm. We develop a measure of worker-firm match quality that treats fit as a property of the pair, learned from the survival of employment relationships. A two-tower neural network embeds workers, from their career histories and current positions, and firms, from their characteristics and business descriptions, into a common space, and match quality is the cosine similarity of the two vectors. The measure takes its functional form from the skill-weights model of firm-specific human capital, and its only estimated objective, a separation hazard, from the view of the job match as an experience good. Estimated on more than a billion person-periods covering 101 million workers and 8.4 million firms, a 0.1 increase in match quality lowers the odds of separation by 48%. About a quarter of the variance of match quality is specific to the worker-firm pair, which worker-, firm-, and occupation-level measures set to zero by construction. Workers earn more when better matched, especially early in a relationship, and firms whose workforces score higher grow faster, become more profitable, and are issued more, and more valuable, patents over the next five years than their industry peers. Because it scores pairs that never formed, the measure also predicts where movers go, and acquirers record a larger share of the price as goodwill when the target's workers would fit the acquirer better than they fit the target.",
+  "link": "https://www.ssrn.com/abstract=7683635",
+  "score": 3,
+  "why": "Worker-firm match embedding; labor, not finance.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.12293",
+  "source": "arXiv",
+  "title": "Depth as a Candidate Source: Portfolio Allocation for Recurrent Test-Time Scaling in Large Language Models",
+  "abstract": "Recurrent latent reasoning in large lanugage models (LLMs) scales test-time computation by increasing recurrent depth, naturally framing inference as a problem of deciding when to stop. We identify a previously overlooked limitation of this single-depth view through systematic preliminary analysis: deeper recurrence can lose correct solutions found at shallower depths, while depth-specific success sets remain broadly non-nested even after controlling for marginal accuracy. This suggests that depth determines not only computation cost, but also access to distinct candidate solutions. Motivated by this finding, we propose Depth Portfolio Allocation (DPA), which reformulates recurrent test-time scaling as budgeted allocation across depth-specific candidate sources. DPA supports both fixed portfolios and feedback-guided sequential allocation under a shared inference budget. Experiments on GSM8K, SVAMP, MultiArith, and MBPP show that mixed-depth portfolios expand oracle coverage under matched candidate counts and nominal costs, while feedback-guided allocation generally matches or improves uniform allocation and can reduce computation in high-budget settings. Code and data are avaible at : https://anonymous.4open.science/r/LLM-latent-B7BC/.",
+  "link": "https://arxiv.org/abs/2611.12293",
+  "score": 3,
+  "why": "Test-time depth scaling, not finance",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7682038",
+  "source": "SSRN",
+  "title": "Who Decides Who Is Insurable? Data Governance of Flood Insurance Underwriting in Ireland",
+  "abstract": "About one in twenty buildings in Ireland has limited or no access to flood insurance, and the gap is expected to widen as climate change brings heavier rainfall and more frequent storms. Whether a home can be insured is not decided by public flood maps but by insurers' own data, address-and property-level geocoding and private flood models, which homeowners cannot see or challenge. These decisions can affect the value of a home, its owner's ability to recover from a flood, and possibly access to mortgage credit. This paper examines how the data behind flood insurance underwriting in Ireland is governed. We map the data lifecycle from collection to cover decision and find that governance is strongest where data is public and weakest where decisions are made: no binding rule requires insurers to use, disclose or explain their flood models, the Central Bank has no remit over pricing, and the EU AI Act does not class property insurance as high-risk. We then analyse the privacy questions raised under the GDPR, including whether a model-driven refusal is an automated decision after the CJEU's SCHUFA ruling, and the ethical tension between risk-based pricing and solidarity, including the risk that location variables act as proxies for income. We propose six measures: a public flood-risk data platform, a right to an explanation and appeal, fairness audits, flood-risk certificates, two-way data sharing, and transparency conditions on any state-backed fund. Each is linked to Sustainable",
+  "link": "https://www.ssrn.com/abstract=7682038",
+  "score": 2,
+  "why": "Irish flood insurance governance; no finance ML.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7682318",
+  "source": "SSRN",
+  "title": "Optimal Cache Duration and Pricing for Large Language Model Serving",
+  "abstract": "Large language model systems retain a conversation's key-value cache between request arrivals to avoid recomputing the conversation history. Choosing the cache duration requires balancing recomputation costs against the use of scarce GPU memory. We develop a stochastic optimization framework that treats cache duration as both an operational control and a priced service attribute. We first derive the unique cost-minimizing duration in closed form for a single conversation. For multiple conversations sharing memory, we characterize the steady-state cache usage underlying the operating cost and show that the cost-minimizing duration remains unique. Since the optimal duration depends on the full steady-state distribution, we develop a mean-based surrogate with a closed-form solution and prove that it is asymptotically optimal as the conversation arrival rate and memory capacity scale up proportionally. We also study paid duration extensions beyond a free default. In the single-conversation model and the multiple-conversation surrogate, we identify conditions under which the paid duration can be optimized independently of the price. We further show that the profit-maximizing default duration never exceeds the corresponding cost-minimizing duration, revealing an incentive to limit free service to increase users' willingness to pay for the extension.",
+  "link": "https://www.ssrn.com/abstract=7682318",
+  "score": 2,
+  "why": "LLM cache serving, not finance",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683648",
+  "source": "SSRN",
+  "title": "Measuring to Coordinate: Counterfactual Human-Baseline Workload Accounting for Communication and Coordination in Cross-Border Human-AI Teams",
+  "abstract": "When a single founder directs more than twenty semi-autonomous project lines-most of them AI agents, the rest human collaborators-across three time zones, the organisation's work becomes invisible in three ways at once: no native metric makes the output of a human lawyer-hour, an AI research run, and an overnight monitoring watch commensurable; progress is self-reported and therefore unauditable; and coordination depends on the founder's memory of who owes what by when. This paper reports the design and early operation of a management system built to solve all three problems with one instrument. Its core is a counterfactual human baseline: every completed work item, whether produced by a person, an AI agent, or both, is converted into the hours a skilled human would have needed without generative AI, using type-specific benchmark ranges. Progress is never reported; it is measured, as the difference between daily snapshots of milestone-weighted project states. Capacity baselines recalibrate nightly on a rolling seven-window mean, and saturation bands convert measurement directly into next-day dispatch orders, which are written off the following evening in a closed plan-do-check-act loop. In the first audited 24-hour window the system recorded 578.5 counterfactual person-hours-roughly 72 full-time-equivalent staff-produced by an organisation with one principal. We argue the system's larger contribution is coordinative rather than metrological: a shared unit, a shared daily rhythm, and a shared ledger give a cross-border, asynchronous, human-AI team the common ground that co-location and hierarchy normally supply.",
+  "link": "https://www.ssrn.com/abstract=7683648",
+  "score": 2,
+  "why": "Human-AI team workload system; off-topic.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683739",
+  "source": "SSRN",
+  "title": "Large Language Models in Asset Pricing: A Literature Review",
+  "abstract": "This literature review examines the use of large language models (LLMs) in asset pricing. The main focus is on text-based applications, where LLMs transform financial text such as news, earnings calls, corporate disclosures, fund reports, macroeconomic communication, and climate-related narratives into quantitative signals related to returns, risk, fundamentals, and investor beliefs. The review first places LLMs within the longer history of text analysis in finance and the broader development of artificial intelligence and machine learning in empirical asset pricing. It then reviews the main LLM applications in asset pricing, including news-based return prediction, earnings calls and disclosures, corporate policies, ESG and climate risk, fund-manager beliefs, bonds, options, foreign exchange, and emerging LLM-agent systems. The review also discusses limitations such as look-ahead bias, training-data leakage, prompt sensitivity, model instability, limited interpretability, transaction costs, and the need for realistic out-of-sample evaluation. Finally, the review discusses research gaps and future directions for using LLMs in asset pricing.",
+  "link": "https://www.ssrn.com/abstract=7683739",
+  "score": 2,
+  "why": "LLM asset pricing literature review; rejected genre",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.11652",
+  "source": "arXiv",
+  "title": "Adjoint Kernel Sensitivity of the Rough Heston Characteristic Exponent",
+  "abstract": "Multi-factor approximations of rough volatility kernels affect the characteristic exponents used in Fourier-based derivative valuation. We derive an adjoint representation for the first-order sensitivity of the rough Heston characteristic exponent with respect to its memory kernel, with model parameters and the input variance curve held fixed. The Volterra--Riccati functional $\\mathcal L_T(K,z)$ admits a local real-analytic extension, jointly in the kernel perturbation and the transform parameter. The Fréchet derivative of this extension with respect to the kernel in $L^1$ is represented by integration against a continuous sensitivity kernel $B_K(u,z)$, obtained from a backward linear Volterra equation and independent of the perturbation direction. This representation resolves the leading-order contributions of kernel perturbations across memory lags. On the structural kernel class, which contains the fractional kernel and its multi-factor approximations and has empty interior in $L^1$, the extension yields Hadamard directional differentiability and a first-order expansion with a quadratic $L^1$-remainder for all sufficiently close structural kernels, uniformly on compact subsets of the strip of transform parameters. The same sensitivity kernel yields multi-factor weight and decay-rate derivatives. Numerical experiments at multi-factor reference kernels assess the finite-resolution implementation and illustrate how the lag distribution of positive perturbations with equal $L^1$ mass affects the first-order response.",
+  "link": "https://arxiv.org/abs/2611.11652",
+  "score": 2,
+  "why": "Rough Heston kernel sensitivity; pure theory no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.12059",
+  "source": "arXiv",
+  "title": "A Black-Box Reduction from Regret to Multi-Level Coverage",
+  "abstract": "Online Conformal Prediction (OCP) sequentially constructs prediction sets whose average empirical coverage converges to a target level over time, for arbitrary, potentially adversarial datasets. In the multi-level setting, prediction sets are produced at $d$ coverage levels at once. Prior work argued for the use of online gradient descent with isotonic projections, which produces sets nested across levels, but with a $\\sqrt{d}$ dependence in the per-level coverage convergence rate. Here, we both generalize and improve prior work. First, we show that isotonic projections can be used for the construction of multi-level online conformal prediction sets from \\emph{any} online learning algorithm (not just gradient descent). Then, through a black-box reduction, we show that the linearized regret of the online algorithm itself automatically gives control over both per-level coverage and distributional consistency of multi-level predictions via Fenchel duality. Finally, by using the Weighted Interval Score, a standard scoring rule for assessing multi-level interval forecasts, we prove that these projections reduce both the size of the sets and their under-coverage. We study two instantiations of our theory, $p$-norm Online Mirror Descent and coordinate-wise Universal Portfolio methods, both improving the dependence on the number of levels to $\\sqrt{\\log d}$ for the multi-level OCP problem. Experiments on several datasets show favorable performance compared to baselines.",
+  "link": "https://arxiv.org/abs/2611.12059",
+  "score": 2,
+  "why": "Conformal prediction theory; no finance content.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683279",
+  "source": "SSRN",
+  "title": "Algorithmic Pricing and Antitrust Policy",
+  "abstract": "This article addresses the conditions under which coordination using pricing algorithms constitutes an agreement sufficient to trigger Sherman Act liability under Section 1. We define the algorithms at issue, including those described as artificial intelligence, and identify their limitations. The traditional framework from Monsanto and Matsushita requires circumstantial evidence that \"tends to exclude\" independent action, and courts supplement parallel conduct with \"plus factors.\" Recent cases against RealPage, Agri Stats, and Amazon, concerning its Project Nessie algorithm, test how these standards apply to algorithmic pricing. Courts have given different weight to adherence to algorithmic recommendations. We argue that adherence is a matter of degree. The weight of an algorithmic information exchange as a plus factor depends on the sensitivity of the data and on reciprocity. We identify the conditions under which algorithmic pricing is not a Section 1 concern. The decision of the FTC to proceed under Section 5 in the Amazon case illustrates conduct that may fall outside Section 1.",
+  "link": "https://www.ssrn.com/abstract=7683279",
+  "score": 1,
+  "why": "Antitrust algorithmic pricing law; off-topic",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683330",
+  "source": "SSRN",
+  "title": "The SAVI Capital Model™ under RIGI: Deployment Before Statute. A Private Equity Fund under Argentina's Régimen de Incentivo para Grandes Inversiones: the Vehicle, the Investors, the First Tranche and the Law to Come",
+  "abstract": "On November 2, 2026 Argentina's RIGI register held 27 approved projects for USD 76,173 million, 96.9% of it in oil, gas and mining, and none of their vehicles is owned by a fund. The regime's floor is USD 200 million per project under Ley 27.742 art. 173, the one reduction on the record took offshore oil and gas from USD 600 million to that floor by Decreto 105/2026, and the window for new adhesions closes on July 8, 2027. This paper argues that a regime written for capital-only megaprojects can host The SAVI Capital Model today, through the charter of each vehicle, the plan each company adopts for its workforce and the fund documents that bind them, and that the price is paid by the investor in a known amount. Of each USD 100 of profit before the Human Capital Pool, the Model shareholder keeps 35.74 in the paper's base case, with the Pool's deduction disallowed and social-security contributions charged on the whole of it, the workforce's half carrying its own charges, against 69.75 in a conventional RIGI company; every saving against that base is shared equally between the workforce's gross Pool and the shareholder's net income. On a USD 300 million fund of three vehicles exited in year 10, the limited partners receive 2.02x and 9.0% against 2.80x and 14.0%, on a waterfall without a catch-up. Two terms sit under that row with the fifty-fifty on profit untouched: a commercial class paid first to a stated return of 10.0% or 12.0% while a catalytic class receives 8.1% or 5.8%, and a Minimum Return to Capital of 2.0 times invested equity at the exit (Tables F3 and F1c). The paper designs the Fund's vehicles for capital from the United States, the European Union and the United Arab Emirates, with no Argentine holding between them and any vehicle, sets the first tranche inside the calendar across three tracks, governs the AI systems inside each company ahead of any law, reads the Súper RIGI and the RIIR as the bills they are, and names what would make it wrong; The SAVI Group offers the design, names no manager, and promises no return.",
+  "link": "https://www.ssrn.com/abstract=7683330",
+  "score": 1,
+  "why": "Argentina PE fund legal structure; off-topic",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.12880",
+  "source": "arXiv",
+  "title": "Kolmogorov-Chapman Maps: Trajectory-Free Learning for Simulating Molecular Dynamics",
+  "abstract": "Stochastic differential equations (SDEs) describe stochastic processes across a wide range of scientific domains, including physics, biology, and finance. Although individual numerical integration steps are inexpensive, observing meaningful events or transitions can require millions of sequential steps, resulting in substantial wall-clock simulation time and poor hardware utilization. Deep learning offers an alternative by amortizing many integration steps into a single neural network forward pass, potentially enabling much faster simulation. However, existing supervised approaches typically require long simulated trajectory data, which restricts their applicability. In this work, we introduce Kolmogorov-Chapman Maps (KC-Maps), a method for learning the transition kernel of an SDE that relies only on the trajectory-free marginal samples together with the known drift and diffusion coefficients. Given an initial time and state of a process, KC-Maps models its distribution integrated to any given time, corresponding to the weak solution of the SDE. To recover the correct dynamics, KC-Maps satisfies two key properties: (i) it satisfies the boundary conditions, which we incorporate directly into the neural network architecture, and (ii) it respects the Kolmogorov--Chapman equation, which provides an efficient training objective. We empirically demonstrate that KC-Maps learns to integrate the dynamics of peptide molecular systems and outperforms classical molecular dynamics in terms of GPU-hours.",
+  "link": "https://arxiv.org/abs/2611.12880",
+  "score": 1,
+  "why": "Molecular dynamics SDE; finance mentioned only",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
