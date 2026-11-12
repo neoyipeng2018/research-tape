@@ -1,0 +1,232 @@
+[
+ {
+  "key": "2611.12966",
+  "source": "arXiv",
+  "title": "BuySideFlow: A Point-in-Time Benchmark for LLM Agents in Investment Research",
+  "abstract": "Large language models (LLMs) can generate SQL and SQL--Python workflows for investment research, but ensuring point-in-time (PIT) validity remains challenging. Agents must enforce disclosure cutoffs and select the appropriate historical states and record versions throughout data retrieval and financial analysis. We introduce \\textsc{BuySideFlow}, a benchmark of 408 practitioner-derived Chinese-language tasks spanning equities, funds, fixed income, and macroeconomics over a fixed snapshot from a licensed production financial database. We provide executable references and a taxonomy of temporal errors, pairing result checks with expert audits of executed workflows. We evaluate nine agent configurations on all tasks, with result accuracy ranging from 16.2\\% to 36.8\\%. An audit of 900 runs on 100 shared tasks confirms PIT violations in 193 of the 380 runs that pass result checks (50.8\\%), showing that output agreement alone does not establish temporal validity.",
+  "link": "https://arxiv.org/abs/2611.12966",
+  "score": 9,
+  "why": "LLM agent benchmark, PIT audits, real investment tasks",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.14325",
+  "source": "arXiv",
+  "title": "Point-in-Time Encoders for Earnings Calls",
+  "abstract": "Text encoders turn earnings calls into vectors for search, for language models that answer from retrieved passages, and for forecasting models. A live retriever can use an encoder trained once on all available text, as finance retrievers are, but a backtest needs an encoder that read no text written after the date of each vector. To address this look-ahead bias, from 412,248 calls we train vintages under four pretraining recipes, with yearly cutoffs from 2010 to 2024, and each vintage reads only text dated on or before its cutoff. We then fine-tune each vintage on the question-answer pairs of the calls themselves. The vintages we train on calls alone, with 33.8M parameters, retrieve answers on held-out calls better than the general retrievers we tested in every test quarter. Their vectors also raise by about half the rank correlation between next-day returns and forecasts built from past returns and firm size. When each vintage continues the previous one, a later vintage retrieves better on earlier quarters than the vintage available at the time, and a point-in-time language model that answers from the passages the later vintage retrieves inherits the gain. The 2024 vintage of our families also forecasts earnings surprises better, although the interval of this gain includes zero on calls that no vintage read. It forecasts returns no better, so point-in-time vintages matter most for retrieval and little for forecasts of returns.",
+  "link": "https://arxiv.org/abs/2611.14325",
+  "score": 9,
+  "why": "PIT earnings-call encoders, look-ahead bias addressed",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683171",
+  "source": "SSRN",
+  "title": "How Much Sustainability is Really in Stock Prices?",
+  "abstract": "We find no robust evidence that sustainability information predicts stock returns. Machine learning on 22 environmental characteristics from four providers predicts neither returns nor their component orthogonal to 45 conventional firm characteristics. The same protocol recovers the known predictability of conventional characteristics, and the sustainability models' confidence intervals exclude Sharpe ratios above half of that benchmark. Replicating the green-minus-brown evidence of Pástor, Stambaugh, and Taylor (2022), we show that its significance as a return predictor hinges on sample period, universe, sort granularity, and prediction target. Across 132 models that vary variables, sample period, and prediction target, none survives multiple-testing corrections.",
+  "link": "https://www.ssrn.com/abstract=7683171",
+  "score": 8,
+  "why": "Negative result, failed replication, strict multiple-testing",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.13616",
+  "source": "arXiv",
+  "title": "Optimal Trading Speed on Blockchain",
+  "abstract": "On blockchain-based exchanges, faster blocks weaken the priority-fee competition among arbitrageurs and shift rents from the block producer to them. Equilibrium liquidity peaks at an interior block speed; beyond a threshold, an active liquidity provider cream-skims and passive capital shrinks. Evidence from the Base Flashblocks upgrade, a tenfold block-speed increase, confirms the predictions. Priority-fee bids decrease sharply and arbitrageurs' net profit rises. The active liquidity provider rebalances faster, avoids toxic flow, and earns a higher profit. Pool depth falls and effective spreads widen despite closer tracking of external prices.",
+  "link": "https://arxiv.org/abs/2611.13616",
+  "score": 8,
+  "why": "Blockchain execution speed, Base Flashblocks empirical evidence",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.14117",
+  "source": "arXiv",
+  "title": "Fine-Tuning an Order-Flow Foundation Model for Sub-Second Forecasting",
+  "abstract": "Generative models have become the standard approach in language and vision. These models are typically pretrained first and then fine-tuned. Recent work demonstrates how to pretrain an autoregressive generative model on Level-3 order-flow data. However, to our knowledge, no one has fine-tuned such a model yet for downstream tasks. Here we first pretrain a 300M-parameter generative model on Level-3 order-flow data collected from two crypto exchanges, Bitstamp and Bitfinex. Then we fine-tune the pretrained model to predict the microprice return and its realized volatility. We show that our fine-tuned model outperforms classical baselines, such as gradient boosting on handcrafted features, in predicting microprice returns over sub-second horizons. Furthermore, the predictive ability of the model transfers zero-shot to assets it was never fine-tuned on. Due to the short-term nature of these forecasts, the predicted microprice moves are smaller than the bid-ask spread plus fees, so the natural applications are in execution and market making. These results indicate that a pretrained generative model can be turned into a competitive short-horizon price forecaster via fine-tuning.",
+  "link": "https://arxiv.org/abs/2611.14117",
+  "score": 8,
+  "why": "Order-flow foundation model fine-tuned on real Level-3 data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7685130",
+  "source": "SSRN",
+  "title": "Same Business, Different Books: Language Models Reveal Where Financial Reporting Comparability Breaks Down",
+  "abstract": "Conceptual frameworks define comparability by two conditions: like things must look alike, and different things must look different. Existing archival measures cannot separate these conditions, because they take industry membership as the definition of \"like things\". This paper measures economic likeness independently of the accounting numbers and of industry codes, using a language-model embedding of each firm's masked, AI-generated business description, and compares each firm's nearest neighbours in this economic space with its nearest neighbours in the space of its full common-size financial statements. False difference measures how far the accounting places a firm from its economic peers; false similarity measures how far its accounting peers are from it economically. Across 55,483 U.S. firmyears from 2000 to 2021, both measures are distinct from statement similarity and earningsreturns comparability, and false difference agrees closely across three independent economic benchmarks. The most firmly established result concerns what false difference contains: part of it reflects real differences in scale and fundamentals that the accounting should show, and beyond these, economically similar firms report operating items alike and diverge in financing, tax, pension, and non-recurring items, less so when they share an auditor. The evidence on costs to users is narrower than the framework's symmetric statement implies. False difference is associated with modestly lower analyst coverage beyond scale, fundamentals, and trading activity, an association that arises between firms and is captured most sharply by divergence from product-market peers, whereas its association with peervaluation errors reflects scale mismatch. False similarity is costly only when peers are selected on the accounting numbers. ASC 842 did not bring the balance sheets of leaseintensive firms closer to those of their economic peers.",
+  "link": "https://www.ssrn.com/abstract=7685130",
+  "score": 7,
+  "why": "LLM embeddings measure financial reporting comparability at scale.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7685359",
+  "source": "SSRN",
+  "title": "Do Machine Learning Rankers Rescue Calendar-Month Seasonality? A Point-in-Time Walk-Forward Evaluation of Seasonal Stock Selection",
+  "abstract": "Calendar-month seasonality, the tendency of a stock to earn similar returns in the same calendar month across years, is a widely used retail and practitioner screening signal and a documented cross-sectional anomaly. Practitioner systems typically turn per-stock seasonal statistics into a hand-weighted z-score composite and validate it on the single calendar month for which the strategy was designed. We ask whether machine learning (ML) rankers improve on such a rule-based composite, and whether single-month validation overstates its value. We build a strictly point-in-time panel of 43,319 stock-month observations for 210 large-cap U.S. equities and evaluate rule-based and learned rankers (logistic regression, gradient-boosted decision trees, and a multilayer perceptron), each trained on an expanding window and retrained annually, over 252 out-of-sample months (2005-2025). In the November-only setting the production composite was designed for, it earns 3.45% per month against 2.43% for SPY. Over all months, however, no ranker beats an equal-weight benchmark of the same universe at conventional significance levels after 15 bp transaction costs. The best performer, gradient boosting, adds 25 bp per month (Newey-West t = 1.30), and the seasonal filter on its own adds essentially nothing (t = 0.02). Rank information coefficients are small (0.013-0.017), and the scores are poorly calibrated as probabilities. We conclude that singlemonth backtests of seasonal screens are vulnerable to calendar data snooping, and that standard ML rankers extract at most a weak, regime-dependent signal from these features.",
+  "link": "https://www.ssrn.com/abstract=7685359",
+  "score": 7,
+  "why": "Walk-forward ML seasonality ranking with 252 out-of-sample months.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.13055",
+  "source": "arXiv",
+  "title": "Beyond the Document: Compiled Context and Governed Agents for Any Work Product",
+  "abstract": "A document preserves the visible result of professional work but often discards the research, calculations, assumptions, evidence, and authorization boundaries behind it. We study a different unit of delivery: a Portable Agent Format (PAF) package that carries a work product together with compiled context, evidence, provenance, and rules for subsequent interaction. To test whether this context remains useful beyond the process that produced it, we evaluate four new packages, created after the hosted and offline readers were fixed: an investment proposal, fund research, financial-statement analysis, and an engineering incident review. Two packages were produced by specialized agents and two through a general-purpose assistant's packaging skill. Across 400 frozen questions and 12,000 evaluated responses, a hosted governed reader succeeds on 96% of questions versus 86% with instructions plus raw-file retrieval (Holm-adjusted p < 10^-7). On the 260 answerable questions per condition, success is 94% versus 79%; the gap varies by package. Source-material chat and instructions alone reach 48% and 74% overall. A separate 0.8-billion-parameter offline reader succeeds on 69% overall, but 54% on answerable questions. Its -1 response rate is 2.9%, combining materially wrong and unauthorized answers, versus 56% with the source and instructions alone. Ablations suggest advantages for the integrated selector and package-adapted writer, without isolating representation from training effects. The same run exposes a failure: offline retrieval resolves none of the 40 historical-record questions in one financial-data package. These findings support treating compiled knowledge as part of the delivered work product, while leaving independent standards interoperability and end-to-end governance conformance unproven.",
+  "link": "https://arxiv.org/abs/2611.13055",
+  "score": 7,
+  "why": "Governed agents for financial-statement analysis",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.13550",
+  "source": "arXiv",
+  "title": "Tabular Foundation Models in Financial Predictions",
+  "abstract": "This technical note introduces tabular foundation models (TFMs) to accounting research and evaluates their performance in one common benchmark task: predicting firms' next-year earnings changes. TFMs produce numeric predictions and learn in context, without post-release training or tuning, making them natural and easy to use for forecasting. The TFMs we study are pretrained on synthetic tabular data, so they avoid look-ahead bias from memorizing firms' outcomes. We compare Google Research's TabFM with a fine-tuned open-weight large language model developed in recent accounting research and with several tree-based models. TabFM is more accurate than all comparison models. It is also faster and less computationally intensive than the large language model. Several tree-based specifications produce predictions more quickly than TabFM, so choosing between them involves a trade-off between accuracy and speed. We conclude that TFMs have promise as a new tool for forecasting in accounting and finance. However, our evaluation is based on a single benchmark task, and no class of models is likely to dominate in all settings.",
+  "link": "https://arxiv.org/abs/2611.13550",
+  "score": 7,
+  "why": "Tabular foundation models vs LLMs for earnings, runnable",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7685651",
+  "source": "SSRN",
+  "title": "Beyond Point Forecasts: Tail Information and Equity Portfolio Formation",
+  "abstract": "We propose a directional tail-based stock-selection method using conditional return distributions to examine how distributional information revealed by machine learning prediction models can be translated into investment value for long-short portfolios, and why this value may persist despite arbitrage competition. Existing research on machine learning asset pricing primarily focuses on conditional mean prediction. Although recent studies incorporate quantiles, predictive probabilities, and uncertainty information, they have not fully established how different parts of the return distribution should inform long and short decisions separately, or how the incremental value of distributional information arises through portfolio returns and joint risk. To address these limitations, we aggregate quantile endpoints calibrated using historical errors across multiple coverage levels to construct separate upperand lower-tail measures, and combine them with the cross-sectional ranks of point forecasts to form directional stock-selection signals. In a sample of U.S. stocks from 1992 to 2024, the method increases full-sample gross Sharpe ratios for both equal-and value-weighted portfolios across ten machine learning prediction models: the model averages rise from 2.411 to 2.781 and from 0.902 to 1.251, respectively. Further leg-level analysis shows that improvements in equal-weighted portfolios arise primarily from covariance-based risk offsets between the long and short legs, whereas improvements in value-weighted portfolios more strongly reflect the combined effects of directional returns and risk matching. Our economic mechanism analysis finds that the method jointly uses conventional return characteristics and information related to idiosyncratic volatility, liquidity, and trading frictions, linking directional selection of high-risk stocks to overall portfolio risk management. Realizing these investment opportunities often requires specialized resources, including securities-lending supply, financing capacity, risk capital, and trade execution capabilities. Thus, even when market participants can identify the relevant return information, implementation constraints may limit the speed with which arbitrage capital eliminates its investment value. These findings reveal the portfolio decision value of conditional return distributions and provide new empirical evidence on return predictability and limits to arbitrage in machine learning asset pricing.",
+  "link": "https://www.ssrn.com/abstract=7685651",
+  "score": 6,
+  "why": "Tail-based portfolios, weak OOS evidence visible",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.13572",
+  "source": "arXiv",
+  "title": "Market-Conditioned JEPA: Learning from Unpredictable Market Shocks",
+  "abstract": "Much of the variation in financial time series is driven by market-wide shocks that cannot be predicted from an asset's own history. Per-asset self-supervised learning treats this variation as irreducible noise. Under a latent factor model, we show that conditioning prediction on the realized market factor makes the asset's market exposure necessary for optimal prediction, while reducing the noise against which the asset-specific component is learned. Building on this insight, we introduce Market-Conditioned JEPA (MC-JEPA), a joint-embedding predictive architecture for financial time series. During training, we construct a leave-one-out market condition for each asset from the future target embeddings of other assets and incorporate it through factor loadings derived from the asset's own representation. On 11 years of minute-level Chinese A-share data, MC-JEPA improves over per-asset JEPA across nine targets spanning returns, market exposure, risk, and liquidity, with the strongest and most statistically significant gains in exposure, risk, and liquidity. It achieves the best RankIC on all liquidity targets and on return horizons from two hours to five days, outperforming time-series foundation models and self-supervised baselines, and delivers the best portfolio performance in a historical backtest. Ablations show that the return and exposure gains require the condition to be aligned with the realized market movement. After restoring the volatility scale removed by normalization, the predictor's factor loadings rank stocks by market beta nearly as well as a supervised probe, without labels. A synthetic factor-model study with known parameters shows that conditioning improves the recovery of both market exposure and the asset-specific component.",
+  "link": "https://arxiv.org/abs/2611.13572",
+  "score": 6,
+  "why": "JEPA on Chinese A-shares, single-country limit",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.13365",
+  "source": "arXiv",
+  "title": "Making sense of rule 605",
+  "abstract": "The paper analyzes monthly reports of two companies: one market maker, Virtu, and one broker-dealer, SoHo, in the period between January 2021 and March 2024. The predictive power of standard methods for the probability laws of stock orders- linear regression and LSTM- is poor, despite their probability laws being relatively stable. However, the month-to-month correlations are highly stable and predictable. In this paper, we study the distributions of the sixteen datasets resulting from the 26 stock-trading parameters reported by brokerages under regulatory requirements.",
+  "link": "https://arxiv.org/abs/2611.13365",
+  "score": 5,
+  "why": "Rule 605 microstructure, two firms, narrow scope",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.14245",
+  "source": "arXiv",
+  "title": "Deep Learning for Operator Maps in Optimal Liquidation",
+  "abstract": "We analyze the solution map of a optimal execution problem in which price dynamics are subject to a general transient impact kernel. Given the structure of the optimal trading strategy derived by Abi Jaber and Neuman in \\cite{https://doi.org/10.1111/mafi.12465}, we show that the strategy is locally Lipschitz continuous with respect to the underlying model parameters governing temporary and transient price impact as well as the fundamental price process. Continuity of this map justifies the application of neural-net based approximations which take model parameters as inputs. We propose a method generating samples of the transient price impact kernel for the purposes of creating training data, and a method of projecting the kernel to a finite dimensional representation appropriate for input to a neural net, and a dimensional reduction based on the relationship between inventory and trade signal. We demonstrate the effectiveness of the trained neural net and use it to quantify the potential financial costs associated with misspecifying the transient impact kernel.",
+  "link": "https://arxiv.org/abs/2611.14245",
+  "score": 5,
+  "why": "Optimal liquidation operator maps, theory-heavy",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7685001",
+  "source": "SSRN",
+  "title": "The Economics of AI Adoption Unit-Price Deflation, Enterprise Budget Expansion, Real Options, and the Opportunity Cost of Artificial-Intelligence Investment",
+  "abstract": "This paper develops a calibrated decision framework for evaluating artificial-intelligence investment when inference prices fall rapidly, but enterprise spending, implementation costs, and outcome uncertainty rise. The analysis combines a historical and scenario-based token-price series, a macro capital-allocation module, a firm-level return-on-investment calculator, a scenario portfolio heuristic, a Bayesian real-options staging model, and a stylized dynamic growth model. The central result is not a point forecast. It is a governance proposition: declining token prices do not imply declining total cost of ownership, and the economic value of AI depends more on adoption volume, complementary organizational investment, realized productivity, and the ability to abandon weak projects than on application-programming-interface unit prices alone. Sensitivity analysis shows that firm-level returns change sign as hidden implementation costs rise, while six-year net present value is dominated by the productivity path. Immediate full-scale deployment has negative expected value across all modeled tiers under the assumed failure distribution, whereas staged pilots generate positive option value by limiting downside. Extending the staging model to imperfect pilot information shows that the staged strategy retains its advantage until the pilot's false-pass rate exceeds approximately 0.73, so the result is robust to substantial diagnostic noise rather than being an artifact of perfect-information assumptions. The macro model is highly sensitive to knowledge-spillover assumptions and should be interpreted as comparative statics rather than as an estimated structural forecast. The paper concludes that AI should be managed as a portfolio of real options subject to explicit hurdle rates, risk budgets, evidence standards, and stagegate rules.",
+  "link": "https://www.ssrn.com/abstract=7685001",
+  "score": 4,
+  "why": "Governance framework, no code/data visible",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.07746",
+  "source": "arXiv",
+  "title": "Volatility Heredity in Multivariate Time Series: A Statistically Guided Temporal Convolutional Approach to Variable Ordering",
+  "abstract": "Volatility heredity concerns the information that past fluctuations in one series may carry about another after accounting for the target's own persistence. QS-TCN compares this dependence in both directions to estimate an order of temporal precedence. For each series, quasi-maximum likelihood estimation yields a persistence coefficient, and the matrix pencil method extracts temporal modes from the autocovariances of squared observations. These estimates define filters in a temporal convolutional network. The network models the target's squared observations from their own past and scores the association between the residuals and the filtered history of a candidate source. Differences between the two directional scores are aggregated into a global order. In an exploratory simulation with 100 systems in each of four volatility regimes, an ensemble of ten models trained with fixed seeds achieved higher mean ordering quality than CCF-AUC, a lead--lag method based on distance correlation, in every regime. Against CCF-AUC applied to squared standardized observations, the mean gains were 8.69 percentage points under positive linear coupling and 7.81 points when nonlinear coupling depended on the target's state. In the other two regimes, paired 95\\% bootstrap intervals for the gains included zero. Mean agreement with reference constraints was 71.55\\% across nine Finance systems and 54.02\\% across 27 simulated functional magnetic resonance imaging systems, compared with 50\\% expected under random ordering. In a panel of daily currency and gold returns, the estimated order placed the dollar--franc and dollar--yen exchange rates before gold.",
+  "link": "https://arxiv.org/abs/2611.07746",
+  "score": 4,
+  "why": "Simulation-only, finance application thin",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.13001",
+  "source": "arXiv",
+  "title": "One Table, Many Queries: Benchmarking Generalist Tabular Models Across Generation, Imputation, and Prediction",
+  "abstract": "Generation, imputation, and prediction query different aspects of the same tabular distribution, but are usually evaluated separately. This leaves unclear which capabilities they share, how their training objectives interact, and whether one model can perform all three well. We introduce the One Table Benchmark (\\ours{}), spanning 56 datasets, 46 registered methods, and 20 capability axes under aligned data splits and explicit task contracts. We compare task ranks on aligned support, train five backbones under all seven non-empty objective combinations on five datasets with three seeds, and contrast fixed-model profiles with specialist portfolios. Rank comparisons connect imputation and prediction through numerical recovery and dependence preservation, and link generation to both through predictive utility; distributional fidelity follows different, sometimes opposing, rankings. Objective interventions show the largest pooled gains from including the recipient's own objective. Generation has the broadest coverage of positive pooled auxiliary effects, while prediction shows potential to improve imputation and synthetic-data utility, with responses that vary across backbones. Cross-addition effects reveal that objective benefits need not add and depend on the objectives already present. Fixed-model comparisons expose corresponding utility--fidelity trade-offs: some generalists surpass specialist portfolios on utility, while fidelity continues to favor specialization. Frozen foundation models show strong prediction and numerical point imputation, together with promising synthetic-data utility, highlighting their potential across all three tasks. These findings motivate unified tabular models that share useful conditional information while improving categorical reconstruction and faithful joint sampling.",
+  "link": "https://arxiv.org/abs/2611.13001",
+  "score": 4,
+  "why": "General tabular benchmark, not finance-specific.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.13388",
+  "source": "arXiv",
+  "title": "Online-Adaptive Fuzzy Cognitive Maps for Neuro-symbolic Financial Forecasting",
+  "abstract": "We present a neuro-symbolic framework that pairs online-adaptive Fuzzy Cognitive Maps (FCMs) with long short-term memory (LSTM) networks for financial forecasting. Financial markets exhibit regime shifts and nonlinear dynamics. Existing models often trade off one of these key properties: these models capture temporal patterns but hide causal drivers, or they recover causal graphs that cannot adapt post-training. We close this gap with two frameworks. Framework I constructs an FCM from live dual-source price series and macroeconomic indicators, and adapts its edges online through an error-driven Hebbian rule. We introduce the Asymmetric Additive Residual Fusion method to seamlessly combine the FCM and LSTM predictions under Framework I. Framework II constructs a literature-grounded, LLM-augmented FCM where every edge carries a verifiable citation that gives an auditable map of factor interactions. On NASDAQ Composite data, Framework I matched the performance of the LSTM baseline on state-directional accuracy and outperformed LSTM by 7.6 percentage points on the return-sign accuracy. Framework I outperformed standalone FCM models across both evaluation metrics. The adaptive maps converged to new regimes within 10-15 trading days, and Framework II center-node FCMs scored 68.9% to 85.7% on the state-directional accuracy.",
+  "link": "https://arxiv.org/abs/2611.13388",
+  "score": 4,
+  "why": "Neuro-symbolic framework, unclear real-data results",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.13962",
+  "source": "arXiv",
+  "title": "Deceleration without identification: testing a power-law trend in Bitcoin prices under persistent noise",
+  "abstract": "Plotted against time since its first block on logarithmic axes, the price of Bitcoin lies close to a straight line, and a power law in time has been proposed as its long-run trend. A good fit is weak evidence: when deviations from a trend are as persistent as a random walk, regressions on time find trends and high $R^2$ where none exist. We first bound what fifteen years of weekly prices can reveal, then test only what is answerable. Using a few low-frequency averages, invariant to the noise scale and calibrated over a declared family of persistent deviations with a four-year cycle and declining volatility, we test constant drift in expected log price against an added log-age term. The procedure was fixed, validated and publicly hashed before it was applied once. Constant drift is rejected under this family at nominal 5%, and a log-age coefficient of 5.7, close to the published exponent, is not rejected. The rejection does not survive allowing persistence beyond a random walk, and a Gompertz curve with a ceiling fits about as well as the power law. Whether deviations revert to the trend cannot be decided. Registered forecasts for 2027-2030 will be scored by future prices.",
+  "link": "https://arxiv.org/abs/2611.13962",
+  "score": 4,
+  "why": "Bitcoin trend test, single asset, narrow method",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7682198",
+  "source": "SSRN",
+  "title": "IPO Market Timing and New Venture Performance: a Study of European IPO Firms",
+  "abstract": "Founders and their backers often treat the timing of an initial public offering (IPO) as a strategic choice, yet the new venture literature has paid less attention to how market conditions at listing shape post-IPO performance than to the pre-IPO attributes of firms. We develop four propositions on how the IPO window, media sentiment at listing, and signal quality jointly shape whether early listing benefits persist, and we consider how artificial intelligence tools may alter the information environment in which timing decisions are made. We test the analysis plan on a sample of 500 European IPO firms. The results show that the analysis recovers the window, sentiment, and signal effects with high detection rates, and that the inverted-U shape of sentiment is recovered with a turning point near its true value. The paper contributes to entrepreneurial finance research on market windows and to the study of how new information actors affect listing outcomes.",
+  "link": "https://www.ssrn.com/abstract=7682198",
+  "score": 3,
+  "why": "AI framing, single-region entrepreneurship, no transferable method",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7682544",
+  "source": "SSRN",
+  "title": "After Noise, Then Fury?Information Access, Trading and Financial Fragility",
+  "abstract": "Does cheap access to common valuation tools end trading, or make markets fragile? The paper's answer is a benchmark endpoint and a list of what must change to leave it. Under universal access to correct valuation, valuation-based informational advantages disappear; trading survives when liquidity and risk-transfer needs remain; fragility requires additional mechanisms that sustain exposure or destabilise adjustment, and is not a consequence of common information by itself; and whether actual AI adoption produces any of these conditions is empirically unresolved. In an exactly solvable benchmark, full adoption of the correct value takes the market to its fully informed clearing price, which still carries a risk premium; what disappears is the advantage of knowing value, not fundamental uncertainty, and trading continues as long as some demand is not about information. Two mechanism models show what fragility needs: trend feedback interacting with price impact, or nancing constraints binding against opposing demand; a market pinned to a shared estimate stays calm while the crowd's exposure is small relative to its nancing capacity. In a market where investors choose what information to buy and what to hold, tested on fresh runs against predictions xed in advance, cheaper common signals displace paid research without stopping trade; a stronger informed entrant raises borrowing without worse tails when its prots ow back to investors; the one seller of information prices and rations its signal; and a second seller widens paid participation in ten of twelve runs, while the predicted fall in the fee paid and the predicted dominance of one seller are inconclusive. A shrinking edge does not by itself induce more leverage: with perceived risk and costs xed, a smaller edge lowers desired exposure and can induce exit. The data do not identify a transition to AI-driven synchronisation or fragility, the observed factor baskets have decayed with weaker day-today return dependence, and the industry record of concentrated retail execution and a growing paid-data business is reported as context. Whether cheaper public valuation redirects rents toward information about positions and ow is left open. The models are illustrative and uncalibrated.",
+  "link": "https://www.ssrn.com/abstract=7682544",
+  "score": 3,
+  "why": "Theory benchmark, AI impact unresolved",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7682392",
+  "source": "SSRN",
+  "title": "Technological Acceleration, Deployment Lags, and the Limits of Capital Recovery: A Finite-Horizon Framework for AI Investment",
+  "abstract": "A productive asset can remain worth operating after it has ceased to offer a feasible path to recovering its initial investment. This paper examines that distinction when technological change erodes project revenue from the investment date, while revenue generation begins only after deployment is complete. A deterministic model separates the operating-opportunity deadline, the effective recovery deadline, and the first recovery time. With fixed investment and operating parameters, when economic exit is the binding deadline, faster revenue erosion delays internal recovery and advances economic exit. Deployment introduces both forgone early operating cash flow and additional absorption expenditure. When absorption accelerates, deterioration in the deployment-to-opportunity ratio alone does not establish a decline in recovery value: a cash-flowweighted condition is also required. Under constant absorption speed, initial recoverability, and the further conditions of Proposition A.6, including strictly increasing net erosion tending to infinity and a binding potential-profitability cutoff throughout, the recovery threshold occurs before operating opportunity disappears and before the corresponding threshold for otherwise identical immediate operation. The recovery criterion is equivalent to nonnegative truncated NPV under the same execution policy, costs, deadline, and zero-terminal-value convention. The contribution is a decomposition of project timing and conditional comparative statics, rather than a new valuation principle or a general claim that AI investment destroys value. Numerical examples illustrate the thresholds; an empirical design identifies the data and assumptions needed to investigate them.",
+  "link": "https://www.ssrn.com/abstract=7682392",
+  "score": 2,
+  "why": "Pure theory, no data or implementation path",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.13841",
+  "source": "arXiv",
+  "title": "Nonzero-Sum Stochastic Exit Games with Singular Belief Dynamics",
+  "abstract": "We study a two-player nonzero-sum stochastic exit game with asymmetric information. Each firm chooses the time to exit a duopoly and, conditional on remaining active, when to exit a monopoly. The asymmetry stems from privately observed exit values, while profit flows are driven by a general one-dimensional diffusion. Allowing for exit from monopoly induces singular dynamics of the associated belief process, so we construct it as a limit of regular approximations. The underlying dynamics are not described by a system of SDEs, which requires a new mathematical approach. We construct a symmetric Nash equilibrium in which the duopoly exit is a hitting time of the belief process while the monopoly exit is described through the underlying diffusion. Our equilibrium exhibits novel phenomena: the market may be abandoned by both firms in finite time (market collapse), and firms with heterogeneous exit values may optimally exit simultaneously (clustering). These features are absent when monopoly is always preferred to exit.",
+  "link": "https://arxiv.org/abs/2611.13841",
+  "score": 2,
+  "why": "Pure stochastic exit game theory, no data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.13520",
+  "source": "arXiv",
+  "title": "Developing an Operational Model for an Internet of Data Based Trusted Data Space for Vocational Education",
+  "abstract": "Data circulation in vocational education has long been constrained by unclear ownership, a lack of trust, and insufficient incentives. The Internet of Data provides a new underlying technology for enabling trusted cross-domain data circulation. Building on an Internet of Data based trusted data space for vocational education, this paper develops a multi-stakeholder operational model encompassing a value network, a product portfolio, revenue allocation, and governance rules. Emphasizing data sovereignty protection and incentive compatibility, the model provides a reference for the sustainable operation of regional vocational education data ecosystems.",
+  "link": "https://arxiv.org/abs/2611.13520",
+  "score": 1,
+  "why": "Vocational education data space, off-topic",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]

@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-12",
+ "scanned": 23,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2611.12966",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.12966",
+   "title": "BuySideFlow: A Point-in-Time Benchmark for LLM Agents in Investment Research",
+   "claim": "LLM agents pass result checks while violating point-in-time validity in half of audited runs."
+  },
+  {
+   "key": "2611.14325",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.14325",
+   "title": "Point-in-Time Encoders for Earnings Calls",
+   "claim": "PIT encoders beat general retrievers on earnings calls yet fail to forecast returns better."
+  },
+  {
+   "key": "10.2139/ssrn.7683171",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7683171",
+   "title": "How Much Sustainability is Really in Stock Prices?",
+   "claim": "No sustainability model survives multiple-testing corrections across 132 specifications."
+  },
+  {
+   "key": "2611.13616",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.13616",
+   "title": "Optimal Trading Speed on Blockchain",
+   "claim": "Faster blockchain blocks widen effective spreads even as arbitrage profits rise."
+  },
+  {
+   "key": "2611.14117",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.14117",
+   "title": "Fine-Tuning an Order-Flow Foundation Model for Sub-Second Forecasting",
+   "claim": "A fine-tuned generative order-flow model beats gradient boosting on sub-second microprice returns."
+  },
+  {
+   "key": "10.2139/ssrn.7685130",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7685130",
+   "title": "Same Business, Different Books: Language Models Reveal Where Financial Reporting Comparability Breaks Down",
+   "claim": "ASC 842 failed to move lease-intensive balance sheets closer to economic peers."
+  }
+ ]
+}

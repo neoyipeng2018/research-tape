@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>BuySideFlow: A Point-in-Time Benchmark for LLM Agents in Investment Research</title>
+    <link>https://arxiv.org/abs/2611.12966</link>
+    <description>LLM agents pass result checks while violating point-in-time validity in half of audited runs.</description>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.12966</guid>
+  </item>
+  <item>
+    <title>Point-in-Time Encoders for Earnings Calls</title>
+    <link>https://arxiv.org/abs/2611.14325</link>
+    <description>PIT encoders beat general retrievers on earnings calls yet fail to forecast returns better.</description>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.14325</guid>
+  </item>
+  <item>
+    <title>How Much Sustainability is Really in Stock Prices?</title>
+    <link>https://www.ssrn.com/abstract=7683171</link>
+    <description>No sustainability model survives multiple-testing corrections across 132 specifications.</description>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7683171</guid>
+  </item>
+  <item>
+    <title>Optimal Trading Speed on Blockchain</title>
+    <link>https://arxiv.org/abs/2611.13616</link>
+    <description>Faster blockchain blocks widen effective spreads even as arbitrage profits rise.</description>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.13616</guid>
+  </item>
+  <item>
+    <title>Fine-Tuning an Order-Flow Foundation Model for Sub-Second Forecasting</title>
+    <link>https://arxiv.org/abs/2611.14117</link>
+    <description>A fine-tuned generative order-flow model beats gradient boosting on sub-second microprice returns.</description>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.14117</guid>
+  </item>
+  <item>
+    <title>Same Business, Different Books: Language Models Reveal Where Financial Reporting Comparability Breaks Down</title>
+    <link>https://www.ssrn.com/abstract=7685130</link>
+    <description>ASC 842 failed to move lease-intensive balance sheets closer to economic peers.</description>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7685130</guid>
+  </item>
+  <item>
     <title>Do Time-Series Foundation Models Forecast Index-Futures Returns? A Preregistered Evaluation of Models, Metrics, and Input Representations</title>
     <link>https://arxiv.org/abs/2611.12141</link>
     <description>Zero-shot foundation models produce no incremental forecasting skill over no-change for intraday equity index futures.</description>
@@ -697,20 +739,6 @@
     <description>Hong Kong equity returns and bond spreads show no visible response to climate-disclosure levels, at a minimum detectable three-day abnormal return of about 1.6%.</description>
     <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7608119</guid>
-  </item>
-  <item>
-    <title>Model-Informed Gold Revisions Inflate Measured Accuracy: A Versioned Gold-Standard Protocol for LLM Extraction of ESG Data</title>
-    <link>https://www.ssrn.com/abstract=7598018</link>
-    <description>Model-prompted revisions to ESG gold labels raised measured accuracy 5.1 points with predictions unchanged, so benchmarks should version references.</description>
-    <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7598018</guid>
-  </item>
-  <item>
-    <title>Market Impact Estimation via Causal Foundation Models</title>
-    <link>https://arxiv.org/abs/2610.12537</link>
-    <description>On a synthetic confounded prior, a causal foundation model tracks the unbiased impact oracle, but transfer requires encoding metaorders as added flow.</description>
-    <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.12537</guid>
   </item>
 </channel>
 </rss>
