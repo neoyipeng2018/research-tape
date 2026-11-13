@@ -1,0 +1,162 @@
+[
+ {
+  "key": "10.2139/ssrn.7683760",
+  "source": "SSRN",
+  "title": "Contextualizing Corporate Governance with AI Proxy Advice: Evidence from Proxy Contests",
+  "abstract": "Traditional proxy advisors rely on standardized governance guidelines that may overlook firm-specific circumstances. We examine whether artificial intelligence (AI) can provide more informative voting recommendations by evaluating activist proposals in the context of individual firms. We develop an algorithmic proxy advisor that combines firm characteristics with contest-specific information, including text embeddings capturing the substance of dissidents' arguments, and evaluate it on 763 proxy contests from 2006 to 2020. Among the contests covered by ISS, one-year industry-adjusted returns are 10.0 percentage points higher when the AI-supported side wins than when it loses. The corresponding return spreads exceed those of ISS and Glass Lewis by 6 to 7 percentage points. The advantage arises primarily from identifying poorly performing dissident campaigns endorsed by traditional advisors, particularly when their demands align with proxy advisors' published governance guidelines. Both firm characteristics and the substantive content of dissident filings contribute to the AI's performance, while traditional advisors' recommendations add little incremental information. A hypothetical AI-based portfolio earns an annualized Fama-French three-factor alpha of 10.3%. These findings suggest that contextualizing governance decisions can add value beyond guideline-based prescriptions.",
+  "link": "https://www.ssrn.com/abstract=7683760",
+  "score": 8,
+  "why": "NLP proxy advisor with baselines and returns.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7686569",
+  "source": "SSRN",
+  "title": "Measuring Market Rationality: The Boundaries of an Information Ecology Health Index A Three-Layer Test of Explanation, Prediction, and Early Warning",
+  "abstract": "This paper constructs an Information Ecology Health Index (IEHI) to measure the structural quality of information-rather than its sentiment level-and systematically tests its explanatory, predictive, and early-warning power for Ashare market volatility. Using an eight-year panel of 2.18 million stock-day observations (2018-2025) from Chinese listed firms, we apply a three-layer progressive testing framework: cross-sectional explanation, market-level timeseries prediction, and extreme-event early warning, supplemented by a preregistered breakpoint DID to test the \"AI content pollution\" hypothesis. Core findings: IEHI is significantly negatively correlated with future volatility (H1, robust to Newey-West correction), confirming contemporaneous explanatory power; however, it provides no out-of-sample predictive increment (OOS negative), no early-warning increment for extreme events (C-layer ΔAUC ≈ 0), and no immediate causal effect at the AI breakpoint. The three-layer discrimination demonstrates that IEHI is a risk monitoring and interpretation tool, not a prediction or early-warning tool. Furthermore, the post-2024 rise in information similarity is sensitive to sample composition and cannot be attributed to generative AI. Contributions: (1) a reusable \"explain-predict-warn\" three-layer discrimination framework that delineates the applicability boundary of structural indicators; (2) a rigorous negative answer to the AI information pollution hypothesis; (3) all null results are pre-registered and honestly reported, providing a reference for robustness practices in empirical finance.",
+  "link": "https://www.ssrn.com/abstract=7686569",
+  "score": 7,
+  "why": "Rigorous OOS test, negative result, large panel.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.14699",
+  "source": "arXiv",
+  "title": "Conformal Risk Certificates for Portfolio Optimization Under Uncertainty: A Gated Reinforcement-Learning Approach",
+  "abstract": "Reinforcement-learning portfolio policies can optimize allocations from prices, covariances, and prior positions, yet they lack a calibrated, replayable mechanism for certifying that a proposed allocation respects a bounded risk envelope before execution. Regulators increasingly expect automated portfolio systems to provide exactly this kind of pre-trade audit trail, interpretable risk limit, and human-oversight mechanism. Gated Conformal Semantic Risk Control addresses this gap by separating return-seeking allocation from text-conditioned downside-risk verification. An instruction-tuned language model maps timestamped disclosures into schema-validated semantic risk states over macro, liquidity, earnings, and sector channels. These states induce correlated ellipsoidal factor-shock uncertainty sets whose conformal radii are calibrated by rolling finite-sample prediction over localized semantic nonconformity buckets. An asymmetric second-order cone gate then checks each raw PPO proposal against a certified worst-case semantic loss budget. The gate stays inactive for compliant proposals and intervenes only when that budget is exceeded. In walk-forward out-of-sample tests on nine liquid U.S. Select Sector SPDR ETFs, Raw PPO earns a 12.7% annual return while incurring a 4.05% semantic violation rate. Gated-CSRC removes all observed out-of-sample semantic limit breaches while retaining an 11.7% annual return. This 100-basis-point auditable safety premium is smaller than the yield loss imposed by unconditional hard projection, and exact McNemar testing confirms the compliance gain at $p < 10^{-15}$. Loughran-McDonald lexicon controls and time-shuffled text controls fail to reproduce this certificate.",
+  "link": "https://arxiv.org/abs/2611.14699",
+  "score": 7,
+  "why": "Conformal risk certificates with LLM, OOS calibration.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683984",
+  "source": "SSRN",
+  "title": "Concentration or Regime? The Changing Macro Sensitivities of U.S. Equities",
+  "abstract": "We examine whether the sensitivity of U.S. stock returns to real yields, breakeven inflation, oil, gold, and the dollar changed as the S&P 500 became concentrated in a few large technology firms. Using weekly data for 2010-2026 and an index reconstructed from public data, we find significant structural breaks in early 2013, early 2020, and mid-2023. The confidence interval of the last break includes late 2022, but no break is estimated at the release of ChatGPT. An exact decomposition of index betas shows that changes in index weights contribute little. Most changes are common to nearly all firms, including the loss of the market's positive exposure to breakeven inflation after 2022. The largest firms' own real-yield betas rose relative to the average stock after 2022, but AI intensity in pre-2022 10-K filings does not explain this beyond firm size. The evidence points to a macroeconomic regime shift, not concentration or AI, as the main source of the change.",
+  "link": "https://www.ssrn.com/abstract=7683984",
+  "score": 6,
+  "why": "10-K text analysis, negative result, macro betas.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7686938",
+  "source": "SSRN",
+  "title": "Total Portfolio Approach (TPA) Portfolio Construction as a Dual Mean-Variance Problem",
+  "abstract": "Recent practitioner work on the Total Portfolio Approach (TPA) proposes computational recipes for costs of capital, funding portfolios and position sizes. Staley (2026) is the most explicit: each investment is funded by a beta-matched mix of cash, global equities and Treasuries, positions are sized by Treynor-Black, and financing and short-sale restrictions are handled by iterating on internal \"shadow\" charges. This paper shows that Staley's procedure is the dual of a single mean-variance problem: maximise expected return subject to fixed reference-portfolio factor exposures, an active-risk budget and linear holdings restrictions. Costs of capital are the Lagrange multipliers of the exposure, budget and restriction constraints, and Staley's iterative charges are exactly the multipliers that solve the dual. The same lens applies to other TPA calculations: appraisal-ratio sizing (AQR; Cavaglia, Han and Seshadri), implied-return hurdles (MSCI), marginalcontribution-to-tracking-error diagnostics (SIPA; Meketa), factor-based allocations (Elkamhi and Lee), dynamic tracking-error budgeting (Alankar et al.) and portable beta (Cavaglia, Fan and Wang). Each is a special case with a different restriction set. The construction also has clear antecedents: within the dual, Staley's sizing rule is Treynor-Black, his funding portfolio is a multi-factor version of the Treynor-Black beta adjustment, and his internal charges play the role of the endogenous cutoff rate of Elton, Gruber and Padberg. The practical advantage is that any further linear restriction can be added in one line, and its price appears automatically in every asset's cost of capital. Using Staley's own data, we reproduce his results and then add the category limits of the Swiss occupational pension ordinance BVV 2. A 60/40 reference portfolio implemented with a global equity index breaches the 50% equity limit; complying requires at least 89 bps of active risk, and a 40% internal limit costs 1.1 bps of value-add at Staley's 200 bps budget and carries a shadow price of 90 bps per unit of equity holdings. The mean-variance representation also has a cost that the procedural presentation hides: TPA allocations and costs of capital are exactly as exposed to estimation error as any mean-variance solution. Because the factor exposures are fixed, the error is concentrated in the spreads, the betas and the residual covariance matrix, and the dual form makes it possible to measure it and to apply the standard remedies (constraints, shrinkage, robust optimisation). A companion Excel workbook solves the primal and the dual with Excel Solver. Declaration of generative AI assistance During the preparation of this work, the author used Perplexity, a generative-AI assistant, to assist with manuscript drafting and organization, mathematical exposition, and the development of code for portfolio optimization and visualization. The author reviewed, revised, and verified the resulting text, mathematical statements, references, code, and numerical results and takes full responsibility for the accuracy, integrity,",
+  "link": "https://www.ssrn.com/abstract=7686938",
+  "score": 6,
+  "why": "Portfolio duality formalism, not text or LLM.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683440",
+  "source": "SSRN",
+  "title": "Leverage as a Game Complexity, Incentive Limits in Trading",
+  "abstract": "Risk controls in leveraged markets are calibrated once, then deployed into markets that drift and whose participants adapt to them. We study this in a venue where every outcome is public: a house taking the other side of leveraged bets, up to 1000×, on BTC and tokenised Nvidia. Treating positions as barrier options gives closed-form liquidation odds; the house's edge is dominated by liquidations, so any fixed calibration goes stale when the population or regime moves. We model the venue as a Stackelberg game and ask whether reward schemes (points, rebates, loyalty programmes) offset the incentives created by losses. We give a closed-form upper limit on the reward rate that is safe for every assignment of accounts to owners, and show that paying above it is a unique game. Inspired by the Unique Games Conjecture being proved (OpenAI, 2026), we show that this is NP-hard and, when revenue is local in the accounts, that the best an efficient house can do is Raghavendra's SDP rounding. Assigning roles within trading rings, telling copy-traders from crowd followers beyond the Goemans-Williamson ratio of 0.878, and ordering who leads a herd are also NP-hard. Planting wash rings into recorded trades from Polymarket's 5-minute markets and Hyperliquid's perpetuals, we find a sharp recovery threshold at signal-to-noise Λ of 1.3-3, higher where a crowd already contains a closed honest group. Higher leverage lowers that signal, so detection adds least where leverage is highest. We argue that incentives should be safe without detection, propose an adaptive evaluation loop with rule-based, LLM-driven and behavioural agents, and state falsifiable hypotheses.",
+  "link": "https://www.ssrn.com/abstract=7683440",
+  "score": 5,
+  "why": "Leverage microstructure model, no LLM or OOS.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.14564",
+  "source": "arXiv",
+  "title": "The Market Is the Reward: Design Markets, Not Just Traders for Human-AI Collective Intelligence",
+  "abstract": "Learning agents are becoming market participants, yet machine learning still treats the market as a fixed environment, although its payoff rule is the reward agents learn from. This position paper argues that financial AI should build HyperMarkets for human-AI collective intelligence, and not only the agents that trade in them: markets whose liquidity provision, information production, outcome determination, and trading rule are performed or adapted by learning agents and designed jointly toward explicit market-level objectives. In a pre-registered simulation with Claude agents trading for principals, joint design raises a market-level objective by 79% over separately tuned functions, through a trading rule that helps only when slow traders are present, and how evidence is paid for decides whether a stronger agent earns more for its principal. We state when fixed rules or non-market aggregation should be preferred and what findings would refute the case.",
+  "link": "https://arxiv.org/abs/2611.14564",
+  "score": 5,
+  "why": "Position paper with Claude agent simulation, unverified.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683634",
+  "source": "SSRN",
+  "title": "Climate Risk Exposure and Banking Competition: Evidence from China's Listed Banks",
+  "abstract": "Climate change poses escalating risks to financial systems; however, the impact of these risks on banking competition remains unclear. Understanding this relationship is crucial, as reduced competition can exacerbate financial fragility and limit credit access, particularly in emerging markets like China. Using data from 42 Chinese listed banks between 2007 and 2022, this study constructs a novel bank-level climate risk exposure index by mapping city-level climate risk indices to the geographic distribution of bank subsidiaries. We demonstrate that greater exposure to climate risk significantly alleviates banking competition. Further analysis reveals that digital innovations, including artificial intelligence (AI) and Fintech, mitigate these adverse effects by enhancing risk evaluation and operational efficiency. Nonetheless, our analysis carries significant implications for policymakers and regulators seeking to balance climate resilience with financial competition and stability in the digital era.",
+  "link": "https://www.ssrn.com/abstract=7683634",
+  "score": 3,
+  "why": "China bank climate empirics, AI incidental.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683051",
+  "source": "SSRN",
+  "title": "Private Banks at the Crypto Cross-road. Framework to Navigate Opportunities and Challenges in Switzerland and Luxembourg",
+  "abstract": "This paper examines how traditional private banks in Switzerland and Luxembourg can serve Ultra/High-Net-Worth (U/HNW) clients with crypto assets in a way that is strategically coherent, operationally robust and compliant with regulation. As the institutional debate has shifted from “why” to “how”, the authors propose a structured methodology of key questions and courses of action rather than a single blueprint, since the right choices depend on each bank’s ambition, geographies, client base, technology maturity and risk appetite. The framework spans business models and revenue streams, regulatory configuration under FINMA and MiCA/CSSF, product design, partnerships, operating models, IT architecture, data management and analytics, cybersecurity, compliance, risk management, crypto-collateralised lending, vendor management, marketing, the Investment Office, sales and human resources. For each domain, it identifies the decisions to be made, the available options and their trade-offs, emphasising phased roadmaps, the integration of 24/7 blockchain rails with batch-oriented legacy cores, and trust as the bank’s decisive asset. Applying Kotter’s eight-stage model, the paper frames crypto adoption as a major transformation requiring urgency, a guiding coalition, empowerment through training and governance, early wins and cultural anchoring. A one-page summary of key questions supports executive alignment, while directions for future research address geopolitical, quantum, fiduciary, architectural, client-experience, regulatory and AI-related challenges. The regulatory analysis reflects developments up to March 2026.",
+  "link": "https://www.ssrn.com/abstract=7683051",
+  "score": 2,
+  "why": "Consulting framework, no ML/data, single-region strategy.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683439",
+  "source": "SSRN",
+  "title": "When Everyone Can Do Everything - AI is Another Step Towards the Perfect Market: What Changes for Companies and Boards",
+  "abstract": "Executives and boards primarily evaluate artificial intelligence (AI) based on expected efficiency gains, cost reductions and improvements in products and services. The risks AI poses to competitive advantages and profit margins receive relatively little attention, even though they may be particularly significant in markets for commoditized products and services or those becoming commoditized through AI. This conceptual paper explores those risks and how AI may accelerate commoditization and make it easier for customers to compare suppliers and switch between them. As a result, companies may become more efficient while facing declining margins and weakening competitive positions. The paper uses the theoretical model of the perfect market to examine these effects. It draws on examples from healthcare, consulting and digital services. It also explains why defensibility may become increasingly important for sustaining competitive advantages and profitability. Finally, it suggests questions that executives, boards and investors can use to test AI strategies, competitive position and business plans.",
+  "link": "https://www.ssrn.com/abstract=7683439",
+  "score": 2,
+  "why": "Conceptual perfect-market theory, no data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683637",
+  "source": "SSRN",
+  "title": "From Generative AI to Agentic Oversight: A Conceptual Framework for Algorithmic Accountability in Financial Institutions",
+  "abstract": "Generative and agentic AI are entering financial institutions’ operations, raising difficult questions about decision-making, supervision, and responsibility. Who exercises decision authority? How can institutions maintain effective oversight? And who is accountable when something goes wrong? Generative AI can assist in gathering information and supporting human decision-making. Agentic systems extend these capabilities by initiating activities, coordinating processes, or executing actions under varying degrees of delegated authority. This presents a governance challenge where oversight arrangements rely on human review of AI-generated outputs rather than controls over AI-enabled actions. This study proposes a conceptual framework consisting of decision authority, traceability, human intervention, and responsibility allocation. It distinguishes AI-assisted interpretation, bounded AI delegation, and agentic execution as operational arrangements, not fixed technological classes. The framework separates what a system is technically capable of doing from what an institution permits it to do, recognizing that even relatively simple automated actions may carry significant consequences. The central argument is that accountability requirements should correspond to authority actually exercised and the consequences of system actions, rather than technology labels. It further proposes that accountability depends on how authorization boundaries, operational records, opportunities for human intervention, and assigned responsibilities work together rather than independently. Applications in credit evaluation, fraud monitoring, regulatory compliance, and financial reporting illustrate the framework. Five conceptual propositions identify relationships for future empirical investigation.",
+  "link": "https://www.ssrn.com/abstract=7683637",
+  "score": 2,
+  "why": "Conceptual AI governance framework, no data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7686100",
+  "source": "SSRN",
+  "title": "The impact of AI on interest rates and inflation",
+  "abstract": "How does the AI boom affect interest rates and inflation? I study this in a New Keynesian model augmented with a task-based structure, in which output is a continuum of tasks performed by either labor or compute. Two forces shape the response. The first is always at work: a gradual, anticipated rise in AI productivity raises expected consumption growth and, through it, the natural rate of interest, putting upward pressure on inflation under a standard monetary policy rule. This force dominates over the medium run. The second operates only in the short run. As firms invest to accumulate computing capacity, the build-out absorbs resources and depresses consumption; if investment adjustment costs make this decline sufficiently gradual, expected consumption growth turns negative, the natural rate falls, and inflation drops below target. As investment recedes, consumption recovers and the first force takes over, so the natural rate and inflation rise.",
+  "link": "https://www.ssrn.com/abstract=7686100",
+  "score": 2,
+  "why": "Pure New Keynesian theory, no data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7686567",
+  "source": "SSRN",
+  "title": "Opportunities And Risks Of AI In Finance And Banking: Current Experience And Future Directions",
+  "abstract": "Artificial intelligence (AI) has substantial transformative potential, altering competitive dynamics in the banking and finance industry, restructuring firm-level capabilities, and affecting the broader architecture of national and global financial systems. The paper first reviews the opportunities and risks this creates for financial institutions. It then discusses how AI is a useful complement to, yet not a substitute for, central banks' analytical, policy, statistical and supervisory functions, and why technological advances alone are unlikely to deliver these benefits unless supported by adequate capabilities and institutional readiness. Turning to research, it examines how AI has entered corporate finance, with implications for managers' expectations, competition, innovation and risk exposures, and for the behaviour of firms and managers. It also discusses the challenges that arise when AI is applied to asset pricing, explains why they matter to investors, researchers, and regulators, and presents approaches to address them. For both fields, it outlines future research directions to enhance and refine current AI applications. Finally, the paper highlights the contributions of the studies published in this special issue on the opportunities and risks of AI in banking and finance.",
+  "link": "https://www.ssrn.com/abstract=7686567",
+  "score": 2,
+  "why": "Survey/review of AI in banking.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7686661",
+  "source": "SSRN",
+  "title": "Dynamic And Personalized Pricing; Restrictions And Bans On The Development Of Ultra-Powerful AI Systems; Signs Of Money Laundering In Online Games",
+  "abstract": "The September issue of the monitoring examines three current areas of international regulation of the digital economy: algorithmic pricing, restrictions on the development of ultra-powerful artificial intelligence systems, and combating money laundering in online games. The first area is dynamic and personalized pricing. It analyzes the results of studies on pricing algorithms, their impact on the cost of goods and services, and approaches taken by other countries to regulate personalized pricing. Particular attention is paid to algorithm transparency, protecting consumers from price discrimination, and pricing practices in the aviation industry. The second area is the regulation of super-powerful artificial intelligence systems. The paper examines the risks of autonomous operation by AI agents, the possibility of them slipping out of human control, and legislative initiatives in the United States, the United Kingdom, and Australia aimed at restricting the development of potentially dangerous AI systems and ensuring mechanisms for their shutdown. The third area is combating money laundering in online gaming. The report presents the results of a FATF study on the risks of using gambling and video games for illicit financial transactions, including 123 indicators of suspicious activity. The report examines international approaches to licensing gambling platforms, monitoring payments, and combating illegal online operators, as well as the scale of the illegal gambling market in Russia.",
+  "link": "https://www.ssrn.com/abstract=7686661",
+  "score": 2,
+  "why": "Regulatory monitoring digest, no original research.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7693003",
+  "source": "SSRN",
+  "title": "An Integrated Governance Framework for Artificial Intelligence in Healthcare Organizations: Linking Workforce Intelligence, Clinical Decision Support, and Financial Integrity",
+  "abstract": "Healthcare organizations are adopting artificial intelligence across functions that have traditionally been managed in isolation: recruiting and scheduling clinical staff, supporting diagnostic and treatment decisions, reconciling perioperative supplies with patient bills, and detecting fraudulent insurance claims. Treating each application as a separate project risks duplicated data pipelines, inconsistent oversight, and blind spots where an error in one function propagates into another. This working paper uses an integrative literature review to synthesize research on AI-enabled recruitment and scheduling, photoplethysmography-based fatigue and sleep assessment, real-time clinical decision support, deep learning for billing reconciliation and fraud detection, cloud-enabled financial analytics, and executive leadership of agentic AI systems. From this synthesis, the paper develops a four-layer conceptual framework comprising workforce intelligence, clinical decision support, financial integrity, and strategic governance, all resting on a shared data and cloud foundation. It advances four research propositions concerning cross-layer dependencies, explainability, human oversight, and adaptive strategy, and it outlines implementation risks with corresponding mitigations. The paper does not report new empirical data; its contribution is conceptual, offering a structured basis for future empirical testing and for practitioners designing enterprise-wide AI governance in healthcare.",
+  "link": "https://www.ssrn.com/abstract=7693003",
+  "score": 2,
+  "why": "Healthcare AI governance review, off-topic.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683358",
+  "source": "SSRN",
+  "title": "The SAVI Capital Model™ under RIMI and RIIR: Proof Before ScaleAn Executive Summary for Investors Who Read the Price Before the Design",
+  "abstract": "Argentina's Régimen de Incentivo para Medianas Inversiones (RIMI), Title XXIII of Ley 27.802, offers small and medium companies two-instalment depreciation of new movable capital goods and value-added tax refunds after three monthly periods, for investments invoiced between March 6, 2026 and May 19, 2028. This paper asks whether The SAVI Group can implement The SAVI Capital Model itself through that regime, with investors from the United States, the European Union and the United Arab Emirates, starting with one tranche of USD 9 million and growing organically to USD 200 million. It finds a lawful route and states its conditions. The small-business registry tests a foreign fund vehicle as an entity, never looking through it to its investors, and caps the assets of investment funds at ARS 3,438 million, about USD 2.24 million, so the portfolio company must register its first RIMI investment before the fund buys control. The test is one controlled company bought and expanded on a running site, held through a Delaware limited partnership under the Qualified Purchaser exemption and advised by a SAVI-owned exempt reporting adviser. On a 1.0% fee on invested capital, 20% carried interest above an 8% hurdle with no catch-up, a lean cost base and two classes, the commercial class receives 18.0% and the catalytic class 8.4%, against 18.4% for the same deal run conventionally; the workforce receives USD 3.14 million over five years. On a ladder to USD 200 million through further RIMI companies, the Régimen de Incentivo para Inversiones Relevantes (RIIR) if Congress enacts it, and the general regime, the pooled return is 13.9% against 19.0%. The sensitivities show that no reduction of the workforce's half buys the investor more than half a point, that cost and size drive the result more than the Model does, and that the investor's upside is capped near the Minimum Return to Capital under the clause of record. A separate offshore vehicle for Sylvanus AI appears only as a hypothetical. The SAVI Group offers the design and promises no return.",
+  "link": "https://www.ssrn.com/abstract=7683358",
+  "score": 1,
+  "why": "Single-country tax/investment legal memo.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]

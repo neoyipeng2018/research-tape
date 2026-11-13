@@ -6,6 +6,27 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Contextualizing Corporate Governance with AI Proxy Advice: Evidence from Proxy Contests</title>
+    <link>https://www.ssrn.com/abstract=7683760</link>
+    <description>Contextual AI proxy advice outperforms traditional advisor returns by six to seven percentage points in proxy contests.</description>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7683760</guid>
+  </item>
+  <item>
+    <title>Measuring Market Rationality: The Boundaries of an Information Ecology Health Index A Three-Layer Test of Explanation, Prediction, and Early Warning</title>
+    <link>https://www.ssrn.com/abstract=7686569</link>
+    <description>The Information Ecology Health Index explains but does not predict or warn about extreme volatility.</description>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7686569</guid>
+  </item>
+  <item>
+    <title>Conformal Risk Certificates for Portfolio Optimization Under Uncertainty: A Gated Reinforcement-Learning Approach</title>
+    <link>https://arxiv.org/abs/2611.14699</link>
+    <description>Gated conformal risk control removes all out-of-sample semantic limit breaches at a 100-basis-point return cost.</description>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.14699</guid>
+  </item>
+  <item>
     <title>BuySideFlow: A Point-in-Time Benchmark for LLM Agents in Investment Research</title>
     <link>https://arxiv.org/abs/2611.12966</link>
     <description>LLM agents pass result checks while violating point-in-time validity in half of audited runs.</description>
@@ -718,27 +739,6 @@
     <description>Residual-based credit allocation is exactly reproduced by a loss-budget control under the disclosed interface, so attribution adds no decision-relevant information.</description>
     <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2610.14750</guid>
-  </item>
-  <item>
-    <title>When does Model Capacity Help? A Natural Experiment in Signal-to-Noise using US and Indian Equity Markets</title>
-    <link>https://www.ssrn.com/abstract=7595679</link>
-    <description>In India&#x27;s thin, low-SNR market, added model capacity does not improve on a linear predictor that has a significant out-of-sample IC.</description>
-    <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7595679</guid>
-  </item>
-  <item>
-    <title>How Well Do LLMs Perform in Peer Review? Evidence from Finance and Accounting</title>
-    <link>https://www.ssrn.com/abstract=7607363</link>
-    <description>An LLM&#x27;s judgements of correctness predict top-three finance publication, but its judgements of significance carry no such information.</description>
-    <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7607363</guid>
-  </item>
-  <item>
-    <title>Mind the Gap: LLM Extraction of Climate Scenario Financial-Impact Disclosures and Their Pricing in Hong Kong Equity and Credit Markets</title>
-    <link>https://www.ssrn.com/abstract=7608119</link>
-    <description>Hong Kong equity returns and bond spreads show no visible response to climate-disclosure levels, at a minimum detectable three-day abnormal return of about 1.6%.</description>
-    <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7608119</guid>
   </item>
 </channel>
 </rss>

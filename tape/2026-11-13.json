@@ -1,0 +1,31 @@
+{
+ "date": "2026-11-13",
+ "scanned": 16,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7683760",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7683760",
+   "title": "Contextualizing Corporate Governance with AI Proxy Advice: Evidence from Proxy Contests",
+   "claim": "Contextual AI proxy advice outperforms traditional advisor returns by six to seven percentage points in proxy contests."
+  },
+  {
+   "key": "10.2139/ssrn.7686569",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7686569",
+   "title": "Measuring Market Rationality: The Boundaries of an Information Ecology Health Index A Three-Layer Test of Explanation, Prediction, and Early Warning",
+   "claim": "The Information Ecology Health Index explains but does not predict or warn about extreme volatility."
+  },
+  {
+   "key": "2611.14699",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.14699",
+   "title": "Conformal Risk Certificates for Portfolio Optimization Under Uncertainty: A Gated Reinforcement-Learning Approach",
+   "claim": "Gated conformal risk control removes all out-of-sample semantic limit breaches at a 100-basis-point return cost."
+  }
+ ]
+}
