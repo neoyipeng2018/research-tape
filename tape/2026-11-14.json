@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-14",
+ "scanned": 43,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7687481",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7687481",
+   "title": "Short Windows, Unmodelled Costs, Unknown Cutoffs: A Pre-Registered Evidence Audit of 91 LLM Trading Papers",
+   "claim": "Ninety-eight percent of LLM trading papers fail leakage controls because they do not test after training cutoffs."
+  },
+  {
+   "key": "10.2139/ssrn.7687261",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7687261",
+   "title": "Automating Asset Pricing Research: An Agentic Search for the SDF",
+   "claim": "An agentic system finds a stochastic discount factor with a 3.38 out-of-sample Sharpe ratio."
+  },
+  {
+   "key": "10.2139/ssrn.7684419",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7684419",
+   "title": "Drift-Resilient Explainable Graph Learning for Financial Fraud Detection: Joint Evaluation of Risk Calibration and Explanation Stability",
+   "claim": "A diagnose-then-act policy matches full retraining performance with 91 percent fewer retraining events."
+  },
+  {
+   "key": "10.2139/ssrn.7685372",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7685372",
+   "title": "Candidate Execution-Time Windows and Intraday Market Microstructure: Evidence from High-frequency Volume, Machine Learning, and Trading Tests",
+   "claim": "Prespecified execution windows are associated with statistically significant abnormal intraday trading volume."
+  },
+  {
+   "key": "10.2139/ssrn.7686023",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7686023",
+   "title": "Accounting-grounded Explainable Machine Learning for Financial Statement Misstatement Detection: Temporal Validation Using U.S. Public-Company Filings",
+   "claim": "Leaky evaluation protocols inflate misstatement detection AUC by up to 0.107 and reverse model rankings."
+  },
+  {
+   "key": "10.2139/ssrn.7686764",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7686764",
+   "title": "Decomposable Reward Modeling and Realistic Environment Design for Reinforcement Learning-based Forex Trading",
+   "claim": "Additional reward penalties do not consistently improve reinforcement learning trading performance."
+  }
+ ]
+}

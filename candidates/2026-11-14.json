@@ -1,0 +1,432 @@
+[
+ {
+  "key": "10.2139/ssrn.7687481",
+  "source": "SSRN",
+  "title": "Short Windows, Unmodelled Costs, Unknown Cutoffs: A Pre-Registered Evidence Audit of 91 LLM Trading Papers",
+  "abstract": "Papers on large-language-model (LLM) trading agents and alpha mining report Sharpe ratios that would be remarkable in any other part of empirical finance. We audit the evidence behind those numbers. Before coding a single paper we pre-registered a population of 91 papers from a curated corpus of LLM trading research, a ten-field coding rubric, an analysis script and five directional hypotheses, and committed all of them to version control. Every code is backed by a verbatim quote that a script checks against the paper's text, and a second, blind coder recoded a random 20%. Of the 75 papers with a trading test, 51% deduct no trading costs and only 9% model costs from data; the median test window is 12 months, and a quarter of windows are six months or shorter. Among the 51 papers whose test window is not known to lie after the model's training cutoff, 98% neither test after the cutoff, nor evaluate live, nor use a chronologically consistent model. Only 9% report a multiplicity-adjusted result, and just five papers combine deducted costs, a leakage control and a reported trial count. Two of the five hypotheses pass (short windows; uncontrolled look-ahead). Three fail: more papers report a trial count than we predicted, though most of those counts are repeated random seeds rather than the number of strategies searched; and the predicted links between headline Sharpe and test-window length, and between headline Sharpe and costs, are not detectable in the 13 papers that state a headline Sharpe in their abstract or conclusion. We release the codes, quotes and script, and propose a six-line reporting minimum.",
+  "link": "https://www.ssrn.com/abstract=7687481",
+  "score": 10,
+  "why": "Pre-registered audit finds most LLM trading papers lack rigor",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7687261",
+  "source": "SSRN",
+  "title": "Automating Asset Pricing Research: An Agentic Search for the SDF",
+  "abstract": "We automate asset pricing research using an agentic system, with the design guided by an economic model. Agents propose stochastic discount factors (SDFs) from financial ratios, estimate them through 1979, and evaluate them by the Sharpe ratio of their optimal portfolios over 1980-1989, without seeing later returns. The best SDF over 1980-1989 has an annualized Sharpe ratio of 3.38 in the out-of-sample period 1990-2023 and survives transaction costs. Across 5,000 proposed SDFs, Sharpe ratios in the two periods have a rank correlation of 0.86. Consistent with investors learning, return predictability weakens over time and is stronger around earnings announcements.",
+  "link": "https://www.ssrn.com/abstract=7687261",
+  "score": 9,
+  "why": "Agentic SDF search with out-of-sample Sharpe and costs",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7684419",
+  "source": "SSRN",
+  "title": "Drift-Resilient Explainable Graph Learning for Financial Fraud Detection: Joint Evaluation of Risk Calibration and Explanation Stability",
+  "abstract": "Graph neural networks detect organized payment fraud by exploiting shared cards, devices and e-mail accounts, yet deployed detectors face heterogeneous drift that erodes not only accuracy but also the calibration of risk scores and the stability of explanations. This paper presents a drift-resilient explainable graph-learning framework that evaluates and maintains these three properties jointly. A GraphSAGE detector is equipped with exact gradient×input attributions computed by forward-mode differentiation, which separate a transaction's own evidence from evidence propagated through the graph. A label-free monitor standardizes five statistics, namely feature, score, signed prior, decision-focused attribution and structural-reliance drift, against a reference null, and a Diagnose-Then-Act (DTA) policy maps them to the cheapest sufficient action: no action, label-free EM recalibration, delayed-label Platt refresh, or change-point-aware retraining. On FinDrift-G, an IEEE-CIS-style transaction-graph benchmark with ground-truth drift types and fraud mechanisms, each drift type leaves a distinct fingerprint: benign covariate drift drives the feature-PSI z-score to 1073 while PR-AUC stays at 0.909, whereas account-takeover drift reduces the recall of a static GraphSAGE from 0.89 to 0.13. Under harmful drift, DTA reaches a PR-AUC of 0.843 against 0.845 for retraining at every step while using 2.0 instead of 22.3 retraining events per stream, attains the lowest expected calibration error (0.77%), and it retrains only 1.0 times per stream when drift is absent or benign. Discrimination, calibration and explanation stability therefore need to be monitored together, and diagnosing the drift type, rather than merely detecting drift, determines the right maintenance action.",
+  "link": "https://www.ssrn.com/abstract=7684419",
+  "score": 7,
+  "why": "Graph fraud detection with drift evaluation",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7685372",
+  "source": "SSRN",
+  "title": "Candidate Execution-Time Windows and Intraday Market Microstructure: Evidence from High-frequency Volume, Machine Learning, and Trading Tests",
+  "abstract": "Fractional-share trading and commission-free brokerage applications have increased retail participation in the stock market. Prior findings show that retail order flow may contain information, respond strongly to investor attention, interact with institutional liquidity demand, and cluster around recurring intraday patterns. However, there is limited research directly examining whether broker-scheduled recurring-investment executions produce identifiable and economically meaningful market effects. This study investigates whether prespecified candidate execution-time windows are associated with abnormal intraday trading volume, whether those associations survive high-frequency controls and placebo tests, and whether the underlying volume dynamics are predictable or economically exploitable. The analysis comprises an event study of 8,343 hourly observations across nine equities and exchange-traded funds, with a separate minute-level panel. Fixed-effects interaction models, matched-clock placebo tests, ticker-assignment permutation tests, machine-learning models, and transaction-cost-sensitive trading backtests have been conducted. The hourly analysis finds that abnormal volume averaged 7.02% during execution windows and-1.18% outside them, which produced a statistically significant difference of 8.2 percentage points (t = 5.054, p",
+  "link": "https://www.ssrn.com/abstract=7685372",
+  "score": 7,
+  "why": "Intraday execution windows with controls and placebo",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7686023",
+  "source": "SSRN",
+  "title": "Accounting-grounded Explainable Machine Learning for Financial Statement Misstatement Detection: Temporal Validation Using U.S. Public-Company Filings",
+  "abstract": "Machine-learning detectors of financial statement misstatement discriminate well on raw statement items, but their rankings are difficult to justify in accounting terms and are usually evaluated under protocols that leak information across serial misstatements. We present AGEX, an accounting-grounded explainable detector that couples a library of 44 theory-derived risk indicators (accrual anomalies, earnings-cash divergence, revenue and asset quality, cross-statement articulation checks, and incentives) with peer anchoring inside operating-structure segments, theory-signed monotone gradient boosting, and a scalecontext view built on raw line items. The two views are fused by within-year rank averaging and explained with exact TreeSHAP attributions aggregated into indicator families. On 141,463 U.S. firm-years (1991-2014) labeled by SEC Accounting and Auditing Enforcement Releases, we adopt a label-maturity-aware protocol that trains on years up to T-2 and purges serial misstatement cases. Over the test years 2003-2011, AGEX attains a mean AUC of 0.732, compared with 0.720 for a tuned gradient-boosting model on raw items, 0.707 for RUSBoost, 0.668 for the F-score, and 0.551 for the M-score, and it has the smallest cross-year dispersion among trained models in 2003-2008. Leaky evaluation protocols inflate AUC by up to 0.107 and reverse model rankings. Monotone priors make all learned indicator effects consistent with accounting theory (60.3% without constraints) and raise the crossyear stability of explanations from 0.818 to 0.907 at a cost below 0.006 AUC. At a 10% inspection budget, AGEX captures 30.7% of misstated firm-years and at least one misstated year of 42.4% of enforcement cases.",
+  "link": "https://www.ssrn.com/abstract=7686023",
+  "score": 7,
+  "why": "Explainable misstatement detection with temporal validation",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7686764",
+  "source": "SSRN",
+  "title": "Decomposable Reward Modeling and Realistic Environment Design for Reinforcement Learning-based Forex Trading",
+  "abstract": "Reinforcement learning (RL) for foreign exchange (Forex) trading requires realistic execution modeling, interpretable reward design, and action spaces that respect market constraints. Existing approaches often simplify these aspects, limiting policy transparency and practical relevance. This paper presents a modular RL framework integrating three components: (1) a friction-aware execution engine enforcing anti-lookahead semantics-observations at close 𝑡 , execution at open 𝑡+1 , and markto-market at close 𝑡+1-while modeling spread, commission, slippage, rollover financing, and margintriggered liquidation; (2) a decomposable 11-component reward architecture with fixed, pre-specified weights and per-step logging, enabling attribution, ablation, and auditability; and (3) a 10-action discrete interface supporting scaling, reduction, closure, and reversal, with legal-action masking enforcing margin-aware feasibility during training and evaluation. Empirical evaluation on EURUSD training-split data reveals non-monotonic interactions among reward components, demonstrating that additional penalties do not consistently improve performance. The full reward configuration achieves a terminal training Sharpe ratio of 0.765 and cumulative return of 57.09%. Comparing action spaces, the extended 10-action interface increases cumulative return but reduces Sharpe relative to a conservative 3-action variant, revealing a return-activity trade-off under a fixed training budget. Scaling-enabled strategies consistently reduce drawdowns, with the combined configuration delivering the strongest endpoint performance. Supplementary diagnostics on GBPUSD, USDJPY, and AUDUSD exhibit qualitatively similar trends. These findings demonstrate the framework's diagnostic value and underscore the importance of controlled, interpretable design in RL-based financial systems.",
+  "link": "https://www.ssrn.com/abstract=7686764",
+  "score": 7,
+  "why": "Realistic Forex RL execution with transaction costs",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7688088",
+  "source": "SSRN",
+  "title": "Sixty Nights of Overnight Trading in Ten US ETFs, Measured Before the Exchanges Begin Overnight Sessions, With a Frankfurt Control",
+  "abstract": "On December 6, 2026 five US exchanges are due to begin trading 23 hours a day. Exchange-traded funds already make up most of the small overnight market that exists today, and in those hours the arbitrage that keeps an ETF's price at the value of its holdings does not operate: a creation or redemption placed at night is an order for the next day's net asset value, no indicative value is updated, and the only reference the exchanges will supply is a static band 20% either side of the close. This report measures how far prices move from that value in those hours, before the market changes. For ten US ETFs over sixty nights, every five-minute bar of overnight trading on Blue Ocean, the main overnight venue, was compared with a reference value built from the instruments that do trade through the night: index, Treasury and gold futures, bitcoin, and the yen and euro. The liquid funds trade at that value already, the S&P 500 fund within a median 2.4 basis points in every hour of the night, with no creation window open. The funds holding foreign stocks and corporate bonds mostly do not trade: in one five-minute slot in two hundred for Germany and one in eighteen for emerging markets. When the foreign funds do trade, the prints are forty to sixty basis points from the reference, and the evidence indicates that the reference is at fault, not the prints: the deviations predict the next morning's open, and for emerging markets more than two fifths of the distance disappears once the Asian sessions, which a futures-only reference ignores, are added. A reference value with two calibrated bands was built and tested out of sample. The band for where a fund will open covers at close to the promised rate. The band for where it should trade now is about ten times tighter for the liquid funds and holds only while volatility stays where it was calibrated. Four language models reading the night's news for the funds' holdings added no information beyond futures and the tape. A model choosing a fund's hedge instruments, scored on a held-out test, improved the fit for Germany and for investment-grade credit, and its emerging-markets proposal looked wrong only until the author's own measurement of it was corrected. A Frankfurt control, nine Xetra-listed funds on US indices priced every morning while New York is closed, trades within two to six basis points of futures-implied value on every listing, including listings that trade in a third of the quarter-hours. A closed underlying does not move prices away from value where a futures hedge trades. What the thin US funds lack at night is trading, and whether quoting obligations of the kind Frankfurt has would supply it is a question this data cannot answer and the December sessions may. Fourth report in the TieOutBench series (the suite report, DOI 10.2139/ssrn.7243025; the checker report, DOI 10.2139/ssrn.7611299; the options-redemption report, DOI 10.2139/ssrn.7655899). The code, the result files behind every table and a script that checks the tables against them: https://github.com/DimaMerc/TieOutBench (prototypes/overnight/).",
+  "link": "https://www.ssrn.com/abstract=7688088",
+  "score": 7,
+  "why": "Overnight ETF microstructure with reference value benchmark",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.16540",
+  "source": "arXiv",
+  "title": "Dynamic Scenario-Based Portfolio Optimization for Multi-Asset ETFs",
+  "abstract": "Portfolio outcomes may depend as much on trading restrictions as on how returns are modeled. We compared historical moving-window returns with conditional scenarios from ARMA--GARCH models and a Student-$t$ copula for 30 U.S.-listed exchange-traded funds. Matched mean--variance and conditional value-at-risk portfolios were evaluated under long-only and limited long--short bounds over 946 sessions. Historical portfolios had higher observed reward--risk ratios in most comparisons, but no paired difference remained significant after multiple-testing adjustment. Conditional scenarios did not consistently reduce realized downside risk. We distinguished changes in target weights from trades required to rebalance holdings after market movements. Relaxing the target-adjustment limit changed exposures, turnover, and some returns more than varying scenario count or seed in the examined tests. These findings suggest that assessments of conditional return inputs should consider portfolio constraints and trading requirements.",
+  "link": "https://arxiv.org/abs/2611.16540",
+  "score": 7,
+  "why": "ETF portfolio optimization, negative result, OOS testing.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.17072",
+  "source": "arXiv",
+  "title": "Reasoning Supervision and Capability Retention in LoRA Domain Adaptation",
+  "abstract": "Fine-tuning foundation models on financial data has a wide range of applications, including identifying event types from news, monitoring risk and compliance language, and answering questions over filings and earnings calls. In this setting, the main challenge is to improve task performance without degrading the generalization capabilities of the model. In this paper, we present an extensive set of ablations for fine-tuning Qwen3-8B with low-rank adaptation (LoRA). We compare three training regimes: (1) response-only LoRA, where the supervised response is the label alone; (2) single-adapter reasoning, where reasoning traces from a teacher model are included alongside the labels in the training loss; and (3) dual-adapter composite training, where separate LoRA adapters are trained on traces and labels. Response-only LoRA improves in-domain performance and leaves general capabilities near those of the frozen model. The in-domain change is largest for calibration and argmax accuracy. Under single-adapter reasoning, the in-domain metrics remain behind those of the response-only regime, while MMLU-Pro can rise slightly and the other retention benchmarks stay within ordinary variation. Dual-adapter composite training remains on the same side of this comparison and yields no further gain. Finally, we compress the teacher traces by summarizing them before training, and show that shorter summaries move calibration toward the response-only regime without reaching it.",
+  "link": "https://arxiv.org/abs/2611.17072",
+  "score": 7,
+  "why": "LoRA domain adaptation over financial text",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7687839",
+  "source": "SSRN",
+  "title": "Component-Based Machine Learning Forecasting of the Market Risk Premium",
+  "abstract": "Weak out-of-sample predictability of market risk premium comes from the aggregation bias, which destroys the covariance between forecasting errors and cross-sectional returns dispersion, as documented in Khmarskyi (2025), rather than from fundamental unpredictability. Decomposing the market portfolio into economically distinct subportfolios via rolling characteristic-based clustering, I show that sub-portfolio returns exhibit substantially stronger time-series predictability than the aggregate market portfolio. Using machine learning methods, I achieve out-of-sample R2 of 4.25% for the market portfolio returns at one-month forecast horizon above the prevailing-mean benchmark. The forecasting performance is independent of the underlying clustering basis and periods. The timing strategy, based on the forecasts, generated by sub-portfolio forecast combination approach delivers significant Sharpe ratio and improvements in the economic value.",
+  "link": "https://www.ssrn.com/abstract=7687839",
+  "score": 6,
+  "why": "ML market premium forecast, generic price predictor",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.16267",
+  "source": "arXiv",
+  "title": "Causals: An Open Knowledge Graph for Research on Causal Reasoning",
+  "abstract": "Applying causal knowledge to a new event requires connecting the event to relevant entities and the relationships through which its consequences may unfold. We present Causals, an open knowledge graph for research on this form of reasoning. Its initial release, constructed from news reports, contains 369,184 nodes and 1,272,418 edges linking reported events, organizations, commodities, financial instruments, and other entities. Structural relationships, observations, and attributed causal claims retain distinct semantics and links to source records. We describe the construction and representation of the resource and characterize its connectivity and multi-hop retrieval properties. Causals provides shared relational knowledge for studying how language models retrieve relevant context and apply mechanisms to particular events. The dataset is available under CC BY 4.0 at https://causals.org/, and we invite contributions to its ontology, records, and evidence.",
+  "link": "https://arxiv.org/abs/2611.16267",
+  "score": 6,
+  "why": "Open causal knowledge graph with financial entities, no baseline test",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.17329",
+  "source": "arXiv",
+  "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
+  "abstract": "Institutional portfolios operate under investment policy statements that specify asset allocation constraints, often conditioned on market regime information. Deep reinforcement learning has been shown to optimize financial performance but typically does not enforce rule compliance, making it unsuitable for real-world deployment. Existing neurosymbolic methods such as Probabilistic Logic Policy Gradient (PLPG) offer constraint-satisfying reinforcement learning (RL) via differentiable symbolic supervision but assume a finite, discrete action space. We present a PLPG-inspired continuous allocation method that estimates the probability that the policy's own executed action satisfies the investment mandate, using reparameterized Monte Carlo sampling, and adds it to the training objective. No post-hoc enforcement mechanism intercepts actions at inference time and compliance is learned by the agent. Audited directly on deterministic mean actions with no correction, the policy reduces violations of a six-rule regime-conditional mandate from 96-98% for unconstrained RL and 33.4% for a reward-penalty baseline to 4.8%, showing that a continuous-action neurosymbolic policy can substantially internalize a symbolic mandate.",
+  "link": "https://arxiv.org/abs/2611.17329",
+  "score": 6,
+  "why": "Neurosymbolic RL for investment mandate compliance",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.15646",
+  "source": "arXiv",
+  "title": "Idiosyncratic Market Effects in Global Time Series Momentum",
+  "abstract": "Time series momentum is a pervasive explanatory factor in financial markets whereby a market's recent historical average return positively predicts future returns. Recent applications of statistical learning augment the traditional linear model definition with a more descriptive global nonlinear factor model. We extend the work of \\citet{MoskowitzNonlinear} and demonstrate that models fit at the individual market level exhibit response curves that are distinct from the global factor model. We highlight the heterogeneity of forward market returns as a function of time series momentum and provide a framework that enables each feature-market pair to express its unique prediction behaviour. Empirical results demonstrate that, despite substantially smaller sample sizes, fitting nonlinear models to individual markets is a robust and often overlooked modelling approach that can result in a marginal improvement in out-of-sample performance.",
+  "link": "https://arxiv.org/abs/2611.15646",
+  "score": 5,
+  "why": "Nonlinear time-series momentum by individual market",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.15657",
+  "source": "arXiv",
+  "title": "Global Seasonality Factor Investing",
+  "abstract": "We study seasonality as a factor for predicting risk-adjusted returns across global futures markets. We document five seasonality anomalies that, in aggregate, are pervasive across bond, commodity and equity markets. We demonstrate that each seasonality factor produces excess returns that are not reasonably explained by established global time series carry, momentum and skewness factors. We apply recent innovations in statistical learning and fit nonlinear seasonality models at the individual market level, thereby allowing each feature-market pair to express its unique seasonal prediction pattern. We discuss candidate economic rationales for the existence and persistence of each seasonality anomaly. Walk-forward out-of-sample testing demonstrates that fast-moving seasonal patterns, such as day-of-week and day-of-month, produce strong gross performance but with extremely high turnover, resulting in negative performance net of transaction costs. In contrast, slower-moving seasonal patterns, such as day-of-quarter, day-of-half-year and day-of-year, produce positive gross performance and, with the exception of day-of-quarter, positive net performance. An equal-weight ensemble of seasonality models produces an out-of-sample Sharpe ratio that is competitive with, and uncorrelated to, established global time series factor portfolios. Empirical results demonstrate that adding seasonality to a global factor portfolio increases the out-of-sample Sharpe ratio by approximately $30\\%$ over the full evaluation period.",
+  "link": "https://arxiv.org/abs/2611.15657",
+  "score": 5,
+  "why": "Global seasonality factor with walk-forward testing",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.16484",
+  "source": "arXiv",
+  "title": "TAPES: Terminal Adjoint-Propagated Error Scheduling for Financial Diffusion Samplers",
+  "abstract": "Financial diffusion samplers are often reused with a small number of function evaluations (NFE) inside scenario and risk pipelines, where numerical time-grid error can distort terminal quantities such as covariances, tails, and drawdown proxies. We study offline grid construction for a frozen probability-flow ODE: the score network, conditioning, Euler solver, report normalization, and deployment NFE remain fixed. TAPES (Terminal Adjoint-Propagated Error Scheduling) estimates signed local defects by Richardson comparisons, transports them through the remaining discrete flow and a terminal-report adjoint, and optimizes the squared norm of their sum before a capped direct refinement. We show that this transported signed sum is the first-order terminal-report error and quantify, under an aligned-defect model, the inefficiency of diagonal criteria. Across six budgets on a regime-switching simulation and chronologically held-out Mag7 contexts, TAPES gives the lowest design- and audit-report errors in all 24 dataset--budget--report rows within the reported five-pipeline panel. Cross-budget mean relative audit-error reductions are about 10--11% on Regime-SV and about 1% on Mag7, with Bonferroni intervals excluding zero; all displayed winners persist under a doubled-resolution reference, and a small Regime-SV Heun probe preserves the TAPES-first audit ordering. TAPES changes only the offline schedule and retains the prescribed deployment NFE; claims concern numerical fidelity to frozen generators.",
+  "link": "https://arxiv.org/abs/2611.16484",
+  "score": 5,
+  "why": "Diffusion sampler grid optimization for finance",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7683994",
+  "source": "SSRN",
+  "title": "Agentic AI for Quantitative Investment Research: A Practitioner's Guide",
+  "abstract": "This paper is a practitioner's guide to agentic systems in quantitative investment research: what they are, how they should be built, and what a team must put in place before deploying them. A first wave of agentic systems has shown that agents can run the quantitative investment research process end to end. For deployment in production, however, research teams lack a standardised framework for using these systems safely and efficiently. Informed by a survey of 62 published agentic research systems, we derive a reference architecture from four stated conditions. It adapts a pattern established in the agent-systems literature, in which a system reasons in natural language and executes deterministically, and tailors it to quantitative research by defining where reasoning is needed and how much control each component requires. The result is two reasoning components, one designing the test and one reviewing the result, around a deterministic execution core, avoiding both over-generalised single agents and fragmented multi-agent designs. Building this requires redesigning research workflows around agent capabilities rather than mapping human processes onto agents step by step. A central concern is the balance between flexibility and control. Fixing the test design before any test is run, and counting every trial, preserves research integrity during delegated searches while still permitting genuine iteration. We further set out governance controls, principles for encoding research conventions as machine-readable skills, an illustrative readiness checklist, and the changing role and training of the researcher. Much of the critical preparation does not require autonomous agents and should be completed before deployment, giving research teams a practical roadmap towards agent-readiness.",
+  "link": "https://www.ssrn.com/abstract=7683994",
+  "score": 4,
+  "why": "Framework survey, no runnable system or code.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7684101",
+  "source": "SSRN",
+  "title": "Firm-level Data Assets and Inorganic Growth",
+  "abstract": "We study how the data revolution reshapes the market for corporate control through firms' accumulation of data assets. We develop new firm-year measures of data assets by combining an economic model with a finance-specialized large language model. These measures capture firms' data disclosure and the implied quantity and price of data capital. Since around 2010, data assets have expanded rapidly and become increasingly concentrated among large firms. Consistent with shock-induced merger theories, firms with greater data assets are more likely to become bidders, with the effect concentrated among large incumbent firms. We further show that data-asset-induced acquisitions are primarily defensive in nature: acquisition activity is stronger in industries populated by many small and medium-sized data firms and is associated with lower bidder announcement returns. In addition, data-rich firms have better information environments, market liquidity, and financing conditions, which provide a complementary channel through which data assets stimulate mergers. Our findings are robust to alternative proxies for data assets, omitted-variable tests, and instrumental-variable estimations. Overall, our evidence suggests that the data revolution may reshape the market for corporate control by promoting defensive and inorganic expansion, particularly among large incumbent firms.",
+  "link": "https://www.ssrn.com/abstract=7684101",
+  "score": 4,
+  "why": "LLM measurement tool, single-country M&A empirics",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7684107",
+  "source": "SSRN",
+  "title": "Artificial Intelligence Capital and Organic Growth: The Firm-Size Paradox",
+  "abstract": "Artificial intelligence (AI) capital is concentrated among larger firms, yet its positive association with organic investment is stronger among smaller firms. Using a firm-year measure of accumulated AI capital constructed from AI-skilled employment, market valuations, and a capital-accumulation framework, we examine organic investment among U.S. publicly traded firms. A one-standard-deviation increase in lagged AI capital is associated with 22.10% higher subsequent organic investment, measured by capital expenditures and R&D net of proceeds from asset sales. Instrumental variable estimates based on predetermined exposure to AI-intensive universities support the baseline finding. Despite larger firms' greater accumulation of AI capital, the estimated investment relation declines with firm size. Additional evidence links AI capital to greater stock-market liquidity, lower financing costs, and higher operating efficiency. These findings highlight a distinction between where technological capital accumulates and where it is most strongly associated with internal investment.",
+  "link": "https://www.ssrn.com/abstract=7684107",
+  "score": 4,
+  "why": "US firm-level AI capital empirics",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7684124",
+  "source": "SSRN",
+  "title": "Data Assets, Organic Growth, and Efficiency",
+  "abstract": "This paper investigates whether the data revolution promotes firms' organic investment at the firm level. Using newly developed firm-level measures of data assets, we document that data-rich firms undertake significantly more capital and R&D investment. Although data assets are concentrated among large firms, their relation with organic investment is substantially stronger among smaller firms. The organic interpretation of these investments is supported by evidence that data assets enhance investment efficiency, primarily by mitigating underinvestment. Consistent with an information-and-financing channel, greater data assets are also associated with better information environments, greater stock-market liquidity, and a lower cost of equity. The operating results also provide a useful contrast with prior evidence on AI and product innovation: greater data assets are associated with higher operating efficiency, lower operating costs, and higher productivity. The results are robust to alternative proxies for data assets and to instrumental-variable specifications. Overall, the evidence suggests that data assets are associated with stronger organic growth among smaller firms, despite being more heavily concentrated among large firms.",
+  "link": "https://www.ssrn.com/abstract=7684124",
+  "score": 4,
+  "why": "Firm-level data asset empirics, no transfer",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7684867",
+  "source": "SSRN",
+  "title": "Suppressing Sycophancy Cascades and Trauma Lock-In in Autonomous Financial Multi-Agent LLMs: Bounded Adversarial Deliberation, Exponential Time-Decay Episodic Memory, and Foundation Model OOD Veto",
+  "abstract": "Autonomous financial decision-making architectures powered by Large Language Model (LLM) ensembles and episodic verbal reinforcement learning (Reflexion / Retrieval-Augmented Generation) exhibit three structural cognitive pathologies when deployed across non-stationary market regimes: (1) Sycophancy Cascades (Herding Amplification), wherein sequential multi-agent debate induces conformist token generation that collapses cross-sectional stance variance and amplifies false-positive entries during speculative market tops; (2) Episodic Trauma Lock-In (Learned Helplessness in Lexical Memory), where retrieving historical stop-loss reflections via time-invariant BM25 similarity allows severe drawdown clusters from past bear markets to permanently dominate top-k context windows even after macroeconomic recovery, freezing capital in perpetual HOLD states; and (3) Time-Series Foundation Model Out-of-Distribution (OOD) Hallucination, where pre-trained zero-shot forecasters (Google TimesFM, Amazon Chronos) extrapolate bullish price trajectories on structurally insolvent equities experiencing institutional order-book distribution. Building upon the deterministic microstructure and factor ontology invariants established in Hashimoto (2026a), we formulate a unified mathematical framework to eliminate all three cognitive failure modes. First, we construct a Parallel Blind Orthogonal Evaluation Protocol paired with a Bounded Adversarial Debate Perturbation Operator (|dS_i|",
+  "link": "https://www.ssrn.com/abstract=7684867",
+  "score": 4,
+  "why": "Agent pathologies, theoretical, no backtest or data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.15619",
+  "source": "arXiv",
+  "title": "Parsimonious and Flexible Parameterizations for Realized Covariance Matrix Models",
+  "abstract": "Covariance models describe the dynamics of conditional covariance matrices as functions of past variances and covariances and are widely used to model the joint evolution of financial asset returns. Their specification faces two major challenges: the curse of dimensionality, whereby the number of parameters increases rapidly with the matrix dimension, and the need to ensure the positive definiteness of the estimated covariance matrices. Moreover, commonly used parsimonious parameterizations, such as scalar and diagonal specifications, fail to capture complex interactions among variances and covariances across assets and cannot accommodate the abrupt changes that often characterize financial markets. We propose a new class of parameterizations that reconciles parsimony with flexibility by allowing distinct, time-varying coefficients for each variance and covariance while requiring only a limited number of parameters. We derive sufficient conditions to ensure the positive definiteness of the resulting covariance matrices and assess the proposed approach through Monte Carlo simulations and an empirical application. The results show that the proposed models can capture complex dependence structures while preserving computational tractability.",
+  "link": "https://arxiv.org/abs/2611.15619",
+  "score": 4,
+  "why": "Covariance matrix parameterization theory, empirical clarity unclear",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.16471",
+  "source": "arXiv",
+  "title": "Accuracy Is Not Welfare: Evaluating AI Buyers under Strategic Price Complexity in a Synthetic Duopoly",
+  "abstract": "AI buying agents may alter sellers' incentives as well as consumers' decisions. In a synthetic duopoly, we evaluate price-comparison pipelines on a fixed menu and in empirical correlated-equilibrium games. Calculator assistance selects an optimal offer 84.00% of the time, versus 68.57% under verified-total disclosure, yet disclosure has a 20.14-unit higher consumer-worst equilibrium surplus. A frozen-strategy holdout comparison favors disclosure, while re-solving equilibria under scenario resampling produces a range spanning zero. These model-based results show why accuracy, loss severity, seller incentives, and welfare incidence require separate measurement.",
+  "link": "https://arxiv.org/abs/2611.16471",
+  "score": 4,
+  "why": "Synthetic duopoly, not real financial markets",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.16992",
+  "source": "arXiv",
+  "title": "Media Trading with Censored Auction Prices: A Stochastic Control and Reinforcement Learning Approach",
+  "abstract": "In real-time bidding, marketing agencies must balance campaign performance, transaction margins and the use of a finite advertising budget. A key difficulty is that market-clearing prices are typically observed only when bids are successful, so the information available for subsequent decisions depends on the bidding policy. We formulate this problem using a continuous-time stochastic control model with a latent price process. To construct a price signal, we consider parallel exploratory subcampaigns in which bids are randomized subject to an upper bound. Under a stylized cross-sectional sampling model, the resulting price estimator is consistent and satisfies a mean-square error bound of order $N^{-1}$, where $N$ is the number of exploratory observations. We then describe a model-based approach combining forward-equation calibration with Hamilton-Jacobi-Bellman policy iteration and a physics-informed neural network, alongside an entropy-regularized actor-critic approach based on observable information in a model-free setting. Synthetic experiments illustrate the estimator and the computational procedures. The framework clarifies the decision and information trade-offs faced by the agency, while distinguishing full-information benchmarks and estimated-price policies from the genuinely partially observed control problem.",
+  "link": "https://arxiv.org/abs/2611.16992",
+  "score": 4,
+  "why": "Real-time bidding auction, not financial markets",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.17170",
+  "source": "arXiv",
+  "title": "Improving Algorithmic Trading for BESS on Intraday Electricity Markets through Distributional Price Forecasts",
+  "abstract": "Grid-scale battery energy storage systems (BESS) are becoming increasingly important in short-term energy markets, where they help balance fluctuations in variable renewable generation. In many countries, the continuous intraday market is the most important wholesale market for BESS to monetize their flexibility. In this paper, we propose an extension to the myopic rolling intrinsic policy that incorporates intraday price forecasts tailored specifically to the BESS trading problem. While a large literature addresses intraday price forecasting, most existing work focuses on volume-weighted prices during the last hours of trading and consequently fails to capture the features most relevant to BESS trading. Our approach addresses this gap by introducing a novel target variable derived from the limit order book and its dynamics. The resulting forecasts are designed to inform the optimization about future profit opportunities while preserving computational efficiency and avoiding the burden of full stochastic optimization. In a realistic high-frequency simulation setting covering 2023 and 2024, our method improves profits by up to 42% over the naive rolling intrinsic formulation. We further analyze the relationship between forecast accuracy, stability, and financial performance, establishing a clear inverse relationship between accuracy and stability. Finally, we find evidence that BESS size and duration jointly influence both overall profitability and the marginal benefit of incorporating forecasts.",
+  "link": "https://arxiv.org/abs/2611.17170",
+  "score": 4,
+  "why": "BESS electricity intraday trading, not equities",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.17247",
+  "source": "arXiv",
+  "title": "Price-impact Martingale optimal transport",
+  "abstract": "Martingale optimal transport (MOT) provides model-independent bounds for option prices calibrated to vanilla options, assuming frictionless trading in the underlying. In this work, we consider the case where dynamic trading incurs quadratic temporary price impact. First, we prove a duality result for the superhedging price. In particular, the primal of the duality relaxes the strict martingale constraint by penalizing the deviation from a specific martingale. Second, for one asset and one trading period, we interpret this price-impact martingale optimal transport (PIMOT) as a weak optimal transport (WOT) problem, and provide a characterization in the spirit of Wasserstein projection. Finally, we justify that PIMOT is an interpolation between MOT and classical optimal transport (OT), and derive the convergence rate to both sides. Numerical examples with SPX option data show how the price bounds per claim depend on the order size.",
+  "link": "https://arxiv.org/abs/2611.17247",
+  "score": 4,
+  "why": "Option pricing theory with SPX examples",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7684544",
+  "source": "SSRN",
+  "title": "GPU-Based Securities: An Underwriting Framework for AI Compute Securitization",
+  "abstract": "AI compute infrastructure is attracting secured credit, but investors lack a clear framework for tranched GPU claims. We model a static pool of installed GPU servers financed by a bankruptcy-remote issuer, using public rental quotes, resale evidence, financing transactions and operating disclosures as of September 11, 2026. Observed financings are loans, not issues of the modeled securities. Contractual minimum payments, merchant revenue, fixed costs and collateral recovery are modeled separately. Across 12,000 simulated paths, baseline expected principal losses are 0.09% for senior and 9.2% for mezzanine claims. Moderate commercial stress raises these losses to 0.43% and 21.3%. In 98.6% of baseline paths, the mezzanine bullet remains unpaid at month 48 and requires an extension of up to 12 months. Comparisons of immediate sale, continued operation and conditional refinancing identify rental and cost conditions supporting prudent leverage. The framework supports practical credit underwriting rather than predicting traded security returns.",
+  "link": "https://www.ssrn.com/abstract=7684544",
+  "score": 3,
+  "why": "GPU securitization framework, off-topic for LLM finance",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7684883",
+  "source": "SSRN",
+  "title": "Who Audits the Machine? Generative AI, Auditor Challenge and the Quality of Accounting Estimates A Research Design and Pre-Analysis Plan",
+  "abstract": "Generative AI is entering audit firms faster than the evidence on what it does to audit quality. Regulators have started to respond: the PCAOB's staff reports use concentrated in administrative and research tasks, and the UK Financial Reporting Council (FRC) issued guidance on generative and agentic AI in audit in March 2026, which it describes as the first of its kind from an audit regulator. Both say that responsibility for audit quality stays with the auditor. Prior research finds that AI investment by audit firms is associated with fewer restatements, lower fees and fewer junior staff (Fedyk et al., 2022), and that auditors discount contradictory evidence from an AI system more than the same evidence from a human specialist (Commerford et al., 2022). Neither study covers the generative systems now being deployed, or asks whether auditors challenge management's most judgemental estimates harder or less hard when a machine is in the loop. This paper proposes a two-module design. An archival module relates auditor AI intensity and client AI use to the quality of estimates, the specificity of audit-report language and audit effort. A controlled experiment with practising auditors separates algorithm aversion from automation bias. The design is explicit about a timing problem: losses for the generative-AI period have not yet been realised, so the test of estimate accuracy is staged. It states four archival and two experimental hypotheses, one exploratory question, a pre-analysis plan, and decision rules under which the answer could be that AI changes little. It reports no results.",
+  "link": "https://www.ssrn.com/abstract=7684883",
+  "score": 3,
+  "why": "Pre-analysis plan only, no results yet",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7685808",
+  "source": "SSRN",
+  "title": "AI and Technical Debt: Evidence From 4 Billion Lines of Code",
+  "abstract": "We examine whether generative artificial intelligence (AI) speeds up software development at the expense of code quality. Our novel monthly panel tracks 1,459 corporate public software projects from 2022 to 2026, covering 3.9 billion lines of source code. An industry-standard tool identifies maintainability issues, bugs, and security vulnerabilities in each monthly snapshot of the code. We convert its estimated repair time into a dollar measure of technical debt, the future cost of resolving maintainability issues. We compare code quality changes around first detected AI use with changes at comparable projects where we have not yet detected AI use. Contrary to concerns about \"AI slop,\" total issues per line decline by 1.4%, bugs per line by 2.1%, and technical debt per line by 0.7% of their averages before detection. Quality gains concentrate in projects with weaker development practices before AI use. We also find that issues per unit of software functionality decline relative to comparison projects. Together, the findings link detected AI use to faster growth in firms' software assets and a lower engineering burden relative to both code volume and software features.",
+  "link": "https://www.ssrn.com/abstract=7685808",
+  "score": 3,
+  "why": "AI code quality in software projects, not finance",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7687926",
+  "source": "SSRN",
+  "title": "HARDER, BETTER, FASTER, STRONGER: HUMAN VALUE IN AI-MEDIATED ACCOUNTING",
+  "abstract": "The integration of Artificial Intelligence (AI) into accounting and financial decision-making has been widely evaluated for its technical feasibility and its impacts on work. However, it remains uncertain how professionals perceive their own value in this context. This study investigates the different ways in which accounting and finance professionals conceive of human value within a decision-making culture mediated by AI. Based on professional identity theory, technological unemployment theory, and Polanyi's tacit knowledge, a phenomenographic research was conducted with eleven semi-structured interviews with organizational leaders, finance professionals, and educators. The analysis revealed five hierarchically inclusive categories of human value: residual efficiency, verification, contextual and affective tuning, ethical curation, and reflective authorship. Additionally, the Paradox of the Junior is presented, indicating that automating initial professional learning tasks can interrupt the acquisition of tacit knowledge, risking the formation of superficial specialists. The article redefines human value as a construct with five dimensions and expands the Technological Unemployment Theory from a stock logic to a flow logic, focusing on the reproduction of expertise.",
+  "link": "https://www.ssrn.com/abstract=7687926",
+  "score": 3,
+  "why": "Qualitative interview study on professional identity",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7688245",
+  "source": "SSRN",
+  "title": "Artificial Intelligence and the Measurement of Human Capital",
+  "abstract": "Observed performance in knowledge-intensive tasks reflects both genuine effort and substitution of effort to artificial intelligence (AI), neither of which is directly observed. This paper shows that relative substitution of effort to AI is identifiable from observed performance measures. Identification relies on matching tasks where the use of AI is allowed to comparable tasks performed in controlled environments where the use of AI is reliably restricted. As a proof-of-concept, the framework is implemented in a small higher education setting but can be extended to any knowledge-intensive workplace. The results suggest that the use of AI in knowledge-intensive tasks creates a mismatch between observed performance and underlying human capital. This introduces a measurement error in performance, compressing its observed distribution relative to the underlying distribution of human capital, and carrying implications for the design of tasks in environments where effort is unobservable, but performance outcomes depend on the use of AI.",
+  "link": "https://www.ssrn.com/abstract=7688245",
+  "score": 3,
+  "why": "AI effort substitution measured in education setting",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7688378",
+  "source": "SSRN",
+  "title": "Responsibility Without Control: Supervising Third-Party AI Trading Agents on Retail Brokerage Platforms",
+  "abstract": "Since May 2026, retail investors in the United States can connect AI agents built by outside developers to a brokerage account and let those agents place orders. The broker that hosts the connection tells customers it does not control, supervise or audit the agents. Regulators in the European Union and the United Kingdom have said the opposite about who answers for third-party trading systems: the firm does. This paper argues that the conflict exposes a condition I call responsibility without control. The rules assign the duty to the broker, while the platform design puts the trading decision inside a system the broker cannot inspect, test or stop. I map eighteen US, EU and UK provisions that govern supervision, algorithmic trading, recordkeeping and conduct. Fourteen of the eighteen anchor accountability on one of two decision-makers: a registered person who decides, or a fixed algorithm with a known developer. A customer-connected agent is neither. The other four provisions see the order without the decision behind it, or reach the harm without giving the broker a way to prevent it. I then propose four Platform Agent Controls that a broker can run with machinery it already operates. They are a named Agent Principal for each integration, an Authority Envelope enforced as a pre-trade check, a Decision Provenance Record for each agent order, and Drift Re-attestation after any model change. India's 2025 retail algorithmic trading framework shows that a regulator can already ask brokers for most of this. Three hypothetical failures show where current rules miss each failure and which control catches it.",
+  "link": "https://www.ssrn.com/abstract=7688378",
+  "score": 3,
+  "why": "Regulatory mapping of third-party AI trading agents",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.15298",
+  "source": "arXiv",
+  "title": "Quantum Recurrent Architectures for Financial Time Series Prediction",
+  "abstract": "This study evaluates quantum classical hybrid recurrent architectures for financial time-series forecasting: a Quantum Long Short-Term Memory (QLSTM) network and Quantum Reservoir Computing (QRC) with lag-based inputs. Classical lag vectors are encoded into quantum states via amplitude encoding, which compactly represents normalized observations but requires nontrivial state preparation; the QLSTM gates and the QRC reservoir are implemented with parameterized quantum circuits, while classical optimizers train the interface and readout layers. On a monthly revenue series extended to 1056 months by a Gaussian-process--hidden-Markov generator, with a fixed chronological 70/15/15 split and one-step-ahead forecasts, we compare both models against a full-size LSTM, a classical control matched in parameter budget and interface architecture, a small plain LSTM, and classical reservoir computing, over ten seeds and against persistence, seasonal-naive and SARIMA benchmark forecasts. The QLSTM, with 2,105 parameters, is statistically indistinguishable from an LSTM 126 times larger, but equally indistinguishable from the matched classical control and from a plain LSTM of the same budget, so its parameter efficiency cannot be attributed to the quantum circuits. The quantum reservoir is worse than a classical reservoir of equal feature dimension in all ten seeds and worse than SARIMA, whereas all recurrent models and both classical reservoirs improve on SARIMA by about 2\\% in RMSE. In a 24-month rolling-origin backtest the classical LSTMs degrade more slowly than the QLSTM. We find no evidence of a quantum accuracy or parameter-efficiency advantage in this low-dimensional setting.",
+  "link": "https://arxiv.org/abs/2611.15298",
+  "score": 3,
+  "why": "Quantum time series on synthetic data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.17186",
+  "source": "arXiv",
+  "title": "Cortex-FL: Agent-Mediated Collaboration for Federated Learning",
+  "abstract": "Federated learning (FL) enables independent data owners to train models collaboratively without centralizing raw data. However, identifying collaborators, preparing training tasks, and coordinating execution and incentives hinder its practical adoption by organizations without specialized expertise. We present Cortex-FL, an agent-native FL system that enables users to express learning objectives in natural language and delegate the collaboration required to train a model. Agents translate these objectives into shared tasks, discover collaborators, and negotiate participation agreements, connecting collaboration formation with distributed training and incentive management. The architecture separates agent coordination from local execution authority, allowing owners to delegate coordination while retaining control over their data, computation, and financial commitments. We demonstrate the complete workflow on a four-node deployment, in which a model requested in natural language proceeds through collaboration formation, contract-governed training, verified model delivery, and x402 settlement on a blockchain testnet.",
+  "link": "https://arxiv.org/abs/2611.17186",
+  "score": 3,
+  "why": "Agent-mediated federated learning system, not finance-specific",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7684102",
+  "source": "SSRN",
+  "title": "Explaining The Black Box After the Guidance: Adverse Action Notices for AI Credit Models Under Ecoa and Regulation B",
+  "abstract": "Machine learning underwriting and alternative data are no longer new concepts in consumer lending, they are part of its infrastructure. What has changed is the regulatory scaffolding around them. Between May 2025 and July 2026, the Consumer Financial Protection Bureau (CFPB) withdrew its guidance on adverse action notices for complex algorithms and amended Regulation B to disclaim disparate-impact claims under the Equal Credit Opportunity Act (ECOA), while the banking agencies stopped examining for disparate impact and made their model risk guidance expressly non-binding. This paper argues that none of these changes altered the core legal command of algorithmic credit transparency. A creditor that takes adverse action must disclose the specific, principal, and accurate reasons for it, and what has changed is who decides how that command is met. The stakes run in both directions. For consumers, the notice is often the only window into an automated decision about their access to housing, education, and opportunity, and the only way to learn what went wrong and how to fix it. For lenders, accurate notices are the most accessible evidence of fair, well-governed underwriting at a time when accountability has moved from federal examiners to courts, states, and private litigants. In this environment of de facto self-regulation, this paper proposes a sixpart Reason Integrity Framework that lenders can adopt to produce adverse action notices that are accurate, specific, contestable, and defensible, and to keep fair lending risk visible even where federal supervisors no longer look for it.",
+  "link": "https://www.ssrn.com/abstract=7684102",
+  "score": 2,
+  "why": "Legal regulatory paper, no ML implementation",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7685998",
+  "source": "SSRN",
+  "title": "Accounting for AI-generated Assets and Internally Developed AI Systems",
+  "abstract": "The growing use of artificial intelligence (AI) raises important questions about the recognition, measurement and disclosure of AI-related resources in financial statements. This study examines the accounting implications of AI-generated assets and internally developed AI systems, with particular reference to IAS 38 Intangible Assets. Adopting a qualitative, literature-based research design, the study analyses secondary data from accounting standards, academic literature and authoritative publications using thematic analysis. The findings indicate that existing accounting requirements provide a basis for reporting qualifying AI-related resources, but their application presents challenges concerning identifiability, control, the distinction between research and development expenditure, and reliable cost measurement. Technological changes also create difficulties in assessing useful lives and impairment. The study concludes that improved project documentation, cost-tracking systems and more informative disclosures are necessary to enhance the reliability and comparability of financial reporting for AI-related resources.",
+  "link": "https://www.ssrn.com/abstract=7685998",
+  "score": 2,
+  "why": "Qualitative accounting paper on AI intangible assets",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.15211",
+  "source": "arXiv",
+  "title": "Least Expensive Standard Pensions",
+  "abstract": "The paper proposes generating annuity payment streams at far lower costs than those implied by traditional theories. For a given investment universe, this enables the design of a least expensive standard pension, providing accurate monthly payments of savings account units over a set period. Such a standard pension invests dynamically in the savings account and the equity market's growth-optimal portfolio to replicate riskless payments with high accuracy at the lowest possible cost. Since this mathematically grounded standard pension is reliable and, by orders of magnitude, less expensive than traditional pensions, it provides a unique opportunity to improve the health of pension systems and provide more benefits for retirees.",
+  "link": "https://arxiv.org/abs/2611.15211",
+  "score": 2,
+  "why": "Mathematical pension design without data or implementation",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.15564",
+  "source": "arXiv",
+  "title": "A high-order recombination algorithm with adaptive scale selection for weak approximation of stochastic differential equations",
+  "abstract": "High-order recombination keeps weak approximation trees of diffusions small by a moment-preserving reduction of the measure on each patch of nodes. The weighted Litterer--Lyons (WLL) test of Ninomiya and Shinozaki sets the patch scale using a scalar \\(λ>0\\) chosen beforehand, whose appropriate value depends on coordinate units. First, the anisotropically weighted Litterer--Lyons (AWLL) rule selects the scale during recombination within a bounded factor of the measured increment amplitude. On a fixed set of nodes, expanding coordinate units leaves the AWLL patch-count bound unchanged but raises the WLL lower bound as a power until saturation. In Heston and shifted Stochastic-Alpha-Beta-Rho (sSABR) systems with initial price or forward rate 100, AWLL reduces the terminal supports of WLL with \\(λ=1\\) by factors of 137 and 1488 at comparable errors, but enlarges them at smaller Heston initial prices. Second, \\(λ\\) is extended to a positive definite matrix with a joint error bound for prices and sensitivities, a bound on the gain of its shape, and patch-count bounds. Third, the elimination stage of batched basis exchange requires \\(O(J)\\) arithmetic operations for \\(J\\) nodes at fixed moment rank and panel width, against \\(Θ(J^{3})\\) for the direct kernel update of Ninomiya and Shinozaki.",
+  "link": "https://arxiv.org/abs/2611.15564",
+  "score": 2,
+  "why": "SDE numerical methods, not financial ML",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.16495",
+  "source": "arXiv",
+  "title": "Verifiable Settlement and Pricing for Local Energy Markets: Architecture and Deployment on Hyperledger Besu",
+  "abstract": "We implement privacy-preserving local electricity exchanges using an automated market maker on the Hyperledger Besu network under QBFT consensus. The proposed protocol operator collects individual electricity positions off-chain and publishes aggregate supply and demand on the blockchain, where smart contracts compute market prices every fifteen minutes. Individual positions remain off-chain; Poseidon2 commitments and UltraHonk zeroknowledge proofs, generated from Noir circuits, verify aggregation, payments, and daily balance updates. The architecture retains community coordination while making financial execution independently auditable. Signed receipts and member-triggered recourse prevent unverified or partial settlement. In a ten-household experiment using simulated US residential profiles, daily settlement uses approximately 19 million gas and produces eight-member proofs in 2.4 seconds. Over four simulated days, local trading covers 34.4% of demand and reduces grid-only costs by 30.5% under assumed tariffs. Numerically computed __-Nash Equilibrium electricity profiles capture 83-88% of the social planner surplus.",
+  "link": "https://arxiv.org/abs/2611.16495",
+  "score": 2,
+  "why": "Blockchain settlement for local energy markets",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.16726",
+  "source": "arXiv",
+  "title": "From Data to Wisdom: Rethinking AI Through an Epistemic Lens",
+  "abstract": "This paper proposes the Data-to-Wisdom Epistemic Architecture for AI (EAAI), a conceptual framework treating Data, Information, Knowledge, Understanding and Wisdom as five distinct but recursively interacting epistemic functions: observation, contextual interpretation, modeling and prediction, critical evaluation and informed judgment. Two observations motivate it: sequential readings of the Knowledge Pyramid obscure how these functions interact, and a targeted review of ten Bayesian reference books finds that prior distributions are defined mathematically while \"prior information\" and \"prior knowledge\" are not consistently distinguished as epistemic categories. A Bayesian interpretation relates the likelihood, prior and posterior distributions, posterior prediction, model checking and decision analysis to the five functions, without limiting EAAI to Bayesian systems. Extending \"prior\" in an epistemic sense, the paper distinguishes five kinds of prior context that can shape the model, the likelihood, the prior, evaluation and action. Three worked applications -- quantitative financial risk, actuarial modeling in health insurance and agentic AI for medical reimbursement claims -- show how EAAI structures the analysis of model assumptions, evidence interpretation, validation, dependencies and decision consequences, separating the prediction of a risk, the appraisal of its reliability and the justification of action. It draws implications for AI and machine learning, including evaluation by function, treating intermediate model outputs as evidence open to challenge and separating generation from appraisal, and compares EAAI with work on DIKW, Bayesian workflow, AI evaluation and risk governance. Its contributions are an epistemic vocabulary with recursive relationships, a more accessible reading of Bayesian methodology, a typology of prior context and clearer methodological terminology.",
+  "link": "https://arxiv.org/abs/2611.16726",
+  "score": 2,
+  "why": "Conceptual epistemic AI position paper",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.15391",
+  "source": "arXiv",
+  "title": "Gatheral's Conjecture: General sufficient conditions for refutation",
+  "abstract": "In this paper we give general sufficient conditions for a stochastic volatility model to be a counterexample for Gatheral's conjecture. The conditions, achieved by asymptotic properties of integrated variance derivatives and Wiener chaos expansions, show that a general class of rough volatility models are generally counterexamples to Gatheral's conjecture. For stochastic volatility models with Markovian variance, the conjecture fails under a relationship on the coefficients of the SDE defining the variance process. Particular examples are provided.",
+  "link": "https://arxiv.org/abs/2611.15391",
+  "score": 1,
+  "why": "Pure stochastic volatility theory, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.16087",
+  "source": "arXiv",
+  "title": "Convergence rates for truncated and discretised signature expansions",
+  "abstract": "Linear expansions in Brownian Stratonovich signatures, which originate in stochastic Taylor expansions, are increasingly used to represent and model processes with memory. Their numerical use requires truncating the signature at a level $M$ and discretising the driving path along $N$ steps. Under a simple growth condition on the coefficients of the linear expansion, we establish strong and weak convergence rates for both approximations, uniformly in time. The strong truncation error decays like $(B^M/(M!)^\\varepsilon)^a$ for some constant $B$, uniformly in $N$, where $\\varepsilon$ measures the growth of the coefficients and $a$ the regularity of the test function; the weak error does not improve on it. The discretisation error is of order $N^{-a/2}$ in $L^p$, and $N^{-1}$ weakly for polynomial test functions, uniformly in $M$. All these rates are sharp for polynomial test functions, and $M$, $N$ can be chosen independently. We extend the estimates to errors in probability, on distribution functions and on risk measures, and illustrate them on stochastic delay equations, Volterra processes and option pricing in signature volatility models.",
+  "link": "https://arxiv.org/abs/2611.16087",
+  "score": 1,
+  "why": "Pure signature expansion convergence theory",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.16129",
+  "source": "arXiv",
+  "title": "Novel Esscher concepts for informational risks and valuation in market models under random horizon",
+  "abstract": "This paper considers the setting constituted by the triplet $(S,\\mathbb{F},τ)$. The pair $(S,\\mathbb{F})$ is the initial model where $S$ is the discounted price process of risky assets (Stocks) and $\\mathbb{F}$ is the ``public\" flow of information that is available to all agents over time. $τ$ is an arbitrary random time, which might not be seen through the flow $\\mathbb{F}$, and it represents a default time in credit risk and a death time of an insured in life insurance where mortality and/or longevity risks present serious challenges. For simplicity, we suppose $S$ follows a geometric jump-diffusion model with stochastic volatiles and $\\mathbb{F}$ is generated by a Brownian motion and Poisson process. In this setting, we address how the Esscher densities and/or measures notions can evolves with the informational risk induced by $τ$. In fact, we introduce the notion of Esscher with degrees-of-freedom associated to the informational risks generated by $τ$. On the one hand, we give various and complete characterizations of these Esscher notions in our informational setting. On the other hand, we fully characterize the Escher-prices bounds, for vulnerable claims (claims built on the occurrence of $τ$), using constrained backward stochastic differential equations (CBSDEs for short hereafter) that appear to be novel as well.",
+  "link": "https://arxiv.org/abs/2611.16129",
+  "score": 1,
+  "why": "Pure Esscher measure theory, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.16429",
+  "source": "arXiv",
+  "title": "On the continuity of martingale optimal transport in higher dimensions",
+  "abstract": "We investigate qualitative and quantitative continuity of martingale optimal transport under perturbations of both marginals in dimensions $d\\geq2$. We assume that each pair of marginals admits a reference martingale coupling whose density relative to the product of its marginals is bounded above and away from zero, uniformly along the sequence. If the limiting target measure is not carried by a hyperplane, we prove continuity under $W_1$-convergence for continuous costs of at most linear growth, assuming only finite first moments. For Lipschitz costs, a uniform $p$-moment bound on the targets, $p>1$, yields an explicit stability estimate with exponent $(1-1/p)/2$; uniformly bounded target supports give exponent $1/2$. The proof constructs a correction of couplings with small martingale bias while preserving both marginals. Truncated moment corrections allow the target measure to have unbounded support. The construction also shows that every martingale coupling of the limiting marginals can be approximated in $W_1$ by martingale couplings of the approximating marginals. We also discuss counterexamples showing that neither the uniform density condition nor non-degeneracy of the limiting target measure can be omitted in general.",
+  "link": "https://arxiv.org/abs/2611.16429",
+  "score": 1,
+  "why": "Pure martingale optimal transport theory",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
