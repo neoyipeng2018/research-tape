@@ -1,0 +1,52 @@
+[
+ {
+  "key": "10.2139/ssrn.7689081",
+  "source": "SSRN",
+  "title": "Tycheon: Calibrated Uncertainty, Risk Translation and Leakage-Guarded Evaluation for Financial Time-series Foundation Models",
+  "abstract": "Time-series foundation models such as Kronos, TimesFM and Chronos can produce a plausible future price path from a short history. They do not tell the user how far to trust that path, whether their intervals hold up out of sample, or what the path means for the risk numbers that a risk desk reads. This paper describes Tycheon, an Apache-2.0 open-source library that adds that missing layer. Tycheon enforces point-in-time data access with two clocks per observation, wraps any forecaster in conformal calibration whose status is earned on a holdout, translates calibrated sample paths into Value at Risk, Expected Shortfall, drawdown probabilities and stress scenarios, and scores every model with a leakage-guarded walk-forward engine against a mandatory random-walk baseline and a Diebold-Mariano test. We report two results and are explicit about their limits. First, on a small synthetic benchmark (3 series, 108 pooled forecast origins), no model, including zero-shot Kronos-mini, was statistically distinguishable from the random walk, and Kronos-mini's nominal 90% interval contained 57.4% of outcomes. Second, a single manual check on real daily equity data showed that two-sided conformal calibration fitted on 60 recent origins reduced a 5-day 95% VaR from 5.38% to 3.93%, about 27%, making the position look safer than it was. We describe the resulting design rule, that calibration may only widen the tails used for risk figures, and its consequences. Multi-asset portfolio risk is always labelled uncalibrated, because the dependence between assets is assumed. Neither result is evidence about forecasting skill in real markets. The contribution is infrastructure: a forecast contract, a calibration and risk pipeline, and an evaluation protocol that publishes results whichever way they fall.",
+  "link": "https://www.ssrn.com/abstract=7689081",
+  "score": 8,
+  "why": "Open-source library with OOS evaluation and leakage guards.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7687244",
+  "source": "SSRN",
+  "title": "Quantitative Stress Testing for AI Infrastructure Debt: A Non-Equilibrium Phase Transition Approach",
+  "abstract": "The growth of generative AI is constrained by high infrastructure costs and rising debt, driven by a widening gap between capital spending and enterprise revenue. Grounded in late-2026 empirical data, including the November U.S. tech rout, semiconductor investigations, and international equity drops like the STAR 50 crash, along with reports from the International Monetary Fund, Gartner, and S&P Global, this study investigates macroeconomic risk simulation for the technology sector. A multi-factor systemic risk and phase transition framework is established by combining an enhanced 7-factor macroeconomic stress model with a novel Hybrid Quantum Reservoir Computing (nHQRC) architecture. By modeling circular vendor financing, credit default swap spreads, bank backlogs, power grid limits, hardware obsolescence, and private credit strain, the model simulates a 36-month timeline of systemic risk and multi-trillion-dollar asset impairments ($3.5 trillion to $4.0 trillion USD exposure). Evaluating three progressive configurations, ranging from a legacy 3-factor baseline to an enhanced 7-factor deterministic model and the nHQRC phase transition engine, demonstrates why traditional linear models fail and how quantum-enhanced methods identify critical macroeconomic tipping points before 2029.",
+  "link": "https://www.ssrn.com/abstract=7687244",
+  "score": 3,
+  "why": "Macro stress theory, no code, not actionable for quants.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7689881",
+  "source": "SSRN",
+  "title": "A Framework for Integrating Artificial Intelligence into Transfer Pricing Administration",
+  "abstract": "Advances in artificial intelligence (AI) create an opportunity to reconsider how transfer pricing is administered. We propose a framework that combines standardized taxpayer information with AI-assisted economic analysis to lower the cost of transfer pricing administration and provide better tax certainty at earlier stages of the process. First, four standardized datasets, covering (a) functional and organizational information, (b) financial and transactional information, (c) pricing policies and methodologies, and (d) intercompany financial arrangements, would provide a common information base from which tax authorities could use AI to generate, at minimal cost, much of the documentation that large groups now prepare separately for each country. Second, AI-assisted evaluation of this information would let tax authorities examine positions early, identify differences in assumptions or conclusions, and engage with taxpayers before returns are filed. Building on existing cooperative compliance programs, we propose a Real-Time Certainty Agreement (RTCA) under which participating taxpayers could obtain early decisions that can be binding where the law allows. Taxpayers and tax authorities could also agree in advance on the calibration of methods and assumptions, so that their AI systems produce agreed and reproducible economic analyses. Disagreements would then narrow, lowering costs and giving greater certainty to both sides. Illustrative scenarios put the expenditure at stake at about US$3.7 million a year for a large group and about US$10 billion across the 8,700 groups in the OECD’s country-by-country statistics.1 We also examine implementation costs and the implications for fairness, international coordination, and national tax sovereignty.",
+  "link": "https://www.ssrn.com/abstract=7689881",
+  "score": 3,
+  "why": "Tax admin framework, no trading or LLM implementation value.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7687538",
+  "source": "SSRN",
+  "title": "Recent Applications of Large Language Models in Finance: A Survey",
+  "abstract": "The financial industry is being reshaped by the rapid adoption of Large Language Models (LLMs), now applied across tasks from credit scoring and fraud detection to regulatory compliance, market analysis, insurance processing, and corporate finance. In this survey, we provide a structured overview of recent LLM applications in finance, organizing the landscape into six key domains: banking and lending, capital markets and trading, auditing, compliance, insurance, and corporate finance. For each domain, we review the current state of research, highlight representative systems and methodologies, and discuss the capabilities LLMs bring. We identify six recurring themes: domain-specific adaptation, agentic and multi-agent architectures, hallucination and reliability in high-stakes settings, retrieval-augmented generation as the default grounding strategy, the latency budget of the surrounding business process, and a rapidly maturing evaluation infrastructure.",
+  "link": "https://www.ssrn.com/abstract=7687538",
+  "score": 1,
+  "why": "Survey explicitly rejected; no actionable method or code for practitioner.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7688085",
+  "source": "SSRN",
+  "title": "The New Architecture of Economic Power: Artificial Intelligence, Capital Concentration, and the Future of Global Competition",
+  "abstract": "Purpose-This paper examines whether the widespread use of artificial intelligence (AI) is accompanied by a corresponding diffusion of economic ownership and decision-making authority, or whether the concentration of capital and computing infrastructure may instead produce technological dependency and, ultimately, a loss of decision-making autonomy for firms. Design/methodology/approach-The study is conceptual and analytical. It integrates the theory of barriers to entry (Bain, 1956), transaction cost economics (Williamson, 1985), the switching-cost literature and corporate finance theory to analyse the AI value chain layer by layer. Secondary evidence is drawn from the OECD, the International Energy Agency, the US Federal Trade Commission (FTC), the UK Competition and Markets Authority (CMA) and the Stanford AI Index. Findings-The paper identifies a structural paradox in the AI economy: access to AI tools is becoming cheaper, while the infrastructure layers (chips, energy, data centres and cloud computing) are capital-intensive and concentrated. Its central contribution is a mechanism through which dependence on shared infrastructure and shared models may lead to the homogenisation of economic decisions. This effect is not deterministic; it depends on switching costs, competition among providers, open standards and human oversight. Originality/value-The paper connects the literature on competition in AI infrastructure with the literature on algorithmic monoculture, proposes five testable hypotheses with a measurement design, and argues that technological dependency risk should be treated as a distinct dimension of feasibility assessment for small and medium-sized enterprises (SMEs).",
+  "link": "https://www.ssrn.com/abstract=7688085",
+  "score": 1,
+  "why": "Conceptual theory, no data, implementation path, or financial ML method.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
