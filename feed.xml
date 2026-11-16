@@ -733,19 +733,5 @@
     <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2610.21659</guid>
   </item>
-  <item>
-    <title>Trading Costs and Machine-Learning Return Forecasts</title>
-    <link>https://www.ssrn.com/abstract=7617338</link>
-    <description>In U.S. stocks at $500 million, trading costs matter in portfolio construction, not the loss: spread-gated liquidity weighting lifts net Sharpe from -0.38 to 0.42.</description>
-    <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7617338</guid>
-  </item>
-  <item>
-    <title>Reading the News Without Hindsight: NoLBERT Topics and the Cross-Section of Stock Returns</title>
-    <link>https://www.ssrn.com/abstract=7617420</link>
-    <description>Benchmarking news attention shocks against 63 trading days instead of 5 raises out-of-sample rank IC for every news reader tested.</description>
-    <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7617420</guid>
-  </item>
 </channel>
 </rss>
