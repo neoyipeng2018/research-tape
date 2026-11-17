@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Can You Trust Your Finance Agent? Drift, Diagnosis and Auditable Intervention on One Shipped Financial Research Agent</title>
+    <link>https://arxiv.org/abs/2611.17939</link>
+    <description>Untuned finance agent run-to-run drift means cost optimization saves money while held-out accuracy gains fall inside measurement noise.</description>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.17939</guid>
+  </item>
+  <item>
+    <title>Evidence-Gated Self-Improvement in a Production Crypto Swing-Trading System: Rule Gates, Gradient Boosting, and an LLM Council</title>
+    <link>https://www.ssrn.com/abstract=7690438</link>
+    <description>Production crypto LLM gates reject most candidate models, leaving live per-trade edge far below headline backtests.</description>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7690438</guid>
+  </item>
+  <item>
+    <title>Remembered Markets: LLM Memorisation of US and Indian Stock Prices</title>
+    <link>https://www.ssrn.com/abstract=7692178</link>
+    <description>Backtests using LLM-recalled prices earn double-digit annual returns because models memorize pre-cutoff market moves.</description>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7692178</guid>
+  </item>
+  <item>
+    <title>When Does Brier-Reward RL Help a Small Language Model Forecast? Controlled Experiments on Kalshi Economic Markets</title>
+    <link>https://www.ssrn.com/abstract=7693362</link>
+    <description>Small language model Brier-reward RL improves forecasting only when group standard-deviation scaling is switched off.</description>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7693362</guid>
+  </item>
+  <item>
+    <title>Quality Uncertainty, Calibration Inversion, and Transaction-Cost Governance Boundaries in Autonomous Agentic Forecasting Markets</title>
+    <link>https://www.ssrn.com/abstract=7694338</link>
+    <description>Flat-fee LLM forecasts in prediction markets lose to a free base-rate benchmark as verbalized confidence inverts with accuracy.</description>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7694338</guid>
+  </item>
+  <item>
+    <title>TradeGauntlet: Evaluating Compliance Controls for Autonomous Trading Agents</title>
+    <link>https://arxiv.org/abs/2611.18493</link>
+    <description>Compliance gates that block self-crossing orders cut agent fill rates without proving the agent follows broader trading rules.</description>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.18493</guid>
+  </item>
+  <item>
     <title>Tycheon: Calibrated Uncertainty, Risk Translation and Leakage-Guarded Evaluation for Financial Time-series Foundation Models</title>
     <link>https://www.ssrn.com/abstract=7689081</link>
     <description>No model including zero-shot Kronos-mini was statistically distinguishable from a random walk on a small synthetic benchmark.</description>
@@ -697,41 +739,6 @@
     <description>Pre-meeting equity returns are learnable from FOMC minutes at out-of-sample R² 0.50, while the next policy-rate change shows no detectable text signal.</description>
     <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7626078</guid>
-  </item>
-  <item>
-    <title>Where Backtests and Live Trading Part Ways: Six Defects from One Intraday System</title>
-    <link>https://arxiv.org/abs/2610.21846</link>
-    <description>In one intraday US equity system, every backtest-live drift traced to two paths that should agree but had drifted apart.</description>
-    <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.21846</guid>
-  </item>
-  <item>
-    <title>What does a Rejection Mean? A Retrospective Audit of a Registered Trading-rule Archive</title>
-    <link>https://www.ssrn.com/abstract=7618885</link>
-    <description>Of 23 nominal exclusions among 210 rejected rules, 22 survive a training-series re-verification, yet all carry secondary stopping failures.</description>
-    <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7618885</guid>
-  </item>
-  <item>
-    <title>When Judges Agree and Are Wrong: Consistency-Accuracy Dissociation as a Blind Spot for Label-Free Evaluation</title>
-    <link>https://arxiv.org/abs/2610.21128</link>
-    <description>On four financial QA datasets, 60% of wrong answers sit in high-consistency regions, so agreement-based label-free evaluation misses confident errors.</description>
-    <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.21128</guid>
-  </item>
-  <item>
-    <title>How Much Screening Buys a Second? Speed, Selection, and the Maker&#x27;s Spread</title>
-    <link>https://arxiv.org/abs/2610.21510</link>
-    <description>A twelve-second maker must screen at least 84.5% of informed flow to match a one-second venue, versus 71.1% under a Gaussian model.</description>
-    <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.21510</guid>
-  </item>
-  <item>
-    <title>When Does &quot;Post-Call&quot; Begin? An Availability Contract for Earnings-Call NLP Benchmarks</title>
-    <link>https://arxiv.org/abs/2610.21659</link>
-    <description>Moving from call-start to completion proxy flips return signs for 9.4% of 552 earnings calls, so labels depend on the declared outcome clock.</description>
-    <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.21659</guid>
   </item>
 </channel>
 </rss>

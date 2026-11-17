@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-17",
+ "scanned": 45,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2611.17939",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.17939",
+   "title": "Can You Trust Your Finance Agent? Drift, Diagnosis and Auditable Intervention on One Shipped Financial Research Agent",
+   "claim": "Untuned finance agent run-to-run drift means cost optimization saves money while held-out accuracy gains fall inside measurement noise."
+  },
+  {
+   "key": "10.2139/ssrn.7690438",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7690438",
+   "title": "Evidence-Gated Self-Improvement in a Production Crypto Swing-Trading System: Rule Gates, Gradient Boosting, and an LLM Council",
+   "claim": "Production crypto LLM gates reject most candidate models, leaving live per-trade edge far below headline backtests."
+  },
+  {
+   "key": "10.2139/ssrn.7692178",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7692178",
+   "title": "Remembered Markets: LLM Memorisation of US and Indian Stock Prices",
+   "claim": "Backtests using LLM-recalled prices earn double-digit annual returns because models memorize pre-cutoff market moves."
+  },
+  {
+   "key": "10.2139/ssrn.7693362",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7693362",
+   "title": "When Does Brier-Reward RL Help a Small Language Model Forecast? Controlled Experiments on Kalshi Economic Markets",
+   "claim": "Small language model Brier-reward RL improves forecasting only when group standard-deviation scaling is switched off."
+  },
+  {
+   "key": "10.2139/ssrn.7694338",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7694338",
+   "title": "Quality Uncertainty, Calibration Inversion, and Transaction-Cost Governance Boundaries in Autonomous Agentic Forecasting Markets",
+   "claim": "Flat-fee LLM forecasts in prediction markets lose to a free base-rate benchmark as verbalized confidence inverts with accuracy."
+  },
+  {
+   "key": "2611.18493",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.18493",
+   "title": "TradeGauntlet: Evaluating Compliance Controls for Autonomous Trading Agents",
+   "claim": "Compliance gates that block self-crossing orders cut agent fill rates without proving the agent follows broader trading rules."
+  }
+ ]
+}
