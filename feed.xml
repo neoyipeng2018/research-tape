@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Does Deliberation Debias? Exogenous Reasoning Effort and Behavioural Finance Bias in Large Language Model Portfolio Advisors</title>
+    <link>https://www.ssrn.com/abstract=7691604</link>
+    <description>Reasoning effort compresses bias magnitude spread without lowering mean bias in LLM portfolio advisors.</description>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7691604</guid>
+  </item>
+  <item>
+    <title>ATLAS-Finance: Benchmarking AI Agents in Realistic Banking Environments</title>
+    <link>https://arxiv.org/abs/2611.22085</link>
+    <description>Frontier AI agents pass fewer than eleven percent of realistic investment-banking benchmark tasks.</description>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.22085</guid>
+  </item>
+  <item>
+    <title>The Only Edge Was Memorized in Training: LLM Trading Agents Around Earnings and Bad News</title>
+    <link>https://arxiv.org/abs/2611.22177</link>
+    <description>No LLM trading agent beats simple pre-earnings or post-bad-news bets without memorized training data.</description>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.22177</guid>
+  </item>
+  <item>
+    <title>AI-generated Investor Views and Portfolio Performance: Evidence from Black-litterman Optimization</title>
+    <link>https://www.ssrn.com/abstract=7691358</link>
+    <description>AI sector views from technical indicators beat market equilibrium until fundamentals or macro are added.</description>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7691358</guid>
+  </item>
+  <item>
+    <title>FinVerify: A Verification Framework for Financial Agents</title>
+    <link>https://arxiv.org/abs/2611.20423</link>
+    <description>Evidence-grounded verification raises financial-agent claim precision but shrinks gains when authoritative evidence is scarce.</description>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.20423</guid>
+  </item>
+  <item>
+    <title>Explaining Realized Returns: Roll&#x27;s $R^2$ 40 Years Later</title>
+    <link>https://arxiv.org/abs/2611.22277</link>
+    <description>Wall Street Journal stated reasons explain 30 to 40 percent of equity return variation out of sample.</description>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.22277</guid>
+  </item>
+  <item>
     <title>Can You Trust Your Finance Agent? Drift, Diagnosis and Auditable Intervention on One Shipped Financial Research Agent</title>
     <link>https://arxiv.org/abs/2611.17939</link>
     <description>Untuned finance agent run-to-run drift means cost optimization saves money while held-out accuracy gains fall inside measurement noise.</description>

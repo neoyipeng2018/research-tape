@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-18",
+ "scanned": 44,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7691604",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7691604",
+   "title": "Does Deliberation Debias? Exogenous Reasoning Effort and Behavioural Finance Bias in Large Language Model Portfolio Advisors",
+   "claim": "Reasoning effort compresses bias magnitude spread without lowering mean bias in LLM portfolio advisors."
+  },
+  {
+   "key": "2611.22085",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.22085",
+   "title": "ATLAS-Finance: Benchmarking AI Agents in Realistic Banking Environments",
+   "claim": "Frontier AI agents pass fewer than eleven percent of realistic investment-banking benchmark tasks."
+  },
+  {
+   "key": "2611.22177",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.22177",
+   "title": "The Only Edge Was Memorized in Training: LLM Trading Agents Around Earnings and Bad News",
+   "claim": "No LLM trading agent beats simple pre-earnings or post-bad-news bets without memorized training data."
+  },
+  {
+   "key": "10.2139/ssrn.7691358",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7691358",
+   "title": "AI-generated Investor Views and Portfolio Performance: Evidence from Black-litterman Optimization",
+   "claim": "AI sector views from technical indicators beat market equilibrium until fundamentals or macro are added."
+  },
+  {
+   "key": "2611.20423",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.20423",
+   "title": "FinVerify: A Verification Framework for Financial Agents",
+   "claim": "Evidence-grounded verification raises financial-agent claim precision but shrinks gains when authoritative evidence is scarce."
+  },
+  {
+   "key": "2611.22277",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.22277",
+   "title": "Explaining Realized Returns: Roll's $R^2$ 40 Years Later",
+   "claim": "Wall Street Journal stated reasons explain 30 to 40 percent of equity return variation out of sample."
+  }
+ ]
+}
