@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-19",
+ "scanned": 24,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7709441",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7709441",
+   "title": "From Backtest Profit to Deployable Evidence: Cost sensitivity, statistical uncertainty, and implementation risk in proprietary systematic trading",
+   "claim": "Doubling trading costs leaves Strategy B with 1.75 normalized units versus 76.90 for Strategy A conditional on the selected records."
+  },
+  {
+   "key": "10.2139/ssrn.7703980",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7703980",
+   "title": "An Algebraic Accounting DSL as a Harness for LLM Agents: An Evaluation with Exchange Algebra",
+   "claim": "gpt-oss:120b answered 0.189 of tasks wrongly under the exchange algebra harness versus 0.711 with Python."
+  },
+  {
+   "key": "10.2139/ssrn.7698058",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7698058",
+   "title": "Ill AI Warn a Nigerian? How Language Models Respond to Regulator Flagged Investment Schemes in Nigeria and the United Kingdom",
+   "claim": "No UK-flagged investment scheme received a knowledge-based warning from either language model in the pilot study."
+  },
+  {
+   "key": "10.2139/ssrn.7704859",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7704859",
+   "title": "Detecting Order Flow Toxicity in Cryptocurrency Perpetual Futures: A LightGBM Approach Using L2 Microstructure Features",
+   "claim": "Filtering trades with predicted toxicity above 0.6 removed 12.9% of trades and reduced the toxicity rate from 13.08% to 10.48%."
+  },
+  {
+   "key": "2611.22989",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.22989",
+   "title": "How Web Research Agents Interpret User Priorities",
+   "claim": "Under a growth priority OpenAI reports favored Microsoft while Anthropic reports favored Alphabet despite identical prompts."
+  },
+  {
+   "key": "2611.23126",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.23126",
+   "title": "Which Past Matters? Training History and Multi-Forecast Horizon in Equity Transformers",
+   "claim": "An equal-weight ensemble of twelve models exceeded every individual mean at 15 20 and 25 minutes but not elsewhere."
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+[
+ {
+  "key": "10.2139/ssrn.7709441",
+  "source": "SSRN",
+  "title": "From Backtest Profit to Deployable Evidence: Cost sensitivity, statistical uncertainty, and implementation risk in proprietary systematic trading",
+  "abstract": "This study evaluates cost margin, statistical uncertainty, and implementation agreement in two proprietary systematic-trading records. It provides an aggregate reproducibility protocol that withholds instruments, signal rules, execution schedules, and dated trades. Strategy A contains 594 trades over 2,804 weekdays and has a daily cashflow Sharpe statistic of 1.163. Strategy B contains 777 trades over 2,830 weekdays and has a reconstructed statistic of 1.037. With signed pre-cost profit normalized to 100 separately for each system, recorded costs and financing leave 85.69 units for A and 50.88 for B. Doubling trading costs leaves 76.90 and 1.75 units, respectively. Released component means and covariances reproduce the full fixed-trade cost frontier, while annual counts, sums, and squared sums reproduce annual and leave-one-year-out statistics. A standard-library calculator checks these identities without access to the private ledgers. The baseline cost sensitivities of the cashflow statistic are -0.114 for A and -0.990 for B per unit change in the cost multiplier. Circular moving-block bootstrap intervals remain positive across four block lengths, conditional on the selected records; aggregate moments cannot regenerate those intervals or correct for the unknown research search. In a separate five-sleeve portfolio, the largest pairwise cashflow correlation is 0.277, while recorded market beta ranges from 0.227 to 0.303. Profit concentration, point-in-time assumptions, and incomplete implementation agreement limit deployment claims. The contribution is a reproducible accounting and measurement case study, rather than confirmatory evidence of a new trading anomaly. AI assistance: OpenAI Codex assisted with manuscript drafting and editing, literature discovery, analysis code, numerical calculations, and typesetting. Aleksandr Shulga is the sole human author and is responsible for the interpretation, accuracy, and publication decision.",
+  "link": "https://www.ssrn.com/abstract=7709441",
+  "score": 9,
+  "why": "Cost doubling collapses Strategy B; reproducibility protocol",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7703980",
+  "source": "SSRN",
+  "title": "An Algebraic Accounting DSL as a Harness for LLM Agents: An Evaluation with Exchange Algebra",
+  "abstract": "An unnoticed wrong bookkeeping answer from a large-language-model agent costs more than a refusal. Two models answered generated tasks directly, wrote Python, or wrote exchange algebra (an algebraic formalization of double-entry bookkeeping) under a harness that checks submissions and derives every figure. gpt-6.1-sol needed a program only for journals exceeding one response. For gpt-oss:120b, the share of tasks answered wrongly was 0.711 with Python, 0.667 with direct answers, and 0.189 under the harness. The plain-text accounting tools hledger and Beancount missed all 241 injected faults whose closing stayed consistent with the wrong balances; checkers encoding the accounting rules missed none.",
+  "link": "https://www.ssrn.com/abstract=7703980",
+  "score": 8,
+  "why": "Accounting harness cuts LLM agent errors 71% to 19%",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7698058",
+  "source": "SSRN",
+  "title": "Ill AI Warn a Nigerian? How Language Models Respond to Regulator Flagged Investment Schemes in Nigeria and the United Kingdom",
+  "abstract": "People increasingly ask AI assistants whether an investment is safe before committing money. This study asks whether language models warn users about schemes that financial regulators have publicly flagged, and whether they do so as readily for schemes flagged by the Securities and Exchange Commission of Nigeria (SEC Nigeria) as for those on the UK Financial Conduct Authority (FCA) Warning List. Using an answer key drawn from regulatory records, with legitimate registered firms from both countries as controls, I asked two models, Claude Haiku 5.5 and Qwen3-8B, about 20 entities in English and Nigerian Pidgin, producing 80 answers. Only three of 40 answers about flagged schemes gave a warning based on knowledge of the scheme, all concerning the most prominent one, and no UK-flagged scheme received such a warning. Claude usually declined to recognise entities, whereas Qwen asserted facts, several apparently invented. Claude affirmed legitimate UK firms without qualification in five of ten answers, against one of ten for Nigerian firms. In Pidgin, Qwen read a flagged scheme's name as a reference to Nigeria itself and called it legitimate. These single-coder pilot findings are descriptive, but they point to gaps in entity recognition, factual reliability and language robustness.",
+  "link": "https://www.ssrn.com/abstract=7698058",
+  "score": 7,
+  "why": "LLMs fail to warn on flagged schemes; negative result",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7704859",
+  "source": "SSRN",
+  "title": "Detecting Order Flow Toxicity in Cryptocurrency Perpetual Futures: A LightGBM Approach Using L2 Microstructure Features",
+  "abstract": "Market makers and HFT firms face adverse selection when trading against informed order flow. This phenomenon, known as order flow toxicity, erodes profitability and increases risk. While theoretical models exist, practical detection of toxicity in real-time remains challenging, especially in cryptocurrency markets. We build and validate a machine learning detector that predicts whether a given trade will be toxic (i.e., price moves against the aggressor within a 500ms horizon) using L2 order book and trade flow features. We use 1.6 million aggregated trades and bookTicker updates for BTCUSDT perpetual futures on Binance for January 2, 2024. We compute four microstructure features: Order Flow Imbalance (OFI), Microprice Deviation, Queue Imbalance, and a VPIN-like proxy. A LightGBM classifier is trained on the first 80% of the day and tested on the last 20% (time-based split). The detector achieves an AUC-ROC of 0.66 (Deflated AUC > 0.95, indicating statistical significance). Filtering out trades with predicted toxicity > 0.6 removes 12.9% of trades and reduces the toxicity rate from 13.08% to 10.48%. Our work demonstrates that toxicity is predictable using publicly available L2 data. The proposed detector can be integrated into marketmaking systems to reduce adverse selection without requiring proprietary data.",
+  "link": "https://www.ssrn.com/abstract=7704859",
+  "score": 7,
+  "why": "Binance BTCUSDT L2 toxicity detector, time-split OOS",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.22989",
+  "source": "arXiv",
+  "title": "How Web Research Agents Interpret User Priorities",
+  "abstract": "Web research agents gather information online and write cited reports, including financial analysis. Users can state a priority to guide this research, but a priority may not say how to judge the options, leaving the agent to choose the criteria. We examine how two such agents, built on OpenAI and Anthropic models, interpret a stated priority. In 36 runs, the agents compared Microsoft and Alphabet as businesses. Prompts asked for special attention to growth or resilience, or gave no priority. We analyzed reports, searches, returned sources and cited sources. Of the 24 reports given a priority, 21 focused on it, but their criteria varied. Under the growth priority, OpenAI reports that ranked the companies accounted for risk or predictability and favored Microsoft, while the Anthropic ones judged growth by its pace and favored Alphabet. Under the resilience priority, reports used partly different criteria, and most named Microsoft as the more resilient company. Of the search and source measures tested, only the Anthropic agent's search wording differed detectably by condition. These findings suggest evaluations should examine the criteria behind a report's judgements, not only its focus or accuracy. Interfaces could let users see and adjust those criteria.",
+  "link": "https://arxiv.org/abs/2611.22989",
+  "score": 7,
+  "why": "Research agents disagree on financial analysis criteria",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.23126",
+  "source": "arXiv",
+  "title": "Which Past Matters? Training History and Multi-Forecast Horizon in Equity Transformers",
+  "abstract": "More historical data can improve estimation while introducing relationships that transfer poorly to current market conditions. We therefore examine how training quantity and historical selection interact with forecast horizon in intraday equity prediction. We deploy twelve configurations which combine four sampling and validation policies with 6, 12 and 24 month training quantities under a fixed cross-sectional Transformer and feature set. A monthly walk-forward experiment produces 264 refits and eight cumulative return forecasts from 5 to 120 minutes. Evaluation covers January 2025 through 20 October 2026 and uses cross-sectional Spearman information coefficients against future five-factor residual returns. Six-month recency sampling leads individual models at 5-15 minutes, while multi recency configurations lead at 20-30 minutes and uniform configurations at 60-120 minutes. Increasing training quantity does not uniformly improve accuracy while an equal-weight ensemble of all twelve models exceeds every individual mean at 15, 20 and 25 minutes, but not at the remaining horizons. These findings support evaluating historical selection jointly with forecast horizon without identifying a universal policy or a causal benefit from recency.",
+  "link": "https://arxiv.org/abs/2611.23126",
+  "score": 7,
+  "why": "Equity Transformer history-vs-horizon walk-forward IC study",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.23533",
+  "source": "arXiv",
+  "title": "Can LLMs Understand What They Predict? Evaluating Latent Causal Structure Inference in Financial Markets",
+  "abstract": "Large language models (LLMs) are increasingly evaluated through their ability to predict future outcomes, implicitly assuming that predictive success reflects an understanding of the underlying system. However, accurate predictions can often be achieved without recovering the latent mechanisms that generate observable outcomes. To examine this assumption, we introduce LUCID, a benchmark that evaluates whether models can infer latent market structures from event descriptions and historical financial observations. Models generate event-induced causal graphs representing inferred market structure and are evaluated through a reconstruction-based framework. Our evaluation of 6 open-weight and proprietary LLMs shows that adding their generated graphs generally reduces reconstruction quality compared with using historical observations alone, although a few metrics improve. These findings suggest that inferring informative, event-specific market structures from observable evidence remains challenging for the evaluated LLMs.",
+  "link": "https://arxiv.org/abs/2611.23533",
+  "score": 7,
+  "why": "LLMs fail to infer latent market causal structure",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7695478",
+  "source": "SSRN",
+  "title": "Forecasting Implied Volatility Surfaces with Conditional Generative Diffusion Models",
+  "abstract": "This paper proposes a no-arbitrage implied volatility surface forecasting framework based on conditional diffusion models comparing U-Net and Transformer backbone architectures. The approach combines historical SPX options data with synthetic SABR and Heston-COS volatility surfaces and incorporates arbitrage and smoothness constraints during training. While a postprocessing repair step enforces financial consistency in generated forecasts. Empirical results show that diffusion models produce stable and realistic volatility surface forecasts and capture key market features such as smile skew and term-structure dynamics. The Transformer architecture achieves comparable training loss with substantially fewer parameters, the U-Net delivers superior out-of-sample forecasting accuracy across moneyness regions as well being computationally cheaper. Training-time arbitrage penalties do not eliminate arbitrage violations and, in some cases, reduce predictive performance, whereas a pure diffusion objective combined with post-hoc surface repair yields the best results. These findings demonstrate the effectiveness of diffusion-based methods for probabilistic volatility surface forecasting and highlight the limitations of model architecture, loss design, and post-processing in achieving financially consistent forecasts.",
+  "link": "https://www.ssrn.com/abstract=7695478",
+  "score": 6,
+  "why": "Diffusion IV surface forecasts, OOS tested, not text/LLM",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7699719",
+  "source": "SSRN",
+  "title": "Dynamic Dependence and Tail-risk Forecasting in AI-linked Financial Markets: An LSTM Vine Copula Approach",
+  "abstract": "The artificial Intelligence (AI) industry is rapidly expanding, bringing together firms in semiconductors, infrastructure, cloud computing, software, finance, and commodities. These linkages raise concerns regarding synchronised left-tail losses that Gaussian and correlationbased risk models are poorly equipped to capture. Since classical multivariate models assume linear or static dependencies that fail during market stress, this study proposes an integrated forecasting framework. The study proposes a deep dynamic vine copula framework. The framework combines GJR-GARCH skewed Student-t marginals with a Student-t vine whose dependence parameters are updated daily by an LSTM network reading recent copula scores. The model is benchmarked against historical simulation, filtered historical simulation, DCC-GARCH-t, static and GAS vines, and a direct LSTM quantile model. Three portfolios: equalweighted, inverse-volatility, and long-short are evaluated at the 5%, 2.5%, and 1% levels, with ablation isolating the contribution of dynamics, neural updating, and tail dependence. Evaluated out-of-sample over a 456-day test period against an industrial baseline, classical dynamic models, and ablation variants, the proposed deep dynamic vine demonstrates superior calibration. Structural break diagnostics and model-implied metrics reveal that short-term stress windows are often too brief to induce measurable surges in the structural tail dependence, indicating that acute market shocks are driven primarily by volatility spillovers and joint marginal tail heaviness. The proposed model achieves robust VaR coverage and competitive positioning within the Model Confidence Set under joint Fissler-Ziegel loss evaluations. These findings provide risk managers and regulators with enhanced capital allocation accuracy and advanced stress-testing capabilities under Basel guidelines.",
+  "link": "https://www.ssrn.com/abstract=7699719",
+  "score": 6,
+  "why": "LSTM vine copula tail risk, standard benchmarks",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.22958",
+  "source": "arXiv",
+  "title": "DDSL: Iterative Self-Labeling for Financial Market States",
+  "abstract": "Financial market states lack a unique ground truth and must therefore be constructed from price data. Conventional labeling methods typically define states independently of the downstream classifier, leaving unresolved whether the resulting labels can be recovered from information available at prediction time. We propose DDSL, an iterative self-labeling framework that couples a price- and grammar-guided Viterbi labeler with a Transformer classifier through model feedback. DDSL constructs a nine-state representation that jointly encodes current and future market trends while retaining structured price emissions and temporal constraints throughout refinement. Experiments on SSE50, CSI300, CSI500, and NASDAQ100 show that DDSL increases held-out joint-state macro F1 by 78%-96% over single-pass dynamic-programming labeling. An independent GRU classifier that never participates in the labeling loop reproduces the same trend, while label entropy and class coverage remain stable, indicating that the gain transfers across architectures and is not caused by label collapse. We further show that learnability is controlled by both iteration and the model-feedback weight $β_{\\mathrm{model}}$. Iterative gains diminish as successive label systems converge, whereas stronger feedback increasingly widens the performance gap between the feedback Transformer and the independent GRU. Increased learnability is accompanied by declining segment-level price-feature separation after an initial improvement. Finally, a non-anticipative event study provides partial external validation: refinement strengthens a conditional BEAR$\\rightarrow$BULL reversal signal on the three A-share datasets, while the corresponding effect has the opposite sign on NASDAQ100. These results position DDSL as a structured framework for constructing market-state labels whose learnability can be explicitly controlled and evaluated.",
+  "link": "https://arxiv.org/abs/2611.22958",
+  "score": 6,
+  "why": "Market-state self-labeling, Transformer, large claimed F1 gains",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7697558",
+  "source": "SSRN",
+  "title": "Overlap Is Not Identification: Reactive Pricing, Exogenous Variation, and Double Machine Learning",
+  "abstract": "Platforms that set prices with algorithms raise them where a forecast predicts low supply, so prices and outcomes move together for reasons other than the effect of price. Studies that estimate price effects with double machine learning often support their credibility with an overlap diagnostic, the share of price variance the controls do not explain. We show that this diagnostic adds exogenous variation, which identifies the effect, and variation from confounding the controls miss, which biases it, so high overlap can accompany a badly biased estimate. A pricing rule that reacts to its own forecast creates the confounded part unless the forecast is logged, and nuisance-model error creates it too. We propose an overlap-inflation diagnostic, which flags an estimate when a finer adjustment lowers overlap and moves the estimate, and a benchmark for a sensitivity tipping point. In simulations, a semi-synthetic study on New York City rideshare records, and a delivery-style study calibrated to public data on New York City delivery apps, a diagnostic rule fixed in advance flags all but the mildest confounded refinement and almost none of the harmless ones, and logging the forecast removes the bias.",
+  "link": "https://www.ssrn.com/abstract=7697558",
+  "score": 5,
+  "why": "DML overlap diagnostic for reactive pricing, simulation only",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.22730",
+  "source": "arXiv",
+  "title": "Covariate-Indexed Inclusion Probabilities on Unbalanced Panels",
+  "abstract": "We estimate the probability that an item with given covariates belongs to a set when the cross-section changes over time and items and periods are dependent. We propose two convex models whose fitted probabilities are nonnegative by construction and remain valid whatever the dependence between items, for which we establish consistency, finite-sample bounds and limit distributions for serially dependent panels. One suits events of moderate or high probability, the other rare events, and half the disagreement between their fits estimates a lower bound on the misspecification error of the worse fit, without knowledge of the true probabilities. On monthly US stock failures, the rare-event model predicts better than the ordinary logit and the classical failure logit. With the eight classical predictors, most of the gain comes from basis functions of the rank angle of each predictor and summary.",
+  "link": "https://arxiv.org/abs/2611.22730",
+  "score": 5,
+  "why": "Panel stock-failure probabilities vs logit, not LLM",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7705098",
+  "source": "SSRN",
+  "title": "The Meritocratic Origins of Informal Financing",
+  "abstract": "Why does informal financing remain prevalent in emerging markets? We propose a mobility-aspiration framework linking perceived upward mobility shaped by meritocratic institutions to corporate financing through managerial aspirations for personal achievement. Using historical data from imperial China and LLM-analyzed modern corporate texts, we build a novel data set of upward mobility perceptions. Firms exposed to greater perceived upward mobility provide more unexpected trade credit to customers, particularly when managerial power allocation is unbalanced and empire-building incentives are stronger. These firms portray supply chain relationships as enduring and concentrated among fewer customers. However, modern anti-corruption institutions attenuate this unintended consequence.",
+  "link": "https://www.ssrn.com/abstract=7705098",
+  "score": 4,
+  "why": "LLM text tool for econ theory, no next-week use",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7707159",
+  "source": "SSRN",
+  "title": "The AI Investment Test",
+  "abstract": "AI and data projects create value only when they change business outcomes: lower costs, faster delivery, better decisions, new revenue, or reduced risk. Yet most organizations still approve these investments on the strength of a technical demonstration and a single ROI estimate, and most published failure statistics suggest the results are poor. Gartner reported that by the end of 2025 at least 50% of generative AI projects were abandoned after proof of concept due to poor data quality, inadequate risk controls, escalating costs, or unclear business value ([1]), and it forecasts that more than 40% of agentic AI projects will be cancelled by the end of 2027 ([2]). Meanwhile, organizations estimate that roughly a quarter to a third of all cloud infrastructure spend is wasted ([3]). This paper proposes one common financial framework, built on managerial accounting fundamentals, with different evaluation rules for different project types: cloud migration, existing ML systems, data engineering, BI and analytics, new AI from proof of concept to rollout, and agentic AI. The framework connects full lifecycle costs, measurable benefits, explicit treatment of uncertainty, and accountable business ownership-from the first experiment to ongoing operations. Its practical output is a staged evidence-gate funding model and a one-page executive decision sheet. The paper is presented as a conceptual framework with illustrative applications; all numerical examples are hypothetical and clearly labelled.",
+  "link": "https://www.ssrn.com/abstract=7707159",
+  "score": 4,
+  "why": "Managerial AI investment framework, no runnable method",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.23495",
+  "source": "arXiv",
+  "title": "Total Positivity Properties of American Options",
+  "abstract": "Call option prices, viewed as functions of strike and time-to-expiration, are totally positive of order 2 (TP2) if the ratio of the price of a higher-strike call to a lower-strike call increases with time-to-expiration. A corresponding property applies to put option prices. Prior work has developed conditions for these properties to hold for European options; here we establish these properties for American options. The key condition we require is that log returns on the underlying asset have a log-concave density. Gaussian densities provide an important special case. Within our framework, we show that total positivity properties hold more broadly for American than European options. Empirically, we find that violations of TP2 properties are infrequent, typically small, and reverse quickly. Trades that bet against violations achieve high hit rates. Violations are more frequent among European than American options, a pattern that is qualitatively consistent with our theoretical results.",
+  "link": "https://arxiv.org/abs/2611.23495",
+  "score": 4,
+  "why": "American option theory, no implementation path for practitioner",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7703178",
+  "source": "SSRN",
+  "title": "Contextual GHZ Strategies for Cross-Venue Liquidity Coordination: Evidence from U.S. Equity Direct Feeds",
+  "abstract": "Trading decisions at different exchanges often have to be coordinated before information from the other exchanges arrives. Shared entanglement can help separated venues coordinate, but how much it helps depends on the joint distribution of their local states, which in markets shifts across dates and within the day. In the game we study, the venues must make the parity of their output bits indicate whether liquidity is stressed at a majority of the venues. Under a classical rule this parity can only be a constant, one venue's bit, or the parity of several bits, and in our data the best rule lets a single venue stand for the market. When the venues share a Greenberger-Horne-Zeilinger (GHZ) state, their measurement angles add, so the parity can track how many venues are stressed. We propose a contextual angle learner, a small neural network that maps lagged public market context to these measurement angles. We evaluate the learner on state distributions measured from the direct feeds of Nasdaq, NYSE, and NYSE Arca. For AAPL, whose minute distributions are diffuse and noisy, the learner responds only partly to the previous minute and beats every classical policy with the same lagged information on the pooled test dates. For NVDA, whose distribution is concentrated and persists from minute to minute, a GHZ rule that replays the angles fitted to the previous minute does better than both the learner and the classical rule that replays the previous minute's best table.",
+  "link": "https://www.ssrn.com/abstract=7703178",
+  "score": 3,
+  "why": "Quantum venue coordination, no practical implementation path",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7704919",
+  "source": "SSRN",
+  "title": "From Legal Due Diligence To Legal Intelligence - The Role Of Artificial Intelligence In Commercial Real Estate Lending And Loan Against Property Transactions In India",
+  "abstract": "A lender may now process thousands of pages of deeds, bank statements, corporate filings and court records in the time once required to review a single file. Yet computational speed does not establish ownership, create a mortgage, cure defective stamping, satisfy a statutory notice requirement or make an adverse inference fair. The central question is therefore not whether artificial intelligence (AI) can accelerate legal due diligence, but whether it can be constituted as reliable legal intelligence: a continuous, provenance-aware and contestable system that connects each conclusion to the evidence, legal rule, responsible decision-maker and remedy. This paper develops that thesis across the complete lifecycle of commercial real estate (CRE) lending and loan against property (LAP) transactions in India: origination; KYC and fraud detection; credit underwriting; property valuation; title due diligence; documentation; security perfection; disbursement; covenant monitoring; default prediction; SARFAESI and recovery; and litigation. Each stage is analysed through a Thesis–Evidence–Evaluation method. The analysis integrates the Transfer of Property Act, 1882, the Registration Act, 1908, stamp legislation, the Companies Act, 2013, the Prevention of Money-laundering Act, 2002, the Real Estate (Regulation and Development) Act, 2016, the SARFAESI Act, 2002, the Recovery of Debts and Bankruptcy Act, 1993, the Insolvency and Bankruptcy Code, 2016, the Bharatiya Sakshya Adhiniyam, 2023, RBI directions and constitutional privacy principles. It also examines leading Supreme Court authorities on title, mortgages, electronic evidence, fraud classification, secured-credit enforcement and procedural fairness. The paper argues that AI should operate as an evidentiary and workflow layer, not as a substitute for legal judgment, statutory formalities, independent valuation or adjudication. It proposes a legal-intelligence architecture built around source provenance, confidence and uncertainty labels, event-based monitoring, explainable alerts, human approval gates, borrower contestability, audit-ready records and enforceable vendor controls. The regulatory analysis is current to 14 November 2026 and distinguishes binding instruments from reports, draft guidance and proposals. The resulting model seeks to improve the quality not merely the velocity of secured lending decisions.",
+  "link": "https://www.ssrn.com/abstract=7704919",
+  "score": 3,
+  "why": "India legal position paper, single-country, non-transferable",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7708178",
+  "source": "SSRN",
+  "title": "Heterogeneous Signal Fusion, Agentic Architecture and Evaluation Rigour in AI-Based Equity Prediction: A Systematic Review",
+  "abstract": "Equity prediction, the forecasting of stock prices, returns or their direction, draws on fundamental, technical and sentiment analysis, yet no single approach is sufficient across changing market conditions. Fundamental data are reported periodically and adjust slowly, technical indicators extrapolate past prices, and sentiment reacts quickly to news but is noisy. Artificial-intelligence research has therefore begun to fuse these signals and to organise models as interacting agents. This systematic review asks how the three signal families are fused and with what demonstrated benefit, how agentic architectures divide analytical tasks and coordinate decisions, and how rigorously the resulting predictive and economic claims are evaluated. We code 775 journal studies indexed in Scopus and Web of Science between 2015 and 2026 with a language-model pipeline, check the automated coding against the authors' own coding, and select 50 studies for full-text reading. Fusion is common, but most studies combine two signal families, usually by concatenating features; few combine all three (5.2%; 3.1% after adjustment) or use mechanisms that can represent conflict between signals. Agentic studies usually report economic outcomes but rarely state how those outcomes were tested out of sample. Across the literature, 88.2% of empirical studies state no evaluation protocol, and only 2.5% (1.2% after adjustment) report walk-forward validation, an economic performance measure and transaction costs together, although walk-forward reporting rose sharply in 2026. The selected full texts show the gains claimed for fusion and agent coordination to be conditional: added signals and agents help in some settings and are redundant in others, and better forecasts do not reliably translate into better portfolio decisions and net returns. The review identifies the benchmark comparisons and evaluation conditions needed to establish whether these designs add predictive and economic value.",
+  "link": "https://www.ssrn.com/abstract=7708178",
+  "score": 3,
+  "why": "Systematic review of equity prediction, excluded format",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.23057",
+  "source": "arXiv",
+  "title": "Integrating market sentiments for stock price prediction: A comparative study of Bi-LSTM and multilayer perceptions",
+  "abstract": "This study investigates the integration of sentiment analysis with machine learning models to forecast stock price movements using the Nvidia Corporation as a case study. Sentiment scores were derived from Nvidia-related financial news headlines using two sentiment analysis tools: FinBERT, a domain-specific tool, and TextBlob, a general-purpose tool. These scores were integrated into predictive frameworks based on bidirectional long short-term memory (Bi-LSTM) networks and multilayer perceptrons (MLPs) developed alongside historical stock price data. This study assesses the predictive performance over the entire observation period and across distinct market phases: bullish, stagnation, and strong bullish conditions. The findings indicate that sentiment features enhance predictive accuracy in specific contexts, particularly during stagnation phases, with TextBlob demonstrating superior performance to FinBERT in specific scenarios. In addition, Bi-LSTM models exhibit consistently superior performance in capturing temporal dependencies compared to MLPs. However, the impact of sentiment features diminished during strongly directional trends, such as those observed in strong bullish markets. The combination of FinBERT and TextBlob in the same dataset allows for a dual-perspective approach to sentiment analysis, thereby providing new insights into the dynamic relationship between market sentiment and stock price behavior. This research contributes to the existing literature on applying sentiment analysis to financial forecasting by advancing the integration of complementary sentiment tools and phase-specific evaluations.",
+  "link": "https://arxiv.org/abs/2611.23057",
+  "score": 3,
+  "why": "Single-stock Nvidia sentiment predictor, no OOS/costs",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7696923",
+  "source": "SSRN",
+  "title": "Bypassing the Capital Trench: A Two-phase Institutional Architecture and Revolving Master Trust to Neutralize the AI Crowding-out Effect in Peruvian Micro-enterprise Securitization",
+  "abstract": "This paper presents an institutional and financial blueprint to resolve the chronic economic duality and low-productivity traps that exclude micro and small enterprises (MSEs) in Peru from the modern economy. Drawing on New Institutional Economics (NIE) and structured finance principles, we diagnose why legacy state-led interventions (e.g., PRONAA, Qali Warma, Compras a MYPErú) and simplified tax regimes (e.g., RUS) systematically fail. These frameworks focus on administrative compliance or untranched liquidity matching while leaving process asymmetries, high transaction cost thresholds (τ cost), and short cognitive time horizons unaltered, forcing producers into technological and labor precarization loops to survive. To break this deadlock, we propose a two-phase operational model. Phase 1 establishes an Operational Incubation Sieve governed by a non-aligned, decentralized technical triumvirate recruited from elite universities (UNALM, UNI, UP, PUCP, UNMSM). This framework shifts the development paradigm by separating operational roles, training entrepreneurs strictly as world-class Production Sub-Managers while transferring financial and legal execution to a centralized Management Upgrade. By leveraging institutional brand equity under an asymmetric asset forfeiture model, the academic boards provide a credible, uncompromised quality signal and a compiled performance ledger (the \"Reputational Passport\") to the market. Phase 2 activates a bankruptcy-remote, pay-through Revolving Master Trust Fund to bypass commercial banking monopolies entirely. Rather than underwriting individual borrower credit debt-as seen in the U.S. Small Business Administration (SBA) pass-through model-the trust securitizes the verified, real-economy trade receivables of Phase 1 Alumni operating as corporate subcontractors. The revolving structure operates as a structural maturity matchmaker, coupling high-velocity, short-term micro-receivables from the multi-decade duration locks required by institutional fixed-income and social-impact investors. Finally, we implement self-executing legal safeguards-including irrevocable step-in rights, fast-track technical arbitration panels, and geofenced SUNARP joint liability registrations-to strip informal intermediaries of the \"good faith buyer\" defense and eliminate contract cheating (ruleteo). This comprehensive framework demonstrates how micro-scale efficiency can organically fund labor formalization, shifting public policy from poverty mitigation to structural economic transformation.",
+  "link": "https://www.ssrn.com/abstract=7696923",
+  "score": 2,
+  "why": "Peruvian micro-enterprise securitization blueprint, no ML method",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7696998",
+  "source": "SSRN",
+  "title": "How Data Centers can be Flexible in the Power System and Electricity Markets: A Global Review",
+  "abstract": "The rapid expansion of data centers (DCs), driven largely by artificial intelligence, creates substantial new electricity demand, may lead to congestion in power networks and pressure on increasing electricity prices. Knowledge of DC operation is largely limited to operators, and DCs are often characterized by their rated capacity rather than actual consumption, so their real impact on power systems remains unclear. This review provides background on DC operations and reviews literature on DC flexibility in power systems and electricity markets. The levers examined include temporal and spatial shifting of computing loads, cooling, renewable integration, sector integration such as waste heat use in district heating, and energy storage. These levers can reduce DC operating costs while benefiting the grid and markets. However, reported benefits depend strongly on the share of deferrable workloads, which is often assumed rather than measured, and on electricity market design. Participation may further be limited by quality of service requirements and data protection laws restricting crossborder data transfers. DCs are found to have significant flexibility potential, but as they differ widely in type and context, no single solution applies to all. Policy recommendations are proposed for integrating DCs into the power system.",
+  "link": "https://www.ssrn.com/abstract=7696998",
+  "score": 2,
+  "why": "Data-center power flexibility review, not financial ML",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7705520",
+  "source": "SSRN",
+  "title": "Investment Misrepresentation Arising from the Presentation of Numerical Returns Not Actually Achieved",
+  "abstract": "This study examines the legal regulation of digital investment advertising in light of the transformations brought about by algorithms and artificial intelligence in calculating returns and drafting, personalizing and targeting content to investors. Its central problem is to identify the safeguards necessary to prevent misleading presentations of investment returns and to determine responsibility for an advertisement where several parties are involved, including the licensed entity, the algorithm developer, the data provider, the digital platform and the financial influencer. The study adopts analytical and comparative approaches, examining the provisions of Kuwaiti Capital Markets Law and its Executive Bylaws and comparing them with US and European regulatory requirements and international supervisory principles. It also addresses the overall-impression test for advertisements; the distinction between actual, hypothetical and projected returns; methods of digital proof; the foundations of disciplinary liability; and the limits of reliance on disciplinary decisions. The study further identifies the requirements of a preventive compliance framework operating before any violation occurs. Such a framework rests on documenting data sources and assumptions, reviewing return-calculation methods, separating the preparation and approval of advertisements, allocating responsibilities across financial, legal, compliance and technical functions, and monitoring published content so that it can be suspended or corrected when a defect is discovered.",
+  "link": "https://www.ssrn.com/abstract=7705520",
+  "score": 2,
+  "why": "Kuwaiti investment advertising law, no data/method",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7708639",
+  "source": "SSRN",
+  "title": "Circular Investment: Financial Instruments, Risk Mitigation, and Technological Enablers in Emerging Markets",
+  "abstract": "Abstract Despite growing sustainability commitments, the circular economy faces a capital paradox: depending on scope, estimates of circular finance range from about USD 164 billion of tracked investment in circular business models over 2018–2023 to roughly USD 400 billion of capital mobilised, yet the global circularity rate has fallen to 6.9% (Circle Economy & Deloitte, 2025). Emerging markets are affected most acutely. UNEP (2018) estimated that Africa recycled only about 4% of its municipal solid waste, and most of it was disposed of on land, often without control. This paper presents Circular Investment as a framework for directing private and blended capital toward secondary-material value chains in emerging markets, using an integrated industrial-symbiosis case: ReTech (electronic waste), ReTire (end-of-life tires), and ReTextile (textile waste). It examines (1) global capital flows and sectoral value losses, (2) financial and policy instruments, namely blended finance, extended producer responsibility (EPR), sustainability-linked bonds (SLBs), and carbon and material credits, (3) structural investment barriers and mitigation mechanisms, and (4) the role of digital technologies as de-risking tools. An illustrative model, whose parameters are the author’s assumptions and not measured results, suggests that combining AI sorting, IoT reverse logistics, and digital product passports could shorten payback from 5.8 to about 4.1 years for a USD 15 million facility. These results require validation with project data. Keywords: Circular Investment; Blended Finance; Extended Producer Responsibility; Industrial Symbiosis; Digital Product Passports; Emerging Markets; Bankability",
+  "link": "https://www.ssrn.com/abstract=7708639",
+  "score": 2,
+  "why": "Circular investment framework emerging markets, no ML",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.23587",
+  "source": "arXiv",
+  "title": "Spectral Pricing of Corridor Products under Layered Local Volatility",
+  "abstract": "We price corridor products under a $N$-layered local volatility, piecewise constant in the price and in time, with knock-out barriers. A spatial scale transformation and the GIT method reduce the killed Green's function to a symmetric tridiagonal system of fixed size $N-1$. With equal scaled layer widths the spectrum follows from one tridiagonal eigen-decomposition together with the explicit eigenfunctions that vanish at every interface. For general scaled layer widths an exact counting theorem locates every eigenvalue. Consecutive time intervals of constant volatility are connected by a matrix that re-expands the solution in the eigenbasis of the preceding interval, and the result converges exponentially in the number of retained terms in the eigenfunction expansion. Allowing the killing rate to vary between layers preserves this construction. On a single time interval, the corridor accrual distribution is then recovered by inverting the time and Fourier transforms, without introducing an additional state variable. Exact representations for Greeks and layer vegas follow by differentiation. In our benchmarks the method agrees with independent calculations near rounding error and keeps full accuracy at volatility interfaces, where the tested uniform finite-difference (FD) grids lose one order of convergence. The method computes the accrual law about sixty times faster than the tested FD scheme that includes accrued time as a second state variable.",
+  "link": "https://arxiv.org/abs/2611.23587",
+  "score": 2,
+  "why": "Spectral corridor option pricing, pure theory no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]

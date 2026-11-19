@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>From Backtest Profit to Deployable Evidence: Cost sensitivity, statistical uncertainty, and implementation risk in proprietary systematic trading</title>
+    <link>https://www.ssrn.com/abstract=7709441</link>
+    <description>Doubling trading costs leaves Strategy B with 1.75 normalized units versus 76.90 for Strategy A conditional on the selected records.</description>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7709441</guid>
+  </item>
+  <item>
+    <title>An Algebraic Accounting DSL as a Harness for LLM Agents: An Evaluation with Exchange Algebra</title>
+    <link>https://www.ssrn.com/abstract=7703980</link>
+    <description>gpt-oss:120b answered 0.189 of tasks wrongly under the exchange algebra harness versus 0.711 with Python.</description>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7703980</guid>
+  </item>
+  <item>
+    <title>Ill AI Warn a Nigerian? How Language Models Respond to Regulator Flagged Investment Schemes in Nigeria and the United Kingdom</title>
+    <link>https://www.ssrn.com/abstract=7698058</link>
+    <description>No UK-flagged investment scheme received a knowledge-based warning from either language model in the pilot study.</description>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7698058</guid>
+  </item>
+  <item>
+    <title>Detecting Order Flow Toxicity in Cryptocurrency Perpetual Futures: A LightGBM Approach Using L2 Microstructure Features</title>
+    <link>https://www.ssrn.com/abstract=7704859</link>
+    <description>Filtering trades with predicted toxicity above 0.6 removed 12.9% of trades and reduced the toxicity rate from 13.08% to 10.48%.</description>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7704859</guid>
+  </item>
+  <item>
+    <title>How Web Research Agents Interpret User Priorities</title>
+    <link>https://arxiv.org/abs/2611.22989</link>
+    <description>Under a growth priority OpenAI reports favored Microsoft while Anthropic reports favored Alphabet despite identical prompts.</description>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.22989</guid>
+  </item>
+  <item>
+    <title>Which Past Matters? Training History and Multi-Forecast Horizon in Equity Transformers</title>
+    <link>https://arxiv.org/abs/2611.23126</link>
+    <description>An equal-weight ensemble of twelve models exceeded every individual mean at 15 20 and 25 minutes but not elsewhere.</description>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.23126</guid>
+  </item>
+  <item>
     <title>Does Deliberation Debias? Exogenous Reasoning Effort and Behavioural Finance Bias in Large Language Model Portfolio Advisors</title>
     <link>https://www.ssrn.com/abstract=7691604</link>
     <description>Reasoning effort compresses bias magnitude spread without lowering mean bias in LLM portfolio advisors.</description>
@@ -760,27 +802,6 @@
     <description>No evaluated LLM reliably beats a recent-activity persistence baseline for trade occurrence, and buy-sell structure stays hard to reproduce.</description>
     <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2610.26524</guid>
-  </item>
-  <item>
-    <title>Combinatorial Arbitrage in Prediction Markets</title>
-    <link>https://arxiv.org/abs/2610.23517</link>
-    <description>Logical arbitrage across Polymarket contracts survived spreads and fees, yielding 2.2% guaranteed profit on settled portfolios in full-depth order-book replays.</description>
-    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.23517</guid>
-  </item>
-  <item>
-    <title>Faithful by Construction? An Exact Test of LLM Explanations for Constrained Portfolio Optimization Decisions</title>
-    <link>https://www.ssrn.com/abstract=7625878</link>
-    <description>LLM explanations of linear-program portfolio decisions name zero-effect limits as drivers in 77-89% of cases, so they need solver-certificate checks.</description>
-    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7625878</guid>
-  </item>
-  <item>
-    <title>Which Outcome Should Teach an LLM Reader? A Verified FOMC Benchmark and Reward-Design Evidence for Outcome-Guided Agents in Finance</title>
-    <link>https://www.ssrn.com/abstract=7626078</link>
-    <description>Pre-meeting equity returns are learnable from FOMC minutes at out-of-sample R² 0.50, while the next policy-rate change shows no detectable text signal.</description>
-    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7626078</guid>
   </item>
 </channel>
 </rss>
