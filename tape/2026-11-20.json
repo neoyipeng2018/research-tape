@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-20",
+ "scanned": 25,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7713698",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7713698",
+   "title": "Generative AI in Financial Services: A Field Experiment in Insurance Advisory",
+   "claim": "AI advice increases insurance premiums by 28 percent within fifteen days for non-pilot brokers."
+  },
+  {
+   "key": "2611.25071",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.25071",
+   "title": "FinVeriQA: Financial Research Agents for Question Answering: Routing, Retrieval, MCP Tool Use, and Provenance-Aware Evidence Verification",
+   "claim": "Independent verification beats shared-evidence checks when financial evidence is corrupted."
+  },
+  {
+   "key": "2611.25184",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.25184",
+   "title": "An AI-Powered Multiverse Analysis of Empirical Finance Research: Evidence from Reused Natural Experiments",
+   "claim": "Regression discontinuity claims survive more specification changes than difference-in-differences claims."
+  },
+  {
+   "key": "10.2139/ssrn.7700882",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7700882",
+   "title": "Evaluating LLM-Assisted Retail Trading Decisions: Design and Operational Validation of the FACET Frozen-Case Framework",
+   "claim": "Decision quality can be audited by freezing assisted cases before execution."
+  },
+  {
+   "key": "10.2139/ssrn.7703798",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7703798",
+   "title": "Unevaluable Alpha: A Reporting Standard for AI Performance Claims in Asset Management",
+   "claim": "No accepted methodology lets managers substantiate AI return-improvement claims even if real."
+  },
+  {
+   "key": "2611.24039",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.24039",
+   "title": "A Capability Framework for Evaluating Agentic AI Platforms in Regulated Enterprises",
+   "claim": "Demonstration-based platform scoring measures presentation as much as capability because of halo effects."
+  }
+ ]
+}

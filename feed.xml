@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Generative AI in Financial Services: A Field Experiment in Insurance Advisory</title>
+    <link>https://www.ssrn.com/abstract=7713698</link>
+    <description>AI advice increases insurance premiums by 28 percent within fifteen days for non-pilot brokers.</description>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7713698</guid>
+  </item>
+  <item>
+    <title>FinVeriQA: Financial Research Agents for Question Answering: Routing, Retrieval, MCP Tool Use, and Provenance-Aware Evidence Verification</title>
+    <link>https://arxiv.org/abs/2611.25071</link>
+    <description>Independent verification beats shared-evidence checks when financial evidence is corrupted.</description>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.25071</guid>
+  </item>
+  <item>
+    <title>An AI-Powered Multiverse Analysis of Empirical Finance Research: Evidence from Reused Natural Experiments</title>
+    <link>https://arxiv.org/abs/2611.25184</link>
+    <description>Regression discontinuity claims survive more specification changes than difference-in-differences claims.</description>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.25184</guid>
+  </item>
+  <item>
+    <title>Evaluating LLM-Assisted Retail Trading Decisions: Design and Operational Validation of the FACET Frozen-Case Framework</title>
+    <link>https://www.ssrn.com/abstract=7700882</link>
+    <description>Decision quality can be audited by freezing assisted cases before execution.</description>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7700882</guid>
+  </item>
+  <item>
+    <title>Unevaluable Alpha: A Reporting Standard for AI Performance Claims in Asset Management</title>
+    <link>https://www.ssrn.com/abstract=7703798</link>
+    <description>No accepted methodology lets managers substantiate AI return-improvement claims even if real.</description>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7703798</guid>
+  </item>
+  <item>
+    <title>A Capability Framework for Evaluating Agentic AI Platforms in Regulated Enterprises</title>
+    <link>https://arxiv.org/abs/2611.24039</link>
+    <description>Demonstration-based platform scoring measures presentation as much as capability because of halo effects.</description>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.24039</guid>
+  </item>
+  <item>
     <title>From Backtest Profit to Deployable Evidence: Cost sensitivity, statistical uncertainty, and implementation risk in proprietary systematic trading</title>
     <link>https://www.ssrn.com/abstract=7709441</link>
     <description>Doubling trading costs leaves Strategy B with 1.75 normalized units versus 76.90 for Strategy A conditional on the selected records.</description>
@@ -760,48 +802,6 @@
     <description>Seven machine learning forecasters lose to Brazilian football&#x27;s closing line on log loss, and half-Kelly staking destroys most capital at zero edge.</description>
     <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7649872</guid>
-  </item>
-  <item>
-    <title>Candlestick Words Improve Intraday Volatility Forecasts Beyond HAR and GARCH</title>
-    <link>https://www.ssrn.com/abstract=7621579</link>
-    <description>Candlestick-word features improve 15-minute volatility forecasts beyond HAR and GARCH after volatility spikes, but add nothing at daily frequency.</description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7621579</guid>
-  </item>
-  <item>
-    <title>From SEC Filings to Financial Signals: Evaluating LLMs on Stock Market Reactions and Analyst Forecasts</title>
-    <link>https://arxiv.org/abs/2610.24268</link>
-    <description>Adding cross-sectional fundamental ranks to 10-Q MD&amp;A text raises LLM return-ranking RankIC by about 0.009, while analyst-summary context adds no comparable gain.</description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.24268</guid>
-  </item>
-  <item>
-    <title>Unbounded Losses, Unchecked Inputs: Measuring the Safeguards of LLM Options-Trading Agents</title>
-    <link>https://arxiv.org/abs/2610.24289</link>
-    <description>Options-trading agents need loss limits enforced at the order boundary, since 13 of 26 surveyed systems can reach unbounded loss.</description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.24289</guid>
-  </item>
-  <item>
-    <title>More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting</title>
-    <link>https://arxiv.org/abs/2610.25468</link>
-    <description>Most of WSB embeddings&#x27; standalone volatility fit reflects firm identity, and their gain over HAR is largely eliminated by alignment shuffling.</description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.25468</guid>
-  </item>
-  <item>
-    <title>Reliable Before Profitable: QuantHarness for Governing Financial Strategy Development with LLM Agents</title>
-    <link>https://arxiv.org/abs/2610.26101</link>
-    <description>QuantHarness reaches 90.72% task success on FinRelBench versus 74.23–84.54% for comparison systems, under the evaluated protocol.</description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.26101</guid>
-  </item>
-  <item>
-    <title>Beyond Behavioral Accuracy: Evaluating Individual-Level Fidelity in LLM Investor Simulation</title>
-    <link>https://arxiv.org/abs/2610.26524</link>
-    <description>No evaluated LLM reliably beats a recent-activity persistence baseline for trade occurrence, and buy-sell structure stays hard to reproduce.</description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.26524</guid>
   </item>
 </channel>
 </rss>

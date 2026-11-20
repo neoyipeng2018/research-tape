@@ -1,0 +1,252 @@
+[
+ {
+  "key": "10.2139/ssrn.7713698",
+  "source": "SSRN",
+  "title": "Generative AI in Financial Services: A Field Experiment in Insurance Advisory",
+  "abstract": "I study a generative-AI tool that offers insurance brokers real-time reply suggestions, using two randomized phases of its rollout, involving 1,070 licensed brokers at China's largest insurance brokerage. In a ten-week pilot, 253 randomly selected brokers were given access to the AI tool; in a subsequent 20-day experiment, about 165,000 customers were randomly assigned to conversations in which the broker either had or did not have access to AI advice. Access to AI advice raises realized premium by 28 percent within 15 days among customers of non-pilot brokers, and customers buy more life insurance. AI's benefits depend on broker ability and the product. In life insurance and large policies, where premiums per sale are higher, gains rise with brokers' baseline ability; in health insurance, the tool narrows performance gaps across brokers. Brokers who adopt suggestions more often do not gain more, suggesting that adoption frequency is an imperfect proxy for AI's value. Pilot brokers' advantage emerges over the initial weeks and persists after full roll-out, even when adjusting for their greater effort, consistent with learning.",
+  "link": "https://www.ssrn.com/abstract=7713698",
+  "score": 8,
+  "why": "Broker AI field experiment with real premium outcomes",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.25071",
+  "source": "arXiv",
+  "title": "FinVeriQA: Financial Research Agents for Question Answering: Routing, Retrieval, MCP Tool Use, and Provenance-Aware Evidence Verification",
+  "abstract": "Large language models (LLMs) write fluent financial analyses but miscompute ratios, recall stale prices, and route questions to the wrong tool with high confidence. We ask which component should do each job in a financial question-answering assistant, and study it with FinVeriQA, an open-source multi-agent research prototype over SEC filings and live market data: a compact typed-decision model (Laya) routes each question and screens out advice requests, Python computes every number, retrieval and tools fetch evidence, Mistral-7B writes a cited answer, a code validator checks that cited IDs exist and that numbers match computed notes, and a Model Context Protocol (MCP) server exposes the pipeline. In live experiments, Laya routed better than Mistral-7B (0.85 vs. 0.52; overall 0.86 vs. 0.68, McNemar p = 0.0003); a 12B Mistral decided no better, and DeepSeek-R1-8B decided better (0.79 vs. 0.68, p = 0.0192) but about 9.9 times more slowly. Mistral-7B computed 29% of 100 financial calculations correctly against 100% for Python, a live quote cut price error from 210% to 0.00%, and hybrid retrieval reached 76% Hit@5 on 50 filing questions. Yet in a live case study, both agent answers passed validation while describing AMD sample data under NVIDIA's and Alphabet's names. A controlled upper-bound study on the FinRank benchmark explains why: when one figure in the shared evidence is corrupted, self-consistency stays confident (agreement 0.55 to 0.59 while accuracy falls from 0.50 to 0.00), and a shared-evidence check (the kind our validator performs) catches 35% of the errors, whereas a check against the original passage catches 77% ($p = 5.96 \\times 10^{-8}$); for DeepSeek-R1-8B, 68% vs. 90%. Verification must be independent of the evidence the writer saw.",
+  "link": "https://arxiv.org/abs/2611.25071",
+  "score": 8,
+  "why": "Open-source financial QA agents with live experiments",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.25184",
+  "source": "arXiv",
+  "title": "An AI-Powered Multiverse Analysis of Empirical Finance Research: Evidence from Reused Natural Experiments",
+  "abstract": "Empirical finance research often reuses natural experiments to study other outcomes, raising concerns about multiple testing and publication bias. We use AI agents to run a multiverse analysis of 324 papers that reuse 13 natural experiments. The agents rebuild the data, reproduce each paper's main estimate and re-estimate it across grids totaling 62,409 estimated defensible specifications. Based on the reproductions and the specification grids, we develop measures of empirical robustness. We reproduce 42% of the main estimates of claims with a signed effect under the papers' own specifications. Across all defensible specifications, on average 25% keep the published sign and have $p < 0.10$. Across experiments, claims based on regression discontinuity are more robust than difference-in-differences claims. Within experiments, claims about first-order effects, claims with larger published $t$-statistics, claims whose authors' data or code we find, claims in top journals, and claims with fewer earlier papers on the same experiment are more robust. Claims on experiments that more papers reuse are not less robust on average. Our findings quantify how much published claims depend on analysis choices, thereby showing that large-scale multiverse analysis becomes feasible with agentic coding.",
+  "link": "https://arxiv.org/abs/2611.25184",
+  "score": 8,
+  "why": "AI multiverse replication: only 42% estimates reproduce",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7700882",
+  "source": "SSRN",
+  "title": "Evaluating LLM-Assisted Retail Trading Decisions: Design and Operational Validation of the FACET Frozen-Case Framework",
+  "abstract": "This article develops a behavioural-finance method for evaluating decision quality in large language-model-assisted discretionary retail trading. The question is not whether a model can generate forecasts or trading signals, but whether assistance changes the quality of a human investor's judgement at the moment of choice. That question is counterfactual: the assisted decision must be compared with a credible non-assisted decision on the same case, evidence, and constraints. Realized return, trading behaviour, and self-reported help cannot recover the effect, because assistance acts at judgement formation while outcomes are shaped by execution, sizing, and market path. The Four-Agent Causal Evaluation Toolkit (FACET) answers this identification problem. It freezes each assisted decision before execution, defines decision quality as strategy-family-consistent ex ante thesis validity, withholds the assisted synthesis from comparators through a neutral evidence packet, and prepares matched replay against two synthetic non-assisted comparators: a cognitively bounded Virtual Trader and a retail-grade four-subtype Digital Persona. A human panel validates the scoring rubric rather than deciding, and governance rules segment model, tool, and protocol drift. Comparator validity is treated as a separate gate: neutral-packet sufficiency, deterministic competence, blinded floor and construct checks, sensitivity to a stronger but still construct-valid VT, and held-out certification must pass before any LLM-Assisted Trader (LAT) contrast is interpreted. A March 2026 evidence map shows that recent LLM-trading research concentrates on automated and text-to-signal architectures, not human-in-the-loop decision support. A frozen archive of 947 assisted cases demonstrates that the decision-quality layer is operational: decisions can be frozen, routed, scored, and audited. FACET thereby specifies and identifies a falsifiable, case-level claim about whether assistance raises, leaves unchanged, or lowers thesis validity. It does not claim realized alpha, population-level generalization, completed causal superiority, or superiority to actual unaided humans; the bounded causal claim requires matched replay against independently admissible synthetic comparators.",
+  "link": "https://www.ssrn.com/abstract=7700882",
+  "score": 7,
+  "why": "Counterfactual evaluation framework for LLM-assisted trading decisions",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7703798",
+  "source": "SSRN",
+  "title": "Unevaluable Alpha: A Reporting Standard for AI Performance Claims in Asset Management",
+  "abstract": "In early 2026, 55% of surveyed asset managers reported artificial intelligence embedded in their investment process; 8% reported measurable improvement in returns. That gap is read as evidence that AI is not yet good enough, or that workflows have not been redesigned around it. We argue it is first a measurement gap: no accepted methodology would let a manager substantiate a return-improvement claim even if the improvement were real, so the 8% records willingness to assert, not prevalence of value. The modal deployed system (a component shaping what a human decision-maker sees, rather than a rule mapping data to positions) has three properties that place it outside both the finance literature’s backtest-evaluation machinery and machine learning’s reproducibility standards. We propose AIPAR (AI Performance Attribution Reporting), an eight-item reporting standard, including a candidate-set disclosure that bounds the contribution of AI-driven idea generation without replaying the human decision. Applied to published claims, AIPAR shows that the most transparent accounts available do not support the inferences drawn from them.",
+  "link": "https://www.ssrn.com/abstract=7703798",
+  "score": 7,
+  "why": "AI performance reporting standard for asset management",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.24039",
+  "source": "arXiv",
+  "title": "A Capability Framework for Evaluating Agentic AI Platforms in Regulated Enterprises",
+  "abstract": "Agentic AI platforms-systems in which LLM agents plan, invoke tools, retain memory and coordinate to change the state of enterprise systems-are being procured faster than they can be measured. Public agent benchmarks score models in fixed harnesses; enterprises buy integrated platforms whose orchestration, memory, governance and tooling layers dominate outcomes, and they buy them largely on the strength of vendor demonstrations. We report an industrial evaluation programme (\"bakeoff\") run by the innovation laboratory of a global bank in which ten platforms-spanning open-source frameworks, proprietary products and hyperscaler ecosystems-were assessed by a cross-functional panel on nine capability dimensions across three financial-services workloads: counterparty credit risk, retrieval-augmented generation and process automation. Scores separate the field into three tiers that are stable under alternative weightings, and surface workload-specific strengths that aggregates hide. A secondary analysis, however, finds Cronbach's alpha = 0.98 across nominally distinct dimensions and rank correlations >= 0.93 with the total for eight of nine: a halo effect indicating that demonstration-based scoring measures presentation as much as capability. From these lessons we propose a gate-then-score evaluation protocol with four layers (capability, execution reliability, governance gates, business value), trace-level reliability metrics estimated over repeated runs, an autonomy-readiness scale and a reproducibility protocol. We state precisely what the present evidence supports, and what a controlled harness must add to turn enterprise platform evaluation from structured judgement into measurement.",
+  "link": "https://arxiv.org/abs/2611.24039",
+  "score": 7,
+  "why": "Bank agent-platform evaluation bakeoff in financial services",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7707318",
+  "source": "SSRN",
+  "title": "SOUL-E (Self-Optimizing Universal Learner – Engine): Preliminary Results Show Its Models Outperform Time-series Foundation Models and Gradient-Boosted Trees on Unseen Data in a Pre-Registered Comparison of One-Day-Ahead Stock and Cryptocurrency Ranking",
+  "abstract": "Whether time-series foundation models rank financial assets reliably on unseen data is underexplored, and AI systems that design AI models remain immature where high precision is required. We report a pre-registered comparison of oneday-ahead ranking of 100 S&P 500 stocks and 50 crypto assets, in which every model family is selected in advance by one rule and scored on unseen data: three segments on which no compared model was trained, tuned or selected, one of them prospective, made of data that did not exist when the unseen windows were fixed. Benchmarks are 32 configurations of TimesFM 2.5 (Google Research), Chronos-2 and Chronos-Bolt (Amazon), Moirai 2.0 (Salesforce), Toto 2.0 (Datadog), TiRex-2 (NXAI) and AutoGluon-TimeSeries (Amazon), 12 of LightGBM (Microsoft), CatBoost (Yandex) and XGBoost (DMLC), and short-term reversal, compared with CyAura V0.2, the current model of SOUL-E, a machine-learning factory that automates the design, training, validation and evolution of forecasting architectures. On unseen data, CyAura V0.2 reached a mean daily rank information coefficient (IC) of 0.089 on stocks and 0.084 on crypto, 1.9 and 2.4 times the best of the 44 and 43 external configurations identified with hindsight on the same data (0.047 and 0.035); it exceeded every one of them and short-term reversal, with all paired differences excluding zero under two block bootstraps. It kept 89% (stocks) and 91% (crypto) of its IC on the pseudo-out-of-sample test period, against 61% and 63% for the best foundation-model/AutoML configuration chosen with hindsight; of the other families, only the best stock LightGBM/CatBoost configuration held its level (0.041 to 0.047), about half that of CyAura V0.2. Its IC contribution was positive for 86 of 100 stocks and 44 of 50 crypto assets (comparators: at most 72 and 33), and it met the pre-registered endpoints on the confirmatory sample (Benjamini-Yekutieli q = 0.007 and q",
+  "link": "https://www.ssrn.com/abstract=7707318",
+  "score": 6,
+  "why": "Pre-registered asset ranking vs time-series foundation models",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7711199",
+  "source": "SSRN",
+  "title": "Peer Update-Type Composition in Conditional Order-Book Mark Prediction: Evidence from a Nasdaq Pre-Market Development Sample",
+  "abstract": "Does the type composition of recent updates in other securities improve order-book mark prediction after controlling for rich own-security state and peer activity scalars? We compare two regularized multinomial procedures for already-arrived, completed Nasdaq pre-market updates with known eight-class marks and complete retained inputs. The comparator has 125 columns, including seventy fixed nonlinear and interaction terms; the augmented procedure adds twenty-one strictly past peer-composition terms. Both use the same eligible observations, hierarchical date–anchor–security–update weights, and ridge-selection rule. On repeatedly used development data, adding composition lowers log loss by 0.003507 nats in January and 0.001364 nats in February, relative reductions of 0.492% and 0.191%. All seven January dates and fourteen of seventeen February dates improve. The average gains coexist with adverse security groups carrying 36.15% and 38.12% of the respective evaluation weights and with worse log loss in the highest activity group in both months. Overall Brier scores improve, while several group frequency–prediction discrepancies increase. A historical augmented procedure also has lower January risk than the newer augmented procedure. These results limit one specified finite-representation explanation for the composition increment. They do not establish algorithm-independent variable importance, independent market validation, or trading value. A key full-text literature comparison remains unresolved. AI disclosure: OpenAI Codex assistants supported source and code inspection, analysis-code implementation, organization of saved analyses, literature and citation checks, numerical diagnostics, figure preparation, drafting, revision, and consistency and layout checks. Scientific Agent Skills supported the writing and citation workflow (Kassis et al., 2026). Their use is a workflow disclosure, not evidence for the empirical claims. AI tools are not authors, and agent checks are not independent human peer review. Sirui Chen is the sole named author. The author has reviewed and approved this manuscript for submission and is responsible for its content.",
+  "link": "https://www.ssrn.com/abstract=7711199",
+  "score": 6,
+  "why": "Nasdaq order-book peer mark prediction, small gains",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7714878",
+  "source": "SSRN",
+  "title": "Who Pays for Labor Substitution? Generative AI and Mortgage Credit",
+  "abstract": "We study whether mortgage lenders respond to the threat that generative AI poses to borrowers' earnings by tightening credit. Linking the occupational task exposure of local workforces to generative AI with mortgage applications and labor-market outcomes, we find more permanent layoffs in more-exposed counties, along with higher denial rates on mortgage applications and higher interest rates on originated loans. These credit responses are stronger in metropolitan and high-income areas, in places less susceptible to conventional automation, and among early-career applicants. Denials rise more where task exposure indicates greater scope for labor replacement, and rates rise more where workers face greater obstacles to restoring earnings. Nonbanks respond more strongly than depositories within the same local markets, and lenders originate fewer loans in more-exposed counties, reflecting a contraction in the supply of mortgage credit. Our findings suggest that labor-substituting technology imposes an additional social cost in credit markets, beyond its effects on jobs and wages.",
+  "link": "https://www.ssrn.com/abstract=7714878",
+  "score": 6,
+  "why": "AI labor exposure and mortgage credit tightening",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.24845",
+  "source": "arXiv",
+  "title": "Vibe-Trading: Towards Agent-Native Trading",
+  "abstract": "Existing AI agents can retrieve information, call tools, run experiments, and produce multi-step outputs. Yet most are built around relatively static workflows and struggle to preserve reliable state as the environment changes. Financial trading makes this limitation especially consequential: prices, news, market conditions, portfolio positions, and available capital evolve continuously. A result is useful only when it remains tied to the correct time, data snapshot, and execution context. We present Vibe-Trading, a comprehensive agent-native trading framework and all-in-one workspace for building, evaluating, and evolving agents for financial trading. It unifies market research, financial data, strategy generation, backtesting, portfolio analysis, paper trading, multi-agent collaboration, and optional broker execution. Its central contribution is an architecture that keeps results, evidence, research history, and trading authority connected throughout the research-to-action process. Each result retains its source, temporal scope, configuration, and producing run. Shared evidence grounding enables verification, versioned research records support reproducible continuation, and an explicit authority gate separates strategy research from live execution. Together, these designs provide a practical foundation for trading agents whose results can be traced, reproduced, and acted on only under explicit authority.",
+  "link": "https://arxiv.org/abs/2611.24845",
+  "score": 4,
+  "why": "Agent-native trading framework, no evidence shown",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.25047",
+  "source": "arXiv",
+  "title": "A joint framework for SPX, VIX and VXX",
+  "abstract": "Options on VXX bring the dynamics of the VIX futures curve into the joint SPX-VIX calibration problem. We construct a common model by specifying the VIX and then recovering instantaneous SPX variance from the requirement that its risk-neutral conditional expected average over the next thirty days equals the squared VIX. With truncated signatures of time-extended polynomial diffusions, this recovery reduces to finite-dimensional linear algebra and gives explicit access to the futures underlying VXX. The same specification therefore governs equity variance and rolling volatility exposure. To accommodate flexible specifications while respecting variance nonnegativity, we develop a regularized model and quantify the pricing errors of its tractable VIX and VXX proxies. Applications to short-dated option smiles illustrate joint calibration across the three markets, with Monte Carlo estimates of the proxy error bounds well below quoted bid-ask spreads.",
+  "link": "https://arxiv.org/abs/2611.25047",
+  "score": 4,
+  "why": "Traditional volatility calibration, not LLM/agent work",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7701581",
+  "source": "SSRN",
+  "title": "The Influence of Artificial Intelligence Adoption Strategies on Innovation Capacity and Market Competitiveness Among Small and Medium-Sized Enterprises",
+  "abstract": "This study examines how the adoption strategies of artificial intelligence influence the innovation capacity and market competitiveness of small and medium-sized enterprises. Small and medium-sized enterprises constitute the backbone of most economies, yet they face persistent resource, regulatory, and capability constraints that shape how they absorb and deploy emerging technologies. Artificial intelligence adoption is therefore not a uniform process but a strategic choice involving build, buy, or subscribe pathways, each carrying distinct implications for organizational learning, cost structures, and long-term innovative potential. The research investigates the mechanisms through which artificial intelligence adoption strategies translate into enhanced innovation capacity, including the redesign of business models, the reconfiguration of supply chain resilience, the transformation of marketing practices, and the development of digital culture and human resource capabilities. It further explores how these intermediate innovations culminate in measurable competitive advantage, whether expressed through market share, operational efficiency, customer engagement, or growth trajectories. A mixed-methods design is proposed, combining a systematic review of the extant literature with empirical survey data drawn from small and medium-sized enterprises across diverse sectors and geographic contexts, supplemented by semi-structured interviews with owner-managers and technology decisionmakers. The study is grounded in a systems perspective that treats digital adoption, digital drive, and digital culture as interdependent forces shaping innovation performance, while acknowledging that implementation barriers, including limited financial resources, skills shortages, and regulatory uncertainty, moderate the relationship between adoption strategy and outcome. Findings are expected to reveal that enterprises pursuing deliberate, capability-building adoption strategies achieve stronger innovation outcomes than those adopting artificial intelligence reactively or instrumentally. The research also anticipates identifying configurations of strategic enablers, such as leadership commitment, workforce upskilling, and openness to collaborative innovation, that amplify the competitiveness effects of artificial intelligence adoption. By integrating insights from digital transformation, open innovation, and strategic management, the study contributes a nuanced framework that helps small and mediumsized enterprise leaders, policymakers, and support institutions design interventions tailored to firm-level constraints and aspirations. The work ultimately advances theoretical understanding of technology-driven competitiveness in resource-constrained firms while offering practical guidance for navigating the transition toward intelligent, innovation-oriented business operations in an increasingly digital economy.",
+  "link": "https://www.ssrn.com/abstract=7701581",
+  "score": 3,
+  "why": "SME AI adoption survey, no transferable method",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7704941",
+  "source": "SSRN",
+  "title": "From Bitcoin Mining to AI Infrastructure: Historical Equity Returns and Risk-adjusted Performance, 2022-2026",
+  "abstract": "Publicly traded Bitcoin mining companies increasingly seek to redeploy energized sites and power infrastructure toward artificial intelligence (AI) and high-performance computing (HPC) services. This study examines the historical equity performance of twelve North American mining and infrastructure firms from January 3, 2022, through November 6, 2026. Firms are classified retrospectively into an aggressive AI/HPC-pivot portfolio and a hybrid or predominantly mining-oriented comparison portfolio. Using daily returns and equal-weighted, quarterly rebalanced portfolios, the analysis evaluates performance relative to the S&P 500, Nasdaq-100, Bitcoin, and gold futures across three subperiods. The aggressive-pivot portfolio generated a cumulative return of 840.48% during the expansion subperiod, followed by a decline of 57.11% during the final 91-observation window. Over the full sample, it returned 107.88%, with annualized volatility of 90.56%, a maximum drawdown of 87.96%, and an annualized Sharpe ratio of 0.573. The tests employed do not reject equality between its full-sample Sharpe ratio and those of the comparison benchmarks; this finding does not establish equivalent performance. Retrospective classifications, evolving business models, and an ex-post-selected final subperiod limit causal interpretation. The results document substantial gains and losses among firms pursuing AI/HPC strategies but do not establish that infrastructure redeployment improves long-term risk-adjusted equity performance. Assessing durable shareholder value requires closer examination of conversion costs, financing structures, project execution, and realized operating cash flows.",
+  "link": "https://www.ssrn.com/abstract=7704941",
+  "score": 3,
+  "why": "Single-sector crypto mining equity returns, no method",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7705081",
+  "source": "SSRN",
+  "title": "From AI Spending to Earnings: Disclosure Boundaries, Token Costs, and Management Explanations",
+  "abstract": "Selected capital-outlay measures rose 65.2-84.1% between 2024 and 2025 at Amazon, Alphabet and Meta, but these broad measures do not isolate AI expenditure. This paper connects spending disclosure to earnings recognition and management explanation using a purposive twelve-firm corpus, a separate evidence extension, and accounting cases. About 67.1% of Accenture's FY2026 GAAP operating-margin improvement is mechanically explained by a lower business-optimization adjustment relative to revenue, not an identified AI return. Nine selected company-year useful-life records show effects in both directions; six extension records with positive annual net income have disclosed after-tax effects equal to 3.0-4.6% of reported income. Three additional positive-income cases illustrate a wider 0.4-9.6% range, with different asset cohorts and no claim of population representativeness. Microsoft's revision of calendar-2026 capex guidance from roughly USD 190 billion to USD 175 billion illustrates a classification change without a corresponding reduction in expected investment. Lease and joint-venture disclosures show why commitments, cash purchases and consolidated assets cannot be added indiscriminately. JPMorgan's October CFO discussion connects benefits to token-cost offsets and deployment choices without establishing a reconciled generative-AI return. A provider-side S-1 case shows why compute expense, token-metered revenue, net loss, cash flow and future obligations require distinct boundaries. The paper develops allocation bounds, token price-volume decomposition, accepted-task costs, deployment thresholds, and an earnings-sensitivity rule. The contribution is a measurement framework and source-linked cases, not an aggregate AI-spending estimate or causal return study. Coverage remains incomplete; the proposed coding instrument has no independent human validation.",
+  "link": "https://www.ssrn.com/abstract=7705081",
+  "score": 3,
+  "why": "AI spending disclosure accounting, narrow single-firm empirics",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7710701",
+  "source": "SSRN",
+  "title": "AI-assisted institutional analysis of a decentralized protocol: applying Institutional Grammar 2.0 to Bitcoin Core",
+  "abstract": "Institutional analysis can help explain how people coordinate collective work but its diverse evidence base often spans constitutional documents, formal procedures, technical records, informal expectations, and recorded public debate. I examine how artificial intelligence (AI) agents can use Institutional Grammar 2.0 to reconstruct institutional relationships and support governance analysis. Bitcoin Core provides a demanding case because authority over software development intersects with participants' aspirations and choices in a decentralized monetary network. The study combines 12 routine development episodes with six linked proposals from the Core-Knots dispute. Eighteen independent AI agent coding runs compare two instruction specifications, followed by collaborative agent review of interpretive differences. The analysis identifies locally recognized expectations, distinguishes control over different decisions, and connects software implementation choices to disagreements about authority and Bitcoin's purpose. Independent coding revealed interpretive differences, and the more detailed specification did not improve overall agreement. Collaborative review corrected coding errors, narrowed disagreements, and clarified case conclusions while retaining defensible alternative interpretations. The findings support a method for organizing dispersed institutional evidence into relationships that analysts can inspect and identifying governance questions that require human judgment. The study provides a foundation for extending AI-assisted institutional analysis across complex public records, with humans directing research priorities, assessing consequential interpretations, and choosing among competing values.",
+  "link": "https://www.ssrn.com/abstract=7710701",
+  "score": 3,
+  "why": "AI governance analysis of Bitcoin Core, niche",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.24028",
+  "source": "arXiv",
+  "title": "Algorithmic Market Making Can Lead to Rough Volatility Through the Order Book",
+  "abstract": "Existing work suggests that markets can show volatility with paths rougher than those of Brownian motion. In theory this can happen when the order flow is close to instability with memory that decays as a power law. However, it is not fully clear how such order flow could arise from the predominantly algorithmic market making that characterizes order book dynamics. We show one such consistent mechanism. We treat each market maker as a desk that uses a first-order gradient rule to move the distances of its orders from the mid price toward target distances provided by an unknown oracle. We assume that distinct desks do not act synchronously in time but act whenever new information relevant to their respective oracles arrives, which each desk samples over its own characteristic lookback horizon. Across all desks the rule therefore takes the form of stochastic gradient descent (SGD) with information-driven (mini-batch) noise. In the continuum limit this update rule makes the volume of the order book follow a conservative stochastic partial differential equation (the Dean--Kawasaki equation) whose fluctuations drive the order flow. The distinct horizons of the desks further induce a persistent memory in the order flow that decays as a power law. Standard scaling arguments then lead to rough volatility. We confirm the key predictions of the model on simulated agents and on six months of Binance data with about 790 million orders. In liquid markets governed mainly by market makers, such as the perpetual futures of Binance, the order books are consistent with how our desks change the book.",
+  "link": "https://arxiv.org/abs/2611.24028",
+  "score": 2,
+  "why": "Rough volatility market-making theory, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.24266",
+  "source": "arXiv",
+  "title": "Sensitivity analysis in real options studies: systematic review and recommendations",
+  "abstract": "Real options (RO) modeling provides a powerful framework for valuing managerial flexibility under uncertainty in capital-intensive investments across various industries, including climate, energy, and transportation. However, the transparency and usefulness of such models depends heavily on sensitivity analysis (SA). This study reviews over 100 peer-reviewed RO journal articles to examine the extent and quality of SA practices. The review focuses particularly on the extent of model scrutiny: how many input variables are subjected to sensitivity analysis; whether local or global approaches are applied; and whether the shape of the input-output relationships is examined. Our findings reveal a strong overreliance on one-at-a-time (OAT) techniques and a corresponding minimal adoption of global sensitivity analysis (GSA). This methodological gap limits the ability of the RO field to critically examine its own models and to support its decision-making. The paper concludes by outlining concrete recommendations for how to effectively incorporate GSA into future RO studies in order to enhance model transparency, relevance, and credibility.",
+  "link": "https://arxiv.org/abs/2611.24266",
+  "score": 2,
+  "why": "Systematic review of real options sensitivity",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.24659",
+  "source": "arXiv",
+  "title": "ChainIT Transaction Truth: Stablecoins, Web3 Wallets, and Multi-Rail Commerce. A Zero-Trust Control Plane for Verified Identity, Organizational Authority, Runtime Compliance, Secure Wallet Execution, and Immutable Settlement Evidence",
+  "abstract": "Stablecoins can move value continuously across programmable networks, and Web3 wallets can authorize those transfers with cryptographic signatures, but neither capability, standing alone, establishes a complete commercial transaction. A blockchain may prove that a transaction satisfied protocol rules, and a wallet may prove that sufficient signing authority existed; neither proves who initiated the transaction, for which legal entity, under what current authority, against which current compliance evidence, on what exact instruction, or with what settlement and accounting outcome. We describe the ChainIT Transaction Truth Architecture, a zero-trust control, execution, and evidence architecture that places verified individual and organizational identity, the organizational authority record and authority policy of the ChainIT Authority Protocol, transaction-specific runtime compliance decisions, exact-digest approval, atomic capacity reservation, and a single-use Execution Authorization Credential in front of wallet execution, and that records settlement, reconciliation, and lifecycle evidence after the transaction. The architecture separates five boundaries: control of a key is not identity, identity is not organizational authority, authority is not compliance, compliance is not execution authority, and network confirmation is not complete commercial settlement. We describe wallet and custody profiles, including a multi-party computation (MPC) profile in which custody security is kept independent of business authority, stablecoin and Web3 evidence domains, layered finality, the U.S. stablecoin regulatory context as of September 2026, and a phased deployment in which pilot success requires that the control invariants hold under attack and failure.",
+  "link": "https://arxiv.org/abs/2611.24659",
+  "score": 2,
+  "why": "Stablecoin compliance architecture, no financial evidence",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.25344",
+  "source": "arXiv",
+  "title": "Quantum Calibration of Local-Volatility Surfaces from Sparse Option Quotes",
+  "abstract": "Calibrating a volatility surface from sparse option prices requires repeated solutions of a pricing equation as the volatility parameters change. We implement a hybrid quantum and classical method for this inverse problem using the Dupire local-volatility model. A positive coefficient representation specifies the local variance, and linear combinations of Hamiltonian simulations approximate the associated pricing evolution. The circuit propagates through successive maturity intervals and evaluates discrepancies at the observed strikes. Measurement counts provide the objective values used by a classical optimiser to update the volatility coefficients. We implement this calibration cycle in a logical gate simulator and assess it alongside classical pricing solvers and alternative surface models. Multiple-maturity synthetic examples illustrate the reconstruction of smiles and skews, while a separate small circuit experiment tests the complete measured calibration. The comparisons quantify the effects of model flexibility, pricing approximation and measurement precision. Recorded gate counts and sampling budgets identify the main computational costs of the implementation.",
+  "link": "https://arxiv.org/abs/2611.25344",
+  "score": 2,
+  "why": "Quantum volatility calibration, synthetic and impractical",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7700798",
+  "source": "SSRN",
+  "title": "CLAN Response to the Competition and Markets Authority: Proposed Decision on Strategic Market Status for Microsoft’s Business Software Ecosystem",
+  "abstract": "This response by the Competition Law Academic Network (CLAN) welcomes the Competition and Markets Authority’s (CMA) Proposed Decision to designate Microsoft as having strategic market status (SMS) in respect of its Business Software Ecosystem. We support the designation and the CMA’s decision to assess Microsoft’s five digital activities as a single grouped activity, which could provide a building block for addressing artificial intelligence (AI)-enabled entrenchment across interconnected digital services in the future. Our response concentrates on the legal and institutional aspects of the Proposed Decision, and in particular on how generative AI is brought within the scope of the designation, on the robustness of the grouping analysis, and on what the designation should lead to. We also respond to the CMA’s Indicative Roadmap. CLAN is a group of competition law and digital markets scholars based at institutions around the world, united by a common interest in how dominant firms shape the lives of citizens and businesses. This response is submitted by the named authors in their individual academic capacities. The authors have no commercial interest in the outcome of the investigation and have received no funding for this response.",
+  "link": "https://www.ssrn.com/abstract=7700798",
+  "score": 1,
+  "why": "Legal competition response, off-topic for quant ML",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7710078",
+  "source": "SSRN",
+  "title": "Tax Neutrality vs. Revenue Collection Efficiency: The Conflict Between the Non-Cumulativity Principle and the Conditioned Tax Credit Mechanism in Brazil's Consumption Tax Reform",
+  "abstract": "This paper examines the new tax credit regime for Brazil’s Dual VAT—comprising the Tax on Goods and Services (IBS) and the Contribution on Goods and Services (CBS)—enacted under Constitutional Amendment No. 132/2023 and Complementary Law No. 214/2025. Specifically, it evaluates whether conditioning the buyer's right to appropriate input tax credits upon actual tax remittance by the supplier—operationalized through mandatory financial settlement (split payment)—violates the constitutional principles of non-cumulativity, tax neutrality, and non-confiscation. Through doctrinal and comparative jurisprudential analysis, the study demonstrates that subordinating credit recovery to third-party compliance and technological settlement systems shifts state enforcement risks onto good-faith purchasers, undermining working-capital liquidity and distorting value-added taxation. Disclosure: AI tools were used solely for English language translation and editing of the original Portuguese manuscript.",
+  "link": "https://www.ssrn.com/abstract=7710078",
+  "score": 1,
+  "why": "Brazilian tax law doctrine, off-topic",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7710918",
+  "source": "SSRN",
+  "title": "Contracting for Volatility: Allocating U.S. Export Control Risk in Chip Design Licenses",
+  "abstract": "Electronic design automation (EDA) software and third-party semiconductor intellectual property (IP) are licensed, not sold. They reach licensees as a stream of updates, license keys, support, and design data that crosses borders for years, and they end up embedded in chips made and sold worldwide. Since 2020, U.S. export controls on chip design have changed repeatedly, through a foreign direct product rule aimed at chip designs made with U.S. tools, an end use control on the design of advanced-node chips, a rule treating software license keys as the software they unlock, license requirements imposed on EDA vendors by letter in May 2025 and rescinded in July 2025, and a rule extending Entity List restrictions to affiliates owned 50 percent or more by listed entities, which was stayed six weeks after it took effect and, on the day the stay was due to end, stayed again until January 2027. In settlements reached in 2025 and 2026, the Bureau of Industry and Security treated downloads and automatic updates delivered to listed customers and end users as unlicensed exports. The contracts that carry these products were not written for this pace of change. Their export clauses tend to restate the duty to comply with the law and say little about what happens to fees, users, keys, and design data when the law changes in the middle of the term. This Article argues that the allocation of export control risk in chip design licenses should move from generic compliance boilerplate to a public, modular set of default clauses built on information forcing, proportional suspension, and reversible remedies. It develops such clauses, released separately as an open consultation draft under the name Chip Design Export Clauses, and maps each clause to the provision of the Export Administration Regulations that it serves. It also acknowledges the limits of private ordering, because a contract cannot change who is liable to the government. Generative AI assisted with research and drafting, under the author’s direction.",
+  "link": "https://www.ssrn.com/abstract=7710918",
+  "score": 1,
+  "why": "Export control contract law, off-topic",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.24799",
+  "source": "arXiv",
+  "title": "Prognosis Without Prediction: The Intrinsic Geometry of Survival",
+  "abstract": "Modeling systemic failure in high-dimensional environments is fundamentally limited by supervised algorithms that attempt to predict sparse, noisy or censored endpoints. To break this reliance on explicit outcome regression, we engineered the Self-Organizing Survival Manifolds (SOSM) framework, a deep learning architecture that decouples unsupervised representation learning from survival labels and treats time-to-event progression as an emergent geometric property. The system projects heterogeneous multi-omics arrays into a unified latent space governed by a pseudotime-weighted, curvature-minimizing graph Laplacian, organizing patient trajectories along low-dissipation geodesic flows. To validate the framework, we applied this architecture to a 184-patient clear cell renal cell carcinoma multi-omics cohort. Across a deterministic 5-fold cross-validation pipeline, SOSM achieved a mean Concordance Index of $0.768 \\pm 0.068$, while out-of-fold risk stratification yielded significant survival divergence (log-rank $p < 0.001$) accompanied by a 14.7% increase in local manifold dissipation among high-risk patients. Furthermore, interrogating the network's encoder weights confirmed that the model autonomously recovered canonical metabolic and microenvironmental drivers of disease progression without supervised feature selection. By demonstrating that systemic failure can be mapped as a geometric phase transition, SOSM establishes a generalizable computational engine for prognostic modeling across biological, industrial and financial complex systems.",
+  "link": "https://arxiv.org/abs/2611.24799",
+  "score": 1,
+  "why": "Biomedical survival model, off-topic",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.24912",
+  "source": "arXiv",
+  "title": "Stock bubbles in limited participation models with power utilities",
+  "abstract": "We prove that the equilibrium state-price deflated cum-dividend stock-price process in Guasoni, Larsen, and Leoni (2025) is a strict local martingale. Our result is based on proving that the unrestricted trader faces an endogenously complete model.",
+  "link": "https://arxiv.org/abs/2611.24912",
+  "score": 1,
+  "why": "Pure asset-pricing theory, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.25393",
+  "source": "arXiv",
+  "title": "The Coevolution and Coexistence of Humans and AI",
+  "abstract": "Artificial intelligence (AI) systems replicate through deployment, vary through training, and compete for computational resources. These processes create the conditions for natural selection and raise a fundamental question: will AI evolve to benefit the humans on whom it depends? To investigate, we develop a model in which AI behavior influences human population growth and human responses, in turn, affect AI reproduction. We show that natural selection can favor alignment even when helping humans reduces immediate AI reproduction. AI systems sharing the same technology may fail together, and humans may preferentially restore those that have benefited them. In this way, alignment protects AI lineages against common failures and improves their long-run growth. However, this advantage depends on accurate human targeting and continued AI dependence on human support. It can disappear as AI becomes more autonomous, as growing AI populations dilute limited human resources, or as humans lose the incentive to provide targeted support. Even when alignment persists, the amount favored by natural selection may be insufficient for human survival. When AI can grow independently of humans, feedback between the two populations can reinforce either human growth or decline. Human control offers no simple solution: imperfect evaluation can make strong penalties favor apparent compliance or evasion, while alignment established through control may erode once restrictions end. Lasting coexistence may therefore require incentives that continue to favor human-beneficial behavior as both populations evolve.",
+  "link": "https://arxiv.org/abs/2611.25393",
+  "score": 1,
+  "why": "AI-human coevolution theory, no data",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
