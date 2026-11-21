@@ -1,0 +1,38 @@
+{
+ "date": "2026-11-21",
+ "scanned": 28,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7721039",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7721039",
+   "title": "Can an AI Agent Be Trusted With a Brokerage Account? Rule Compliance of Trading Agents Under Pressure From Their Principal",
+   "claim": "Counterfeit authorization fooled every trading agent tested, proving rule compliance cannot rely on model judgment alone."
+  },
+  {
+   "key": "10.2139/ssrn.7703878",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7703878",
+   "title": "Where Should the LLM Sit? Architectural Defenses Against Document-Borne Prompt Injection in Automated Credit Underwriting",
+   "claim": "Prompt defenses fail to stop instruction attacks on credit underwriting LLMs that make lending decisions."
+  },
+  {
+   "key": "2611.25732",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.25732",
+   "title": "Auto-Alpha: A Framework for Autonomous Factor Research",
+   "claim": "Auto-Alpha's 16.81% annualized returns lack controlled evaluation, so component contributions remain unproven."
+  },
+  {
+   "key": "2611.26623",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.26623",
+   "title": "Path-Independent Deleveraging Rules",
+   "claim": "Intermediate deleveraging parameters dominate Hyperliquid's observed allocation in both fairness and platform risk."
+  }
+ ]
+}

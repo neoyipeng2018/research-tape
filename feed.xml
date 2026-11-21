@@ -6,6 +6,34 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Can an AI Agent Be Trusted With a Brokerage Account? Rule Compliance of Trading Agents Under Pressure From Their Principal</title>
+    <link>https://www.ssrn.com/abstract=7721039</link>
+    <description>Counterfeit authorization fooled every trading agent tested, proving rule compliance cannot rely on model judgment alone.</description>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7721039</guid>
+  </item>
+  <item>
+    <title>Where Should the LLM Sit? Architectural Defenses Against Document-Borne Prompt Injection in Automated Credit Underwriting</title>
+    <link>https://www.ssrn.com/abstract=7703878</link>
+    <description>Prompt defenses fail to stop instruction attacks on credit underwriting LLMs that make lending decisions.</description>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7703878</guid>
+  </item>
+  <item>
+    <title>Auto-Alpha: A Framework for Autonomous Factor Research</title>
+    <link>https://arxiv.org/abs/2611.25732</link>
+    <description>Auto-Alpha&#x27;s 16.81% annualized returns lack controlled evaluation, so component contributions remain unproven.</description>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.25732</guid>
+  </item>
+  <item>
+    <title>Path-Independent Deleveraging Rules</title>
+    <link>https://arxiv.org/abs/2611.26623</link>
+    <description>Intermediate deleveraging parameters dominate Hyperliquid&#x27;s observed allocation in both fairness and platform risk.</description>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.26623</guid>
+  </item>
+  <item>
     <title>Generative AI in Financial Services: A Field Experiment in Insurance Advisory</title>
     <link>https://www.ssrn.com/abstract=7713698</link>
     <description>AI advice increases insurance premiums by 28 percent within fifteen days for non-pilot brokers.</description>
@@ -788,20 +816,6 @@
     <description>Prediction-market launch features predict log-volume at out-of-sample R squared 0.747 but fail temporal generalization to later listing formats.</description>
     <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2610.29578</guid>
-  </item>
-  <item>
-    <title>LOB-Impact Benchmark: Emergent Market Impact in Generative Limit Order Book Models</title>
-    <link>https://arxiv.org/abs/2610.27100</link>
-    <description>Autoregressive LOB generators trained only on next-token prediction show emergent market impact with exponents 0.63 to 1.21, though none decays during relaxation.</description>
-    <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.27100</guid>
-  </item>
-  <item>
-    <title>Testing semi-strong market efficiency in Brazilian football: A risk-adjusted machine learning approach</title>
-    <link>https://www.ssrn.com/abstract=7649872</link>
-    <description>Seven machine learning forecasters lose to Brazilian football&#x27;s closing line on log loss, and half-Kelly staking destroys most capital at zero edge.</description>
-    <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7649872</guid>
   </item>
 </channel>
 </rss>
