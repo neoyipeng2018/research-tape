@@ -1,0 +1,23 @@
+{
+ "date": "2026-11-22",
+ "scanned": 12,
+ "lanes": [
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7713438",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7713438",
+   "title": "Risk Factors in AI Agent Token Pricing",
+   "claim": "Pool flow and the VIRTUAL numeraire explain 90.9 percent of AI agent token daily return variance, showing mechanics dominate risk."
+  },
+  {
+   "key": "10.2139/ssrn.7713238",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7713238",
+   "title": "Generative AI in Asset Management: Too Much of a Good Thing?",
+   "claim": "Moderate AI use raises fund returns, but intensive reliance lowers them as disclosures converge and crowding grows."
+  }
+ ]
+}

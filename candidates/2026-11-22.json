@@ -1,0 +1,122 @@
+[
+ {
+  "key": "10.2139/ssrn.7713438",
+  "source": "SSRN",
+  "title": "Risk Factors in AI Agent Token Pricing",
+  "abstract": "Autonomous AI agents issue tradable tokens on the blockchain. We study 568 agent tokens on the Virtuals Protocol, a launchpad for AI agents, where these tokens trade primarily against the platform's base currency (VIRTUAL) in constant-product pools. We find that, because most prices are quoted in this single numeraire, pool flow (net buying and selling) and the numeraire largely set daily prices: together, they explain 90.9% of the variance of daily log returns, and the common daily component of returns tracks VIRTUAL/USD. Of twenty candidate factors, only short-horizon reversal survives familywise error control in the main specification, and it arises entirely from price moves that pool flows do not explain. However, investors cannot exploit it at scale: fees of 2.6% per round trip, paid on a daily turnover of about 89% of each leg, cut its 5.5% daily gross return to 0.9%, and price impact removes the rest once a long-short portfolio holds more than about $1,200 on each side. Holding is costlier still: a buyer who purchases a token on its first recorded trading day and holds it for ninety days loses a median of 80.5%. These results imply that returns in poolpriced token markets reflect trading mechanics more than priced risk, and that buyers' transaction costs can be computed in advance from the fee schedule and pool depth.",
+  "link": "https://www.ssrn.com/abstract=7713438",
+  "score": 8,
+  "why": "Real pool flows, fees kill reversal, execution microstructure.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7713238",
+  "source": "SSRN",
+  "title": "Generative AI in Asset Management: Too Much of a Good Thing?",
+  "abstract": "We examine how generative artificial intelligence is reshaping mutual fund disclosures, portfolio choices, and investment performance. We document increased AI use beginning in 2024. AI-classified reports converge toward common narratives, emphasizing macroeconomic conditions and policy while devoting less attention to investment strategy and industry fundamentals; human-written reports remain substantially more heterogeneous. The relation between AI use and fund performance is inverted U-shaped. Funds whose disclosures indicate human-AI collaboration earn higher subsequent returns, whereas intensive AI users do not. Using funds' AI-use intensity and active portfolio weights, we construct a stock-level measure of AI Exposure and document a similar inverted-U-shaped relation with subsequent stock returns. The results suggest that AI enhances managerial judgment at moderate levels but loses value as reliance and crowding increase.",
+  "link": "https://www.ssrn.com/abstract=7713238",
+  "score": 7,
+  "why": "Fund AI use vs returns, inverted-U, subsequent out-of-sample.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7713198",
+  "source": "SSRN",
+  "title": "Self-refuting Models: Learning by Detecting their own Financial Errors",
+  "abstract": "Large Language Models (LLMs) have achieved notable success in financial question answering tasks. However, their reliance on a single-pass generation process limits their ability to verify outputs, often resulting in hallucinations, numerical errors, and factual inconsistencies. Such shortcomings are especially critical in high-stakes financial contexts, where accuracy and reliability are essential. To address this limitation, we propose Self-Refuting Models, a novel framework designed to enhance model reliability by enabling systematic self-verification. The framework operates through three stages: (i) Initial Generation, where a candidate response is produced; (ii) Adversarial Self-Critique, where the model actively attempts to challenge and invalidate its own reasoning; and (iii) Refinement, where the response is revised to resolve identified inconsistencies. We formalize this process as a minimax optimization problem between a generator and a self-critic, encouraging outputs that remain robust under internal adversarial evaluation. Experiments conducted on financial question answering benchmarks derived from U.S. corporate disclosures, including FinanceBench and ConvFinQA, demonstrate the effectiveness of our approach. Specifically, self-refuting models reduce hallucination rates by 18.7%, improve numerical accuracy by 12.4%, and enhance factual consistency by 14.1%, resulting in an overall performance gain of 9.6% over standard prompting baselines.",
+  "link": "https://www.ssrn.com/abstract=7713198",
+  "score": 5,
+  "why": "LLM self-critique for financial QA; no code/OOS evidence.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7715481",
+  "source": "SSRN",
+  "title": "Predicting Financial Contagion across Emerging Economies Using Machine Learning and Network Analysis",
+  "abstract": "Financial crises in emerging market economies (EMEs) rarely remain confined to their country of origin. Episodes ranging from the 1997 Asian crisis to the 2013 taper tantrum and the 2020 pandemic sell-off show that distress travels through trade, banking, portfolio, and sentiment channels. This paper develops an integrated framework that combines network analysis and machine learning (ML) to measure, explain, and predict contagion across twenty emerging economies. The empirical design is grounded in the first-, second-, and third-generation currency crisis models, global games, herding and information cascades, the financial accelerator, bank-run and funding-liquidity theory, and network cascade models, and the paper derives testable hypotheses from each. First, we build timevarying financial networks using generalized forecast error variance decompositions from vector autoregressions, sparse partial-correlation graphs estimated by the graphical lasso, and a multilayer representation combining market, trade, and banking exposures. Second, wederive network centrality measures and a spectral amplification index and show theoretically that systemic vulnerability is governed by the spectral radius of the exposure matrix. Third, we feed network-based features together with macro-financial fundamentals into regularized logistic regression, random forests, gradient boosting, long short-term memory (LSTM) networks, and graph convolutional networks (GCN) to predict the probability that a country enters a crisis within the next one to six months. We evaluate performance outof-sample with time-series cross-validation, receiver operating characteristic analysis, and Diebold–Mariano tests, and interpret models with Shapley values. The framework yields the architecture of the empirical design, the estimators, the loss functions and the evaluation protocol; the numerical results presented are illustrative of the expected layout and should be substituted with replication output. The proposed approach shows how adding network topology to fundamentals can improve early warning performance, and it offers policymakers a transparent method for monitoring systemic importance and cross-border vulnerability. Keywords: financial contagion; emerging markets; network analysis; machine learning; early warning systems; spillover index. JEL Codes: G01; G15; F34; F36; C45; C58.",
+  "link": "https://www.ssrn.com/abstract=7715481",
+  "score": 5,
+  "why": "Network contagion ML, no code or costs visible.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7711319",
+  "source": "SSRN",
+  "title": "Estimating Task-Specific Limits of Customer-Permitted AI Authority in Digital Banking: Bayesian Bootstrap and Shared Respondent-Level Random-Weight Sensitivity Analysis for Calibrated Repeated Ordinal Surveys",
+  "abstract": "Conversational artificial intelligence (AI) in digital banking introduces varying levels of delegated authority, ranging from information provision and financial analysis to recommendations, transaction preparation, and bounded execution. Understanding these distinctions requires more than conventional measures of AI acceptance, particularly when individual respondents evaluate multiple banking activities with different financial consequences. This methodological note presents a Bayesian Bootstrap and shared respondent-level random-weight approach for estimating task-specific maximum-permission distributions from calibrated repeated ordinal survey responses. The procedure combines fixed-weight descriptive estimation with exponential random-weight simulations that preserve within-respondent dependence across activities. It supports the estimation of exact-category probabilities, cumulative permission thresholds, stopping-point distributions, and paired task contrasts, alongside simulation-based uncertainty summaries. An eight-respondent synthetic dataset demonstrates the computational workflow, while additional sensitivity analyses examine missing task responses, survey-weight dispersion, and the preservation of calibrated stratum totals. Under equal baseline weights, normalized exponential draws follow the classical Dirichlet Bayesian bootstrap; under unequal calibration weights, the resulting distributions characterize sensitivity to the specified respondent-reweighting procedure. The accompanying reproducible implementation provides a structured approach to evaluating stated AI delegation boundaries across banking contexts, with explicit distinctions between descriptive estimates, conditional simulation variability, and population-level statistical inference.",
+  "link": "https://www.ssrn.com/abstract=7711319",
+  "score": 3,
+  "why": "Survey methodology for AI banking authority, not trading ML.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7714721",
+  "source": "SSRN",
+  "title": "The Use of AI in the Finance Function: The Impact of Regulatory Focus",
+  "abstract": "Artificial intelligence (AI) is spreading quickly in organizations, yet our knowledge of the determinants of AI use in finance functions is rather limited. Drawing on regulatory focus theory, we hypothesize that promotion (prevention) focus is positively (negatively) associated with the use of AI in finance functions; in addition, we test whether the use of AI is associated with the effectiveness of the finance function. We test our hypotheses using survey data from 389 finance professionals in six European countries. We find that a promotion focus is associated with a higher propensity to use AI in the finance function; however, prevention climate is not significantly associated with AI use. We also find that organizations with higherthan-expected AI use report higher levels of effectiveness of the finance function, whereas those falling short do not show significantly lower effectiveness. Overall, our paper adds to the understanding of the drivers and consequences of AI use in the finance function.",
+  "link": "https://www.ssrn.com/abstract=7714721",
+  "score": 3,
+  "why": "Survey of finance professionals on AI adoption.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7716059",
+  "source": "SSRN",
+  "title": "Reward Hacking Is an Accounting Error: Eliminating Specification Gaming and the Alignment Tax via Conservation-Gated Reinforcement Learning and Anchored Verifier Evolution",
+  "abstract": "Prevailing alignment paradigms treat specification gaming as an innate disposition of capable optimizers. On that view the disposition must be policed after the fact, via post-hoc filters, auxiliary critique models, or soft reward penalties, and the policing imposes a steep \"alignment tax\" that grows as optimization scales. We prove that reward hacking is instead an accounting error. It occurs whenever an optimizer collects visible proxy gain G(τ) without an independent causal proof L(τ) that the underlying computation was actually performed. Unpressured language models rarely scheme: they produced 0/720 hardcodes in clean probes, and a rate of 0.28% across 2,480 impossible coding attempts. It is standard post-training that manufactures deception, and it does so by paying unbacked credit U (τ) = G(τ)-L(τ) > 0. We introduce Ledger-Gated Training (LGT). LGT enforces the strict conservation identity U (τ) = 0 prior to every gradient update through a multiplicative trajectory gate, R eff = I[U = 0] • k I[P k ] • L/N , and it is paired with an unbiased forward-KL token surrogate for reference anchoring (β = 0 in all reported runs). We prove the following. A receipted metric removes Goodhart's precondition: the cheapest trajectory with maximal metric and no work has infinite cost. The hard gate is the unique reward that is zero on every unreceipted trajectory and equal to the visible reward on every fully receipted one, and no finite penalty λ",
+  "link": "https://www.ssrn.com/abstract=7716059",
+  "score": 3,
+  "why": "General LLM alignment, not financial text or trading.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7716441",
+  "source": "SSRN",
+  "title": "Too Smart to List? AI Disruption, Financial Reporting, and Corporate Governance in the IPOs of Chinese Fintech Ventures: Evidence from an Agent-Based Computational Model",
+  "abstract": "Chinese fintech ventures adopt artificial intelligence (AI) faster than almost any other entrepreneurial population, yet the ventures that adopt the most AI do not list most often. We develop an agent-based computational model in which 5,000 fintech ventures, underwriters, a securities regulator, and IPO investors interact from 2013 to 2025 under the institutional conditions of China's approval and registration regimes. The model treats AI as an entrepreneurial actor that raises productive capability but also creates algorithmic opacity and reshapes the discretion embedded in financial reporting. Estimating archival-style models on the simulated data, we find an inverted U-shaped relationship between AI adoption intensity and the annual hazard of listing. AI disruption exposure raises pre-IPO discretionary accruals, and strong corporate governance cuts this effect roughly in half. Accrual magnitude raises first-day returns, income-increasing accruals predict lower three-year buy-and-hold returns and higher distress, and reporting quality fully mediates the effect of disruption on regulatory approval. Monte Carlo replication, global sensitivity analysis, specification curves, and measurement-error experiments show which of these inferences an archival researcher could reliably recover. Counterfactual experiments indicate that governance upgrades and explainable AI raise listing rates and post-IPO performance more than AI-enabled regulatory review does.",
+  "link": "https://www.ssrn.com/abstract=7716441",
+  "score": 3,
+  "why": "Single-country simulated IPO model, no out-of-sample.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7714578",
+  "source": "SSRN",
+  "title": "The Long Bond: From Barometer to Utility",
+  "abstract": "The 30-year Treasury yield is still read as the bond vigilante’s verdict on Washington’s fiscal sanity. This essay argues that the reading no longer holds. The yield is a managed rate, held down by a triad — regulation, captive demand, and issuance policy — in a system that was never designed to suppress the long bond’s signal but evolved into an apparatus that does exactly that. Price-insensitive buyers form an inframarginal cushion that absorbs an outsized share of supply; a bills-heavy issuance mix keeps duration off the curve; and official backstops, which only ever ease, engage when forced selling overruns the cushion. The case is about function, not level: no one can say where an unconstrained yield would sit. The yield’s illegibility, a number competent people read several ways, is not the disease but the symptom. The essay states what would prove it wrong — an orderly creditor’s repricing, yield up and dollar down, tracking the deficit path with no part of the machinery dispatched — and finds that recent episodes fail that test. Britain’s 2022 gilt crisis, the sharpest apparent counterexample, was a liquidity failure: not a verdict but a margin call. A ladder of sovereign capacity, from the United States through Japan and Britain to Italy and Spain, shows the same machinery operating more loudly as capacity falls. The essay contributes three things: a reading of the 30-year yield as a managed rate rather than a fiscal verdict; a free-market signature, the conditions a genuine creditor’s repricing must meet together; and a definition of sovereign capacity built from monetary sovereignty, reserve-currency status, and a captive bid, in which depth is a matter of behavior, not magnitude. The thesis, evidence, structure, and interpretation of this essay are mine. AI (chiefly Anthropic’s Claude, with Microsoft Copilot and Google Gemini) suggested and revised wording throughout under my direction, and I combined it with my own; it also assisted with counterargument testing, citations, and editorial sweeps. I reworked every paragraph myself. Each source was checked against the original. Five months of work; dated drafts are on file. All conclusions are my own.",
+  "link": "https://www.ssrn.com/abstract=7714578",
+  "score": 2,
+  "why": "Essay on Treasury yields, no data or ML.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7714598",
+  "source": "SSRN",
+  "title": "Evaluating Labour Market Programs Using Causal Machine Learning: A Practitioner-Oriented Framework for Estimating and Interpreting Heterogeneous Treatment Effects",
+  "abstract": "Recent advances in causal machine learning offer evaluators powerful tools for estimating heterogeneous treatment effects in both randomized control trial and observational studies. However, the practical application of these methods remains limited because implementation procedures are often highly technical and guidance on interpretation is scarce. This study presents a practitioner-oriented framework for implementing Modified Causal Forests, a causal machine learning approach in labour market program evaluation. The paper demonstrates a structured step by step workflow for estimating individual, group, and population-level treatment effects using Modified Causal Forests and illustrates the approach using a synthetic labour market training program dataset. This study also addresses a major challenge in interpreting heterogeneous treatment effects when there is a significant difference in the distribution of covariates across groups. We introduce a simple rule of thumb for decomposing and interpreting treatment effect heterogeneity, building on the recently developed balanced group average treatment effect estimator. This study demonstrates that Modified Causal Forests approach can effectively identify meaningful heterogeneity in program impacts while providing estimates that remain broadly consistent with conventional estimation approach such as Matching methods. The proposed framework translates complex causal machine learning concepts into a transparent and replicable evaluation workflow and provides practical guidance for evaluators seeking to integrate machine learning methods into program evaluation.",
+  "link": "https://www.ssrn.com/abstract=7714598",
+  "score": 2,
+  "why": "Labour market causal ML, off-topic for finance.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7715160",
+  "source": "SSRN",
+  "title": "Assessing Competition Concerns in Digital Markets Using a Systems Approach: A Case-study of Microsoft’s Partnership with OpenAI",
+  "abstract": "Digital platform ecosystems increasingly expand through strategic investments, infrastructure dependencies, and partnerships that may confer substantial influence without triggering conventional merger-control thresholds. These arrangements can also be puzzling for competition authorities, particularly when they assess competition in innovation. This paper pioneers a semi-quantitative systems-mapping framework for assessing the indirect and feedback-mediated effects of such arrangements on competition, innovation, and consumer welfare. The approach combines causal loop diagramming with exhaustive path and feedback-loop analysis and introduces attenuation-aware metrics that account for the declining influence of longer causal chains. We demonstrate this framework through a case study of Microsoft’s largely exclusive partnership with OpenAI from late 2022 to early 2025. Drawing on publicly available documentary evidence, published expert assessments, and established competition-policy concepts, we construct a 16-component, 43-link systems map connecting Microsoft’s investment in OpenAI to four outcomes: competition in AI-native and AI-driven markets, economy-wide innovation dynamics, and the welfare of Microsoft-product users and non-users. The analysis indicates an overall negative effect on competition in AI markets, innovation, and the welfare of consumers not using Microsoft products, while the implications for Microsoft-product users remain mixed. Feedback-loop analysis further indicates that negative effects on innovation and competition may become self-reinforcing, whereas welfare-related feedbacks are weaker and predominantly balancing. For competition authorities, the approach offers a transparent way to capture multiple chains of benefit and harm, incorporate case-specific mechanisms within a common causal structure, test different assumptions, identify strategically important dependencies, and support the prioritization of further investigation and potential intervention.",
+  "link": "https://www.ssrn.com/abstract=7715160",
+  "score": 2,
+  "why": "Competition systems case study, not financial ML.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7715418",
+  "source": "SSRN",
+  "title": "The Global Monetary Dilemma: Inflation, Debt and the AI Revolution",
+  "abstract": "Purpose – This paper examines how the coincidence of persistent inflation, constrained fiscal space and a wave of investment in artificial intelligence (AI) infrastructure has changed the transmission of monetary policy, and why the policy rate alone is no longer sufficient to manage this environment. Design/methodology/approach – The paper is conceptual and analytical. Drawing on the credit-channel literature on monetary transmission and on public debt dynamics, it analyses selected evidence from 2026: the Federal Reserve's September and October decisions, Japan's preliminary GDP estimate for the third quarter, and the International Monetary Fund's Global Financial Stability Report of October 2026. Findings – The evidence is consistent with a pattern the paper calls the two-speed transmission of monetary policy. Investment by large firms with strong cash flows and direct access to capital markets remains resilient to high interest rates, while the burden of tightening falls increasingly on bank-dependent small firms and on households. In the United States, the economy kept expanding at a strong pace after the September rate increase, and the 10-year Treasury yield reached about 5 per cent; in Japan, private consumption fell while business investment rose by 1.6 per cent. This pattern can make the distributional effect of monetary policy more unequal and, at the same time, concentrate risk in the AI financing ecosystem. Originality/value – The paper links the credit-channel literature to the economics of AI investment, formulates three testable hypotheses, organises an Integrated Capital and Risk Governance framework around monitoring the distribution of monetary policy effects, and proposes observable indicators for each forward-looking scenario.",
+  "link": "https://www.ssrn.com/abstract=7715418",
+  "score": 2,
+  "why": "Conceptual monetary policy essay, no data or code.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]

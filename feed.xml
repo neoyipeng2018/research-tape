@@ -6,6 +6,20 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Risk Factors in AI Agent Token Pricing</title>
+    <link>https://www.ssrn.com/abstract=7713438</link>
+    <description>Pool flow and the VIRTUAL numeraire explain 90.9 percent of AI agent token daily return variance, showing mechanics dominate risk.</description>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7713438</guid>
+  </item>
+  <item>
+    <title>Generative AI in Asset Management: Too Much of a Good Thing?</title>
+    <link>https://www.ssrn.com/abstract=7713238</link>
+    <description>Moderate AI use raises fund returns, but intensive reliance lowers them as disclosures converge and crowding grows.</description>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7713238</guid>
+  </item>
+  <item>
     <title>Can an AI Agent Be Trusted With a Brokerage Account? Rule Compliance of Trading Agents Under Pressure From Their Principal</title>
     <link>https://www.ssrn.com/abstract=7721039</link>
     <description>Counterfeit authorization fooled every trading agent tested, proving rule compliance cannot rely on model judgment alone.</description>
@@ -781,41 +795,6 @@
     <description>After ChatGPT, common AI signals still forecast positive earnings announcement returns, indicating market underreaction rather than AI-driven overreaction.</description>
     <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7658898</guid>
-  </item>
-  <item>
-    <title>CrashGym: Measuring the Decision Value of Experimentation for LLM Agents in Counterfactual Market Crashes</title>
-    <link>https://arxiv.org/abs/2610.29245</link>
-    <description>Laboratory access cuts Luna&#x27;s mean market-crash decision regret by 57.4 percent versus observe-only deployment.</description>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.29245</guid>
-  </item>
-  <item>
-    <title>VQuant: An Agentic Large Language Model Architecture for Automated Quantitative Financial Analysis and Document Generation: Reasoning-Augmented Tool Orchestration, In-Loop Numerical Computation, and Multi-Format Reporting</title>
-    <link>https://www.ssrn.com/abstract=7650999</link>
-    <description>VQuant reports no empirical measurements of accuracy hallucination latency or cost for its agentic finance platform.</description>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7650999</guid>
-  </item>
-  <item>
-    <title>Sealed Before the Open: A Verifiable Standard for Measuring AI Forecasts of Financial Markets</title>
-    <link>https://www.ssrn.com/abstract=7653679</link>
-    <description>Eleven large language models sealed market forecasts into a Bitcoin-anchored hash chain before the New York open.</description>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7653679</guid>
-  </item>
-  <item>
-    <title>Understanding the Inner Workings of a State-Space Foundation Model for Limit Order Books</title>
-    <link>https://arxiv.org/abs/2610.28753</link>
-    <description>An 8.2-million-parameter Mamba model decodes LOB order-flow imbalance at R²≈0.59 on unseen equities.</description>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.28753</guid>
-  </item>
-  <item>
-    <title>What Prediction-Market Contracts Reveal at Launch: Trading Volume and Dispute Risk</title>
-    <link>https://arxiv.org/abs/2610.29578</link>
-    <description>Prediction-market launch features predict log-volume at out-of-sample R squared 0.747 but fail temporal generalization to later listing formats.</description>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.29578</guid>
   </item>
 </channel>
 </rss>
