@@ -754,47 +754,5 @@
     <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7665703</guid>
   </item>
-  <item>
-    <title>Retrieval-Augmented Generation and Parameter-Efficient Fine-Tuning for Financial Question Answering: Evidence from the FinQA Benchmark</title>
-    <link>https://www.ssrn.com/abstract=7659718</link>
-    <description>Retrieval augmentation lifted a 4-billion-parameter financial QA model from 17.2% to 64.4% exact match, matching parameter-efficient fine-tuning at 63.9%.</description>
-    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7659718</guid>
-  </item>
-  <item>
-    <title>Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core</title>
-    <link>https://arxiv.org/abs/2610.30557</link>
-    <description>A protected invariant core cut a 24.6% sector drawdown to 0.3% and lowered maximum drawdown under all 50 random entry policies.</description>
-    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.30557</guid>
-  </item>
-  <item>
-    <title>When News Gets Old: Portfolio Allocation with Reinforcement Learning and Large Language Models</title>
-    <link>https://arxiv.org/abs/2610.30564</link>
-    <description>Filtering old news yielded 18.43% annual net returns for LLM portfolios with four-week delays, beating all news-using RL strategies.</description>
-    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.30564</guid>
-  </item>
-  <item>
-    <title>Intraday Forecasting Ability and Liquidity Provision of Institutional Traders</title>
-    <link>https://arxiv.org/abs/2610.31141</link>
-    <description>One passive execution raised intraday P&amp;L by 1.28 currency units versus none, exceeding the 1.19-unit gain from a one-standard-deviation forecasting increase.</description>
-    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.31141</guid>
-  </item>
-  <item>
-    <title>Headline Emphasis and Stock Returns: Evidence from Counterfactual Headlines</title>
-    <link>https://www.ssrn.com/abstract=7656344</link>
-    <description>A one-standard-deviation rise in headline divergence predicts nine basis points higher next-month returns through initial overreaction and later correction.</description>
-    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7656344</guid>
-  </item>
-  <item>
-    <title>The Common Advice: Evidence on AI Redundancy in Stock Prices</title>
-    <link>https://www.ssrn.com/abstract=7658898</link>
-    <description>After ChatGPT, common AI signals still forecast positive earnings announcement returns, indicating market underreaction rather than AI-driven overreaction.</description>
-    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7658898</guid>
-  </item>
 </channel>
 </rss>
