@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>Agent Money Benchmark: Can AI Agents Be Trusted to Spend Money?</title>
+    <link>https://arxiv.org/abs/2611.28610</link>
+    <description>Nine of twelve agents failed spending traps despite passing nearly all basic payment tasks.</description>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.28610</guid>
+  </item>
+  <item>
+    <title>A one-line momentum rule as the benchmark for intelligent intraday trading systems: evidence from NIFTY 50</title>
+    <link>https://www.ssrn.com/abstract=7727020</link>
+    <description>A simple momentum rule beats most learned intraday models at matched decision intervals and costs.</description>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7727020</guid>
+  </item>
+  <item>
+    <title>Are Calibrated Decision Models Calibrated on Markets? Geolocated News, Markov Switching and a System One Model for Nasdaq-100 Allocation</title>
+    <link>https://arxiv.org/abs/2611.26716</link>
+    <description>Anchoring weekly market decline forecasts to the base rate fixes calibration and improves allocation returns.</description>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.26716</guid>
+  </item>
+  <item>
+    <title>Right Numbers, Wrong Story: When LLMs Narrate Financial Changes Beyond Their Inputs</title>
+    <link>https://arxiv.org/abs/2611.26968</link>
+    <description>FrameCheck removes almost all unsupported framing from LLM financial drafts by rule without extra model calls.</description>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.26968</guid>
+  </item>
+  <item>
+    <title>Do Econophysics-Inspired Inputs Improve Neural Covariance Forecasting? A Leakage-Free Walk-Forward Study of Intraday DJIA Data</title>
+    <link>https://arxiv.org/abs/2611.27616</link>
+    <description>Econophysics features add no measurable value to neural covariance forecasts beyond standard benchmarks after transaction costs.</description>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.27616</guid>
+  </item>
+  <item>
+    <title>FormaFin: Verifiable Financial Analysis with Solver-Guided Reinforcement Learning</title>
+    <link>https://arxiv.org/abs/2611.28881</link>
+    <description>A 7B model formalizing loan rules outperforms open LLMs ten times larger and detects most financial analysis errors.</description>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.28881</guid>
+  </item>
+  <item>
     <title>Risk Factors in AI Agent Token Pricing</title>
     <link>https://www.ssrn.com/abstract=7713438</link>
     <description>Pool flow and the VIRTUAL numeraire explain 90.9 percent of AI agent token daily return variance, showing mechanics dominate risk.</description>
@@ -739,20 +781,6 @@
     <description>Governed agentic orchestration increases enterprise capacity without compromising control, cutting pricing effort by 38%.</description>
     <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2610.33253</guid>
-  </item>
-  <item>
-    <title>Firms That Look Alike: Characteristic Graphs and the Cross-Section of Stock Returns</title>
-    <link>https://www.ssrn.com/abstract=7661378</link>
-    <description>In 2010–2024 U.S. stocks, graph neural networks on characteristic-based neighbours do not consistently beat a plain neural network using the same characteristics.</description>
-    <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7661378</guid>
-  </item>
-  <item>
-    <title>Opening the Black Box: Which News Explain LLM-Based Stock Ratings?</title>
-    <link>https://www.ssrn.com/abstract=7665703</link>
-    <description>In S&amp;P 500 news summaries, topics explain LLM stock ratings beyond sentiment, lifting within-R² from 7.17% to 15.17%.</description>
-    <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7665703</guid>
   </item>
 </channel>
 </rss>

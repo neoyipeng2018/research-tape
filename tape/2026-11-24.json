@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-24",
+ "scanned": 61,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2611.28610",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.28610",
+   "title": "Agent Money Benchmark: Can AI Agents Be Trusted to Spend Money?",
+   "claim": "Nine of twelve agents failed spending traps despite passing nearly all basic payment tasks."
+  },
+  {
+   "key": "10.2139/ssrn.7727020",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7727020",
+   "title": "A one-line momentum rule as the benchmark for intelligent intraday trading systems: evidence from NIFTY 50",
+   "claim": "A simple momentum rule beats most learned intraday models at matched decision intervals and costs."
+  },
+  {
+   "key": "2611.26716",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.26716",
+   "title": "Are Calibrated Decision Models Calibrated on Markets? Geolocated News, Markov Switching and a System One Model for Nasdaq-100 Allocation",
+   "claim": "Anchoring weekly market decline forecasts to the base rate fixes calibration and improves allocation returns."
+  },
+  {
+   "key": "2611.26968",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.26968",
+   "title": "Right Numbers, Wrong Story: When LLMs Narrate Financial Changes Beyond Their Inputs",
+   "claim": "FrameCheck removes almost all unsupported framing from LLM financial drafts by rule without extra model calls."
+  },
+  {
+   "key": "2611.27616",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.27616",
+   "title": "Do Econophysics-Inspired Inputs Improve Neural Covariance Forecasting? A Leakage-Free Walk-Forward Study of Intraday DJIA Data",
+   "claim": "Econophysics features add no measurable value to neural covariance forecasts beyond standard benchmarks after transaction costs."
+  },
+  {
+   "key": "2611.28881",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.28881",
+   "title": "FormaFin: Verifiable Financial Analysis with Solver-Guided Reinforcement Learning",
+   "claim": "A 7B model formalizing loan rules outperforms open LLMs ten times larger and detects most financial analysis errors."
+  }
+ ]
+}
