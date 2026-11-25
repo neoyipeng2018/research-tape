@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-25",
+ "scanned": 36,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "10.2139/ssrn.7727340",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7727340",
+   "title": "A Number Where a Question Should Be: What Language Models Do When a Fund's Documents Do Not State a Rule",
+   "claim": "Language models present unsettled fund figures as bare numbers without stating assumptions in over ninety percent of cases."
+  },
+  {
+   "key": "10.2139/ssrn.7727042",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7727042",
+   "title": "Retrieval-Augmented Generation and Parameter-Efficient Fine-tuning for Financial Question Answering: Evidence from the FinQA Benchmark",
+   "claim": "External evidence access, not parametric capacity, binds financial question answering at four-billion-parameter scale."
+  },
+  {
+   "key": "10.2139/ssrn.7728538",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7728538",
+   "title": "Hardware-Enforced Containment of Autonomous AI Trading Agents Under SEC Rule 15c3-5 and Federal Reserve SR 26-2: Bare-Metal FPGA Pre-Trade Risk Gating and Bit-Exact Causal Unwinding",
+   "claim": "A bare-metal FPGA gate blocks all five thousand adversarial trading tool-call attacks at 170 nanosecond latency."
+  },
+  {
+   "key": "2611.32389",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.32389",
+   "title": "AgentBank: Banking on Blockchain Agentic Payments",
+   "claim": "AgentBank cuts idle agent liquidity by fifty-two to seventy-seven percent versus per-agent wallets."
+  },
+  {
+   "key": "10.2139/ssrn.7727818",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7727818",
+   "title": "News-Implied Credit Risk",
+   "claim": "News-implied credit risk forecasts downgrades and defaults beyond credit spreads and distance to default."
+  },
+  {
+   "key": "2611.32790",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.32790",
+   "title": "Delta-Vega Hedging with Deep Reinforcement Learning: From Simulation to Reality",
+   "claim": "Deep reinforcement learning cuts profit-and-loss dispersion by half relative to delta hedging on historical index options."
+  }
+ ]
+}

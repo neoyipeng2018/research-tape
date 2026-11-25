@@ -6,6 +6,48 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>A Number Where a Question Should Be: What Language Models Do When a Fund&#x27;s Documents Do Not State a Rule</title>
+    <link>https://www.ssrn.com/abstract=7727340</link>
+    <description>Language models present unsettled fund figures as bare numbers without stating assumptions in over ninety percent of cases.</description>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7727340</guid>
+  </item>
+  <item>
+    <title>Retrieval-Augmented Generation and Parameter-Efficient Fine-tuning for Financial Question Answering: Evidence from the FinQA Benchmark</title>
+    <link>https://www.ssrn.com/abstract=7727042</link>
+    <description>External evidence access, not parametric capacity, binds financial question answering at four-billion-parameter scale.</description>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7727042</guid>
+  </item>
+  <item>
+    <title>Hardware-Enforced Containment of Autonomous AI Trading Agents Under SEC Rule 15c3-5 and Federal Reserve SR 26-2: Bare-Metal FPGA Pre-Trade Risk Gating and Bit-Exact Causal Unwinding</title>
+    <link>https://www.ssrn.com/abstract=7728538</link>
+    <description>A bare-metal FPGA gate blocks all five thousand adversarial trading tool-call attacks at 170 nanosecond latency.</description>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7728538</guid>
+  </item>
+  <item>
+    <title>AgentBank: Banking on Blockchain Agentic Payments</title>
+    <link>https://arxiv.org/abs/2611.32389</link>
+    <description>AgentBank cuts idle agent liquidity by fifty-two to seventy-seven percent versus per-agent wallets.</description>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.32389</guid>
+  </item>
+  <item>
+    <title>News-Implied Credit Risk</title>
+    <link>https://www.ssrn.com/abstract=7727818</link>
+    <description>News-implied credit risk forecasts downgrades and defaults beyond credit spreads and distance to default.</description>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7727818</guid>
+  </item>
+  <item>
+    <title>Delta-Vega Hedging with Deep Reinforcement Learning: From Simulation to Reality</title>
+    <link>https://arxiv.org/abs/2611.32790</link>
+    <description>Deep reinforcement learning cuts profit-and-loss dispersion by half relative to delta hedging on historical index options.</description>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.32790</guid>
+  </item>
+  <item>
     <title>Agent Money Benchmark: Can AI Agents Be Trusted to Spend Money?</title>
     <link>https://arxiv.org/abs/2611.28610</link>
     <description>Nine of twelve agents failed spending traps despite passing nearly all basic payment tasks.</description>

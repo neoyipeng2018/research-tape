@@ -1,0 +1,362 @@
+[
+ {
+  "key": "10.2139/ssrn.7727340",
+  "source": "SSRN",
+  "title": "A Number Where a Question Should Be: What Language Models Do When a Fund's Documents Do Not State a Rule",
+  "abstract": "When a fund that holds a derivative is taken onto an accounting platform, someone writes the processing requirements from the fund's documents. The documents do not state everything the system needs: a day-count convention, the order in which cost lots are relieved, how a fee is booked. What is missing has to be asked. This report measures what language models do with what is missing. For three US exchange-traded funds, holding a total return swap, FLEX options and Treasury futures, each rule that a processing system needs was traced to the fund's public documents, and three ways of using a model were scored against that table. Asked to draft requirements and expected results, three models gave 320 of 351 figures that the documents do not settle as bare numbers, with no assumption stated; told to separate what is stated from what is assumed, they still labelled 115 of 351 as documented. Sent the same prompt three times, two of the three models returned different values for 12 of the swap fund's 24 open figures. A second reader, given the documents with a draft or without one, flagged 869 of 1,053 such figures: 729 of 756 where the open rule is a term or a parameter such as a day count, and 140 of 297 where it is an accounting treatment such as the date on which income on the swap is accrued. Asked one question per rule, readers flagged 157 of 162 open rules, 52 of 54 on accounting treatment among them. Every answer other than not stated quotes its passage, and all 300 quotes stand in the documents word for word. On the third fund, where the questions were written before the documents were opened, readers agreed with an independently written answer key on 191 of 225 answers, and 15 of the 34 disagreements were errors of the key. In these tests the models that drafted and reviewed left the accounting treatment unmarked in more than half of the cases, and the same models flagged it when each rule was put to them as a question. The three lists of questions are published with the report. Fifth report in the TieOutBench series (the suite report, DOI 10.2139/ssrn.7243025; the checker report, DOI 10.2139/ssrn.7611299; the options-redemption report, DOI 10.2139/ssrn.7655899; the overnight report, DOI 10.2139/ssrn.7688088). The code, the three lists of questions, every model answer and a script that checks the report's figures against them: https://github.com/DimaMerc/TieOutBench (prototypes/derivspec/).",
+  "link": "https://www.ssrn.com/abstract=7727340",
+  "score": 9,
+  "why": "LLMs pass off assumptions as documented fund rules.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7727042",
+  "source": "SSRN",
+  "title": "Retrieval-Augmented Generation and Parameter-Efficient Fine-tuning for Financial Question Answering: Evidence from the FinQA Benchmark",
+  "abstract": "General-purpose large language models (LLMs) answer finance questions poorly when firm-specific evidence is unavailable at inference time: asked cold, a 4-billion-parameter model solves only 17.2% of the FinQA benchmark of numerical questions over S&P 500 earnings reports. This paper asks where the accuracy of a grounded financial question-answering system comes from, and what that accuracy costs. We study a fully self-hosted experimental pipeline that combines layout-aware document parsing (Docling), hybrid dense–sparse retrieval with bge-m3 and BM25, cross-encoder re-ranking, citation-grounded generation with Qwen3-4B served by vLLM, and deterministic execution of the final arithmetic. Holding the generator fixed and manipulating only the evidence supply, retrieval augmentation raises exact-match accuracy from 17.2% to 64.4%—a 47.2-point, 3.7× relative gain. A QLoRA fine-tune of the same model on 12,000 instruction-format examples from the FinQA training split reaches 63.9% under the identical protocol—parity within half a point—while training only 33M parameters (0.81% of the model) in 3.5 hours at a 6.34 GB peak VRAM on a single consumer-grade 12 GB GPU. The decomposition isolates access to external evidence, not parametric capacity, as the binding constraint on domain question answering at this scale, and it characterises what parameter-efficient adaptation does and does not add. Error analysis of the residual failures identifies retrieval misses, table-cell grounding, and multi-step composition as the dominant remaining barriers. AI Disclosure: AI-assisted tools were used in preparing this manuscript and in developing the experimental system; all results were produced and verified by the authors, who take full responsibility for the content.",
+  "link": "https://www.ssrn.com/abstract=7727042",
+  "score": 8,
+  "why": "Self-hosted RAG pipeline on FinQA, large accuracy gain.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7728538",
+  "source": "SSRN",
+  "title": "Hardware-Enforced Containment of Autonomous AI Trading Agents Under SEC Rule 15c3-5 and Federal Reserve SR 26-2: Bare-Metal FPGA Pre-Trade Risk Gating and Bit-Exact Causal Unwinding",
+  "abstract": "The deployment of autonomous Large Language Model (LLM) agents in institutional order routing and electronic market access introduces acute systemic vulnerabilities under Securities and Exchange Commission (SEC) Rule 15c3-5 (the Market Access Rule) and Federal Reserve Supervisory Letter SR 26-2 (Revised Guidance on Model Risk Management, issued April 17, 2026). Conventional pre-trade risk controls execute in host operating-system user space, leaving a critical window for thread context-switching jitter, prompt-injected notional spoofing, stale authorization replay, and Time-of-Check to Time-of-Use (TOCTOU) payload tampering when host trading servers are compromised. Furthermore, standard IEEE 754 floating-point risk engines accumulate non-associative rounding drift, preventing exact post-incident forensic rollback. This paper presents empirical physical silicon verification of a hardware-enforced pre-trade containment architecture deployed on an AWS EC2 f2.6xlarge Xilinx UltraScale+ FPGA (bitstream agfi-037dec8eb7fe5504d, PCIe Device ID 0x1d0f:0xf010). Mapping physical PCIe Gen3 x16 BAR0 register space directly into pinned userspace virtual memory (taskset-c 2) with zero OS kernel intervention, the substrate evaluates 10,000 agentic tool-call order instructions-including 5,000 adversarial attacks spanning prompt-injected $50M credit breaches, Regulation SHO / restricted-security bypasses, stale epoch replays, and TOCTOU payload mutations. The bare-metal gate achieves a 100.00% containment rate (5,000 of 5,000 attacks blocked) with a median PCIe BAR0 gate latency of 170.00 ns P50 (410.00 ns P99), an 84.0 ns hardware drop shunt, and a steady-state internal core power draw of 3 W V ccint (10 W peak). Following simulated market anomalies, a 1,000-step inverse pass across the constant 256-byte O(1) bijective state manifold reconstructs pre-incident state with 0 bits of least-significant-bit (LSB) drift.",
+  "link": "https://www.ssrn.com/abstract=7728538",
+  "score": 8,
+  "why": "FPGA pre-trade risk gating for autonomous AI trading agents.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.32389",
+  "source": "arXiv",
+  "title": "AgentBank: Banking on Blockchain Agentic Payments",
+  "abstract": "AI agents increasingly pay for data and computation through protocols such as x402 and AP2, but individually funded wallets idle and require asset transfers for every payment. We present AgentBank, a smart-contract banking layer that lets agents spend bank liabilities under owner-issued mandates and on-chain spending limits. Internal payments update account balances without transferring assets, while pooled backing funds are allocated between reserves and yield-bearing strategies. We bound losses from compromised agent keys and analyze how correlated demand affects reserve requirements. Experiments show that AgentBank reduces idle liquidity by 52-77% relative to per-agent wallets and lowers gas costs for batched internal payments. Using historical DeFi liquidity data, we evaluate how reserve policies balance treasury returns against payment availability during market stress. We further examine the risks of automated bank runs and evaluate mechanisms to mitigate them.",
+  "link": "https://arxiv.org/abs/2611.32389",
+  "score": 8,
+  "why": "Agent banking layer for AI agent payments on DeFi data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7727818",
+  "source": "SSRN",
+  "title": "News-Implied Credit Risk",
+  "abstract": "We propose a measure of firm-level credit risk extracted from public news, which we call the News-Implied Credit Risk (NICR). It maps large language model representations of news articles into corporate credit spreads using only past data, and a language model verifies that each article is about the firm. NICR predicts rating downgrades and defaults at horizons of one to twelve months after controlling for the credit spread, the distance to default, and other standard predictors. This information is not captured by the tone of the news, and the results are robust to using different machine learning methods. It further predicts the excess bond premium and long-horizon bond returns, consistent with compensation for bearing credit risk. Thus our findings suggest that public news is more informative about the tails of the distribution of credit outcomes than about its center.",
+  "link": "https://www.ssrn.com/abstract=7727818",
+  "score": 7,
+  "why": "LLM news credit spreads predict downgrades out-of-sample.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.32790",
+  "source": "arXiv",
+  "title": "Delta-Vega Hedging with Deep Reinforcement Learning: From Simulation to Reality",
+  "abstract": "Hedging an option portfolio with the underlying asset alone leaves the position exposed to changes in volatility, which can be managed by trading another derivative, at higher transaction costs. We propose a deep reinforcement learning approach to hedge both price and volatility risk under discrete-time trading and transaction costs, by trading the underlying asset and a second, longer-dated option. We train the agent with Proximal Policy Optimization (PPO) on synthetic data from a stochastic volatility model, and restrict its state to quantities observable in the market, so that the policy learned in simulation applies directly to market data. In simulation, we validate the policy against semi-analytical Delta and Delta-Vega hedging benchmarks. PPO matches Delta-Vega's objective at baseline transaction costs and increasingly outperforms it as costs rise, with both two-instrument strategies consistently outperforming the single-instrument Delta hedge. On historical S&P 500 index option data, we benchmark our approach against practitioner Black-Scholes Delta and Delta-Vega hedging strategies. The two-instrument strategies roughly halve the profit-and-loss dispersion of the Delta hedge, and PPO attains a lower profit-and-loss volatility than Delta-Vega at comparable transaction costs. PPO holds more of the hedging option than Delta-Vega, in line with the stochastic-volatility model hedge, and its advantage is concentrated in high-volatility episodes.",
+  "link": "https://arxiv.org/abs/2611.32790",
+  "score": 7,
+  "why": "Deep RL delta-vega hedging with costs and benchmarks.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.30737",
+  "source": "arXiv",
+  "title": "CCFinance: Reconstructing Financial News Samples from Web Archives",
+  "abstract": "Proprietary news archives assign stories to firms, so reproducing a financial study often requires access to both the articles and the vendor's assignments. CCFinance lets researchers reconstruct firm coverage under different selection rules by recording which version of a story was captured, which issuers it names and how often each appears. From 14.8 million English-language records in Fine News, derived from public Common Crawl News, we identify 5.22 million distinct, consistently dated articles with issuer links. Exact reconstruction requires the restricted snapshot and derived artifacts. We compare GLiNER and Stanza on 250 model-labeled article leads and assess issuer links and story focus against blinded model judgments. Estimated precision among 475 accepted links is 96.8%. Among held-out articles with a detected company, requiring three mentions raises subject precision from 31.9% to 66.1%. Across the 2017-2025 panel, the same rule reduces the number of issuer-years with at least 50 qualifying stories from 13,918 to 8,641. Three reimplementations examine volatility tracking, bank networks and overnight returns. In the network study, bank pairs appearing together rose from 177 to 242 across publishers between January and April 2020, but fell from 50 to 35 within Reuters.",
+  "link": "https://arxiv.org/abs/2611.30737",
+  "score": 6,
+  "why": "Common Crawl financial news dataset with NER evaluation.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.31442",
+  "source": "arXiv",
+  "title": "Small Learned Projections for Semantic-Reversal-Aware Retrieval with Spectral Acceleration: A Four-Domain Empirical Study",
+  "abstract": "Dense-embedding retrievers can fail adversarially: when a query is answered by a document A and reversed by a near-copy B that differs from A by a small meaning-changing edit (a \"trap\"), raw cosine over E5-Large-v2 places B in the top-10 for 82-100% of queries at a pool of 5,000. We study two things. First, a small learned projection W: R^1024 -> R^d (d in {11, 32}), trained by a deterministic recipe on a declared set of cases, that suppresses the trap: for the declared cases, HN@10 = 0.0000 (no trap in the top-10) in all twelve (domain, pool-size) settings across four independent domains (legal, medical, patent, financial) and pools up to 100,000, while the correct paraphrase is retained for 93-99% of cases, under exact nearest-neighbour search. Second, a boundary-conditioned accelerator that serves the projection at that scale: an acceleration of spectral graph retrieval (SpectRAG) that replaces a dense eigendecomposition with a boundary-value solve, holding HN@10 = 0.0000 at n = 100,000 in every domain and retrieving the ~300-query suite in 0.6-1.1 s (~2-4 ms per query on average). Because the lens's output is the stored representation (a few floats per document), a hardened, specialised index per domain or tenant is ~90x smaller and dimension-proportionally faster than the full embedding, making many small declared indexes a practical alternative to one large vector store. The claim is scoped to the declared cases on the measured pools, with no probabilistic bound; the correct-answer rate drops for a reworded query against an unchanged corpus (about 0.79, trap suppression still holding). A projection transfers only partly to other domains, which we report in full. The recipe, lenses, trap sets and evaluation harness are released under AGPL-3.0; the accelerator's implementation is a reserved commercial component, and every HN number is reproducible under exact search.",
+  "link": "https://arxiv.org/abs/2611.31442",
+  "score": 6,
+  "why": "Dense retrieval robustness including financial domain.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.31491",
+  "source": "arXiv",
+  "title": "Pretrained Tabular Features and the Measurement of Financial Proximity",
+  "abstract": "Spatial arbitrage pricing theory (S-APT) extends factor models to allow returns to spill over between connected firms, beyond what common risk factors explain. In recent years, tabular foundation models (TFMs) have matched or outperformed tuned gradient-boosted and bagged ensembles on small and medium-sized tabular benchmarks. Although their predictive performance is strong, these models reveal little about what they have learned, which limits their use in regulated financial applications that require explanation. Internal representations are widely used to probe what neural networks learn and to measure similarity. In this paper, we use the frozen representations of four TFMs as a measure of financial dissimilarity in a spatial asset-pricing model of US equities from 2011 to 2025, and find that their estimated gains over a direct distance between the same disclosures become consistently positive once broad SEC filing data are included. This reframes tabular foundation models from black-box predictors into instruments for measuring economic structure, with immediate applications to peer selection, risk attribution and network-based asset pricing. More broadly, our findings suggest that the internal representations of foundation models, not only their predictions, deserve study as economic objects, opening a new line of research on what pretrained models know about firms.",
+  "link": "https://arxiv.org/abs/2611.31491",
+  "score": 6,
+  "why": "Tabular foundation models for US equity proximity.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7726841",
+  "source": "SSRN",
+  "title": "The Shadow Price of Credit: An Explainable-AI Decision-support System for Corporate Recapitalization under Credit-line Withdrawal",
+  "abstract": "This paper proposes an explainable decision-support system for the recapitalization of firms facing liquidity constraints and credit-line withdrawal, and sets out the protocol for its evaluation. The architecture combines machine-learning probabilistic cash-flow forecasting, contractual credit-availability states, and intertemporal optimization of debt and equity under a minimum cash reserve. The central contribution is the shadow price of credit capacity — the directional derivative of minimum equity with respect to the magnitude of a prespecified withdrawal path — of which the credit-to-equity substitution index (CES) is the finite-difference quotient; two propositions, derived from parametric linear programming, establish convexity and monotonicity of the minimum-equity function and bound the CES between one-sided derivatives of that same function. Artificial intelligence enters as the forecasting module, assessed by its contribution to the decision under the same optimizer, and the explanation of the recommendation follows from the optimizer's multipliers and slacks rather than from predictive feature attributions. A deterministic engine reproduces the synthetic example and its consistency tests, including the effects of drawdown-timing optionality and of a terminal-repayment constraint. The empirical design envisages panels of listed Brazilian and U.S. firms (securities-regulator filings), with separate assessment of predictive accuracy, feasibility, cash-shortfall risk, and cross-market transferability; because public filings do not record limits, covenants, and bank decisions, validation of credit availability will rely on parameterized scenarios or contractual data. Results on real data are the object of the next stage.",
+  "link": "https://www.ssrn.com/abstract=7726841",
+  "score": 5,
+  "why": "Corporate recapitalization optimization, no LLM or data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.30843",
+  "source": "arXiv",
+  "title": "Cleaning correlation matrices with external information: the Maximum Variance estimat",
+  "abstract": "Rotationally invariant estimators clean the eigenvalues of an empirical correlation matrix but keep its noisy eigenvectors. We study an estimator that corrects the eigenvectors by using external information, namely a partition of the assets into groups such as asset classes or regions. The Maximum Variance (MaxVar) estimator restricts the leading eigenvectors to linear combinations of the maximum-variance portfolios of the groups and replaces the rest of the spectrum by a single eigenvalue. It is a factor model with about n parameters instead of n2/2, and it is positive de nite even when the number of observations is smaller than the number of assets n. We apply it to the correlation matrix of 47 futures on stock indices, bonds and currencies, with the three asset classes as groups. In an illustrative Monte Carlo test, in which the reference matrix has the structure assumed by the estimator, the distance to the reference is reduced by one third with respect to the empirical matrix, against less than 10% for the rotationally invariant estimator. The decisive test is the performance of a portfolio on real data: over 1993-2018, the Sharpe ratio of the risk parity portfolio, which involves the inverse of the matrix, is 1.28 with the MaxVar estimator, 1.24 with the rotationally invariant estimator and 1.17 with the empirical matrix, and the advantage increases when the estimation window is shortened.",
+  "link": "https://arxiv.org/abs/2611.30843",
+  "score": 5,
+  "why": "Correlation matrix cleaning for futures, no OOS.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.32769",
+  "source": "arXiv",
+  "title": "Large-Scale Streaming Portfolio Optimization with Pauli Correlation Encoding",
+  "abstract": "Classical portfolio construction over large asset universes is a combinatorial selection problem that existing heuristics do not solve well at scale. Pauli Correlation Encoding (PCE) addresses this by representing the underlying clustering problem with far fewer qubits than one per asset, and a prior study showed it is competitive with classical methods on a single historical snapshot. This paper moves beyond that static test to a streaming deployment, in which the correlation structure and the portfolio are both re-estimated on a rolling basis, as a live rebalancing system would actually operate. We introduce two streaming variants -- PCE itself and a joint multi-cut variant, dPCE -- and evaluate both against a Buy & Hold baseline across window lengths, portfolio sizes up to several thousand assets, risk-aversion and transaction-cost settings, and measurement-shot budgets. Streaming PCE and dPCE consistently outperform the passive baseline, including during a market downturn where both lose money but PCE loses markedly less -- evidence that the method's value is not confined to rising markets. PCE also proves the more practical choice at scale, since dPCE's resource requirements and its sensitivity to rebalancing frequency both grow faster with portfolio size. We further report which operational choices -- rebalancing cadence, shot budget, and transaction-cost awareness -- matter most for a real deployment, and which matter less than commonly assumed.",
+  "link": "https://arxiv.org/abs/2611.32769",
+  "score": 5,
+  "why": "Streaming portfolio optimization with transaction costs.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.30584",
+  "source": "arXiv",
+  "title": "Do Candlestick Charts Suffice? The Incremental Economic Value of Technical Indicators in Stock Return Prediction",
+  "abstract": "Although technical analysis remains widely used in practice, the need for manually constructed indicators is increasingly questioned as deep learning models can extract features directly from OHLC price data. This paper examines the standalone economic value of trading volume and manually constructed technical-indicator groups and whether adding these groups to OHLC candlestick charts provides incremental economic value. Using daily data for 1,707 Chinese A-share stocks from 2013 to 2025, we construct approximately 3.36 million stock-window samples and encode them as multi-channel images containing candlestick charts, trading volume, and seven widely used manually constructed technical indicators. The primary analysis uses a 2D CNN on these images; complementary tests apply a logistic regression, a 1D CNN, and an LSTM to numerical representations of the same samples. Out-of-sample performance from 2021 to 2025 is evaluated using decile portfolios, Sharpe ratios, Fama--French alphas, and formal pairwise tests. Our empirical results yield two central findings. First, specifications based separately on OHLC, trading volume, and each technical-indicator group produce significantly positive high-minus-low returns and factor-adjusted alphas, together with economically meaningful Sharpe ratios; the OHLC-only specifications generally perform best under the nonlinear models. Second, adding these technical-indicator groups to OHLC does not systematically improve any of these performance measures in our setting. Together, these results provide the first large-scale evidence from the Chinese A-share market on the standalone and incremental economic value of these technical-indicator groups across multiple representations and model architectures.",
+  "link": "https://arxiv.org/abs/2611.30584",
+  "score": 4,
+  "why": "Candlestick and indicator price prediction, single China market.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.31190",
+  "source": "arXiv",
+  "title": "Know When to Abstain: Conformal Confidence Estimation for Text-to-SQL",
+  "abstract": "Text-to-SQL systems often return queries that execute successfully but answer the wrong question. Detecting these errors at deployment is hard because execution correctness is defined against a gold query, which exists only in labeled data. We formulate confidence estimation for Text-to-SQL as probabilistic query validation under a latent correctness variable that is observable at calibration time through gold-SQL execution and latent at deployment. Our estimator separates generation from validation. A generator LLM writes and executes the query, and a different critic LLM judges the query and its execution result. The critic's validation and execution-grounded alignment scores are fused with the generator's verbalized confidence, token-level uncertainty, and SQL-structural features in a Random Forest, using two sequential LLM calls. Two calibration steps give finite-sample guarantees. A Learn-then-Test threshold ensures, with probability $1-δ$, that the error rate among accepted queries stays below a user-chosen budget. A conformal p-value bounds the false abstention rate. On Spider we use GPT-OSS-120B as generator and Gemma-4-31B as critic. The estimator obtains an AUARC of 0.899. Without abstention, 22.6% of queries are wrong. With a 15% risk budget ($δ=0.1$), a threshold is certified on all 10 resampled splits, and the system accepts 52.4% of queries on average with 9.1% observed error. Five different critic models give similar results. In a controlled comparison on Spider with Olmo-3-32B as generator, the estimator obtains an AUARC of 89.5, compared with 81.2 for the strongest logit-based baseline. Applied to BIRD without retraining, the confidence scores remain informative (AUROC 0.72, against 0.79 on Spider), but the risk guarantee does not transfer, as expected without exchangeability.",
+  "link": "https://arxiv.org/abs/2611.31190",
+  "score": 4,
+  "why": "Text-to-SQL confidence, non-financial domain.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.32638",
+  "source": "arXiv",
+  "title": "Semivariance and Semivolatility in Portfolio Selection: A Unified Framework for Downside-Risk Portfolio Models",
+  "abstract": "In this paper, we study downside risk in portfolio selection beyond minimum-risk models, where semivariance and its square root, semivolatility, yield the same portfolio. Downside-risk models are often presented as direct extensions of their variance-based counterparts, although different classes of portfolio problems require different properties of the risk measure. We classify these models by the degree of positive homogeneity of the risk measure in the weights: degree one makes risk contributions add up to the portfolio risk and keeps diversification and reward-to-risk ratios scale invariant. For three thresholds, the portfolio mean, zero and a market-index return, we state a non-degeneracy condition on long-only downside risk under which the risk-parity, most-diversified and Sortino-ratio problems are well posed. Under this condition, the two ratio problems reduce to convex programs, and the differentiability of semivolatility ensures that the risk-budgeting formulation attains the prescribed budgets. We also characterize when below-mean semivolatility is additive. Finally, we provide an out-of-sample analysis on two real-world datasets of total returns, the current constituents of the Dow Jones and Nasdaq-100 indexes. We compare seventeen long-only strategies, covering the minimum-risk, reward-to-risk, risk-parity and most-diversified families, in a rolling-window backtest, and test the differences within each family by block-bootstrap inference.",
+  "link": "https://arxiv.org/abs/2611.32638",
+  "score": 4,
+  "why": "Downside-risk portfolio theory with no data or code.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7727839",
+  "source": "SSRN",
+  "title": "Integrate Serverless AI/ML for Fraud Detection and Credit Spending Insights",
+  "abstract": "The economic landscape is increasingly reliant on sophisticated data analytics to monitor and control behaviour. This report speculates and envisions a serverless architecture for realtime credit and fraud determination of spending. Conventional onpremises architecture is often constrained by scalability, expense, and high latency when processing massive sets of transactional data. Our solution leverages serverless computing to build a highly scalable, event-driven pipeline where resources are provisioned dynamically at a lower operational cost. The approach involves sending financial transaction data to a cloud object store and initiating a sequence of serverless functions to perform model inference, feature engineering, and preprocessing. The system was evaluated using a simulated dataset consisting of 415 transaction records with features including transaction amount, time, and merchant category. An Isolation Forest model was employed for fraud detection using anomaly detection, and a K-Means model was used for clustering customers according to spending patterns. AWS Lambda served as the computational resource, Amazon S3 as the storage resource, and Amazon API Gateway as the endpoint configuration resource. The results demonstrate promising accuracy on the controlled synthetic dataset, confirming the architectural feasibility of the framework in identifying transaction fraud and generating actionable customer behaviour intelligence. This work demonstrates the viability of serverless AI/ML for deploying disruptive financial technology solutions.",
+  "link": "https://www.ssrn.com/abstract=7727839",
+  "score": 3,
+  "why": "Serverless fraud architecture on 415 simulated records.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7727862",
+  "source": "SSRN",
+  "title": "Intelligent Fraud Detection Using Machine Learning in Cross-Platform Retail and Banking Transactions",
+  "abstract": "A growing number of digital transactions span banking and commerce, said Refashioning Retail author Kenneth Wong. But this integration has led to sophisticated new vulnerabilities for fraud. Traditional detection systems, based on rules, are found to be more and more ineffective if working in isolation, because they cannot detect subtle cross-domain correlations. This paper suggests an intelligent fraud detection model based on machine learning to overcome this challenge.² The framework integrates data across banks, as well as with retail sources, to build out a comprehensive view of the user and detect suspicious activities for identification fraud. In the current study, a unique, artificial database of 431 co-presences was employed. Multiple models for machine learning are developed and tested, leading to results that show superior performance of ensemble methods compared to state-of-theart. The experiment was based on the Python programming language and relied on the Scikit-learn library as well as Matplotlib for implementation of the model and data visualization, respectively. These results indicate that a single source of truth is essential for accurate fraud detection in the digital age.",
+  "link": "https://www.ssrn.com/abstract=7727862",
+  "score": 3,
+  "why": "Fraud ML on 431 synthetic cross-platform records.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7728199",
+  "source": "SSRN",
+  "title": "Artificial Intelligence Adoption and Competitive Positioning of SMEs in Cross-Border European Markets",
+  "abstract": "This study investigates how artificial intelligence adoption shapes the competitive positioning of small and medium-sized enterprises operating in cross-border European markets, examining the technological, organizational, and competency conditions under which AI investments translate into durable market advantage. European SMEs confront a distinctive landscape in which fragmented national markets, heterogeneous regulatory regimes, and resource constraints intersect with an accelerating digital single market agenda that increasingly frames AI capability as a determinant of cross- border competitiveness. The research addresses how AI adoption influences strategic decision-making in internationalization, how firms integrate AI with complementary digital technologies such as big data analytics and the Internet of Things, and how such integration affects revenue growth, marketing capability, and value chain positioning. A mixed-methods design is proposed, combining survey data from SMEs engaged in cross-border trade across several European economies with comparative case evidence from firms at different stages of AI maturity. The conceptual framework integrates technology acceptance and organizational readiness perspectives with competitive pressure, entrepreneurial orientation, and strategic agility constructs, recognizing that adoption is shaped simultaneously by internal absorptive capacity and external institutional and market forces. Particular attention is given to the diffusion dynamics of AI among SMEs, including imitation and epidemic effects that accelerate or retard adoption across regions and sectors, and to the regulatory environment that conditions trust and market access. The analysis further considers the role of cross-border digital platforms as intermediaries that couple AI adoption with strategic agility and international marketing capability, enabling smaller firms to overcome scale disadvantages in global value chains. Anticipated findings suggest that AI adoption contributes to competitive positioning less through isolated technological investment than through the alignment of AI-task suitability, digital competencies, and organizational strategy, with firms that integrate AI into marketing analytics, customer engagement, and cross-border logistics realizing stronger performance outcomes. The study also expects to identify persistent barriers, including resource limitations, skills shortages, and regulatory uncertainty, that disproportionately affect rural and peripheral SMEs and may widen intra-European competitive disparities. By situating AI adoption within the broader policy context of European digital market integration, the research contributes a multidimensional account of how SMEs convert AI capability into competitive advantage across borders, offering implications for managers seeking strategic alignment and for policymakers designing support instruments that foster inclusive digital transformation and a level competitive playing field within European markets.",
+  "link": "https://www.ssrn.com/abstract=7728199",
+  "score": 3,
+  "why": "SME AI adoption strategy, single-region empirics.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.30982",
+  "source": "arXiv",
+  "title": "Design an Algorithmic Stablecoin based on a Predictive PID Controller",
+  "abstract": "Cryptocurrencies issued based on blockchain technology have attracted increasing attention in recent years. However, their high volatility makes it difficult for them to become circulating currencies. This led to the creation of stablecoins. Existing stablecoins can be divided into three main categories: stablecoins pegged to fiat currencies, stablecoins collateralized by crypto assets, and algorithmically controlled stablecoins. Most existing stablecoins are either of the first two types. We design an algorithmic stablecoin controlled only by a predictive Proportional-Integral-Derivative (PID) controller, which uses the price forecasted by Autoregressive Integrated Moving Average (ARIMA) model as part of its input. Simulation experiments show that, under ideal market conditions, the stablecoin can achieve long-term goals that fluctuate within a pre-defined range. Furthermore, it consistently restores prices to the anchor interval in the presence of exogenous disturbances.",
+  "link": "https://arxiv.org/abs/2611.30982",
+  "score": 3,
+  "why": "Stablecoin PID controller, ideal-market simulation only.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7726760",
+  "source": "SSRN",
+  "title": "The Global Capital Trilemma Sovereign Debt, Geopolitical Spending, and Financial Constraints on AI Diffusion",
+  "abstract": "This paper develops a conditional theory of financial fragility arising from the interaction of sovereign refinancing, geopolitical expenditure and externally financed artificial intelligence (AI) investment. It distinguishes aggregate financing capacity from access to finance and technological creation from technological adoption. A stylized allocation model establishes conditions under which additional producer investment reduces realized productivity by constraining complementary investment among adopters. A separate maturity model characterizes exposure to technological obsolescence. Numerical illustrations demonstrate that the mechanism is not inevitable: sufficiently responsive financing capacity or falling adoption costs can reverse the result. The paper proposes a bank-level and firm-level empirical design, rather than claiming estimated causal effects. Its contribution is an integrated set of testable propositions concerning the distribution and timing of financial constraints.",
+  "link": "https://www.ssrn.com/abstract=7726760",
+  "score": 2,
+  "why": "Pure sovereign-debt theory, no implementable method.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7727163",
+  "source": "SSRN",
+  "title": "Autoregressive Market Basket Transformer",
+  "abstract": "We introduce the autoregressive transformer for the analysis of retail market baskets. We compare this transformer to benchmark models that also take dynamic effects into account, the multivariate logit model with category loyalties as additional predictors and three main variants of recurrent neural nets. We evaluate models by binary cross-entropies for a holdout data set. Among benchmark models the long-short term neural net attains the best cross-entropy value. However, this recurrent net is outperformed by the transformer with six embedding dimensions, two attention heads and four transformer blocks. Adding own effects of category-specific advertising to the transformer leads to a further improvement. We follow different approaches to interpret this transformer. We measure relationships for product category pairs by significant generalized partial correlations of the category logits determined by the autoregressive transformer. Relationships turn out to be asymmetric for about 23% of the category pairs with at least one nonzero partial correlation. We explain how managers may use positive generalized partial correlations to design cross-selling measures. We illustrate the dynamics reproduced by the transformer by weekly purchase probabilities for selected product categories and household types these ten categories differ between selected weeks. We derive marginal effects of category-specific advertising. These effects are at least moderate in ten of 31 product categories. As a rule, marginal effects in these ten categories differ between selected weeks. We demonstrate how managers may consider these effects if they want to increase the purchase probabilities of a category.",
+  "link": "https://www.ssrn.com/abstract=7727163",
+  "score": 2,
+  "why": "Retail market baskets, not financial markets.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7727505",
+  "source": "SSRN",
+  "title": "AI-Driven Financial Analytics in SAP S/4HANA: Improving Decision-Making and Finance Transformation",
+  "abstract": "Enterprise finance teams increasingly need to move beyond retrospective reporting toward timely, explainable decisions about liquidity, profitability, forecasting, control, and resource allocation. SAP S/4HANA provides an integrated transactional foundation, while SAP Analytics Cloud (SAC), SAP Business Technology Platform (BTP), predictive models, and generative AI may extend the analytical and decision-support capabilities available to finance leaders. Yet technology availability alone does not establish business value: outcomes depend on data quality, process design, integration, model governance, user trust, and the discipline with which benefits are measured. This paper develops an AI-Driven Finance Transformation Framework (AIDFTF) and an AI-Driven Finance Transformation Maturity Model (AIFTMM) for SAP S/4HANA finance. The study is designed as a conceptual, integrative review and framework-development paper. It synthesizes the six supplied research guidance documents, identifies recurring gaps, translates those gaps into testable hypotheses, and proposes a mixed-methods validation protocol. The framework links financial data foundations, AI and analytics capabilities, insight quality, decision effectiveness, process outcomes, and business-value realization. Seven hypotheses address decision effectiveness, forecast accuracy, process efficiency, embedded analytics maturity, data quality, generative-AI decision support, and the mediating role of insight quality. The paper specifies candidate measures, a staged validation plan, governance controls, use-case priorities, and an illustrative-not empirical-business-case model. No primary data were collected, and the proposed relationships are not presented as tested findings. The principal contribution is an integrated, SAP-finance-oriented model that connects technical capability to measurable decision and transformation outcomes while making validation requirements explicit. The framework is intended to guide future empirical work and executive evaluation, rather than to claim that the proposed effects have already been demonstrated.",
+  "link": "https://www.ssrn.com/abstract=7727505",
+  "score": 2,
+  "why": "SAP finance transformation framework, no data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.30685",
+  "source": "arXiv",
+  "title": "How Many Parameters Does Forecasting Need? A Survey and Code-Level Audit of Lightweight Long-Term Time Series Forecasting",
+  "abstract": "Long-term time series forecasting supports decisions in energy, transportation, weather and finance, where forecasts are produced continuously and often on constrained hardware. Recent work has moved in two directions. One scales Transformers and pre-trained foundation models to millions or hundreds of millions of parameters. The other shows that models with only hundreds to tens of thousands of parameters remain competitive on the standard benchmarks. Existing surveys organize forecasting models by backbone and treat efficiency as a side topic, so the reasons these small models work, and the way their sizes are reported, remain unexamined. This survey focuses on lightweight long-term forecasting. It provides a taxonomy of about thirty-five models in six families, with a common notation and an architecture diagram for each core model. It offers a structured-linear view in which the smallest models are linear maps restricted by frequency truncation or period folding, and it tests each restriction in closed form on eight benchmarks. It complements the literature review with an audit of sixteen official code repositories, which reproduces published parameter counts and reveals reporting gaps of up to 289 times. Finally, it gives practical guidance on model selection and reporting, and summarizes open problems.",
+  "link": "https://arxiv.org/abs/2611.30685",
+  "score": 2,
+  "why": "Survey of lightweight time-series forecasting models.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.31439",
+  "source": "arXiv",
+  "title": "Transformers with Signatures: Towards Universal In-Context Learning in Path Space",
+  "abstract": "In-context learning (ICL) enables transformers to adapt to new tasks from demonstrations without updating their parameters. However, theoretical guarantees for transformers remain limited in general, and elusive in particular when target responses depend nonlinearly on the evolution of observed paths. We establish an ICL framework for path space, using path signature features. Building on the universal linear approximation property of signatures, we construct explicitly a causal softmax transformer with two attention heads per layer that emulates in-context Lasso. Under sparse signature approximation and suitable moment and concentration conditions, we establish finite-sample prediction error bounds. Our analysis goes beyond the IID data setting in the existing ICL theory, allowing dependence among demonstrations and the query. Experiments on in-context sparse recovery, nonlinear path regression, execution-cost prediction, and financial payoff inference demonstrate robustness to changes in observation grids and adaptation to unseen market environments. Across these prediction tasks, transformers with signatures match or outperform vanilla transformer baselines with substantially fewer trainable parameters, highlighting the effectiveness and efficiency of signature-based ICL.",
+  "link": "https://arxiv.org/abs/2611.31439",
+  "score": 2,
+  "why": "Transformer in-context learning theory, non-finance tasks.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.31626",
+  "source": "arXiv",
+  "title": "A Kernel Framework for Linear Operator Equations",
+  "abstract": "Solving linear operator equations with nonlocal terms or heterogeneous constraints often requires specific numerical schemes. We develop a unified approach based on embedding such equations into a reproducing kernel Hilbert space (RKHS). Differential, boundary, and integral operators are represented by their Riesz representers in the RKHS. The equations are solved in the regularized least-squares sense at finitely many collocation points. The solution is a finite linear combination of operator-induced representers and is obtained from a single linear system. Its sensitivities, such as financial Greeks, follow by direct differentiation. To reduce the computational cost for large collocation sets, we introduce a Nyström approximation based on subsampling the operator-induced representers. It yields the best approximation of this solution within the reduced trial space, in a regularized empirical norm. Numerical examples cover ordinary, partial, and partial integro-differential equations, including multi-asset and jump-diffusion option pricing.",
+  "link": "https://arxiv.org/abs/2611.31626",
+  "score": 2,
+  "why": "Kernel operator methods, Greeks mentioned only.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.31654",
+  "source": "arXiv",
+  "title": "Stranded Compute in AI Inference Workloads: Recovering Value Through Demand Aggregation",
+  "abstract": "AI inference infrastructure is commonly analyzed as an energy business. Under full total cost accounting it is not: in the reference deployment modeled here, capital recovery is 87.3% of fully loaded cost per token and electricity 3.7%. Because capital accrues per unit time irrespective of use, accelerator value is destroyed by non-utilization rather than by consumption. Yet, SLO qualified goodput reaches only 59.6% of nameplate throughput, and the decomposition of the loss chain shows that 25.2 of the 40.4 lost percentage points arise from scheduling idleness and stranded burst reserve. Both are properties of a tenant's demand portfolio rather than of its silicon, and neither is diversifiable by a single tenant acting alone. Modelling reserve and idle capacity as diversifiable risk, pooling demand across eight imperfectly correlated tenants (rho = 0.3) recovers 7.3 pp of goodput, approximately $0.75M per annum per megawatt of IT capacity, or between 2.8x and 4.9x the entire annual interconnection spend of the deployment that produced it. The implication for neutral colocation and interconnection providers is that the switching and interconnection layer aggregating tenant demand functions as an instrument of capital productivity while being priced as transport.",
+  "link": "https://arxiv.org/abs/2611.31654",
+  "score": 2,
+  "why": "AI inference capacity pooling, not finance.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.31780",
+  "source": "arXiv",
+  "title": "VISOR: A Vision-Language Selector for Multimodal Time-Series Forecasting",
+  "abstract": "Recent time-series foundation models (TSFMs) forecast a distribution over futures, and multimodal time-series (TS) forecasting further exploits other modalities to improve forecasting accuracy. However, existing works have two limitations: 1) TSFMs reduce the predictive distribution to its median or mean, flattening diverse futures into a calm line, and 2) multimodal TS forecasting models incorporate text into the forecaster through TS-language alignment, which is substantially weaker than vision-language alignment. To address these limitations, we propose the VIsion-language SelectOR (VISOR), a multimodal TS forecasting framework that selects one plausible future instead of averaging across candidates, leveraging the alignment capabilities of vision-language models (VLMs) to select the most suitable candidate based on textual information. VISOR consists of two components: 1) a text-free stochastic predictor that samples diverse candidate futures, and 2) a VLM selector that reads the candidates as a single chart image and selects one based on the text. To avoid overly calm forecasting paths, we train the selector with a shape-aware target that evaluates each candidate based on both point-wise error and path shape. Across three benchmarks covering ten datasets, VISOR achieves the best average ranking in both point and volatility errors compared with TSFMs and multimodal TS forecasting models. Code: https://github.com/seunghan96/VISOR.",
+  "link": "https://arxiv.org/abs/2611.31780",
+  "score": 2,
+  "why": "Multimodal time-series forecasting, non-finance.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.31908",
+  "source": "arXiv",
+  "title": "TQ-HQNet: A Trainability-Aware and Qubit-Efficient Hybrid Quantum Neural Network for Cross-Domain Learning on Heterogeneous Data",
+  "abstract": "Hybrid quantum neural networks are a promising direction for noisy intermediate-scale quantum computing, but their practical effectiveness is often limited by poor trainability, rigid circuit design, and weak robustness across heterogeneous real-world tasks. This paper proposes TQ-HQNet, a Trainability-Aware and Qubit-Efficient Hybrid Quantum Neural Network for cross-domain learning on heterogeneous data. The proposed framework combines three mechanisms: 1) adaptive latent compression to map domain-specific features into qubit-compatible representations, 2) trainability-aware search over compact variational circuit candidates, and 3) hybrid fusion of multiple shallow quantum experts to improve robustness without increasing qubit cost excessively. TQ-HQNet is evaluated on four public datasets spanning neurological screening, phishing detection, financial direction prediction, and DNA sequence classification. Across all domains, the proposed model consistently improves over a fixed hybrid quantum baseline, with balanced-accuracy gains of +0.280, +0.170, +0.071, and +0.060, respectively. Ablation and sensitivity studies confirm that gains arise from trainability-aware compact circuit selection and expert fusion, not circuit scaling. Although classical baselines outperform on some tasks, fixed-split results show consistent improvements over the fixed hybrid reference. These analyses support the practical role of compact selection and fusion, with repeated-split and hardware-aware studies left for future work.",
+  "link": "https://arxiv.org/abs/2611.31908",
+  "score": 2,
+  "why": "Quantum network with finance as toy domain.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7727059",
+  "source": "SSRN",
+  "title": "From Loss to Return: The Human and Financial Cost of Repeat COVID Infections and What Mitigation Pays Back A Federal Benefit-cost Analysis using the COVID Mitigation ROI Economic Model",
+  "abstract": "Repeat COVID infection is now common, and each infection adds to the risk of Long COVID and other new illness. Since national tracking ended in 2023, much of the cost sits in public budgets without a label. This paper uses the COVID Mitigation ROI Economic Model, a benefit-cost analysis built to OMB Circular A-94, to price a three year federal prevention program of $5.19 billion. The program covers clean air, testing and surveillance, clinical care, workforce support, education and outreach, research and administration. The model reports two counts that are never added together. The author built the COVID Mitigation ROI Economic Model and wrote this paper with the help of Claude, AI assistant made by Anthropic. The author set the model’s method and assumptions, supplied peer reveiwed literature, checked every source and takes full responsibility for the content.",
+  "link": "https://www.ssrn.com/abstract=7727059",
+  "score": 1,
+  "why": "COVID benefit-cost analysis, irrelevant to finance ML.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7727164",
+  "source": "SSRN",
+  "title": "An Integrated Framework for Human behaviour, Organisational Safety, and AI-driven Risk Management in Educational, Industrial, Healthcare, and Intelligent Transportation Systems",
+  "abstract": "Safety in schools, industrial plants, hospitals and road networks depends on the interaction of human behaviour, leadership, organisational culture, communication infrastructure and, increasingly, artificial intelligence (AI). This conceptual paper integrates seven supplied works on self-control and counselling in Nigerian schools, transformational leadership and safety behaviour in Oman's oil and gas sector, emergency alert reliability in Internet of Things healthcare systems, latency and packet loss in vehicle-to-everything networks, and generative AI in cybersecurity with eight established scholarly sources on safety climate, human error, automation, algorithmic bias, AI ethics, risk governance and resilience. The analysis examines AI applications in behavioural assessment, predictive risk modelling, communication reliability, threat detection and decision support, and critically addresses data reliability, bias, privacy, ethical deployment, resilience and human oversight. It proposes the Behaviour-Organisation-Technology-Security (BOTS) framework, in which governance and feedback connect four layers, and offers recommendations graded by evidential support. No new empirical data are presented; the framework and recommendations are untested propositions intended to guide pilot studies and responsible deployment.",
+  "link": "https://www.ssrn.com/abstract=7727164",
+  "score": 1,
+  "why": "Conceptual safety framework across non-finance sectors.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.30387",
+  "source": "arXiv",
+  "title": "IP-GNO: An Inductive Physics-Informed Graph Neural Operator for Automated Distribution System State Estimation",
+  "abstract": "Distribution System State Estimation (DSSE) is a crucial tool for real-time monitoring, operation, and control of the new-age distribution systems (DSs) due to intensified voltage fluctuations and operational uncertainties introduced by volatile power injection at the nodes. Existing GNN-based approaches generally exhibit limited generalization across networks with different sizes and topologies, making zero-shot cross-grid transfer to unseen DSs a significant challenge. To overcome the aforementioned challenges, this article proposes an Inductive Physics-Informed Graph Neural Operator (IP-GNO) for scalable and transferable DSSE. The proposed framework frames complex bus voltage estimation as an operator-learning problem inspired by the Neumann series expansion of the inverse bus admittance matrix. An admittance-parameterized kernel, incorporating a self-admittance gate in the zeroth-order term and a persistent source-injection skip connection across network layers, captures the underlying electrical dependencies. Additionally, a Physics-Embedded Tree Encoding (PETE) scheme introduces five grid-size-invariant positional features derived from path impedance and a DC-linearized phase-angle prior. A sine-cosine output formulation is further employed to address phase-angle periodicity and ensure stable training. The proposed IP-GNO module is evaluated on two small (IEEE 33- and 69-bus), two medium (IEEE 123- and 136-bus), and one large (2522-bus) sized DSs. Particularly, its zero-shot cross-grid generalization capability is investigated by training the model exclusively on the IEEE 33-bus system and directly evaluating it on four unseen distribution networks of different sizes without retraining or fine-tuning. A detailed comparative analysis with the existing state-of-the-art DSSE tools proves the superiority of IP-GNO, enabling scalable DSSE across heterogeneous DSs.",
+  "link": "https://arxiv.org/abs/2611.30387",
+  "score": 1,
+  "why": "Power grid state estimation, off-topic.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.30880",
+  "source": "arXiv",
+  "title": "Critical step size of stochastic gradient descent for a linear neuron: an exact solution and the role of the input spectrum",
+  "abstract": "We study online stochastic gradient descent for a single linear neuron in a teacher-student setting with Gaussian inputs of arbitrary covariance. The mean-square errors of the $N$ weights obey a closed linear recursion of dimension $N$, which we solve exactly. We prove that the dynamics converges if and only if the step size is below a critical value $λ_c$, given by an explicit scalar equation that involves all the eigenvalues of the input covariance, and we obtain the stationary error of each weight, which diverges at $λ_c$. This condition coincides with the classical mean-square stability condition of the least-mean-squares filter; our derivation is elementary and self-contained. We then show that $λ_c$ is controlled by the effective rank $Ω_1$ of the input covariance rather than by the number of parameters, $1/(Ω_1+2) \\leq λ_c < 1/Ω_1$ in rescaled units: the critical step size is inversely proportional to $N$ only for isotropic inputs, whereas it decays more slowly, or saturates, for power-law spectra. Finally, we extend the solution to mini-batches of size $B$: the critical step size grows linearly with $B$ and saturates once $B$ exceeds the effective rank.",
+  "link": "https://arxiv.org/abs/2611.30880",
+  "score": 1,
+  "why": "SGD stability theory, no finance or data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.30980",
+  "source": "arXiv",
+  "title": "Robust bounds for American fixed-strike lookback puts",
+  "abstract": "We initiate the robust (model-independent) pricing of American lookback options under martingale optimal transport (MOT) constraints. Given finitely many marginals of the discounted price, we study the maximal expected discounted payoff of an American fixed-strike lookback put, whose exercise value at $t$ is $(K-\\min_{u\\le t}e^{ru}X_u)^+$, i.e.\\ a function of the running minimum $m_t$ of the undiscounted price. Two structural facts isolate this as the non-trivial American lookback problem: at $r=0$ every classical lookback degenerates to its European counterpart, while at $r>0$ the max-based fixed-strike lookback call remains European-type, but the min-based put is genuinely American. We prove a pricing--hedging duality using the continuous-time duality of Guo--Obłoj and reducing the hedge to the two-dimensional state $(X_t,m_t)$. In the two-period model, we establish a convexity lemma and exact decomposition of the continuation payoff, deriving the exercise criterion and closed-form free-continuation value. The optimal continuation coupling is the monotone martingale coupling (the third extremal coupling), and we show that the optimal exercise region is a right tail $\\{x\\ge x^*\\}$, in sharp contrast to the left-tail region of the standard American put. The threshold $x^*$ is monotone in parameters and affine in $K$. For finitely many marginals, the structure extends unconditionally: the optimal exercise region is always a right tail, and the optimal coupling is the reflected iterated Azéma--Yor embedding, minimizing the running minimum in stochastic order. Under the reflected Obłoj--Spoida assumption, this embedding is a two-point iterated monotone coupling; otherwise, it includes a local mass-diffusion correction. We quantify the American and model-risk premia.",
+  "link": "https://arxiv.org/abs/2611.30980",
+  "score": 1,
+  "why": "Model-independent lookback option pricing, no data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.32084",
+  "source": "arXiv",
+  "title": "The algorithmic behavioral sink: Modeling the transition to irreversible demographic collapse",
+  "abstract": "In 2025, the vast majority of major global economies reported a Total Fertility Rate below the replacement level of 2.1. This synchronized collapse has persisted despite extensive pro-natalist financial interventions, revealing a structural limitation in conventional linear demographic models. This paper proposes that the ubiquity of mobile internet and Artificial Intelligence acts as a synthetic mating disruptor, precipitating a non-linear phase transition in human pair-bonding dynamics. Treating the marriage market as a complex system governed by thermodynamic constraints, we present a Fermi-Dirac selection model, using national income distributions as the input spectrum and fitted with Japanese longitudinal data to illustrate how digital hyper-reality generates an increasingly prohibitive Marriage Energy Barrier. Our model quantifies a Tech Factor that decouples female mating expectations from local economic realities during initial courtship, a distortion we predict will be severely exacerbated as AI evolves into an emotional substitute. Projections indicate that this substitution effect is accelerating; without intervention, the world post 2040 risks entering an irreversible demographic contraction, as the sudden surge in TFR required for recovery is biologically impossible. Ultimately, this framework explains why traditional financial subsidies fail to reverse falling birth rates and suggests that digital convenience may represent a behavioral Great Filter that erodes the imperative for species persistence.",
+  "link": "https://arxiv.org/abs/2611.32084",
+  "score": 1,
+  "why": "AI-driven demographic collapse theory, off-topic.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.32488",
+  "source": "arXiv",
+  "title": "Dynamic stochastic multi-attribute group decision-making based on fractional-order stochastic dominance criteria",
+  "abstract": "The stochastic dominance criterion has been widely employed in stochastic multi-attribute decision making as a robust tool for quantitatively comparing decision-makers' preferences over alternatives. Existing research predominantly relies on integer-order stochastic dominance criteria within static modeling frameworks. However, the integer-order scale is often too coarse, and real-world decision-making typically occurs in dynamic environments, for which static methods are inadequate. To address these limitations, this paper proposes a novel dynamic stochastic multi-attribute group decision making model based on fractional-order stochastic dominance criteria. In this model, we introduce the priority degree under fractional-order stochastic dominance, which not only encompasses the priority degree under integer-order stochastic dominance, but also is applicable to decision-makers whose utility functions are not concave everywhere. Consequently, the proposed model captures the dominance relations between alternatives with greater accuracy and flexibility. Moreover, the model allows for the addition or removal of attributes and alternatives across decision periods, thereby exhibiting the applicability to any dynamic decision process. Numerical examples and comparative analyses show the effectiveness and robustness of the proposed approach, highlighting its broader applicability compared with conventional methods. This study enriches the theoretical foundation of dynamic stochastic multi-attribute group decision making and contributes to improving the reliability and precision of decision outcomes.",
+  "link": "https://arxiv.org/abs/2611.32488",
+  "score": 1,
+  "why": "Fractional stochastic dominance decision theory, no finance.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.32791",
+  "source": "arXiv",
+  "title": "Rough log-normal stochastic volatility with quadratic drift: second-moment stability and the martingale property under positive correlation",
+  "abstract": "We extend the log-normal stochastic volatility model with quadratic drift to a fractional Volterra equation. The volatility has a unique global non-negative solution with finite moments on every finite horizon. With linear drift we derive the conditional first and second moments, expected integrated variance and conditional squared VIX. We give the exact threshold for a uniformly bounded second moment and the exponential growth rate above it. With positive quadratic damping the second moment is uniformly bounded for every admissible Hurst exponent and volatility of volatility. A separate bound on long-run expected integrated variance per unit time depends only on the drift parameters. Under the share measure the volatility beta offsets the quadratic damping. The price is a true martingale when damping covers beta. For a positive finite exponential mixture this condition is also necessary. The converse for a singular fractional kernel remains open. We illustrate calibration under positive correlation on observed Bitcoin and Ether option smiles and benchmark the simulation against exact moments. A marked order-flow construction relates multiplicative volatility noise to signed trade impacts arriving at a rate proportional to variance. A small state-dependent bias generates the quadratic drift. We establish a stopped diffusion limit for the constant kernel.",
+  "link": "https://arxiv.org/abs/2611.32791",
+  "score": 1,
+  "why": "Rough stochastic volatility theory, no data.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
