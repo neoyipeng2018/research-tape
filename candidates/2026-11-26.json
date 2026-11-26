@@ -1,0 +1,132 @@
+[
+ {
+  "key": "2611.33458",
+  "source": "arXiv",
+  "title": "The Information Content of News Embeddings",
+  "abstract": "Does the predictive success of news embeddings reflect a better measure of news surprises or other sources of return predictability in text? We decompose news embeddings by content into event-category, firm-identity, and idiosyncratic components, and by timing into historical levels and current deviations. At short horizons, event categories account for most of the predictive power of embedding forecasts, and simple forecasts based on historical average returns after news in each event category outperform them. At longer horizons, firm information already present in earlier news coverage accounts for a substantial share of return predictability, even after residualization on firm characteristics. The dominance of event categories persists, and historical levels still contribute in the first months, when using a language model pretrained entirely before our sample period. For Llama-2, even embeddings constructed from news more than three years old predict returns at long horizons. However, its predictive advantage over RoBERTa is concentrated in firm identity and the historical level, and its advantage in these components largely disappears by its pretraining cutoff. A calibration shows that pretraining memory, a source of look-ahead bias, can account for this pattern. Describing news more fully is not the same as measuring news surprises, and persistent return predictability from news text does not by itself establish slow incorporation of news into prices.",
+  "link": "https://arxiv.org/abs/2611.33458",
+  "score": 8,
+  "why": "Simple news baselines beat embeddings; negative text result.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7749822",
+  "source": "SSRN",
+  "title": "Repricing by Replacement: Pricing Closed Language Models Against a Free Alternative",
+  "abstract": "For 8 months Anthropic sold Claude Opus 4.1 at 3 times the price of the more capable Opus 4.5. Unlike chips or cars, closed language models rarely get cheaper with age. In validated list prices of OpenAI, Anthropic, Google, and xAI, the price of a given capability fell 45 percent a year, yet posted prices were cut only 8 times. Launches account for 54 percent of the decline and withdrawals for 32. Per task, closed models cost about 4.0 times as much as equally capable open-weight models, the free alternative. A product-line model with menu costs explains repricing by replacement.",
+  "link": "https://www.ssrn.com/abstract=7749822",
+  "score": 7,
+  "why": "Closed-vs-open LLM pricing empirics; stack decision relevant.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.34209",
+  "source": "arXiv",
+  "title": "Graph-Informed Deep Factor Model for Statistical Arbitrage",
+  "abstract": "Statistical arbitrage exploits temporary mispricings between similar assets in the cross-section of daily equity returns. We propose a nonlinear single-factor model, called a Graph-Informed Deep Factor (GIDF) model, whose per-stock loadings have cross-sectional dependence conditional on a latent network. The network captures cross-sectional return dependencies that remain after removing the dominant eigenmodes of the return correlation matrix, thereby providing a complementary representation of inter-asset relationships beyond the leading sources of systematic variation. It is reconstructed from data using a novel method that we call the Factor-Adjusted Dynamic EWMA (FADE). A signed-edge graph attention mechanism then combines the reconstructed network with exogenous firm characteristics and macroeconomic variables. This graph-informed specification is designed to produce residuals that more effectively separate idiosyncratic mean-reverting dynamics from cross-sectional co-movements, yielding economically useful signals for daily statistical arbitrage. In a comprehensive empirical study on daily U.S. equities from 2015 to 2024, GIDF outperforms classical factor models and state-of-the-art deep learning methods, achieving an out-of-sample Sharpe ratio of 1.78 under the canonical Avellaneda--Lee rule.",
+  "link": "https://arxiv.org/abs/2611.34209",
+  "score": 6,
+  "why": "Graph signal for stat arb; missing OOS/cost evidence.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7727801",
+  "source": "SSRN",
+  "title": "Financing the AI Buildout: Leverage, Opacity, and Credit Risk",
+  "abstract": "We measure leverage, including the effect of off-balance-sheet leases and purchase orders, in the artificial intelligence buildout using SEC filings from 63 public firms. At face value, off-balance-sheet claims account for nearly three quarters of their fixed claims. Counting these claims at present value raises leverage from 0.22 to 0.48 as of June 2026. The filings often omit payment schedules and cancellation terms, which makes off-balance-sheet leverage opaque. Firms with more off-balance-sheet claims have wider bond spreads, even within rating categories, but not lower credit ratings. These findings point to a gap between the risks priced by bond investors and those reflected in ratings, with implications for credit allocation under rating-based investment rules.",
+  "link": "https://www.ssrn.com/abstract=7727801",
+  "score": 5,
+  "why": "Real SEC credit leverage, but tangential to LLM text systems.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.33652",
+  "source": "arXiv",
+  "title": "Self-supervised Clipped-objective Reinforcement Leaning Framework for Risk-aware Portfolio Management",
+  "abstract": "Portfolio management involves balancing diverse financial assets, a critical yet challenging task in quantitative trading. Although deep reinforcement learning has emerged as an active research domain for solving complex sequential decision-making problems over the past decade, deploying reinforcement learning frameworks in non-stationary financial markets raises formidable difficulties. Most existing reinforcement learning-based portfolio management models fail to account for tick-level intraday market dynamics (e.g., order flow imbalances and liquidity fluctuations), which reflect rapid capital movements. Simultaneously, these models suffer from unstable learning processes due to reinforcement learning's inherent high variance. This paper presents a Self-supervised Clipped-objective Portfolio management framework (SCP), which addresses these limitations through a two-phase architecture. Market feature integration phase (application contribution) integrates micro-level market microstructure patterns with macro-level financial indicators to enhance sensitivity to intraday asset trend dynamics. Policy optimization Phase (AI contribution) employs intermediate asset state representations to derive optimal portfolio allocations via a self-supervised clipped-objective policy-learner, ensuring both effectiveness and computational efficiency. Extensive evaluations on three major index datasets from China's A-share market demonstrate that SCP's superior performance in balancing risk-return trade-offs compared to state-of-the-art baselines. Exploratory and ablation studies further validate the contributions of SCP's key components.",
+  "link": "https://arxiv.org/abs/2611.33652",
+  "score": 5,
+  "why": "DRL portfolio framework; no OOS, costs, or code evidence.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.34171",
+  "source": "arXiv",
+  "title": "Rank-size analysis of optimal portfolio weights with a reverse-engineering application",
+  "abstract": "This paper investigates the shape of optimal portfolio weights using rank-size analysis. We consider four portfolio selection models: Global Minimum-Variance (GMV), minimum-CVaR, Risk Parity (RP), and the Most Diversified Portfolio (MDP). For each model, we fit seven rank-size specifications to the sorted portfolio weights generated over rolling windows. To compare the fitted specifications, we combine standard goodness-of-fit measures with Cumulative Second-order $\\varepsilon$-Stochastic Dominance, an $\\varepsilon$-parameterized generalization of Second-order Stochastic Dominance that quantifies the extent to which the exact dominance conditions are satisfied or violated. Empirically applied to major equity indices, this approach provides a systematic criterion for identifying the optimal functional form across diverse market compositions. Furthermore, we address the inverse problem of identifying the generating model from the observed weight structure. We use the calibrated rank-size parameters as inputs to a Random Forest classifier, evaluated by a blocked cross-validation that accounts for the overlap between estimation windows. The parameters separate minimum-risk from risk-diversification strategies and identify the RP and MDP portfolios, whereas the GMV and minimum-CVaR portfolios are difficult to distinguish. These results indicate that rank-size parameters provide a compact and informative description of portfolio allocation geometries.",
+  "link": "https://arxiv.org/abs/2611.34171",
+  "score": 5,
+  "why": "Portfolio rank-size analysis; no OOS or implementation path.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7727919",
+  "source": "SSRN",
+  "title": "Explainable Deep Learning for Real-Time Credit Card Fraud Detection in Tokenized Transactions",
+  "abstract": "The growth of electronic payments merely made it more imperative to uncover fraud. Tokenization, too, whereby security is based on replacing card information with temporary values, provides enough latitude for able fraudsters to exploit transactional trends. These are \"black boxes,\" i.e., financial black boxes. This paper presents an open deep learning system to detect online credit card fraud in tokenized transaction systems like uniquely. We employed a feedforward deep neural network for classifying transactions as real or fraudulent. To tackle the challenge of explaining knowledge, we employed SHapley Additive exPlanations (SHAP) to explain features for each prediction in an interpretable manner. We trained and tested the model using a sample data set of 425 tokenized actual transactions. The data set includes tokenized card numbers, transaction amount, merchant names, and device IDs, etc. The whole system was implemented in Python with TensorFlow and Keras being used for neural network calculations and SHAP library being used for building explanations. The outcome shows not only that our model successfully identifies fraud but also a flawless depiction of its decision-making process and thus an optimal and reliable solution for banks.",
+  "link": "https://www.ssrn.com/abstract=7727919",
+  "score": 3,
+  "why": "425-transaction SHAP fraud demo; no OOS or code.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.33584",
+  "source": "arXiv",
+  "title": "How LLM Agents Reshape Financial Knowledge Graphs: A Survey",
+  "abstract": "Financial knowledge graphs (KGs) link information across sources to support risk assessment, investment research, asset recommendations, and forecasting. Large language models (LLMs) help build these graphs by extracting relationships from text and matching entities across records. Yet a workflow may still prescribe which sources to consult and which checks to run. If the chosen sources lack relevant evidence, even accurate extraction can leave a financial question unanswered. LLM agents can adapt the workflow as evidence emerges. They use the graph and earlier findings to decide where to look next, which claims to verify, and whether to update a record for later use. This is the first survey devoted to how LLM agents reshape the construction, maintenance, and use of financial KGs. Our taxonomy covers Knowledge Graph Construction, Temporal Evolution, Verification, Reconciliation, and Admission, Adaptive Acquisition, and Knowledge Graph Usage. We examine how studies evaluate graph quality, agents' use of evidence, financial task outcomes, and reliability over time. These evaluations show that agents can recover evidence missed in an initial search and revise records as new information arrives. Three questions remain unresolved. How can an agent tell whether it has enough evidence for a financial decision? After a record is corrected, how can the agent identify which earlier conclusions need to change? Which relationships and rules can it reuse in a new graph or domain?",
+  "link": "https://arxiv.org/abs/2611.33584",
+  "score": 3,
+  "why": "Financial KG agent survey; excluded review format.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7728099",
+  "source": "SSRN",
+  "title": "Comparative Analysis of Artificial Intelligence Adoption Strategies Among Small and Medium-Sized Enterprises in Emerging European Markets",
+  "abstract": "This study undertakes a comparative analysis of artificial intelligence adoption strategies among small and medium-sized enterprises operating across emerging European markets, examining how firms with heterogeneous resource endowments, regulatory exposures, and digital maturity pursue distinct pathways toward technological integration. The research is motivated by the observation that adoption trajectories in these economies diverge markedly from those documented in mature Western European contexts, where institutional support, infrastructural readiness, and capital availability are comparatively stable. Emerging markets, by contrast, present a configuration of compressed digitalization timelines, uneven access to talent, and rapidly shifting regulatory frameworks that condition both the pace and the character of adoption. Drawing on a convergent mixed-methods design, the study combines cross- country panel analysis of enterprise-level adoption indicators with a qualitative comparative case component involving semi-structured interviews with founders and technology managers in manufacturing, retail, and knowledge-intensive service sectors. The quantitative strand models adoption intensity as a function of firm size, absorptive capacity, digital infrastructure, and perceived regulatory uncertainty, while the qualitative strand interrogates the strategic logics—build, buy, or subscribe— through which firms navigate resource and compliance constraints. Findings reveal three empirically distinguishable adoption archetypes: an incremental integrator profile that layers AI onto existing digital systems with emphasis on marketing and customer engagement; a leapfrogging specialist profile that adopts generative and analytical tools to compensate for structural gaps in human capital; and a cautious observer profile characterized by high perceived risk and dependency on external vendors. Cross-country comparison indicates that institutional coordination and targeted public support mechanisms are stronger predictors of sustained adoption than firm-level financial slack alone, and that synergies between AI, internet-of-things infrastructure, and big-data analytics amplify revenue effects disproportionately for mid-sized firms. The study further documents a persistent size-based polarization in diffusion speed, with micro-enterprises at heightened risk of exclusion from emerging AI-enabled value chains. Talent attraction and retention emerge as cross-cutting constraints, with firms reporting difficulty converting adoption investments into durable capability. The analysis contributes a context-sensitive framework for understanding adoption heterogeneity in under-studied European markets and offers implications for policymakers seeking to calibrate support instruments to firm-level strategic profiles rather than treating small and medium-sized enterprises as a homogeneous category. Limitations concerning cross-sectional data and self-reporting bias are acknowledged, and directions for longitudinal validation are proposed.",
+  "link": "https://www.ssrn.com/abstract=7728099",
+  "score": 2,
+  "why": "Regional SME survey; no transferable quant method.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7728101",
+  "source": "SSRN",
+  "title": "The Impact of Financial Constraints on Artificial Intelligence Integration in Small and Medium-Sized Businesses",
+  "abstract": "Financial constraints constitute a decisive structural barrier shaping the depth and pace of artificial intelligence integration in small and medium-sized enterprises, whose limited capital reserves, constrained access to credit, and thin operating margins render the adoption of costly digital technologies disproportionately risky relative to larger firms. This study examines how financial limitations influence the assimilation of artificial intelligence across core business functions, including marketing, supply chain management, risk forecasting, and process optimisation, and how such constraints interact with perceptual and organisational factors to produce uneven adoption trajectories. Drawing on a mixedmethods design combining survey data from small and medium-sized enterprises with comparative case analysis, the research assesses the extent to which capital scarcity delays or forecloses investment in intelligent systems, even where managerial awareness of their strategic value is high. Findings indicate that financially constrained firms tend to favour low-cost, incremental applications over comprehensive infrastructural transformation, thereby capturing only marginal productivity gains and widening the competitive gap with better-resourced counterparts. The study further reveals that financial constraints operate not in isolation but in compounding interaction with deficits in human capital, limited technical expertise, and uncertainty regarding regulatory frameworks, producing a self-reinforcing cycle of technological exclusion. Perceptual barriers, including scepticism about return on investment and apprehension regarding implementation complexity, are shown to intensify under conditions of financial stress. Conversely, the analysis identifies mechanisms through which financial constraint effects may be moderated, notably digital finance instruments, collaborative adoption models such as subscription-based and outsourced artificial intelligence services, and targeted public policy frameworks that lower entry costs and redistribute risk. Predictive analytics and generative applications emerge as particularly promising for resource-constrained firms because of their capacity to deliver disproportionate value at comparatively modest outlay when deployed strategically. The research contributes a conceptual framework mapping the relationship between financial constraint intensity and artificial intelligence adoption maturity, offering diagnostic value for enterprise managers, financial institutions, and policymakers seeking to design interventions that alleviate capital barriers and accelerate inclusive digital transformation. Implications extend to the formulation of tailored financing instruments, advisory support structures, and policy incentives that recognise the heterogeneous financial realities of smaller enterprises and the consequent necessity of graduated, affordability-sensitive pathways to technological modernisation.",
+  "link": "https://www.ssrn.com/abstract=7728101",
+  "score": 2,
+  "why": "SME AI adoption survey; not market ML.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.33713",
+  "source": "arXiv",
+  "title": "Nepali Currency Denomination Classification Using Convolutional Neural Networks (CNNs) and MobileNetV2: An Experimental Comparison",
+  "abstract": "Automated currency denomination recognition is a computer vision task with applications in cash handling, financial technology, and assistive systems. This study classifies seven Nepali currency denominations (Rs. 5, 10, 20, 50, 100, 500, and 1,000) using three configurations: a conventional convolutional neural network (CNN), MobileNetV2 with transfer learning, and MobileNetV2 with hyperparameter tuning. A compiled dataset of 16,249 images was used, comprising 10,500 training, 3,500 validation, and 2,249 independent test images. Images were resized to 128 x 128 pixels, normalized, and augmented to vary orientation, scale, illumination, and appearance. Models were evaluated using accuracy, precision, recall, F1-score, and precision-recall and ROC analysis. The hyperparameter-tuned MobileNetV2 achieved the highest validation accuracy (95\\%), with precision, recall, and F1-score of 0.93, 0.91, and 0.92, but reached only 84\\% accuracy on the held-out test set. MobileNetV2 with transfer learning but no additional tuning achieved 89\\% test accuracy, and the conventional CNN achieved 85\\%. Transfer learning therefore provided a competitive approach under the evaluated conditions, while higher validation accuracy from tuning did not yield higher test accuracy. To demonstrate practical deployment, a Flask-based web prototype using TensorFlow Lite was developed, supporting image upload and live webcam recognition with both visual and voice output. The study shows the feasibility of combining lightweight deep learning with a voice-assisted web interface for Nepali currency recognition, and highlights the need for more diverse datasets, greater robustness under uncontrolled imaging conditions, and broader real-world evaluation.",
+  "link": "https://arxiv.org/abs/2611.33713",
+  "score": 2,
+  "why": "Nepali banknote image classification; off-topic.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.33603",
+  "source": "arXiv",
+  "title": "Retirement Planning with Borrowing Constraints and Income Support",
+  "abstract": "We study how pension income, its pledgeability, and government support that supplements effective consumption shape an irreversible retirement decision. In a continuous-time life-cycle model, a worker chooses consumption, risky investment, and the timing of retirement, subject to a tighter borrowing limit after retirement. When retirement reduces the utility value of a given level of effective consumption, immediate retirement can be optimal on a bounded wealth interval: a worker below the interval retires when wealth rises to its lower boundary, while a worker above it retires when wealth falls to its upper boundary. Two scalar boundary equations characterize these distinct entry points. Risky investment drops discretely upon retirement at either interior boundary, even when it rises with wealth along the low-wealth working branch. In our two-boundary baseline, greater income support lowers the lower retirement threshold and raises the upper one, whereas greater pension pledgeability shifts both thresholds downward. Finally, because the residuals of the boundary equations represent weighted tail integrals of the instantaneous gain from postponing retirement, we completely characterize the optimal retirement region across all levels of post-retirement quality of life.",
+  "link": "https://arxiv.org/abs/2611.33603",
+  "score": 1,
+  "why": "Pure life-cycle theory; no data or implementation.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.34192",
+  "source": "arXiv",
+  "title": "Time-consistency of cash-subadditive risk measures: The infimal cocycle property",
+  "abstract": "We characterize the time-consistency of convex, cash-subadditive dynamic risk measures in terms of their minimal penalty. The dual variables are conditional sub-probability densities, which factorize across an intermediate date in many ways, according to how the discount is allocated to the two periods. We introduce an infimal cocycle property, in which the penalty is the infimum over all such factorizations, and show that it is equivalent to time-consistency, with the infimum attained. This holds on $L^\\infty$ under continuity from below, and on $L^p$, $p<\\infty$, without continuity assumptions. In the cash-additive case it reduces to the classical cocycle property. For risk measures induced by BSDEs, it represents the dynamic programming principle of a stochastic control problem whose value is the penalty.",
+  "link": "https://arxiv.org/abs/2611.34192",
+  "score": 1,
+  "why": "Pure risk-measure theory; no data or path.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
