@@ -6,6 +6,20 @@
   <description>A daily AI-in-finance research tape: arXiv and SSRN, six items or fewer.</description>
   <language>en</language>
   <item>
+    <title>From Prediction to Decision: Decision-Focused Fine-Tuning of Autoregressive Tabular Transformers for Cost-Sensitive Financial Events</title>
+    <link>https://arxiv.org/abs/2611.34858</link>
+    <description>The abstract proposes decision-focused fine-tuning but omits whether it outperforms post-hoc thresholding.</description>
+    <pubDate>Fri, 27 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">2611.34858</guid>
+  </item>
+  <item>
+    <title>Validating Mortgage Default Models Through a Regime Change: Evidence from 10.8 Million Freddie Mac Loans, 2020 to 2026</title>
+    <link>https://www.ssrn.com/abstract=7728660</link>
+    <description>An ensemble of logistic regression and gradient boosting achieved 0.815 out-of-time AUC, beating logistic regression alone.</description>
+    <pubDate>Fri, 27 Nov 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">10.2139/ssrn.7728660</guid>
+  </item>
+  <item>
     <title>The Information Content of News Embeddings</title>
     <link>https://arxiv.org/abs/2611.33458</link>
     <description>Historical average returns by news event category outperform news embedding forecasts at short horizons.</description>
@@ -753,48 +767,6 @@
     <description>Commitment adherence drops to 62.63 percent for constrained nonempty proposals versus 97.56 percent for valid empty proposals.</description>
     <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">2610.36476</guid>
-  </item>
-  <item>
-    <title>Proof Before Price: Pre-Registered Behavioral Tests of Proof-Based Pricing on Language-Model Buying Agents</title>
-    <link>https://www.ssrn.com/abstract=7666200</link>
-    <description>A register-verified claim boosts LLM buyer selection by 14 to 30 percentage points over identical prose.</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7666200</guid>
-  </item>
-  <item>
-    <title>NumTrace: Auditing the Number Provenance of Financial Analyst Agents</title>
-    <link>https://arxiv.org/abs/2610.34887</link>
-    <description>Right-number-wrong-account errors comprise 67.5 to 81.8 percent of failing financial analyst agent claims.</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.34887</guid>
-  </item>
-  <item>
-    <title>Risk-proportional inference: Constraint-aware model routing for fair and energy-efficient financial AI serving</title>
-    <link>https://www.ssrn.com/abstract=7674874</link>
-    <description>RAIRoute cuts per-request inference energy by up to 70.9 percent while holding a fairness band.</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">10.2139/ssrn.7674874</guid>
-  </item>
-  <item>
-    <title>Thinking-in-Bets at Test Time Reduces Sycophantic Revisions in LLM Agents</title>
-    <link>https://arxiv.org/abs/2610.34654</link>
-    <description>Pre-reply claim checklists nearly eliminate false reversals under mistaken user pushback.</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.34654</guid>
-  </item>
-  <item>
-    <title>Do Round Numbers Hold Prices? Occupation Densities and Depth-Conditioned Hazards in the Limit Order Book</title>
-    <link>https://arxiv.org/abs/2610.34787</link>
-    <description>Round price levels draw more liquidity but do not slow depth-adjusted departures.</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.34787</guid>
-  </item>
-  <item>
-    <title>LLM-Enhanced Heterogeneous Graph Learning with Business Semantics for Financial Fraud Detection</title>
-    <link>https://arxiv.org/abs/2610.35298</link>
-    <description>SemHGT outperforms evaluated baselines on most dataset-metric comparisons across three fraud datasets.</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.35298</guid>
   </item>
 </channel>
 </rss>

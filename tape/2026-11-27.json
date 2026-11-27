@@ -1,0 +1,24 @@
+{
+ "date": "2026-11-27",
+ "scanned": 8,
+ "lanes": [
+  "arXiv",
+  "SSRN"
+ ],
+ "items": [
+  {
+   "key": "2611.34858",
+   "source": "arXiv",
+   "link": "https://arxiv.org/abs/2611.34858",
+   "title": "From Prediction to Decision: Decision-Focused Fine-Tuning of Autoregressive Tabular Transformers for Cost-Sensitive Financial Events",
+   "claim": "The abstract proposes decision-focused fine-tuning but omits whether it outperforms post-hoc thresholding."
+  },
+  {
+   "key": "10.2139/ssrn.7728660",
+   "source": "SSRN",
+   "link": "https://www.ssrn.com/abstract=7728660",
+   "title": "Validating Mortgage Default Models Through a Regime Change: Evidence from 10.8 Million Freddie Mac Loans, 2020 to 2026",
+   "claim": "An ensemble of logistic regression and gradient boosting achieved 0.815 out-of-time AUC, beating logistic regression alone."
+  }
+ ]
+}

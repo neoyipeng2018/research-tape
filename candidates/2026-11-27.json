@@ -1,0 +1,82 @@
+[
+ {
+  "key": "2611.34858",
+  "source": "arXiv",
+  "title": "From Prediction to Decision: Decision-Focused Fine-Tuning of Autoregressive Tabular Transformers for Cost-Sensitive Financial Events",
+  "abstract": "Autoregressive transformers trained on tokenized tabular event streams are a simple and strong baseline for predicting financial events such as fraud. Yet institutions do not act on probabilities; they act on decisions whose consequences are asymmetric and heteroscedastic: the cost of a missed high-value fraud and that of a wrongly declined small purchase are not the same. The standard bridge is post-hoc Bayes-optimal thresholding of calibrated probabilities under a cost matrix. We ask whether fine-tuning the model to the decision objective can do better. We fine-tune the same pretrained model so that its restricted softmax over label tokens (already a distribution over business actions) maximizes expected utility under an institution-specified, amount-scaled cost matrix. Because the reward is a known function of (action, outcome, amount) and the outcome is observed in the data, the expected-utility objective and its gradient are available in closed form. This is example-dependent cost-sensitive learning whose per-example loss is linear in the predicted probability, with no sampling, critics, or advantage estimation. A KL anchor to the pretrained model and an auxiliary language-modeling term preserve calibration and the generative event model. A sampled, group-normalized (GRPO-style) variant provides the extension point to trajectory-level rewards.",
+  "link": "https://arxiv.org/abs/2611.34858",
+  "score": 8,
+  "why": "Decision-focused transformer fine-tuning for cost-sensitive financial events.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7728660",
+  "source": "SSRN",
+  "title": "Validating Mortgage Default Models Through a Regime Change: Evidence from 10.8 Million Freddie Mac Loans, 2020 to 2026",
+  "abstract": "Credit default models are usually validated on data from one stable period but used through regime changes. This paper validates default models on 10.8 million Freddie Mac mortgages with first payments from 2020 to mid-2024 and performance through June 2026, a period that spans COVID-19 forbearance, a refinancing boom and a rise in note rates from 2.8% to 7.3%. Default is 90 or more days of delinquency or a credit event within 24 months, excluding delinquency that began under forbearance. All data-dependent steps were fitted inside training folds, and models built on 2020 to 2022 loans were tested on a held-out sample and on all 1.23 million loans from 2023 and 2024. An ensemble of logistic regression and gradient boosting ranked risk best, with a ROC AUC of 0.807 in time (95% BCa interval 0.799 to 0.816) and 0.815 out of time (0.811 to 0.817), a small but significant gain over logistic regression. Repeated stratified cross-validation gave the most stable estimates, LOOCV was twice as biased and 400 times slower, and none of eight resampling methods improved ranking or cost. Predicted risk tracked a 2.6-fold rise in default rates because the riskier borrower mix was visible at origination, yet a fixed review cutoff flagged 24% of later loans instead of 5%, and about four in ten flagged loans were unstable across bootstrap refits. Early prepayment explained much of the calibration error by vintage, and only 5% of defaults ended in a credit event, so realized losses did not justify declining applications. The findings support capacity based review thresholds, population stability monitoring and competing risks models of default and prepayment. Declaration of generative AI use: During the preparation of this work the author used Claude (Anthropic) to write and run the analysis code, to produce the tables and figures, and to draft the text of the manuscript, under the author's direction. The author specified the scope of the study, obtained the data, and reviewed, edited and verified the analyses, interpretations and text, and takes full responsibility for the content of this paper.",
+  "link": "https://www.ssrn.com/abstract=7728660",
+  "score": 7,
+  "why": "OOS mortgage validation on 10.8M regime-shifted loans",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.34825",
+  "source": "arXiv",
+  "title": "Routeability Before Routing: Routeability Audit Protocol (RAP) and RouteabilityBench for Audited LLM Model Selection",
+  "abstract": "LLM routing aims to choose, for each prompt, which model in a portfolio is most likely to answer correctly. This only makes sense when the benchmark contains enough prompt-specific variation for different models to be best on different inputs. On coarse-scored LLM benchmarks, however, many models often tie for the best score, and the single best model may already leave little room for improvement. We therefore propose a routeability-first audit, instantiated as RAP and RouteabilityBench, a runnable claim-verification package. The audit is retrospective: it runs once the benchmark-portfolio score matrix exists and before router comparisons are interpreted as general evidence, rather than certifying a portfolio that has not yet been evaluated. Across four benchmarks and 66 LLMs, generic routing enhancements such as larger embedding sets, dimensionality reduction, selective abstention, clustering, and stronger regressors do not consistently outperform the single best model. The clearest positive evidence is concentrated in portfolio-dependent Omni-MATH settings, while GPQA, MMLU-Pro, and IFEval show different ways in which routing can remain hard or predictor-sensitive. Our practical recommendation is that routing gains should be reported together with routeability diagnostics, tied-best analysis, portfolio construction details, and family-corrected statistical tests.",
+  "link": "https://arxiv.org/abs/2611.34825",
+  "score": 6,
+  "why": "LLM routing audit package, runnable but non-finance",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.34771",
+  "source": "arXiv",
+  "title": "Modelling and Calibration of Climate-Related Credit Risk Under the Emissions Trading System",
+  "abstract": "Emission trading systems (ETSs) price a growing share of global emissions, and some of their caps are set to reach zero within the maturity of corporate debt. We develop a structural model in which firms choose their emissions from several energy sources under an anticipated carbon price, while the realized carbon price clears the carbon market of each sector-region cell, with a scenario-dependent demand shock and physical losses mitigated by adaptation. We show that the equilibrium carbon price exists, characterize when the cap binds, and derive the optimal emission of each firm in feedback form. In a linearized case of the model, the carbon price is deterministic, and the default probability is explicit. Unlike a reward-penalty scheme, the ETS imposes no cost while the cap is slack and makes firms meet it exactly once it binds. Calibrated to 35 European power producers under the EU ETS, the model reproduces the average level of the European Union Allowance price over 2018 to 2024.",
+  "link": "https://arxiv.org/abs/2611.34771",
+  "score": 4,
+  "why": "Single-sector EU carbon credit structural model",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.34696",
+  "source": "arXiv",
+  "title": "Distance from the Truth: Why Fragmented Merchant Underwriting Misses Risk, and What Source-Attributable Evidence Changes",
+  "abstract": "Merchant underwriting becomes vulnerable when evidence is evaluated without enough visibility into its source, freshness, relationship to the applicant, or meaning for the proposed activity. Individually favorable checks do not necessarily establish that the same business is operating the merchant account, that its representative may bind it, or that its settlement instructions are authorized. We describe three failure modes of fragmented underwriting: distance from the source, the gap between a decision and the evidence needed to justify it; the correlation gap, in which material relationships among the person, legal entity, owners or controllers, representative, business activity, and settlement destination are not evaluated when each signal is considered alone; and point-in-time controls, in which a historical verification is treated as present eligibility. We map these failure modes to identity-proofing, customer-due-diligence, sanctions, third-party-risk, card-network, and Nacha requirements, and propose a merchant-underwriting application of the ChainIT Transaction Truth Architecture built on provenance, correlation, and persistence. The application keeps a logically unified evidence record that identifies what was checked, the subject and relationship involved, the relevant times, the applicable policy, the decision, and any exceptions, and it keeps evidence validation, applicant verification, organizational authority, and the institution's risk judgment separate. We also set out a proposed evidence and decision receipt, a defined 90-day shadow enrollment pilot with adjudicated outcome measures and deliberate control-failure tests, and a ten-question self-assessment. Proposed controls, illustrative scenarios, and pilot measures are identified as such and are not represented as observed production results.",
+  "link": "https://arxiv.org/abs/2611.34696",
+  "score": 3,
+  "why": "Conceptual underwriting framework, no method or empirical results.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "10.2139/ssrn.7728198",
+  "source": "SSRN",
+  "title": "The End of Human Accountability -Artificial Intelligence, Corporate Governance and the Illusion of Human Oversight",
+  "abstract": "Human oversight is widely invoked as the condition that keeps artificial intelligence within the bounds of legal responsibility. Yet an authorised employee may ratify an algorithmic recommendation without possessing the information, practical authority, time or institutional protection necessary to question it. This article develops a doctrinal account of that discrepancy. It distinguishes legal attribution, answerability, contestability, operational control and liability; confronts behavioural evidence on automation bias with the allocation of responsibilities under the European Union Artificial Intelligence Act and the General Data Protection Regulation; and compares corporate oversight duties in Delaware, English and German company law. It argues that human oversight has legal significance only where the organisation can demonstrate an effective, risk-proportionate capacity to identify material error, contest its causes and alter the relevant decision or deployment conditions. The article proposes five institutional capacities and a six-stage framework for legal assessment, without presenting either as positive law. It then develops a deliberately limited, rebuttable evidentiary inference where a corporation relies on human review as its safeguard but cannot substantiate its practical operation. The proposed approach does not impose strict liability, require perfect explainability or transform every bad outcome into breach. Its contribution is to allocate responsibility to the institutional choices that determine whether human supervision is real, while preserving the doctrinal separation between regulatory duties, fiduciary standards, evidentiary rules and civil liability.",
+  "link": "https://www.ssrn.com/abstract=7728198",
+  "score": 1,
+  "why": "Legal governance paper, no ML or finance methods.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.34495",
+  "source": "arXiv",
+  "title": "Efficient Data Fusion in Distributionally Robust Optimization",
+  "abstract": "Decisions under uncertainty increasingly rest on fragmented evidence, such as samples from related but different populations, privacy-protected summary statistics, or complementary statistical descriptions of the same data. Distributionally robust optimization (DRO) can fuse such evidence by constructing one ambiguity set per source and hedging against all distributions in the intersection of these sets. This fusion approach is less conservative than aggregating the sources into a single ambiguity set, but it is computationally demanding. Exact reformulations grow exponentially with the number of sources, and even deciding whether the intersection is nonempty is NP-hard. We show that fusion DRO admits an exact reformulation in which the ambiguity sets are coupled only through functional Lagrange multipliers. Restricting these multipliers to affine decision rules yields upper bounds that decompose across the ambiguity sets, are exact for quadratic losses over Wasserstein balls around Gaussian references, and provably dominate aggregation-based relaxations such as Minkowski sums and balls around mixtures. The approximations admit finite conic reformulations in important special cases and subgradient methods for weakly convex losses, which makes fusion DRO applicable to neural network training. In portfolio, newsvendor, and binary classification experiments, the affine approximation stays close to the exact value wherever the latter is computable, scales far better than exact methods, and outperforms aggregation-based benchmarks out-of-sample.",
+  "link": "https://arxiv.org/abs/2611.34495",
+  "score": 1,
+  "why": "Pure optimization theory, no data or implementation path.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ {
+  "key": "2611.34567",
+  "source": "arXiv",
+  "title": "Large deviations for integrated exponentials of Gaussian Volterra processes - application to variance options",
+  "abstract": "We prove small-time large deviations for the normalised time integral of the exponential of a Gaussian Volterra process, and complement it with a central limit theorem and moderate deviations. As an application, we obtain short-maturity asymptotics for out-of-the-money and at-the-money variance options in rough volatility models, as well as implied volatility expansions which we validate numerically.",
+  "link": "https://arxiv.org/abs/2611.34567",
+  "score": 1,
+  "why": "Pure mathematical finance, no data or implementation path.",
+  "judge": "nvidia/nemotron-3.5-super-vl:free"
+ }
+]
