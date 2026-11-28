@@ -726,47 +726,5 @@
     <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
     <guid isPermaLink="false">10.2139/ssrn.7666979</guid>
   </item>
-  <item>
-    <title>LiveSearch: Questions as Executable Verifier Code for a Live Benchmark of Professional-Source Financial Search Agents</title>
-    <link>https://arxiv.org/abs/2610.37166</link>
-    <description>Reused financial-search snapshots fail most questions within one day as gold values change daily.</description>
-    <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.37166</guid>
-  </item>
-  <item>
-    <title>How Much Does the Hint Matter? Scope Conditions for Hindsight Self-Distillation in Financial Reasoning</title>
-    <link>https://arxiv.org/abs/2610.36082</link>
-    <description>Self-distillation gains come from supervision placement, not hint content or teacher size.</description>
-    <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.36082</guid>
-  </item>
-  <item>
-    <title>FinLLM-KG: Knowledge Graph-Enhanced LLMs for Financial Sentiment Analysis in Algorithmic Trading</title>
-    <link>https://arxiv.org/abs/2610.36083</link>
-    <description>Knowledge-graph-augmented LLMs beat state-of-the-art financial sentiment baselines in portfolio simulations at near-zero cost.</description>
-    <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.36083</guid>
-  </item>
-  <item>
-    <title>Does Ecosystem Activity Validate TVL?</title>
-    <link>https://arxiv.org/abs/2610.36274</link>
-    <description>Ecosystem-activity ratios do not make total value locked predict crypto returns after multiple-testing correction.</description>
-    <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.36274</guid>
-  </item>
-  <item>
-    <title>Event definition and the branching ratio: Hawkes estimates of price-change clustering in the consolidated quote feed</title>
-    <link>https://arxiv.org/abs/2610.36317</link>
-    <description>The sub-millisecond Hawkes kernel in large-tick stocks reflects NBBO feed construction, not genuine price-change excitation.</description>
-    <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.36317</guid>
-  </item>
-  <item>
-    <title>FIDES-Live: Evaluating Behavioral Concordance in Sequential Trading Agents</title>
-    <link>https://arxiv.org/abs/2610.36476</link>
-    <description>Commitment adherence drops to 62.63 percent for constrained nonempty proposals versus 97.56 percent for valid empty proposals.</description>
-    <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="false">2610.36476</guid>
-  </item>
 </channel>
 </rss>
